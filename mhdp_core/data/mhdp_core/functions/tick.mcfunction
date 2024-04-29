@@ -4,5 +4,11 @@
 #
 # @within tag/function minecraft:tick
 
-# gameTime取得
-    execute store result storage mhdp_core:game_data Time int 1 run time query gametime
+# 基礎データ取得処理
+    function mhdp_core:core/data/get_data
+
+# 村の処理
+
+# 各プレイヤーの個別処理
+
+# 各Phase実行処理
