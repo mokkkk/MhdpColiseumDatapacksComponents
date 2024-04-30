@@ -30,5 +30,20 @@
         #declare tag Ply.State.PlayingQuest クエスト中
         #declare tag Ply.State.MnsTarget モンスターのターゲットになりうる状態、闘技場戦闘フィールドでのみ有効
         #declare tag Ply.State.EnableDamage ダメージを受ける状態、クエスト中のみ有効、クエスト成功/失敗時に剥奪する
+    # 操作
+        # スニーク
+            #declare tag Ply.Ope.IsSneaking スニーク中
+            #declare tag Ply.Ope.StartSneak スニーク開始
+            #declare tag Ply.Ope.StartDoubleSneak 連続スニーク
+        # エンダーアイ
+            #declare tag Ply.Ope.StartUsingEnderEye エンダーアイ使用開始
+            #declare tag Ply.Ope.IsUsingEnderEye エンダーアイ使用中
+            #declare tag Ply.Ope.EndUsingEnderEye エンダーアイ使用終了
+            #declare tag Ply.Ope.UsedEnderEye.Short エンダーアイ短クリック
+            #declare tag Ply.Ope.UsedEnderEye.Long エンダーアイ長クリック
+        # ジャンプ
+            #declare tag Ply.Ope.StartJump ジャンプ開始
+    # 進捗
+        #declare tag Ply.Adv.Using.EnderEye エンダーアイ使用
     # 一時
         #declare tag Ply.Temp.IsGetData データ取得済み

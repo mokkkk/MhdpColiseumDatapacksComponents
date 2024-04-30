@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:ender_eye"
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "mhdp_core:player/advancement/using_item/ender_eye"
+  }
+}

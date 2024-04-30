@@ -1,6 +1,6 @@
 #> mhdp_core:player/data/items/get_data_items
 #
-# playerのデータ取得処理、アイテム処理用
+# playerのデータ取得処理、武器操作用
 #
 # @within function mhdp_core:player/data/get_data
 

@@ -18,6 +18,11 @@
             scoreboard objectives add Ply.Event.Jump minecraft.custom:minecraft.jump
         # エンダーアイ投げ捨て回数
             scoreboard objectives add Ply.Event.DropEnderEye dropped:ender_eye
+        # スニークタイマー
+            scoreboard objectives add Ply.Event.SneakTimer dummy
+            scoreboard objectives add Ply.Event.SneakInterval dummy
+        # エンダーアイ使用タイマー
+            scoreboard objectives add Ply.Event.EnderEyeTimer dummy
 
 # モンスター関連
     # UID
