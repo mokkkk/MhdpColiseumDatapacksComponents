@@ -13,11 +13,15 @@
 # 操作の取得
     function mhdp_core:player/data/get_operation
 
-# クエスト中処理
+# リスポーン時処理
 
+# クエスト中処理
 
 # 操作の初期化
     function mhdp_core:player/data/remove_operation
 
 # 一時タグの消去
     function mhdp_core:player/data/remove_temp_tags
+
+# 一時的な保持データの削除
+    data remove storage mhdp_core:temp PlayerData

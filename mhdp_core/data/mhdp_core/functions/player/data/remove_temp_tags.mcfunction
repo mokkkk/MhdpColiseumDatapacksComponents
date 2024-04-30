@@ -5,3 +5,4 @@
 # @within function mhdp_core:player/tick
 
 # タグ消去
+    tag @s remove Ply.Temp.IsGetData

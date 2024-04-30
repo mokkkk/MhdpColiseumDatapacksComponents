@@ -5,11 +5,11 @@
 # @within function mhdp_core:/**
 
 ## storage
-#declare storage mhdp_core:game_data ゲームの処理用データを保持するstorage
+#declare storage mhdp_core:game_data ゲームの処理用データを保持するstorage、あまり変化しないデータを入れる(Time、Phaseなど一部は変化する)
 #declare storage mhdp_core:weapon_data 武器の処理用データを保持するstorage
 #declare storage mhdp_core:monster_data モンスターの処理用データを保持するstorage
 #declare storage mhdp_core:save_data マップデータの進行状況保存用のstorage
-#declare storage mhdp_core:variable_data 可変データを保持するstorage
+#declare storage mhdp_core:variable_data 可変データを保持するstorage、頻繁に変化するデータを入れる(プレイヤーの個別データなど)
 #declare storage mhdp_core:temp 一時保存データを保持するstorage、原則毎tick消去する
 
 ## score_holder
@@ -41,9 +41,11 @@
             #declare tag Ply.Ope.EndUsingEnderEye エンダーアイ使用終了
             #declare tag Ply.Ope.UsedEnderEye.Short エンダーアイ短クリック
             #declare tag Ply.Ope.UsedEnderEye.Long エンダーアイ長クリック
+            #declare tag Ply.Ope.StartUsingEnderEye.NotSneak エンダーアイ・非スニーク同時押し
+            #declare tag Ply.Ope.StartUsingEnderEye.WithSneak エンダーアイ・スニーク同時押し
         # ジャンプ
             #declare tag Ply.Ope.StartJump ジャンプ開始
     # 進捗
         #declare tag Ply.Adv.Using.EnderEye エンダーアイ使用
     # 一時
-        #declare tag Ply.Temp.IsGetData データ取得済み
+        #declare tag Ply.Temp.IsGetData 現tickデータ取得済み

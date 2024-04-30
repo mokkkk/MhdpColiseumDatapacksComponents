@@ -21,4 +21,3 @@
 
 # 終了
     data remove storage mhdp_core:temp TempPlayerData
-    tag @s remove Ply.Temp.IsGetData

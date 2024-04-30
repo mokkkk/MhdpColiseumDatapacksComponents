@@ -5,20 +5,22 @@
 # @within function mhdp_core:player/tick
 
 # スニーク
-    tag @s remove Ply.Ope.IsSneaking
-    tag @s remove Ply.Ope.StartSneak
-    tag @s remove Ply.Ope.StartDoubleSneak
+    execute if entity @s[tag=Ply.Ope.IsSneaking] run tag @s remove Ply.Ope.IsSneaking
+    execute if entity @s[tag=Ply.Ope.StartSneak] run tag @s remove Ply.Ope.StartSneak
+    execute if entity @s[tag=Ply.Ope.StartDoubleSneak] run tag @s remove Ply.Ope.StartDoubleSneak
 
 # エンダーアイ
-    tag @s remove Ply.Adv.Using.EnderEye
-    tag @s remove Ply.Ope.StartUsingEnderEye
-    tag @s remove Ply.Ope.EndUsingEnderEye
-    tag @s remove Ply.Ope.UsedEnderEye.Short
-    tag @s remove Ply.Ope.UsedEnderEye.Long
+    execute if entity @s[tag=Ply.Adv.Using.EnderEye] run tag @s remove Ply.Adv.Using.EnderEye
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] run tag @s remove Ply.Ope.StartUsingEnderEye
+    execute if entity @s[tag=Ply.Ope.EndUsingEnderEye] run tag @s remove Ply.Ope.EndUsingEnderEye
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.NotSneak] run tag @s remove Ply.Ope.StartUsingEnderEye.NotSneak
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run tag @s remove Ply.Ope.StartUsingEnderEye.WithSneak
+    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] run tag @s remove Ply.Ope.UsedEnderEye.Short
+    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long] run tag @s remove Ply.Ope.UsedEnderEye.Long
 
 # ニンジン棒
 
 # 食べ物
 
 # ジャンプ
-    tag @s remove Ply.Ope.StartJump
+    execute if entity @s[tag=Ply.Ope.StartJump] run tag @s remove Ply.Ope.StartJump
