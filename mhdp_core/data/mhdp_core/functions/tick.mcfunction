@@ -10,5 +10,6 @@
 # 村の処理
 
 # 各プレイヤーの個別処理
+    execute as @a at @s run function mhdp_core:player/tick
 
 # 各Phase実行処理

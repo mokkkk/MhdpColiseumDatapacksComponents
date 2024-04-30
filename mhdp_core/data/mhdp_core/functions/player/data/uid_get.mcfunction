@@ -12,3 +12,5 @@
 
 # 状態更新
     tag @s add Ply.State.HasUid
+
+say UID割り当て
