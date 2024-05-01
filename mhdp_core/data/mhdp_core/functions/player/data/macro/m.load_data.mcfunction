@@ -6,3 +6,4 @@
 
 # ストレージからデータを読み込む
     $data modify storage mhdp_core:temp PlayerData set from storage mhdp_core:variable_data Player.UID$(UID).Data
+    $scoreboard players set #mhdp_temp_loading_player_uid MhdpCore $(UID)

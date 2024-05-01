@@ -1,0 +1,4 @@
+{
+    "criteria": {"requirement": {"trigger": "minecraft:player_interacted_with_entity","conditions": {"entity": {"nbt": "{Tags:[\"Other.Interaction.UI\"]}"}}}},
+    "rewards": {"function": "mhdp_core:player/advancement/interaction/interact_ui"}
+  }

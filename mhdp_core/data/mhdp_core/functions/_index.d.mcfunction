@@ -19,9 +19,10 @@
     #declare score_holder #mhdp_monster_uid_grobal モンスターへのUID付与用、UIDを付与する毎に1増やす
 # 一時
     #declare score_holder #mhdp_temp_grobal 一時的に使用する共通のスコア、必ず同function内でリセットする
+    #declare score_holder #mhdp_temp_loading_player_uid 現在mhdp_core:temp PlayerDataに読み込まれているプレイヤーのUID
 
 ## tag
-# プレイヤー処理
+# プレイヤー
     # 状態
         #declare tag Ply.State.HasUid Uid割り当て済
         #declare tag Ply.State.UsingWeapon 武器使用可能な状態
@@ -48,4 +49,13 @@
     # 進捗
         #declare tag Ply.Adv.Using.EnderEye エンダーアイ使用
     # 一時
+        #declare tag Ply.Temp.Target 特定のプレイヤーを一時的に特定したいときに使用、必ず同function内でリセットする
         #declare tag Ply.Temp.IsGetData 現tickデータ取得済み
+# その他
+    # interaction
+        #declare tag Other.Interaction.UI UI用interactionの共通タグ
+        #declare tag Other.Interaction.Bell クエスト出発ベル用のinteraction
+    # text_display
+        #declare tag Other.Text.Bell クエスト出発ベルの説明文
+    # 一時
+        #declare tag Other.Temp.Right 左右確認に一時的に使用、必ず同function内でリセットする

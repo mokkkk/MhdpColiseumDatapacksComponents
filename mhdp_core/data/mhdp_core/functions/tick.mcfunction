@@ -13,3 +13,4 @@
     execute as @a at @s run function mhdp_core:player/tick
 
 # 各Phase実行処理
+    function mhdp_core:phase/tick

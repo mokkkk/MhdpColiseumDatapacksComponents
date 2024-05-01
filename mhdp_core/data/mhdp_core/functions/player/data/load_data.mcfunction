@@ -4,6 +4,9 @@
 #
 # @within function mhdp_core:player/**
 
+# 既に読み込まれている場合は処理をスキップ
+    execute if score @s Ply.Uid = #mhdp_temp_loading_player_uid MhdpCore run return 0 
+
 # UID取得
     execute store result storage mhdp_core:temp UID int 1 run scoreboard players get @s Ply.Uid
 
