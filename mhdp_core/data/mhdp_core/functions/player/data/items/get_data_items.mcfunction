@@ -9,12 +9,12 @@
     execute if data storage mhdp_core:temp PlayerData.Item.Mainhand run data modify storage mhdp_core:temp PlayerData.Item.Mainhand.Pre set from storage mhdp_core:temp PlayerData.Item.Mainhand
 
 # 現tickのメインハンド
-    execute unless data storage mhdp_core:temp TempPlayerData.SelectedItem run data remove storage mhdp_core:temp PlayerData.Item.Mainhand
-    execute if data storage mhdp_core:temp TempPlayerData.SelectedItem run data modify storage mhdp_core:temp PlayerData.Item.Mainhand set from storage mhdp_core:temp TempPlayerData.SelectedItem
+    execute unless items entity @s weapon.mainhand * run data remove storage mhdp_core:temp PlayerData.Item.Mainhand
+    execute if items entity @s weapon.mainhand * run data modify storage mhdp_core:temp PlayerData.Item.Mainhand set from storage mhdp_core:temp TempPlayerData.SelectedItem
 
 # 現tickのオフハンド
-    execute unless data storage mhdp_core:temp TempPlayerData.Inventory[{Slot:-106b}] run data remove storage mhdp_core:temp PlayerData.Item.Offhand
-    execute if data storage mhdp_core:temp TempPlayerData.Inventory[{Slot:-106b}] run data modify storage mhdp_core:temp PlayerData.Item.Offhand set from storage mhdp_core:temp TempPlayerData.Inventory[{Slot:-106b}]
+    execute unless items entity @s weapon.offhand * run data remove storage mhdp_core:temp PlayerData.Item.Offhand
+    execute if items entity @s weapon.offhand * run data modify storage mhdp_core:temp PlayerData.Item.Offhand set from storage mhdp_core:temp TempPlayerData.Inventory[{Slot:-106b}]
 
 # 前tickのPos
     data modify storage mhdp_core:temp PlayerData.Pos.Pre set from storage mhdp_core:temp PlayerData.Pos

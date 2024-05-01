@@ -13,6 +13,8 @@
 #declare storage mhdp_core:temp 一時保存データを保持するstorage、原則毎tick消去する
 
 ## score_holder
+# 基本処理用
+    #declare score_holder #mhdp_core_timer 全般的な処理に使用するタイマー
 # プレイヤー処理
     #declare score_holder #mhdp_player_uid_grobal プレイヤーへのUID付与用、UIDを付与する毎に1増やす
 # モンスター処理

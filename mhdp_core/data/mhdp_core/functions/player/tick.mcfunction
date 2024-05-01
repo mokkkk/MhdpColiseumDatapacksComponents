@@ -23,6 +23,5 @@
 # 一時タグの消去
     function mhdp_core:player/data/remove_temp_tags
 
-# 一時的な保持データの削除
-    scoreboard players reset #mhdp_temp_loading_player_uid MhdpCore
-    data remove storage mhdp_core:temp PlayerData
+# キャッシュデータの削除
+    function mhdp_core:player/data/remove_cache_data
