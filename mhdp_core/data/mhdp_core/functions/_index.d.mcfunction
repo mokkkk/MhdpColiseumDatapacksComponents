@@ -53,6 +53,10 @@
     # 一時
         #declare tag Ply.Temp.Target 特定のプレイヤーを一時的に特定したいときに使用、必ず同function内でリセットする
         #declare tag Ply.Temp.IsGetData 現tickデータ取得済み
+# マーカー
+    # 処理用
+        #declare tag Mk.Field.Center フィールドの中心に設置されるマーカー
+        #declare tag Mk.Field.Back 壁に埋まった際、戻る位置決定用のマーカー
 # その他
     # interaction
         #declare tag Other.Interaction.UI UI用interactionの共通タグ
