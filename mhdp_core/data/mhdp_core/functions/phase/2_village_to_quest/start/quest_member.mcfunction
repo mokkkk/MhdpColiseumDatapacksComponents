@@ -1,8 +1,8 @@
-#> mhdp_core:phase/2_village_to_quest/start_quest_member
+#> mhdp_core:phase/2_village_to_quest/start/quest_member
 #
 # 村→クエスト移行時の開始処理 クエスト参加者に対しての実行
 #
-# @within function mhdp_core:phase/2_village_to_quest/start
+# @within function mhdp_core:phase/2_village_to_quest/start/main
 
 # 移動を禁止
     effect give @s resistance 10 10 true
