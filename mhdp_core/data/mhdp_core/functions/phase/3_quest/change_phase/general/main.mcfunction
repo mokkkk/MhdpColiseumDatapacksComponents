@@ -3,7 +3,8 @@
 # 次Phaseへ遷移 共通処理
 #
 # @within
-#     function mhdp_core:phase/3_quest/change_phase/succeed/change
+#    function mhdp_core:phase/3_quest/change_phase/succeed/change
+#    function mhdp_core:phase/3_quest/change_phase/failed/change
 
 # プレイヤーを拠点に戻す
     tp @a[tag=Ply.State.PlayingQuest] 266 63 204

@@ -15,6 +15,7 @@
 ## score_holder
 # 基本処理用
     #declare score_holder #mhdp_core_timer 全般的な処理に使用するタイマー
+    #declare score_holder #mhdp_core_loading_quest_id 現在受注しているクエストのID
 # プレイヤー処理
     #declare score_holder #mhdp_player_uid_grobal プレイヤーへのUID付与用、UIDを付与する毎に1増やす
 # モンスター処理

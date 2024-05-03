@@ -5,7 +5,6 @@
 # @within function mhdp_core:phase/2_village_to_quest/start/main
 
 # TODO: 以下デバッグ用のため削除
-    say クエストデータロード
     data modify storage mhdp_core:game_data ActiveQuest set value {Field:"Coliseum"}
 
 # 使用するマップのforceload

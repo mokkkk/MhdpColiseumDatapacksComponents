@@ -8,7 +8,7 @@
     scoreboard players add #mhdp_core_timer MhdpCore 1
 
 # 出発ファンファーレを鳴らす
-    execute if score #mhdp_quest_timer MhdpCore matches 10 as @a at @s run playsound minecraft:custom.departure master @s ~ ~ ~ 3 1
+    execute if score #mhdp_core_timer MhdpCore matches 10 as @a at @s run playsound minecraft:custom.departure master @s ~ ~ ~ 3 1
 
 # 開始処理
     execute if score #mhdp_core_timer MhdpCore matches 1 run function mhdp_core:phase/2_village_to_quest/start/main
