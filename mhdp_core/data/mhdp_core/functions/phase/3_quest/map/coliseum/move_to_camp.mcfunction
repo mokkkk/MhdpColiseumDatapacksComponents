@@ -10,3 +10,5 @@
 # 状態の更新
     tag @s remove Ply.State.MnsTarget
     tag @s remove Ply.State.EnableDamage
+
+# TODO: ボスバーの非表示

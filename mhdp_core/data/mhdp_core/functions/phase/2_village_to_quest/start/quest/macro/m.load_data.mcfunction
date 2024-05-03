@@ -6,3 +6,6 @@
 
 # データの読み込み
     $data modify storage mhdp_core:game_data ActiveQuest set from storage mhdp_core:game_data QuestList[{ID:$(ActiveQuestId)}].Content
+
+# 対象クエストをプレイ済みにする
+    $data modify storage mhdp_core:game_data QuestList[{ID:$(ActiveQuestId)}].State.IsPlayed set value true
