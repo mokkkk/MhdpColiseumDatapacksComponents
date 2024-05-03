@@ -11,10 +11,10 @@
     # TODO: プレイヤーの状態確認
 
 # エラーがある場合、エラー内容を表示
-    execute if data storage mhdp_core:temp IsError run function mhdp_core:phase/1_village/change_phase/show_error
+    execute if data storage mhdp_core:temp {IsError:true} run function mhdp_core:phase/1_village/change_phase/show_error
 
 # フェーズ変更
-    execute unless data storage mhdp_core:temp IsError run function mhdp_core:phase/1_village/change_phase/change
+    execute if data storage mhdp_core:temp {IsError:false} run function mhdp_core:phase/1_village/change_phase/change
 
 # 終了
     data remove storage mhdp_core:temp IsError

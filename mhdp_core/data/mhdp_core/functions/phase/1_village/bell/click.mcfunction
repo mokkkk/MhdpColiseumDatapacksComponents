@@ -15,6 +15,6 @@
     schedule function mhdp_core:phase/1_village/bell/schedule_remove_redstone 1t replace
 
 # 村Phase中以外は処理しない
-    execute unless data storage mhdp_core:game_data {Phase:1} run tellraw @a {"text": "【現在クエスト中です  終了までお待ちください】"}
+    execute unless data storage mhdp_core:game_data {Phase:1} run tellraw @a[tag=Ply.Temp.Target] {"text": "【現在クエスト中です。終了までお待ちください】","color": "red"}
 # 村Phase中はクエスト出発確認処理に移行
     execute if data storage mhdp_core:game_data {Phase:1} run function mhdp_core:phase/1_village/change_phase/check

@@ -6,4 +6,4 @@
 
 # クエストが受注されていない場合、エラー
     execute unless score #mhdp_core_loading_quest_id MhdpCore matches 0.. run data modify storage mhdp_core:temp Errors.IsNotQuestOrdered set value true
-    execute if data storage mhdp_core:temp Errors.IsNotQuestOrdered run data modify storage mhdp_core:temp IsError set value true
+    execute if data storage mhdp_core:temp Errors{IsNotQuestOrdered:true} run data modify storage mhdp_core:temp IsError set value true

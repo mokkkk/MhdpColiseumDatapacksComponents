@@ -10,4 +10,4 @@
 
 # エラー内容に応じた表示
     # クエスト未受注、QuestMemberがいないためクリック者にのみ表示
-        execute if data storage mhdp_core:temp Errors.IsNotQuestOrdered run tellraw @a[tag=Ply.Temp.Target] {"text":" - 【クエストが受注されていません】","color": "red"}
+        execute if data storage mhdp_core:temp Errors{IsNotQuestOrdered:true} run tellraw @a[tag=Ply.Temp.Target] {"text":" - 【クエストが受注されていません】","color": "red"}
