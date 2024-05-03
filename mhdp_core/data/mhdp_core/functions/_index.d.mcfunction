@@ -16,6 +16,11 @@
 # 基本処理用
     #declare score_holder #mhdp_core_timer 全般的な処理に使用するタイマー
     #declare score_holder #mhdp_core_loading_quest_id 現在受注しているクエストのID
+# クエスト処理用
+    #declare score_holder #mhdp_quest_timer_max クエストの最大制限時間
+    #declare score_holder #mhdp_quest_timer クエストの制限時間
+    #declare score_holder #mhdp_quest_deathcount_max クエストの最大残り乙回数
+    #declare score_holder #mhdp_quest_deathcount クエストの残り乙回数
 # プレイヤー処理
     #declare score_holder #mhdp_player_uid_grobal プレイヤーへのUID付与用、UIDを付与する毎に1増やす
 # モンスター処理
@@ -23,6 +28,10 @@
 # 一時
     #declare score_holder #mhdp_temp_grobal 一時的に使用する共通のスコア、必ず同function内でリセットする
     #declare score_holder #mhdp_temp_loading_player_uid 現在mhdp_core:temp PlayerDataに読み込まれているプレイヤーのUID
+# 定数
+    #declare score_holder #const_20
+    #declare score_holder #const_60
+    #declare score_holder #const_100
 
 ## tag
 # プレイヤー
@@ -51,6 +60,9 @@
             #declare tag Ply.Ope.StartJump ジャンプ開始
     # 進捗
         #declare tag Ply.Adv.Using.EnderEye エンダーアイ使用
+    # スキル
+        # 食事スキル
+            #declare tag Ply.Skill.Food.Insurance ネコの生命保険
     # 一時
         #declare tag Ply.Temp.Target 特定のプレイヤーを一時的に特定したいときに使用、必ず同function内でリセットする
         #declare tag Ply.Temp.IsGetData 現tickデータ取得済み

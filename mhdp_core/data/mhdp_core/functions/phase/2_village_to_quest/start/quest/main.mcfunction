@@ -11,7 +11,14 @@
     data remove storage mhdp_core:temp Temp
 
 # TODO: クエストデータの適用
-    
+    # 制限時間
+        execute store result score #mhdp_quest_timer_max MhdpCore store result score #mhdp_quest_timer MhdpCore run data get storage mhdp_core:game_data ActiveQuest.TimeLimit
+    # 乙回数
+        execute store result score #mhdp_quest_deathcount_max MhdpCore run data get storage mhdp_core:game_data ActiveQuest.DeathCount
+        # スキル
+            # 報酬金保険
+                execute if entity @a[tag=Ply.State.QuestMember,tag=Ply.Skill.Food.Insurance] run scoreboard players add #mhdp_quest_deathcount_max MhdpCore 1
+        execute store result score #mhdp_quest_deathcount MhdpCore run scoreboard players get #mhdp_quest_deathcount_max MhdpCore
 
 # 使用するマップのforceload
     # 大闘技場

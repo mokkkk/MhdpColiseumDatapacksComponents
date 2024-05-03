@@ -10,6 +10,7 @@
 ## Scoreboard定義
 # Mhdp基本処理用
     scoreboard objectives add MhdpCore dummy
+    scoreboard objectives add Const dummy
 
 # プレイヤー関連
     # UID
@@ -36,6 +37,11 @@
     execute unless score #mhdp_player_uid_grobal Ply.Uid matches -2147483648.. run scoreboard players set #mhdp_player_uid_grobal Ply.Uid 1
 # モンスターUID
     execute unless score #mhdp_monster_uid_grobal Mns.Uid matches -2147483648.. run scoreboard players set #mhdp_monster_uid_grobal Mns.Uid 1
+
+## 定数定義
+    scoreboard players set #const_20 Const 20
+    scoreboard players set #const_60 Const 60
+    scoreboard players set #const_100 Const 100
 
 # 処理用のEntity配置
     # summon interaction 223 64 206 {width:1.2f,height:1.2f,Tags:["Other.Interaction.UI","Other.Interaction.Bell"]}

@@ -16,12 +16,18 @@
     tag @a remove Ply.State.MnsTarget
     # tag @a remove Ply.State.QuestHost
     # tag @a remove Ply.State.QuestMember
+    # 食事スキル効果の解除
+        tag @a remove Ply.Skill.Food.Insurance
 
 # TODO: モンスター用データパックのdisable
 
 # ActiveQuestの解放
     scoreboard players set #mhdp_core_loading_quest_id MhdpCore -1
     data modify storage mhdp_core:game_data ActiveQuest set value {}
+    scoreboard players reset #mhdp_quest_timer_max MhdpCore
+    scoreboard players reset #mhdp_quest_timer MhdpCore
+    scoreboard players reset #mhdp_quest_deathcount_max MhdpCore
+    scoreboard players reset #mhdp_quest_deathcount MhdpCore
 
 # フェーズ変更
     data modify storage mhdp_core:game_data Phase set value 1
