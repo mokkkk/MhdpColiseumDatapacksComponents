@@ -16,6 +16,7 @@
 # リスポーン時処理
 
 # クエスト中処理
+    execute if entity @s[tag=Ply.State.PlayingQuest] run function mhdp_core:player/phase_quest/tick
 
 # 操作の初期化
     function mhdp_core:player/data/remove_operation

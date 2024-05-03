@@ -58,8 +58,12 @@
             #declare tag Ply.Ope.StartUsingEnderEye.WithSneak エンダーアイ・スニーク同時押し
         # ジャンプ
             #declare tag Ply.Ope.StartJump ジャンプ開始
+    # クエスト中処理
+        #declare tag Ply.Event.DeathAnimation 死亡演出
     # 進捗
         #declare tag Ply.Adv.Using.EnderEye エンダーアイ使用
+        #declare tag Ply.Adv.Hurt.EntityHurtPlayer 被ダメージ
+        #declare tag Ply.Adv.Hurt.PlayerHurtEntity 与ダメージ
     # スキル
         # 食事スキル
             #declare tag Ply.Skill.Food.Insurance ネコの生命保険
@@ -70,6 +74,7 @@
     # 処理用
         #declare tag Mk.Field.Center フィールドの中心に設置されるマーカー
         #declare tag Mk.Field.Back 壁に埋まった際、戻る位置決定用のマーカー
+        #declare tag Mk.Ply.DeathAnimation プレイヤー死亡演出用のbarrierを取り除くための位置保存用マーカー
 # その他
     # interaction
         #declare tag Other.Interaction.UI UI用interactionの共通タグ

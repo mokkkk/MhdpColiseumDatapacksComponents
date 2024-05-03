@@ -13,3 +13,5 @@
 # 状態の更新
     tag @s add Ply.State.MnsTarget
     tag @s add Ply.State.EnableDamage
+
+# TODO: ボスバーの表示

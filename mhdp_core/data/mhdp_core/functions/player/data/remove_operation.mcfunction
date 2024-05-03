@@ -4,6 +4,10 @@
 #
 # @within function mhdp_core:player/tick
 
+# ダメージ関連  
+    execute if entity @s[tag=Ply.Adv.Hurt.EntityHurtPlayer] run tag @s remove Ply.Adv.Hurt.EntityHurtPlayer
+    execute if entity @s[tag=Ply.Adv.Hurt.PlayerHurtEntity] run tag @s remove Ply.Adv.Hurt.PlayerHurtEntity
+
 # スニーク
     execute if entity @s[tag=Ply.Ope.IsSneaking] run tag @s remove Ply.Ope.IsSneaking
     execute if entity @s[tag=Ply.Ope.StartSneak] run tag @s remove Ply.Ope.StartSneak

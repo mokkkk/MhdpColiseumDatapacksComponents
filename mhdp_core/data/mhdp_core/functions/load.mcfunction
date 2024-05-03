@@ -17,16 +17,19 @@
         scoreboard objectives add Ply.Uid dummy
     # 操作
         # ニンジン棒使用回数
-            scoreboard objectives add Ply.Event.UsedCoas minecraft.used:carrot_on_a_stick
+            scoreboard objectives add Ply.Ope.UsedCoas minecraft.used:carrot_on_a_stick
         # ジャンプ回数
-            scoreboard objectives add Ply.Event.Jump minecraft.custom:minecraft.jump
+            scoreboard objectives add Ply.Ope.Jump minecraft.custom:minecraft.jump
         # エンダーアイ投げ捨て回数
-            scoreboard objectives add Ply.Event.DropEnderEye dropped:ender_eye
+            scoreboard objectives add Ply.Ope.DropEnderEye dropped:ender_eye
         # スニークタイマー
-            scoreboard objectives add Ply.Event.SneakTimer dummy
-            scoreboard objectives add Ply.Event.SneakInterval dummy
+            scoreboard objectives add Ply.Ope.SneakTimer dummy
+            scoreboard objectives add Ply.Ope.SneakInterval dummy
         # エンダーアイ使用タイマー
-            scoreboard objectives add Ply.Event.EnderEyeTimer dummy
+            scoreboard objectives add Ply.Ope.EnderEyeTimer dummy
+    # 処理用タイマー
+        # クエスト中・死亡演出再生用
+            scoreboard objectives add Ply.Timer.DeathAnimation dummy
 
 # モンスター関連
     # UID

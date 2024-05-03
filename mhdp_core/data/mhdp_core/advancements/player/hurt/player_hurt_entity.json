@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "dealt": {
+            "min": 3
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "mhdp_core:player/advancement/hurt/player_hurt_entity"
+  }
+}
