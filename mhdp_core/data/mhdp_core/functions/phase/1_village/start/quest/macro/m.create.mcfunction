@@ -28,7 +28,14 @@
     $data modify storage mhdp_core:temp Data.Field set from storage mhdp_core:game_data QuestBookData.Field[{ID:$(Field)}].Name
 
 # モンスターリスト
-    data modify storage mhdp_core:temp Data.MonsterList set value ["A","B","C"]
+    data modify storage mhdp_core:temp Data.MonsterList set from storage mhdp_core:temp TargetQuest.Content.Monsters
+    data modify storage mhdp_core:temp Data.Monster1 set value {"text":""}
+    data modify storage mhdp_core:temp Data.Monster2 set value {"text":""}
+    data modify storage mhdp_core:temp Data.Monster3 set value {"text":""}
+    data modify storage mhdp_core:temp Data.Monster4 set value {"text":""}
+    data modify storage mhdp_core:temp Data.Monster5 set value {"text":""}
+    scoreboard players set #mhdp_temp_grobal MhdpCore 0
+    function mhdp_core:phase/1_village/start/quest/macro/m.create_monsters
 
 # 制限時間
     data modify storage mhdp_core:temp Data.TimeLimit set from storage mhdp_core:temp TargetQuest.Content.TimeLimit

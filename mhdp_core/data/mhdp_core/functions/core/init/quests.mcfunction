@@ -27,7 +27,7 @@
         ID:1,Name:"テスト用クエスト2",Level:3,Pos:0,IsEmergency:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
         Content:{HpMultiply:200,AttackMultiply:200,Field:"Coliseum",TimeLimit:1,DeathCount:999,RewardMoney:6,RewardId:-1,Monsters:[\
-            {MonsterId:0,Timing:"Initial",TargetMonsterId:-1}\
+            {MonsterId:2,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
 
@@ -36,14 +36,16 @@
         ID:999,Name:"灯りさす火を求むれど射干玉の",Level:3,Pos:0,IsEmergency:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
         Content:{HpMultiply:200,AttackMultiply:200,Field:"Test",TimeLimit:999,DeathCount:999,RewardMoney:6,RewardId:-1,Monsters:[\
-            {MonsterId:0,Timing:"Initial",TargetMonsterId:-1}\
+            {MonsterId:3,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
 
 # クエスト受注書作成用データ
     data modify storage mhdp_core:game_data QuestBookData set value {\
         Level:["","★","★★","★★★","★★★★","★★★★★","★★★★★★","★★★★★★★","★★★★★★★★"],\
-        Field:[{ID:"Coliseum",Name:"闘技場"},{ID:"Test",Name:"どっか"}]\
+        Field:[{ID:"Coliseum",Name:"闘技場"},{ID:"Test",Name:"どっか"}],\
+        Monsters:[{ID:0,Name:{"text":"ほげ","color":red,"hoverEvent":{"action":"show_text","value":[{"text":"aaa"}]}}},{ID:1,Name:{"text":"ふが","color":black,"hoverEvent":{"action":"show_text","value":[{"text":"aaa"}]}}},{ID:2,Name:{"text":"ぴよ","color":white,"hoverEvent":{"action":"show_text","value":[{"text":"aaa"}]}}},{ID:3,Name:{"text":"太郎","color":blue,"hoverEvent":{"action":"show_text","value":[{"text":"aaa"}]}}}]\
     }
+
 
 say クエストデータ初期化

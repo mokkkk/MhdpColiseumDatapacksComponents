@@ -19,6 +19,7 @@
 
 # 終了
     data remove storage mhdp_core:temp Data
+    scoreboard players reset #mhdp_temp_grobal MhdpCore
     data remove storage mhdp_core:temp TargetQuest
     data remove storage mhdp_core:temp TempQuestList[0]
 
