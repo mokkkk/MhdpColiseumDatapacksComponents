@@ -27,6 +27,8 @@
             scoreboard objectives add Ply.Ope.SneakInterval dummy
         # エンダーアイ使用タイマー
             scoreboard objectives add Ply.Ope.EnderEyeTimer dummy
+        # クエスト受注のトリガー
+            scoreboard objectives add Ply.Ope.AcceptedQuestId trigger
     # 処理用タイマー
         # クエスト中・死亡演出再生用
             scoreboard objectives add Ply.Timer.DeathAnimation dummy
@@ -45,7 +47,3 @@
     scoreboard players set #const_20 Const 20
     scoreboard players set #const_60 Const 60
     scoreboard players set #const_100 Const 100
-
-# 処理用のEntity配置
-    # summon interaction 223 64 206 {width:1.2f,height:1.2f,Tags:["Other.Interaction.UI","Other.Interaction.Bell"]}
-    # summon text_display 223 65 206 {view_range:0.1f,width:1.5f,height:1.5f,billboard:"vertical",default_background:1b,Tags:["Other.Text.Bell"],text:'{"bold":true,"color":"white","text":"クエスト出発"}'}
