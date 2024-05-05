@@ -15,10 +15,6 @@
 
 # リスポーン時処理
 
-# 非クエスト中処理
-    execute if data storage mhdp_core:game_data {Phase:1} run scoreboard players enable @s Ply.Ope.AcceptedQuestId
-    execute if score @s Ply.Ope.AcceptedQuestId matches 0.. run function mhdp_core:phase/1_village/quest_book/click_accept
-
 # クエスト中処理
     execute if entity @s[tag=Ply.State.PlayingQuest] run function mhdp_core:player/phase_quest/tick
 

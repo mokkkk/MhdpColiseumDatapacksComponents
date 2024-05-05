@@ -4,6 +4,9 @@
 #
 # @within function mhdp_core:phase/2_village_to_quest/start/main
 
+# チームから外す
+    team leave @s
+
 # 移動を禁止
     effect give @s resistance 10 10 true
     effect give @s slowness 10 10 true

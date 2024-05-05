@@ -16,8 +16,8 @@
     # 状態
         tag @s remove Ply.State.EnableDamage
         tag @s remove Ply.State.MnsTarget
-        # tag @s remove Ply.State.QuestHost
-        # tag @s remove Ply.State.QuestMember
+        tag @s remove Ply.State.QuestHost
+        tag @s remove Ply.State.QuestMember
 
 # 食事スキル効果の解除
     tag @s remove Ply.Skill.Food.Insurance

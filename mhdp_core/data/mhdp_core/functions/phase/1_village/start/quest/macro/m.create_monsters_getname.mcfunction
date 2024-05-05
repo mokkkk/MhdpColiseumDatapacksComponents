@@ -5,4 +5,4 @@
 # @within function mhdp_core:phase/1_village/start/quest/macro/m.create
 
 # 名前をリストに追加
-    $data modify storage mhdp_core:temp Data.Monster$(Index) set from storage mhdp_core:game_data QuestBookData.Monsters[{ID:$(MonsterId)}].Name
+    $data modify storage mhdp_core:temp Data.Monster$(Index) set from storage mhdp_core:game_data QuestBookData.Monsters[{ID:$(MonsterId)}].ShowName

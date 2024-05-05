@@ -47,3 +47,9 @@
     scoreboard players set #const_20 Const 20
     scoreboard players set #const_60 Const 60
     scoreboard players set #const_100 Const 100
+
+## チーム定義
+    team add Team.QuestHost
+    team add Team.QuestMember
+    team modify Team.QuestHost prefix [{"text":"a","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
+    team modify Team.QuestMember prefix [{"text":"b","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]

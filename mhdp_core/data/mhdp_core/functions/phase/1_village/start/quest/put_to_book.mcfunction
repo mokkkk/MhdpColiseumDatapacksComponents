@@ -2,7 +2,9 @@
 #
 # 村Phase開始・更新処理 クエスト受注書の更新
 #
-# @within function mhdp_core:phase/1_village/start/main
+# @within
+#     function mhdp_core:phase/1_village/start/quest/main
+#     function mhdp_core:phase/1_village/start/quest/put_to_book
 
 # データの取り出し
     data modify storage mhdp_core:temp TargetQuest set from storage mhdp_core:temp TempQuestList[0]
