@@ -16,6 +16,7 @@
 # 基本処理用
     #declare score_holder #mhdp_core_timer 全般的な処理に使用するタイマー
     #declare score_holder #mhdp_core_loading_quest_id 現在受注しているクエストのID
+    #declare score_holder #mhdp_core_pre_played_quest_id 前回受注したクエストのID
 # クエスト処理用
     #declare score_holder #mhdp_quest_timer_max クエストの最大制限時間
     #declare score_holder #mhdp_quest_timer クエストの制限時間
@@ -28,6 +29,9 @@
 # 一時
     #declare score_holder #mhdp_temp_grobal 一時的に使用する共通のスコア、必ず同function内でリセットする
     #declare score_holder #mhdp_temp_loading_player_uid 現在mhdp_core:temp PlayerDataに読み込まれているプレイヤーのUID
+    #declare score_holder #mhdp_temp_page_normal クエスト受注書のページ管理に使用
+    #declare score_holder #mhdp_temp_page_hard クエスト受注書のページ管理に使用
+    #declare score_holder #mhdp_temp_page_extra クエスト受注書のページ管理に使用
 # 定数
     #declare score_holder #const_20
     #declare score_holder #const_60

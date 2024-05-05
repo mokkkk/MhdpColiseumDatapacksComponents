@@ -31,5 +31,13 @@
         {"text":"                    [受注]","bold":false,"color":red,"clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.AcceptedQuestId set $(ID)"}}\
     ]'}
 
+# 直前に受けたクエストIDと一致する場合、ページを設定する
+    $execute if data storage mhdp_core:temp TargetQuest{Pos:0} if score #mhdp_core_pre_played_quest_id MhdpCore matches $(ID) store result block $(Pos) Page int 1 run scoreboard players get #mhdp_temp_page_normal MhdpCore
+    $execute if data storage mhdp_core:temp TargetQuest{Pos:1} if score #mhdp_core_pre_played_quest_id MhdpCore matches $(ID) store result block $(Pos) Page int 1 run scoreboard players get #mhdp_temp_page_hard MhdpCore
+    $execute if data storage mhdp_core:temp TargetQuest{Pos:2} if score #mhdp_core_pre_played_quest_id MhdpCore matches $(ID) store result block $(Pos) Page int 1 run scoreboard players get #mhdp_temp_page_extra MhdpCore
+
+# ページ増加
+    execute if data storage mhdp_core:temp TargetQuest{Pos:0} run scoreboard players add #mhdp_temp_page_normal MhdpCore 1
+
 # 終了
     data modify block 241 64 215 Book.components."minecraft:written_book_content".resolved set value 0b

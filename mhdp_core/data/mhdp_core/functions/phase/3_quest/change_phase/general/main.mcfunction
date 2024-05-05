@@ -21,6 +21,7 @@
 # TODO: モンスター用データパックのdisable
 
 # ActiveQuestの解放
+    scoreboard players operation #mhdp_core_pre_played_quest_id MhdpCore = #mhdp_core_loading_quest_id MhdpCore
     scoreboard players set #mhdp_core_loading_quest_id MhdpCore -1
     data modify storage mhdp_core:game_data ActiveQuest set value {}
     scoreboard players reset #mhdp_quest_timer_max MhdpCore
