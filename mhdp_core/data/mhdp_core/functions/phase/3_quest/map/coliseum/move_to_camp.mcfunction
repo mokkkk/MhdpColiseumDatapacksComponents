@@ -6,6 +6,7 @@
 
 # 移動
     tp @s 221 66 141
+    spawnpoint @s 221 66 141
 
 # 状態の更新
     tag @s remove Ply.State.MnsTarget

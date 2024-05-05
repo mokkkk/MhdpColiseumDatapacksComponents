@@ -73,6 +73,7 @@
             #declare tag Ply.Skill.Food.Insurance ネコの生命保険
     # 一時
         #declare tag Ply.Temp.Target 特定のプレイヤーを一時的に特定したいときに使用、必ず同function内でリセットする
+        #declare tag Ply.Temp.TargetSub 上記では足りないときに利用、注意事項は同じ
         #declare tag Ply.Temp.IsGetData 現tickデータ取得済み
 # マーカー
     # 処理用
@@ -83,6 +84,7 @@
     # interaction
         #declare tag Other.Interaction.UI UI用interactionの共通タグ
         #declare tag Other.Interaction.Bell クエスト出発ベル用のinteraction
+        #declare tag Other.Interaction.Board クエスト参加用クエストボードのinteraction
     # text_display
         #declare tag Other.Text.Bell クエスト出発ベルの説明文
     # 一時

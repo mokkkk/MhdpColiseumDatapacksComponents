@@ -8,7 +8,7 @@
     scoreboard players add @s Ply.Timer.DeathAnimation 1
 
 # 開始
-    execute if score @s Ply.Timer.DeathAnimation matches 1 run function mhdp_core:player/phase_quest/death_animation/start
+    execute if score @s Ply.Timer.DeathAnimation matches 2 run function mhdp_core:player/phase_quest/death_animation/start
     execute if score @s Ply.Timer.DeathAnimation matches 1..10 at @s align xyz run tp @s ~0.5 ~ ~0.5
 
 # クエスト中の終了処理
