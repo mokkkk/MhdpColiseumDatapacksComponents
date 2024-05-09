@@ -75,6 +75,10 @@
         #declare tag Ply.Temp.Target 特定のプレイヤーを一時的に特定したいときに使用、必ず同function内でリセットする
         #declare tag Ply.Temp.TargetSub 上記では足りないときに利用、注意事項は同じ
         #declare tag Ply.Temp.IsGetData 現tickデータ取得済み
+        # クエスト出発時エラー関連
+            #declare tag Ply.Temp.Error.HasNotWeapons 武器を持っていないエラー
+            #declare tag Ply.Temp.Error.HasManyWeapons 武器を2つ以上持っているエラー
+            #declare tag Ply.Temp.Error.HasNotWeaponOffhand オフハンドに武器を持っていないエラー
 # マーカー
     # 処理用
         #declare tag Mk.Field.Center フィールドの中心に設置されるマーカー

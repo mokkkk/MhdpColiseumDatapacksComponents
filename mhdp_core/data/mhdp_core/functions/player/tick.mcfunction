@@ -18,11 +18,13 @@
 # クエスト中処理
     execute if entity @s[tag=Ply.State.PlayingQuest] run function mhdp_core:player/phase_quest/tick
 
-# 操作の初期化
-    function mhdp_core:player/data/remove_operation
+# アイテム処理
+    function mhdp_items:player/tick
 
-# 一時タグの消去
-    function mhdp_core:player/data/remove_temp_tags
-
-# キャッシュデータの削除
-    function mhdp_core:player/data/remove_cache_data
+# 終了
+    # 操作の初期化
+        function mhdp_core:player/data/remove_operation
+    # 一時タグの消去    
+        function mhdp_core:player/data/remove_temp_tags
+    # キャッシュデータの削除
+        function mhdp_core:player/data/remove_cache_data

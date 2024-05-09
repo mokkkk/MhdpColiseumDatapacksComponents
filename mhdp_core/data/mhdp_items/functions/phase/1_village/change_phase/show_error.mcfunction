@@ -13,16 +13,3 @@
         execute if data storage mhdp_core:temp Errors{IsNotQuestOrdered:true} run tellraw @a[tag=Ply.Temp.Target] {"text":" - 【クエストが受注されていません】","color": "red"}
     # クエスト存在チェック
         execute if data storage mhdp_core:temp Errors{IsQuestNotExist:true} run tellraw @a[tag=Ply.State.QuestMember] {"text":" - 【対象のクエストは存在しません】","color": "red"}
-
-# プレイヤー関連のエラー内容に応じた表示
-    # 武器を持っていない
-        execute if entity @a[tag=Ply.Temp.Error.HasNotWeapons] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【武器を所持してください】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.HasNotWeapons]","color": "red"}]
-    # 武器を2つ以上持っている
-        execute if entity @a[tag=Ply.Temp.Error.HasManyWeapons] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【武器は1つまでしか所持できません】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.HasManyWeapons]","color": "red"}]
-    # 武器をオフハンドにセットしていない
-        execute if entity @a[tag=Ply.Temp.Error.HasNotWeaponOffhand] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【武器はオフハンドに所持してください】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.HasNotWeaponOffhand]","color": "red"}]
-
-# 終了
-    tag @a remove Ply.Temp.Error.HasNotWeapons
-    tag @a remove Ply.Temp.Error.HasManyWeapons
-    tag @a remove Ply.Temp.Error.HasNotWeaponOffhand

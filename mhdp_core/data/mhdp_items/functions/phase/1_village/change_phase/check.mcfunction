@@ -8,8 +8,8 @@
     data modify storage mhdp_core:temp IsError set value false
     # クエストの受注確認
         function mhdp_core:phase/1_village/change_phase/check_quest
-    # プレイヤーの状態確認
-        execute if data storage mhdp_core:temp {IsError:false} as @a[tag=Ply.State.QuestMember] run function mhdp_core:phase/1_village/change_phase/check_player
+    # TODO: プレイヤーの状態確認
+        # execute if data storage mhdp_core:temp {IsError:false} run
 
 # エラーがある場合、エラー内容を表示
     execute if data storage mhdp_core:temp {IsError:true} run function mhdp_core:phase/1_village/change_phase/show_error
