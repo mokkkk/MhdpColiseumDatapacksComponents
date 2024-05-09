@@ -76,6 +76,7 @@
         #declare tag Ply.Temp.TargetSub 上記では足りないときに利用、注意事項は同じ
         #declare tag Ply.Temp.IsGetData 現tickデータ取得済み
         # クエスト出発時エラー関連
+            #declare tag Ply.Temp.Error.Gamemode ゲームモードに関するエラー
             #declare tag Ply.Temp.Error.HasNotWeapons 武器を持っていないエラー
             #declare tag Ply.Temp.Error.HasManyWeapons 武器を2つ以上持っているエラー
             #declare tag Ply.Temp.Error.HasNotWeaponOffhand オフハンドに武器を持っていないエラー

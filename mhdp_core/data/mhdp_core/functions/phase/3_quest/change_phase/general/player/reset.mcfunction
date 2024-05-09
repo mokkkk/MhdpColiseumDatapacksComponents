@@ -5,7 +5,8 @@
 # @within
 #    function mhdp_core:phase/3_quest/change_phase/succeed/change
 
-# TODO: 武器のリセット
+# 武器のリセット
+    function mhdp_core:phase/3_quest/change_phase/general/player/weapon/reset
 
 # TODO: 防具のリセット
 
@@ -18,6 +19,7 @@
         tag @s remove Ply.State.MnsTarget
         tag @s remove Ply.State.QuestHost
         tag @s remove Ply.State.QuestMember
+        tag @s remove Ply.State.UsingWeapon
 
 # 食事スキル効果の解除
     tag @s remove Ply.Skill.Food.Insurance

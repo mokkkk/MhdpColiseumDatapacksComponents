@@ -12,6 +12,20 @@
     effect give @s slowness 10 10 true
     attribute @s generic.jump_strength modifier add f-f-f-f-1 "クエスト出発前移動禁止" -10 add_value
 
-# TODO:武器データを取得し、武器を外す
+# データ操作準備
+    function mhdp_core:player/data/load_data
+    data modify storage mhdp_core:temp TempPlayerData set from entity @s
+
+# 武器データを保持し、武器を外す
+    function mhdp_core:player/data/items/get_data_items
+    data modify storage mhdp_core:temp PlayerData.Item.Mainweapon set from storage mhdp_core:temp PlayerData.Item.Offhand
+    data remove storage mhdp_core:temp PlayerData.Item.Offhand
+    item replace entity @s weapon.offhand with air
 
 # TODO:防具の固定
+
+# 適用
+    function mhdp_core:player/data/save_data
+
+# 終了
+    data remove storage mhdp_core:temp TempPlayerData

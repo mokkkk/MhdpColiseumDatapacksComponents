@@ -4,6 +4,10 @@
 #
 # @within function mhdp_core:phase/1_village/bell/click
 
+# ゲームモードがアドベンチャー以外の場合、エラー
+    execute if entity @s[gamemode=!adventure] run tag @s add Ply.Temp.Error.Gamemode
+    execute if entity @s[tag=Ply.Temp.Error.Gamemode] run data modify storage mhdp_core:temp IsError set value true
+
 # 武器を持っていない場合、エラー
 # 武器を2つ以上持っている場合、エラー
     execute store result score #mhdp_count MhdpCore run clear @s ender_eye[custom_data~{IsMhdpWeapon:1b}] 0
