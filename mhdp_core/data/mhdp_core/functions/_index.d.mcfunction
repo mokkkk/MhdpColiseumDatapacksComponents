@@ -60,6 +60,7 @@
             #declare tag Ply.Ope.UsedEnderEye.Long エンダーアイ長クリック
             #declare tag Ply.Ope.StartUsingEnderEye.NotSneak エンダーアイ・非スニーク同時押し
             #declare tag Ply.Ope.StartUsingEnderEye.WithSneak エンダーアイ・スニーク同時押し
+            #declare tag Ply.Ope.DroppedEnderEye エンダーアイ投げ捨て
         # ジャンプ
             #declare tag Ply.Ope.StartJump ジャンプ開始
     # クエスト中処理

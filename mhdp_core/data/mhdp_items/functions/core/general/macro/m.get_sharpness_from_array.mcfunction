@@ -16,5 +16,3 @@
 # 斬れ味が確定するまで繰り返す
     execute store result storage mhdp_core:temp Args.Index int 1 run scoreboard players add #mhdp_temp_index MhdpCore 1
     execute if score #mhdp_temp_index MhdpCore matches ..7 unless data storage mhdp_core:temp Args{Complete:true} run function mhdp_items:core/general/macro/m.get_sharpness_from_array with storage mhdp_core:temp Args
-
-say color

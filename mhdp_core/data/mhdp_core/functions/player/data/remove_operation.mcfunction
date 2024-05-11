@@ -21,6 +21,8 @@
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run tag @s remove Ply.Ope.StartUsingEnderEye.WithSneak
     execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] run tag @s remove Ply.Ope.UsedEnderEye.Short
     execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long] run tag @s remove Ply.Ope.UsedEnderEye.Long
+    scoreboard players set @s Ply.Ope.DropEnderEye 0
+    execute if entity @s[tag=Ply.Ope.DroppedEnderEye] run tag @s remove Ply.Ope.DroppedEnderEye
 
 # ニンジン棒
 

@@ -12,5 +12,8 @@
 # グローバルUID増加
     scoreboard players add #mhdp_player_uid_grobal Ply.Uid 1
 
+# バグ防止
+    scoreboard players set @s Ply.Ope.AcceptedQuestId -1
+
 # 状態更新
     tag @s add Ply.State.HasUid

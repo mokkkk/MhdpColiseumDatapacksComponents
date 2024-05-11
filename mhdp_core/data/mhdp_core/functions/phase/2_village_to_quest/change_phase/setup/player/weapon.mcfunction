@@ -18,7 +18,6 @@
         function mhdp_items:core/general/calc_sharpness_color
     # クエスト中独自のデータ付与
         function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/macro/m.set_weapondata with storage mhdp_core:temp Result
-        # item modify block 0 0 0 container.0 {function:set_custom_data,tag:{IsUsing:1b,IsSubWeapon:0b,IsDrawing:0b}}
     # 終了
         data remove storage mhdp_core:temp Result
 
@@ -33,6 +32,11 @@
         execute if entity @s[tag=Ply.Temp.NoItemsInOffhand] run item replace block 0 0 0 container.0 with air
         execute if entity @s[tag=Ply.Temp.NoItemsInOffhand] run loot give @s mine 0 0 0 debug_stick
         tag @s remove Ply.Temp.NoItemsInOffhand
+
+# 武器データを保存
+    data modify storage mhdp_core:temp PlayerData.Item.UsingWeapon set from entity @s Inventory[{Slot:-106b}]
+    data modify storage mhdp_core:temp Test set from entity @s Inventory[{Slot:-106b}]
+    function mhdp_core:player/data/save_data
 
 # 終了
     item replace block 0 0 0 container.1 with air
