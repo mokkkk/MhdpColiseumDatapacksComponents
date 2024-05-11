@@ -68,9 +68,6 @@
         #declare tag Ply.Adv.Using.EnderEye エンダーアイ使用
         #declare tag Ply.Adv.Hurt.EntityHurtPlayer 被ダメージ
         #declare tag Ply.Adv.Hurt.PlayerHurtEntity 与ダメージ
-    # スキル
-        # 食事スキル
-            #declare tag Ply.Skill.Food.Insurance ネコの生命保険
     # 一時
         #declare tag Ply.Temp.Target 特定のプレイヤーを一時的に特定したいときに使用、必ず同function内でリセットする
         #declare tag Ply.Temp.TargetSub 上記では足りないときに利用、注意事項は同じ

@@ -10,7 +10,7 @@
 # 記入
     $data modify block $(Pos) Book.components."minecraft:written_book_content".pages append value {raw:'[\
         {"text":"$(State)\\n","bold":true,"color":$(Color)},\
-        {"text":"$(Name)\\n\\n","bold":true,"color":black},\
+        {"text":"$(Name)\\n","bold":true,"color":black},\
         $(Newline),\
         {"text":"難易度：","bold":false,"color":black},\
         {"text":"$(Level)\\n","bold":false,"color":gold},\

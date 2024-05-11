@@ -9,8 +9,7 @@
 
 ## score_holder
 # プレイヤー処理
-    #declare score_holder #mhdp_player_uid_grobal プレイヤーへのUID付与用、UIDを付与する毎に1増やす
-
+    #declare score_holder 
 
 ## tag
 # プレイヤー

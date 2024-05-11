@@ -17,7 +17,7 @@
 # 村Phase中以外は処理しない
     execute unless data storage mhdp_core:game_data {Phase:1} run tellraw @a[tag=Ply.Temp.Target] {"text": "【現在クエスト中です。終了までお待ちください】","color": "red"}
 # 村Phase中、クエスト受注者以外の操作の場合は処理しない
-    execute if data storage mhdp_core:game_data {Phase:1} if entity @a[tag=Ply.State.QuestHost] unless entity @s[tag=Ply.State.QuestHost] run tag @s add Ply.Temp.TargetSub
+    execute if data storage mhdp_core:game_data {Phase:1} if entity @a[tag=Ply.State.QuestHost] if entity @s[tag=!Ply.State.QuestHost] run tag @s add Ply.Temp.TargetSub
     execute if entity @s[tag=Ply.Temp.TargetSub] run tellraw @a[tag=Ply.Temp.Target] {"text": "【クエスト受注者のみが出発準備が可能です】","color": "red"}
 # 村Phase中はクエスト出発確認処理に移行
     execute if entity @s[tag=!Ply.Temp.TargetSub] if data storage mhdp_core:game_data {Phase:1} run function mhdp_core:phase/1_village/change_phase/check

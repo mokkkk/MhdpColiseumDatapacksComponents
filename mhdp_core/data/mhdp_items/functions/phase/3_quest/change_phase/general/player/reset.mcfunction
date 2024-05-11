@@ -20,7 +20,7 @@
         tag @s remove Ply.State.QuestMember
 
 # 食事スキル効果の解除
-    tag @s remove Ply.Skill.Food.Insurance
+    tag @s remove Skill.Food.Insurance
 
 # attribute等の初期化
     effect clear @s resistance

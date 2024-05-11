@@ -17,8 +17,8 @@
     attribute @s generic.jump_strength modifier remove f-f-f-f-1
     attribute @s generic.knockback_resistance base set 1.0
 
-# TODO:武器のセット
-    say TODO:武器セット
+# 武器のセット
+    
 
 # TODO:特殊装具の取得
     say TODO:特殊装具セット
