@@ -42,13 +42,13 @@
 # デバッグ用操作表示
     # スニーク
         # execute if entity @s[tag=Ply.Ope.StartSneak] run say スニーク
-        execute if entity @s[tag=Ply.Ope.StartDoubleSneak] run say 連続スニーク
+        # execute if entity @s[tag=Ply.Ope.StartDoubleSneak] run say 連続スニーク
     # エンダーアイ
         # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] run say エンダーアイ使用開始
         # execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] run say エンダーアイ使用中
         # execute if entity @s[tag=Ply.Ope.EndUsingEnderEye] run say エンダーアイ使用終了
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.NotSneak] run say エンダーアイ使用開始・スニークなし
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run say エンダーアイ使用開始・スニーク同時押し
+        # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.NotSneak] run say エンダーアイ使用開始・スニークなし
+        # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run say エンダーアイ使用開始・スニーク同時押し
         # execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] run say エンダーアイ使用・短押し
         # execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long] run say エンダーアイ使用・長押し
     # ジャンプ

@@ -17,8 +17,8 @@
     attribute @s generic.jump_strength modifier remove f-f-f-f-1
     attribute @s generic.knockback_resistance base set 1.0
 
-# 武器のセット
-    
+# 武器セット
+    function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon
 
 # TODO:特殊装具の取得
     say TODO:特殊装具セット

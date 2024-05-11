@@ -53,3 +53,6 @@
     team add Team.QuestMember
     team modify Team.QuestHost prefix [{"text":"a","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.QuestMember prefix [{"text":"b","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
+
+## アイテム用ロード処理
+    function mhdp_items:load

@@ -1,0 +1,14 @@
+#> mhdp_items:load
+#
+# アイテム処理用のスコア定義
+#
+# @within function mhdp_items:/**
+
+## Scoreboard定義
+# 武器共通処理
+    # 武器の操作処理用
+        scoreboard objectives add Wpn.GeneralTimer dummy
+    # 武器の演出操作用、ヒットストップの表現のため操作と分ける
+        scoreboard objectives add Wpn.AnimationTimer dummy
+    # 武器のヒットストップ時間
+        scoreboard objectives add Wpn.HitStopTimer dummy

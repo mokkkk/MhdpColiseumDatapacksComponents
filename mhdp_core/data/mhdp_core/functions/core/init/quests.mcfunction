@@ -35,7 +35,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:2,Name:"とってもながいクエスト名てすと",Level:7,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:200,AttackMultiply:200,Field:"Test",TimeLimit:999,DeathCount:999,RewardMoney:999,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:200,AttackMultiply:200,Field:"Coliseum",TimeLimit:999,DeathCount:999,RewardMoney:999,RewardId:-1,Monsters:[\
             {MonsterId:3,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
