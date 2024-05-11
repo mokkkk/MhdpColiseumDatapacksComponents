@@ -2,7 +2,7 @@
 #
 # PlayerDataを個別ストレージから読み込み、キャッシュする
 #
-# @within function mhdp_core:player/**
+# @within function mhdp_core:**
 
 # 自身のデータがキャッシュされている場合は処理をスキップ
     execute if score @s Ply.Uid = #mhdp_temp_loading_player_uid MhdpCore run return 0 

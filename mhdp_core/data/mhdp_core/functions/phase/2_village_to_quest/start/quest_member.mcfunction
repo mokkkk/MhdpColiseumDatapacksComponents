@@ -18,7 +18,7 @@
 
 # 武器データを保持し、武器を外す
     function mhdp_core:player/data/items/get_data_items
-    data modify storage mhdp_core:temp PlayerData.Item.Mainweapon set from storage mhdp_core:temp PlayerData.Item.Offhand
+    data modify storage mhdp_core:temp PlayerData.Item.MainWeapon set from storage mhdp_core:temp PlayerData.Item.Offhand
     data remove storage mhdp_core:temp PlayerData.Item.Offhand
     item replace entity @s weapon.offhand with air
 

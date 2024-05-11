@@ -13,7 +13,7 @@
 
 # 個別ストレージの武器データをコピー
     function mhdp_core:player/data/load_data
-    data modify block 0 0 0 Items[{Slot:0b}].components set from storage mhdp_core:temp PlayerData.Item.Mainweapon.components
+    data modify block 0 0 0 Items[{Slot:0b}].components set from storage mhdp_core:temp PlayerData.Item.MainWeapon.components
 
 # プレイヤーに渡す
     execute unless items entity @s weapon.offhand * run tag @s add Ply.Temp.NoItemsInOffhand
