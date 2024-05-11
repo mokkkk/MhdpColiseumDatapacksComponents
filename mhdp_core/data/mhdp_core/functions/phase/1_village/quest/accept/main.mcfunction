@@ -11,11 +11,15 @@
 
 # クエストIDを設定
     scoreboard players operation #mhdp_core_loading_quest_id MhdpCore = @s Ply.Ope.AcceptedQuestId
+    scoreboard players operation #mhdp_core_pre_played_quest_id MhdpCore = #mhdp_core_loading_quest_id MhdpCore
 
 # 状態更新
     tag @s add Ply.State.QuestHost
     tag @s add Ply.State.QuestMember
     team join Team.QuestHost @s
+
+# クエスト受注書更新
+    function mhdp_core:phase/1_village/start/quest/main
 
 # 通知
     function mhdp_core:phase/1_village/quest/accept/notify

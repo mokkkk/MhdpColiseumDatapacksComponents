@@ -11,6 +11,7 @@
     $data modify block $(Pos) Book.components."minecraft:written_book_content".pages append value {raw:'[\
         {"text":"$(State)\\n","bold":true,"color":$(Color)},\
         {"text":"$(Name)\\n\\n","bold":true,"color":black},\
+        $(Newline),\
         {"text":"難易度：","bold":false,"color":black},\
         {"text":"$(Level)\\n","bold":false,"color":gold},\
         {"text":"ターゲット：\\n\\n","bold":false,"color":black},\
@@ -28,7 +29,8 @@
         {"text":"目的地：$(Field)\\n","bold":false,"color":black},\
         {"text":"制限時間：$(TimeLimit)分\\n","bold":false,"color":black},\
         {"text":"失敗条件：$(DeathCount)回力尽きる\\n\\n","bold":false,"color":black},\
-        {"text":"                    [受注]","bold":false,"color":red,"clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.AcceptedQuestId set $(ID)"}}\
+        {"text":"$(Indent)","bold":false},\
+        {"text":"$(Button)","bold":true,"color":red,"clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.AcceptedQuestId set $(ID)"}}\
     ]'}
 
 # 直前に受けたクエストIDと一致する場合、ページを設定する
