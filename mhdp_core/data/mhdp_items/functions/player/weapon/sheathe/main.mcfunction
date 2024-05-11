@@ -31,5 +31,3 @@
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Weapon.Drawing.Sub,tag=!Ply.Flag.NormalSheathe] if items entity @s weapon.offhand * run function mhdp_items:player/weapon/sheathe/force_sheathe
 
 # その他処理
-    # オフハンドの監視
- 
