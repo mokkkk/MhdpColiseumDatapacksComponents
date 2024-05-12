@@ -4,5 +4,8 @@
 #
 # @within function mhdp_core:phase/1_village/bell/click
 
+# ゲームモード変更
+    gamemode adventure @s
+
 # 武器に関するチェック
     function mhdp_core:phase/1_village/change_phase/player/check_weapon

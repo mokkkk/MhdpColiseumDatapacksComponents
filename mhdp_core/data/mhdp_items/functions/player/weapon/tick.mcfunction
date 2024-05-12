@@ -7,7 +7,11 @@
 # 武器の納刀・抜刀状態取得
     function mhdp_items:player/weapon/sheathe/main
 
+# スタミナ処理
+    function mhdp_items:player/weapon/stamina/main
+
 # UI表示
+    function mhdp_items:player/ui/main
 
 # 直接攻撃処理の実行
 

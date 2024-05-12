@@ -16,6 +16,8 @@
 # プレイヤー
     # 状態
         #declare tag Ply.Weapon.Deactivated 武器操作無効化状態
+        #declare tag Ply.Weapon.StaminaNotRegen スタミナ回復無効化状態
+        #declare tag Ply.Weapon.StaminaEmpty スタミナ使い切り状態
         #declare tag Ply.Weapon.Drawing 抜刀中
         #declare tag Ply.Weapon.Drawing.Sub サブ武器抜刀中
     # フラグ

@@ -38,5 +38,8 @@
     data modify storage mhdp_core:temp Test set from entity @s Inventory[{Slot:-106b}]
     function mhdp_core:player/data/save_data
 
+# 武器ごとの初期化処理
+    function mhdp_items:core/switch/weapon_init
+
 # 終了
     item replace block 0 0 0 container.1 with air

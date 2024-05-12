@@ -20,6 +20,11 @@
         tag @s remove Ply.State.QuestHost
         tag @s remove Ply.State.QuestMember
         tag @s remove Ply.State.UsingWeapon
+    # 武器関連
+        tag @s remove Ply.Weapon.StaminaNotRegen
+        tag @s remove Ply.Weapon.StaminaEmpty
+        tag @s remove Ply.Weapon.Drawing
+        tag @s remove Ply.Weapon.Drawing.Sub
 
 # 食事スキル効果の解除
     tag @s remove Skill.Food.Insurance

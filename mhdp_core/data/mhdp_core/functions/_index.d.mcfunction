@@ -63,6 +63,8 @@
             #declare tag Ply.Ope.DroppedEnderEye エンダーアイ投げ捨て
         # ジャンプ
             #declare tag Ply.Ope.StartJump ジャンプ開始
+        # ダッシュ
+            #declare tag Ply.Ope.IsSprinting ダッシュ中
     # クエスト中処理
         #declare tag Ply.Event.DeathAnimation 死亡演出
     # 進捗

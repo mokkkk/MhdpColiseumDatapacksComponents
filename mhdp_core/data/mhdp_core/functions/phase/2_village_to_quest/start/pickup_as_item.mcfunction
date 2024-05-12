@@ -6,6 +6,7 @@
 
 # 回収しない対象のアイテムは除外
     execute if items entity @s contents *[minecraft:custom_data={NoPickup:1b}] run return 0
+    execute if items entity @s contents *[minecraft:custom_data={IsUsing:1b}] run return 0
 
 # 一時チェストに入れる
     item replace block 0 0 0 container.0 from entity @s contents

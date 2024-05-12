@@ -17,6 +17,13 @@
     attribute @s generic.jump_strength modifier remove f-f-f-f-1
     attribute @s generic.knockback_resistance base set 1.0
 
+# データ初期化
+    scoreboard players set @s Ply.Stats.Stamina 1000
+    tag @s remove Ply.Weapon.StaminaNotRegen
+    tag @s remove Ply.Weapon.StaminaEmpty
+    tag @s remove Ply.Weapon.Drawing
+    tag @s remove Ply.Weapon.Drawing.Sub
+
 # 武器セット
     function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon
 

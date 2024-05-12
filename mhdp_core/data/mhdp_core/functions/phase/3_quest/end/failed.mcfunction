@@ -5,5 +5,6 @@
 # @within function 
 
 # クエスト失敗時処理開始
+    scoreboard players set #mhdp_quest_timer MhdpCore -1
     scoreboard players set #mhdp_core_timer MhdpCore 0
     data modify storage mhdp_core:game_data ActiveQuest.State set value "Failed"

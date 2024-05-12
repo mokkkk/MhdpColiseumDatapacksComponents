@@ -5,6 +5,11 @@
 # @within function mhdp_items:/**
 
 ## Scoreboard定義
+# プレイヤーのステータス
+    # スタミナ
+        scoreboard objectives add Ply.Stats.Stamina dummy
+    # スタミナのペナルティ時間
+        scoreboard objectives add Ply.Stats.StaminaPenaltyTimer dummy
 # 武器共通処理
     # 武器の操作処理用
         scoreboard objectives add Wpn.GeneralTimer dummy

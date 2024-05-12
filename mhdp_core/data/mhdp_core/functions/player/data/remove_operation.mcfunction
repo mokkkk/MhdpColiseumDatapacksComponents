@@ -30,3 +30,6 @@
 
 # ジャンプ
     execute if entity @s[tag=Ply.Ope.StartJump] run tag @s remove Ply.Ope.StartJump
+
+# ダッシュ
+    execute if entity @s[tag=Ply.Ope.IsSprinting] run tag @s remove Ply.Ope.IsSprinting
