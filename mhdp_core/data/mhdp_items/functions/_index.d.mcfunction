@@ -21,5 +21,6 @@
         #declare tag Ply.Weapon.Drawing 抜刀中
         #declare tag Ply.Weapon.Drawing.Sub サブ武器抜刀中
     # フラグ
+        #declare tag Ply.Flag.HideSharpness 斬れ味UI非表示フラグ
         #declare tag Ply.Flag.NormalAttack 左クリック攻撃フラグ
         #declare tag Ply.Flag.NormalSheathe 通常納刀フラグ
