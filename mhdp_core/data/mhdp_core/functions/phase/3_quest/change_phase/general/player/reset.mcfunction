@@ -10,8 +10,11 @@
 
 # TODO: 防具のリセット
 
-# 死亡演出中のプレイヤーは、演出終了
-    execute if entity @s[tag=Ply.Event.DeathAnimation] at @s run function mhdp_core:player/phase_quest/death_animation/end_on_quest
+# 演出の強制終了
+    # 死亡演出
+        execute if entity @s[tag=Ply.Event.DeathAnimation] at @s run function mhdp_core:player/phase_quest/death_animation/end_on_quest
+    # スタミナ
+        function mhdp_items:player/weapon/stamina/penalry_end
 
 # タグ消去
     # 状態

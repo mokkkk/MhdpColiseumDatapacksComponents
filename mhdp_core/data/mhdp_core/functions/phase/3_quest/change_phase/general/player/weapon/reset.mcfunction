@@ -5,6 +5,9 @@
 # @within
 #    function mhdp_core:phase/3_quest/change_phase/succeed/change
 
+# 先に武器のリセット処理を実行
+    function mhdp_items:core/switch/weapon_reset
+
 # 武器を消去
     clear @s ender_eye[custom_data~{IsMhdpWeapon:1b}]
 
