@@ -30,7 +30,7 @@
         tag @s remove Ply.Weapon.Drawing.Sub
 
 # 食事スキル効果の解除
-    tag @s remove Skill.Food.Insurance
+    function mhdp_core:phase/3_quest/change_phase/general/player/skill/reset_food_skills
 
 # attribute等の初期化
     effect clear @s resistance

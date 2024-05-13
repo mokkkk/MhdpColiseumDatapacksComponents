@@ -25,6 +25,3 @@
 # UsingWeaponの更新
     execute if data storage mhdp_core:temp PlayerData.Item.Mainhand.components."minecraft:custom_data"{IsMhdpWeapon:1b,IsSubWeapon:0b} run data modify storage mhdp_core:temp PlayerData.Item.UsingWeapon set from storage mhdp_core:temp PlayerData.Item.Mainhand
     execute if data storage mhdp_core:temp PlayerData.Item.Offhand.components."minecraft:custom_data"{IsMhdpWeapon:1b,IsSubWeapon:0b} run data modify storage mhdp_core:temp PlayerData.Item.UsingWeapon set from storage mhdp_core:temp PlayerData.Item.Offhand
-
-# TODO: 以下デバッグ用のためいつか消す
-    execute if score @s Ply.Uid matches 1 run data modify storage mhdp_core:temp Test set from storage mhdp_core:temp PlayerData.Item.UsingWeapon
