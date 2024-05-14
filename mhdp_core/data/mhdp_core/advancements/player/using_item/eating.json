@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:paper"]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "mhdp_core:player/advancement/using_item/paper"
+  }
+}

@@ -17,3 +17,6 @@
         scoreboard objectives add Wpn.AnimationTimer dummy
     # 武器のヒットストップ時間
         scoreboard objectives add Wpn.HitStopTimer dummy
+
+## init
+    function mhdp_items:core/init/item_data

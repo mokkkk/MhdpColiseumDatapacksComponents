@@ -35,7 +35,9 @@
 
 # ニンジン棒
 
-# 食べ物
+# 食べ物・時間管理
+    execute if entity @s[tag=!Ply.Adv.Using.Paper] run scoreboard players set @s Ply.Ope.EatingTimer 0
+    execute if entity @s[tag=Ply.Adv.Using.Paper] run scoreboard players add @s Ply.Ope.EatingTimer 1
 
 # ジャンプ
     execute if score @s Ply.Ope.Jump matches 1.. run tag @s add Ply.Ope.StartJump

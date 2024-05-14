@@ -69,6 +69,7 @@
         #declare tag Ply.Event.DeathAnimation 死亡演出
     # 進捗
         #declare tag Ply.Adv.Using.EnderEye エンダーアイ使用
+        #declare tag Ply.Adv.Using.Paper 紙使用
         #declare tag Ply.Adv.Hurt.EntityHurtPlayer 被ダメージ
         #declare tag Ply.Adv.Hurt.PlayerHurtEntity 与ダメージ
     # 一時

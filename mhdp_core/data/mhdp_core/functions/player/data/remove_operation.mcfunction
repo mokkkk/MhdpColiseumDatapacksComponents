@@ -27,6 +27,7 @@
 # ニンジン棒
 
 # 食べ物
+    execute if entity @s[tag=Ply.Adv.Using.Paper] run tag @s remove Ply.Adv.Using.Paper
 
 # ジャンプ
     execute if entity @s[tag=Ply.Ope.StartJump] run tag @s remove Ply.Ope.StartJump

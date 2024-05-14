@@ -27,6 +27,9 @@
             scoreboard objectives add Ply.Ope.SneakInterval dummy
         # エンダーアイ使用タイマー
             scoreboard objectives add Ply.Ope.EnderEyeTimer dummy
+        # アイテム使用タイマー
+            scoreboard objectives add Ply.Ope.EatingTimer dummy
+            scoreboard objectives add Ply.Ope.EatingTimerMax dummy
         # クエスト受注のトリガー
             scoreboard objectives add Ply.Ope.AcceptedQuestId trigger
     # 処理用タイマー

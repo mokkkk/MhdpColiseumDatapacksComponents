@@ -16,5 +16,6 @@
     execute if entity @s[tag=Ply.State.UsingWeapon]
 
 # アイテム関連処理
+    function mhdp_items:player/item/tick
 
 # 終了

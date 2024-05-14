@@ -14,7 +14,7 @@
     execute if entity @s[tag=!Ply.Temp.IsGetData] run data modify storage mhdp_core:temp TempPlayerData set from entity @s
 
 # 武器操作用のデータ取得
-    execute if entity @s[tag=Ply.State.UsingWeapon,tag=!Ply.Temp.IsGetData] run function mhdp_core:player/data/items/get_data_items
+    execute if entity @s[tag=!Ply.Temp.IsGetData] run function mhdp_core:player/data/items/get_data_items
 
 # 保存
     execute if entity @s[tag=!Ply.Temp.IsGetData] run function mhdp_core:player/data/save_data
