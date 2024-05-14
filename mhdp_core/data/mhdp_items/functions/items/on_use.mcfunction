@@ -4,8 +4,8 @@
 #
 # @within function mhdp_items:/**
 
-# アイテムの個数変動
-    item modify entity @s weapon.mainhand {function:set_count,count:-1,add:true}
+# クエスト中のみ、アイテムの個数減少
+    execute if entity @s[tag=Ply.State.PlayingQuest] run item modify entity @s weapon.mainhand {function:set_count,count:-1,add:true}
 
 # 各アイテムのfunctionに移行 
     data modify storage mhdp_core:temp Temp.ItemName set from entity @s SelectedItem.components."minecraft:custom_data".ItemName
@@ -14,5 +14,3 @@
 
 # 終了
     scoreboard players set @s Ply.Ope.EatingTimer 0
-
-say on use
