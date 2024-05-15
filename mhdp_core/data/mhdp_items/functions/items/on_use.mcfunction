@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:/**
 
+# 効果音
+    playsound entity.player.levelup master @s ~ ~ ~ 1 2
+
 # クエスト中のみ、アイテムの個数減少
     execute if entity @s[tag=Ply.State.PlayingQuest] run item modify entity @s weapon.mainhand {function:set_count,count:-1,add:true}
 
