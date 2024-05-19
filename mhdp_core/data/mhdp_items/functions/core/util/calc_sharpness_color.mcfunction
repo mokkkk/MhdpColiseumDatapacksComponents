@@ -1,4 +1,4 @@
-#> mhdp_items:core/general/calc_sharpness_color
+#> mhdp_items:core/util/calc_sharpness_color
 # 
 # 共通処理 斬れ味の現在色を取得する
 #
@@ -13,7 +13,7 @@
 # 斬れ味の計算
     scoreboard players set #mhdp_temp_sum MhdpCore 0
     execute store result storage mhdp_core:temp Args.Index int 1 run scoreboard players set #mhdp_temp_index MhdpCore 0
-    function mhdp_items:core/general/macro/m.get_sharpness_from_array with storage mhdp_core:temp Args
+    function mhdp_items:core/util/macro/m.get_sharpness_from_array with storage mhdp_core:temp Args
     scoreboard players reset #mhdp_temp_sum MhdpCore
     scoreboard players reset #mhdp_temp_index MhdpCore
 

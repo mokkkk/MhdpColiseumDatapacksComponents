@@ -5,7 +5,9 @@
 # @within function mhdp_items:player/weapon/sheathe/main
 
 # 武器のデータ更新
-    item modify entity @s weapon.offhand {function:set_custom_data,tag:{IsDrawing:0b}}
+    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 0
+    data modify storage mhdp_core:temp Args.Slot set value "offhand"
+    function mhdp_items:core/util/item_modify_sheathe
 
 # 各武器の通常納刀処理実行
     function mhdp_items:core/switch/weapon_sheathe

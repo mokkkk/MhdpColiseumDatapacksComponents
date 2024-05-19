@@ -10,9 +10,9 @@
     execute if entity @s[tag=Skill.Stamina.StaminaSurge.2,tag=!Ply.Ope.IsSprinting,tag=!Ply.Weapon.StaminaNotRegen,tag=!Ply.Weapon.StaminaEmpty] if score @s Ply.Stats.Stamina matches ..999 run scoreboard players add @s Ply.Stats.Stamina 9
 
 # ダッシュ中の消費
-    execute if entity @s[tag=Ply.Ope.IsSprinting,tag=!Skill.Stamina.Runner.1,tag=!Skill.Stamina.Runner.2] run scoreboard players remove @s Ply.Stats.Stamina 4
-    execute if entity @s[tag=Skill.Stamina.Runner.1,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 3
-    execute if entity @s[tag=Skill.Stamina.Runner.2,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 2
+    execute if entity @s[tag=Ply.Ope.IsSprinting,tag=!Skill.Stamina.Runner.1,tag=!Skill.Stamina.Runner.2] run scoreboard players remove @s Ply.Stats.Stamina 3
+    execute if entity @s[tag=Skill.Stamina.Runner.1,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 2
+    execute if entity @s[tag=Skill.Stamina.Runner.2,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 1
 
 # ジャンプ時の消費
     # 立ち

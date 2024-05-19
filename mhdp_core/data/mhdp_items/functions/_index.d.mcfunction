@@ -11,6 +11,8 @@
     #declare score_holder #mhdp_temp_index 再帰処理のindexに使用
     #declare score_holder #mhdp_temp_sum 再帰処理のsumに使用
     #declare score_holder #mhdp_temp_sharpness_current 現在斬れ味の計算用
+# 一時
+    #declare score_holder #mhdp_arg_cmd_offset cmdのオフセットを設定
 
 ## tag
 # プレイヤー
