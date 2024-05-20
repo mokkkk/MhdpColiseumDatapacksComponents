@@ -4,8 +4,13 @@
 #
 # @within function mhdp_items:/**
 
-# TODO: 分岐処理
-    say TODO:武器の抜刀分岐処理
+# 念のためデータ取得
+    function mhdp_core:player/data/load_data
+
+# 分岐処理
+    data modify storage mhdp_core:temp Temp.Prefix set from storage mhdp_core:temp PlayerData.WeaponTypePrefix
+    function mhdp_items:core/switch/macro/m.drawing with storage mhdp_core:temp Temp
+    data remove storage mhdp_core:temp Temp
 
 # 以下、テスト用のサブ武器抜刀処理
     # # タグ付与

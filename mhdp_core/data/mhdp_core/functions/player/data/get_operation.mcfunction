@@ -44,7 +44,7 @@
     execute if entity @s[tag=Ply.Ope.StartJump] run scoreboard players set @s Ply.Ope.Jump 0
 
 # ダッシュ
-    execute as @s if predicate {condition:entity_properties,entity:this,predicate:{flags:{is_sprinting:true}}} run tag @s add Ply.Ope.IsSprinting
+    execute if predicate {condition:entity_properties,entity:this,predicate:{flags:{is_sprinting:true}}} run tag @s add Ply.Ope.IsSprinting
 
 # デバッグ用操作表示
     # スニーク
