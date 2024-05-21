@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:/**
 
+# 効果音
+    execute at @s run playsound item.armor.equip_iron master @a ~ ~ ~ 1 1
+
 # 念のためデータ取得
     function mhdp_core:player/data/load_data
 

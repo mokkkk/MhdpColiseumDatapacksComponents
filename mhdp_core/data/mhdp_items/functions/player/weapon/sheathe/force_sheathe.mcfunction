@@ -35,6 +35,9 @@
 # 終了
     item replace block 0 0 0 container.1 with air
 
+# 各武器の通常納刀処理実行
+    function mhdp_items:core/switch/weapon_sheathe
+
 # タグ更新
     tag @s remove Ply.Flag.NormalSheathe
     tag @s remove Ply.Weapon.Drawing

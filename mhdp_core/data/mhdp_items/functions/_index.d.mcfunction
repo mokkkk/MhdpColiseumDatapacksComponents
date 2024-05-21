@@ -22,6 +22,8 @@
         #declare tag Ply.Weapon.StaminaEmpty スタミナ使い切り状態
         #declare tag Ply.Weapon.Drawing 抜刀中
         #declare tag Ply.Weapon.Drawing.Sub サブ武器抜刀中
+        #declare tag Ply.Weapon.Type.Tech 天の型有効
+        #declare tag Ply.Weapon.NoOpe 立ち状態（非操作中）
     # フラグ
         #declare tag Ply.Flag.HideSharpness 斬れ味UI非表示フラグ
         #declare tag Ply.Flag.NormalAttack 左クリック攻撃フラグ

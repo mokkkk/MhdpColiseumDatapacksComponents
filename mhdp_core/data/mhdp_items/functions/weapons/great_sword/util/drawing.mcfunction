@@ -6,3 +6,7 @@
 
 # TODO: 武器の初期化処理
     say TODO:大剣抜刀処理
+
+# ステータス設定
+    attribute @s generic.attack_speed modifier add f-f-f-a-1 "武器の個別攻撃速度" -3.0 add_value
+    attribute @s generic.movement_speed modifier add f-f-f-a-2 "武器の個別移動速度" -0.05 add_value

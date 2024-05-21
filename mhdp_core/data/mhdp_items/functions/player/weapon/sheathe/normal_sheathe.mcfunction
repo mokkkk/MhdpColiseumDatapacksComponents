@@ -9,7 +9,7 @@
     data modify storage mhdp_core:temp Args.Slot set value "offhand"
     function mhdp_items:core/util/item_modify_sheathe
 
-# 各武器の通常納刀処理実行
+# 各武器の納刀処理実行
     function mhdp_items:core/switch/weapon_sheathe
 
 # タグ消去

@@ -6,3 +6,7 @@
 
 # TODO: 武器のリセット処理
     say TODO:大剣リセット処理
+
+# ステータス削除
+    attribute @s generic.attack_speed modifier remove f-f-f-a-1
+    attribute @s generic.movement_speed modifier remove f-f-f-a-2
