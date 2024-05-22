@@ -17,9 +17,11 @@
 
 # 溜め斬り
     # 処理
+        execute if entity @s[tag=Wpn.Gs.Normal.ChargeSlash] run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/main
 
 # タックル
     # 処理
+        execute if entity @s[tag=Wpn.Gs.Normal.Tackle] run function mhdp_items:weapons/great_sword/type_normal/3_tackle/main
 
 # ガード
     # 処理
