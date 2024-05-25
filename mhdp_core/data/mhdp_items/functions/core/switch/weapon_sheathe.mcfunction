@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:/**
 
+# サブ武器消去
+    clear @s ender_eye[custom_data~{IsSubWeapon:1b}]
+
 # 効果音
     execute at @s run playsound item.armor.equip_iron master @a ~ ~ ~ 1 0.7
     
@@ -14,6 +17,3 @@
     data modify storage mhdp_core:temp Temp.Prefix set from storage mhdp_core:temp PlayerData.WeaponTypePrefix
     function mhdp_items:core/switch/macro/m.sheathe with storage mhdp_core:temp Temp
     data remove storage mhdp_core:temp Temp
-
-# 以下、テスト用処理
-    # clear @s ender_eye[custom_data~{IsSubWeapon:1b}]
