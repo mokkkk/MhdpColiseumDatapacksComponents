@@ -20,6 +20,6 @@
     scoreboard players set @s Wpn.Gs.ChargeCount 0
 
 # 空中で使用した場合、少し飛ぶ
-    execute if entity @s[nbt={OnGround:0b}] run function mhdp_items:weapons/great_sword/type_normal/5_charge_draw/start_jump
+    execute if entity @s[tag=!Ply.Ope.IsAir,nbt={OnGround:0b}] run function mhdp_items:weapons/great_sword/type_normal/5_charge_draw/start_jump
 
 say 大剣・抜刀溜め

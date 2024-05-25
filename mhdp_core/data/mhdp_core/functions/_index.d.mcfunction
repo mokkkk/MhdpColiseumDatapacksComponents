@@ -65,6 +65,8 @@
             #declare tag Ply.Ope.StartJump ジャンプ開始
         # ダッシュ
             #declare tag Ply.Ope.IsSprinting ダッシュ中
+        # 空中
+            #declare tag Ply.Ope.IsAir 飛行中
     # クエスト中処理
         #declare tag Ply.Event.DeathAnimation 死亡演出
     # 進捗

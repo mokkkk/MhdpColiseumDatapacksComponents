@@ -46,6 +46,9 @@
 # ダッシュ
     execute if predicate {condition:entity_properties,entity:this,predicate:{flags:{is_sprinting:true}}} run tag @s add Ply.Ope.IsSprinting
 
+# 着地するまで有効
+    execute if entity @s[tag=Ply.Ope.IsAir,nbt={OnGround:1b}] run tag @s remove Ply.Ope.IsAir
+
 # デバッグ用操作表示
     # スニーク
         # execute if entity @s[tag=Ply.Ope.StartSneak] run say スニーク
