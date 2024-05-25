@@ -17,6 +17,7 @@
     tag @s remove Ply.Weapon.Guard
     tag @s remove Ply.Weapon.Armod.Super
     tag @s remove Ply.Weapon.Armod.Hyper
+    tag @s remove Ply.Flag.DrawAttack
 
 # アニメーション停止
     execute if entity @s[tag=!Ply.Weapon.Type.Tech] run function mhdp_items:weapons/great_sword/type_normal/stop_all_animation

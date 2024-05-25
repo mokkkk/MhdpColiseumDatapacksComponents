@@ -26,6 +26,9 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.Armod.Hyper
     execute if score @s Wpn.GeneralTimer matches 12 run tag @s remove Ply.Weapon.Armod.Hyper
 
+# 抜刀攻撃終了
+    execute if score @s Wpn.GeneralTimer matches 5 run tag @s remove Ply.Flag.DrawAttack
+
 # 遷移
     # 右クリック中の場合、溜めに移行
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/great_sword/type_normal/3_tackle/change_to_charge
