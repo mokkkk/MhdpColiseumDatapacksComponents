@@ -16,7 +16,7 @@
 # 直接攻撃処理の実行
 
 # 各武器のメイン処理実行
-    execute if entity @s[tag=Ply.Weapon.Drawing] run function mhdp_items:core/switch/weapon_main
+    function mhdp_items:core/switch/weapon_main
 
 # 納刀フラグ付与時、納刀処理実行
     execute if entity @s[tag=Ply.Flag.NormalSheathe] run function mhdp_items:player/weapon/sheathe/normal_sheathe

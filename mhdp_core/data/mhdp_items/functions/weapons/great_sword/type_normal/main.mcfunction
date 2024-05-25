@@ -8,6 +8,7 @@
     function mhdp_items:weapons/great_sword/type_normal/general
 
 # 抜刀攻撃：溜め
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/great_sword/type_normal/0_drawattack/start
 
 # 溜め
     # 開始：右クリック長押し
