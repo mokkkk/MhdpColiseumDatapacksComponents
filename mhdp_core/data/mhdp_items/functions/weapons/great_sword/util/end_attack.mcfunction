@@ -15,4 +15,6 @@
     attribute @s generic.attack_speed modifier remove f-f-f-a-1
     attribute @s generic.attack_speed modifier add f-f-f-a-1 "武器の個別攻撃速度" -3.0 add_value
     attribute @s generic.jump_strength modifier remove f-f-f-a-3
+    attribute @s generic.attack_damage modifier remove f-f-f-a-4
+    attribute @s generic.attack_damage modifier add f-f-f-a-4 "武器の個別攻撃力" 5.0 add_value
     effect clear @s slowness

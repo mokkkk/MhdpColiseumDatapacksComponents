@@ -16,6 +16,8 @@
 
 # 移動制限
     effect give @s slowness 1 3 true
+    execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier remove f-f-f-a-3
+    execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier add f-f-f-a-3 "武器の個別ジャンプ力" -0.3 add_value
 
 # 溜め
     execute if entity @s[tag=!Skill.Stamina.ShortCharge.1,tag=!Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Gs.ChargeTimer 5
@@ -32,4 +34,4 @@
         execute if score @s Wpn.Gs.ChargeTimer matches 450.. run scoreboard players set @s Wpn.Gs.ChargeCount 2
         execute if score @s Wpn.Gs.ChargeTimer matches 450.. run function mhdp_items:weapons/great_sword/type_normal/1_charge/change_to_chargeattack
     # ジャンプした場合、タックルに移行
-        execute if entity @s[tag=Ply.Ope.StartJump,tag=!Wpn.Gs.Normal.ChargeSlash] if score @s Ply.Stats.Stamina matches 150.. run function mhdp_items:weapons/great_sword/type_normal/1_charge/change_to_tackle
+        execute if entity @s[tag=Ply.Ope.StartJump,tag=!Wpn.Gs.Normal.ChargeSlash] if score @s Wpn.GeneralTimer matches 15.. if score @s Ply.Stats.Stamina matches 150.. run function mhdp_items:weapons/great_sword/type_normal/1_charge/change_to_tackle

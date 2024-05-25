@@ -12,7 +12,7 @@
     tag @s add Wpn.Gs.Normal.Charge
 
 # attribute設定
-    attribute @s generic.jump_strength modifier add f-f-f-a-3 "武器の個別ジャンプ力" -0.3 add_value
+    attribute @s generic.jump_strength modifier add f-f-f-a-3 "武器の個別ジャンプ力" -1.0 add_value
 
 # その他初期化
     scoreboard players set @s Wpn.Gs.ChargeTimer 0

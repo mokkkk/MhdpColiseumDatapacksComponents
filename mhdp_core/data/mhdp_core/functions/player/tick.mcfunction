@@ -28,3 +28,7 @@
         function mhdp_core:player/data/remove_temp_tags
     # キャッシュデータの削除
         function mhdp_core:player/data/remove_cache_data
+
+# その他
+    # 満腹度
+        effect give @s saturation infinite 0 true

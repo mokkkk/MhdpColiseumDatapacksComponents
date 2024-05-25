@@ -24,7 +24,10 @@
         execute if entity @s[tag=Wpn.Gs.Normal.Tackle] run function mhdp_items:weapons/great_sword/type_normal/3_tackle/main
 
 # ガード
+    # 開始：スニーク
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/great_sword/type_normal/4_guard/start
     # 処理
+        execute if entity @s[tag=Wpn.Gs.Normal.Guard] run function mhdp_items:weapons/great_sword/type_normal/4_guard/main
 
 # 鉄蟲糸技：ハンティングエッジ
 

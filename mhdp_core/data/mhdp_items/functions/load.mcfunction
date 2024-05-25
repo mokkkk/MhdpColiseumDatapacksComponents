@@ -17,6 +17,8 @@
         scoreboard objectives add Wpn.AnimationTimer dummy
     # 武器のヒットストップ時間
         scoreboard objectives add Wpn.HitStopTimer dummy
+    # 武器のガード硬直時間
+        scoreboard objectives add Wpn.GuardStopTimer dummy
 # 武器ごとの特殊スコア
     # 大剣
         # 溜め時間
