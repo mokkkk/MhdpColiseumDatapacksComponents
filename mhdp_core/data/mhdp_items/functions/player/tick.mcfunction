@@ -9,6 +9,11 @@
 
 # タイマー関連処理
 
+# ヒットストップ処理
+    execute if entity @s[tag=!Ply.Weapon.HisStop] if score @s Wpn.HitStopTimer matches 1.. run tag @s add Ply.Weapon.HisStop
+    execute if score @s Wpn.HitStopTimer matches 1.. run scoreboard players remove @s Wpn.HitStopTimer 1
+    execute if entity @s[tag=Ply.Weapon.HisStop] if score @s Wpn.HitStopTimer matches ..0 run tag @s remove Ply.Weapon.HisStop
+
 # 武器関連処理
     execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:player/weapon/tick
 

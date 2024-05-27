@@ -25,7 +25,8 @@
             scoreboard objectives add Wpn.Gs.ChargeTimer dummy
         # 溜め段階
             scoreboard objectives add Wpn.Gs.ChargeCount dummy
-
+        # 溜め斬り段階
+            scoreboard objectives add Wpn.Gs.ChargeSlashCount dummy
 
 ## init
     function mhdp_items:core/init/item_data

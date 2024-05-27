@@ -6,7 +6,7 @@
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
-    scoreboard players add @s Wpn.AnimationTimer 1
+    execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
 
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1 run playsound entity.player.attack.sweep master @s ~ ~ ~ 1 1
@@ -27,3 +27,5 @@
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/end
+
+# execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set @s Wpn.HitStopTimer 3

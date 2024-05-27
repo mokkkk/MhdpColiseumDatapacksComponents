@@ -1,0 +1,18 @@
+#> mhdp_items:weapons/great_sword/type_tec/8_charge_super/animation_5
+#
+# 強溜め アニメーション処理
+#
+# @within function mhdp_items:weapons/great_sword/type_tec/8_charge_super/main
+
+# データ設定
+    data modify storage mhdp_core:temp Args.IsDrawing set value true
+    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 26
+    data modify storage mhdp_core:temp Args.Slot set value "mainhand"
+
+# アニメーション
+    function mhdp_items:core/util/item_modify_animation
+
+# 演出
+    playsound entity.hoglin.step master @s ~ ~ ~ 1 0.7
+    playsound entity.hoglin.step master @s ~ ~ ~ 1 0.5
+    particle crit ~ ~1 ~ 0 0 0 1 50
