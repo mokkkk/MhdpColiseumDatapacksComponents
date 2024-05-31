@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/3_tackle/main
 
 # タグ消去
-    tag @s remove Wpn.Gs.Normal.Tackle
+    tag @s remove Wpn.Gs.Tec.Tackle
     tag @s remove Ply.Weapon.StaminaNotRegen
 
 # タイマー初期化

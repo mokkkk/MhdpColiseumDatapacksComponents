@@ -33,6 +33,7 @@
 
 # 演出
     execute if score @s Wpn.GeneralTimer matches 18.. run particle crimson_spore ~ ~1 ~ 0.5 1 0.5 1 5
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..10 run tp @s ~ ~ ~ ~ ~-0.5
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s

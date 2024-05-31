@@ -16,6 +16,7 @@
     effect clear @s slowness
     attribute @s generic.jump_strength modifier remove f-f-f-f-1
     attribute @s generic.knockback_resistance base set 1.0
+    effect give @s instant_health 3 10 true
 
 # データ初期化
     scoreboard players set @s Ply.Stats.Stamina 1000

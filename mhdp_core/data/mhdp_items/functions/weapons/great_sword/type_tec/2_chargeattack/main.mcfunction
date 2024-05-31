@@ -22,6 +22,9 @@
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
 
+# 演出
+   execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.AnimationTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2
+
 # 抜刀攻撃終了
     execute if score @s Wpn.GeneralTimer matches 5 run tag @s remove Ply.Flag.DrawAttack
 

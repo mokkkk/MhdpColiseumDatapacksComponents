@@ -31,6 +31,9 @@
     execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 6000
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function delta:api/launch_looking
 
+# 演出
+   execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.AnimationTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2
+
 # 遷移
     # 右クリックを離した場合、溜めに移行
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/type_tec/7_chargeattack_high/change_to_charge

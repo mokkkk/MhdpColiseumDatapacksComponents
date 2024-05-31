@@ -12,3 +12,6 @@
     data modify storage mhdp_core:temp Temp.Prefix set from storage mhdp_core:temp PlayerData.WeaponTypePrefix
     function mhdp_items:core/switch/macro/m.init with storage mhdp_core:temp Temp
     data remove storage mhdp_core:temp Temp
+
+# 反映
+    function mhdp_core:player/data/save_data

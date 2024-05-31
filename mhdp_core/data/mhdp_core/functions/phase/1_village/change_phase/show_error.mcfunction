@@ -17,6 +17,8 @@
 # プレイヤー関連のエラー内容に応じた表示
     # ゲームモード
         execute if entity @a[tag=Ply.Temp.Error.Gamemode] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【ゲームモードをアドベンチャーに設定してください】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.Gamemode]","color": "red"}]
+    # カーソルにアイテムを保持している
+        execute if entity @a[tag=Ply.Temp.Error.HasCursorItem] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【カーソルにアイテムを持たないでください】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.HasCursorItem]","color": "red"}]
     # 武器を持っていない
         execute if entity @a[tag=Ply.Temp.Error.HasNotWeapons] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【武器を所持してください】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.HasNotWeapons]","color": "red"}]
     # 武器を2つ以上持っている
@@ -26,6 +28,7 @@
 
 # 終了
     tag @a remove Ply.Temp.Error.Gamemode
+    tag @a remove Ply.Temp.Error.HasCursorItem
     tag @a remove Ply.Temp.Error.HasNotWeapons
     tag @a remove Ply.Temp.Error.HasManyWeapons
     tag @a remove Ply.Temp.Error.HasNotWeaponOffhand

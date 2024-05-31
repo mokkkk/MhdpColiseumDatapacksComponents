@@ -10,7 +10,7 @@
     data modify storage mhdp_core:temp Args.Slot set value "mainhand"
 
 # アニメーション
-    function mhdp_items:core/util/item_modify_animation
+    function mhdp_items:core/util/item_modify_no_attack
 
 # 演出
     playsound entity.hoglin.step master @s ~ ~ ~ 1 0.7

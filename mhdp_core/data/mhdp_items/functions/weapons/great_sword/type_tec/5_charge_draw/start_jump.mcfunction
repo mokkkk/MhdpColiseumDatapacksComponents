@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/great_sword/type_normal/5_charge_draw/start_jump
+#> mhdp_items:weapons/great_sword/type_tec/5_charge_draw/start_jump
 #
 # 溜め 開始
 #
-# @within function mhdp_items:weapons/great_sword/type_normal/5_charge_draw/start
+# @within function mhdp_items:weapons/great_sword/type_tec/5_charge_draw/start
 
 # 移動
     tp @s @s

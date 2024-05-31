@@ -7,5 +7,10 @@
 # ゲームモード変更
     gamemode adventure @s
 
+# カーソルアイテムに関するチェック
+    function mhdp_core:phase/1_village/change_phase/player/check_cursor
+
 # 武器に関するチェック
     function mhdp_core:phase/1_village/change_phase/player/check_weapon
+
+# 特殊装具に関するチェック

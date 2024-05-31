@@ -22,6 +22,10 @@
     execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 4000
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function delta:api/launch_looking
 
+# 演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..2 run tp @s ~ ~ ~ ~ ~1
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 15..16 run tp @s ~ ~ ~ ~ ~-1
+
 # アーマー
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.Armod.Hyper
     execute if score @s Wpn.GeneralTimer matches 12 run tag @s remove Ply.Weapon.Armod.Hyper

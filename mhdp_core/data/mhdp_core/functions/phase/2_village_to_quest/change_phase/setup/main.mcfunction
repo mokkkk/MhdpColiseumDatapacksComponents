@@ -17,4 +17,3 @@
         
 # クエスト開始
     data modify storage mhdp_core:game_data ActiveQuest.State set value "Playing"
-        
