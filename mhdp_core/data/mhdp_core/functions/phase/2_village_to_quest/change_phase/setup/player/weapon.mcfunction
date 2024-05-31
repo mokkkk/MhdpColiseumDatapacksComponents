@@ -40,5 +40,9 @@
 # 武器ごとの初期化処理
     function mhdp_items:core/switch/weapon_init
 
+# その他初期化
+    tag @s remove Ply.Weapon.Deactivated
+    scoreboard players set @s Wpn.DeactivateTimer 0
+
 # 終了
     item replace block 0 0 0 container.1 with air

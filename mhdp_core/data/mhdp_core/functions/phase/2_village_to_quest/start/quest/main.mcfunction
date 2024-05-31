@@ -18,6 +18,7 @@
         # スキル
             # 報酬金保険
                 execute if entity @a[tag=Ply.State.QuestMember,tag=Skill.Food.Insurance] run scoreboard players add #mhdp_quest_deathcount_max MhdpCore 1
+    # 乙回数適用
         execute store result score #mhdp_quest_deathcount MhdpCore run scoreboard players get #mhdp_quest_deathcount_max MhdpCore
 
 # 使用するマップのforceload
