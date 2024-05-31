@@ -34,6 +34,7 @@
     execute if entity @s[tag=!Ply.Ope.IsSneaking] run scoreboard players set @s Ply.Ope.SneakTimer 0
 
 # ニンジン棒
+    execute if score @s Ply.Ope.UsedCoas matches 1.. run tag @s add Ply.Ope.StartUsingCoas
 
 # 食べ物・時間管理
     execute if entity @s[tag=!Ply.Adv.Using.Paper] run scoreboard players set @s Ply.Ope.EatingTimer 0
@@ -61,5 +62,7 @@
         # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run say エンダーアイ使用開始・スニーク同時押し
         # execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] run say エンダーアイ使用・短押し
         # execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long] run say エンダーアイ使用・長押し
+    # ニンジン棒
+        # execute if entity @s[tag=Ply.Ope.StartUsingCoas] run say ニンジン棒使用    
     # ジャンプ
         # execute if entity @s[tag=Ply.Ope.StartJump] run say ジャンプ

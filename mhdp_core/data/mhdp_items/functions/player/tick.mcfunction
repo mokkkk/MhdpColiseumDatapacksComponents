@@ -18,7 +18,7 @@
     execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:player/weapon/tick
 
 # 特殊装具関連処理
-    execute if entity @s[tag=Ply.State.UsingWeapon]
+    execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:sp_items/tick
 
 # アイテム関連処理
     function mhdp_items:player/item/tick

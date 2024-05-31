@@ -2,7 +2,7 @@
 #
 # playerのアイテム使用処理
 #
-# @within function mhdp_core:player/tick
+# @within function mhdp_items:player/item/tick
 
 # 効果音
     execute if score @s Ply.Ope.EatingTimer matches 10 run playsound entity.generic.drink master @s ~ ~ ~ 1 1
