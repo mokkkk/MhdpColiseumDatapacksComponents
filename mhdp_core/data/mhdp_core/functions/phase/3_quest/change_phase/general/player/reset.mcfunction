@@ -10,6 +10,9 @@
 
 # TODO: 防具のリセット
 
+# 特殊装具のリセット
+    function mhdp_items:core/switch/item/reset
+
 # 演出の強制終了
     # 死亡演出
         execute if entity @s[tag=Ply.Event.DeathAnimation] at @s run function mhdp_core:player/phase_quest/death_animation/end_on_quest

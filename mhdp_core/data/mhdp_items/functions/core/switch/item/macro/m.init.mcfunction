@@ -1,8 +1,8 @@
-#> mhdp_items:core/switch/macro/m.init
+#> mhdp_items:core/switch/item/macro/m.init
 # 
-# 分岐処理 各武器の初期化処理 本体
+# 分岐処理 各特殊装具の初期化処理 本体
 #
-# @within function mhdp_items:core/switch/weapon_init
+# @within function mhdp_items:core/switch/item/init
 
-# 武器の初期化処理を実行
-    $function mhdp_items:weapons/$(Prefix)/util/init
+# 特殊装具の初期化処理を実行
+    $function mhdp_items:sp_items/$(Prefix)/util/init

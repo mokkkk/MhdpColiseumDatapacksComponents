@@ -8,3 +8,4 @@
     say TODO:翔蟲初期化処理
 
 # タグ付与
+    tag @s add Itm.Sp.Wirebug
