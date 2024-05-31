@@ -16,9 +16,12 @@
 # 演出
     execute if score @s Itm.Wirebug.GeneralTimer matches 1 run playsound item.trident.throw master @a ~ ~ ~ 2 1.8
     execute if score @s Itm.Wirebug.GeneralTimer matches 1 run playsound minecraft:entity.breeze.shoot master @a ~ ~ ~ 1 1.8
-    execute if score @s Itm.Wirebug.GeneralTimer matches 1..8 positioned ~ ~1.4 ~ rotated as @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target,limit=1] run function mhdp_items:sp_items/wirebug/using/start_particle
-    execute if score @s Itm.Wirebug.GeneralTimer matches 9 run playsound minecraft:entity.breeze.jump master @a ~ ~ ~ 1 0.6
+    execute if score @s Itm.Wirebug.GeneralTimer matches 1..3 positioned ~ ~1.4 ~ rotated as @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target,limit=1] run function mhdp_items:sp_items/wirebug/using/particle_0
+    execute if score @s Itm.Wirebug.GeneralTimer matches 4..8 positioned ~ ~1.4 ~ rotated as @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target,limit=1] run function mhdp_items:sp_items/wirebug/using/particle_1
+    execute if score @s Itm.Wirebug.GeneralTimer matches 9 run playsound minecraft:entity.breeze.jump master @a ~ ~ ~ 1 0.7
     execute if score @s Itm.Wirebug.GeneralTimer matches 9 run playsound minecraft:entity.breeze.jump master @a ~ ~ ~ 1 0.5
+    execute if score @s Itm.Wirebug.GeneralTimer matches 9 unless block ~ ~-1 ~ #mhdp_core:no_collision run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1 0.1 1 0 30
+    execute if score @s Itm.Wirebug.GeneralTimer matches 9 unless block ~ ~-1 ~ #mhdp_core:no_collision run playsound block.grass.step master @a ~ ~ ~ 2 1
 
 # 移動
     execute if score @s Itm.Wirebug.GeneralTimer matches 9 run function mhdp_items:sp_items/wirebug/using/move

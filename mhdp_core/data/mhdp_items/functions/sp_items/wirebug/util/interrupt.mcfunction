@@ -4,9 +4,6 @@
 #
 # @within function mhdp_items:core/switch/item/init
 
-# TODO: 武器の割り込み処理
-    say TODO:翔蟲割り込み処理
-
 # 紐づけ対象のマーカーを消去
     function mhdp_items:sp_items/wirebug/using/get_target_marker
     kill @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target]
@@ -15,4 +12,4 @@
     tag @s remove Itm.Sp.Wirebug.Using
 
 # スコア削除
-    scoreboard players reset @s Itm.Wirebug.GeneralTimer
+    scoreboard players set @s Itm.Wirebug.GeneralTimer 0
