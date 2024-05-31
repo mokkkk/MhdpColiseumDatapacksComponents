@@ -11,4 +11,6 @@
     attribute @s generic.jump_strength modifier remove f-f-f-a-3
     attribute @s generic.jump_strength modifier add f-f-f-a-3 "武器の個別ジャンプ力" -1 add_value
 
-say 大剣・溜め斬り
+execute if score @s Wpn.Gs.ChargeSlashCount matches 0 run say 大剣・溜め斬り
+execute if score @s Wpn.Gs.ChargeSlashCount matches 1 run say 大剣・強溜め斬り
+execute if score @s Wpn.Gs.ChargeSlashCount matches 2.. run say 大剣・真溜め斬り

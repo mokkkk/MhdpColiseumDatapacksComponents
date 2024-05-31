@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/great_sword/type_normal/4_guard/start
+#> mhdp_items:weapons/great_sword/type_tec/4_guard/start
 #
 # ガード 開始
 #
-# @within function mhdp_items:weapons/great_sword/type_normal/main
+# @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # タグ付与
-    tag @s add Wpn.Gs.Normal.Guard
+    tag @s add Wpn.Gs.Tec.Guard
     tag @s add Ply.Weapon.Guard
 
 # attribute設定

@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/great_sword/type_normal/4_guard/end
+#> mhdp_items:weapons/great_sword/type_tec/4_guard/end
 #
 # ガード 終了処理
 #
-# @within function mhdp_items:weapons/great_sword/type_normal/4_guard/main
+# @within function mhdp_items:weapons/great_sword/type_tec/4_guard/main
 
 # タグ消去
-    tag @s remove Wpn.Gs.Normal.Guard
+    tag @s remove Wpn.Gs.Tec.Guard
     tag @s remove Ply.Weapon.StaminaNotRegen
     tag @s remove Ply.Weapon.Guard
 

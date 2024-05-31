@@ -33,7 +33,7 @@
     execute if score @s Wpn.AnimationTimer matches 18 positioned ^ ^ ^0.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/particle
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 5 true
+    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 3 5 true
 
 # 抜刀攻撃終了
     execute if score @s Wpn.GeneralTimer matches 5 run tag @s remove Ply.Flag.DrawAttack

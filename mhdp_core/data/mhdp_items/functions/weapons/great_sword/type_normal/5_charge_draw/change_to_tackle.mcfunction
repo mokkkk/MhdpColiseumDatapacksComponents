@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/great_sword/type_normal/1_charge/change_to_tackle
+#> mhdp_items:weapons/great_sword/type_normal/5_charge_draw/change_to_tackle
 #
 # 溜め → タックル
 #

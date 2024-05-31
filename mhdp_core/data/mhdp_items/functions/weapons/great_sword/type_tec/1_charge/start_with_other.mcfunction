@@ -19,4 +19,6 @@
     scoreboard players set @s Wpn.Gs.ChargeCount 0
     scoreboard players add @s Wpn.Gs.ChargeSlashCount 1
 
-say 大剣・溜め
+execute if score @s Wpn.Gs.ChargeSlashCount matches 0 run say 大剣・溜め
+execute if score @s Wpn.Gs.ChargeSlashCount matches 1 run say 大剣・強溜め
+execute if score @s Wpn.Gs.ChargeSlashCount matches 2.. run say 大剣・真溜め

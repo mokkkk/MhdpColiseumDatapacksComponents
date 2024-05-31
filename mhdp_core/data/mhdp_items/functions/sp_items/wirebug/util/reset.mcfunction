@@ -7,6 +7,7 @@
 # タグ消去
     tag @s remove Itm.Sp.Wirebug
     tag @s remove Itm.Sp.Wirebug.Using
+    tag @s remove Itm.Sp.Wirebug.UsedSkill
 
 # スコア削除
     scoreboard players reset @s Itm.Wirebug.GeneralTimer

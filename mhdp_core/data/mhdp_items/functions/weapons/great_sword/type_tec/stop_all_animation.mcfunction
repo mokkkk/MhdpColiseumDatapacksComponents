@@ -9,3 +9,6 @@
     tag @s remove Wpn.Gs.Tec.ChargeSlash
     tag @s remove Wpn.Gs.Tec.Guard
     tag @s remove Wpn.Gs.Tec.Tackle
+    tag @s remove Wpn.Gs.Tec.HuntingEdge
+    tag @s remove Wpn.Gs.Tec.Charge.Edge
+    tag @s remove Wpn.Gs.Tec.ChargeSlash.Edge

@@ -12,7 +12,7 @@
     function mhdp_items:weapons/great_sword/util/end_attack
 
 # タグ消去
-    tag @s remove Wpn.Gs.Tec.Charge
+    tag @s remove Wpn.Gs.Normal.Charge
     
 # 対象の処理を実行
     function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/start
