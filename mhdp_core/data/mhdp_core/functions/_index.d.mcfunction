@@ -84,6 +84,8 @@
             #declare tag Ply.Temp.Error.HasNotWeapons 武器を持っていないエラー
             #declare tag Ply.Temp.Error.HasManyWeapons 武器を2つ以上持っているエラー
             #declare tag Ply.Temp.Error.HasNotWeaponOffhand オフハンドに武器を持っていないエラー
+            #declare tag Ply.Temp.Error.HasManySpItems 特殊装具を3つ以上持っているエラー
+            #declare tag Ply.Temp.Error.DuplicateSpItems 同じ種類の特殊装具を2つ以上持っているエラー
 # マーカー
     # 処理用
         #declare tag Mk.Field.Center フィールドの中心に設置されるマーカー

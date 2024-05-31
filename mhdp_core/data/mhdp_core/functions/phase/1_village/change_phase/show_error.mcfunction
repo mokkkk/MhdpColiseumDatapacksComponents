@@ -25,6 +25,10 @@
         execute if entity @a[tag=Ply.Temp.Error.HasManyWeapons] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【武器は1つまでしか所持できません】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.HasManyWeapons]","color": "red"}]
     # 武器をオフハンドにセットしていない
         execute if entity @a[tag=Ply.Temp.Error.HasNotWeaponOffhand] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【武器はオフハンドに所持してください】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.HasNotWeaponOffhand]","color": "red"}]
+    # 特殊装具を3つ以上持っている
+        execute if entity @a[tag=Ply.Temp.Error.HasManySpItems] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【特殊装具は2つまでしか所持できません】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.HasManySpItems]","color": "red"}]
+    # 同じ特殊装具を2つ以上持っている
+        execute if entity @a[tag=Ply.Temp.Error.DuplicateSpItems] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【同じ種類の特殊装具は1つまでしか所持できません】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.DuplicateSpItems]","color": "red"}]
 
 # 終了
     tag @a remove Ply.Temp.Error.Gamemode
@@ -32,3 +36,5 @@
     tag @a remove Ply.Temp.Error.HasNotWeapons
     tag @a remove Ply.Temp.Error.HasManyWeapons
     tag @a remove Ply.Temp.Error.HasNotWeaponOffhand
+    tag @a remove Ply.Temp.Error.HasManySpItems
+    tag @a remove Ply.Temp.Error.DuplicateSpItems
