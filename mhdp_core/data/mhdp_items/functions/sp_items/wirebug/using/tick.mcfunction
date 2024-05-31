@@ -22,9 +22,12 @@
     execute if score @s Itm.Wirebug.GeneralTimer matches 9 run playsound minecraft:entity.breeze.jump master @a ~ ~ ~ 1 0.5
     execute if score @s Itm.Wirebug.GeneralTimer matches 9 unless block ~ ~-1 ~ #mhdp_core:no_collision run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1 0.1 1 0 30
     execute if score @s Itm.Wirebug.GeneralTimer matches 9 unless block ~ ~-1 ~ #mhdp_core:no_collision run playsound block.grass.step master @a ~ ~ ~ 2 1
+    execute if score @s Itm.Wirebug.GeneralTimer matches 10.. run particle end_rod ~ ~0.5 ~ 0 0 0 0 1
 
 # 移動
     execute if score @s Itm.Wirebug.GeneralTimer matches 9 run function mhdp_items:sp_items/wirebug/using/move
+    execute if score @s Itm.Wirebug.GeneralTimer matches 13..18 if block ~ ~-1 ~ #mhdp_core:no_collision run attribute @s generic.gravity modifier remove f-f-f-b-1
+    execute if score @s Itm.Wirebug.GeneralTimer matches 19 run attribute @s generic.gravity modifier remove f-f-f-b-1
 
 # 終了
     execute if score @s Itm.Wirebug.GeneralTimer matches 1..9 run tag @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target] remove Mk.Sp.Wirebug.Rotation.Target

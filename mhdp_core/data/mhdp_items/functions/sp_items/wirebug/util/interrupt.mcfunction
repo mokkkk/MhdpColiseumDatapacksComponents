@@ -8,6 +8,9 @@
     function mhdp_items:sp_items/wirebug/using/get_target_marker
     kill @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target]
 
+# attribute初期化
+    attribute @s generic.gravity modifier remove f-f-f-b-1
+
 # タグ消去
     tag @s remove Itm.Sp.Wirebug.Using
 

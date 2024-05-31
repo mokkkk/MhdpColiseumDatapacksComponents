@@ -15,7 +15,7 @@
     execute if score @s Wpn.AnimationTimer matches 2 run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/animation_1
     execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/animation_2
     execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/animation_3
-    execute if entity @s[nbt={OnGround:1b}] if score @s Wpn.AnimationTimer matches 4 rotated ~ 0 run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/effect_on_ground
+    execute if score @s Wpn.AnimationTimer matches 4 unless block ~ ~-1 ~ #mhdp_core:no_collision rotated ~ 0 run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/effect_on_ground
     execute if score @s Wpn.AnimationTimer matches 1 positioned ^ ^2 ^ rotated ~ ~-30 run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/particle
     execute if score @s Wpn.AnimationTimer matches 2 positioned ^ ^ ^0.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/particle
 

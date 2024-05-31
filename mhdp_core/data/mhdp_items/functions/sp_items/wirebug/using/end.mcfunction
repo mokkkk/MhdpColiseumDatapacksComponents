@@ -6,3 +6,6 @@
 
 # タグ消去
     tag @s remove Itm.Sp.Wirebug.Using
+
+# attribute消去
+    attribute @s generic.gravity modifier remove f-f-f-b-1

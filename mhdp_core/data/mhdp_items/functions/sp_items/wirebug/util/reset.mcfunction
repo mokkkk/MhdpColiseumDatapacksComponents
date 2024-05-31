@@ -12,5 +12,8 @@
     scoreboard players reset @s Itm.Wirebug.GeneralTimer
     scoreboard players reset @s Itm.Wirebug.CoolTime
 
+# attribute初期化
+    attribute @s generic.gravity modifier remove f-f-f-b-1
+
 # 念のため処理用Entityを削除
     kill @e[type=marker,tag=Mk.Sp.Wirebug.Rotation]
