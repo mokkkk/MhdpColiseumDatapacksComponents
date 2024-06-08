@@ -10,9 +10,9 @@
 
 # 通常納刀
     # 抜刀中・サブ武器なし・メインハンドが空・オフハンドが武器
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Weapon.Drawing.Sub] if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] unless items entity @s weapon.mainhand * run tag @s add Ply.Flag.NormalSheathe
-    # 抜刀中・サブ武器あり・メインハンドがサブ武器・オフハンドが武器
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Weapon.Drawing.Sub] if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b,IsDrawing:1b}] run tag @s add Ply.Flag.NormalSheathe
+        # execute if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Weapon.Drawing.Sub] if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] unless items entity @s weapon.mainhand * run tag @s add Ply.Flag.NormalSheathe
+    # 抜刀中・サブ武器あり・メインハンドがサブ武器・オフハンドが武器(ダミーのサブ武器使用のため常に有効)
+        execute if entity @s[tag=Ply.Weapon.Drawing] if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b,IsDrawing:1b}] run tag @s add Ply.Flag.NormalSheathe
 
 # 強制納刀
     # 武器を投げ捨てた
@@ -26,8 +26,8 @@
     # 抜刀中・メイン武器がメインハンドにない
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Flag.NormalSheathe] unless items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b}] run function mhdp_items:player/weapon/sheathe/force_sheathe
     # 抜刀中・サブ武器あり・サブ武器がオフハンドにない
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Weapon.Drawing.Sub,tag=!Ply.Flag.NormalSheathe] unless items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b}] run function mhdp_items:player/weapon/sheathe/force_sheathe
-    # 抜刀中・サブ武器なし・オフハンドが空じゃない
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Weapon.Drawing.Sub,tag=!Ply.Flag.NormalSheathe] if items entity @s weapon.offhand * run function mhdp_items:player/weapon/sheathe/force_sheathe
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Flag.NormalSheathe] unless items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b}] run function mhdp_items:player/weapon/sheathe/force_sheathe
+    # 抜刀中・サブ武器なし・オフハンドが空じゃない(ダミーのサブ武器使用のため常に無効)
+        # execute if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Weapon.Drawing.Sub,tag=!Ply.Flag.NormalSheathe] if items entity @s weapon.offhand * run function mhdp_items:player/weapon/sheathe/force_sheathe
 
 # その他処理

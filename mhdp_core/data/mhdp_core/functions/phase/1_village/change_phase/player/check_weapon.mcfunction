@@ -2,7 +2,7 @@
 #
 # 武器に関するチェック
 #
-# @within function mhdp_core:phase/1_village/bell/click
+# @within function mhdp_core:phase/1_village/change_phase/check_player
 
 # ゲームモードがアドベンチャー以外の場合、エラー
     execute if entity @s[gamemode=!adventure] run tag @s add Ply.Temp.Error.Gamemode

@@ -16,6 +16,7 @@
     execute if score #mhdp_core_timer MhdpCore matches 1 as @a[tag=Ply.State.PlayingQuest] run effect give @s resistance 15 10 true
     execute if score #mhdp_core_timer MhdpCore matches 1 as @a[tag=Ply.State.PlayingQuest] run effect give @s slowness 15 10 true
     execute if score #mhdp_core_timer MhdpCore matches 1 as @a[tag=Ply.State.PlayingQuest] run attribute @s generic.jump_strength modifier add f-f-f-f-1 "クエスト出発前移動禁止" -10 add_value
+    execute if score #mhdp_core_timer MhdpCore matches ..299 as @a[tag=Ply.State.PlayingQuest] run scoreboard players set @s Wpn.DeactivateTimer 2
 
 # 帰還
     execute if score #mhdp_core_timer MhdpCore matches 300.. run function mhdp_core:phase/3_quest/change_phase/failed/change

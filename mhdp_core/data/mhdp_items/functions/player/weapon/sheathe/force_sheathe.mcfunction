@@ -24,7 +24,9 @@
         item replace block 0 0 0 container.0 with air
 
 # 武器のデータ書き換え
-    item modify entity @s weapon.offhand {function:set_custom_data,tag:{IsDrawing:0b}}
+    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 0
+    data modify storage mhdp_core:temp Args.Slot set value "offhand"
+    function mhdp_items:core/util/item_modify_sheathe
 
 # オフハンドのアイテムを戻す
     execute if entity @s[tag=Ply.Temp.NoItemsInOffhand] run loot give @s mine 0 0 0 debug_stick
@@ -32,6 +34,9 @@
 
 # 終了
     item replace block 0 0 0 container.1 with air
+
+# 各武器の通常納刀処理実行
+    function mhdp_items:core/switch/weapon_sheathe
 
 # タグ更新
     tag @s remove Ply.Flag.NormalSheathe

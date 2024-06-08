@@ -26,3 +26,7 @@
 
 # 終了
     item replace block 0 0 0 container.0 with air
+
+# その他初期化
+    tag @s remove Ply.Weapon.Deactivated
+    scoreboard players set @s Wpn.DeactivateTimer 0

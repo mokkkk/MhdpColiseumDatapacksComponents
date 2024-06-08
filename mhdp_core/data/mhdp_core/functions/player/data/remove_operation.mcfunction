@@ -25,6 +25,8 @@
     execute if entity @s[tag=Ply.Ope.DroppedEnderEye] run tag @s remove Ply.Ope.DroppedEnderEye
 
 # ニンジン棒
+    execute if entity @s[tag=Ply.Ope.StartUsingCoas] run tag @s remove Ply.Ope.StartUsingCoas
+    scoreboard players set @s Ply.Ope.UsedCoas 0
 
 # 食べ物
     execute if entity @s[tag=Ply.Adv.Using.Paper] run tag @s remove Ply.Adv.Using.Paper

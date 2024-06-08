@@ -16,6 +16,7 @@
     effect clear @s slowness
     attribute @s generic.jump_strength modifier remove f-f-f-f-1
     attribute @s generic.knockback_resistance base set 1.0
+    effect give @s instant_health 3 10 true
 
 # データ初期化
     scoreboard players set @s Ply.Stats.Stamina 1000
@@ -27,8 +28,8 @@
 # 武器セット
     function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon
 
-# TODO:特殊装具の取得
-    say TODO:特殊装具セット
+# 特殊装具の初期化
+    function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/sp_items
 
 # 念のためadvancementを除去
     execute if entity @s[tag=Ply.Adv.Using.EnderEye] run tag @s remove Ply.Adv.Using.EnderEye

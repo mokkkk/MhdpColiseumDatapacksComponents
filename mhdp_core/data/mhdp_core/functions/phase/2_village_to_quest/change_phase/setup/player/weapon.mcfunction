@@ -15,7 +15,7 @@
         execute if entity @s[tag=!Skill.Extra.Handicraft] run data modify storage mhdp_core:temp Args.CurrentSharpness set from storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data".SharpnessMax
         execute if entity @s[tag=Skill.Extra.Handicraft] run data modify storage mhdp_core:temp Args.CurrentSharpness set from storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data".SharpnessMaxCraft
         data modify storage mhdp_core:temp Result.CurrentSharpness set from storage mhdp_core:temp Args.CurrentSharpness
-        function mhdp_items:core/general/calc_sharpness_color
+        function mhdp_items:core/util/calc_sharpness_color
     # クエスト中独自のデータ付与
         function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/macro/m.set_weapondata with storage mhdp_core:temp Result
     # 終了
@@ -39,6 +39,10 @@
 
 # 武器ごとの初期化処理
     function mhdp_items:core/switch/weapon_init
+
+# その他初期化
+    tag @s remove Ply.Weapon.Deactivated
+    scoreboard players set @s Wpn.DeactivateTimer 0
 
 # 終了
     item replace block 0 0 0 container.1 with air

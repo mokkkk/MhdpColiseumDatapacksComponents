@@ -61,10 +61,14 @@
             #declare tag Ply.Ope.StartUsingEnderEye.NotSneak エンダーアイ・非スニーク同時押し
             #declare tag Ply.Ope.StartUsingEnderEye.WithSneak エンダーアイ・スニーク同時押し
             #declare tag Ply.Ope.DroppedEnderEye エンダーアイ投げ捨て
+        # ニンジン棒
+            #declare tag Ply.Ope.StartUsingCoas ニンジン棒使用
         # ジャンプ
             #declare tag Ply.Ope.StartJump ジャンプ開始
         # ダッシュ
             #declare tag Ply.Ope.IsSprinting ダッシュ中
+        # 空中
+            #declare tag Ply.Ope.IsAir 飛行中
     # クエスト中処理
         #declare tag Ply.Event.DeathAnimation 死亡演出
     # 進捗
@@ -78,9 +82,12 @@
         #declare tag Ply.Temp.IsGetData 現tickデータ取得済み
         # クエスト出発時エラー関連
             #declare tag Ply.Temp.Error.Gamemode ゲームモードに関するエラー
+            #declare tag Ply.Temp.Error.HasCursorItem カーソルにアイテムを保持しているエラー
             #declare tag Ply.Temp.Error.HasNotWeapons 武器を持っていないエラー
             #declare tag Ply.Temp.Error.HasManyWeapons 武器を2つ以上持っているエラー
             #declare tag Ply.Temp.Error.HasNotWeaponOffhand オフハンドに武器を持っていないエラー
+            #declare tag Ply.Temp.Error.HasManySpItems 特殊装具を3つ以上持っているエラー
+            #declare tag Ply.Temp.Error.DuplicateSpItems 同じ種類の特殊装具を2つ以上持っているエラー
 # マーカー
     # 処理用
         #declare tag Mk.Field.Center フィールドの中心に設置されるマーカー
