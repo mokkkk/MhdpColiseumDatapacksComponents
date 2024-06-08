@@ -5,7 +5,7 @@
 # @within function mhdp_items:player/tick
 
 # 使用検知
-    execute if entity @s[tag=Ply.Ope.StartUsingCoas] run function mhdp_items:core/switch/item/use
+    execute if entity @s[tag=Ply.Ope.StartUsingCoas,tag=!Ply.Weapon.Deactivated] run function mhdp_items:core/switch/item/use
 
 # メイン処理
     # 翔蟲

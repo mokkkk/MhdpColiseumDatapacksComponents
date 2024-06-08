@@ -5,6 +5,7 @@
 # @within function mhdp_items:player/tick
 
 # 使用停止タイマー減少
+    execute if entity @s[tag=!Ply.Weapon.Deactivated] if score @s Wpn.DeactivateTimer matches 1.. run tag @s add Ply.Weapon.Deactivated
     execute if entity @s[tag=Ply.Weapon.Deactivated] run scoreboard players remove @s Wpn.DeactivateTimer 1
     execute if entity @s[tag=Ply.Weapon.Deactivated] if score @s Wpn.DeactivateTimer matches ..0 run tag @s remove Ply.Weapon.Deactivated
 
