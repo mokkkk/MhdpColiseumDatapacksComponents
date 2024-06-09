@@ -8,6 +8,12 @@
     # 大闘技場
         execute if data storage mhdp_core:game_data ActiveQuest{Field:"Coliseum"} run function mhdp_core:phase/2_village_to_quest/change_phase/setup/map/coliseum
 
+# モンスター配置
+    data modify storage mhdp_core:game_data ActiveQuest.TargetMonsters set from storage mhdp_core:game_data ActiveQuest.Monsters
+    function mhdp_core:phase/2_village_to_quest/change_phase/setup/monster/main
+    # クエストクリア判定に使用するため、再度データを設定
+        data modify storage mhdp_core:game_data ActiveQuest.TargetMonsters set from storage mhdp_core:game_data ActiveQuest.Monsters
+
 # データ表示
     # 制限時間表示
         tellraw @a [{"text": "【制限時間は"},{"score":{"name":"#mhdp_quest_timer_max","objective":"MhdpCore"}},{"text": "分です】"}]

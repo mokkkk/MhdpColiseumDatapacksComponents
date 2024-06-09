@@ -16,9 +16,8 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:0,Name:"テスト用クエスト1",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:100,AttackMultiply:100,Field:"Coliseum",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
-            {MonsterId:0,Timing:"Initial",TargetMonsterId:-1},\
-            {MonsterId:1,Timing:"Initial",TargetMonsterId:-1}\
+        Content:{HpMultiply:100,AttackMultiply:100,Field:"Coliseum",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+            {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
 
@@ -27,7 +26,8 @@
         ID:1,Name:"テスト用クエスト2",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
         Content:{HpMultiply:200,AttackMultiply:200,Field:"Coliseum",TimeLimit:1,DeathCount:999,RewardMoney:15,RewardId:-1,Monsters:[\
-            {MonsterId:2,Timing:"Initial",TargetMonsterId:-1}\
+            {MonsterId:2,Timing:"Initial",TargetMonsterId:-1},\
+            {MonsterId:1,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
 
@@ -55,10 +55,10 @@
         Level:["","★","★★","★★★","★★★★","★★★★★","★★★★★★","★★★★★★★","★★★★★★★★"],\
         Field:[{ID:"Coliseum",Name:"闘技場"},{ID:"Test",Name:"その辺"}],\
         Monsters:[\
-            {ID:0,ShowName:{"text":"\\uE001","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"火竜"}]}}},\
-            {ID:1,ShowName:{"text":"\\uE002","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"雌火竜"}]}}},\
-            {ID:2,ShowName:{"text":"\\uE003","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"斬竜"}]}}},\
-            {ID:3,ShowName:{"text":"\\uE004","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"雷狼竜"}]}}}\
+            {ID:0,ShowName:{"text":"\\uE001","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"火竜てすと"}]}}},\
+            {ID:1,ShowName:{"text":"\\uE002","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"雌火竜てすと"}]}}},\
+            {ID:2,ShowName:{"text":"\\uE003","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"斬竜てすと"}]}}},\
+            {ID:3,ShowName:{"text":"\\uE004","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"雷狼竜てすと"}]}}}\
         ]\
     }
 
