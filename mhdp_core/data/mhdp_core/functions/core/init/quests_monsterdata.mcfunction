@@ -15,5 +15,3 @@
 
 # データが残っている限り繰り返す
     execute if data storage mhdp_core:temp MonsterData[0] run function mhdp_core:core/init/quests_monsterdata
-
-say mhdp_core:core/init/quests_monsterdata

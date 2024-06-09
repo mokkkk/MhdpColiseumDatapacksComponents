@@ -5,7 +5,8 @@
 # @within function 
 
 ## 青鳥竜
-# モンスターデータ
+# メインデータ
+    execute if data storage mhdp_core:monster_data MonsterData[{Uid:1001}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1001}]
     data modify storage mhdp_core:monster_data MonsterData append value {\
         Uid:1001,\
         Icon:"uE011",\
@@ -38,5 +39,20 @@
         BodyPartDamage:20\
     }
 
-# クエスト受注書作成用データ
-    # 
+# 肉質データ
+    execute if data storage mhdp_core:monster_data DefenceData[{Uid:1001}] run data remove storage mhdp_core:monster_data DefenceData[{Uid:1001}]
+    data modify storage mhdp_core:monster_data DefenceData append value {\
+        Uid:1001,\
+        Defences:[\
+            [100,100,100,100,100,100,100,100],\
+            [100,100,100,100,100,100,100,100]\
+        ]\
+    }
+
+# 攻撃力データ
+    execute if data storage mhdp_core:monster_data AttackData[{Uid:1001}] run data remove storage mhdp_core:monster_data AttackData[{Uid:1001}]
+    data modify storage mhdp_core:monster_data AttackData append value {\
+        Uid:1001,\
+        Attacks:[]\
+    }
+    function mhdp_monster_ranposu:core/init/init_attack_data

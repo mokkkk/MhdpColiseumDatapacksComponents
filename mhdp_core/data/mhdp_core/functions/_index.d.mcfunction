@@ -92,6 +92,7 @@
     # 処理用
         #declare tag Mk.Field.Center フィールドの中心に設置されるマーカー
         #declare tag Mk.Field.Back 壁に埋まった際、戻る位置決定用のマーカー
+        #declare tag Mk.Field.SummonPos モンスターの召喚位置決定用のマーカー
         #declare tag Mk.Ply.DeathAnimation プレイヤー死亡演出用のbarrierを取り除くための位置保存用マーカー
 # その他
     # interaction

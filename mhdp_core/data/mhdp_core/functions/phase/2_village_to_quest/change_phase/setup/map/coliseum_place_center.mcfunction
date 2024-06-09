@@ -4,9 +4,6 @@
 #
 # @within function mhdp_core:phase/2_village_to_quest/change_phase/setup/map/coliseum
 
-# 中心点
-    summon marker -67 66 102 {Tags:["Mk.Field.Center"]}
-
 # 壁埋まり防止
     summon marker -65 66 101 {Tags:["Mk.Field.Back"]}
     summon marker -22 66 126 {Tags:["Mk.Field.Back"]}
