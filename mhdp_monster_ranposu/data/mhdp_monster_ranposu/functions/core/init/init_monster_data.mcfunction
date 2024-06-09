@@ -39,4 +39,4 @@
     }
 
 # クエスト受注書作成用データ
-    data modify storage mhdp_core:game_data QuestBookData.Monsters append value {ID:1001,ShowName:{"text":"\\uE001","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"青鳥竜"}]}}}
+    # 

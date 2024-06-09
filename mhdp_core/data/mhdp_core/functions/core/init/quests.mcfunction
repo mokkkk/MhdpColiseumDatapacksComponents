@@ -50,7 +50,7 @@
         ]}\
     }
 
-# クエスト受注書作成用データ
+# クエスト受注書作成用データ・基礎部分
     data modify storage mhdp_core:game_data QuestBookData set value {\
         Level:["","★","★★","★★★","★★★★","★★★★★","★★★★★★","★★★★★★★","★★★★★★★★"],\
         Field:[{ID:"Coliseum",Name:"闘技場"},{ID:"Test",Name:"その辺"}],\
@@ -61,6 +61,10 @@
             {ID:3,ShowName:{"text":"\\uE004","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"雷狼竜てすと"}]}}}\
         ]\
     }
+
+# クエスト受注書作成用データ・モンスター部分
+    data modify storage mhdp_core:temp MonsterData set from storage mhdp_core:monster_data MonsterData
+    function mhdp_core:core/init/quests_monsterdata
 
 # 反映
     function mhdp_core:phase/1_village/start/quest/main
