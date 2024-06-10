@@ -19,7 +19,8 @@
         TireDamagePer:30,\
         AngerDamagePer:12,\
         AngerTimer:90,\
-        AngerAttackMult:120,\
+        AngerAttackMult:110,\
+        AngerSpeedTick:5,\
         ParalysisDamage:2000,\
         ParalysisTimer:10,\
         PoisonDamage:3000,\

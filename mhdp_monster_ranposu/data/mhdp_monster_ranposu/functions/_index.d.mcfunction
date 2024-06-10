@@ -6,7 +6,7 @@
 
 ## tag
 # item_display
-    #declare tag Mns.Root モンスターのRootエンティティ共通タグ
     #declare tag Mns.Root.Ranposu 青鳥竜Rootエンティティ
 # 当たり判定
+    #declare tag Mns.HitBox.Ranposu 青鳥竜当たり判定スライム
 # アニメーション
