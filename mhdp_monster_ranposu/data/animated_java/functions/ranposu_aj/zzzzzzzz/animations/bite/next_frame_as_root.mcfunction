@@ -1,0 +1,1 @@
+function animated_java:ranposu_aj/zzzzzzzz/animations/bite/tick_animation

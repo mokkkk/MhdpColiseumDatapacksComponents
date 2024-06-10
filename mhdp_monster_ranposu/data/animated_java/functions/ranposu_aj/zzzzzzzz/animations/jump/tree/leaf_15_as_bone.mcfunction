@@ -1,0 +1,10 @@
+execute if entity @s[tag=aj.ranposu_aj.locator_origin.body_1] at @s on origin run tp @s ^0 ^1.13292 ^-0.84637 ~0 ~27.5
+execute if entity @s[tag=aj.ranposu_aj.locator_origin.body_0] at @s on origin run tp @s ^-0.06903 ^0.08364 ^1.26768 ~-1.54649 ~13.80771
+execute if entity @s[tag=aj.ranposu_aj.locator_origin.pos_head] at @s on origin run tp @s ^0.10432 ^1.03857 ^3.36253 ~-3.5916 ~0.16886
+execute if entity @s[tag=aj.ranposu_aj.locator_origin.head_0] at @s on origin run tp @s ^0.08751 ^0.42455 ^3.36177 ~-3.5916 ~0.16886
+execute if entity @s[tag=aj.ranposu_aj.locator_origin.tail_0] at @s on origin run tp @s ^0 ^1.71936 ^-2.05224 ~0 ~7.17429
+execute if entity @s[tag=aj.ranposu_aj.locator_origin.tail_1] at @s on origin run tp @s ^0 ^1.74774 ^-3.08821 ~0 ~-2.13857
+execute if entity @s[tag=aj.ranposu_aj.bone.tail_2] run data modify entity @s {} merge value {transformation:[-1.8f,8.225904051037985e-18f,2.202828896232917e-16f,2.9882022376242293e-16f,0f,1.7987462979257467f,-0.06716960397696056f,2.2962757878155786f,-2.2043642384652358e-16f,-0.06716960397696056f,-1.7987462979257467f,-2.440052298919764f,0f,0f,0f,1f],start_interpolation:0}
+execute if entity @s[tag=aj.ranposu_aj.bone.tail_1] run data modify entity @s {} merge value {transformation:[-1.8f,-2.752985548672726e-17f,2.1871059419955886e-16f,1.7579551452517112e-16f,0f,1.7859075314762893f,0.2247983296563107f,2.169826727383904f,-2.2043642384652358e-16f,0.2247983296563107f,-1.7859075314762893f,-1.4354793124643515f,0f,0f,0f,1f],start_interpolation:0}
+execute if entity @s[tag=aj.ranposu_aj.bone.tail_0] run data modify entity @s {} merge value {transformation:[-1.8f,-5.905735418240719e-17f,2.1237807296238918e-16f,4.730039747281533e-17f,0f,1.734198571459584f,0.4822398933596626f,1.8488649396888035f,-2.2043642384652358e-16f,0.4822398933596626f,-1.734198571459584f,-0.3862370563149123f,0f,0f,0f,1f],start_interpolation:0}
+execute if entity @s[tag=aj.ranposu_aj.locator_origin.shadow] at @s on origin run tp @s ^0 ^0.58125 ^-0.1125 ~0 ~0
