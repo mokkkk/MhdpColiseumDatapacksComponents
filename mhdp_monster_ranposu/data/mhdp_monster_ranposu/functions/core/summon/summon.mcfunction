@@ -4,8 +4,12 @@
 #
 # @within function 
 
-# 共通処理・共通データの初期化
+# モデル召喚
+    summon armor_stand ~ ~ ~ {Tags:["Test.Ranposu"]}
 
-# 独自データの初期化
+# Rootエンティティ対象に初期化処理を実行
+    # execute as @e[type=item_display,tag=Mns.Root.Ranposu] at @s run function mhdp_monster_ranposu:core/summon/summon_init
+    # テスト用にアマスタ対象で実行
+        execute as @e[type=armor_stand,tag=Test.Ranposu] at @s run function mhdp_monster_ranposu:core/summon/summon_init
 
 say ドスランポス召喚処理

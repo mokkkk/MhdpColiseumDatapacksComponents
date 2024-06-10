@@ -59,6 +59,8 @@
         scoreboard objectives add Mns.Temp.AngerSpeed.Timer dummy
 
 # 定数
+    # プレイヤー数に対するHP倍率
+        scoreboard players set #const_hp_playercount_multiply Const 40
     # スタン耐性上昇割合
         scoreboard players set #const_stun_damage_multiply Const 160
     # 減気耐性上昇割合

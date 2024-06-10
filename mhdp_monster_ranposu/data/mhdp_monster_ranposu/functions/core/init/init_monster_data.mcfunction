@@ -20,17 +20,17 @@
         AngerDamagePer:12,\
         AngerTimer:90,\
         AngerAttackMult:110,\
-        AngerSpeedTick:5,\
+        AngerSpeed:5,\
         ParalysisDamage:2000,\
         ParalysisTimer:10,\
         PoisonDamage:3000,\
         PoisonTimer:40,\
-        PoisonDamageMult:100,\
+        PoisonEffectDamage:100,\
         FlashBombEnable:true,\
         SoundBombEnable:false,\
         ParalyseTrapEnable:true,\
         ParalyseTrapTimer:10,\
-        HallTrapEnable:true,\
+        HallTrapEnable:false,\
         HallTrapTimer:15,\
         Defences:[\
             [100,100,100,100,100,100,100,100],\

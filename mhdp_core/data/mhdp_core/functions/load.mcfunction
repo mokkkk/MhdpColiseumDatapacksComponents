@@ -59,3 +59,6 @@
 
 ## アイテム用ロード処理
     function mhdp_items:load
+
+## モンスター用ロード処理
+    function mhdp_monsters:load

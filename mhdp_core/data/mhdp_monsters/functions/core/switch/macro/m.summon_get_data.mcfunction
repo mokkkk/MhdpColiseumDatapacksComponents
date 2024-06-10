@@ -6,3 +6,6 @@
 
 # モンスター召喚用のprefixを取得
     $data modify storage mhdp_core:temp Temp.Prefix set from storage mhdp_core:monster_data MonsterData[{Uid:$(MonsterUid)}].Name
+
+# この後使用するため、モンスターデータを保持しておく
+    $data modify storage mhdp_core:temp TargetMonsterData set from storage mhdp_core:monster_data MonsterData[{Uid:$(MonsterUid)}]

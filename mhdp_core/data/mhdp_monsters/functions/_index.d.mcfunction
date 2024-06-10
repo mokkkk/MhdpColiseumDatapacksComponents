@@ -6,6 +6,7 @@
 
 ## tag
 # モンスター関連・パラメータ初期化用
+    #declare tag Mns.Param.IsHideHp Hp非表示
     #declare tag Mns.Param.IsStunEnable スタン有効
     #declare tag Mns.Param.IsTireEnable 減気有効
     #declare tag Mns.Param.IsParalysisEnable 麻痺有効
@@ -23,3 +24,8 @@
 # 当たり判定関連(Slime)
     #declare tag Mns.HitBox モンスターの当たり判定の共通タグ
     #declare tag Mns.HitBox.Init 初期化処理済みの当たり判定
+
+## score_holder
+    #declare score_holder #mhdp_temp_player_count クエスト参加プレイヤー数
+    #declare score_holder #mhdp_temp_hp_multiply_quest クエストによるHP倍率
+    #declare score_holder #mhdp_temp_hp_multiply_playercount プレイヤー数に対するHP倍率
