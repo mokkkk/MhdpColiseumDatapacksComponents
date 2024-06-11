@@ -6,6 +6,7 @@
 
 ## tag
 # モンスター関連・パラメータ初期化用
+    #declare tag Mns.Param.IsHardcore ハードコアモード有効
     #declare tag Mns.Param.IsHideHp Hp非表示
     #declare tag Mns.Param.IsStunEnable スタン有効
     #declare tag Mns.Param.IsTireEnable 減気有効

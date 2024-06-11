@@ -4,6 +4,9 @@
 #
 # @within function mhdp_monsters:/**
 
+# Uidスコア化
+    execute store result score @s Mns.Uid run data get storage mhdp_core:temp TargetMonsterData.Uid
+
 # プレイヤー数を取得
     execute store result score #mhdp_temp_player_count MhdpCore if entity @a[tag=Ply.State.PlayingQuest]
 
@@ -22,7 +25,6 @@
         scoreboard players operation @s Mns.Hp /= #const_100 Const
         scoreboard players operation @s Mns.Hp *= #mhdp_temp_hp_multiply_playercount MhdpCore
         execute store result score @s Mns.Stun.Damage store result score @s Mns.Tire.Damage store result score @s Mns.Anger.Damage run scoreboard players operation @s Mns.Hp /= #const_100 Const
-        
 
 # スタン耐性値
     # 倍率取得
@@ -84,6 +86,8 @@
             scoreboard players operation @s Mns.Poison.Effect.Value /= #const_100 Const
 
 # その他
+    # ハードコア
+        execute if data storage mhdp_core:game_data {IsHardcore:true} run tag @s add Mns.Param.IsHardcore
     # HP表示
         execute if data storage mhdp_core:temp TargetMonsterData{ShowHp:false} run tag @s add Mns.Param.IsHideHp
     # 閃光玉

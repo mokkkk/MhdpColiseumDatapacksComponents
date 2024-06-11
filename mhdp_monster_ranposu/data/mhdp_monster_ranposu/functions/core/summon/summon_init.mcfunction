@@ -8,3 +8,4 @@
     function mhdp_monsters:core/util/summon/init_common_data
 
 # 独自データの初期化
+    function mhdp_monster_ranposu:core/summon/summon_init_unique_data

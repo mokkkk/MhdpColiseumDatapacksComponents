@@ -1,6 +1,6 @@
 #> mhdp_monsters:core/switch/macro/m.summon
 # 
-# 分岐処理 各武器の初期化処理 本体
+# 分岐処理 モンスター召喚処理 本体
 #
 # @within function mhdp_items:core/switch/weapon_init
 
