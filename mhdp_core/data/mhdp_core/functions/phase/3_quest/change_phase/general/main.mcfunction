@@ -29,6 +29,7 @@
     scoreboard players reset #mhdp_quest_timer MhdpCore
     scoreboard players reset #mhdp_quest_deathcount_max MhdpCore
     scoreboard players reset #mhdp_quest_deathcount MhdpCore
+    time set 5000
 
 # フェーズ変更
     data modify storage mhdp_core:game_data Phase set value 1

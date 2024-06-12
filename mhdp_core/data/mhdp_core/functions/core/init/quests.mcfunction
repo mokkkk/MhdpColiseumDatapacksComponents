@@ -16,7 +16,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:0,Name:"テスト用クエスト1",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:100,AttackMultiply:100,Field:"Coliseum",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:100,AttackMultiply:100,Field:"Coliseum",Time:"night",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
@@ -25,7 +25,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:1,Name:"テスト用クエスト2",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:200,AttackMultiply:200,Field:"Coliseum",TimeLimit:1,DeathCount:999,RewardMoney:15,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:200,AttackMultiply:200,Field:"Coliseum",Time:"day",TimeLimit:1,DeathCount:999,RewardMoney:15,RewardId:-1,Monsters:[\
             {MonsterId:2,Timing:"Initial",TargetMonsterId:-1},\
             {MonsterId:1,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
@@ -35,7 +35,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:2,Name:"とってもながいクエスト名てすと",Level:7,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:200,AttackMultiply:200,Field:"Coliseum",TimeLimit:999,DeathCount:999,RewardMoney:999,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:200,AttackMultiply:200,Field:"Coliseum",Time:"day",TimeLimit:999,DeathCount:999,RewardMoney:999,RewardId:-1,Monsters:[\
             {MonsterId:3,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
@@ -44,7 +44,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:3,Name:"非表示クエスト",Level:7,Pos:0,IsEmergency:false,HideMonsters:true,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:200,AttackMultiply:200,Field:"Test",TimeLimit:999,DeathCount:999,RewardMoney:999,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:200,AttackMultiply:200,Field:"Test",Time:"day",TimeLimit:999,DeathCount:999,RewardMoney:999,RewardId:-1,Monsters:[\
             {MonsterId:0,Timing:"Initial",TargetMonsterId:-1},\
             {MonsterId:1,Timing:"Initial",TargetMonsterId:-1}\
         ]}\

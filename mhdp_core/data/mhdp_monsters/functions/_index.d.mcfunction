@@ -22,6 +22,9 @@
     #declare tag Mns.Param.IsHallTrapEnable.Temp 現時点で落とし穴が有効かどうか
 # モンスター関連
     #declare tag Mns.Root モンスターのRootエンティティ共通タグ
+# モンスター関連・一時
+    #declare tag Mns.Temp.IsIdleAnimation 待機アニメーションを再生する
+    #declare tag Mns.Temp.IsSummonAnimation 登場アニメーションを再生する
 # 当たり判定関連(Slime)
     #declare tag Mns.HitBox モンスターの当たり判定の共通タグ
     #declare tag Mns.HitBox.Init 初期化処理済みの当たり判定

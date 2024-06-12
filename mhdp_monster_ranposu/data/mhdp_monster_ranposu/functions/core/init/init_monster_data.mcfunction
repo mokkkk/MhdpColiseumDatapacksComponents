@@ -5,6 +5,17 @@
 # @within function 
 
 ## 青鳥竜
+# scoreboard定義
+# 頭部位耐久値
+    scoreboard objectives add Mns.Ranposu.Head.Damage dummy
+    scoreboard objectives add Mns.Ranposu.Head.Damage.Max dummy
+# 胴部位耐久値
+    scoreboard objectives add Mns.Ranposu.Body.Damage dummy
+    scoreboard objectives add Mns.Ranposu.Body.Damage.Max dummy
+# 怯み回数
+    scoreboard objectives add Mns.Ranposu.DamageCount dummy
+
+
 # メインデータ
     execute if data storage mhdp_core:monster_data MonsterData[{Uid:1001}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1001}]
     data modify storage mhdp_core:monster_data MonsterData append value {\
@@ -53,13 +64,3 @@
         Attacks:[]\
     }
     function mhdp_monster_ranposu:core/init/init_attack_data
-
-# score
-    # 頭部位耐久値
-        scoreboard objectives add Mns.Ranposu.Head.Damage dummy
-        scoreboard objectives add Mns.Ranposu.Head.Damage.Max dummy
-    # 胴部位耐久値
-        scoreboard objectives add Mns.Ranposu.Body.Damage dummy
-        scoreboard objectives add Mns.Ranposu.Body.Damage.Max dummy
-    # 怯み回数
-        scoreboard objectives add Mns.Ranposu.DamageCount dummy

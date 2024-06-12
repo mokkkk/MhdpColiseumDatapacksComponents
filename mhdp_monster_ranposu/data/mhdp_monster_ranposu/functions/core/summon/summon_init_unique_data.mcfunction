@@ -17,6 +17,9 @@
     # 部位ID付与
         execute on passengers if entity @s[type=snowball,tag=aj.ranposu_aj.locator_origin] on origin if entity @s[type=slime,tag=Mns.HitBox.Ranposu.Head] run scoreboard players set @s Mns.Hitbox.PartId 0
         execute on passengers if entity @s[type=snowball,tag=aj.ranposu_aj.locator_origin] on origin if entity @s[type=slime,tag=Mns.HitBox.Ranposu.Body] run scoreboard players set @s Mns.Hitbox.PartId 1
+    # Effect付与
+        execute on passengers if entity @s[type=snowball,tag=aj.ranposu_aj.locator_origin] on origin if entity @s[type=slime] run effect give @s invisibility infinite 2 true
+        execute on passengers if entity @s[type=snowball,tag=aj.ranposu_aj.locator_origin] on origin if entity @s[type=slime] run effect give @s fire_resistance infinite 2 true
     # 初期化完了
         execute on passengers if entity @s[type=snowball,tag=aj.ranposu_aj.locator_origin] on origin if entity @s[type=slime] run tag @s add Mns.HitBox.Init
 
@@ -37,6 +40,9 @@
             execute store result score @s Mns.Ranposu.Body.Damage.Max run scoreboard players operation @s Mns.Ranposu.Body.Damage /= #const_100 Const
 
 # その他スコア初期化
-    scoreboard players set @s Mns.Ranposu.DamageCount 0
+    # 怯み回数
+        scoreboard players set @s Mns.Ranposu.DamageCount 0
 
-# 待機アニメーション再生
+# アニメーション再生
+    # 待機
+        execute if entity @s[tag=Mns.Temp.IsIdleAnimation] run function animated_java:ranposu_aj/animations/idle/tween_play

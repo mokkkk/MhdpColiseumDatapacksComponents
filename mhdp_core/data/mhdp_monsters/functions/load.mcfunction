@@ -6,44 +6,51 @@
 
 ## Scoreboard定義
 # モンスター処理用
-    # 実体力
-        scoreboard objectives add Mns.Hp dummy
-    # 怒り耐性値
-        scoreboard objectives add Mns.Anger.Damage dummy
-        scoreboard objectives add Mns.Anger.Damage.Max dummy
-    # 怒り継続時間
-        scoreboard objectives add Mns.Anger.Timer dummy
-        scoreboard objectives add Mns.Anger.Timer.Max dummy
-    # 怒り中の攻撃力倍率
-        scoreboard objectives add Mns.Anger.AttackMutiply dummy
-    # 怒り中の行動速度上昇値
-        scoreboard objectives add Mns.Anger.Speed dummy
-    # スタン耐性値
-        scoreboard objectives add Mns.Stun.Damage dummy
-        scoreboard objectives add Mns.Stun.Damage.Max dummy
-    # 減気耐性値
-        scoreboard objectives add Mns.Tire.Damage dummy
-        scoreboard objectives add Mns.Tire.Damage.Max dummy
-    # 麻痺耐性値
-        scoreboard objectives add Mns.Paralysis.Damage dummy
-        scoreboard objectives add Mns.Paralysis.Damage.Max dummy
-    # 麻痺継続時間
-        scoreboard objectives add Mns.Paralysis.Timer dummy
-        scoreboard objectives add Mns.Paralysis.Timer.Max dummy
-    # 毒耐性値
-        scoreboard objectives add Mns.Poison.Damage dummy
-        scoreboard objectives add Mns.Poison.Damage.Max dummy
-    # 毒継続時間
-        scoreboard objectives add Mns.Poison.Timer dummy
-        scoreboard objectives add Mns.Poison.Timer.Max dummy
-    # 毒効果ダメージ
-        scoreboard objectives add Mns.Poison.Effect.Value dummy
-    # 痺れ罠効果時間
-        scoreboard objectives add Mns.ParalyseTrap.Timer dummy
-        scoreboard objectives add Mns.ParalyseTrap.Timer.Max dummy
-    # 落とし穴効果時間
-        scoreboard objectives add Mns.HallTrap.Timer dummy
-        scoreboard objectives add Mns.HallTrap.Timer.Max dummy
+    # パラメータ系
+        # 実体力
+            scoreboard objectives add Mns.Hp dummy
+        # 怒り耐性値
+            scoreboard objectives add Mns.Anger.Damage dummy
+            scoreboard objectives add Mns.Anger.Damage.Max dummy
+        # 怒り継続時間
+            scoreboard objectives add Mns.Anger.Timer dummy
+            scoreboard objectives add Mns.Anger.Timer.Max dummy
+        # 怒り中の攻撃力倍率
+            scoreboard objectives add Mns.Anger.AttackMutiply dummy
+        # 怒り中の行動速度上昇値
+            scoreboard objectives add Mns.Anger.Speed dummy
+        # スタン耐性値
+            scoreboard objectives add Mns.Stun.Damage dummy
+            scoreboard objectives add Mns.Stun.Damage.Max dummy
+        # 減気耐性値
+            scoreboard objectives add Mns.Tire.Damage dummy
+            scoreboard objectives add Mns.Tire.Damage.Max dummy
+        # 麻痺耐性値
+            scoreboard objectives add Mns.Paralysis.Damage dummy
+            scoreboard objectives add Mns.Paralysis.Damage.Max dummy
+        # 麻痺継続時間
+            scoreboard objectives add Mns.Paralysis.Timer dummy
+            scoreboard objectives add Mns.Paralysis.Timer.Max dummy
+        # 毒耐性値
+            scoreboard objectives add Mns.Poison.Damage dummy
+            scoreboard objectives add Mns.Poison.Damage.Max dummy
+        # 毒継続時間
+            scoreboard objectives add Mns.Poison.Timer dummy
+            scoreboard objectives add Mns.Poison.Timer.Max dummy
+        # 毒効果ダメージ
+            scoreboard objectives add Mns.Poison.Effect.Value dummy
+        # 痺れ罠効果時間
+            scoreboard objectives add Mns.ParalyseTrap.Timer dummy
+            scoreboard objectives add Mns.ParalyseTrap.Timer.Max dummy
+        # 落とし穴効果時間
+            scoreboard objectives add Mns.HallTrap.Timer dummy
+            scoreboard objectives add Mns.HallTrap.Timer.Max dummy
+    # その他
+        # メイン処理用
+            scoreboard objectives add Mns.General.AnimationTimer dummy
+        # 閃光玉耐性時間
+            scoreboard objectives add Mns.General.FlashBomb.ResistTimer dummy
+
 # 当たり判定処理用
     # モンスターUid
         scoreboard objectives add Mns.HitBox.MonsterUid dummy

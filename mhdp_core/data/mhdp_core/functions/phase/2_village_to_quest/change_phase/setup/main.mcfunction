@@ -8,6 +8,10 @@
     # 大闘技場
         execute if data storage mhdp_core:game_data ActiveQuest{Field:"Coliseum"} run function mhdp_core:phase/2_village_to_quest/change_phase/setup/map/coliseum
 
+# 時刻設定
+    execute if data storage mhdp_core:game_data ActiveQuest{Time:"day"} run time set 5000
+    execute if data storage mhdp_core:game_data ActiveQuest{Time:"night"} run time set 16000
+
 # モンスター配置
     data modify storage mhdp_core:game_data ActiveQuest.TargetMonsters set from storage mhdp_core:game_data ActiveQuest.Monsters
     function mhdp_core:phase/2_village_to_quest/change_phase/setup/monster/main
