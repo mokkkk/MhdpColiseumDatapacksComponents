@@ -109,6 +109,8 @@
         execute on passengers if entity @s[type=item_display] run data modify entity @s teleport_duration set value 1
         execute if data storage mhdp_core:game_data ActiveQuest{Time:"day"} on passengers if entity @s[type=item_display] run data modify entity @s brightness set value {sky:15,block:15}
         execute if data storage mhdp_core:game_data ActiveQuest{Time:"night"} on passengers if entity @s[type=item_display] run data modify entity @s brightness set value {sky:3,block:3}
+    # スコア初期化
+        scoreboard players set @s Mns.Temp.AngerSpeed.Timer 0
 
 # 終了
     scoreboard players reset #mhdp_temp_player_count MhdpCore

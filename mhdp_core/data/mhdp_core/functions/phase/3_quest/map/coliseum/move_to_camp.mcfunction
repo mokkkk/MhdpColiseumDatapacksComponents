@@ -12,4 +12,5 @@
     tag @s remove Ply.State.MnsTarget
     tag @s remove Ply.State.EnableDamage
 
-# TODO: ボスバーの非表示
+# ボスバーの非表示
+    execute as @e[type=item_display,tag=Mns.Root] run function mhdp_monsters:core/switch/show_bossbar

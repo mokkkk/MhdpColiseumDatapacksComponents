@@ -4,6 +4,11 @@
 #
 # @within function mhdp_monster_ranposu:core/summon/summon_init
 
+# ボスバー作成
+    bossbar add mhdp_monster:ranposu [{"text":"青鳥竜"},{"text":"\uE000","font":"minecraft:ui/monster_hp"}]
+    execute store result bossbar mhdp_monster:ranposu max run scoreboard players get @s Mns.Hp
+    execute store result bossbar mhdp_monster:ranposu value run scoreboard players get @s Mns.Hp
+
 # 当たり判定
     # タグ付与
         execute on passengers if entity @s[type=snowball,tag=aj.ranposu_aj.locator_origin] on origin if entity @s[type=slime] run tag @s add Mns.HitBox
