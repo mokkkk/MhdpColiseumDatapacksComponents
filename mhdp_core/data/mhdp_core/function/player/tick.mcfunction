@@ -31,6 +31,6 @@
 
 # その他
     # 無音
-        execute if entity @s[tag=Ply.State.IsSilent] run stopsound @s
+        execute if entity @s[tag=Ply.State.IsSilent] run function mhdp_core:player/other/stop_all_sounds
     # 満腹度
         effect give @s saturation infinite 0 true
