@@ -9,8 +9,8 @@
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
 
 # アニメーション演出
-    execute if score @s Wpn.AnimationTimer matches 1 run playsound entity.player.attack.sweep master @s ~ ~ ~ 1 0.6
-    execute if score @s Wpn.AnimationTimer matches 1 run playsound entity.player.attack.sweep master @s ~ ~ ~ 1 0.8
+    execute if score @s Wpn.AnimationTimer matches 1 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.6
+    execute if score @s Wpn.AnimationTimer matches 1 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.8
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/animation_0
     execute if score @s Wpn.AnimationTimer matches 2 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/animation_1
     execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/animation_2
@@ -21,9 +21,9 @@
     execute if score @s Wpn.AnimationTimer matches 1 positioned ^ ^2 ^ rotated ~ ~-30 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/particle_pre
     execute if score @s Wpn.AnimationTimer matches 2 positioned ^ ^ ^0.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/particle_pre
     execute if score @s Wpn.GeneralTimer matches 12 run scoreboard players set @s Wpn.AnimationTimer 12
-    execute if score @s Wpn.AnimationTimer matches 17 run playsound entity.player.attack.sweep master @s ~ ~ ~ 1 0.5
-    execute if score @s Wpn.AnimationTimer matches 17 run playsound entity.player.attack.sweep master @s ~ ~ ~ 1 0.6
-    execute if score @s Wpn.AnimationTimer matches 17 run playsound entity.player.attack.sweep master @s ~ ~ ~ 1 0.8
+    execute if score @s Wpn.AnimationTimer matches 17 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
+    execute if score @s Wpn.AnimationTimer matches 17 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.6
+    execute if score @s Wpn.AnimationTimer matches 17 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.8
     execute if score @s Wpn.AnimationTimer matches 13 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/animation_0
     execute if score @s Wpn.AnimationTimer matches 17 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/animation_1
     execute if score @s Wpn.AnimationTimer matches 19 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/animation_2

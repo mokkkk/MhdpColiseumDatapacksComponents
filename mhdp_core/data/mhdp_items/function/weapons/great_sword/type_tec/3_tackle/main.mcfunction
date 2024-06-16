@@ -9,9 +9,9 @@
     scoreboard players add @s Wpn.AnimationTimer 1
 
 # アニメーション演出
-    execute if score @s Wpn.AnimationTimer matches 1 run playsound entity.hoglin.step master @a ~ ~ ~ 1 1
+    execute if score @s Wpn.AnimationTimer matches 1 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/great_sword/type_tec/3_tackle/animation_0
-    execute if score @s Wpn.AnimationTimer matches 1..4 run playsound block.grass.step master @a ~ ~ ~ 1 1
+    execute if score @s Wpn.AnimationTimer matches 1..4 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
     execute if score @s Wpn.AnimationTimer matches 1..4 run particle block{block_state:"minecraft:sand"} ^ ^0.1 ^ 0.2 0.2 0.2 0 2
 
 # 移動制限

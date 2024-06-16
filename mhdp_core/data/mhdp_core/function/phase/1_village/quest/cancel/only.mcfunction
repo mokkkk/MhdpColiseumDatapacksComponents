@@ -8,7 +8,7 @@
 # 通知
     execute as @a[tag=Ply.State.QuestHost,tag=!Ply.Temp.Target] run tellraw @s {"text":"【受注していたクエストがキャンセルされました】"}
     execute as @a[tag=Ply.State.QuestMember,tag=!Ply.State.QuestHost] run tellraw @s {"text":"【参加していたクエストがキャンセルされました】"}
-    execute as @a[tag=Ply.State.QuestMember] at @s run playsound ui.button.click master @s ~ ~ ~ 1 1
+    execute as @a[tag=Ply.State.QuestMember] at @s run playsound ui.button.click master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
 
 # チームから除去
     team leave @a[team=Team.QuestHost]

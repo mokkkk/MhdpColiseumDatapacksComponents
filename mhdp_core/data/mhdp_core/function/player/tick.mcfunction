@@ -30,5 +30,7 @@
         function mhdp_core:player/data/remove_cache_data
 
 # その他
+    # 無音
+        execute if entity @s[tag=Ply.State.IsSilent] run stopsound @s
     # 満腹度
         effect give @s saturation infinite 0 true

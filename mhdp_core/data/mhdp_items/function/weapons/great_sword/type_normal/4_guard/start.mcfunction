@@ -16,7 +16,7 @@
     tag @s add Ply.Weapon.StaminaNotRegen
 
 # 演出
-    playsound item.armor.equip_iron master @s ~ ~ ~ 2 1
+    playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # タイマー初期化
     scoreboard players set @s Wpn.GuardStopTimer 0

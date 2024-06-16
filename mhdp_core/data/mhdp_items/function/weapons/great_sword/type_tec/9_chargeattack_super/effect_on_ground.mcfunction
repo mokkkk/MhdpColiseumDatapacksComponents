@@ -5,9 +5,9 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/main
 
 # 演出
-    playsound entity.hoglin.step master @s ~ ~ ~ 1 0.5
-    playsound entity.hoglin.step master @s ~ ~ ~ 1 0.7
-    playsound entity.hoglin.step master @s ~ ~ ~ 1 0.9
+    playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
+    playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
+    playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.9
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 0.3 0.1 0.3 1 12 normal
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^2.5 0.3 0.1 0.3 1 12 normal
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^3.5 0.3 0.1 0.3 1 12 normal

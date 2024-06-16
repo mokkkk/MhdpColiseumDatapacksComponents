@@ -14,7 +14,7 @@
     scoreboard players set @s Wpn.AnimationTimer 0
 
 # 演出
-    playsound item.armor.equip_iron master @s ~ ~ ~ 2 1
+    playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 共通処理
     function mhdp_items:weapons/great_sword/util/end_attack

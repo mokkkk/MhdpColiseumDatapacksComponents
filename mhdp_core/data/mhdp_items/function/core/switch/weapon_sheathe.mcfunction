@@ -8,7 +8,7 @@
     clear @s ender_eye[custom_data~{IsSubWeapon:1b}]
 
 # 効果音
-    execute at @s run playsound item.armor.equip_iron master @a ~ ~ ~ 1 0.7
+    execute at @s run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
     
 # 念のためデータ取得
     function mhdp_core:player/data/load_data

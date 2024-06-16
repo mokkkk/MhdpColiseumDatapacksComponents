@@ -21,7 +21,7 @@
     scoreboard players set @s Wpn.Gs.ChargeSlashCount 0
 
 # 翔蟲演出
-    playsound entity.player.levelup master @a ~ ~ ~ 1 2
+    playsound entity.player.levelup master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 2
     tag @s add Itm.Sp.Wirebug.UsedSkill
     scoreboard players set @s Itm.Wirebug.CoolTime 400
 

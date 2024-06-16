@@ -5,7 +5,7 @@
 # @within function mhdp_core:phase/1_village/quest/accept/main
 
 # 通知
-    execute as @a at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 0.5
+    execute as @a at @s run playsound entity.player.levelup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
     tellraw @a [{"text": "【"},{"selector":"@s"},{"text": "がクエストを受注しました】"}]
     tellraw @a {"text": "--------------------------------------------------","color": "light_purple"}
 

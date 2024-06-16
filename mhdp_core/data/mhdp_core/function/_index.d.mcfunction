@@ -47,6 +47,7 @@
         #declare tag Ply.State.PlayingQuest クエスト中
         #declare tag Ply.State.MnsTarget モンスターのターゲットになりうる状態、闘技場戦闘フィールドでのみ有効
         #declare tag Ply.State.EnableDamage ダメージを受ける状態、クエスト中のみ有効、クエスト成功/失敗時に剥奪する
+        #declare tag Ply.State.IsSilent
     # 操作
         # スニーク
             #declare tag Ply.Ope.IsSneaking スニーク中

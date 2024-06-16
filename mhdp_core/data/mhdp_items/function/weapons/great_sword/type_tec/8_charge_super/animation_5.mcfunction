@@ -13,6 +13,6 @@
     function mhdp_items:core/util/item_modify_no_attack
 
 # 演出
-    playsound entity.hoglin.step master @s ~ ~ ~ 1 0.7
-    playsound entity.hoglin.step master @s ~ ~ ~ 1 0.5
+    playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
+    playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
     particle crit ~ ~1 ~ 0 0 0 1 50
