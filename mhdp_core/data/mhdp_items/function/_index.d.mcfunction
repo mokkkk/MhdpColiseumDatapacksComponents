@@ -28,6 +28,8 @@
         #declare tag Ply.Weapon.Armod.Super スーパーアーマー中
         #declare tag Ply.Weapon.Armod.Hyper ハイパーアーマー中
         #declare tag Ply.Weapon.HisStop ヒットストップ中
+    # 装備武器
+        #declare tag Ply.Weapon.Equip.GreatSword 大剣装備
     # フラグ
         #declare tag Ply.Flag.HideSharpness 斬れ味UI非表示フラグ
         #declare tag Ply.Flag.NormalAttack 左クリック攻撃フラグ

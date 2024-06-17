@@ -18,6 +18,7 @@
         function mhdp_items:core/util/calc_sharpness_color
     # クエスト中独自のデータ付与
         function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/macro/m.set_weapondata with storage mhdp_core:temp Result
+        execute store result score @s Ply.Stats.CurrentSharpnessColor run data get storage mhdp_core:temp Result.SharpnessColor
     # 終了
         data remove storage mhdp_core:temp Result
 

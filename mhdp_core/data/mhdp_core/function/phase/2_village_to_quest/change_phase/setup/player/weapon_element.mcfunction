@@ -12,6 +12,7 @@
     scoreboard players set @s Ply.Stats.ElementValue.Dragon 0
     scoreboard players set @s Ply.Stats.ConditionValue.Poison 0
     scoreboard players set @s Ply.Stats.ConditionValue.Paralysis 0
+    scoreboard players set @s Ply.Stats.ConditionValue.Bomb 0
 
 # 火
     execute if data storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data"{Element:1} store result score @s Ply.Stats.ElementValue.Fire run data get storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data".ElementDamage
@@ -27,3 +28,5 @@
     execute if data storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data"{Element:6} store result score @s Ply.Stats.ConditionValue.Poison run data get storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data".ElementDamage
 # 麻痺
     execute if data storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data"{Element:7} store result score @s Ply.Stats.ConditionValue.Paralysis run data get storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data".ElementDamage
+# 爆破
+    execute if data storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data"{Element:8} store result score @s Ply.Stats.ConditionValue.Bomb run data get storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data".ElementDamage

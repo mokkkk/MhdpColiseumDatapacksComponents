@@ -1,4 +1,4 @@
-#> mhdp_core:player/damage/macro/m.get_monster_defence
+#> mhdp_core:player/damage/player_to_entity/macro/m.get_monster_defence
 #
 # モンスターの肉質を取得する
 #

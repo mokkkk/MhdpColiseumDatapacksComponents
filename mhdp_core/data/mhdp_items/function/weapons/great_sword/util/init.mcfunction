@@ -6,3 +6,6 @@
 
 # TODO: 武器の初期化処理
     say TODO:大剣初期化処理
+
+# タグ付与
+    tag @s add Ply.Weapon.Equip.GreatSword

@@ -81,6 +81,9 @@
         #declare tag Ply.Temp.Target 特定のプレイヤーを一時的に特定したいときに使用、必ず同function内でリセットする
         #declare tag Ply.Temp.TargetSub 上記では足りないときに利用、注意事項は同じ
         #declare tag Ply.Temp.IsGetData 現tickデータ取得済み
+        #declare tag Ply.Temp.IsCrit 会心発生時
+        #declare tag Ply.Temp.IsCritInverse 逆会心発生時
+        #declare tag Ply.Temp.IsDisableConditionDamage 状態異常無効時
         # クエスト出発時エラー関連
             #declare tag Ply.Temp.Error.Gamemode ゲームモードに関するエラー
             #declare tag Ply.Temp.Error.HasCursorItem カーソルにアイテムを保持しているエラー

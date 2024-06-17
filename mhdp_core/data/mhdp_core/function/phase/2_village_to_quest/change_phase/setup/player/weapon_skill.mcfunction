@@ -29,16 +29,16 @@
 # 属性値
     execute if entity @s[tag=Skill.Attack.Status.FireUp.1] if score @s Ply.Stats.ElementValue.Fire matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Fire 10
     execute if entity @s[tag=Skill.Attack.Status.FireUp.2] if score @s Ply.Stats.ElementValue.Fire matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Fire 20
-    execute if entity @s[tag=Skill.Attack.Status.FireUp.3] if score @s Ply.Stats.ElementValue.Fire matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Fire 35
+    execute if entity @s[tag=Skill.Attack.Status.FireUp.3] if score @s Ply.Stats.ElementValue.Fire matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Fire 30
     execute if entity @s[tag=Skill.Attack.Status.WaterUp.1] if score @s Ply.Stats.ElementValue.Water matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Water 10
     execute if entity @s[tag=Skill.Attack.Status.WaterUp.2] if score @s Ply.Stats.ElementValue.Water matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Water 20
-    execute if entity @s[tag=Skill.Attack.Status.WaterUp.3] if score @s Ply.Stats.ElementValue.Water matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Water 35
+    execute if entity @s[tag=Skill.Attack.Status.WaterUp.3] if score @s Ply.Stats.ElementValue.Water matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Water 30
     execute if entity @s[tag=Skill.Attack.Status.ThunderUp.1] if score @s Ply.Stats.ElementValue.Thunder matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Thunder 10
     execute if entity @s[tag=Skill.Attack.Status.ThunderUp.2] if score @s Ply.Stats.ElementValue.Thunder matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Thunder 20
-    execute if entity @s[tag=Skill.Attack.Status.ThunderUp.3] if score @s Ply.Stats.ElementValue.Thunder matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Thunder 35
+    execute if entity @s[tag=Skill.Attack.Status.ThunderUp.3] if score @s Ply.Stats.ElementValue.Thunder matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Thunder 30
     execute if entity @s[tag=Skill.Attack.Status.IceUp.1] if score @s Ply.Stats.ElementValue.Ice matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Ice 10
     execute if entity @s[tag=Skill.Attack.Status.IceUp.2] if score @s Ply.Stats.ElementValue.Ice matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Ice 20
-    execute if entity @s[tag=Skill.Attack.Status.IceUp.3] if score @s Ply.Stats.ElementValue.Ice matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Ice 35
+    execute if entity @s[tag=Skill.Attack.Status.IceUp.3] if score @s Ply.Stats.ElementValue.Ice matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Ice 30
     execute if entity @s[tag=Skill.Attack.Status.DragonUp.1] if score @s Ply.Stats.ElementValue.Dragon matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Dragon 10
     execute if entity @s[tag=Skill.Attack.Status.DragonUp.2] if score @s Ply.Stats.ElementValue.Dragon matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Dragon 20
-    execute if entity @s[tag=Skill.Attack.Status.DragonUp.3] if score @s Ply.Stats.ElementValue.Dragon matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Dragon 35
+    execute if entity @s[tag=Skill.Attack.Status.DragonUp.3] if score @s Ply.Stats.ElementValue.Dragon matches 1.. run scoreboard players add @s Ply.Stats.ElementValue.Dragon 30

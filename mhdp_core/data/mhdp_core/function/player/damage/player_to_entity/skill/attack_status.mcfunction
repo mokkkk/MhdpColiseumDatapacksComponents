@@ -1,8 +1,8 @@
-#> mhdp_core:player/damage/skill/attack_status
+#> mhdp_core:player/damage/player_to_entity/skill/attack_status
 #
 # 攻撃力関連のスキル処理
 #
-# @within function mhdp_core:tick
+# @within function mhdp_core:player/damage/player_to_entity/main
 
 # 弱点特攻
     execute if entity @s[tag=Skill.Attack.Status.WeakExploit.1] if score #mhdp_temp_defence_phys MhdpCore matches 45.. run scoreboard players add #mhdp_temp_crit_value MhdpCore 15
@@ -45,3 +45,7 @@
     execute if entity @s[tag=Skill.Attack.Status.CritConvert.3] if score #mhdp_temp_crit_over100_value MhdpCore matches 1.. run scoreboard players operation #mhdp_temp_crit_over100_value MhdpCore /= #const_2 Const
     execute if entity @s[tag=Skill.Attack.Status.CritConvert.3] if score #mhdp_temp_crit_over100_value MhdpCore matches 1.. run scoreboard players operation #mhdp_temp_crit_over100_value MhdpCore *= #const_3 Const
     execute if score #mhdp_temp_crit_over100_value MhdpCore matches 1.. run scoreboard players operation #mhdp_temp_attack_value MhdpCore += #mhdp_temp_crit_over100_value MhdpCore
+
+# 終了
+    scoreboard players reset #mhdp_temp_crit_over100_value MhdpCore
+    scoreboard players reset #mhdp_temp_defence_element MhdpCore

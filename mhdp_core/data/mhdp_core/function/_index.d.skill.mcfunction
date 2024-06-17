@@ -45,6 +45,10 @@
             #declare tag Skill.Attack.Status.WeakExploit.2 弱点特攻LV2
             #declare tag Skill.Attack.Status.WeakExploit.3 弱点特攻LV3
             #declare tag Skill.Attack.Status.WeakExploit.Element 弱点特攻【属性】
+            #declare tag Skill.Attack.Status.CritBoost.1 超会心LV1
+            #declare tag Skill.Attack.Status.CritBoost.2 超会心LV2
+            #declare tag Skill.Attack.Status.CritBoost.3 超会心LV3
+            #declare tag Skill.Attack.Status.CritBoost.Element 会心撃【属性】
     # スタミナ関連
         #declare tag Skill.Stamina.StaminaSurge.1 スタミナ急速回復LV1
         #declare tag Skill.Stamina.StaminaSurge.2 スタミナ急速回復LV2

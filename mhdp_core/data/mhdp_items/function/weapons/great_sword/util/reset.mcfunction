@@ -10,6 +10,9 @@
 # 割り込み処理
     function mhdp_items:weapons/great_sword/util/interrupt
 
+# タグ消去
+    tag @s remove Ply.Weapon.Equip.GreatSword
+
 # 専用スコア消去
     scoreboard players reset @s Wpn.Gs.ChargeTimer
     scoreboard players reset @s Wpn.Gs.ChargeCount

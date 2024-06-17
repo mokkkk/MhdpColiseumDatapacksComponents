@@ -52,6 +52,12 @@
     scoreboard players set #const_20 Const 20
     scoreboard players set #const_60 Const 60
     scoreboard players set #const_100 Const 100
+    scoreboard players set #const_10000 Const 10000
+    scoreboard players set #const_crit_multiply_normal Const 125
+    scoreboard players set #const_crit_multiply_lv1 Const 130
+    scoreboard players set #const_crit_multiply_lv2 Const 135
+    scoreboard players set #const_crit_multiply_lv3 Const 140
+    scoreboard players set #const_crit_multiply_element Const 115
 
 ## チーム定義
     team add Team.QuestHost
