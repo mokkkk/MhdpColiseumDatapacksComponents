@@ -33,6 +33,16 @@
         execute if entity @s[tag=Ply.Temp.NoItemsInOffhand] run loot give @s mine 0 0 0 debug_stick
         tag @s remove Ply.Temp.NoItemsInOffhand
 
+# ステータス初期化
+    # 攻撃力
+        execute store result score @s Ply.Stats.AttackValue run data get storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data".AttackDamage
+    # 会心率
+        execute store result score @s Ply.Stats.CritValue run data get storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data".Critical
+    # 属性値
+        function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon_element
+    # スキル効果適用
+        function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon_skill
+
 # 武器データを保存
     data modify storage mhdp_core:temp PlayerData.Item.UsingWeapon set from entity @s Inventory[{Slot:-106b}]
     function mhdp_core:player/data/save_data

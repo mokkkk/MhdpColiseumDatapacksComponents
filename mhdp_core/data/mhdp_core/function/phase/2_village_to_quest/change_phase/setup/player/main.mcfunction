@@ -28,6 +28,8 @@
 # 武器セット
     function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon
 
+# TODO:防具セット
+
 # 特殊装具の初期化
     function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/sp_items
 

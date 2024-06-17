@@ -47,6 +47,8 @@
     execute unless score #mhdp_monster_uid_grobal Mns.Uid matches -2147483648.. run scoreboard players set #mhdp_monster_uid_grobal Mns.Uid 1
 
 ## 定数定義
+    scoreboard players set #const_2 Const 2
+    scoreboard players set #const_3 Const 3
     scoreboard players set #const_20 Const 20
     scoreboard players set #const_60 Const 60
     scoreboard players set #const_100 Const 100

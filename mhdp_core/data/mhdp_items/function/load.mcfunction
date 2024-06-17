@@ -10,6 +10,26 @@
         scoreboard objectives add Ply.Stats.Stamina dummy
     # スタミナのペナルティ時間
         scoreboard objectives add Ply.Stats.StaminaPenaltyTimer dummy
+    # 攻撃力
+        scoreboard objectives add Ply.Stats.AttackValue dummy
+    # 会心率
+        scoreboard objectives add Ply.Stats.CritValue dummy
+    # 属性値
+        scoreboard objectives add Ply.Stats.ElementValue.Fire dummy
+        scoreboard objectives add Ply.Stats.ElementValue.Water dummy
+        scoreboard objectives add Ply.Stats.ElementValue.Thunder dummy
+        scoreboard objectives add Ply.Stats.ElementValue.Ice dummy
+        scoreboard objectives add Ply.Stats.ElementValue.Dragon dummy
+    # 状態異常値
+        scoreboard objectives add Ply.Stats.ConditionValue.Poison dummy
+        scoreboard objectives add Ply.Stats.ConditionValue.Paralysis dummy
+    # 防御力
+        scoreboard objectives add Ply.Stats.DefenceValue dummy
+        scoreboard objectives add Ply.Stats.DefenceValue.Fire dummy
+        scoreboard objectives add Ply.Stats.DefenceValue.Water dummy
+        scoreboard objectives add Ply.Stats.DefenceValue.Thunder dummy
+        scoreboard objectives add Ply.Stats.DefenceValue.Ice dummy
+        scoreboard objectives add Ply.Stats.DefenceValue.Dragon dummy
 # 武器共通処理
     # 武器の操作処理用
         scoreboard objectives add Wpn.GeneralTimer dummy
