@@ -40,3 +40,6 @@
     effect clear @s resistance
     effect clear @s slowness
     attribute @s generic.jump_strength modifier remove mhdp_core:death_animation
+
+# UIの消去
+    title @s actionbar {"text":""}
