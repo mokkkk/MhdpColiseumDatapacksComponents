@@ -13,6 +13,7 @@
 #        storage mhdp_core:temp Damage.DragonAuraValue 龍気量
 #        storage mhdp_core:temp Damage.IsDecreseSharpness 斬れ味消費有無
 # @output
+#        score #mhdp_temp_damage_total MhdpCore 総ダメージ量
 #        score #mhdp_temp_damage_phys_type MhdpCore 物理ダメージ種別
 #        score #mhdp_temp_damage_phys_value MhdpCore 物理ダメージ量
 #        score #mhdp_temp_damage_element_value MhdpCore 属性ダメージ量
@@ -101,7 +102,7 @@
     # 物理
         # ダメージ * 肉質
             scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore *= #mhdp_temp_defence_phys MhdpCore
-            execute store result score #mhdp_temp_damage_partdamage_value MhdpCore run scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore /= #const_100 Const
+            execute store result score #mhdp_temp_damage_total MhdpCore store result score #mhdp_temp_damage_partdamage_value MhdpCore run scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore /= #const_100 Const
     # 部位ダメージ
         # ダメージ * 部位ダメージ倍率
             execute store result score #mhdp_temp_attack_value MhdpCore run data get storage mhdp_core:temp Damage.PartDamageMult
@@ -113,6 +114,8 @@
         execute store result score #mhdp_temp_damage_tire_value MhdpCore run data get storage mhdp_core:temp Damage.TireValue
     # 龍気
         execute store result score #mhdp_temp_damage_dragonaura_value MhdpCore run data get storage mhdp_core:temp Damage.DragonAuraValue
+    # 総ダメージ
+        scoreboard players operation #mhdp_temp_damage_total MhdpCore += #mhdp_temp_damage_element_value MhdpCore
 
 # 演出
     execute positioned as @e[type=slime,tag=Mns.HitBox,tag=Victim,limit=1] run function mhdp_core:player/damage/player_to_entity/vfx
