@@ -18,6 +18,9 @@
 #        score #mhdp_temp_damage_phys_value MhdpCore 物理ダメージ量
 #        score #mhdp_temp_damage_element_value MhdpCore 属性ダメージ量
 #        score #mhdp_temp_damage_partdamage_value MhdpCore 部位ダメージ量
+#        score #mhdp_temp_condition_value_poison MhdpCore 毒ダメージ量
+#        score #mhdp_temp_condition_value_paralysis MhdpCore 麻痺ダメージ量
+#        score #mhdp_temp_condition_value_bomb MhdpCore 爆破ダメージ量
 #        score #mhdp_temp_damage_stun_value MhdpCore スタン量
 #        score #mhdp_temp_damage_tire_value MhdpCore 減気量
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
@@ -125,6 +128,7 @@
 
 # 終了
     scoreboard players reset #mhdp_temp_attack_value MhdpCore
+    scoreboard players reset #mhdp_temp_defence_phys
     scoreboard players reset #mhdp_temp_damage_sharpness_multiply MhdpCore
     scoreboard players reset #mhdp_temp_element_value_fire MhdpCore
     scoreboard players reset #mhdp_temp_element_value_water MhdpCore

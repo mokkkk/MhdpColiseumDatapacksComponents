@@ -4,8 +4,8 @@
 #
 # @within function 
 
-# 当たり判定のサイズをリセット
-    execute on passengers if entity @s[type=snowball,tag=aj.ranposu_aj.locator_origin] on origin if entity @s[type=slime] run data modify entity @s Size set value 0
+# 当たり判定を消去
+    execute on passengers if entity @s[type=snowball,tag=aj.ranposu_aj.locator_origin] on origin if entity @s[type=slime] run function mhdp_monsters:core/util/other/remove_hitbox
 
 # ボスバー消去
     bossbar remove mhdp_monster:ranposu
