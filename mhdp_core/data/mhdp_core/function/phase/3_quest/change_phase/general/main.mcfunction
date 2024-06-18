@@ -18,8 +18,8 @@
     spawnpoint @a[tag=Ply.State.PlayingQuest] 266 63 204
     tag @a remove Ply.State.PlayingQuest
 
-# モンスターのremove処理
-    execute as @e[type=item_display,tag=Mns.Root] at @s run function mhdp_monsters:core/switch/remove
+# モンスターのリセット処理
+    function mhdp_core:phase/3_quest/change_phase/general/monster/main
 
 # ActiveQuestの解放
     scoreboard players operation #mhdp_core_pre_played_quest_id MhdpCore = #mhdp_core_loading_quest_id MhdpCore

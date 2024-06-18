@@ -12,4 +12,4 @@
     data remove storage mhdp_core:temp Arg
     data remove storage mhdp_core:temp TargetMonsterData
 
-say intrusion
+say 乱入処理実行
