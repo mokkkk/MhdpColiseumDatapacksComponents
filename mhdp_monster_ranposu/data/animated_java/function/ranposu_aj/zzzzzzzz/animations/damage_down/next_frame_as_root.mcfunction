@@ -1,0 +1,1 @@
+function animated_java:ranposu_aj/zzzzzzzz/animations/damage_down/tick_animation

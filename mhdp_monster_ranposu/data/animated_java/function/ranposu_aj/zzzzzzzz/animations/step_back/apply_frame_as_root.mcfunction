@@ -1,0 +1,1 @@
+execute if score @s aj.anim_time matches 0..26 run function animated_java:ranposu_aj/zzzzzzzz/animations/step_back/tree/branch_0_26

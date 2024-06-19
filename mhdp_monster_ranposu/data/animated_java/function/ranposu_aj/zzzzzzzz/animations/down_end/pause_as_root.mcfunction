@@ -1,0 +1,1 @@
+tag @s remove aj.ranposu_aj.animation.down_end
