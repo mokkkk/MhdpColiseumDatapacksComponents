@@ -4,8 +4,8 @@
 #
 # @within function mhdp_monsters:/**
 
-# Uidスコア化
-    execute store result score @s Mns.Uid run data get storage mhdp_core:temp TargetMonsterData.Uid
+# Uid設定
+    scoreboard players operation @s Mns.Uid = #mhdp_temp_monster_uid Mns.Uid
 
 # プレイヤー数を取得
     execute store result score #mhdp_temp_player_count MhdpCore if entity @a[tag=Ply.State.PlayingQuest]

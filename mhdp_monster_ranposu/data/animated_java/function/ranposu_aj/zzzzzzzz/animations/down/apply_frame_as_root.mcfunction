@@ -1,1 +1,0 @@
-execute if score @s aj.anim_time matches 0..35 run function animated_java:ranposu_aj/zzzzzzzz/animations/down/tree/branch_0_35

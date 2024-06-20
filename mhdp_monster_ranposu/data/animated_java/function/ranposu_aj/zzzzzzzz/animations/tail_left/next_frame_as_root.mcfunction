@@ -1,1 +1,0 @@
-function animated_java:ranposu_aj/zzzzzzzz/animations/tail_left/tick_animation

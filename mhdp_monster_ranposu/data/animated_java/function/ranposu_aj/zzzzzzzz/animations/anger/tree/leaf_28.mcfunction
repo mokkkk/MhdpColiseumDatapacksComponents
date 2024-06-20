@@ -1,1 +1,0 @@
-execute on passengers run function animated_java:ranposu_aj/zzzzzzzz/animations/anger/tree/leaf_28_as_bone

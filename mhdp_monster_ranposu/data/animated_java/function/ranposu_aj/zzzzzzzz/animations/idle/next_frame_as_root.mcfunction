@@ -1,1 +1,0 @@
-function animated_java:ranposu_aj/zzzzzzzz/animations/idle/tick_animation
