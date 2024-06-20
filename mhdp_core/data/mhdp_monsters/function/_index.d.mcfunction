@@ -12,6 +12,7 @@
     #declare tag Mns.Param.IsTireEnable 減気有効
     #declare tag Mns.Param.IsParalysisEnable 麻痺有効
     #declare tag Mns.Param.IsPoisonEnable 毒有効
+    #declare tag Mns.Param.IsBombEnable 爆破有効
     #declare tag Mns.Param.IsFlashBombEnable 閃光玉有効共通タグ
     #declare tag Mns.Param.IsFlashBombEnable.Temp 現時点で閃光玉が有効かどうか
     #declare tag Mns.Param.IsSoundBombEnable 音爆弾有効共通タグ

@@ -61,3 +61,4 @@
 
 ## init
     function mhdp_items:core/init/item_data
+    function mhdp_items:core/init/weapon_data

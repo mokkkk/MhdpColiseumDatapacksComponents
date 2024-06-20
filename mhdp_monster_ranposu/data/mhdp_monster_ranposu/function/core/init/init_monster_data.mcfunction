@@ -22,6 +22,7 @@
         Uid:1001,\
         Icon:"uE011",\
         Name:"ranposu",\
+        UpperName:"Ranposu",\
         JpName:"青鳥竜",\
         ShowName:'{"text":"青鳥竜"}',\
         ShowHp:true,\
@@ -37,6 +38,8 @@
         PoisonDamage:3000,\
         PoisonTimer:40,\
         PoisonEffectDamage:100,\
+        BombDamage:2000,\
+        BombEffectDamage:400,\
         FlashBombEnable:true,\
         SoundBombEnable:false,\
         ParalyseTrapEnable:true,\
@@ -65,3 +68,5 @@
         Attacks:[{Id:"Bite"}]\
     }
     function mhdp_monster_ranposu:core/init/init_attack_data
+
+say 青鳥竜 init monster data

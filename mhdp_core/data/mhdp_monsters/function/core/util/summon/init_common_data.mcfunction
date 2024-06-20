@@ -24,7 +24,8 @@
         scoreboard players operation @s Mns.Hp *= #mhdp_temp_hp_multiply_quest MhdpCore
         scoreboard players operation @s Mns.Hp /= #const_100 Const
         scoreboard players operation @s Mns.Hp *= #mhdp_temp_hp_multiply_playercount MhdpCore
-        execute store result score @s Mns.Stun.Damage store result score @s Mns.Tire.Damage store result score @s Mns.Anger.Damage run scoreboard players operation @s Mns.Hp /= #const_100 Const
+        execute store result score @s Mns.Hp.Half store result score @s Mns.Stun.Damage store result score @s Mns.Tire.Damage store result score @s Mns.Anger.Damage run scoreboard players operation @s Mns.Hp /= #const_100 Const
+        scoreboard players operation @s Mns.Hp.Half /= #const_2 Const
 
 # スタン耐性値
     # 倍率取得
@@ -84,6 +85,19 @@
             scoreboard players operation @s Mns.Poison.Effect.Value *= @s Mns.Hp
             scoreboard players operation @s Mns.Poison.Effect.Value /= #const_100 Const
             scoreboard players operation @s Mns.Poison.Effect.Value /= #const_100 Const
+
+# 爆破
+    # 耐性値
+        # 基礎値取得
+            execute store result score @s Mns.Bomb.Damage run data get storage mhdp_core:temp TargetMonsterData.BombDamage
+        # フラグ
+            execute if score @s Mns.Bomb.Damage matches 1.. run tag @s add Mns.Param.IsBombEnable
+        # 計算
+            scoreboard players operation @s Mns.Bomb.Damage *= #mhdp_temp_hp_multiply_playercount MhdpCore
+            execute store result score @s Mns.Bomb.Damage.Max run scoreboard players operation @s Mns.Bomb.Damage /= #const_100 Const
+    # 効果ダメージ
+        # 基礎値取得
+            execute store result score @s Mns.Bomb.Effect.Value run data get storage mhdp_core:temp TargetMonsterData.BombEffectDamage
 
 # その他
     # ハードコア

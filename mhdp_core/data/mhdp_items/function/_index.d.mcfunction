@@ -38,3 +38,6 @@
         #declare tag Ply.Flag.Hit 武器攻撃命中フラグ
     # オプション
         #declare tag Ply.Option.DisableCameraEffect オプション：画面効果無効化
+# 一時
+    #declare tag Temp.Hit ヒット判定用
+    #declare tag Temp.Victim 攻撃対象判定用

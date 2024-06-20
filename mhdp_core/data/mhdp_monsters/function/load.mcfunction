@@ -9,6 +9,8 @@
     # パラメータ系
         # 実体力
             scoreboard objectives add Mns.Hp dummy
+        # 実体力半分
+            scoreboard objectives add Mns.Hp.Half dummy
         # 怒り耐性値
             scoreboard objectives add Mns.Anger.Damage dummy
             scoreboard objectives add Mns.Anger.Damage.Max dummy
@@ -39,6 +41,11 @@
             scoreboard objectives add Mns.Poison.Timer.Max dummy
         # 毒効果ダメージ
             scoreboard objectives add Mns.Poison.Effect.Value dummy
+        # 爆破耐性値
+            scoreboard objectives add Mns.Bomb.Damage dummy
+            scoreboard objectives add Mns.Bomb.Damage.Max dummy
+        # 爆破効果ダメージ
+            scoreboard objectives add Mns.Bomb.Effect.Value dummy
         # 痺れ罠効果時間
             scoreboard objectives add Mns.ParalyseTrap.Timer dummy
             scoreboard objectives add Mns.ParalyseTrap.Timer.Max dummy

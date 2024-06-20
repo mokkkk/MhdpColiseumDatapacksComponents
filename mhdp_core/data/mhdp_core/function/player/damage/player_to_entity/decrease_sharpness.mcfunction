@@ -15,7 +15,7 @@
     data modify storage mhdp_core:temp Args.SharpnessArray set from storage mhdp_core:temp PlayerData.Item.UsingWeapon.components."minecraft:custom_data".Sharpness
 
 # デバッグ用
-    # tellraw @a [{"text": "【斬れ味： 前"},{"score":{"name":"#mhdp_temp_sharpness_current_test","objective":"MhdpCore"}},{"text": " → "},{"score":{"name":"#mhdp_temp_sharpness_current","objective":"MhdpCore"}},{"text": "】"}]
+    tellraw @a [{"text": "【斬れ味： 前"},{"score":{"name":"#mhdp_temp_sharpness_current_test","objective":"MhdpCore"}},{"text": " → "},{"score":{"name":"#mhdp_temp_sharpness_current","objective":"MhdpCore"}},{"text": "】"}]
 
 # 斬れ味色計算
     function mhdp_items:core/util/calc_sharpness_color

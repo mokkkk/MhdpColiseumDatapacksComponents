@@ -13,6 +13,7 @@
 #        storage mhdp_core:temp Damage.DragonAuraValue 龍気量
 #        storage mhdp_core:temp Damage.IsDecreseSharpness 斬れ味消費有無
 # @output
+#        score #mhdp_temp_target_part_id MhdpCore 攻撃を受けた部位Id
 #        score #mhdp_temp_damage_total MhdpCore 総ダメージ量
 #        score #mhdp_temp_damage_phys_type MhdpCore 物理ダメージ種別
 #        score #mhdp_temp_damage_phys_value MhdpCore 物理ダメージ量
@@ -26,8 +27,8 @@
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
 
 # 肉質取得
-    execute store result storage mhdp_core:temp Damage.TargetMonsterUid int 1 run scoreboard players get @e[type=slime,tag=Mns.HitBox,tag=Victim,limit=1] Mns.HitBox.MonsterUid
-    execute store result storage mhdp_core:temp Damage.TargetPartId int 1 run scoreboard players get @e[type=slime,tag=Mns.HitBox,tag=Victim,limit=1] Mns.HitBox.PartId
+    execute store result storage mhdp_core:temp Damage.TargetMonsterUid int 1 run scoreboard players get @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] Mns.HitBox.MonsterUid
+    execute store result storage mhdp_core:temp Damage.TargetPartId int 1 run scoreboard players get @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] Mns.HitBox.PartId
     function mhdp_core:player/damage/player_to_entity/macro/m.get_monster_defence with storage mhdp_core:temp Damage
     execute if data storage mhdp_core:temp Damage{AttackType:"Cut"} store result score #mhdp_temp_defence_phys MhdpCore run data get storage mhdp_core:temp Damage.Defence[0]
     execute if data storage mhdp_core:temp Damage{AttackType:"Blow"} store result score #mhdp_temp_defence_phys MhdpCore run data get storage mhdp_core:temp Damage.Defence[1]
@@ -121,10 +122,13 @@
         scoreboard players operation #mhdp_temp_damage_total MhdpCore += #mhdp_temp_damage_element_value MhdpCore
 
 # 演出
-    execute positioned as @e[type=slime,tag=Mns.HitBox,tag=Victim,limit=1] run function mhdp_core:player/damage/player_to_entity/vfx
+    execute positioned as @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] run function mhdp_core:player/damage/player_to_entity/vfx
 
 # 斬れ味消費
     execute if data storage mhdp_core:temp Damage{IsDecreseSharpness:true} run function mhdp_core:player/damage/player_to_entity/decrease_sharpness
+
+# モンスター側の被ダメージ処理に移行
+    function mhdp_monsters:core/switch/damage
 
 # 終了
     scoreboard players reset #mhdp_temp_attack_value MhdpCore
@@ -136,5 +140,5 @@
     scoreboard players reset #mhdp_temp_element_value_ice MhdpCore
     scoreboard players reset #mhdp_temp_element_value_dragon MhdpCore
     scoreboard players reset #mhdp_temp_element_attack_value MhdpCore
-
-# モンスター側の被ダメージ処理に移行
+    tag @e[tag=Temp.Victim] remove Temp.Victim
+    # data remove storage mhdp_core:temp Damage

@@ -32,6 +32,10 @@
     execute if score @s Wpn.AnimationTimer matches 17 positioned ^ ^2 ^ rotated ~ ~-30 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/particle
     execute if score @s Wpn.AnimationTimer matches 18 positioned ^ ^ ^0.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/particle
 
+# 攻撃
+    execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/attack_0
+    execute if score @s Wpn.GeneralTimer matches 19 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/attack_1
+
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 3 5 true
 
@@ -59,6 +63,3 @@
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 60.. run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/end
-
-# execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set @s Wpn.HitStopTimer 3
-# execute if score @s Wpn.GeneralTimer matches 19 run scoreboard players set @s Wpn.HitStopTimer 5
