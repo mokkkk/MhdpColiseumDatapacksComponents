@@ -18,6 +18,10 @@
     execute if score @s Wpn.AnimationTimer matches 4 unless block ~ ~-1 ~ #mhdp_core:no_collision rotated ~ 0 run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/effect_on_ground
     execute if score @s Wpn.AnimationTimer matches 1 positioned ^ ^2 ^ rotated ~ ~-30 run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/particle
     execute if score @s Wpn.AnimationTimer matches 2 positioned ^ ^ ^0.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/particle
+    execute if entity @s[tag=Ply.Weapon.HisStop] run tp @s @s
+    
+# 攻撃
+    execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/great_sword/type_normal/12_chargeattack_edge/attack
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 4 true

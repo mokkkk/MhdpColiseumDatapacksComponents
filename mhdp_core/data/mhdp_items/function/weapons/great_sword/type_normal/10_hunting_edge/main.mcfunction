@@ -18,11 +18,11 @@
     execute if score @s Wpn.AnimationTimer matches 1 positioned ^ ^2 ^ rotated ~ ~-30 run function mhdp_items:weapons/great_sword/type_normal/10_hunting_edge/particle
     execute if score @s Wpn.AnimationTimer matches 2 positioned ^ ^ ^0.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_normal/10_hunting_edge/particle
 
+# 攻撃
+    execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/great_sword/type_normal/10_hunting_edge/attack
+
 # 抜刀攻撃終了
     execute if score @s Wpn.GeneralTimer matches 5 run tag @s remove Ply.Flag.DrawAttack
-
-# TODO:いずれ消去 デバッグ・ヒット判定 
-    execute if score @s Wpn.GeneralTimer matches 5 run tag @s add Ply.Flag.Hit
 
 # 遷移
     # ヒットした場合、空中溜めに移行
