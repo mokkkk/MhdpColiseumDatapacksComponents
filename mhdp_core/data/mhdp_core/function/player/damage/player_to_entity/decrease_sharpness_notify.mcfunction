@@ -6,4 +6,5 @@
 
 # 通知
     tellraw @s {"text": "【武器の斬れ味が低下した！】"}
-    playsound entity.item.break master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
+    playsound entity.item.break master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    playsound entity.item.break master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1

@@ -20,14 +20,14 @@
     execute if score @s Wpn.AnimationTimer matches 2 positioned ^ ^ ^0.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_tec/2_chargeattack/particle
     execute if entity @s[tag=Ply.Weapon.HisStop] run tp @s @s
 
+# 攻撃
+    execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/great_sword/type_tec/12_chargeattack_edge/attack
+
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 4 true
 
 # 演出
    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.AnimationTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2
-
-# 抜刀攻撃終了
-    execute if score @s Wpn.GeneralTimer matches 5 run tag @s remove Ply.Flag.DrawAttack
 
 # 遷移
     # 右クリックを押した場合、溜めに移行
@@ -35,5 +35,3 @@
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/type_tec/12_chargeattack_edge/end
-
-# execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set @s Wpn.HitStopTimer 3

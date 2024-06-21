@@ -15,10 +15,10 @@
 
 # ヒットストップ
     execute if entity @e[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 7
-
+    execute if entity @e[tag=Temp.Victim] run tp @s @s
+    
 # 攻撃
-    execute if score @s Wpn.Gs.ChargeCount matches ..0 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.Super.0
-    execute if score @s Wpn.Gs.ChargeCount matches 1 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.Super.1
+    execute if score @s Wpn.Gs.ChargeCount matches ..1 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.Super.1
     execute if score @s Wpn.Gs.ChargeCount matches 2 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.Super.2
     execute if score @s Wpn.Gs.ChargeCount matches 3.. run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.Super.3
     execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main

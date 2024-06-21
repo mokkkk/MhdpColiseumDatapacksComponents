@@ -141,4 +141,4 @@
     scoreboard players reset #mhdp_temp_element_value_dragon MhdpCore
     scoreboard players reset #mhdp_temp_element_attack_value MhdpCore
     tag @e[tag=Temp.Victim] remove Temp.Victim
-    # data remove storage mhdp_core:temp Damage
+    data remove storage mhdp_core:temp Damage
