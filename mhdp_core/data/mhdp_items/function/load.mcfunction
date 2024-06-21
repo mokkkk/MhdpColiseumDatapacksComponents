@@ -53,6 +53,9 @@
         # 溜め斬り段階
             scoreboard objectives add Wpn.Gs.ChargeSlashCount dummy
 # 特殊装具ごとの特殊スコア
+    # 砥石
+        # 処理タイマー
+            scoreboard objectives add Itm.Whetstone.GeneralTimer dummy
     # 翔蟲
         # 処理タイマー
             scoreboard objectives add Itm.Wirebug.GeneralTimer dummy

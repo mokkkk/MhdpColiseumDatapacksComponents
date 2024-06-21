@@ -62,6 +62,8 @@
         #declare tag Skill.Stamina.ShortCharge.2 集中Lv2
     # 特殊
         #declare tag Skill.Extra.Handicraft 匠
+        #declare tag Skill.Extra.SpeedSharping.1 砥石高速化Lv1
+        #declare tag Skill.Extra.SpeedSharping.2 砥石高速化Lv2
 
 # 食事スキル
     #declare tag Skill.Food.Insurance ネコの生命保険
