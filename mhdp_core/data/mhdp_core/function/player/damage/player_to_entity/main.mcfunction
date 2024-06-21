@@ -28,7 +28,7 @@
 
 # 肉質取得
     execute store result storage mhdp_core:temp Damage.TargetMonsterUid int 1 run scoreboard players get @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] Mns.HitBox.MonsterUid
-    execute store result storage mhdp_core:temp Damage.TargetPartId int 1 run scoreboard players get @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] Mns.HitBox.PartId
+    execute store result storage mhdp_core:temp Damage.TargetPartId int 1 run scoreboard players get @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] Mns.Hitbox.PartId
     function mhdp_core:player/damage/player_to_entity/macro/m.get_monster_defence with storage mhdp_core:temp Damage
     execute if data storage mhdp_core:temp Damage{AttackType:"Cut"} store result score #mhdp_temp_defence_phys MhdpCore run data get storage mhdp_core:temp Damage.Defence[0]
     execute if data storage mhdp_core:temp Damage{AttackType:"Blow"} store result score #mhdp_temp_defence_phys MhdpCore run data get storage mhdp_core:temp Damage.Defence[1]
@@ -105,6 +105,8 @@
 # 実ダメージ量の計算
     # 物理
         # ダメージ * 肉質
+tellraw @a [{"text":"物理ダメージ（肉質適用前）:"},{"score":{"name":"#mhdp_temp_damage_phys_value","objective":"MhdpCore"}}]
+tellraw @a [{"text":"肉質適用:"},{"score":{"name":"#mhdp_temp_defence_phys","objective":"MhdpCore"}}]
             scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore *= #mhdp_temp_defence_phys MhdpCore
             execute store result score #mhdp_temp_damage_total MhdpCore store result score #mhdp_temp_damage_partdamage_value MhdpCore run scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore /= #const_100 Const
     # 部位ダメージ
@@ -120,6 +122,8 @@
         execute store result score #mhdp_temp_damage_dragonaura_value MhdpCore run data get storage mhdp_core:temp Damage.DragonAuraValue
     # 総ダメージ
         scoreboard players operation #mhdp_temp_damage_total MhdpCore += #mhdp_temp_damage_element_value MhdpCore
+
+    tellraw @a [{"text":"物理ダメージ（肉質適用前）:"},{"score":{"name":"#mhdp_temp_damage_phys_value","objective":"MhdpCore"}}]
 
 # 演出
     execute positioned as @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] run function mhdp_core:player/damage/player_to_entity/vfx

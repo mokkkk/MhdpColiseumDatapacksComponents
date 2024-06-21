@@ -56,8 +56,8 @@
     data modify storage mhdp_core:monster_data DefenceData append value {\
         Uid:1001,\
         Defences:[\
-            [100,100,100,100,100,100,100,100],\
-            [100,100,100,100,100,100,100,100]\
+            [60,60,45,30,30,30,30,30],\
+            [30,30,25,30,30,30,30,30]\
         ]\
     }
 

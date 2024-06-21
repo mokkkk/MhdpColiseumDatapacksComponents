@@ -15,7 +15,7 @@
     execute if entity @s[tag=Ply.Temp.IsCrit,tag=Skill.Attack.Status.CritBoost.1] run scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore *= #const_crit_multiply_lv1 Const
     execute if entity @s[tag=Ply.Temp.IsCrit,tag=Skill.Attack.Status.CritBoost.2] run scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore *= #const_crit_multiply_lv2 Const
     execute if entity @s[tag=Ply.Temp.IsCrit,tag=Skill.Attack.Status.CritBoost.3] run scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore *= #const_crit_multiply_lv3 Const
-    scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore /= #const_100 Const
+    execute if entity @s[tag=Ply.Temp.IsCrit] run scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore /= #const_100 Const
 
 # 属性会心
     execute if entity @s[tag=Ply.Temp.IsCrit,tag=Skill.Attack.Status.CritBoost.Element] run scoreboard players operation #mhdp_temp_damage_element_value MhdpCore *= #const_crit_multiply_element Const
