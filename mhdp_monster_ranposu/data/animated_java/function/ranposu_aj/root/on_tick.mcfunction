@@ -26,10 +26,9 @@ execute if entity @s[tag=aj.ranposu_aj.animation.damage_flying.playing] run func
 execute if entity @s[tag=aj.ranposu_aj.animation.death.playing] run function animated_java:ranposu_aj/animations/death/zzz/on_tick
 execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/1 with entity @s data.locators.body_1
 execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/3 with entity @s data.locators.body_0
-execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/5 with entity @s data.locators.pos_head
-execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/7 with entity @s data.locators.head_0
-execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/9 with entity @s data.locators.tail_0
-execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/11 with entity @s data.locators.tail_1
-execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/13 with entity @s data.locators.shadow
+execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/5 with entity @s data.locators.head_0
+execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/7 with entity @s data.locators.tail_0
+execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/9 with entity @s data.locators.tail_1
+execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/11 with entity @s data.locators.shadow
 execute at @s on passengers run tp @s ~ ~ ~ ~ ~
 function #animated_java:ranposu_aj/as_root/post_tick

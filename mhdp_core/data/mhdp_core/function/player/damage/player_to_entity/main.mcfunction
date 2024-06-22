@@ -105,8 +105,6 @@
 # 実ダメージ量の計算
     # 物理
         # ダメージ * 肉質
-tellraw @a [{"text":"物理ダメージ（肉質適用前）:"},{"score":{"name":"#mhdp_temp_damage_phys_value","objective":"MhdpCore"}}]
-tellraw @a [{"text":"肉質適用:"},{"score":{"name":"#mhdp_temp_defence_phys","objective":"MhdpCore"}}]
             scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore *= #mhdp_temp_defence_phys MhdpCore
             execute store result score #mhdp_temp_damage_total MhdpCore store result score #mhdp_temp_damage_partdamage_value MhdpCore run scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore /= #const_100 Const
     # 部位ダメージ
@@ -123,7 +121,9 @@ tellraw @a [{"text":"肉質適用:"},{"score":{"name":"#mhdp_temp_defence_phys",
     # 総ダメージ
         scoreboard players operation #mhdp_temp_damage_total MhdpCore += #mhdp_temp_damage_element_value MhdpCore
 
-    tellraw @a [{"text":"物理ダメージ（肉質適用前）:"},{"score":{"name":"#mhdp_temp_damage_phys_value","objective":"MhdpCore"}}]
+    tellraw @a [{"text":"物理ダメージ:"},{"score":{"name":"#mhdp_temp_damage_phys_value","objective":"MhdpCore"}}]
+    tellraw @a [{"text":"属性ダメージ:"},{"score":{"name":"#mhdp_temp_damage_element_value","objective":"MhdpCore"}}]
+    tellraw @a [{"text":"ダメージ合計:"},{"score":{"name":"#mhdp_temp_damage_total","objective":"MhdpCore"}}]
 
 # 演出
     execute positioned as @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] run function mhdp_core:player/damage/player_to_entity/vfx

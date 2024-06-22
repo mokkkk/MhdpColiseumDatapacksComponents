@@ -2,11 +2,4 @@
 tag @s remove aj.new
 function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
 execute as @e[type=item_display,tag=aj.new,limit=1,distance=..0.01] on passengers if entity @s[tag=aj.data] run function animated_java:ranposu_aj/zzz/12
-data merge entity @s {Size:1,NoGravity:1b,Silent:1b,DeathLootTable:"minecraft:empty",PersistenceRequired:1b,NoAI:1b,Health:1000f,wasOnGround:0b,Attributes:[{Name:"generic.knockback_resistance",Base:1},{Name:"generic.max_health",Base:1000}]}
-effect give @s invisibility infinite 2 true
-effect give @s fire_resistance infinite 2 true
-scoreboard players operation @s Mns.HitBox.MonsterUid = #mhdp_temp_monster_uid Mns.Uid
-tag @s add Mns.HitBox
-tag @s add Mns.HitBox.Ranposu
-tag @s add Mns.HitBox.Ranposu.Body
-scoreboard players set @s Mns.Hitbox.PartId 1
+data merge entity @s {shadow_radius:1.2f}

@@ -52,12 +52,13 @@
 
 # 肉質データ
 # 切断,打撃,弾,火,水,雷,氷,龍
+# 頭, 胴
     execute if data storage mhdp_core:monster_data DefenceData[{Uid:1001}] run data remove storage mhdp_core:monster_data DefenceData[{Uid:1001}]
     data modify storage mhdp_core:monster_data DefenceData append value {\
         Uid:1001,\
         Defences:[\
-            [60,60,45,30,30,30,30,30],\
-            [30,30,25,30,30,30,30,30]\
+            [60,70,50,30,30,30,30,10],\
+            [50,45,35,30,30,30,30,10]\
         ]\
     }
 
