@@ -17,4 +17,4 @@
     function mhdp_core:phase/tick
 
 # 特殊Entityの個別処理
-    execute as @e[type=text_display,tag=Other.Text.Damage] at @s run function mhdp_core:other_entity/damage_text_tick
+    execute as @e[type=text_display,tag=Other.Text.Vfx] at @s run function mhdp_core:other_entity/vfx/tick

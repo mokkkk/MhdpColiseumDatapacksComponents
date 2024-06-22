@@ -17,6 +17,7 @@
 
 # 攻撃
     data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.2
+    data modify storage mhdp_core:temp Arg.VfxRotation set value 0
     execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
 # 終了

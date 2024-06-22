@@ -14,18 +14,20 @@
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 run playsound minecraft:entity.player.attack.crit master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.8
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 run playsound minecraft:entity.player.attack.weak master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
 
-# パーティクル
+# 属性パーティクル
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run particle block{block_state:"minecraft:red_wool"} ^ ^ ^ 0.1 0.1 0.1 0.5 15 normal
-    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run particle dust_pillar{block_state:"minecraft:red_wool"} ^ ^ ^ 0.2 0.1 0.2 0.2 15 normal
-    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 if score #mhdp_temp_defence_phys MhdpCore matches 45.. run particle dust_pillar{block_state:"minecraft:red_wool"} ^ ^ ^ 0.2 0.1 0.2 0.5 35 normal
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 if score #mhdp_temp_defence_phys MhdpCore matches 45.. run particle dust_pillar{block_state:"minecraft:red_wool"} ^ ^ ^ 0.2 0.1 0.2 0.5 15 normal
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run particle minecraft:firework ~ ~ ~ 0 0 0 0.08 10
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run particle minecraft:firework ~ ~ ~ 0 0 0 0.3 10
-    execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 0 run particle enchanted_hit ~ ~ ~ 0.1 0.1 0.1 1 50
+    # execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 0 run particle enchanted_hit ~ ~ ~ 0.1 0.1 0.1 1 50
     execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 1 run particle flame ~ ~ ~ 0.2 0.2 0.2 0.05 10
     execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 2 run particle rain ~ ~ ~ 0.2 0.2 0.2 0.15 20
     execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 3 run particle electric_spark ~ ~ ~ 0.2 0.2 0.2 0.15 10
     execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 4 run particle snowflake ~ ~ ~ 0.2 0.2 0.2 0.05 10 normal
     execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 5 run particle dust_color_transition{from_color:[0.322,0.000,0.000],scale:1.5,to_color:[1.000,0.361,0.361]} ~ ~ ~ 0.3 0.3 0.3 0.15 10
+
+# ヒットエフェクト
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 at @s positioned ~ ~1.65 ~ positioned ^ ^ ^2.5 run function mhdp_core:player/damage/player_to_entity/macro/m.summon_slash_effect with storage mhdp_core:temp Arg
 
 # ダメージ表示
     execute if score #mhdp_temp_defence_phys MhdpCore matches ..44 run data modify storage mhdp_core:temp Arg.Color set value "white"

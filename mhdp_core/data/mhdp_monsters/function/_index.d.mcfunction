@@ -21,11 +21,15 @@
     #declare tag Mns.Param.IsParalyseTrapEnable.Temp 現時点で痺れ罠が有効かどうか
     #declare tag Mns.Param.IsHallTrapEnable 落とし穴有効共通タグ
     #declare tag Mns.Param.IsHallTrapEnable.Temp 現時点で落とし穴が有効かどうか
-# モンスター関連
+# モンスター関連・共通
     #declare tag Mns.Root モンスターのRootエンティティ共通タグ
 # モンスター関連・一時
     #declare tag Mns.Temp.IsIdleAnimation 待機アニメーションを再生する
     #declare tag Mns.Temp.IsSummonAnimation 登場アニメーションを再生する
+# モンスター関連・状態
+    #declare tag Mns.State.IsDown ダウン中
+    #declare tag Mns.State.IsStun スタン中
+    #declare tag Mns.State.IsTrap 罠効果時間中
 # 当たり判定関連(Slime)
     #declare tag Mns.HitBox モンスターの当たり判定の共通タグ
     #declare tag Mns.HitBox.Init 初期化処理済みの当たり判定

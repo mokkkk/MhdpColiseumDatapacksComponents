@@ -107,5 +107,7 @@
         #declare tag Other.Text.Bell クエスト出発ベルの説明文
         #declare tag Other.Text.Board クエスト参加用クエストボードの説明文
         #declare tag Other.Text.Damage ダメージ表示
+        #declare tag Other.Text.Vfx エフェクト表示用共通のテキストディスプレイ
+        #declare tag Other.Text.Vfx.Slash 斬撃エフェクト
     # 一時
         #declare tag Other.Temp.Right 左右確認に一時的に使用、必ず同function内でリセットする

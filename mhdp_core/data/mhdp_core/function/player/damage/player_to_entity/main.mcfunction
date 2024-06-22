@@ -12,6 +12,7 @@
 #        storage mhdp_core:temp Damage.TireValue 減気量
 #        storage mhdp_core:temp Damage.DragonAuraValue 龍気量
 #        storage mhdp_core:temp Damage.IsDecreseSharpness 斬れ味消費有無
+#        storage mhdp_core:temp Arg.VfxRotation エフェクトのz軸角度
 # @output
 #        score #mhdp_temp_target_part_id MhdpCore 攻撃を受けた部位Id
 #        score #mhdp_temp_damage_total MhdpCore 総ダメージ量
@@ -36,6 +37,7 @@
     execute if data storage mhdp_core:temp Damage{AttackType:"Cut"} run scoreboard players set #mhdp_temp_damage_phys_type MhdpCore 0
     execute if data storage mhdp_core:temp Damage{AttackType:"Blow"} run scoreboard players set #mhdp_temp_damage_phys_type MhdpCore 1
     execute if data storage mhdp_core:temp Damage{AttackType:"Shot"} run scoreboard players set #mhdp_temp_damage_phys_type MhdpCore 2
+    execute if data storage mhdp_core:temp Damage{AttackType:"Bomb"} run scoreboard players set #mhdp_temp_defence_phys MhdpCore 100
 
 # ダメージ計算用値初期値
     # 攻撃力
