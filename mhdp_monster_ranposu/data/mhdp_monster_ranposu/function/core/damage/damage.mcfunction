@@ -20,4 +20,10 @@
 # 共通ステータスの減算
     function mhdp_monsters:core/util/damage/damage_common_data
 
+# 部位ダメージの減算
+    # 頭
+        execute if score #mhdp_temp_target_part_id MhdpCore matches 0 run scoreboard players operation @s Mns.Ranposu.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+    # 胴
+        execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run scoreboard players operation @s Mns.Ranposu.Body.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+
 say 青鳥竜被ダメージ

@@ -19,7 +19,6 @@
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 if score #mhdp_temp_defence_phys MhdpCore matches 45.. run particle dust_pillar{block_state:"minecraft:red_wool"} ^ ^ ^ 0.2 0.1 0.2 0.5 15 normal
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run particle minecraft:firework ~ ~ ~ 0 0 0 0.08 10
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run particle minecraft:firework ~ ~ ~ 0 0 0 0.3 10
-    # execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 0 run particle enchanted_hit ~ ~ ~ 0.1 0.1 0.1 1 50
     execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 1 run particle flame ~ ~ ~ 0.2 0.2 0.2 0.05 10
     execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 2 run particle rain ~ ~ ~ 0.2 0.2 0.2 0.15 20
     execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 3 run particle electric_spark ~ ~ ~ 0.2 0.2 0.2 0.15 10

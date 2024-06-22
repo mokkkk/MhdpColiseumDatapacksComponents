@@ -19,6 +19,11 @@
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
 
 # HP
+    scoreboard players operation @s Mns.Hp -= #mhdp_temp_damage_total MhdpCore
+    scoreboard players operation @s Mns.Hp.Half -= #mhdp_temp_damage_total MhdpCore
+
+# 怒り
+    execute if entity @s[tag=!Mns.State.IsStun] run scoreboard players operation @s Mns.Stun.Damage -= #mhdp_temp_damage_stun_value MhdpCore
 
 # 状態異常
     execute if entity @s[tag=Mns.Param.IsPoisonEnable] run scoreboard players operation @s Mns.Poison.Damage -= #mhdp_temp_condition_value_poison MhdpCore
@@ -29,5 +34,7 @@
     execute if entity @s[tag=!Mns.State.IsStun] run scoreboard players operation @s Mns.Stun.Damage -= #mhdp_temp_damage_stun_value MhdpCore
 
 # 減気
+    execute if entity @s[tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run scoreboard players operation @s Mns.Tire.Damage -= #mhdp_temp_damage_tire_value MhdpCore
 
 # 龍気
+    # scoreboard players operation @s Mns.XXX -= #mhdp_temp_damage_dragonaura_value MhdpCore

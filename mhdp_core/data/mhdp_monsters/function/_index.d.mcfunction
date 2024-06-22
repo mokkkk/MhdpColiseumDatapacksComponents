@@ -14,25 +14,27 @@
     #declare tag Mns.Param.IsPoisonEnable 毒有効
     #declare tag Mns.Param.IsBombEnable 爆破有効
     #declare tag Mns.Param.IsFlashBombEnable 閃光玉有効共通タグ
-    #declare tag Mns.Param.IsFlashBombEnable.Temp 現時点で閃光玉が有効かどうか
     #declare tag Mns.Param.IsSoundBombEnable 音爆弾有効共通タグ
-    #declare tag Mns.Param.IsSoundBombEnable.Temp 現時点で音爆弾が有効かどうか
     #declare tag Mns.Param.IsParalyseTrapEnable 痺れ罠有効共通タグ
-    #declare tag Mns.Param.IsParalyseTrapEnable.Temp 現時点で痺れ罠が有効かどうか
     #declare tag Mns.Param.IsHallTrapEnable 落とし穴有効共通タグ
-    #declare tag Mns.Param.IsHallTrapEnable.Temp 現時点で落とし穴が有効かどうか
 # モンスター関連・共通
     #declare tag Mns.Root モンスターのRootエンティティ共通タグ
 # モンスター関連・一時
     #declare tag Mns.Temp.IsIdleAnimation 待機アニメーションを再生する
     #declare tag Mns.Temp.IsSummonAnimation 登場アニメーションを再生する
 # モンスター関連・状態
+    #declare tag Mns.State.IsAnger 怒り中
     #declare tag Mns.State.IsDown ダウン中
     #declare tag Mns.State.IsStun スタン中
     #declare tag Mns.State.IsTrap 罠効果時間中
+    #declare tag Mns.State.IsDisableFlashBomb 一時的に閃光玉無効
+    #declare tag Mns.State.IsDisableSoundBomb 一時的に音爆弾無効
+    #declare tag Mns.State.IsDisableParalyseTrap 一時的に痺れ罠無効
+    #declare tag Mns.State.IsDisableHallTrap 一時的に落とし穴無効
 # 当たり判定関連(Slime)
     #declare tag Mns.HitBox モンスターの当たり判定の共通タグ
     #declare tag Mns.HitBox.Init 初期化処理済みの当たり判定
+    #declare tag Mns.HitBox.Head 頭部の当たり判定
 
 ## score_holder
     #declare score_holder #mhdp_temp_player_count クエスト参加プレイヤー数
