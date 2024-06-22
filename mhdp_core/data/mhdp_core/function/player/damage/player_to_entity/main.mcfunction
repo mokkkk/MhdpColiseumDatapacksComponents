@@ -12,7 +12,8 @@
 #        storage mhdp_core:temp Damage.TireValue 減気量
 #        storage mhdp_core:temp Damage.DragonAuraValue 龍気量
 #        storage mhdp_core:temp Damage.IsDecreseSharpness 斬れ味消費有無
-#        storage mhdp_core:temp Arg.VfxRotation エフェクトのz軸角度
+#        storage mhdp_core:temp Damage.IsShowVfx エフェクト表示有無
+#        storage mhdp_core:temp Damage.VfxRotation エフェクトのz軸角度
 # @output
 #        score #mhdp_temp_target_part_id MhdpCore 攻撃を受けた部位Id
 #        score #mhdp_temp_damage_total MhdpCore 総ダメージ量
