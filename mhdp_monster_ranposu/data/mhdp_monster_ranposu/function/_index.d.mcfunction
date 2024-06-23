@@ -11,4 +11,7 @@
     #declare tag Mns.HitBox.Ranposu 青鳥竜当たり判定スライム
     #declare tag Mns.HitBox.Ranposu.Head 頭
     #declare tag Mns.HitBox.Ranposu.Body 胴
+# 一時
+    #declare tag Mns.Temp.Damage.Head 頭怯み
+    #declare tag Mns.Temp.Damage.Body 胴怯み
 # アニメーション

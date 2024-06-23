@@ -113,7 +113,7 @@
     # 部位ダメージ
         # ダメージ * 部位ダメージ倍率
             execute store result score #mhdp_temp_attack_value MhdpCore run data get storage mhdp_core:temp Damage.PartDamageMult
-            scoreboard players operation #mhdp_temp_damage_partdamage_value MhdpCore /= #mhdp_temp_attack_value MhdpCore
+            scoreboard players operation #mhdp_temp_damage_partdamage_value MhdpCore *= #mhdp_temp_attack_value MhdpCore
             scoreboard players operation #mhdp_temp_damage_partdamage_value MhdpCore /= #const_100 Const
     # スタン
         execute store result score #mhdp_temp_damage_stun_value MhdpCore run data get storage mhdp_core:temp Damage.StunValue

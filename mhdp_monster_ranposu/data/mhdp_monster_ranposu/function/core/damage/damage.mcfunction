@@ -23,7 +23,28 @@
 # 部位ダメージの減算
     # 頭
         execute if score #mhdp_temp_target_part_id MhdpCore matches 0 run scoreboard players operation @s Mns.Ranposu.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if score @s Mns.Anger.Damage matches ..0 run tag @s add Mns.Temp.Damage.Anger
     # 胴
         execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run scoreboard players operation @s Mns.Ranposu.Body.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+
+# 以下の優先度で怯みを適用
+    # 麻痺
+        execute if entity @s[tag=Mns.Temp.Damage.Paralysis,tag=!Mns.Temp.IsDamaged]
+    # 大ダウン(独自)
+    # 頭(独自)
+    # 胴(独自)
+    # 減気
+
+# 状態異常の発動
+    # 毒
+    # 爆破
+
+# ボスバー更新
+    execute store result bossbar mhdp_monster:ranposu value run scoreboard players get @s Mns.Hp
+
+# 終了
+    function mhdp_monsters:core/util/damage/remove_tags
+    tag @s remove Mns.Temp.Damage.Head
+    tag @s remove Mns.Temp.Damage.Body
 
 say 青鳥竜被ダメージ

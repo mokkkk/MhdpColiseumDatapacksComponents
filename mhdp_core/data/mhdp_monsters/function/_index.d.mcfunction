@@ -19,14 +19,26 @@
     #declare tag Mns.Param.IsHallTrapEnable 落とし穴有効共通タグ
 # モンスター関連・共通
     #declare tag Mns.Root モンスターのRootエンティティ共通タグ
+    #declare tag Mns.HpHalf Hp半減の処理実行済み
 # モンスター関連・一時
     #declare tag Mns.Temp.IsIdleAnimation 待機アニメーションを再生する
     #declare tag Mns.Temp.IsSummonAnimation 登場アニメーションを再生する
+    #declare tag Mns.Temp.IsDamaged 怯み適用済みフラグ
+    #declare tag Mns.Temp.Damage.Anger 怒り発動フラグ
+    #declare tag Mns.Temp.Damage.Poison 毒発動フラグ
+    #declare tag Mns.Temp.Damage.Paralysis 麻痺発動フラグ
+    #declare tag Mns.Temp.Damage.Bomb 爆破発動フラグ
+    #declare tag Mns.Temp.Damage.Stun スタン発動フラグ
+    #declare tag Mns.Temp.Damage.Tire 疲労発動フラグ
+    #declare tag Mns.Temp.Damage.DragonAura 龍気満タン
 # モンスター関連・状態
     #declare tag Mns.State.IsAnger 怒り中
     #declare tag Mns.State.IsDown ダウン中
     #declare tag Mns.State.IsStun スタン中
-    #declare tag Mns.State.IsTrap 罠効果時間中
+    #declare tag Mns.State.IsPoison 毒効果時間中
+    #declare tag Mns.State.IsParalysis 麻痺効果時間中
+    #declare tag Mns.State.IsTrap.Paralysis 痺れ罠効果時間中
+    #declare tag Mns.State.IsTrap.Hall 落とし穴効果時間中
     #declare tag Mns.State.IsDisableFlashBomb 一時的に閃光玉無効
     #declare tag Mns.State.IsDisableSoundBomb 一時的に音爆弾無効
     #declare tag Mns.State.IsDisableParalyseTrap 一時的に痺れ罠無効
@@ -34,7 +46,7 @@
 # 当たり判定関連(Slime)
     #declare tag Mns.HitBox モンスターの当たり判定の共通タグ
     #declare tag Mns.HitBox.Init 初期化処理済みの当たり判定
-    #declare tag Mns.HitBox.Head 頭部の当たり判定
+    #declare tag Mns.HitBox.Head 頭部の当たり判定、スタンや減気の判定に使用
 
 ## score_holder
     #declare score_holder #mhdp_temp_player_count クエスト参加プレイヤー数

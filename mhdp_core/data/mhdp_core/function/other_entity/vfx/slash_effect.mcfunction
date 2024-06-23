@@ -16,9 +16,6 @@
     execute if entity @s[tag=!Other.Text.Vfx.Strong] if score @s MhdpCore matches 6 run data modify entity @s text set value '{"text":"6","font":"vfx/slash"}'
     execute if entity @s[tag=!Other.Text.Vfx.Strong] if score @s MhdpCore matches 7 run data modify entity @s text set value '{"text":"7","font":"vfx/slash"}'
     execute if entity @s[tag=!Other.Text.Vfx.Strong] if score @s MhdpCore matches 8 run data modify entity @s text set value '{"text":"8","font":"vfx/slash"}'
-    execute if entity @s[tag=!Other.Text.Vfx.Strong] if score @s MhdpCore matches 9 run data modify entity @s text set value '{"text":"9","font":"vfx/slash"}'
-    execute if entity @s[tag=!Other.Text.Vfx.Strong] if score @s MhdpCore matches 10 run data modify entity @s text set value '{"text":"a","font":"vfx/slash"}'
-    execute if entity @s[tag=!Other.Text.Vfx.Strong] if score @s MhdpCore matches 11 run data modify entity @s text set value '{"text":"b","font":"vfx/slash"}'
     execute if entity @s[tag=Other.Text.Vfx.Strong] if score @s MhdpCore matches 1 run data modify entity @s text set value '{"text":"1","font":"vfx/slash_strong"}'
     execute if entity @s[tag=Other.Text.Vfx.Strong] if score @s MhdpCore matches 2 run data modify entity @s text set value '{"text":"2","font":"vfx/slash_strong"}'
     execute if entity @s[tag=Other.Text.Vfx.Strong] if score @s MhdpCore matches 3 run data modify entity @s text set value '{"text":"3","font":"vfx/slash_strong"}'
@@ -27,9 +24,6 @@
     execute if entity @s[tag=Other.Text.Vfx.Strong] if score @s MhdpCore matches 6 run data modify entity @s text set value '{"text":"6","font":"vfx/slash_strong"}'
     execute if entity @s[tag=Other.Text.Vfx.Strong] if score @s MhdpCore matches 7 run data modify entity @s text set value '{"text":"7","font":"vfx/slash_strong"}'
     execute if entity @s[tag=Other.Text.Vfx.Strong] if score @s MhdpCore matches 8 run data modify entity @s text set value '{"text":"8","font":"vfx/slash_strong"}'
-    execute if entity @s[tag=Other.Text.Vfx.Strong] if score @s MhdpCore matches 9 run data modify entity @s text set value '{"text":"9","font":"vfx/slash_strong"}'
-    execute if entity @s[tag=Other.Text.Vfx.Strong] if score @s MhdpCore matches 10 run data modify entity @s text set value '{"text":"a","font":"vfx/slash_strong"}'
-    execute if entity @s[tag=Other.Text.Vfx.Strong] if score @s MhdpCore matches 11 run data modify entity @s text set value '{"text":"b","font":"vfx/slash_strong"}'
 
 # 終了
-    execute if score @s MhdpCore matches 11.. run kill @s
+    execute if score @s MhdpCore matches 8.. run kill @s
