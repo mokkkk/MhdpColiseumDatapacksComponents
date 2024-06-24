@@ -23,14 +23,22 @@
 # 部位ダメージの減算
     # 頭
         execute if score #mhdp_temp_target_part_id MhdpCore matches 0 run scoreboard players operation @s Mns.Ranposu.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if score @s Mns.Anger.Damage matches ..0 run tag @s add Mns.Temp.Damage.Anger
+        execute if score @s Mns.Ranposu.Head.Damage matches ..0 run tag @s add Mns.Temp.Damage.Head
     # 胴
         execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run scoreboard players operation @s Mns.Ranposu.Body.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if score @s Mns.Ranposu.Body.Damage matches ..0 run tag @s add Mns.Temp.Damage.Body
+
+# ダウン回数の計算
+    execute if entity @s[tag=Mns.Temp.Damage.Head] run scoreboard players add @s Mns.Ranposu.DamageCount 1
+    execute if entity @s[tag=Mns.Temp.Damage.Body] run scoreboard players add @s Mns.Ranposu.DamageCount 1
 
 # 以下の優先度で怯みを適用
     # 麻痺
         execute if entity @s[tag=Mns.Temp.Damage.Paralysis,tag=!Mns.Temp.IsDamaged]
     # 大ダウン(独自)
+        # TODO: 大ダウン処理内で、頭と胴の怯み判定タグを消去する
+        execute if score @s Mns.Ranposu.DamageCount matches 2..
+    # スタン
     # 頭(独自)
     # 胴(独自)
     # 減気
@@ -38,6 +46,7 @@
 # 状態異常の発動
     # 毒
     # 爆破
+    # 龍気
 
 # ボスバー更新
     execute store result bossbar mhdp_monster:ranposu value run scoreboard players get @s Mns.Hp

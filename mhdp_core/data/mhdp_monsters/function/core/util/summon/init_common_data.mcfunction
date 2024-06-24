@@ -99,6 +99,10 @@
         # 基礎値取得
             execute store result score @s Mns.Bomb.Effect.Value run data get storage mhdp_core:temp TargetMonsterData.BombEffectDamage
 
+# 龍気
+    # 耐性値
+        execute store result score @s Mns.DragonAura.Damage store result score @s Mns.DragonAura.Damage.Max run scoreboard players get #const_dragonaura_damage_initial_value Const
+
 # その他
     # ハードコア
         execute if data storage mhdp_core:game_data {IsHardcore:true} run tag @s add Mns.Param.IsHardcore

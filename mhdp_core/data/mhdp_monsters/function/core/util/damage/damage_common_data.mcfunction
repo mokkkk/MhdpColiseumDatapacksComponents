@@ -45,5 +45,5 @@
     execute if score @s Mns.Tire.Damage matches ..0 run tag @s add Mns.Temp.Damage.Tire
 
 # 龍気
-    # scoreboard players operation @s Mns.XXX.Damage -= #mhdp_temp_damage_dragonaura_value MhdpCore
-    # execute if score @s Mns.XXX.Damage matches ..0 run tag @s add Mns.Temp.Damage.DragonAura
+    scoreboard players operation @s Mns.DragonAura.Damage -= #mhdp_temp_damage_dragonaura_value MhdpCore
+    execute if score @s Mns.DragonAura.Damage matches ..0 run tag @s add Mns.Temp.Damage.DragonAura

@@ -17,3 +17,5 @@
 
 # 終了
     data remove storage mhdp_core:temp Arg
+
+say モンスターHP半減

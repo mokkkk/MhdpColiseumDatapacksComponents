@@ -33,8 +33,10 @@
         scoreboard players reset #mhdp_temp_vfx_offset MhdpCore
     # Z軸回転取得
         data modify storage mhdp_core:temp Arg.VfxRotation set from storage mhdp_core:temp Damage.VfxRotation
+    # 位置オフセット取得
+        function mhdp_core:player/damage/player_to_entity/vfx_calc_offset
     # 表示
-        execute if data storage mhdp_core:temp Damage{IsShowVfx:true} if score #mhdp_temp_damage_phys_type MhdpCore matches 0 at @s positioned ~ ~1.65 ~ positioned ^ ^ ^2.5 run function mhdp_core:player/damage/player_to_entity/macro/m.summon_slash_effect with storage mhdp_core:temp Arg
+        execute if data storage mhdp_core:temp Damage{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function mhdp_core:player/damage/player_to_entity/macro/m.summon_slash_effect with storage mhdp_core:temp Arg
 
 # ダメージ表示
     execute if score #mhdp_temp_defence_phys MhdpCore matches ..44 run data modify storage mhdp_core:temp Arg.Color set value "white"

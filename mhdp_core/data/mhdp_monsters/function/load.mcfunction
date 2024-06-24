@@ -46,6 +46,9 @@
             scoreboard objectives add Mns.Bomb.Damage.Max dummy
         # 爆破効果ダメージ
             scoreboard objectives add Mns.Bomb.Effect.Value dummy
+        # 龍気耐性値
+            scoreboard objectives add Mns.DragonAura.Damage dummy
+            scoreboard objectives add Mns.DragonAura.Damage.Max dummy
         # 痺れ罠効果時間
             scoreboard objectives add Mns.ParalyseTrap.Timer dummy
             scoreboard objectives add Mns.ParalyseTrap.Timer.Max dummy
@@ -75,15 +78,21 @@
 # 定数
     # プレイヤー数に対するHP倍率
         scoreboard players set #const_hp_playercount_multiply Const 40
-    # スタン耐性上昇割合
-        scoreboard players set #const_stun_damage_multiply Const 160
-    # 減気耐性上昇割合
-        scoreboard players set #const_tire_damage_multiply Const 180
-    # 麻痺耐性上昇割合
-        scoreboard players set #const_paralysis_damage_multiply Const 180
-    # 毒耐性上昇割合
-        scoreboard players set #const_poison_damage_multiply Const 180
-    # 痺れ罠効果時間減少割合
-        scoreboard players set #const_paralyse_trap_time_multiply Const 70
-    # 落とし穴効果時間減少割合
-        scoreboard players set #const_hall_trap_time_multiply Const 70
+    # 耐性初期値
+        # 龍気耐性
+            scoreboard players set #const_dragonaura_damage_initial_value Const 3000
+    # 耐性上昇割合
+        # スタン耐性上昇割合
+            scoreboard players set #const_stun_damage_multiply Const 180
+        # 減気耐性上昇割合
+            scoreboard players set #const_tire_damage_multiply Const 180
+        # 麻痺耐性上昇割合
+            scoreboard players set #const_paralysis_damage_multiply Const 180
+        # 毒耐性上昇割合
+            scoreboard players set #const_poison_damage_multiply Const 160
+        # 龍気耐性上昇割合
+            scoreboard players set #const_dragonaura_damage_multiply Const 180
+        # 痺れ罠効果時間減少割合
+            scoreboard players set #const_paralyse_trap_time_multiply Const 70
+        # 落とし穴効果時間減少割合
+            scoreboard players set #const_hall_trap_time_multiply Const 70
