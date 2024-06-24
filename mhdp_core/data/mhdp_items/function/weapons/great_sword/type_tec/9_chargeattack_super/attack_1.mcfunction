@@ -16,6 +16,7 @@
 # ヒットストップ
     execute if entity @e[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 7
     execute if entity @e[tag=Temp.Victim] run tp @s @s
+    tag @s remove Ply.Flag.Hit
     
 # 攻撃
     execute if score @s Wpn.Gs.ChargeCount matches ..1 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.Super.1

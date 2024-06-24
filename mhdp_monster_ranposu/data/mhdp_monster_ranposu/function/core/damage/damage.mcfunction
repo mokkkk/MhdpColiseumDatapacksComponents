@@ -34,7 +34,7 @@
     # スタン
         execute if entity @s[tag=Mns.Temp.Damage.Stun]
     # 減気
-        execute if entity @s[tag=Mns.Temp.Damage.Tire,tag=!Mns.Temp.IsDamaged]
+        execute if entity @s[tag=Mns.Temp.Damage.Tire]
     # 大ダウン(独自)
         execute if score @s Mns.Ranposu.DamageCount matches 2.. run function mhdp_monster_ranposu:core/damage/reaction/sp
     # 頭(独自)
@@ -44,11 +44,14 @@
 
 # 状態異常の発動
     # 毒
+        execute if entity @s[tag=Mns.Temp.Damage.Poison]
     # 爆破
+        execute if entity @s[tag=Mns.Temp.Damage.Bomb]
     # 龍気
+        execute if entity @s[tag=Mns.Temp.Damage.DragonAura]
 
 # ボスバー更新
-    execute store result bossbar mhdp_monster:ranposu value run scoreboard players get @s Mns.Hp
+    execute if entity @s[tag=!Mns.Param.IsHideHp] store result bossbar mhdp_monster:ranposu value run scoreboard players get @s Mns.Hp
 
 # 終了
     function mhdp_monsters:core/util/damage/remove_tags

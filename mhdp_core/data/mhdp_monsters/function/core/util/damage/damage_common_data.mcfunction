@@ -32,8 +32,8 @@
     execute if entity @s[tag=Mns.Param.IsPoisonEnable] run scoreboard players operation @s Mns.Poison.Damage -= #mhdp_temp_condition_value_poison MhdpCore
     execute if entity @s[tag=Mns.Param.IsParalysisEnable,tag=!Mns.State.IsParalysis] run scoreboard players operation @s Mns.Paralysis.Damage -= #mhdp_temp_condition_value_paralysis MhdpCore
     execute if entity @s[tag=Mns.Param.IsBombEnable] run scoreboard players operation @s Mns.Bomb.Damage -= #mhdp_temp_condition_value_bomb MhdpCore
-    execute if score @s Mns.Poison.Damage matches ..0 run tag @s add Mns.Temp.Damage.Poison
-    execute if score @s Mns.Paralysis.Damage matches ..0 run tag @s add Mns.Temp.Damage.Paralysis
+    execute if entity @s[tag=!Mns.State.IsPoison] if score @s Mns.Poison.Damage matches ..0 run tag @s add Mns.Temp.Damage.Poison
+    execute if entity @s[tag=!Mns.State.IsParalysis] if score @s Mns.Paralysis.Damage matches ..0 run tag @s add Mns.Temp.Damage.Paralysis
     execute if score @s Mns.Bomb.Damage matches ..0 run tag @s add Mns.Temp.Damage.Bomb
 
 # スタン
@@ -41,7 +41,7 @@
     execute if score @s Mns.Stun.Damage matches ..0 run tag @s add Mns.Temp.Damage.Stun
 
 # 減気
-    execute if entity @s[tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run scoreboard players operation @s Mns.Tire.Damage -= #mhdp_temp_damage_tire_value MhdpCore
+    execute if entity @s[tag=!Mns.State.IsDown,tag=!Mns.State.IsStun,tag=!Mns.State.IsParalysis] run scoreboard players operation @s Mns.Tire.Damage -= #mhdp_temp_damage_tire_value MhdpCore
     execute if score @s Mns.Tire.Damage matches ..0 run tag @s add Mns.Temp.Damage.Tire
 
 # 龍気
