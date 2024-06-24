@@ -11,5 +11,8 @@
     scoreboard players operation #mhdp_temp_slime_size MhdpCore /= #const_2 Const
 
 # オフセット計算
-    execute store result storage mhdp_core:temp Arg.OffsetY float 0.00008 run scoreboard players get #mhdp_temp_slime_size MhdpCore
+    execute store result storage mhdp_core:temp Arg.OffsetY float 0.0001 run scoreboard players get #mhdp_temp_slime_size MhdpCore
     execute store result storage mhdp_core:temp Arg.OffsetZ float 0.0001 run scoreboard players get #mhdp_temp_slime_size MhdpCore
+
+# 終了
+    scoreboard players reset #mhdp_temp_slime_size MhdpCore

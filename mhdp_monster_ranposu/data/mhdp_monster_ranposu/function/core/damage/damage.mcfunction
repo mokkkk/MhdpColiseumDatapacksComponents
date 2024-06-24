@@ -28,20 +28,19 @@
         execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run scoreboard players operation @s Mns.Ranposu.Body.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Ranposu.Body.Damage matches ..0 run tag @s add Mns.Temp.Damage.Body
 
-# ダウン回数の計算
-    execute if entity @s[tag=Mns.Temp.Damage.Head] run scoreboard players add @s Mns.Ranposu.DamageCount 1
-    execute if entity @s[tag=Mns.Temp.Damage.Body] run scoreboard players add @s Mns.Ranposu.DamageCount 1
-
 # 以下の優先度で怯みを適用
     # 麻痺
-        execute if entity @s[tag=Mns.Temp.Damage.Paralysis,tag=!Mns.Temp.IsDamaged]
-    # 大ダウン(独自)
-        # TODO: 大ダウン処理内で、頭と胴の怯み判定タグを消去する
-        execute if score @s Mns.Ranposu.DamageCount matches 2..
+        execute if entity @s[tag=Mns.Temp.Damage.Paralysis]
     # スタン
-    # 頭(独自)
-    # 胴(独自)
+        execute if entity @s[tag=Mns.Temp.Damage.Stun]
     # 減気
+        execute if entity @s[tag=Mns.Temp.Damage.Tire,tag=!Mns.Temp.IsDamaged]
+    # 大ダウン(独自)
+        execute if score @s Mns.Ranposu.DamageCount matches 2.. run function mhdp_monster_ranposu:core/damage/reaction/sp
+    # 頭(独自)
+        execute if entity @s[tag=Mns.Temp.Damage.Head] run function mhdp_monster_ranposu:core/damage/reaction/head
+    # 胴(独自)
+        execute if entity @s[tag=Mns.Temp.Damage.Body] run function mhdp_monster_ranposu:core/damage/reaction/body
 
 # 状態異常の発動
     # 毒

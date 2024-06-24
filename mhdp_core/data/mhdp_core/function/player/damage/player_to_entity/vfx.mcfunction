@@ -6,6 +6,7 @@
 
 # 効果音
     playsound minecraft:entity.generic.hurt master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score #mhdp_temp_defence_phys MhdpCore matches 31.. run playsound minecraft:entity.player.attack.strong master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run playsound minecraft:entity.player.attack.knockback master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run playsound minecraft:entity.player.hurt_sweet_berry_bush master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.8
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound minecraft:entity.player.attack.knockback master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
@@ -13,6 +14,10 @@
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound minecraft:entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 run playsound minecraft:entity.player.attack.crit master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.8
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 run playsound minecraft:entity.player.attack.weak master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
+
+# 肉質に応じてヒットストップを減らす
+    execute if score #mhdp_temp_defence_phys MhdpCore matches ..30 if score @s Wpn.HitStopTimer matches 3.. run scoreboard players set @s Wpn.HitStopTimer 2
+    execute if score #mhdp_temp_defence_phys MhdpCore matches ..15 if score @s Wpn.HitStopTimer matches 2.. run scoreboard players set @s Wpn.HitStopTimer 1
 
 # 属性パーティクル
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run particle block{block_state:"minecraft:red_wool"} ^ ^ ^ 0.1 0.1 0.1 0.5 15 normal
@@ -29,8 +34,6 @@
     # X軸方向のずれを修正
         scoreboard players set #mhdp_temp_vfx_offset MhdpCore 4
         execute if data storage mhdp_core:temp Damage.VfxScale store result score #mhdp_temp_vfx_offset MhdpCore run data get storage mhdp_core:temp Damage.VfxScale[0]
-        execute store result storage mhdp_core:temp Arg.VfxOffset float 0.4 run scoreboard players operation #mhdp_temp_vfx_offset MhdpCore /= #const_2 Const
-        scoreboard players reset #mhdp_temp_vfx_offset MhdpCore
     # Z軸回転取得
         data modify storage mhdp_core:temp Arg.VfxRotation set from storage mhdp_core:temp Damage.VfxRotation
     # 位置オフセット取得
