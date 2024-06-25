@@ -52,3 +52,7 @@
     #declare score_holder #mhdp_temp_player_count クエスト参加プレイヤー数
     #declare score_holder #mhdp_temp_hp_multiply_quest クエストによるHP倍率
     #declare score_holder #mhdp_temp_hp_multiply_playercount プレイヤー数に対するHP倍率
+
+## score
+    # Animated Javaの処理用タイマー、dhpの処理用に定義
+        scoreboard objectives add aj.frame dummy
