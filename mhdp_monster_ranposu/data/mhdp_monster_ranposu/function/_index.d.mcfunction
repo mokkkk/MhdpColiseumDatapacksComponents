@@ -14,4 +14,10 @@
 # 一時
     #declare tag Mns.Temp.Damage.Head 頭怯み
     #declare tag Mns.Temp.Damage.Body 胴怯み
-# アニメーション
+# プレイヤー
+    #declare tag Mns.Target.Ranposu 現在狙っているプレイヤー
+# アニメーション(名前で自明なため説明なし)
+    #declare tag Anim.Idle
+    #declare tag Anim.Turn.R
+    #declare tag Anim.Turn.L
+    #declare tag Anim.Voice

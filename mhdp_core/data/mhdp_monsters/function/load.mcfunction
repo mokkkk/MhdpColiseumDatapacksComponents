@@ -68,6 +68,8 @@
         scoreboard objectives add Mns.Hitbox.PartId dummy
 
 # 一時的処理用
+    # 回転速度
+        scoreboard objectives add Mns.Temp.RotateVec dummy
     # 移動速度
         scoreboard objectives add Mns.Temp.MoveVec.X dummy
         scoreboard objectives add Mns.Temp.MoveVec.Y dummy

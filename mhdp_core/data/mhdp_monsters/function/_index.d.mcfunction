@@ -31,6 +31,7 @@
     #declare tag Mns.Temp.Damage.Stun スタン発動フラグ
     #declare tag Mns.Temp.Damage.Tire 疲労発動フラグ
     #declare tag Mns.Temp.Damage.DragonAura 龍気満タン
+    #declare tag Mns.Temp.Right 左右確認用
 # モンスター関連・状態
     #declare tag Mns.State.IsAnger 怒り中
     #declare tag Mns.State.IsDown ダウン中
@@ -47,12 +48,16 @@
     #declare tag Mns.HitBox モンスターの当たり判定の共通タグ
     #declare tag Mns.HitBox.Init 初期化処理済みの当たり判定
     #declare tag Mns.HitBox.Head 頭部の当たり判定、スタンや減気の判定に使用
+# その他
+    #declare tag Temp.Rotate.Target 角度を合わせる対象
+    #declare tag Temp.Rotate.Target.Marker 対象の角度取得用マーカー
 
 ## score_holder
     #declare score_holder #mhdp_temp_player_count クエスト参加プレイヤー数
     #declare score_holder #mhdp_temp_hp_multiply_quest クエストによるHP倍率
     #declare score_holder #mhdp_temp_hp_multiply_playercount プレイヤー数に対するHP倍率
+    #declare score_holder #mhdp_temp_rotate_tick 回転にかける時間、mhdp_monsters:core/util/other/turn_to_target_calcの引数
 
 ## score
-    # Animated Javaの処理用タイマー、dhpの処理用に定義
+    # Animated Javaの処理用タイマー、dhpの補完用に定義
         scoreboard objectives add aj.frame dummy
