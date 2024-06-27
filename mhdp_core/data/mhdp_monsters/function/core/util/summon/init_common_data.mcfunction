@@ -128,7 +128,11 @@
         execute if data storage mhdp_core:game_data ActiveQuest{Time:"day"} on passengers if entity @s[type=item_display] run data modify entity @s brightness set value {sky:15,block:15}
         execute if data storage mhdp_core:game_data ActiveQuest{Time:"night"} on passengers if entity @s[type=item_display] run data modify entity @s brightness set value {sky:3,block:3}
     # スコア初期化
-        scoreboard players set @s Mns.Temp.AngerSpeed.Timer 0
+        # 怒り中の行動速度増加
+            scoreboard players set @s Mns.Temp.AngerSpeed.Timer 0
+        # 連続行動回数
+            scoreboard players set @s Mns.General.ActCount.Idle 0
+            scoreboard players set @s Mns.General.ActCount.Target 0
 
 # 終了
     scoreboard players reset #mhdp_temp_player_count MhdpCore

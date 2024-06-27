@@ -32,6 +32,7 @@
     #declare tag Mns.Temp.Damage.Tire 疲労発動フラグ
     #declare tag Mns.Temp.Damage.DragonAura 龍気満タン
     #declare tag Mns.Temp.Right 左右確認用
+    #declare tag Mns.Temp.IsTurn 軸合わせ確認用
 # モンスター関連・状態
     #declare tag Mns.State.IsAnger 怒り中
     #declare tag Mns.State.IsDown ダウン中

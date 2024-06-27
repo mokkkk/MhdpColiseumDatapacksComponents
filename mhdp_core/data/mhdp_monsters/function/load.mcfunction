@@ -6,6 +6,13 @@
 
 ## Scoreboard定義
 # モンスター処理用
+    # メイン
+        # メイン処理用
+            scoreboard objectives add Mns.General.AnimationTimer dummy
+        # 連続行動回数(威嚇用)
+            scoreboard objectives add Mns.General.ActCount.Idle dummy
+        # 連続行動回数(ターゲット更新用)
+            scoreboard objectives add Mns.General.ActCount.Target dummy
     # パラメータ系
         # 実体力
             scoreboard objectives add Mns.Hp dummy
@@ -56,8 +63,6 @@
             scoreboard objectives add Mns.HallTrap.Timer dummy
             scoreboard objectives add Mns.HallTrap.Timer.Max dummy
     # その他
-        # メイン処理用
-            scoreboard objectives add Mns.General.AnimationTimer dummy
         # 閃光玉耐性時間
             scoreboard objectives add Mns.General.FlashBomb.ResistTimer dummy
 

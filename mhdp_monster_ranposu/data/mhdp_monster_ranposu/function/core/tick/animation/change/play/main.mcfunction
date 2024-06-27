@@ -4,6 +4,9 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
+# 行動回数加算
+    scoreboard players add @s Mns.General.ActCount.Idle 1
+
 # 待機
     execute if entity @s[tag=Anim.Idle] run function animated_java:ranposu_aj/animations/idle/tween {duration:1, to_frame: 1}
 

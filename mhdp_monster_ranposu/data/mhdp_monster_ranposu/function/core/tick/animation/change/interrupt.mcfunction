@@ -4,8 +4,13 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
-# 軸合わせ
-    function mhdp_monster_ranposu:core/tick/animation/change/play/turn
+# タグ付与
+    tag @s add Anim.Voice
 
-# アニメーション再生
-    function mhdp_monster_ranposu:core/tick/animation/change/play/main
+# 軸合わせ
+    tag @s add Mns.Temp.IsTurn
+    # function mhdp_monster_ranposu:core/tick/animation/change/play/turn
+
+# アニメーション変更
+    function mhdp_monster_ranposu:core/tick/animation/change/main
+    # function mhdp_monster_ranposu:core/tick/animation/change/play/main
