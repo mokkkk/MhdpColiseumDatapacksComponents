@@ -21,3 +21,4 @@
     #declare tag Anim.Turn.R
     #declare tag Anim.Turn.L
     #declare tag Anim.Voice
+    #declare tag Anim.Bite

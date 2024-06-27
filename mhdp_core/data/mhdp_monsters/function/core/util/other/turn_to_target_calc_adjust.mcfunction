@@ -1,4 +1,4 @@
-#> mhdp_monsters:core/util/other/turn_to_target_calc
+#> mhdp_monsters:core/util/other/turn_to_target_calc_adjust
 # 
 # 汎用処理 軸合わせ角度計算
 #
@@ -13,6 +13,8 @@
     scoreboard players operation @s Mns.Temp.RotateVec -= #mhdo_temp_rotate MhdpCore
     execute if score @s Mns.Temp.RotateVec matches 180000.. run scoreboard players remove @s Mns.Temp.RotateVec 360000
     execute if score @s Mns.Temp.RotateVec matches ..-180000 run scoreboard players add @s Mns.Temp.RotateVec 360000
+    execute if score @s Mns.Temp.RotateVec matches 15000.. run scoreboard players set @s Mns.Temp.RotateVec 15000
+    execute if score @s Mns.Temp.RotateVec matches ..-15000 run scoreboard players set @s Mns.Temp.RotateVec -15000
     scoreboard players operation @s Mns.Temp.RotateVec /= #mhdp_temp_rotate_tick MhdpCore
 
 # 終了
