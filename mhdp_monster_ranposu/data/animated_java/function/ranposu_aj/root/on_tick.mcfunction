@@ -10,6 +10,7 @@ execute if entity @s[tag=aj.ranposu_aj.animation.turn_left.playing] run function
 execute if entity @s[tag=aj.ranposu_aj.animation.step_back.playing] run function animated_java:ranposu_aj/animations/step_back/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.move.playing] run function animated_java:ranposu_aj/animations/move/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.bite.playing] run function animated_java:ranposu_aj/animations/bite/zzz/on_tick
+execute if entity @s[tag=aj.ranposu_aj.animation.bite_strong.playing] run function animated_java:ranposu_aj/animations/bite_strong/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.claw.playing] run function animated_java:ranposu_aj/animations/claw/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.tail_right.playing] run function animated_java:ranposu_aj/animations/tail_right/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.tail_left.playing] run function animated_java:ranposu_aj/animations/tail_left/zzz/on_tick

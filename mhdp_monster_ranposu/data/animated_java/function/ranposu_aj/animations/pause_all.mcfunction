@@ -8,6 +8,7 @@ tag @s remove aj.ranposu_aj.animation.turn_left.playing
 tag @s remove aj.ranposu_aj.animation.step_back.playing
 tag @s remove aj.ranposu_aj.animation.move.playing
 tag @s remove aj.ranposu_aj.animation.bite.playing
+tag @s remove aj.ranposu_aj.animation.bite_strong.playing
 tag @s remove aj.ranposu_aj.animation.claw.playing
 tag @s remove aj.ranposu_aj.animation.tail_right.playing
 tag @s remove aj.ranposu_aj.animation.tail_left.playing
