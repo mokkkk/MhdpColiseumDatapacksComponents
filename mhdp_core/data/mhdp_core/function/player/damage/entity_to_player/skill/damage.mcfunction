@@ -4,4 +4,3 @@
 #
 # @within function mhdp_core:player/damage/entity_to_player/apply
 
-# 終了

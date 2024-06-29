@@ -39,5 +39,6 @@
         execute if data storage mhdp_core:temp Damage{IsDisableDamageInterval:false} run scoreboard players set @s Ply.Timer.DamageInterval 20
 
 # 終了
+    scoreboard players reset #mhdp_temp_damage_reduction MhdpCore
     scoreboard players reset #mhdp_temp_knockback_strength MhdpCore
     data remove storage mhdp_core:temp Arg
