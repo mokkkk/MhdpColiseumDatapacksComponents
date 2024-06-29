@@ -46,10 +46,12 @@
     #declare tag Mns.State.IsDisableSoundBomb 一時的に音爆弾無効
     #declare tag Mns.State.IsDisableParalyseTrap 一時的に痺れ罠無効
     #declare tag Mns.State.IsDisableHallTrap 一時的に落とし穴無効
+    #declare tag Mns.State.IsDamageInterval 同士討ち無敵時間中
 # 当たり判定関連(Slime)
     #declare tag Mns.HitBox モンスターの当たり判定の共通タグ
     #declare tag Mns.HitBox.Init 初期化処理済みの当たり判定
     #declare tag Mns.HitBox.Head 頭部の当たり判定、スタンや減気の判定に使用
+    #declare tag Mns.HitBox.DisableMnsDamage モンスターからの攻撃を無効化する
 # その他
     #declare tag Temp.Rotate.Target 角度を合わせる対象
     #declare tag Temp.Rotate.Target.Marker 対象の角度取得用マーカー

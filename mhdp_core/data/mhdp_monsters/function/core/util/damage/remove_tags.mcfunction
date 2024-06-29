@@ -27,3 +27,4 @@
     scoreboard players reset #mhdp_temp_damage_stun_value MhdpCore
     scoreboard players reset #mhdp_temp_damage_tire_value MhdpCore
     scoreboard players reset #mhdp_temp_damage_dragonaura_value MhdpCore
+    scoreboard players reset #mhdp_temp_damage_interval MhdpCore

@@ -4,6 +4,9 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
+# 共通処理
+    function mhdp_monsters:core/util/tick/tick
+
 # タイマー
     # scoreboard players add @s Mns.General.AnimationTimer 1
 

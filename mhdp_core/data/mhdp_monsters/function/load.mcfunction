@@ -15,6 +15,8 @@
             scoreboard objectives add Mns.General.ActCount.Target dummy
         # 連続軸合わせ回数
             scoreboard objectives add Mns.General.TurnCount dummy
+        # 同士討ちの無敵時間
+            scoreboard objectives add Mns.General.DamageInterval dummy
     # パラメータ系
         # 実体力
             scoreboard objectives add Mns.Hp dummy

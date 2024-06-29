@@ -24,6 +24,12 @@
     tag @s remove Ply.Weapon.StaminaEmpty
     tag @s remove Ply.Weapon.Drawing
     tag @s remove Ply.Weapon.Drawing.Sub
+    execute unless score @s Ply.Stats.DefenceValue matches -200.. run scoreboard players set @s Ply.Stats.DefenceValue 0
+    execute unless score @s Ply.Stats.DefenceValue.Fire matches -200.. run scoreboard players set @s Ply.Stats.DefenceValue.Fire 0
+    execute unless score @s Ply.Stats.DefenceValue.Water matches -200.. run scoreboard players set @s Ply.Stats.DefenceValue.Water 0
+    execute unless score @s Ply.Stats.DefenceValue.Thunder matches -200.. run scoreboard players set @s Ply.Stats.DefenceValue.Thunder 0
+    execute unless score @s Ply.Stats.DefenceValue.Ice matches -200.. run scoreboard players set @s Ply.Stats.DefenceValue.Ice 0
+    execute unless score @s Ply.Stats.DefenceValue.Dragon matches -200.. run scoreboard players set @s Ply.Stats.DefenceValue.Dragon 0
 
 # 武器セット
     function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon

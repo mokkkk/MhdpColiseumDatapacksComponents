@@ -29,8 +29,9 @@
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
 
 # 肉質取得
-    execute store result storage mhdp_core:temp Damage.TargetMonsterUid int 1 run scoreboard players get @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] Mns.HitBox.MonsterUid
-    execute store result storage mhdp_core:temp Damage.TargetPartId int 1 run scoreboard players get @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] Mns.Hitbox.PartId
+    execute store result storage mhdp_core:temp Damage.TargetMonsterUid int 1 run scoreboard players get @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] Mns.HitBox.MonsterUid
+    scoreboard players operation #mhdp_temp_target_part_id MhdpCore = @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] Mns.Hitbox.PartId
+    execute store result storage mhdp_core:temp Damage.TargetPartId int 1 run scoreboard players get #mhdp_temp_target_part_id MhdpCore
     function mhdp_core:player/damage/player_to_entity/macro/m.get_monster_defence with storage mhdp_core:temp Damage
     execute if data storage mhdp_core:temp Damage{AttackType:"Cut"} store result score #mhdp_temp_defence_phys MhdpCore run data get storage mhdp_core:temp Damage.Defence[0]
     execute if data storage mhdp_core:temp Damage{AttackType:"Blow"} store result score #mhdp_temp_defence_phys MhdpCore run data get storage mhdp_core:temp Damage.Defence[1]

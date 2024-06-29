@@ -47,3 +47,6 @@
 # 龍気
     scoreboard players operation @s Mns.DragonAura.Damage -= #mhdp_temp_damage_dragonaura_value MhdpCore
     execute if score @s Mns.DragonAura.Damage matches ..0 run tag @s add Mns.Temp.Damage.DragonAura
+
+# 無敵時間
+    execute if score #mhdp_temp_damage_interval MhdpCore matches 1.. run scoreboard players operation @s Mns.General.DamageInterval = #mhdp_temp_damage_interval MhdpCore

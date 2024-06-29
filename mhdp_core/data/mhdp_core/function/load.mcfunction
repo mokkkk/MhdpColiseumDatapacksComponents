@@ -51,6 +51,7 @@
     scoreboard players set #const_3 Const 3
     scoreboard players set #const_20 Const 20
     scoreboard players set #const_60 Const 60
+    scoreboard players set #const_80 Const 80
     scoreboard players set #const_100 Const 100
     scoreboard players set #const_10000 Const 10000
     scoreboard players set #const_crit_multiply_normal Const 125
