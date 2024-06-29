@@ -33,6 +33,7 @@
     #declare tag Mns.Temp.Damage.DragonAura 龍気満タン
     #declare tag Mns.Temp.Right 左右確認用
     #declare tag Mns.Temp.IsTurn 軸合わせ確認用
+    #declare tag Mns.Temp.IsCombo コンボ用、アニメーション終了処理で付与し、付与されている場合はアニメーション選択をスキップしてそのまま再生に移行
 # モンスター関連・状態
     #declare tag Mns.State.IsAnger 怒り中
     #declare tag Mns.State.IsDown ダウン中

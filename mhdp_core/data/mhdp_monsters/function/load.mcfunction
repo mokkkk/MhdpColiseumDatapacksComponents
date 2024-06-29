@@ -13,6 +13,8 @@
             scoreboard objectives add Mns.General.ActCount.Idle dummy
         # 連続行動回数(ターゲット更新用)
             scoreboard objectives add Mns.General.ActCount.Target dummy
+        # 連続軸合わせ回数
+            scoreboard objectives add Mns.General.TurnCount dummy
     # パラメータ系
         # 実体力
             scoreboard objectives add Mns.Hp dummy

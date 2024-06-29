@@ -133,6 +133,8 @@
         # 連続行動回数
             scoreboard players set @s Mns.General.ActCount.Idle 0
             scoreboard players set @s Mns.General.ActCount.Target 0
+        # 連続軸合わせ回数
+            scoreboard players set @s Mns.General.TurnCount 0
 
 # 終了
     scoreboard players reset #mhdp_temp_player_count MhdpCore

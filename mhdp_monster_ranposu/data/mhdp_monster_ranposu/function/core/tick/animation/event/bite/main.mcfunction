@@ -1,6 +1,6 @@
 #> mhdp_monster_ranposu:core/tick/animation/event/bite/main
 #
-# アニメーションイベントハンドラ 咆哮
+# アニメーションイベントハンドラ 嚙みつき
 #
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 

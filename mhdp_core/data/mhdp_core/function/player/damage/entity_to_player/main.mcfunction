@@ -2,5 +2,5 @@
 #
 # モンスターからプレイヤーに対してのダメージ処理
 #
-# @within function mhdp_core:tick
+# @within function mhdp_monsters:**
 

@@ -22,3 +22,4 @@
 
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag
+    tag @s remove Mns.Temp.IsCombo

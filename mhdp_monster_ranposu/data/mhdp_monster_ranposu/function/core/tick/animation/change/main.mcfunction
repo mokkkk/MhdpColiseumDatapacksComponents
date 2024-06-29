@@ -13,16 +13,16 @@
     # 一定以上行動した場合
         execute if score @s Mns.General.ActCount.Target matches ..4 run function mhdp_monster_ranposu:core/tick/animation/change/update_target
 
-# 非怒り中・一定以上行動した場合、威嚇を選択
-    # execute if score @s Mns.General.ActCount.Idle matches 6..
-
 # 待機アニメーション再生、動作する場合は後の処理でアニメーションを上書き
     function animated_java:ranposu_aj/animations/idle/tween {duration:1, to_frame: 0}
+
+# 非怒り中・一定以上行動した場合、威嚇を選択(そのまま処理中断)
+    # execute if score @s Mns.General.ActCount.Idle matches 6..
 
 # TODO:アニメーション選択
 # 内部で軸合わせ有無の取得をする
     # 
-    # function mhdp_monster_ranposu:core/tick/animation/change/get_turn
+    # execute if entity @s[tag=!Mns.Temp.IsCombo] run function mhdp_monster_ranposu:core/tick/animation/change/get_turn
 
 # 軸合わせアニメーション再生
     execute if entity @s[tag=Mns.Temp.IsTurn] store result score #mhdp_temp_result MhdpCore run function mhdp_monster_ranposu:core/tick/animation/change/play/turn

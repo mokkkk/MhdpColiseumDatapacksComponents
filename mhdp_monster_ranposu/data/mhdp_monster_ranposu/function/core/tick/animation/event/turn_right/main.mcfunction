@@ -17,4 +17,4 @@
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 終了
-    execute if score @s aj.frame matches 29 run function mhdp_monster_ranposu:core/tick/animation/event/turn_right/end
+    execute if score @s aj.frame matches 21 run function mhdp_monster_ranposu:core/tick/animation/event/turn_right/end
