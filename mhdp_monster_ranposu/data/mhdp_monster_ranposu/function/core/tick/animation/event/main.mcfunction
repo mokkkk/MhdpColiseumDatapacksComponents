@@ -16,3 +16,6 @@
 
 # 噛みつき
     execute if entity @s[tag=aj.ranposu_aj.animation.bite.playing] run function mhdp_monster_ranposu:core/tick/animation/event/bite/main
+
+# 強嚙みつき
+    execute if entity @s[tag=aj.ranposu_aj.animation.bite_strong.playing] run function mhdp_monster_ranposu:core/tick/animation/event/bite_strong/main
