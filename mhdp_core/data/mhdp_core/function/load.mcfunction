@@ -33,6 +33,10 @@
         # クエスト受注のトリガー
             scoreboard objectives add Ply.Ope.AcceptedQuestId trigger
     # 処理用タイマー
+        # 無敵時間
+            scoreboard objectives add Ply.Timer.DamageInterval dummy
+        # 回避時間
+            scoreboard objectives add Ply.Timer.Avoid dummy
         # クエスト中・死亡演出再生用
             scoreboard objectives add Ply.Timer.DeathAnimation dummy
 

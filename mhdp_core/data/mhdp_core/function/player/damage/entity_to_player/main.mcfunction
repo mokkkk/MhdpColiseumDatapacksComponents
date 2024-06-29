@@ -17,8 +17,13 @@
 # @output
 #        storage mhdp_core:temp Arg.TotalDamage 総ダメージ量
 
-# プレイヤーに対してのみ実行
-    execute unless entity @s[type=player] run return 0
+# 処理の中断
+    # プレイヤー以外が実行者の場合
+        execute unless entity @s[type=player] run return 0
+    # 無敵時間
+        execute if score @s Ply.Timer.DamageInterval matches 1.. run return 0
+    # フレーム回避
+        execute if score @s Ply.Timer.Avoid matches 1.. at @s run return run function mhdp_core:player/damage/entity_to_player/avoid/main
 
 # 基礎ダメージ計算
     # クエストによる攻撃力倍率
@@ -62,14 +67,14 @@
     # 適用
         scoreboard players operation #mhdp_temp_damage_total MhdpCore -= #mhdp_temp_element_damage MhdpCore
 
-# その他の値取得
-
 # ダメージ適用
     # ダメージ量取得
         execute store result storage mhdp_core:temp Arg.TotalDamage float 0.01 run scoreboard players get #mhdp_temp_damage_total MhdpCore
-    tellraw @a [{"text": "ダメージ量："},{"score":{"name":"#mhdp_temp_damage_total","objective":"MhdpCore"}}]
+    # 適用
+        function mhdp_core:player/damage/entity_to_player/apply
     
 # 終了
+    scoreboard players reset #mhdp_temp_damage_total MhdpCore
     scoreboard players reset #mhdp_temp_attack_multiply_quest MhdpCore
     scoreboard players reset #temp_defence_effective_0 MhdpCore
     scoreboard players reset #temp_defence_effective_1 MhdpCore

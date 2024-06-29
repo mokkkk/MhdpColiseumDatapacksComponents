@@ -23,3 +23,11 @@
 # アニメーション停止
     execute if entity @s[tag=!Ply.Weapon.Type.Tech] run function mhdp_items:weapons/great_sword/type_normal/stop_all_animation
     execute if entity @s[tag=Ply.Weapon.Type.Tech] run function mhdp_items:weapons/great_sword/type_tec/stop_all_animation
+
+# 武器モデルのリセット
+    # メインハンド
+        scoreboard players set #mhdp_arg_cmd_offset MhdpCore 1
+        data modify storage mhdp_core:temp Args.Slot set value "mainhand"
+        execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function mhdp_items:core/util/item_modify_draw
+    # オフハンド
+        # サブ武器不使用のためスキップ
