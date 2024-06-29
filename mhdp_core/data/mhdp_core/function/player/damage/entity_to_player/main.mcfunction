@@ -15,7 +15,7 @@
 #        storage mhdp_core:temp Damage.IsDisableGuts 根性無効化
 #        score #mhdp_temp_attack_multiply_anger MhdpCore 怒りによるダメージ倍率
 # @output
-#        storage mhdp_core:temp Arg.TotalDamage 総ダメージ量
+#        score #mhdp_temp_damage_total MhdpCore 総ダメージ量
 
 # 処理の中断
     # プレイヤー以外が実行者の場合
@@ -68,8 +68,6 @@
         scoreboard players operation #mhdp_temp_damage_total MhdpCore -= #mhdp_temp_element_damage MhdpCore
 
 # ダメージ適用
-    # ダメージ量取得
-        execute store result storage mhdp_core:temp Arg.TotalDamage float 0.01 run scoreboard players get #mhdp_temp_damage_total MhdpCore
     # 適用
         function mhdp_core:player/damage/entity_to_player/apply
     

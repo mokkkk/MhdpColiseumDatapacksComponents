@@ -49,6 +49,11 @@
             #declare tag Skill.Attack.Status.CritBoost.2 超会心LV2
             #declare tag Skill.Attack.Status.CritBoost.3 超会心LV3
             #declare tag Skill.Attack.Status.CritBoost.Element 会心撃【属性】
+    # 防御関連
+        # 物理ステータス系
+        # ガード系
+            #declare tag Skill.Defence.Guard.Guard.1 ガード性能LV1
+            #declare tag Skill.Defence.Guard.Guard.2 ガード性能LV2
     # スタミナ関連
         #declare tag Skill.Stamina.StaminaSurge.1 スタミナ急速回復LV1
         #declare tag Skill.Stamina.StaminaSurge.2 スタミナ急速回復LV2

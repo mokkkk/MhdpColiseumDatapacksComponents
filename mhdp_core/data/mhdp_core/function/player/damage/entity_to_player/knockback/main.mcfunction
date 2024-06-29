@@ -4,14 +4,13 @@
 #
 # @within function mhdp_core:player/damage/entity_to_player/apply
 # @input
-#        storage mhdp_core:temp Damage.Knockback ノックバックタイプ
 #        storage mhdp_core:temp Damage.IsLaunch 打ち上げ有無
 
-# ノックバックの大きさ取得
-    execute store result score #mhdp_temp_knockback_strength MhdpCore run data get storage mhdp_core:temp Damage.Knockback
-
 # アーマー計算
-
+    execute if entity @s[tag=Ply.Weapon.Armod.Super] run scoreboard players remove #mhdp_temp_knockback_strength MhdpCore 1
+    execute if entity @s[tag=Ply.Weapon.Armod.Hyper] run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
+    # ハイパーアーマー時、ダメージを軽減
+        execute if entity @s[tag=Ply.Weapon.Armod.Hyper] if score #mhdp_temp_damage_reduction MhdpCore matches 100.. run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 50
 
 # 発射威力取得
     execute if score #mhdp_temp_knockback_strength MhdpCore matches ..0 run scoreboard players set $strength delta.api.launch 0
@@ -26,6 +25,6 @@
 
 # 武器操作中断
     # 操作無効化
-        execute if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run scoreboard players set @s Wpn.DeactivateTimer 20
+        execute if entity @s[tag=!Ply.Weapon.Guard] if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run scoreboard players set @s Wpn.DeactivateTimer 20
     # 操作中断
-        execute if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:core/switch/weapon_interrupt
+        execute if entity @s[tag=!Ply.Weapon.Guard] if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:core/switch/weapon_interrupt
