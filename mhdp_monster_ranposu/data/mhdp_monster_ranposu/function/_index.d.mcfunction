@@ -25,3 +25,4 @@
     #declare tag Anim.Tail.R
     #declare tag Anim.Tail.L
     #declare tag Anim.MoveClaw
+    #declare tag Anim.Tackle

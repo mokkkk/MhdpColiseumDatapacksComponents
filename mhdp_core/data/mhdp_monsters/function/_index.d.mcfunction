@@ -56,6 +56,8 @@
 # その他
     #declare tag Temp.Rotate.Target 角度を合わせる対象
     #declare tag Temp.Rotate.Target.Marker 対象の角度取得用マーカー
+    #declare tag Temp.Move.Target 位置を合わせる対象
+    #declare tag Temp.Move.Target.Marker 対象の位置取得用マーカー
 
 ## score_holder
     #declare score_holder #mhdp_temp_player_count クエスト参加プレイヤー数

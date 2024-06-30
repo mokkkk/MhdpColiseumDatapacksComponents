@@ -6,5 +6,6 @@ $scoreboard players set @s aj.tween_duration $(duration)
 $scoreboard players set @s aj.frame $(to_frame)
 scoreboard players operation #this aj.i = @s aj.tween_duration
 scoreboard players add @s aj.tween_duration 1
+execute at @s run function animated_java:ranposu_aj/animations/down_end/zzz/apply_frame {frame: 0}
 $execute at @s run function animated_java:ranposu_aj/animations/down_end/zzz/apply_frame {frame: $(to_frame)}
 execute on passengers store result entity @s interpolation_duration int 1 run scoreboard players get #this aj.i
