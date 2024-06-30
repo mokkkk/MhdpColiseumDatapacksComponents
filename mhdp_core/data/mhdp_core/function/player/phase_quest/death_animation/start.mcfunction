@@ -17,6 +17,9 @@
     tag @s remove Ply.State.UsingWeapon
     tag @s remove Ply.State.EnableDamage
 
+# 一時的に当たり判定無効化
+    team join Team.NoCollision @s
+
 # ターゲット解除
     tag @s remove Ply.State.MnsTarget
 

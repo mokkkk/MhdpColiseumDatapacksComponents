@@ -48,6 +48,8 @@
 
 # 斬れ味消費
 
+# 無敵時間上書き
+    execute if entity @s[tag=Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsDisableDamageInterval:false} run scoreboard players set @s Ply.Timer.DamageInterval 8
 
 # 終了
     execute if score @s Ply.Stats.Stamina matches ..0 run scoreboard players set @s Ply.Stats.Stamina 0

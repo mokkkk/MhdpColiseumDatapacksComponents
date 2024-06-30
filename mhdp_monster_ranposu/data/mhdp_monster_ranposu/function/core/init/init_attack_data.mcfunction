@@ -20,4 +20,4 @@
     data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {Name:"Tackle",DamageValue:6.0f,GuardValue:5,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
 # 急襲
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {Name:"Jump",DamageValue:9.0f,GuardValue:5,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {Name:"Jump",DamageValue:9.0f,GuardValue:6,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}

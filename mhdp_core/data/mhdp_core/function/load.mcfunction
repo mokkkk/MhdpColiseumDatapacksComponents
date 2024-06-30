@@ -15,6 +15,8 @@
 # プレイヤー関連
     # UID
         scoreboard objectives add Ply.Uid dummy
+    # HP
+        scoreboard objectives add Ply.Health health
     # 操作
         # ニンジン棒使用回数
             scoreboard objectives add Ply.Ope.UsedCoas minecraft.used:carrot_on_a_stick
@@ -69,8 +71,13 @@
 ## チーム定義
     team add Team.QuestHost
     team add Team.QuestMember
+    team add Team.QuestPlaying
+    team add Team.NoCollision
     team modify Team.QuestHost prefix [{"text":"a","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.QuestMember prefix [{"text":"b","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
+    team modify Team.QuestPlaying prefix [{"text":"c","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
+    team modify Team.NoCollision prefix [{"text":"c","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
+    team modify Team.NoCollision collisionRule never
 
 ## アイテム用ロード処理
     function mhdp_items:load

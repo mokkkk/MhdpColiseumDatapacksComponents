@@ -7,9 +7,7 @@
 # 軸合わせ・弱め
     execute if score @s aj.frame matches 1 run function mhdp_monster_ranposu:core/tick/animation/event/tackle/turn_start
     execute if score @s aj.frame matches 6 run function mhdp_monster_ranposu:core/tick/animation/event/tackle/turn_start
-    execute if score @s aj.frame matches 11 run function mhdp_monster_ranposu:core/tick/animation/event/tackle/turn_start
-    execute if score @s aj.frame matches 16 run function mhdp_monster_ranposu:core/tick/animation/event/tackle/turn_start
-    execute if score @s aj.frame matches 1..20 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.frame matches 1..10 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.frame matches 1..5 at @s run tp @s ^ ^ ^-0.3

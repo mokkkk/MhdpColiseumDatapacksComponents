@@ -1,6 +1,6 @@
 #> mhdp_monster_ranposu:core/tick/animation/event/jump/turn_start
 #
-# アニメーションイベントハンドラ ジャンプ
+# アニメーションイベントハンドラ 急襲
 #
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 

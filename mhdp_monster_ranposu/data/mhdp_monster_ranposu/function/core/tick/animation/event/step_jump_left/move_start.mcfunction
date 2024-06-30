@@ -1,15 +1,15 @@
-#> mhdp_monster_ranposu:core/tick/animation/event/jump/move_start
+#> mhdp_monster_ranposu:core/tick/animation/event/step_jump_left/move_start
 #
-# アニメーションイベントハンドラ 急襲
+# アニメーションイベントハンドラ 回り込み急襲
 #
-# @within function mhdp_monster_ranposu:core/tick/animation/event/tick
+# @within function mhdp_monster_ranposu:core/tick/animation/event/step_jump_left/main
 
 # 移動対象取得
     tag @n[tag=Mns.Target.Ranposu] add Temp.Move.Target
 
 # ターゲット配置
     summon marker ~ ~ ~ {Tags:["Temp.Move.Target.Marker"]}
-    execute positioned as @n[tag=Temp.Move.Target] positioned ^ ^ ^2 run tp @e[type=marker,tag=Temp.Move.Target.Marker] ~ ~ ~
+    execute positioned as @n[tag=Temp.Move.Target] positioned ^ ^ ^-1 run tp @e[type=marker,tag=Temp.Move.Target.Marker] ~ ~ ~
 
 # 移動ベクトル計算
     scoreboard players set #mhdp_temp_move_tick MhdpCore 14

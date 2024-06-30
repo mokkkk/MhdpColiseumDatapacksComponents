@@ -32,14 +32,20 @@
         tag @s remove Ply.Weapon.StaminaEmpty
         tag @s remove Ply.Weapon.Drawing
         tag @s remove Ply.Weapon.Drawing.Sub
+    # スキル関連
+        tag @s remove Ply.State.IsUsedGuts
 
 # 食事スキル効果の解除
     function mhdp_core:phase/3_quest/change_phase/general/player/skill/reset_food_skills
 
 # attribute等の初期化
+    effect give @s instant_health 1 10
     effect clear @s resistance
     effect clear @s slowness
     attribute @s generic.jump_strength modifier remove mhdp_core:death_animation
 
 # UIの消去
     title @s actionbar {"text":""}
+
+# チーム解除
+    team leave @s

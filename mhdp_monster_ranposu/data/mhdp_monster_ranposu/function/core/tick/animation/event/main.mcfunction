@@ -34,3 +34,5 @@
     execute if entity @s[tag=aj.ranposu_aj.animation.jump.playing] run function mhdp_monster_ranposu:core/tick/animation/event/jump/main
 
 # 回り込み急襲
+    execute if entity @s[tag=aj.ranposu_aj.animation.step_jump_right.playing] run function mhdp_monster_ranposu:core/tick/animation/event/step_jump_right/main
+    execute if entity @s[tag=aj.ranposu_aj.animation.step_jump_left.playing] run function mhdp_monster_ranposu:core/tick/animation/event/step_jump_left/main

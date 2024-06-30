@@ -4,8 +4,8 @@
 #
 # @within function mhdp_core:phase/2_village_to_quest/start/main
 
-# チームから外す
-    team leave @s
+# チーム移行
+    team join Team.QuestPlaying @s
 
 # 移動を禁止
     effect give @s resistance 10 10 true
