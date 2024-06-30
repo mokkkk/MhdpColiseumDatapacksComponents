@@ -15,6 +15,8 @@
         scoreboard objectives add Mns.Ranposu.Body.Damage.Max dummy
     # 怯み回数
         scoreboard objectives add Mns.Ranposu.DamageCount dummy
+    # 尻尾攻撃回数
+        scoreboard objectives add Mns.Ranposu.TailCount dummy
 
 # メインデータ
     execute if data storage mhdp_core:monster_data MonsterData[{Uid:1001}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1001}]

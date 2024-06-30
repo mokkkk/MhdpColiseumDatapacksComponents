@@ -38,6 +38,7 @@
     #declare tag Mns.State.IsAnger 怒り中
     #declare tag Mns.State.IsDown ダウン中
     #declare tag Mns.State.IsStun スタン中
+    #declare tag Mns.State.IsFlying 飛行中
     #declare tag Mns.State.IsPoison 毒効果時間中
     #declare tag Mns.State.IsParalysis 麻痺効果時間中
     #declare tag Mns.State.IsTrap.Paralysis 痺れ罠効果時間中
