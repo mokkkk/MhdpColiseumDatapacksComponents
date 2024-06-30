@@ -24,3 +24,4 @@
     #declare tag Anim.Bite
     #declare tag Anim.Tail.R
     #declare tag Anim.Tail.L
+    #declare tag Anim.MoveClaw

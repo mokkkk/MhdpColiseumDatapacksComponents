@@ -5,11 +5,11 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.BiteStrong
+    tag @s add Anim.MoveClaw
     # function mhdp_monster_ranposu:core/tick/animation/change/play/tail
 
 # 軸合わせ
-    # tag @s add Mns.Temp.IsTurn
+    tag @s add Mns.Temp.IsTurn
     scoreboard players set @s Mns.General.TurnCount 2
 
 # アニメーション変更

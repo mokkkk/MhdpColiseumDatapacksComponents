@@ -23,3 +23,6 @@
 # 尻尾攻撃
     execute if entity @s[tag=aj.ranposu_aj.animation.tail_right.playing] run function mhdp_monster_ranposu:core/tick/animation/event/tail_right/main
     execute if entity @s[tag=aj.ranposu_aj.animation.tail_left.playing] run function mhdp_monster_ranposu:core/tick/animation/event/tail_left/main
+
+# 移動ひっかき
+    execute if entity @s[tag=aj.ranposu_aj.animation.move_claw.playing] run function mhdp_monster_ranposu:core/tick/animation/event/move_claw/main

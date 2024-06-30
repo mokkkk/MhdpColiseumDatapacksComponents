@@ -12,3 +12,6 @@
 
 # 尻尾攻撃
     data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {Name:"Tail",DamageValue:4.0f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:1,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+
+# 移動ひっかき
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {Name:"MoveClaw",DamageValue:7.0f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
