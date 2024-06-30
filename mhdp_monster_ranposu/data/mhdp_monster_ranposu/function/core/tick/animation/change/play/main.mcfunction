@@ -14,6 +14,9 @@
     execute if entity @s[tag=Anim.Turn.R] run function animated_java:ranposu_aj/animations/turn_right/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Turn.L] run function animated_java:ranposu_aj/animations/turn_left/tween {duration:1, to_frame: 1}
 
+# バックステップ
+    execute if entity @s[tag=Anim.BackStep] run function animated_java:ranposu_aj/animations/step_back/tween {duration:1, to_frame: 1}
+
 # 咆哮
     execute if entity @s[tag=Anim.Voice] run function animated_java:ranposu_aj/animations/voice/tween {duration:1, to_frame: 1}
 

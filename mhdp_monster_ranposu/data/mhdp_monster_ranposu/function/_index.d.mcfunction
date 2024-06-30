@@ -26,3 +26,6 @@
     #declare tag Anim.Tail.L
     #declare tag Anim.MoveClaw
     #declare tag Anim.Tackle
+    #declare tag Anim.Jump
+    #declare tag Anim.StepJump.R
+    #declare tag Anim.StepJump.L

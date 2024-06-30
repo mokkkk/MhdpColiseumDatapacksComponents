@@ -11,6 +11,17 @@
     execute if entity @s[tag=aj.ranposu_aj.animation.turn_right.playing] run function mhdp_monster_ranposu:core/tick/animation/event/turn_right/main
     execute if entity @s[tag=aj.ranposu_aj.animation.turn_left.playing] run function mhdp_monster_ranposu:core/tick/animation/event/turn_left/main
 
+# 怯み
+    # 通常
+    # 大怯み
+    # 飛行中
+        execute if entity @s[tag=aj.ranposu_aj.animation.damage_flying.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage_flying/main
+    # ダウン
+        execute if entity @s[tag=aj.ranposu_aj.animation.down.playing] run function mhdp_monster_ranposu:core/tick/animation/event/down/main
+
+# バックステップ
+    execute if entity @s[tag=aj.ranposu_aj.animation.step_back.playing] run function mhdp_monster_ranposu:core/tick/animation/event/step_back/main
+
 # 咆哮
     execute if entity @s[tag=aj.ranposu_aj.animation.voice.playing] run function mhdp_monster_ranposu:core/tick/animation/event/voice/main
 
