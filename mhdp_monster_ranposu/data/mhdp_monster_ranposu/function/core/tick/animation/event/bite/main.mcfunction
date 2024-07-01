@@ -4,10 +4,6 @@
 #
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
-# 軸合わせ・弱め
-    # execute if score @s aj.frame matches 1 run function mhdp_monster_ranposu:core/tick/animation/event/bite/turn_start
-    # execute if score @s aj.frame matches 1..8 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
-
 # 移動
     execute if score @s aj.frame matches 9..13 unless entity @n[tag=Mns.Target.Ranposu,distance=..5] at @s run tp @s ^ ^ ^0.3
 

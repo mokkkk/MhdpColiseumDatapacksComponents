@@ -1,6 +1,6 @@
-#> mhdp_monster_ranposu:core/tick/animation/event/damage_flying/end
+#> mhdp_monster_ranposu:core/tick/animation/event/damage_down/end
 #
-# アニメーションイベントハンドラ バックステップ
+# アニメーションイベントハンドラ 大怯み
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 

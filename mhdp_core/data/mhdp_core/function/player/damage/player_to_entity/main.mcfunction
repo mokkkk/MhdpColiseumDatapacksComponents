@@ -28,6 +28,9 @@
 #        score #mhdp_temp_damage_tire_value MhdpCore 減気量
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
 
+# 攻撃者保持
+    tag @s add Temp.Attacker
+
 # 肉質取得
     execute store result storage mhdp_core:temp Damage.TargetMonsterUid int 1 run scoreboard players get @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] Mns.HitBox.MonsterUid
     scoreboard players operation #mhdp_temp_target_part_id MhdpCore = @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] Mns.Hitbox.PartId
@@ -149,4 +152,5 @@
     scoreboard players reset #mhdp_temp_element_value_dragon MhdpCore
     scoreboard players reset #mhdp_temp_element_attack_value MhdpCore
     tag @e[tag=Temp.Victim] remove Temp.Victim
+    tag @s remove Temp.Attacker
     data remove storage mhdp_core:temp Damage

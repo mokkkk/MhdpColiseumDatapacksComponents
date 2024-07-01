@@ -1,6 +1,6 @@
-#> mhdp_monster_ranposu:core/tick/animation/event/bite/end
+#> mhdp_monster_ranposu:core/tick/animation/event/damage/end
 #
-# アニメーションイベントハンドラ 噛みつき
+# アニメーションイベントハンドラ 怯み
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 

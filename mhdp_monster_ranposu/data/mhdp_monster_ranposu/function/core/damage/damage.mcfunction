@@ -36,7 +36,7 @@
     # 減気
         execute if entity @s[tag=Mns.Temp.Damage.Tire]
     # 大ダウン(独自)
-        execute if score @s Mns.Ranposu.DamageCount matches 2.. run function mhdp_monster_ranposu:core/damage/reaction/sp
+        execute unless entity @s[tag=!Mns.Temp.Damage.Head,tag=!Mns.Temp.Damage.Body] if score @s Mns.Ranposu.DamageCount matches 2.. run function mhdp_monster_ranposu:core/damage/reaction/sp
     # 頭(独自)
         execute if entity @s[tag=Mns.Temp.Damage.Head] run function mhdp_monster_ranposu:core/damage/reaction/head
     # 胴(独自)

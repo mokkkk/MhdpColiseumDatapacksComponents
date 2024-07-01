@@ -15,10 +15,12 @@
     # 通常
         execute if entity @s[tag=aj.ranposu_aj.animation.damage.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage/main
     # 大怯み
+        execute if entity @s[tag=aj.ranposu_aj.animation.damage_down.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage_down/main
     # 飛行中
         execute if entity @s[tag=aj.ranposu_aj.animation.damage_flying.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage_flying/main
     # ダウン
         execute if entity @s[tag=aj.ranposu_aj.animation.down.playing] run function mhdp_monster_ranposu:core/tick/animation/event/down/main
+        execute if entity @s[tag=aj.ranposu_aj.animation.down_end.playing] run function mhdp_monster_ranposu:core/tick/animation/event/down_end/main
 
 # バックステップ
     execute if entity @s[tag=aj.ranposu_aj.animation.step_back.playing] run function mhdp_monster_ranposu:core/tick/animation/event/step_back/main

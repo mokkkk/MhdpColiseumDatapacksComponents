@@ -12,11 +12,14 @@
     execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monsters:core/util/damage/reaction_flying
 
 # 怯み回数増加
-    scoreboard players set @s Mns.Ranposu.DamageCount 1
+    scoreboard players add @s Mns.Ranposu.DamageCount 1
 
 # 空中怯みの場合のダウン時間設定
     scoreboard players set @s Mns.General.DownCount 2
 
+# 攻撃者を向く
+    execute at @s facing entity @a[tag=Temp.Attacker] feet run tp @s ~ ~ ~ ~ 0
+    
 # 演出
     playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.9
     playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.6
