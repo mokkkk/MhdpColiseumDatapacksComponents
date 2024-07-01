@@ -13,6 +13,7 @@
 
 # 怯み
     # 通常
+        execute if entity @s[tag=aj.ranposu_aj.animation.damage.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage/main
     # 大怯み
     # 飛行中
         execute if entity @s[tag=aj.ranposu_aj.animation.damage_flying.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage_flying/main
