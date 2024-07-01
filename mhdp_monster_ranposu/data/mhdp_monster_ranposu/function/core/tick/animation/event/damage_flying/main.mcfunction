@@ -16,5 +16,8 @@
     execute if score @s aj.frame matches 11.. at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute if score @s aj.frame matches 11.. at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 状態設定
+    execute if score @s aj.frame matches 1 run tag @s add Mns.State.IsDown
+
 # 終了
     execute if score @s aj.frame matches 19 run function mhdp_monster_ranposu:core/tick/animation/event/damage_flying/end
