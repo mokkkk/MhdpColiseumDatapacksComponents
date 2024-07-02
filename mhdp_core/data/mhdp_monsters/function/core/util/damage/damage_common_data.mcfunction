@@ -25,7 +25,7 @@
         execute if entity @s[tag=!Mns.HpHalf] if score @s Mns.Hp.Half matches ..0 run function mhdp_monsters:core/util/damage/check_hp_half
 
 # 怒り
-    execute if entity @s[tag=!Mns.State.IsAnger] run scoreboard players operation @s Mns.Anger.Damage -= #mhdp_temp_damage_anger_value MhdpCore
+    execute if entity @s[tag=!Mns.State.IsAnger] run scoreboard players operation @s Mns.Anger.Damage -= #mhdp_temp_damage_total MhdpCore
     execute if score @s Mns.Anger.Damage matches ..0 run tag @s add Mns.Temp.Damage.Anger
 
 # 状態異常

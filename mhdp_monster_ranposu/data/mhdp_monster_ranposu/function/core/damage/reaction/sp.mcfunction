@@ -2,7 +2,7 @@
 #
 # 怯みリアクション 大怯み
 #
-# @within function mhdp_monsters:core/switch/macro/m.damage
+# @within function mhdp_monster_ranposu:core/damage/damage
 
 # 共通処理
     # 怯み回数増加

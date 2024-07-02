@@ -41,6 +41,8 @@
         execute if entity @s[tag=Mns.Temp.Damage.Head] run function mhdp_monster_ranposu:core/damage/reaction/head
     # 胴(独自)
         execute if entity @s[tag=Mns.Temp.Damage.Body] run function mhdp_monster_ranposu:core/damage/reaction/body
+    # 怒り
+        execute if entity @s[tag=Mns.Temp.Damage.Anger] run function mhdp_monster_ranposu:core/damage/reaction/anger
 
 # 状態異常の発動
     # 毒

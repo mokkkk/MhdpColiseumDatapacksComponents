@@ -7,9 +7,6 @@
 # 共通処理
     function mhdp_monsters:core/util/tick/tick
 
-# タイマー
-    # scoreboard players add @s Mns.General.AnimationTimer 1
-
 # 行動決定
     # function mhdp_monster_ranposu:core/tick/animation/change/main
 
@@ -18,3 +15,4 @@
 
 # その他演出
     # 怒り中・頭部の演出
+        execute if entity @s[tag=Mns.State.IsAnger] on passengers if entity @s[tag=aj.data] run function mhdp_monster_ranposu:core/tick/effect_anger with entity @s data.locators.pos_head

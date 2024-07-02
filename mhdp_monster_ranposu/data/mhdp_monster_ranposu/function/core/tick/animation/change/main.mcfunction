@@ -7,6 +7,9 @@
 # 連続行動回数加算
     scoreboard players add @s Mns.General.ActCount.Target 1
 
+# 怒り終了
+    execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches ..0 run function mhdp_monster_ranposu:core/damage/reaction/anger_end
+
 # ターゲット更新
     # ターゲットがいない場合
         execute unless entity @e[tag=Mns.Target.Ranposu] run function mhdp_monster_ranposu:core/tick/animation/change/update_target

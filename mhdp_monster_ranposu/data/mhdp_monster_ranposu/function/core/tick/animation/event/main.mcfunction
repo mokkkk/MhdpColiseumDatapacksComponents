@@ -21,6 +21,8 @@
     # ダウン
         execute if entity @s[tag=aj.ranposu_aj.animation.down.playing] run function mhdp_monster_ranposu:core/tick/animation/event/down/main
         execute if entity @s[tag=aj.ranposu_aj.animation.down_end.playing] run function mhdp_monster_ranposu:core/tick/animation/event/down_end/main
+    # 怒り
+        execute if entity @s[tag=aj.ranposu_aj.animation.anger.playing] run function mhdp_monster_ranposu:core/tick/animation/event/anger/main
 
 # バックステップ
     execute if entity @s[tag=aj.ranposu_aj.animation.step_back.playing] run function mhdp_monster_ranposu:core/tick/animation/event/step_back/main
