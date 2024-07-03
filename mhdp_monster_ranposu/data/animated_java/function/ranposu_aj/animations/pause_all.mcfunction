@@ -23,3 +23,4 @@ tag @s remove aj.ranposu_aj.animation.down.playing
 tag @s remove aj.ranposu_aj.animation.down_end.playing
 tag @s remove aj.ranposu_aj.animation.damage_flying.playing
 tag @s remove aj.ranposu_aj.animation.death.playing
+tag @s remove aj.ranposu_aj.animation.death_flying.playing

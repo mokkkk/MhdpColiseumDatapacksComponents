@@ -25,6 +25,7 @@ execute if entity @s[tag=aj.ranposu_aj.animation.down.playing] run function anim
 execute if entity @s[tag=aj.ranposu_aj.animation.down_end.playing] run function animated_java:ranposu_aj/animations/down_end/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.damage_flying.playing] run function animated_java:ranposu_aj/animations/damage_flying/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.death.playing] run function animated_java:ranposu_aj/animations/death/zzz/on_tick
+execute if entity @s[tag=aj.ranposu_aj.animation.death_flying.playing] run function animated_java:ranposu_aj/animations/death_flying/zzz/on_tick
 execute on passengers if entity @s[tag=aj.ranposu_aj.data] run function animated_java:ranposu_aj/root/zzz/1
 execute at @s on passengers run tp @s ~ ~ ~ ~ ~
 function #animated_java:ranposu_aj/as_root/post_tick
