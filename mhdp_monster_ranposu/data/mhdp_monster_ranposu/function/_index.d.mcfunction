@@ -16,6 +16,8 @@
     #declare tag Mns.Temp.Damage.Body 胴怯み
 # プレイヤー
     #declare tag Mns.Target.Ranposu 現在狙っているプレイヤー
+# 部位破壊
+    #declare tag Mns.Break.Head 頭部位破壊
 # アニメーション(名前で自明なため説明なし)
     #declare tag Anim.Idle
     #declare tag Anim.Turn.R

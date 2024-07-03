@@ -22,7 +22,9 @@
     scoreboard players operation @s Mns.Hp -= #mhdp_temp_damage_total MhdpCore
     scoreboard players operation @s Mns.Hp.Half -= #mhdp_temp_damage_total MhdpCore
     # クエストのHP半減時処理を呼び出す
-        execute if entity @s[tag=!Mns.HpHalf] if score @s Mns.Hp.Half matches ..0 run function mhdp_monsters:core/util/damage/check_hp_half
+        execute if entity @s[tag=!Mns.State.HpHalf] if score @s Mns.Hp.Half matches ..0 run function mhdp_monsters:core/util/damage/check_hp_half
+    # 討伐処理を呼び出す
+        execute if entity @s[tag=!Mns.State.Death] if score @s Mns.Hp matches ..0 run function mhdp_monsters:core/switch/death
 
 # 怒り
     execute if entity @s[tag=!Mns.State.IsAnger] run scoreboard players operation @s Mns.Anger.Damage -= #mhdp_temp_damage_total MhdpCore

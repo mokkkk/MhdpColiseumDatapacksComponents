@@ -19,6 +19,11 @@
             scoreboard objectives add Mns.General.DownCount dummy
         # 同士討ちの無敵時間
             scoreboard objectives add Mns.General.DamageInterval dummy
+        # まばたき処理用
+            scoreboard objectives add Mns.General.BlinkTimer.Check dummy
+            scoreboard objectives add Mns.General.BlinkTimer dummy
+        # 討伐後の消滅時間
+            scoreboard objectives add Mns.General.RemoveTimer dummy
     # パラメータ系
         # 実体力
             scoreboard objectives add Mns.Hp dummy

@@ -26,7 +26,9 @@
 
 # 討伐
     # 通常
+        execute if entity @s[tag=aj.ranposu_aj.animation.death.playing] run function mhdp_monster_ranposu:core/tick/animation/event/death/main
     # 空中
+        execute if entity @s[tag=aj.ranposu_aj.animation.death_flying.playing] run function mhdp_monster_ranposu:core/tick/animation/event/death_flying/main
 
 # バックステップ
     execute if entity @s[tag=aj.ranposu_aj.animation.step_back.playing] run function mhdp_monster_ranposu:core/tick/animation/event/step_back/main

@@ -9,4 +9,4 @@
     function mhdp_core:phase/3_quest/call_from_monster/half
 
 # 終了
-    tag @s add Mns.HpHalf
+    tag @s add Mns.State.HpHalf

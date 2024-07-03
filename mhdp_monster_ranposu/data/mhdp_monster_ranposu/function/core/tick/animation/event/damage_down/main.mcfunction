@@ -19,7 +19,7 @@
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 状態
-    execute if score @s aj.frame matches 1 run tag @s add Mns.State.IsFlying
+    execute if score @s aj.frame matches 2 run tag @s add Mns.State.IsFlying
     execute if score @s aj.frame matches 16 run tag @s remove Mns.State.IsFlying
 
 # 終了
