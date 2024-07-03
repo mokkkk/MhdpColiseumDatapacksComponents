@@ -35,6 +35,9 @@
     # スキル関連
         tag @s remove Ply.State.IsUsedGuts
 
+# ターゲットタグの消去
+    function mhdp_monsters:core/util/other/remove_target_tag
+
 # 食事スキル効果の解除
     function mhdp_core:phase/3_quest/change_phase/general/player/skill/reset_food_skills
 
