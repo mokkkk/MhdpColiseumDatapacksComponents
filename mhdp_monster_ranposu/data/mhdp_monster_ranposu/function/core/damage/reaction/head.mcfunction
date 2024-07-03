@@ -5,8 +5,7 @@
 # @within function mhdp_monster_ranposu:core/damage/damage
 
 # 部位破壊処理
-    # TODO:部位破壊・頭
-        # ...
+    execute if entity @s[tag=!Mns.Break.Head] run function mhdp_monster_ranposu:core/damage/reaction/head_break
 
 # 共通処理
     # スコアリセット

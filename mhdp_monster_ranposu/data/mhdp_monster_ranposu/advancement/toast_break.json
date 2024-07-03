@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": "---",
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "components": {
+        "minecraft:custom_model_data": 1001
+      },
+      "id": "minecraft:red_dye"
+    },
+    "show_toast": true,
+    "title": "部位破壊"
+  }
+}

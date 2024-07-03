@@ -17,5 +17,8 @@
     execute if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# まばたき
+    execute if score @s aj.frame matches 76 run scoreboard players set @s Mns.General.BlinkTimer 10000000
+
 # 終了
     execute if score @s aj.frame matches 139 run function mhdp_monster_ranposu:core/tick/animation/event/death/end

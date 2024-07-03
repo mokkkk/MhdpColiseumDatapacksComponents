@@ -19,5 +19,8 @@
 # 状態設定
     execute if score @s aj.frame matches 1 run tag @s add Mns.State.IsDown
 
+# まばたき
+    execute if score @s aj.frame matches 1 run scoreboard players set @s Mns.General.BlinkTimer 15
+
 # 終了
     execute if score @s aj.frame matches 19 run function mhdp_monster_ranposu:core/tick/animation/event/damage_flying/end
