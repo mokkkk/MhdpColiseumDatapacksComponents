@@ -34,7 +34,7 @@
     # 麻痺
         execute if entity @s[tag=Mns.Temp.Damage.Paralysis]
     # スタン
-        execute if entity @s[tag=Mns.Temp.Damage.Stun]
+        execute if entity @s[tag=Mns.Temp.Damage.Stun] run function mhdp_monster_ranposu:core/damage/reaction/stun
     # 減気
         execute if entity @s[tag=Mns.Temp.Damage.Tire]
     # 大ダウン(独自)

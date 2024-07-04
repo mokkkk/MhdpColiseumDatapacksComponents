@@ -4,5 +4,5 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
-# 共通処理
+# 怒りパーティクル
     $execute positioned ^$(posx) ^$(posy) ^$(posz) run particle smoke ~ ~ ~ 0.1 0.1 0.1 0 1
