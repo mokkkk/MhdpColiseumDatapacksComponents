@@ -18,12 +18,13 @@
     #declare tag Mns.Target.Ranposu 現在狙っているプレイヤー
 # 部位破壊
     #declare tag Mns.Break.Head 頭部位破壊
-# アニメーション(名前で自明なため説明なし)
+# アニメーション
     #declare tag Anim.Idle
     #declare tag Anim.Turn.R
     #declare tag Anim.Turn.L
     #declare tag Anim.Voice
     #declare tag Anim.Bite
+    #declare tag Anim.BiteStrong
     #declare tag Anim.Tail.R
     #declare tag Anim.Tail.L
     #declare tag Anim.MoveClaw

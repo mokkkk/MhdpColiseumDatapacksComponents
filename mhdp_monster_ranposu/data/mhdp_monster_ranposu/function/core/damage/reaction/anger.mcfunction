@@ -7,7 +7,7 @@
 # 共通処理
     # スコアリセット
         scoreboard players operation @s Mns.Anger.Damage = @s Mns.Anger.Damage.Max
-        scoreboard players operation @s Mns.Anger.Timer = @s Mns.Anger.Damage.Max
+        scoreboard players operation @s Mns.Anger.Timer = @s Mns.Anger.Timer.Max
     # 状態更新
         tag @s add Mns.State.IsAnger
     # ボスバー更新

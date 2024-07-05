@@ -50,6 +50,7 @@
             execute store result score @s Mns.Anger.Damage.Max run scoreboard players operation @s Mns.Anger.Damage /= #const_100 Const
     # 継続時間
         execute store result score @s Mns.Anger.Timer store result score @s Mns.Anger.Timer.Max run data get storage mhdp_core:temp TargetMonsterData.AngerTimer
+        execute store result score @s Mns.Anger.Timer.Max run scoreboard players operation @s Mns.Anger.Timer *= #const_20 Const
     # 攻撃力倍率
         execute store result score @s Mns.Anger.AttackMutiply run data get storage mhdp_core:temp TargetMonsterData.AngerAttackMult
     # 行動速度

@@ -18,9 +18,10 @@
     execute if score @s aj.frame matches 41..47 at @s run tp @s ^ ^ ^0.1
 
 # 効果音
+    execute if score @s aj.frame matches 1..3 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.frame matches 20 run playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.5
-    execute if score @s aj.frame matches 21 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1 0.1 1 0 10
-    execute if score @s aj.frame matches 21 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s aj.frame matches 21..23 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1 0.1 1 0 10
+    execute if score @s aj.frame matches 18..23 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.frame matches 38 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1 0.1 1 0 10
     execute if score @s aj.frame matches 38 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
