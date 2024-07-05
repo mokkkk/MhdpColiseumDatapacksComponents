@@ -15,6 +15,8 @@
         scoreboard objectives add Mns.Ranposu.Body.Damage.Max dummy
     # 怯み回数
         scoreboard objectives add Mns.Ranposu.DamageCount dummy
+    # 尻尾攻撃回数
+        scoreboard objectives add Mns.Ranposu.TailCount dummy
 
 # メインデータ
     execute if data storage mhdp_core:monster_data MonsterData[{Uid:1001}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1001}]
@@ -22,10 +24,11 @@
         Uid:1001,\
         Icon:"uE011",\
         Name:"ranposu",\
+        UpperName:"Ranposu",\
         JpName:"青鳥竜",\
         ShowName:'{"text":"青鳥竜"}',\
         ShowHp:true,\
-        Hp:40000,\
+        Hp:10000,\
         StunDamagePer:10,\
         TireDamagePer:30,\
         AngerDamagePer:12,\
@@ -37,6 +40,8 @@
         PoisonDamage:3000,\
         PoisonTimer:40,\
         PoisonEffectDamage:100,\
+        BombDamage:2000,\
+        BombEffectDamage:400,\
         FlashBombEnable:true,\
         SoundBombEnable:false,\
         ParalyseTrapEnable:true,\
@@ -49,12 +54,13 @@
 
 # 肉質データ
 # 切断,打撃,弾,火,水,雷,氷,龍
+# 頭, 胴
     execute if data storage mhdp_core:monster_data DefenceData[{Uid:1001}] run data remove storage mhdp_core:monster_data DefenceData[{Uid:1001}]
     data modify storage mhdp_core:monster_data DefenceData append value {\
         Uid:1001,\
         Defences:[\
-            [100,100,100,100,100,100,100,100],\
-            [100,100,100,100,100,100,100,100]\
+            [60,70,50,30,30,30,30,10],\
+            [50,45,35,30,30,30,30,10]\
         ]\
     }
 
@@ -65,3 +71,5 @@
         Attacks:[{Id:"Bite"}]\
     }
     function mhdp_monster_ranposu:core/init/init_attack_data
+
+say 青鳥竜 init monster data

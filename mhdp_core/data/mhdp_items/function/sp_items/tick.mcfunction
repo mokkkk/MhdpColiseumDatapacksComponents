@@ -8,5 +8,7 @@
     execute if entity @s[tag=Ply.Ope.StartUsingCoas,tag=!Ply.Weapon.Deactivated] run function mhdp_items:core/switch/item/use
 
 # メイン処理
+    # 砥石
+        function mhdp_items:sp_items/whetstone/tick
     # 翔蟲
         execute if entity @s[tag=Itm.Sp.Wirebug] run function mhdp_items:sp_items/wirebug/tick

@@ -18,7 +18,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:0,Name:"テスト用クエスト1",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:100,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:10,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
@@ -27,7 +27,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:1,Name:"テスト用クエスト2",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:200,AttackMultiply:200,Field:"Coliseum",Time:"day",TimeLimit:5454,DeathCount:999,RewardMoney:15,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:30,AttackMultiply:200,Field:"Coliseum",Time:"day",TimeLimit:5454,DeathCount:999,RewardMoney:15,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1},\
             {MonsterId:1,Timing:"Death",TargetMonsterId:1001}\
         ]}\

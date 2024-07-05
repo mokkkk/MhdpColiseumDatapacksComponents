@@ -15,6 +15,8 @@
 # プレイヤー関連
     # UID
         scoreboard objectives add Ply.Uid dummy
+    # HP
+        scoreboard objectives add Ply.Health health
     # 操作
         # ニンジン棒使用回数
             scoreboard objectives add Ply.Ope.UsedCoas minecraft.used:carrot_on_a_stick
@@ -33,6 +35,10 @@
         # クエスト受注のトリガー
             scoreboard objectives add Ply.Ope.AcceptedQuestId trigger
     # 処理用タイマー
+        # 無敵時間
+            scoreboard objectives add Ply.Timer.DamageInterval dummy
+        # 回避時間
+            scoreboard objectives add Ply.Timer.Avoid dummy
         # クエスト中・死亡演出再生用
             scoreboard objectives add Ply.Timer.DeathAnimation dummy
 
@@ -51,6 +57,7 @@
     scoreboard players set #const_3 Const 3
     scoreboard players set #const_20 Const 20
     scoreboard players set #const_60 Const 60
+    scoreboard players set #const_80 Const 80
     scoreboard players set #const_100 Const 100
     scoreboard players set #const_10000 Const 10000
     scoreboard players set #const_crit_multiply_normal Const 125
@@ -58,12 +65,19 @@
     scoreboard players set #const_crit_multiply_lv2 Const 135
     scoreboard players set #const_crit_multiply_lv3 Const 140
     scoreboard players set #const_crit_multiply_element Const 115
+    # スライムのサイズ
+        scoreboard players set #const_slime_size Const 5205
 
 ## チーム定義
     team add Team.QuestHost
     team add Team.QuestMember
+    team add Team.QuestPlaying
+    team add Team.NoCollision
     team modify Team.QuestHost prefix [{"text":"a","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.QuestMember prefix [{"text":"b","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
+    team modify Team.QuestPlaying prefix [{"text":"c","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
+    team modify Team.NoCollision prefix [{"text":"c","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
+    team modify Team.NoCollision collisionRule never
 
 ## アイテム用ロード処理
     function mhdp_items:load

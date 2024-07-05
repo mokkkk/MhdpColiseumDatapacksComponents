@@ -1,1 +1,0 @@
-tag @s remove aj.ranposu_aj.animation.step_jump_left

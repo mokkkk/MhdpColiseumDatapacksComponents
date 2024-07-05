@@ -1,6 +1,1 @@
-{
-	"values": [
-		"mhdp_monster_ranposu:core/init/init_monster_data",
-		"animated_java:ranposu_aj/zzzzzzzz/load"
-	]
-}
+{"values":["animated_java:global/on_load","animated_java:global/internal/gu/load","mhdp_monster_ranposu:core/init/init_monster_data"]}

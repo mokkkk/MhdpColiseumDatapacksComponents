@@ -49,6 +49,11 @@
             #declare tag Skill.Attack.Status.CritBoost.2 超会心LV2
             #declare tag Skill.Attack.Status.CritBoost.3 超会心LV3
             #declare tag Skill.Attack.Status.CritBoost.Element 会心撃【属性】
+    # 防御関連
+        # 物理ステータス系
+        # ガード系
+            #declare tag Skill.Defence.Guard.Guard.1 ガード性能LV1
+            #declare tag Skill.Defence.Guard.Guard.2 ガード性能LV2
     # スタミナ関連
         #declare tag Skill.Stamina.StaminaSurge.1 スタミナ急速回復LV1
         #declare tag Skill.Stamina.StaminaSurge.2 スタミナ急速回復LV2
@@ -61,7 +66,10 @@
         #declare tag Skill.Stamina.ShortCharge.1 集中Lv1
         #declare tag Skill.Stamina.ShortCharge.2 集中Lv2
     # 特殊
+        #declare tag Skill.Extra.Guts 根性
         #declare tag Skill.Extra.Handicraft 匠
+        #declare tag Skill.Extra.SpeedSharping.1 砥石高速化Lv1
+        #declare tag Skill.Extra.SpeedSharping.2 砥石高速化Lv2
 
 # 食事スキル
     #declare tag Skill.Food.Insurance ネコの生命保険

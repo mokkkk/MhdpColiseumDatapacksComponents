@@ -48,6 +48,7 @@
         #declare tag Ply.State.MnsTarget モンスターのターゲットになりうる状態、闘技場戦闘フィールドでのみ有効
         #declare tag Ply.State.EnableDamage ダメージを受ける状態、クエスト中のみ有効、クエスト成功/失敗時に剥奪する
         #declare tag Ply.State.IsSilent 演出による無音状態
+        #declare tag Ply.State.IsUsedGuts 根性発動済み
     # 操作
         # スニーク
             #declare tag Ply.Ope.IsSneaking スニーク中
@@ -105,5 +106,10 @@
         #declare tag Other.Interaction.Board クエスト参加用クエストボードのinteraction
     # text_display
         #declare tag Other.Text.Bell クエスト出発ベルの説明文
+        #declare tag Other.Text.Board クエスト参加用クエストボードの説明文
+        #declare tag Other.Text.Damage ダメージ表示
+        #declare tag Other.Text.Vfx エフェクト表示用共通のテキストディスプレイ
+        #declare tag Other.Text.Vfx.Strong エフェクト表示・強撃
+        #declare tag Other.Text.Vfx.Slash 斬撃エフェクト
     # 一時
         #declare tag Other.Temp.Right 左右確認に一時的に使用、必ず同function内でリセットする

@@ -1,1 +1,0 @@
-execute on passengers run function animated_java:ranposu_aj/zzzzzzzz/animations/step_jump_left/tree/leaf_86_as_bone

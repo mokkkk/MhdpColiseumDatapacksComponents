@@ -32,6 +32,10 @@
     execute if score @s Wpn.AnimationTimer matches 17 positioned ^ ^2 ^ rotated ~ ~-30 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/particle
     execute if score @s Wpn.AnimationTimer matches 18 positioned ^ ^ ^0.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/particle
 
+# 攻撃
+    execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/attack_0
+    execute if score @s Wpn.GeneralTimer matches 19 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/attack_1
+
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 3 5 true
 
@@ -45,9 +49,9 @@
     execute if score @s Wpn.GeneralTimer matches 12 run tp @s ~ ~0.05 ~
     execute if score @s Wpn.GeneralTimer matches 12 run scoreboard players set $strength delta.api.launch 6000
     execute if score @s Wpn.GeneralTimer matches 12 rotated ~ 0 run function delta:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 16 run tp @s ~ ~0.05 ~
-    execute if score @s Wpn.GeneralTimer matches 16 run scoreboard players set $strength delta.api.launch 6000
-    execute if score @s Wpn.GeneralTimer matches 16 rotated ~ 0 run function delta:api/launch_looking
+    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 run tp @s ~ ~0.05 ~
+    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 run scoreboard players set $strength delta.api.launch 6000
+    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 rotated ~ 0 run function delta:api/launch_looking
     execute if score @s Wpn.AnimationTimer matches 20 run tp @s @s
     execute if score @s Wpn.AnimationTimer matches 20 run scoreboard players set $strength delta.api.launch 3000
     execute if score @s Wpn.AnimationTimer matches 20 rotated ~ -60 run function delta:api/launch_looking
@@ -59,6 +63,3 @@
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 60.. run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/end
-
-# execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set @s Wpn.HitStopTimer 3
-# execute if score @s Wpn.GeneralTimer matches 19 run scoreboard players set @s Wpn.HitStopTimer 5

@@ -7,6 +7,7 @@
 # クエスト出発口
     execute unless entity @e[type=interaction,tag=Other.Interaction.Bell] run summon interaction 223 64 206 {width:1.2f,height:1.2f,response:1b,Tags:["Other.Interaction.UI","Other.Interaction.Bell"]}
     execute unless entity @e[type=text_display,tag=Other.Text.Bell] run summon text_display 223 65 206 {view_range:0.1f,width:1.5f,height:1.5f,billboard:"vertical",default_background:1b,Tags:["Other.Text.Bell"],text:'{"bold":true,"color":"white","text":"クエスト出発"}'}
+    execute unless entity @e[type=text_display,tag=Other.Text.Board] run summon text_display 226 65 201 {view_range:0.1f,width:1.5f,height:1.5f,billboard:"vertical",default_background:1b,Tags:["Other.Text.Board"],text:'{"bold":true,"color":"white","text":"クエスト参加"}'}
 
 # 処理用のEntity配置
     kill @e[tag=Other.Interaction.Board]

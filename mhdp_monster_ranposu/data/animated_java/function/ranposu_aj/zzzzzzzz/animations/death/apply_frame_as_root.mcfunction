@@ -1,1 +1,0 @@
-execute if score @s aj.anim_time matches 0..140 run function animated_java:ranposu_aj/zzzzzzzz/animations/death/tree/branch_0_140

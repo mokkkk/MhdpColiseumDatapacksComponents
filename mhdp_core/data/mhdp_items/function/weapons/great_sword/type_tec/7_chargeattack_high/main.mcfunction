@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/great_sword/type_tec/7_chargeattack_high/main
 #
-# 溜め斬り メイン処理
+# 強溜め斬り メイン処理
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
@@ -20,6 +20,9 @@
     execute if score @s Wpn.AnimationTimer matches 1 positioned ^ ^2 ^ rotated ~ ~-30 run function mhdp_items:weapons/great_sword/type_tec/7_chargeattack_high/particle
     execute if score @s Wpn.AnimationTimer matches 2 positioned ^ ^ ^0.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_tec/7_chargeattack_high/particle
 
+# 攻撃
+    execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/great_sword/type_tec/7_chargeattack_high/attack
+
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
 
@@ -28,11 +31,11 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s ~ ~0.05 ~
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 6000
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 8000
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function delta:api/launch_looking
 
 # 演出
-   execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.AnimationTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2
+   execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2
 
 # 遷移
     # 右クリックを離した場合、溜めに移行
@@ -40,5 +43,3 @@
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/type_tec/7_chargeattack_high/end
-
-# execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set @s Wpn.HitStopTimer 3

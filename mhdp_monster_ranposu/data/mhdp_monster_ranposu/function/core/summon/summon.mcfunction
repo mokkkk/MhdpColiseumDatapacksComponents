@@ -4,8 +4,11 @@
 #
 # @within function 
 
+# Uidスコア化
+    execute store result score #mhdp_temp_monster_uid Mns.Uid run data get storage mhdp_core:temp TargetMonsterData.Uid
+
 # モデル召喚
-    function animated_java:ranposu_aj/summon
+    function animated_java:ranposu_aj/summon/default
 
 # アニメーション種別を待機に設定
     tag @e[type=item_display,tag=Mns.Root.Ranposu] add Mns.Temp.IsIdleAnimation
