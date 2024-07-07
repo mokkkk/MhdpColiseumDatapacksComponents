@@ -12,7 +12,8 @@ $loot spawn ~ ~10 ~ loot {\
                 {"type":"minecraft:item","name":"minecraft:paper","weight":$(Tail),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:3,IsRandomTemp:1b}"}]},\
                 {"type":"minecraft:item","name":"minecraft:paper","weight":$(MoveClaw),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:4,IsRandomTemp:1b}"}]},\
                 {"type":"minecraft:item","name":"minecraft:paper","weight":$(Tackle),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:5,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(StepJump),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:6,IsRandomTemp:1b}"}]}\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(BackStep),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:6,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(StepJump),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:7,IsRandomTemp:1b}"}]}\
             ]}\
         ]\
     }
