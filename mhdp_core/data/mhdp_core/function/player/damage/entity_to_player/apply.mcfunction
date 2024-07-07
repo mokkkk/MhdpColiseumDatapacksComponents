@@ -33,7 +33,7 @@
     # 根性
         scoreboard players operation #mhdp_temp_health MhdpCore = @s Ply.Health
         scoreboard players operation #mhdp_temp_health MhdpCore *= #const_100 Const
-        execute if data storage mhdp_core:temp Damage{IsDisableGuts:false} if entity @s[tag=Skill.Extra.Guts,tag=!Ply.State.IsUsedGuts] if score #mhdp_temp_health MhdpCore <= #mhdp_temp_damage_total MhdpCore run function mhdp_core:player/damage/entity_to_player/skill/guts
+        execute if entity @s[tag=Skill.Extra.Guts,tag=!Ply.State.IsUsedGuts] if data storage mhdp_core:temp Damage{IsDisableGuts:false} if score #mhdp_temp_health MhdpCore matches 7.. if score #mhdp_temp_health MhdpCore <= #mhdp_temp_damage_total MhdpCore run function mhdp_core:player/damage/entity_to_player/skill/guts
         scoreboard players reset #mhdp_temp_health MhdpCore
     # ダメージ量取得
         execute store result storage mhdp_core:temp Arg.TotalDamage float 0.01 run scoreboard players get #mhdp_temp_damage_total MhdpCore
