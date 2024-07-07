@@ -32,6 +32,7 @@
         # アイテム使用タイマー
             scoreboard objectives add Ply.Ope.EatingTimer dummy
             scoreboard objectives add Ply.Ope.EatingTimerMax dummy
+            scoreboard objectives add Ply.Ope.EatingTimer.Effect dummy
         # クエスト受注のトリガー
             scoreboard objectives add Ply.Ope.AcceptedQuestId trigger
     # 処理用タイマー

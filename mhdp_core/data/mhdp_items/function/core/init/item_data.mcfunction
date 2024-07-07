@@ -7,7 +7,13 @@
 # 初期化
     data modify storage mhdp_core:game_data ItemList set value []
 
-# 1:回復薬
-    data modify storage mhdp_core:game_data ItemList append value {Id:"Potion",OnUseFunction:"mhdp_items:items/switch/potion/on_use"}
+# 回復薬
+    data modify storage mhdp_core:game_data ItemList append value {Id:"Potion",Prefix:"potion"}
+
+# 回復薬グレート
+    data modify storage mhdp_core:game_data ItemList append value {Id:"MegaPotion",Prefix:"mega_potion"}
+
+# 秘薬
+    data modify storage mhdp_core:game_data ItemList append value {Id:"MaxPotion",Prefix:"max_potion"}
 
 say アイテムデータ初期化
