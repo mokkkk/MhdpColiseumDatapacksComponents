@@ -17,6 +17,10 @@
 #        score #mhdp_temp_damage_tire_value MhdpCore 減気量
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
 
+# 非戦闘時、戦闘に移行
+    execute if entity @s[tag=!Mns.State.IsBattle] run scoreboard players set @s Mns.General.SearchTimer 3000
+    execute if entity @s[tag=!Mns.State.IsBattle] run function mhdp_monster_ranposu:core/tick/animation/change/main
+
 # 共通ステータスの減算
     function mhdp_monsters:core/util/damage/damage_common_data
     # 討伐時、処理を中断

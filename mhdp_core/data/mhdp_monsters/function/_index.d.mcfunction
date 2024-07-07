@@ -23,6 +23,7 @@
     #declare tag Mns.Temp.IsIdleAnimation 待機アニメーションを再生する
     #declare tag Mns.Temp.IsSummonAnimation 登場アニメーションを再生する
     #declare tag Mns.Temp.IsAlreadyAnimation Animタグがすでについている
+    #declare tag Mns.Temp.IsFirstContact 初回行動
     #declare tag Mns.Temp.IsDamaged 怯み適用済みフラグ
     #declare tag Mns.Temp.Damage.Anger 怒り発動フラグ
     #declare tag Mns.Temp.Damage.Poison 毒発動フラグ

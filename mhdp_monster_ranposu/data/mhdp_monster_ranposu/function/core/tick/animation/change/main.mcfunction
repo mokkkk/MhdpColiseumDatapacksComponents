@@ -7,12 +7,15 @@
 # 事前処理
     # 待機アニメーション再生、動作する場合は後の処理でアニメーションを上書き
         function animated_java:ranposu_aj/animations/idle/tween {duration:1, to_frame: 0}
+    # 発見
+        execute if entity @s[tag=!Mns.State.IsBattle] if score @s Mns.General.SearchTimer matches 2000.. run tag @s add Mns.Temp.IsFirstContact
+        execute if entity @s[tag=Mns.Temp.IsFirstContact,tag=!Mns.State.IsBattle] run tag @s add Mns.State.IsBattle
     # 非戦闘時は警戒アニメーションのみ再生
         execute if entity @s[tag=!Mns.State.IsBattle] if entity @n[tag=Ply.State.MnsTarget] run function animated_java:ranposu_aj/animations/search/tween {duration:1, to_frame: 0}
         execute if entity @s[tag=!Mns.State.IsBattle] run return 0
 
 # 共通処理
-    # 状態確認
+    # Animタグがすでについているか確認
         function mhdp_monsters:core/util/tick/check_animation_tag
     # 連続行動回数加算
         execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] run scoreboard players add @s Mns.General.ActCount.Target 1
@@ -44,4 +47,5 @@
 
 # 終了
     tag @s remove Mns.Temp.IsTurn
+    tag @s remove Mns.Temp.IsFirstContact
     tag @s remove Mns.Temp.IsAlreadyAnimation
