@@ -26,7 +26,5 @@
     execute if score @s aj.frame matches 4 run tag @s add Mns.State.IsFlying
     execute if score @s aj.frame matches 18 run tag @s remove Mns.State.IsFlying
 
-    execute if score @s aj.frame matches 10 run function mhdp_monster_ranposu:core/damage/reaction/body
-
 # 終了
     execute if score @s aj.frame matches 22 run function mhdp_monster_ranposu:core/tick/animation/event/step_back/end

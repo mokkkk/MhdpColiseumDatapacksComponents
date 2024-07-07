@@ -7,9 +7,6 @@
 # 共通処理
     function mhdp_monsters:core/util/tick/tick
 
-# 行動決定
-    # function mhdp_monster_ranposu:core/tick/animation/change/main
-
 # アニメーションイベントハンドラ
     function mhdp_monster_ranposu:core/tick/animation/event/main
 

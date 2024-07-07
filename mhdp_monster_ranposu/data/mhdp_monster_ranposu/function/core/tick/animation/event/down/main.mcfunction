@@ -14,7 +14,7 @@
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # スタン中演出
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_ranposu:core/tick/animation/event/down/effect_stun with entity @s data.locators.pos_head
+    execute if entity @s[tag=Mns.State.IsStun] on passengers if entity @s[tag=aj.data] run function mhdp_monster_ranposu:core/tick/animation/event/down/effect_stun with entity @s data.locators.pos_head
 
 # 終了
     execute if score @s aj.frame matches 34 run function mhdp_monster_ranposu:core/tick/animation/event/down/end

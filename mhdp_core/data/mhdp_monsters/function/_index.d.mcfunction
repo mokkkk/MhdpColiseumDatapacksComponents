@@ -23,6 +23,7 @@
     #declare tag Mns.Temp.IsIdleAnimation 待機アニメーションを再生する
     #declare tag Mns.Temp.IsSummonAnimation 登場アニメーションを再生する
     #declare tag Mns.Temp.IsAlreadyAnimation Animタグがすでについている
+    #declare tag Mns.Temp.IsFirstContact 初回行動
     #declare tag Mns.Temp.IsDamaged 怯み適用済みフラグ
     #declare tag Mns.Temp.Damage.Anger 怒り発動フラグ
     #declare tag Mns.Temp.Damage.Poison 毒発動フラグ
@@ -35,6 +36,7 @@
     #declare tag Mns.Temp.IsTurn 軸合わせ確認用
     #declare tag Mns.Temp.IsCombo コンボ用、アニメーション終了処理で付与し、付与されている場合はアニメーション選択をスキップしてそのまま再生に移行
 # モンスター関連・状態
+    #declare tag Mns.State.IsBattle 戦闘中
     #declare tag Mns.State.IsAnger 怒り中
     #declare tag Mns.State.IsDown ダウン中
     #declare tag Mns.State.IsStun スタン中

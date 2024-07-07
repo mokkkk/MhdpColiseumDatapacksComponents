@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    # tag @s add Anim.Tackle
+    # tag @s add Anim.Move
     # function mhdp_monster_ranposu:core/tick/animation/change/play/step_jump
 
 # 軸合わせ
