@@ -7,6 +7,9 @@
 # 待機
     execute if entity @s[tag=aj.ranposu_aj.animation.idle.playing] run function mhdp_monster_ranposu:core/tick/animation/event/idle/main
 
+# 警戒中
+    execute if entity @s[tag=aj.ranposu_aj.animation.search.playing] run function mhdp_monster_ranposu:core/tick/animation/event/search/main
+
 # 軸合わせ
     execute if entity @s[tag=aj.ranposu_aj.animation.turn_right.playing] run function mhdp_monster_ranposu:core/tick/animation/event/turn_right/main
     execute if entity @s[tag=aj.ranposu_aj.animation.turn_left.playing] run function mhdp_monster_ranposu:core/tick/animation/event/turn_left/main

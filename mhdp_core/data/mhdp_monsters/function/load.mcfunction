@@ -13,6 +13,8 @@
             scoreboard objectives add Mns.General.ActCount.Idle dummy
         # 連続行動回数(ターゲット更新用)
             scoreboard objectives add Mns.General.ActCount.Target dummy
+        # プレイヤー発見までの時間
+            scoreboard objectives add Mns.General.SearchTimer dummy
         # 連続軸合わせ回数
             scoreboard objectives add Mns.General.TurnCount dummy
         # ダウンのもがき回数

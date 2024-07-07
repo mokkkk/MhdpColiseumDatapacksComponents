@@ -4,6 +4,11 @@
 #
 # @within function mhdp_monsters:/**
 
+# 非戦闘中
+    execute if entity @s[tag=!Mns.State.IsBattle] if entity @n[tag=Ply.State.MnsTarget,distance=..15] run scoreboard players add @s Mns.General.SearchTimer 5
+    execute if entity @s[tag=!Mns.State.IsBattle] if entity @n[tag=Ply.State.MnsTarget,distance=15..30] run scoreboard players add @s Mns.General.SearchTimer 3
+    execute if entity @s[tag=!Mns.State.IsBattle] if entity @n[tag=Ply.State.MnsTarget,distance=30..] run scoreboard players add @s Mns.General.SearchTimer 1
+
 # 壁埋まり対策
     execute unless block ~ ~ ~ #mhdp_core:no_collision unless block ~ ~1 ~ #mhdp_core:no_collision unless block ~ ~2 ~ #mhdp_core:no_collision unless block ~ ~3 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/back_to_field
 
