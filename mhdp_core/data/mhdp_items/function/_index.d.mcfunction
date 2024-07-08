@@ -22,12 +22,13 @@
         #declare tag Ply.Weapon.StaminaEmpty スタミナ使い切り状態
         #declare tag Ply.Weapon.Drawing 抜刀中
         #declare tag Ply.Weapon.Drawing.Sub サブ武器抜刀中
-        #declare tag Ply.Weapon.Type.Tech 天の型有効
         #declare tag Ply.Weapon.NoOpe 立ち状態（非操作中）
         #declare tag Ply.Weapon.Guard ガード中
         #declare tag Ply.Weapon.Armod.Super スーパーアーマー中
         #declare tag Ply.Weapon.Armod.Hyper ハイパーアーマー中
         #declare tag Ply.Weapon.HisStop ヒットストップ中
+    # 操作モード
+        #declare tag Ply.Weapon.Type.Tech 天の型
     # 装備武器
         #declare tag Ply.Weapon.Equip.GreatSword 大剣装備
     # フラグ

@@ -136,6 +136,8 @@
             scoreboard players set @s Mns.General.ActCount.Target 0
         # 連続軸合わせ回数
             scoreboard players set @s Mns.General.TurnCount 0
+    # 当たり判定初期化
+        execute as @e[type=slime,tag=Mns.HitBox,tag=!AlreadyInitMob] run function mob_manager:init/
 
 # 終了
     scoreboard players reset #mhdp_temp_player_count MhdpCore

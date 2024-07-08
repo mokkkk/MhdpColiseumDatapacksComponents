@@ -81,6 +81,22 @@
     team modify Team.NoCollision prefix [{"text":"c","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.NoCollision collisionRule never
 
+## その他
+    # TSBライブラリ用
+        scoreboard objectives add Global dummy
+        scoreboard objectives add Temporary dummy
+        scoreboard objectives add Const dummy
+        scoreboard objectives add UserID dummy
+        scoreboard objectives add AttackedEntity dummy
+        scoreboard objectives add Lib dummy
+        scoreboard players set $2 Const 2
+        scoreboard players set $2^15 Const 32768
+        scoreboard players set $2^16 Const 65536
+        scoreboard players set $10 Const 10
+        scoreboard players set $100 Const 100
+        scoreboard players set $31743 Const 31743
+        scoreboard players set $65536 Const 65536
+
 ## アイテム用ロード処理
     function mhdp_items:load
 
