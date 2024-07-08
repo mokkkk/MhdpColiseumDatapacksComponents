@@ -5,6 +5,7 @@
 # @within function 
 # @input
 #        storage mhdp_core:temp Damage.AttackValue 攻撃力 
+#        storage mhdp_core:temp Damage.AttackType 攻撃種別
 #        storage mhdp_core:temp Damage.DamageMult 物理ダメージ倍率（物理モーション値）
 #        storage mhdp_core:temp Damage.PartDamageMult 部位ダメージ倍率
 #        storage mhdp_core:temp Damage.IsDecreseSharpness 斬れ味消費有無
@@ -27,8 +28,8 @@
         # 桁合わせ
             scoreboard players operation #mhdp_temp_damage_phys_value MhdpCore /= #const_100 Const
 
-# 固定ダメージ関連スキル適用
-    function mhdp_core:player/damage/player_to_entity/skill/attack_fixed_damage
+# プレイヤーのみ、固定ダメージ関連スキル適用
+    execute if entity @s[type=player] run function mhdp_core:player/skill/attack/attack_fixed_damage
 
 # 実ダメージ量の計算
     # 部位ダメージ
@@ -46,13 +47,5 @@
 
 # 終了
     scoreboard players reset #mhdp_temp_attack_value MhdpCore
-    scoreboard players reset #mhdp_temp_defence_phys
-    scoreboard players reset #mhdp_temp_damage_sharpness_multiply MhdpCore
-    scoreboard players reset #mhdp_temp_element_value_fire MhdpCore
-    scoreboard players reset #mhdp_temp_element_value_water MhdpCore
-    scoreboard players reset #mhdp_temp_element_value_thunder MhdpCore
-    scoreboard players reset #mhdp_temp_element_value_ice MhdpCore
-    scoreboard players reset #mhdp_temp_element_value_dragon MhdpCore
-    scoreboard players reset #mhdp_temp_element_attack_value MhdpCore
     tag @e[tag=Temp.Victim] remove Temp.Victim
     data remove storage mhdp_core:temp Damage

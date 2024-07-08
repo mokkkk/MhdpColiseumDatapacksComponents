@@ -10,8 +10,7 @@
 # ガード値取得
     execute if entity @s[tag=Ply.Weapon.Equip.ShortSword] run scoreboard players set #mhdp_temp_guard_strength MhdpCore 2
     execute if entity @s[tag=Ply.Weapon.Equip.GreatSword] run scoreboard players set #mhdp_temp_guard_strength MhdpCore 3
-    execute if entity @s[tag=Skill.Defence.Guard.Guard.1] run scoreboard players add #mhdp_temp_guard_strength MhdpCore 1
-    execute if entity @s[tag=Skill.Defence.Guard.Guard.2] run scoreboard players add #mhdp_temp_guard_strength MhdpCore 2
+    function mhdp_core:player/skill/damage/guard
 
 # 威力値取得
     execute store result score #mhdp_temp_guard_value MhdpCore run data get storage mhdp_core:temp Damage.GuardValue

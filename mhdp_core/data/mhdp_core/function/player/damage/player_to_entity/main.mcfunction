@@ -61,7 +61,7 @@
         scoreboard players operation #mhdp_temp_condition_value_bomb MhdpCore = @s Ply.Stats.ConditionValue.Bomb
 
 # ステータス関連スキル効果適用
-    function mhdp_core:player/damage/player_to_entity/skill/attack_status
+    function mhdp_core:player/skill/attack/attack_status
 
 # ダメージ量を計算
     # 物理ダメージ斬れ味補正
@@ -107,7 +107,7 @@
             tag @s remove Ply.Temp.IsDisableConditionDamage
 
 # 会心判定およびダメージ関連スキル適用
-    function mhdp_core:player/damage/player_to_entity/skill/attack_damage
+    function mhdp_core:player/skill/attack/attack_damage
 
 # 実ダメージ量の計算
     # 物理
@@ -136,7 +136,7 @@
     execute positioned as @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] run function mhdp_core:player/damage/player_to_entity/vfx
 
 # 斬れ味消費
-    scoreboard players set #mhdp_temp_sharpness_dec_value MhdpCore 1
+    function mhdp_core:player/skill/attack/attack_sharpness
     execute if data storage mhdp_core:temp Damage{IsDecreseSharpness:true} run function mhdp_core:player/damage/player_to_entity/decrease_sharpness
 
 # モンスター側の被ダメージ処理に移行

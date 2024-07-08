@@ -1,6 +1,6 @@
-#> mhdp_core:player/damage/player_to_entity/skill/attack_status
+#> mhdp_core:player/skill/attack/attack_status
 #
-# 攻撃力関連のスキル処理
+# 攻撃力・属性値・会心率の数値増減
 #
 # @within function mhdp_core:player/damage/player_to_entity/main
 

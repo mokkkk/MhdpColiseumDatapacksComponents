@@ -1,6 +1,6 @@
-#> mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon_skill
+#> mhdp_core:player/skill/attack/init_status
 #
-# クエスト開始処理 プレイヤー実行 武器のセットアップ スキル効果適用
+# ダメージ全体の数値増減
 #
 # @within function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon
 

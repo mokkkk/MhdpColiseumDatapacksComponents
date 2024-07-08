@@ -1,8 +1,8 @@
-#> mhdp_core:player/damage/player_to_entity/skill/attack_damage
+#> mhdp_core:player/skill/attack/attack_damage
 #
-# プレイヤーからモンスターに対してのダメージ処理
+# ダメージ全体の数値増減
 #
-# @within function mhdp_core:tick
+# @within function mhdp_core:player/damage/player_to_entity/main
 
 # 会心判定
     execute store result score #mhdp_temp_crit_check MhdpCore run random roll 1..100
