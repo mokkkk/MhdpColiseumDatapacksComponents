@@ -45,13 +45,11 @@
     execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 1..2 run scoreboard players set @s Wpn.GuardStopTimer 15
     execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 3..4 run scoreboard players set @s Wpn.GuardStopTimer 25
 
-# 斬れ味消費
-    scoreboard players set #mhdp_temp_sharpness_dec_value MhdpCore 2
-    execute if entity @s[tag=Ply.Weapon.Equip.GreatSword] run function mhdp_core:player/damage/player_to_entity/decrease_sharpness
-    scoreboard players reset #mhdp_temp_sharpness_dec_value MhdpCore
-
 # 無敵時間上書き
     execute if entity @s[tag=Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsDisableDamageInterval:false} run scoreboard players set @s Ply.Timer.DamageInterval 8
+
+# 武器ごとの処理に遷移
+    execute if entity @s[tag=Ply.Weapon.Guard] run function mhdp_items:core/switch/weapon_guard
 
 # 終了
     execute if score @s Ply.Stats.Stamina matches ..0 run scoreboard players set @s Ply.Stats.Stamina 0

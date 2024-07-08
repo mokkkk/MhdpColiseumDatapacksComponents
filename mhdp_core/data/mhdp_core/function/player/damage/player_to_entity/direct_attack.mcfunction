@@ -27,6 +27,9 @@
         execute store result score #mhdp_temp_da_damage_multiply MhdpCore run data get storage mhdp_core:temp Damage.DamageMult 100
         scoreboard players operation #mhdp_temp_da_damage_multiply MhdpCore *= #mhdp_temp_direct_attack_damage MhdpCore
         execute store result storage mhdp_core:temp Damage.DamageMult double 0.01 run scoreboard players operation #mhdp_temp_da_damage_multiply MhdpCore /= #const_100 Const
+        execute store result score #mhdp_temp_da_damage_multiply MhdpCore run data get storage mhdp_core:temp Damage.ElementDamageMult 100
+        scoreboard players operation #mhdp_temp_da_damage_multiply MhdpCore *= #mhdp_temp_direct_attack_damage MhdpCore
+        execute store result storage mhdp_core:temp Damage.ElementDamageMult double 0.01 run scoreboard players operation #mhdp_temp_da_damage_multiply MhdpCore /= #const_100 Const
 
 # 攻撃演出のランダム回転
     execute store result score #mhdp_temp_vfx_rotation_base MhdpCore run data get storage mhdp_core:temp Damage.VfxRotation 100

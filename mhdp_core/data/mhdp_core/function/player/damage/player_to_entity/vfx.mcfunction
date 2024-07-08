@@ -19,7 +19,8 @@
     execute if score #mhdp_temp_defence_phys MhdpCore matches ..30 if score @s Wpn.HitStopTimer matches 3.. run scoreboard players set @s Wpn.HitStopTimer 2
     execute if score #mhdp_temp_defence_phys MhdpCore matches ..15 if score @s Wpn.HitStopTimer matches 2.. run scoreboard players set @s Wpn.HitStopTimer 1
 
-# 属性パーティクル
+# パーティクル
+    execute if score #mhdp_temp_element_attack_value MhdpCore matches ..0 run scoreboard players set #mhdp_temp_damage_element_vfx_type MhdpCore 0
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run particle block{block_state:"minecraft:red_wool"} ^ ^ ^ 0.1 0.1 0.1 0.5 15 normal
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 if score #mhdp_temp_defence_phys MhdpCore matches 45.. run particle dust_pillar{block_state:"minecraft:red_wool"} ^ ^ ^ 0.2 0.1 0.2 0.5 15 normal
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run particle minecraft:firework ~ ~ ~ 0 0 0 0.08 10
