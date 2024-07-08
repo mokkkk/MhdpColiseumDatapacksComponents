@@ -9,7 +9,7 @@
 
 # 地の型
     # 直接攻撃
-        data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Normal.DirectAttack set value {AttackType:"Cut",DamageMult:50,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.02,IsVfxStrong:false,VfxScale:[3f,4f,3f]}
+        data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Normal.DirectAttack set value {AttackType:"Cut",DamageMult:40,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.02,IsVfxStrong:false,VfxScale:[3f,4f,3f]}
     # 溜め斬り
         data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Normal.ChargeSlash.1 set value {AttackType:"Cut",DamageMult:80,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:100,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.05,IsVfxStrong:false,VfxScale:[5f,5f,5f]}
         data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Normal.ChargeSlash.2 set value {AttackType:"Cut",DamageMult:110,PartDamageMult:100,ElementDamageMult:130,StunValue:0,TireValue:120,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.05,IsVfxStrong:false,VfxScale:[5f,5f,5f]}

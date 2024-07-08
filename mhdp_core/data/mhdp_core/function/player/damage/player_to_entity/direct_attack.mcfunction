@@ -28,6 +28,11 @@
         scoreboard players operation #mhdp_temp_da_damage_multiply MhdpCore *= #mhdp_temp_direct_attack_damage MhdpCore
         execute store result storage mhdp_core:temp Damage.DamageMult double 0.01 run scoreboard players operation #mhdp_temp_da_damage_multiply MhdpCore /= #const_100 Const
 
+# 攻撃演出のランダム回転
+    execute store result score #mhdp_temp_vfx_rotation_base MhdpCore run data get storage mhdp_core:temp Damage.VfxRotation 100
+    execute store result score #mhdp_temp_vfx_rotation_random MhdpCore run random roll -50..50
+    execute store result storage mhdp_core:temp Damage.VfxRotation float 0.01 run scoreboard players operation #mhdp_temp_vfx_rotation_base MhdpCore += #mhdp_temp_vfx_rotation_random MhdpCore
+
 # 対象のHPを回復
     execute as @e[type=slime,tag=Temp.Victim] run data modify entity @s Health set value 1000.0f
 
