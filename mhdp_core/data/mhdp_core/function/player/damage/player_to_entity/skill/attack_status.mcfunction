@@ -41,9 +41,10 @@
     scoreboard players operation #mhdp_temp_crit_over100_value MhdpCore = #mhdp_temp_crit_value MhdpCore
     scoreboard players remove #mhdp_temp_crit_over100_value MhdpCore 100
     execute if entity @s[tag=!Skill.Attack.Status.CritConvert.1,tag=!Skill.Attack.Status.CritConvert.2,tag=!Skill.Attack.Status.CritConvert.3] run scoreboard players set #mhdp_temp_crit_over100_value MhdpCore 0
-    execute if entity @s[tag=Skill.Attack.Status.CritConvert.1] if score #mhdp_temp_crit_over100_value MhdpCore matches 1.. run scoreboard players operation #mhdp_temp_crit_over100_value MhdpCore /= #const_2 Const
-    execute if entity @s[tag=Skill.Attack.Status.CritConvert.3] if score #mhdp_temp_crit_over100_value MhdpCore matches 1.. run scoreboard players operation #mhdp_temp_crit_over100_value MhdpCore /= #const_2 Const
-    execute if entity @s[tag=Skill.Attack.Status.CritConvert.3] if score #mhdp_temp_crit_over100_value MhdpCore matches 1.. run scoreboard players operation #mhdp_temp_crit_over100_value MhdpCore *= #const_3 Const
+    execute if entity @s[tag=Skill.Attack.Status.CritConvert.1] if score #mhdp_temp_crit_over100_value MhdpCore matches 1.. run scoreboard players operation #mhdp_temp_crit_over100_value MhdpCore *= #const_30 Const
+    execute if entity @s[tag=Skill.Attack.Status.CritConvert.3] if score #mhdp_temp_crit_over100_value MhdpCore matches 1.. run scoreboard players operation #mhdp_temp_crit_over100_value MhdpCore *= #const_60 Const
+    execute if entity @s[tag=Skill.Attack.Status.CritConvert.3] if score #mhdp_temp_crit_over100_value MhdpCore matches 1.. run scoreboard players operation #mhdp_temp_crit_over100_value MhdpCore *= #const_100 Const
+    execute if score #mhdp_temp_crit_over100_value MhdpCore matches 1.. run scoreboard players operation #mhdp_temp_crit_over100_value MhdpCore /= #const_100 Const
     execute if score #mhdp_temp_crit_over100_value MhdpCore matches 1.. run scoreboard players operation #mhdp_temp_attack_value MhdpCore += #mhdp_temp_crit_over100_value MhdpCore
 
 # 終了

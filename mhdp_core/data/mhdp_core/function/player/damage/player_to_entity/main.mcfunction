@@ -136,6 +136,7 @@
     execute positioned as @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] run function mhdp_core:player/damage/player_to_entity/vfx
 
 # 斬れ味消費
+    scoreboard players set #mhdp_temp_sharpness_dec_value MhdpCore 1
     execute if data storage mhdp_core:temp Damage{IsDecreseSharpness:true} run function mhdp_core:player/damage/player_to_entity/decrease_sharpness
 
 # モンスター側の被ダメージ処理に移行

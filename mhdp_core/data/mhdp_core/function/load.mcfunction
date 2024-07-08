@@ -57,6 +57,7 @@
     scoreboard players set #const_2 Const 2
     scoreboard players set #const_3 Const 3
     scoreboard players set #const_20 Const 20
+    scoreboard players set #const_30 Const 30
     scoreboard players set #const_60 Const 60
     scoreboard players set #const_80 Const 80
     scoreboard players set #const_100 Const 100
