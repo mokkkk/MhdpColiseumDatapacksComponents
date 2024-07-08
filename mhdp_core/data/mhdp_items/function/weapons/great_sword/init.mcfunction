@@ -46,3 +46,5 @@
         data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Tackle.1 set value {AttackType:"Blow",DamageMult:26,PartDamageMult:100,ElementDamageMult:0,StunValue:30,TireValue:200,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0,IsVfxStrong:false}
         data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Tackle.2 set value {AttackType:"Blow",DamageMult:35,PartDamageMult:100,ElementDamageMult:0,StunValue:40,TireValue:200,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0,IsVfxStrong:false}
         data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Tackle.3 set value {AttackType:"Blow",DamageMult:50,PartDamageMult:100,ElementDamageMult:0,StunValue:55,TireValue:200,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0,IsVfxStrong:false}
+
+say -- 大剣データ初期化

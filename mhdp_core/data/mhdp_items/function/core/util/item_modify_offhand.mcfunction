@@ -11,9 +11,10 @@
     execute store result score #mhdo_temp_cmd MhdpCore run data get storage mhdp_core:temp PlayerData.Item.UsingWeapon.components."minecraft:custom_data".ModelOffset
     execute store result storage mhdp_core:temp Args.Cmd int 1 run scoreboard players operation #mhdo_temp_cmd MhdpCore += #mhdp_arg_cmd_offset MhdpCore
     data modify storage mhdp_core:temp Args.Slot set value "offhand"
+    data modify storage mhdp_core:temp Args.Dummy set from storage mhdp_core:game_data Time
 
 # 実行
-    function mhdp_items:core/util/macro/m.item_modify_only_cmd with storage mhdp_core:temp Args
+    function mhdp_items:core/util/macro/m.item_modify_with_dummy with storage mhdp_core:temp Args
 
 # 終了
     data remove storage mhdp_core:temp Args

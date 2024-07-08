@@ -9,9 +9,11 @@
     execute if score #mhdp_temp_defence_phys MhdpCore matches 31.. run playsound minecraft:entity.player.attack.strong master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run playsound minecraft:entity.player.attack.knockback master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run playsound minecraft:entity.player.hurt_sweet_berry_bush master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.8
-    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound minecraft:entity.player.attack.knockback master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
-    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound minecraft:entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
-    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound minecraft:entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound minecraft:entity.player.attack.knockback master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound minecraft:entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 2
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound minecraft:entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.7
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound minecraft:item.mace.smash_air master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 2
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound item.wolf_armor.damage master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.5
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 run playsound minecraft:entity.player.attack.crit master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.8
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 run playsound minecraft:entity.player.attack.weak master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
 
@@ -40,7 +42,8 @@
     # 位置オフセット取得
         function mhdp_core:player/damage/player_to_entity/vfx_calc_offset
     # 表示
-        execute if data storage mhdp_core:temp Damage{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function mhdp_core:player/damage/player_to_entity/macro/m.summon_slash_effect with storage mhdp_core:temp Arg
+        # 斬撃
+            execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 if data storage mhdp_core:temp Damage{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function mhdp_core:player/damage/player_to_entity/macro/m.summon_slash_effect with storage mhdp_core:temp Arg
 
 # ダメージ表示
     execute if score #mhdp_temp_defence_phys MhdpCore matches ..44 run data modify storage mhdp_core:temp Arg.Color set value "white"
@@ -52,3 +55,5 @@
     execute store result storage mhdp_core:temp Arg.RotY int 1 run random roll 0..359
     execute store result storage mhdp_core:temp Arg.Dist int 1 run random roll 0..9
     function mhdp_core:player/damage/player_to_entity/macro/m.summon_damage_text with storage mhdp_core:temp Arg
+
+# playsound item.wolf_armor.break master @a ~ ~ ~ 1 1
