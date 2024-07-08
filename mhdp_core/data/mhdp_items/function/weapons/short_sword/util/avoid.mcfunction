@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/great_sword/util/avoid
+#> mhdp_items:weapons/short_sword/util/avoid
 #
 # 武器のフレーム回避成功時処理
 #

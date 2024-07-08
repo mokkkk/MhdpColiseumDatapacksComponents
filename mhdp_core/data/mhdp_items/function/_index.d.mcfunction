@@ -31,6 +31,7 @@
         #declare tag Ply.Weapon.Type.Tech 天の型
     # 装備武器
         #declare tag Ply.Weapon.Equip.GreatSword 大剣装備
+        #declare tag Ply.Weapon.Equip.ShortSword 片手剣装備
     # フラグ
         #declare tag Ply.Flag.HideSharpness 斬れ味UI非表示フラグ
         #declare tag Ply.Flag.NormalAttack 左クリック攻撃フラグ

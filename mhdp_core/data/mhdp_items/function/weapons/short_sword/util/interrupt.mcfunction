@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/great_sword/util/interrupt
+#> mhdp_items:weapons/short_sword/util/interrupt
 #
 # 武器の初期化処理
 #
@@ -21,8 +21,7 @@
     tag @s remove Ply.Flag.Hit
 
 # アニメーション停止
-    execute if entity @s[tag=!Ply.Weapon.Type.Tech] run function mhdp_items:weapons/great_sword/type_normal/stop_all_animation
-    execute if entity @s[tag=Ply.Weapon.Type.Tech] run function mhdp_items:weapons/great_sword/type_tec/stop_all_animation
+    function mhdp_items:weapons/short_sword/util/stop_all_animations
 
 # 武器モデルのリセット
     # メインハンド
@@ -30,4 +29,6 @@
         data modify storage mhdp_core:temp Args.Slot set value "mainhand"
         execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function mhdp_items:core/util/item_modify_draw
     # オフハンド
-        # サブ武器不使用のためスキップ
+        data modify storage mhdp_core:temp Args.IsDrawing set value true
+        scoreboard players set #mhdp_arg_cmd_offset MhdpCore 3
+        execute if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b,IsDrawing:1b}] run function mhdp_items:core/util/item_modify_offhand

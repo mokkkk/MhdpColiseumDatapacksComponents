@@ -4,8 +4,8 @@
 #
 # @within function mhdp_items:weapons/great_sword/main
 
-# 共通処理
-    function mhdp_items:weapons/great_sword/type_normal/general
+# 無操作確認
+    function mhdp_items:weapons/great_sword/util/get_no_ope
 
 # 抜刀攻撃：溜め
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/great_sword/type_normal/0_drawattack/start

@@ -1,21 +1,20 @@
-#> mhdp_items:weapons/great_sword/util/reset
+#> mhdp_items:weapons/short_sword/util/reset
 #
 # 武器の初期化処理
 #
 # @within function mhdp_items:core/switch/macro/m.reset
 
 # TODO: 武器のリセット処理
-    say TODO:大剣リセット処理
+    say TODO:片手剣リセット処理
 
 # 割り込み処理
-    function mhdp_items:weapons/great_sword/util/interrupt
+    function mhdp_items:weapons/short_sword/util/interrupt
 
 # タグ消去
-    tag @s remove Ply.Weapon.Equip.GreatSword
+    tag @s remove Ply.Weapon.Equip.ShortSword
 
 # 専用スコア消去
-    scoreboard players reset @s Wpn.Gs.ChargeTimer
-    scoreboard players reset @s Wpn.Gs.ChargeCount
+    # scoreboard players reset @s Wpn.Gs.ChargeTimer
 
 # ステータス削除
     attribute @s generic.attack_speed modifier remove mhdp_core:weapon_attack
