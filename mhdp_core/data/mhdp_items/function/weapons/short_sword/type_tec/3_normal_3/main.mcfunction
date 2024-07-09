@@ -36,6 +36,14 @@
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
 
+# 移動
+    execute if score @s Wpn.GeneralTimer matches 3 run tp @s @s
+    execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set $strength delta.api.launch 1000
+    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 10 run tp @s @s
+    execute if score @s Wpn.GeneralTimer matches 10 run scoreboard players set $strength delta.api.launch 1500
+    execute if score @s Wpn.GeneralTimer matches 10 rotated ~ 0 run function delta:api/launch_looking
+
 # 先行入力
     execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] if score @s Wpn.GeneralTimer matches 3..11 run function mhdp_items:core/buffering/a
 

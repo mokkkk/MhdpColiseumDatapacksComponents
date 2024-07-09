@@ -23,6 +23,7 @@
         data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Horizon.1 set value {AttackType:"Cut",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.9,IsVfxStrong:false,VfxScale:[3f,4f,3f]}
         data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Horizon.2 set value {AttackType:"Cut",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:2.8,IsVfxStrong:false,VfxScale:[4f,4f,4f]}
         data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Horizon.3 set value {AttackType:"Cut",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:1.93,IsVfxStrong:false,VfxScale:[4f,5f,4f]}
-
+    # 盾攻撃コンボ
+        data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Bash.1 set value {AttackType:"Blow",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
 
 say -- 片手剣データ初期化

@@ -14,3 +14,4 @@
     #declare tag Wpn.Ss.Tec.Horizon.1 水平斬りコンボ1
     #declare tag Wpn.Ss.Tec.Horizon.2 水平斬りコンボ2
     #declare tag Wpn.Ss.Tec.Horizon.3 水平斬りコンボ3
+    #declare tag Wpn.Ss.Tec.Bash.1 盾攻撃
