@@ -42,6 +42,8 @@
             scoreboard objectives add Ply.Timer.Avoid dummy
         # クエスト中・死亡演出再生用
             scoreboard objectives add Ply.Timer.DeathAnimation dummy
+        # 先行入力
+            scoreboard objectives add Ply.Timer.Buffering dummy
 
 # モンスター関連
     # UID

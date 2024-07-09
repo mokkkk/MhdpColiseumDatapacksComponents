@@ -12,6 +12,8 @@
         execute if score @s Ply.Timer.DamageInterval matches 1.. run scoreboard players remove @s Ply.Timer.DamageInterval 1
     # 回避時間
         execute if score @s Ply.Timer.Avoid matches 1.. run scoreboard players remove @s Ply.Timer.Avoid 1
+    # 先行入力
+        execute if score @s Ply.Timer.Buffering matches 1.. run function mhdp_items:core/buffering/tick
 
 # フレーム回避
     execute if entity @s[tag=Ply.Ope.IsSprinting,tag=Ply.Ope.StartJump] run scoreboard players set @s Ply.Timer.Avoid 3

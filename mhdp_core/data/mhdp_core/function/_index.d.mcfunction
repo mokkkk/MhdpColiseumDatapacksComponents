@@ -2,7 +2,7 @@
 # @private
 
 #> tag
-# @within function mhdp_core:/**
+# @within function **
 
 ## storage
 #declare storage mhdp_core:game_data ゲームの処理用データを保持するstorage、あまり変化しないデータを入れる(Time、Phaseなど一部は変化する)
@@ -71,6 +71,11 @@
             #declare tag Ply.Ope.IsSprinting ダッシュ中
         # 空中
             #declare tag Ply.Ope.IsAir 飛行中
+        # 先行入力
+            #declare tag Ply.Ope.Buffering.A 先行入力A
+            #declare tag Ply.Ope.Buffering.B 先行入力B
+            #declare tag Ply.Ope.Buffering.C 先行入力C
+            #declare tag Ply.Ope.Buffering.D 先行入力D
     # クエスト中処理
         #declare tag Ply.Event.DeathAnimation 死亡演出
     # 進捗

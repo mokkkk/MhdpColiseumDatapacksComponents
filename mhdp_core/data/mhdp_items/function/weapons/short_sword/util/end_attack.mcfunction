@@ -20,3 +20,6 @@
 # attributeリセット
     function mhdp_items:weapons/short_sword/util/set_status
     effect clear @s slowness
+
+# 先行入力解除
+    function mhdp_items:core/buffering/reset

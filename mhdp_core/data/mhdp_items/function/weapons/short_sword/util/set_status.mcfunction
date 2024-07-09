@@ -11,3 +11,4 @@
     attribute @s generic.movement_speed modifier add mhdp_core:weapon_movement_speed 0 add_value
     attribute @s generic.attack_damage modifier remove mhdp_core:weapon_attack_damage
     attribute @s generic.attack_damage modifier add mhdp_core:weapon_attack_damage 5.0 add_value
+    attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
