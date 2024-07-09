@@ -25,7 +25,6 @@
     execute if score #mhdp_temp_element_attack_value MhdpCore matches ..0 run scoreboard players set #mhdp_temp_damage_element_vfx_type MhdpCore 0
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run particle block{block_state:"minecraft:red_wool"} ^ ^ ^ 0.1 0.1 0.1 0.5 15 normal
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 if score #mhdp_temp_defence_phys MhdpCore matches 45.. run particle dust_pillar{block_state:"minecraft:red_wool"} ^ ^ ^ 0.2 0.1 0.2 0.5 15 normal
-    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run particle flash ~ ~ ~ 0 0 0 0 1
     execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 1 run particle flame ~ ~ ~ 0.2 0.2 0.2 0.05 10
     execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 2 run particle rain ~ ~ ~ 0.2 0.2 0.2 0.15 20
     execute if score #mhdp_temp_damage_element_vfx_type MhdpCore matches 3 run particle electric_spark ~ ~ ~ 0.2 0.2 0.2 0.15 10
@@ -38,11 +37,14 @@
         execute if data storage mhdp_core:temp Damage.VfxScale store result score #mhdp_temp_vfx_offset MhdpCore run data get storage mhdp_core:temp Damage.VfxScale[0]
     # Z軸回転取得
         data modify storage mhdp_core:temp Arg.VfxRotation set from storage mhdp_core:temp Damage.VfxRotation
+        execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 store result storage mhdp_core:temp Arg.VfxRotation int 1 run random roll 0..360
     # 位置オフセット取得
         function mhdp_core:player/damage/player_to_entity/vfx_calc_offset
     # 表示
         # 斬撃
             execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 if data storage mhdp_core:temp Damage{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function mhdp_core:player/damage/player_to_entity/macro/m.summon_slash_effect with storage mhdp_core:temp Arg
+        # 打撃
+            execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 if data storage mhdp_core:temp Damage{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function mhdp_core:player/damage/player_to_entity/macro/m.summon_blow_effect with storage mhdp_core:temp Arg
 
 # ダメージ表示
     execute if score #mhdp_temp_defence_phys MhdpCore matches ..44 run data modify storage mhdp_core:temp Arg.Color set value "white"
