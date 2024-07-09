@@ -1,12 +1,13 @@
 #> mhdp_items:weapons/short_sword/type_tec/2_normal_2/attack
 #
-# 溜め斬り 攻撃判定
+# 通常コンボ2 攻撃判定
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
 
 # 命中判定
     execute anchored eyes positioned ^ ^ ^1 run tag @e[type=slime,tag=Mns.HitBox,distance=..1.5] add Temp.Hit
     execute anchored eyes positioned ^ ^ ^2 run tag @e[type=slime,tag=Mns.HitBox,distance=..1.5] add Temp.Hit
+    execute anchored eyes positioned ^ ^ ^3 run tag @e[type=slime,tag=Mns.HitBox,distance=..1.5] add Temp.Hit
 
 # ターゲット決定
     execute as @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] run tag @s add Temp.Victim

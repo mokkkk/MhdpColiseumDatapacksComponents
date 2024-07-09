@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/short_sword/type_tec/2_normal_2/animation_3
 #
-# 溜め アニメーション処理
+# 通常コンボ2 アニメーション処理
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/2_normal_2/main
 

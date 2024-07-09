@@ -19,7 +19,22 @@
     # 2段目
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.Normal.2,tag=!Ply.Flag.DrawAttack] run function mhdp_items:weapons/short_sword/type_tec/2_normal_2/main
-        
+    # 3段目
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.Normal.3,tag=!Ply.Flag.DrawAttack] run function mhdp_items:weapons/short_sword/type_tec/3_normal_3/main
+
+# 水平斬りコンボ
+    # 1段目
+        # 開始：右クリック短押し
+            execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/start
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.Horizon.1,tag=!Ply.Flag.DrawAttack] run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/main
+    # 2段目
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.Horizon.2,tag=!Ply.Flag.DrawAttack] run function mhdp_items:weapons/short_sword/type_tec/5_horizon_2/main
+    # 3段目
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.Horizon.3,tag=!Ply.Flag.DrawAttack] run function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

@@ -13,5 +13,3 @@
 
 # 共通処理
     function mhdp_items:weapons/short_sword/util/end_attack
-
-say 通常1終わり

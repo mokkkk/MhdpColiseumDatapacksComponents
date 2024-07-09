@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/short_sword/type_tec/2_normal_2/particle
 #
-# 通常コンボ1 演出
+# 通常コンボ2 演出
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/2_normal_2/main
 

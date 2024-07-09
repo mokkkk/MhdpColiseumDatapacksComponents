@@ -16,4 +16,4 @@
     execute if score #mhdp_temp_sharpness_dec_value MhdpCore matches ..-1 run scoreboard players set #mhdp_temp_sharpness_dec_value MhdpCore 0
 
 # 終了
-    scoreboard players reset #mhdp_temp_sharpness_dec_value MhdpCore
+    scoreboard players reset #mhdp_temp_sharpness_random MhdpCore

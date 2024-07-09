@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/short_sword/type_tec/2_normal_2/end
 #
-# 通常コンボ1 終了処理
+# 通常コンボ2 終了処理
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/2_normal_2/main
 
@@ -13,5 +13,3 @@
 
 # 共通処理
     function mhdp_items:weapons/short_sword/util/end_attack
-
-say 通常2終わり

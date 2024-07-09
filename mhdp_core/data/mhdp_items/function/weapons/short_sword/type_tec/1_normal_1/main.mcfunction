@@ -24,12 +24,18 @@
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..2 run tp @s ~ ~ ~ ~-0.5 ~1
 
+# 移動制限
+    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
+
 # 先行入力
     execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] if score @s Wpn.GeneralTimer matches 3..11 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long] if score @s Wpn.GeneralTimer matches 3..11 run function mhdp_items:core/buffering/b
 
 # 遷移
     # 右クリック短押し：通常コンボ2に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/change_to_normal_2
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/change_to_normal_2
+    # 右クリック長押し：水平斬りコンボ1に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/change_to_horizon_1
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/end

@@ -16,5 +16,3 @@
     
 # 対象の処理を実行
     function mhdp_items:weapons/short_sword/type_tec/2_normal_2/start
-
-say 通常2
