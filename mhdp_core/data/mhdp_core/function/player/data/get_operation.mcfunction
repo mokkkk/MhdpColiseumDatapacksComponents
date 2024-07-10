@@ -22,7 +22,7 @@
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Ope.EnderEyeTimer matches 4 run tag @s add Ply.Ope.UsedEnderEye.Long
         execute if entity @s[tag=Ply.Ope.EndUsingEnderEye] run scoreboard players set @s Ply.Ope.EnderEyeTimer 0
     # スニーク同時押し
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking] if score @s Ply.Ope.SneakTimer matches ..1 run tag @s add Ply.Ope.StartUsingEnderEye.WithSneak
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking] if score @s Ply.Ope.SneakTimer matches ..2 run tag @s add Ply.Ope.StartUsingEnderEye.WithSneak
         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] run tag @s add Ply.Ope.StartUsingEnderEye.NotSneak
     # 投げ捨て
         execute if score @s Ply.Ope.DropEnderEye matches 1.. run tag @s add Ply.Ope.DroppedEnderEye

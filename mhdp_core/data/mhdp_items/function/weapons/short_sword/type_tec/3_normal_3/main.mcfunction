@@ -45,11 +45,14 @@
     execute if score @s Wpn.GeneralTimer matches 10 rotated ~ 0 run function delta:api/launch_looking
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] if score @s Wpn.GeneralTimer matches 3..11 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/b
 
 # 遷移
-    # 右クリック短押し：通常コンボ2に移行
-        # execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 11.. run function mhdp_items:weapons/short_sword/type_tec/3_normal_3/change_to_normal_2
+    # スニーク+右クリック：盾攻撃に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/3_normal_3/change_to_bash
+    # 同時押し：旋刈りに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/3_normal_3/change_to_tsumuji
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/short_sword/type_tec/3_normal_3/end

@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/short_sword/type_tec/1_normal_1/change_to_normal_2
+#> mhdp_items:weapons/short_sword/type_tec/1_normal_1/change_to_bash
 #
-# 通常コンボ1 → 通常コンボ2
+# 通常コンボ1 → 盾攻撃
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/1_normal_1/main
 
@@ -15,6 +15,4 @@
     tag @s remove Wpn.Ss.Tec.Normal.1
     
 # 対象の処理を実行
-    # function mhdp_items:weapons/great_sword/type_tec/1_charge/start_with_other
-
-say 通常2
+    function mhdp_items:weapons/short_sword/type_tec/7_bash_1/start

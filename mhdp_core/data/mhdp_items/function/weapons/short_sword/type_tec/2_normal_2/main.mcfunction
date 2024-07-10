@@ -29,14 +29,20 @@
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] if score @s Wpn.GeneralTimer matches 3..15 run function mhdp_items:core/buffering/a
-    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long] if score @s Wpn.GeneralTimer matches 3..15 run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short,tag=!Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..15 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long,tag=!Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..15 run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..15 run function mhdp_items:core/buffering/c
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..15 run function mhdp_items:core/buffering/d
 
 # 遷移
     # 右クリック短押し：通常コンボ3に移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/2_normal_2/change_to_normal_3
     # 右クリック長押し：水平斬りコンボ1に移行
         execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/2_normal_2/change_to_horizon_1
+    # スニーク+右クリック：盾攻撃に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.C] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/2_normal_2/change_to_bash
+    # 同時押し：回転斬りに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/2_normal_2/change_to_spin
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/2_normal_2/end

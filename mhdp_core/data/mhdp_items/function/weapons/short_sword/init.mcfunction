@@ -25,5 +25,12 @@
         data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Horizon.3 set value {AttackType:"Cut",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:1.93,IsVfxStrong:false,VfxScale:[4f,5f,4f]}
     # 盾攻撃コンボ
         data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Bash.1 set value {AttackType:"Blow",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:4,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[5f,5f,5f]}
-
+        data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Bash.2 set value {AttackType:"Blow",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:4,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[4f,4f,4f]}
+        data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Bash.3 set value {AttackType:"Blow",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:4,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:true,VfxScale:[5.5f,5.5f,5.5f]}
+    # 回転斬り
+        data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Spin set value {AttackType:"Cut",DamageMult:50,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:1.6,IsVfxStrong:false,VfxScale:[4f,6f,4f]}
+    # 旋刈り
+        data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Tsumuji set value {AttackType:"Cut",DamageMult:60,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:1.6,IsVfxStrong:true,VfxScale:[5f,6f,5f]}
+        data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Tsumuji.Pursuit set value {AttackType:"Cut",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:1.6,IsVfxStrong:false,VfxScale:[0f,0f,0f]}
+    
 say -- 片手剣データ初期化

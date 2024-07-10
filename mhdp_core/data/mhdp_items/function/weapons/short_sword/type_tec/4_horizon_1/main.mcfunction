@@ -28,11 +28,17 @@
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long] if score @s Wpn.GeneralTimer matches 2..13 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long,tag=!Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..13 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..13 run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..13 run function mhdp_items:core/buffering/c
 
 # 遷移
-    # 右クリック長押し：通常コンボ2に移行
+    # 右クリック長押し：水平斬りコンボ2に移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/change_to_horizon_2
+    # スニーク+右クリック：盾攻撃に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/change_to_bash
+    # 同時押し：回転斬りに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.C] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/change_to_spin
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/end

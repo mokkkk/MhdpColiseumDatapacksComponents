@@ -15,3 +15,6 @@
     #declare tag Wpn.Ss.Tec.Horizon.2 水平斬りコンボ2
     #declare tag Wpn.Ss.Tec.Horizon.3 水平斬りコンボ3
     #declare tag Wpn.Ss.Tec.Bash.1 盾攻撃
+    #declare tag Wpn.Ss.Tec.Bash.2 バックナックル
+    #declare tag Wpn.Ss.Tec.Bash.3 ハードバッシュ
+    #declare tag Wpn.Ss.Tec.Spin 回転斬り

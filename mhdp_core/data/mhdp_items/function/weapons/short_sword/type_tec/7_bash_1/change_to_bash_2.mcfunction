@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/short_sword/type_tec/2_normal_2/change_to_horizon1
+#> mhdp_items:weapons/short_sword/type_tec/7_bash_1/change_to_bash_2
 #
 # 通常コンボ2 → 水平斬りコンボ1
 #
@@ -12,7 +12,7 @@
     function mhdp_items:weapons/short_sword/util/end_attack
 
 # タグ消去
-    tag @s remove Wpn.Ss.Tec.Normal.2
+    tag @s remove Wpn.Ss.Tec.Bash.1
     
 # 対象の処理を実行
-    function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/start
+    function mhdp_items:weapons/short_sword/type_tec/8_bash_2/start
