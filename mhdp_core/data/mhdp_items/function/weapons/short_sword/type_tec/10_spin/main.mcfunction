@@ -11,7 +11,7 @@
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 3 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s Wpn.AnimationTimer matches 5 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.AnimationTimer matches 8 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 1..3 run function mhdp_items:weapons/short_sword/type_tec/10_spin/animation_5
     execute if score @s Wpn.AnimationTimer matches 4..5 run function mhdp_items:weapons/short_sword/type_tec/10_spin/animation_6
     execute if score @s Wpn.AnimationTimer matches 6..7 run function mhdp_items:weapons/short_sword/type_tec/10_spin/animation_7
@@ -34,8 +34,8 @@
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
-    execute if score @s Wpn.GeneralTimer matches 12 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 12 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
+    execute if score @s Wpn.GeneralTimer matches 10 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
+    execute if score @s Wpn.GeneralTimer matches 10 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 5 run tp @s @s
@@ -43,13 +43,13 @@
     execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 0 run function delta:api/launch_looking
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 3..15 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 3..25 run function mhdp_items:core/buffering/a
 
 # 遷移
     # スニーク+ジャンプ時：バックステップに移行
-        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/change_to_backstep
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/change_to_backstep
     # 右クリック短押し：通常コンボ2に移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/change_to_normal_1
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/end
+    execute if score @s Wpn.GeneralTimer matches 26.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/end

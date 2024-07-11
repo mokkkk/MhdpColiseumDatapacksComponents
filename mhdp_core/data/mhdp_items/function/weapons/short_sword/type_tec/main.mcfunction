@@ -68,6 +68,12 @@
     # 2段目
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.Just.2] run function mhdp_items:weapons/short_sword/type_tec/14_just_2/main
+    # 3段目
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.Just.3] run function mhdp_items:weapons/short_sword/type_tec/15_just_3/main
+    # 4段目
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.Just.4] run function mhdp_items:weapons/short_sword/type_tec/16_just_4/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

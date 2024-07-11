@@ -23,7 +23,7 @@
     execute if score @s Wpn.AnimationTimer matches 19 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_11
     execute if score @s Wpn.AnimationTimer matches 20 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_12
     execute if score @s Wpn.AnimationTimer matches 22 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_13
-    execute if score @s Wpn.AnimationTimer matches 25 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_14
+    execute if score @s Wpn.AnimationTimer matches 28 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_14
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/attack_1
@@ -55,11 +55,11 @@
     execute if score @s Wpn.AnimationTimer matches 28 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
+    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 3 6 true
 
 # 遷移
-    # 右クリック短押し：通常コンボ2に移行
-        # execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/short_sword/type_tec/14_just_2/change_to_normal_2
+    # 右クリック：ジャストラッシュ3に移行
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 32.. run function mhdp_items:weapons/short_sword/type_tec/14_just_2/change_to_just_3
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 50.. run function mhdp_items:weapons/short_sword/type_tec/14_just_2/end

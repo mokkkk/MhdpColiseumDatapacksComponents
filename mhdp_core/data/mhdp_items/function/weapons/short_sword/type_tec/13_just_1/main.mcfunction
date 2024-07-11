@@ -35,7 +35,7 @@
     execute if score @s Wpn.AnimationTimer matches 25 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
+    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 3 5 true
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s

@@ -37,5 +37,7 @@
         data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.2.1 set value {AttackType:"Blow",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.9,IsVfxStrong:false,VfxScale:[5f,6f,5f]}
         data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.2.2 set value {AttackType:"Cut",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.9,IsVfxStrong:false,VfxScale:[5f,6f,5f]}
         data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.2.3 set value {AttackType:"Cut",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:0.9,IsVfxStrong:false,VfxScale:[5f,6f,5f]}
+        data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.3 set value {AttackType:"Blow",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.9,IsVfxStrong:false,VfxScale:[5f,6f,5f]}
+        data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.4 set value {AttackType:"Cut",DamageMult:30,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:0.9,IsVfxStrong:false,VfxScale:[5f,6f,5f]}
 
 say -- 片手剣データ初期化

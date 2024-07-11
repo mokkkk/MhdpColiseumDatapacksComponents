@@ -11,7 +11,7 @@
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 3 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s Wpn.AnimationTimer matches 5 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.AnimationTimer matches 8 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 1..3 run function mhdp_items:weapons/short_sword/type_tec/10_spin/animation_5
     execute if score @s Wpn.AnimationTimer matches 4..5 run function mhdp_items:weapons/short_sword/type_tec/10_spin/animation_6
     execute if score @s Wpn.AnimationTimer matches 6..7 run function mhdp_items:weapons/short_sword/type_tec/10_spin/animation_7
@@ -35,8 +35,8 @@
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
-    execute if score @s Wpn.GeneralTimer matches 12 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 12 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
+    execute if score @s Wpn.GeneralTimer matches 10 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
+    execute if score @s Wpn.GeneralTimer matches 10 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 5 run tp @s @s
@@ -47,7 +47,7 @@
 
 # 遷移
     # スニーク+ジャンプ時：バックステップに移行
-        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/short_sword/type_tec/11_tsumuji/change_to_backstep
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/11_tsumuji/change_to_backstep
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/short_sword/type_tec/11_tsumuji/end
+    execute if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/short_sword/type_tec/11_tsumuji/end
