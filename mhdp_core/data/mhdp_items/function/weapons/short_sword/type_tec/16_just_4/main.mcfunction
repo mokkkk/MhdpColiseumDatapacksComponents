@@ -32,8 +32,8 @@
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 6 true
 
 # 遷移
-    # 右クリック短押し：通常コンボ2に移行
-        # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/short_sword/type_tec/16_just_4/change_to_normal_2
+    # ヒット時
+        execute if entity @s[tag=Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/short_sword/type_tec/16_just_4/change_to_jumpslash
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 31.. run function mhdp_items:weapons/short_sword/type_tec/16_just_4/end

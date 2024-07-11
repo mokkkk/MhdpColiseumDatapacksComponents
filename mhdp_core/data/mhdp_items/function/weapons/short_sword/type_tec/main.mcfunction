@@ -74,6 +74,14 @@
     # 4段目
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.Just.4] run function mhdp_items:weapons/short_sword/type_tec/16_just_4/main
+    # 駆け上がり斬り
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.JumpSlash.High] run function mhdp_items:weapons/short_sword/type_tec/17_jumpslash_high/main
 
+# フォールバッシュ
+    # 強
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.Fall.High] run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/main
+        
 # 終了
     tag @s remove Ply.Weapon.NoOpe

@@ -7,6 +7,7 @@
 ## tag
 # 状態
     #declare tag Ply.Weapon.Deactivated 武器操作無効化状態
+    #declare tag Ply.Flag.Just.Success ジャストラッシュ成功
 # 操作
     #declare tag Wpn.Ss.Tec.Normal.1 通常コンボ1
     #declare tag Wpn.Ss.Tec.Normal.2 通常コンボ2
@@ -21,3 +22,9 @@
     #declare tag Wpn.Ss.Tec.Tsumuji 旋刈り
     #declare tag Wpn.Ss.Tec.Backstep バックステップ
     #declare tag Wpn.Ss.Tec.Just.1 飛び込み斬り
+    #declare tag Wpn.Ss.Tec.Just.2 ジャストラッシュ2
+    #declare tag Wpn.Ss.Tec.Just.3 ジャストラッシュ3
+    #declare tag Wpn.Ss.Tec.Just.4 ジャストラッシュ4
+    #declare tag Wpn.Ss.Tec.JumpSlash.High 駆け上がり斬り・高
+    
+    #declare tag Wpn.Ss.Tec.Fall.High フォールバッシュ・高

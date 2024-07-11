@@ -44,10 +44,15 @@
             scoreboard objectives add Ply.Timer.DeathAnimation dummy
         # 先行入力
             scoreboard objectives add Ply.Timer.Buffering dummy
+    # その他処理用
+        # 攻撃対象の保持
+            scoreboard objectives add Ply.Other.AttackTargetUuid dummy
 
 # モンスター関連
     # UID
         scoreboard objectives add Mns.Uid dummy
+    # その他EntityのUuid
+        scoreboard objectives add Entity.Uuid dummy
 
 ## Scoreboard初期値設定
 # プレイヤーUID

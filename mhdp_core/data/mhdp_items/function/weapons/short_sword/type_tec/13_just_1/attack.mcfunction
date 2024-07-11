@@ -11,8 +11,7 @@
 # ターゲット決定
     execute as @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] run tag @s add Temp.Victim
 
-# ヒットストップ    
-    execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
+# ヒットストップ
 
 # 攻撃
     data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.1

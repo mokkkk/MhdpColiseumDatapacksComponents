@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_tec/14_just_2/attack_3
+#> mhdp_items:weapons/short_sword/type_tec/16_just_4/attack_1
 #
-# ジャストラッシュ2 攻撃判定
+# 駆け上がり斬り 攻撃判定
 #
-# @within function mhdp_items:weapons/great_sword/type_tec/14_just_2/change_to_chargeattack
+# @within function mhdp_items:weapons/great_sword/type_tec/16_just_4/change_to_chargeattack
 
 # 命中判定
     execute anchored eyes positioned ^ ^ ^1.5 run tag @e[type=slime,tag=Mns.HitBox,distance=..3.5] add Temp.Hit
@@ -15,8 +15,7 @@
     execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
 
 # 攻撃
-    execute if entity @s[tag=!Ply.Flag.Just.Success] run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.2.3
-    execute if entity @s[tag=Ply.Flag.Just.Success] run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.2.3.S
+    data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.JumpSlash
     execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
 # 終了
