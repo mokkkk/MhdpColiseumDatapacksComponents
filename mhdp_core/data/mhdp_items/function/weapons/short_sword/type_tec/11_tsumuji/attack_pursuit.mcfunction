@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/short_sword/type_tec/11_tsumuji/attack_purtuit
+#> mhdp_items:weapons/short_sword/type_tec/11_tsumuji/attack_pursuit
 #
 # 旋刈り 攻撃判定
 #

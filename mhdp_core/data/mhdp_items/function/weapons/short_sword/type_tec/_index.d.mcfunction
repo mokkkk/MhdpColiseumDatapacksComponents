@@ -18,3 +18,6 @@
     #declare tag Wpn.Ss.Tec.Bash.2 バックナックル
     #declare tag Wpn.Ss.Tec.Bash.3 ハードバッシュ
     #declare tag Wpn.Ss.Tec.Spin 回転斬り
+    #declare tag Wpn.Ss.Tec.Tsumuji 旋刈り
+    #declare tag Wpn.Ss.Tec.Backstep バックステップ
+    #declare tag Wpn.Ss.Tec.Just.1 飛び込み斬り

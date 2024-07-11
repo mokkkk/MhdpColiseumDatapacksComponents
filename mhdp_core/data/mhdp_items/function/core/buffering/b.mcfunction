@@ -12,4 +12,6 @@
     tag @s add Ply.Ope.Buffering.B
     tag @s remove Ply.Ope.Buffering.C
     tag @s remove Ply.Ope.Buffering.D
+    tag @s remove Ply.Ope.Buffering.E
+    tag @s remove Ply.Ope.Buffering.F
     scoreboard players set @s Ply.Timer.Buffering 10

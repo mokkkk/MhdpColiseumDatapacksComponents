@@ -57,5 +57,17 @@
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.Tsumuji] run function mhdp_items:weapons/short_sword/type_tec/11_tsumuji/main
 
+# バックステップ
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Tec.Backstep] run function mhdp_items:weapons/short_sword/type_tec/12_backstep/main
+
+# ジャストラッシュ
+    # 1段目・飛び込み斬り
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.Just.1] run function mhdp_items:weapons/short_sword/type_tec/13_just_1/main
+    # 2段目
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.Just.2] run function mhdp_items:weapons/short_sword/type_tec/14_just_2/main
+
 # 終了
     tag @s remove Ply.Weapon.NoOpe

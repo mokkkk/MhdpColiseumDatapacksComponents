@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/short_sword/type_tec/8_bash_2/change_to_bash_3
+#> mhdp_items:weapons/short_sword/type_tec/8_bash_2/change_to_backstep
 #
-# 通常コンボ2 → 水平斬りコンボ1
+# バックナックル → バックステップ
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/8_bash_2/main
 
@@ -15,4 +15,4 @@
     tag @s remove Wpn.Ss.Tec.Bash.2
     
 # 対象の処理を実行
-    function mhdp_items:weapons/short_sword/type_tec/9_bash_3/start
+    function mhdp_items:weapons/short_sword/type_tec/12_backstep/start

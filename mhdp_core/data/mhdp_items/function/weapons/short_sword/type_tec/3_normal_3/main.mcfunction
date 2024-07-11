@@ -35,6 +35,8 @@
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
+    execute if score @s Wpn.GeneralTimer matches 16 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
+    execute if score @s Wpn.GeneralTimer matches 16 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 3 run tp @s @s
@@ -49,6 +51,8 @@
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/b
 
 # 遷移
+    # スニーク+ジャンプ時：バックステップに移行
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/3_normal_3/change_to_backstep
     # スニーク+右クリック：盾攻撃に移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/3_normal_3/change_to_bash
     # 同時押し：旋刈りに移行
