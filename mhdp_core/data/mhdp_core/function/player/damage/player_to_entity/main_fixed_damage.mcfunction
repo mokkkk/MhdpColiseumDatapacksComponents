@@ -20,6 +20,10 @@
     # 攻撃力
         execute store result score #mhdp_temp_attack_value MhdpCore run data get storage mhdp_core:temp Damage.AttackValue
 
+# 攻撃対象
+    execute if entity @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] store result storage mhdp_core:temp Damage.TargetMonsterUid int 1 run scoreboard players get @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] Mns.HitBox.MonsterUid
+    execute if entity @s[type=item_display,tag=Mns.Root] store result storage mhdp_core:temp Damage.TargetMonsterUid int 1 run scoreboard players get @s Mns.Uid
+
 # ダメージ量を計算
     # 物理
         # 攻撃力 * モーション値
@@ -39,6 +43,10 @@
             scoreboard players operation #mhdp_temp_damage_partdamage_value MhdpCore /= #const_100 Const
     # 総ダメージ
         scoreboard players operation #mhdp_temp_damage_total MhdpCore = #mhdp_temp_damage_phys_value MhdpCore
+
+# 演出
+    execute if entity @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] positioned as @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] run function mhdp_core:player/damage/player_to_entity/vfx_show_damage
+    execute unless entity @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] positioned ~ ~2 ~ run function mhdp_core:player/damage/player_to_entity/vfx_show_damage
 
     tellraw @a [{"text":"固定ダメージ:"},{"score":{"name":"#mhdp_temp_damage_phys_value","objective":"MhdpCore"}}]
 

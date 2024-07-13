@@ -36,9 +36,9 @@
 
 # 減気耐性値
     # 倍率取得
-        execute store result score #mhdp_temp_multiply MhdpCore run data get storage mhdp_core:temp TargetMonsterData.TireDamagePer
+        execute store result score #mhdp_temp_multiply MhdpCore run data get storage mhdp_core:temp TargetMonsterData.TireDamage
     # 計算
-        scoreboard players operation @s Mns.Tire.Damage *= #mhdp_temp_multiply MhdpCore
+        scoreboard players operation @s Mns.Tire.Damage *= #mhdp_temp_hp_multiply_playercount MhdpCore
         execute store result score @s Mns.Tire.Damage.Max run scoreboard players operation @s Mns.Tire.Damage /= #const_100 Const
 
 # 怒り
@@ -66,7 +66,8 @@
             scoreboard players operation @s Mns.Paralysis.Damage *= #mhdp_temp_hp_multiply_playercount MhdpCore
             execute store result score @s Mns.Paralysis.Damage.Max run scoreboard players operation @s Mns.Paralysis.Damage /= #const_100 Const
     # 継続時間
-        execute store result score @s Mns.Paralysis.Timer store result score @s Mns.Paralysis.Timer.Max run data get storage mhdp_core:temp TargetMonsterData.ParalysisTimer
+        execute store result score @s Mns.Paralysis.Timer.Max run data get storage mhdp_core:temp TargetMonsterData.ParalysisTimer
+        execute store result score @s Mns.Paralysis.Timer run scoreboard players operation @s Mns.Paralysis.Timer.Max *= #const_20 Const
 
 # 毒
     # 耐性値
@@ -78,14 +79,14 @@
             scoreboard players operation @s Mns.Poison.Damage *= #mhdp_temp_hp_multiply_playercount MhdpCore
             execute store result score @s Mns.Poison.Damage.Max run scoreboard players operation @s Mns.Poison.Damage /= #const_100 Const
     # 継続時間
-        execute store result score @s Mns.Poison.Timer store result score @s Mns.Poison.Timer.Max run data get storage mhdp_core:temp TargetMonsterData.PoisonTimer
+        execute store result score @s Mns.Poison.Timer.Max run data get storage mhdp_core:temp TargetMonsterData.PoisonTimer
+        execute store result score @s Mns.Poison.Timer run scoreboard players operation @s Mns.Poison.Timer.Max *= #const_20 Const
     # 効果ダメージ
         # 基礎値取得
             execute store result score @s Mns.Poison.Effect.Value run data get storage mhdp_core:temp TargetMonsterData.PoisonEffectDamage
         # 計算
             scoreboard players operation @s Mns.Poison.Effect.Value *= @s Mns.Hp
-            scoreboard players operation @s Mns.Poison.Effect.Value /= #const_100 Const
-            scoreboard players operation @s Mns.Poison.Effect.Value /= #const_100 Const
+            scoreboard players operation @s Mns.Poison.Effect.Value /= #const_10000 Const
 
 # 爆破
     # 耐性値
@@ -117,12 +118,14 @@
         # フラグ
             execute if data storage mhdp_core:temp TargetMonsterData{ParalyseTrapEnable:true} run tag @s add Mns.Param.IsParalyseTrapEnable
         # 継続時間
-            execute store result score @s Mns.ParalyseTrap.Timer store result score @s Mns.ParalyseTrap.Timer.Max run data get storage mhdp_core:temp TargetMonsterData.ParalyseTrapTimer
+            execute store result score @s Mns.ParalyseTrap.Timer.Max run data get storage mhdp_core:temp TargetMonsterData.ParalyseTrapTimer
+            execute store result score @s Mns.ParalyseTrap.Timer run scoreboard players operation @s Mns.ParalyseTrap.Timer.Max *= #const_20 Const
     # 落とし穴
         # フラグ
             execute if data storage mhdp_core:temp TargetMonsterData{HallTrapEnable:true} run tag @s add Mns.Param.IsHallTrapEnable
         # 継続時間
-            execute store result score @s Mns.HallTrap.Timer store result score @s Mns.HallTrap.Timer.Max run data get storage mhdp_core:temp TargetMonsterData.HallTrapTimer
+            execute store result score @s Mns.HallTrap.Timer.Max run data get storage mhdp_core:temp TargetMonsterData.HallTrapTimer
+            execute store result score @s Mns.HallTrap.Timer run scoreboard players operation @s Mns.HallTrap.Timer.Max *= #const_20 Const
     # モデルのnbt設定
         data modify entity @s teleport_duration set value 1
         execute on passengers if entity @s[type=item_display] run data modify entity @s teleport_duration set value 1

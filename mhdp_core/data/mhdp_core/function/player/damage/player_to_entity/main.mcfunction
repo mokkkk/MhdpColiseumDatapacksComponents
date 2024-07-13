@@ -105,6 +105,13 @@
             execute if entity @s[tag=Ply.Temp.IsDisableConditionDamage] run scoreboard players set #mhdp_temp_condition_value_paralysis MhdpCore 0
             execute if entity @s[tag=Ply.Temp.IsDisableConditionDamage] run scoreboard players set #mhdp_temp_condition_value_bomb MhdpCore 0
             tag @s remove Ply.Temp.IsDisableConditionDamage
+        # 状態異常値 * モーション値
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_poison MhdpCore *= #mhdp_temp_element_attack_value MhdpCore
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_poison MhdpCore /= #const_100 Const
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_paralysis MhdpCore *= #mhdp_temp_element_attack_value MhdpCore
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_paralysis MhdpCore /= #const_100 Const
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_bomb MhdpCore *= #mhdp_temp_element_attack_value MhdpCore
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_bomb MhdpCore /= #const_100 Const
 
 # 会心判定およびダメージ関連スキル適用
     function mhdp_core:player/skill/attack/attack_damage

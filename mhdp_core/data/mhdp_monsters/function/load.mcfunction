@@ -59,6 +59,7 @@
         # 毒継続時間
             scoreboard objectives add Mns.Poison.Timer dummy
             scoreboard objectives add Mns.Poison.Timer.Max dummy
+            scoreboard objectives add Mns.Poison.Timer.Sub dummy
         # 毒効果ダメージ
             scoreboard objectives add Mns.Poison.Effect.Value dummy
         # 爆破耐性値

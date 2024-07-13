@@ -52,7 +52,7 @@
 
 # 状態異常の発動
     # 毒
-        execute if entity @s[tag=Mns.Temp.Damage.Poison]
+        execute if entity @s[tag=Mns.Temp.Damage.Poison] run function mhdp_monsters:core/util/damage/reaction_poison
     # 爆破
         execute if entity @s[tag=Mns.Temp.Damage.Bomb]
     # 龍気
