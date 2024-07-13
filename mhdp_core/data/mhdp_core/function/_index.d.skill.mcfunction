@@ -68,6 +68,8 @@
     # 特殊
         #declare tag Skill.Extra.Guts 根性
         #declare tag Skill.Extra.Handicraft 匠
+        #declare tag Skill.Extra.RazorSharp.1 業物LV1
+        #declare tag Skill.Extra.RazorSharp.2 業物LV2
         #declare tag Skill.Extra.SpeedSharping.1 砥石高速化Lv1
         #declare tag Skill.Extra.SpeedSharping.2 砥石高速化Lv2
 

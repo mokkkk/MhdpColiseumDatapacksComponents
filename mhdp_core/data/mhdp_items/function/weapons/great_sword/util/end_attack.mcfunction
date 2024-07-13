@@ -5,12 +5,13 @@
 # @within function mhdp_items:core/*
 
 # アニメーションリセット
-    data modify storage mhdp_core:temp Args.IsDrawing set value true
-    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 1
-    data modify storage mhdp_core:temp Args.Slot set value "mainhand"
-    execute if entity @s[tag=!Ply.Weapon.Type.Tech] run function mhdp_items:weapons/great_sword/type_normal/general
-    execute if entity @s[tag=Ply.Weapon.Type.Tech] run function mhdp_items:weapons/great_sword/type_tec/general
-    execute if entity @s[tag=Ply.Weapon.NoOpe] run function mhdp_items:core/util/item_modify_animation
+    # 操作取得
+        function mhdp_items:weapons/great_sword/util/get_no_ope
+    # 無操作の場合、アニメーションをリセット
+        data modify storage mhdp_core:temp Args.IsDrawing set value true
+        scoreboard players set #mhdp_arg_cmd_offset MhdpCore 1
+        data modify storage mhdp_core:temp Args.Slot set value "mainhand"
+        execute if entity @s[tag=Ply.Weapon.NoOpe] run function mhdp_items:core/util/item_modify_animation
 
 # attributeリセット
     attribute @s generic.attack_speed modifier remove mhdp_core:weapon_attack_speed

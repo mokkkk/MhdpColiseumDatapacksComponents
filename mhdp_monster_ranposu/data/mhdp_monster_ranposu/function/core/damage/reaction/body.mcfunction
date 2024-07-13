@@ -6,7 +6,7 @@
 
 # 共通処理
     # スコアリセット
-        scoreboard players operation @s Mns.Ranposu.Head.Damage = @s Mns.Ranposu.Head.Damage.Max
+        scoreboard players operation @s Mns.Ranposu.Body.Damage = @s Mns.Ranposu.Body.Damage.Max
 
 # アニメーション再生処理
     # 麻痺・ダウン・スタン時以外

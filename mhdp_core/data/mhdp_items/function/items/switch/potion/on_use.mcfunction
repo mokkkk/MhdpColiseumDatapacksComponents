@@ -4,4 +4,6 @@
 #
 # @within function mhdp_items:/**
 
-say 回復薬使用
+# 効果発動
+    # HPを5回復
+        summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,potion_contents:{custom_effects:[{id:"minecraft:regeneration",amplifier:5,duration:10,show_particles:0b}]}}

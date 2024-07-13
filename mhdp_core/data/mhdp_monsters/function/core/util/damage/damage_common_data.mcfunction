@@ -31,7 +31,7 @@
     execute if score @s Mns.Anger.Damage matches ..0 run tag @s add Mns.Temp.Damage.Anger
 
 # 状態異常
-    execute if entity @s[tag=Mns.Param.IsPoisonEnable] run scoreboard players operation @s Mns.Poison.Damage -= #mhdp_temp_condition_value_poison MhdpCore
+    execute if entity @s[tag=Mns.Param.IsPoisonEnable,tag=!Mns.State.IsPoison] run scoreboard players operation @s Mns.Poison.Damage -= #mhdp_temp_condition_value_poison MhdpCore
     execute if entity @s[tag=Mns.Param.IsParalysisEnable,tag=!Mns.State.IsParalysis] run scoreboard players operation @s Mns.Paralysis.Damage -= #mhdp_temp_condition_value_paralysis MhdpCore
     execute if entity @s[tag=Mns.Param.IsBombEnable] run scoreboard players operation @s Mns.Bomb.Damage -= #mhdp_temp_condition_value_bomb MhdpCore
     execute if entity @s[tag=!Mns.State.IsPoison] if score @s Mns.Poison.Damage matches ..0 run tag @s add Mns.Temp.Damage.Poison

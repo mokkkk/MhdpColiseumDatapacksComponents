@@ -10,8 +10,7 @@
 # ガード値取得
     execute if entity @s[tag=Ply.Weapon.Equip.ShortSword] run scoreboard players set #mhdp_temp_guard_strength MhdpCore 2
     execute if entity @s[tag=Ply.Weapon.Equip.GreatSword] run scoreboard players set #mhdp_temp_guard_strength MhdpCore 3
-    execute if entity @s[tag=Skill.Defence.Guard.Guard.1] run scoreboard players add #mhdp_temp_guard_strength MhdpCore 1
-    execute if entity @s[tag=Skill.Defence.Guard.Guard.2] run scoreboard players add #mhdp_temp_guard_strength MhdpCore 2
+    function mhdp_core:player/skill/damage/guard
 
 # 威力値取得
     execute store result score #mhdp_temp_guard_value MhdpCore run data get storage mhdp_core:temp Damage.GuardValue
@@ -46,10 +45,11 @@
     execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 1..2 run scoreboard players set @s Wpn.GuardStopTimer 15
     execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 3..4 run scoreboard players set @s Wpn.GuardStopTimer 25
 
-# 斬れ味消費
-
 # 無敵時間上書き
     execute if entity @s[tag=Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsDisableDamageInterval:false} run scoreboard players set @s Ply.Timer.DamageInterval 8
+
+# 武器ごとの処理に遷移
+    execute if entity @s[tag=Ply.Weapon.Guard] run function mhdp_items:core/switch/weapon_guard
 
 # 終了
     execute if score @s Ply.Stats.Stamina matches ..0 run scoreboard players set @s Ply.Stats.Stamina 0

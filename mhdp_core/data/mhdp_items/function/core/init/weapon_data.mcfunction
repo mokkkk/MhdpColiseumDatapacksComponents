@@ -7,7 +7,9 @@
 # 初期化
     data modify storage mhdp_core:game_data WeaponAttackData set value {}
 
+say 武器データ初期化
+
 # 大剣
     function mhdp_items:weapons/great_sword/init
-
-say 武器データ初期化
+# 片手剣
+    function mhdp_items:weapons/short_sword/init

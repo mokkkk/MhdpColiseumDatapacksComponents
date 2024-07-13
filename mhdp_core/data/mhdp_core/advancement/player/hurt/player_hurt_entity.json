@@ -1,14 +1,7 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:player_hurt_entity",
-      "conditions": {
-        "damage": {
-          "dealt": {
-            "min": 3
-          }
-        }
-      }
+      "trigger": "minecraft:player_hurt_entity"
     }
   },
   "rewards": {

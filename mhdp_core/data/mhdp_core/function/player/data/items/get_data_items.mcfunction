@@ -4,6 +4,9 @@
 #
 # @within function mhdp_core:player/data/get_data
 
+# タグ
+    data modify storage mhdp_core:temp PlayerData.Tags set from storage mhdp_core:temp TempPlayerData.Tags
+
 # 前tickのメインハンド
     execute unless data storage mhdp_core:temp PlayerData.Item.Mainhand run data remove storage mhdp_core:temp PlayerData.Item.Mainhand.Pre
     execute if data storage mhdp_core:temp PlayerData.Item.Mainhand run data modify storage mhdp_core:temp PlayerData.Item.Mainhand.Pre set from storage mhdp_core:temp PlayerData.Item.Mainhand

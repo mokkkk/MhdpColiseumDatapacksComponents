@@ -19,6 +19,7 @@
     function mhdp_items:player/ui/main
 
 # 直接攻撃処理の実行
+    execute if entity @s[tag=Ply.Adv.Hurt.PlayerHurtEntity] run function mhdp_core:player/damage/player_to_entity/direct_attack
 
 # 各武器のメイン処理実行
     execute if entity @s[tag=!Ply.Weapon.Deactivated] run function mhdp_items:core/switch/weapon_main

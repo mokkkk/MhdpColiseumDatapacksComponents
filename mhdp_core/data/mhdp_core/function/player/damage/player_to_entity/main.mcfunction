@@ -61,7 +61,7 @@
         scoreboard players operation #mhdp_temp_condition_value_bomb MhdpCore = @s Ply.Stats.ConditionValue.Bomb
 
 # ステータス関連スキル効果適用
-    function mhdp_core:player/damage/player_to_entity/skill/attack_status
+    function mhdp_core:player/skill/attack/attack_status
 
 # ダメージ量を計算
     # 物理ダメージ斬れ味補正
@@ -105,9 +105,16 @@
             execute if entity @s[tag=Ply.Temp.IsDisableConditionDamage] run scoreboard players set #mhdp_temp_condition_value_paralysis MhdpCore 0
             execute if entity @s[tag=Ply.Temp.IsDisableConditionDamage] run scoreboard players set #mhdp_temp_condition_value_bomb MhdpCore 0
             tag @s remove Ply.Temp.IsDisableConditionDamage
+        # 状態異常値 * モーション値
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_poison MhdpCore *= #mhdp_temp_element_attack_value MhdpCore
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_poison MhdpCore /= #const_100 Const
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_paralysis MhdpCore *= #mhdp_temp_element_attack_value MhdpCore
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_paralysis MhdpCore /= #const_100 Const
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_bomb MhdpCore *= #mhdp_temp_element_attack_value MhdpCore
+            execute if entity @s[tag=!Ply.Temp.IsDisableConditionDamage] run scoreboard players operation #mhdp_temp_condition_value_bomb MhdpCore /= #const_100 Const
 
 # 会心判定およびダメージ関連スキル適用
-    function mhdp_core:player/damage/player_to_entity/skill/attack_damage
+    function mhdp_core:player/skill/attack/attack_damage
 
 # 実ダメージ量の計算
     # 物理
@@ -136,6 +143,7 @@
     execute positioned as @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] run function mhdp_core:player/damage/player_to_entity/vfx
 
 # 斬れ味消費
+    function mhdp_core:player/skill/attack/attack_sharpness
     execute if data storage mhdp_core:temp Damage{IsDecreseSharpness:true} run function mhdp_core:player/damage/player_to_entity/decrease_sharpness
 
 # モンスター側の被ダメージ処理に移行

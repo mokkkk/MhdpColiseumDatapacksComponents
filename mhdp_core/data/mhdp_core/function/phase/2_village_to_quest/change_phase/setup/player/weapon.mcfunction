@@ -42,7 +42,7 @@
     # 属性値
         function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon_element
     # スキル効果適用
-        function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon_skill
+        function mhdp_core:player/skill/attack/init_status
 
 # 武器データを保存
     data modify storage mhdp_core:temp PlayerData.Item.UsingWeapon set from entity @s Inventory[{Slot:-106b}]

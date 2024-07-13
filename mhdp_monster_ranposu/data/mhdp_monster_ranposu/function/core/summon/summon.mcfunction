@@ -7,6 +7,9 @@
 # Uidスコア化
     execute store result score #mhdp_temp_monster_uid Mns.Uid run data get storage mhdp_core:temp TargetMonsterData.Uid
 
+# データ初期化
+    function mhdp_monster_ranposu:core/init/init_monster_data
+
 # モデル召喚
     function animated_java:ranposu_aj/summon/default
 

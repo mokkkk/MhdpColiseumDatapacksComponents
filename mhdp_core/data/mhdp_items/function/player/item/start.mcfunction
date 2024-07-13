@@ -9,3 +9,6 @@
 
 # 効果音
     playsound item.armor.equip_elytra master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
+
+# タイマー初期化
+    scoreboard players set @s Ply.Ope.EatingTimer.Effect 0

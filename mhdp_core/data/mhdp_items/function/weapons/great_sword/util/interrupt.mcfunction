@@ -12,6 +12,10 @@
     attribute @s generic.attack_damage modifier add mhdp_core:weapon_attack_damage 5.0 add_value
     effect clear @s slowness
 
+# タイマー初期化
+    scoreboard players set @s Wpn.GeneralTimer 0
+    scoreboard players set @s Wpn.AnimationTimer 0
+    
 # 状態タグ削除
     tag @s remove Ply.Weapon.StaminaNotRegen
     tag @s remove Ply.Weapon.Guard
@@ -21,8 +25,7 @@
     tag @s remove Ply.Flag.Hit
 
 # アニメーション停止
-    execute if entity @s[tag=!Ply.Weapon.Type.Tech] run function mhdp_items:weapons/great_sword/type_normal/stop_all_animation
-    execute if entity @s[tag=Ply.Weapon.Type.Tech] run function mhdp_items:weapons/great_sword/type_tec/stop_all_animation
+    function mhdp_items:weapons/great_sword/util/stop_all_animations
 
 # 武器モデルのリセット
     # メインハンド

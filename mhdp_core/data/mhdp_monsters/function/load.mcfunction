@@ -59,6 +59,7 @@
         # 毒継続時間
             scoreboard objectives add Mns.Poison.Timer dummy
             scoreboard objectives add Mns.Poison.Timer.Max dummy
+            scoreboard objectives add Mns.Poison.Timer.Sub dummy
         # 毒効果ダメージ
             scoreboard objectives add Mns.Poison.Effect.Value dummy
         # 爆破耐性値
@@ -106,10 +107,12 @@
             scoreboard players set #const_stun_damage_multiply Const 180
         # 減気耐性上昇割合
             scoreboard players set #const_tire_damage_multiply Const 180
-        # 麻痺耐性上昇割合
-            scoreboard players set #const_paralysis_damage_multiply Const 180
         # 毒耐性上昇割合
             scoreboard players set #const_poison_damage_multiply Const 160
+        # 麻痺耐性上昇割合
+            scoreboard players set #const_paralysis_damage_multiply Const 180
+        # 爆破耐性上昇割合
+            scoreboard players set #const_bomb_damage_multiply Const 140
         # 龍気耐性上昇割合
             scoreboard players set #const_dragonaura_damage_multiply Const 180
         # 痺れ罠効果時間減少割合

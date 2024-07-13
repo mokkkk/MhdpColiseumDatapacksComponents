@@ -32,6 +32,7 @@
         # アイテム使用タイマー
             scoreboard objectives add Ply.Ope.EatingTimer dummy
             scoreboard objectives add Ply.Ope.EatingTimerMax dummy
+            scoreboard objectives add Ply.Ope.EatingTimer.Effect dummy
         # クエスト受注のトリガー
             scoreboard objectives add Ply.Ope.AcceptedQuestId trigger
     # 処理用タイマー
@@ -41,10 +42,17 @@
             scoreboard objectives add Ply.Timer.Avoid dummy
         # クエスト中・死亡演出再生用
             scoreboard objectives add Ply.Timer.DeathAnimation dummy
+        # 先行入力
+            scoreboard objectives add Ply.Timer.Buffering dummy
+    # その他処理用
+        # 攻撃対象の保持
+            scoreboard objectives add Ply.Other.AttackTargetUuid dummy
 
 # モンスター関連
     # UID
         scoreboard objectives add Mns.Uid dummy
+    # その他EntityのUuid
+        scoreboard objectives add Entity.Uuid dummy
 
 ## Scoreboard初期値設定
 # プレイヤーUID
@@ -56,6 +64,7 @@
     scoreboard players set #const_2 Const 2
     scoreboard players set #const_3 Const 3
     scoreboard players set #const_20 Const 20
+    scoreboard players set #const_30 Const 30
     scoreboard players set #const_60 Const 60
     scoreboard players set #const_80 Const 80
     scoreboard players set #const_100 Const 100
@@ -78,6 +87,22 @@
     team modify Team.QuestPlaying prefix [{"text":"c","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.NoCollision prefix [{"text":"c","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.NoCollision collisionRule never
+
+## その他
+    # TSBライブラリ用
+        scoreboard objectives add Global dummy
+        scoreboard objectives add Temporary dummy
+        scoreboard objectives add Const dummy
+        scoreboard objectives add UserID dummy
+        scoreboard objectives add AttackedEntity dummy
+        scoreboard objectives add Lib dummy
+        scoreboard players set $2 Const 2
+        scoreboard players set $2^15 Const 32768
+        scoreboard players set $2^16 Const 65536
+        scoreboard players set $10 Const 10
+        scoreboard players set $100 Const 100
+        scoreboard players set $31743 Const 31743
+        scoreboard players set $65536 Const 65536
 
 ## アイテム用ロード処理
     function mhdp_items:load

@@ -28,20 +28,20 @@
         JpName:"青鳥竜",\
         ShowName:'{"text":"青鳥竜"}',\
         ShowHp:true,\
-        Hp:20000,\
-        StunDamagePer:10,\
-        TireDamagePer:30,\
+        Hp:10000,\
+        StunDamage:200,\
+        TireDamage:300,\
         AngerDamagePer:12,\
-        AngerTimer:90,\
+        AngerTimer:60,\
         AngerAttackMult:110,\
         AngerSpeed:5,\
-        ParalysisDamage:2000,\
+        ParalysisDamage:500,\
         ParalysisTimer:10,\
-        PoisonDamage:3000,\
-        PoisonTimer:40,\
-        PoisonEffectDamage:100,\
-        BombDamage:2000,\
-        BombEffectDamage:400,\
+        PoisonDamage:400,\
+        PoisonTimer:20,\
+        PoisonEffectDamage:50,\
+        BombDamage:400,\
+        BombEffectDamage:200,\
         FlashBombEnable:true,\
         SoundBombEnable:false,\
         ParalyseTrapEnable:true,\
