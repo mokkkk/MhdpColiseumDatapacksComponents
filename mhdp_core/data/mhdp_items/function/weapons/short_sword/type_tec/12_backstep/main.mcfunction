@@ -17,8 +17,8 @@
     execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/short_sword/type_tec/12_backstep/animation_1
 
 # 演出
-    execute if score @s Wpn.GeneralTimer matches 25 run playsound entity.experience_orb.pickup master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
-    execute if score @s Wpn.GeneralTimer matches 25 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
+    execute if score @s Wpn.GeneralTimer matches 22 run playsound entity.experience_orb.pickup master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s Wpn.GeneralTimer matches 22 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
@@ -36,11 +36,11 @@
 
 # 遷移
     # 右クリック短押し：飛び込み斬りに移行
-        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16..25 run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_moveslash
+        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16..21 run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_moveslash
     # 右クリック短押し：飛び込み斬りに移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_just
     # 右クリック長押し：溜め斬りに移行
-        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 26.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_chargeslash
+        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_chargeslash
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 50.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/end

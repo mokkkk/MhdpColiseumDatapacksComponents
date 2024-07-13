@@ -17,5 +17,3 @@
 
 # スケジュール開始
     schedule function mhdp_monsters:core/util/damage/reaction_bomb_schedule 1t append
-
-say bomb
