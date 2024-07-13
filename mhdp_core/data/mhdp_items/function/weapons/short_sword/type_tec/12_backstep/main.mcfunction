@@ -23,6 +23,9 @@
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
 
+# 無敵時間
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set @s Ply.Timer.Avoid 5
+
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
     execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 6500

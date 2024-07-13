@@ -28,8 +28,8 @@
         JpName:"青鳥竜",\
         ShowName:'{"text":"青鳥竜"}',\
         ShowHp:true,\
-        Hp:20000,\
-        StunDamagePer:10,\
+        Hp:10000,\
+        StunDamage:200,\
         TireDamagePer:30,\
         AngerDamagePer:12,\
         AngerTimer:90,\

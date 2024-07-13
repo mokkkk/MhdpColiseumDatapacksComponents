@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/short_sword/type_tec/19_moveslash/change_to_normal_2
 #
-# 通常コンボ1 → 通常コンボ2
+# 突進斬り → 通常コンボ1
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/19_moveslash/main
 
@@ -15,4 +15,4 @@
     tag @s remove Wpn.Ss.Tec.MoveSlash
     
 # 対象の処理を実行
-    function mhdp_items:weapons/short_sword/type_tec/2_normal_2/start
+    function mhdp_items:weapons/short_sword/type_tec/1_normal_1/start

@@ -16,9 +16,9 @@
 
 # 0:テスト用
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:0,Name:"テスト用クエスト1",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
+        ID:0,Name:"青鳥竜の狩猟",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:10,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:999,DeathCount:99999,RewardMoney:6,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:18,AttackMultiply:70,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }

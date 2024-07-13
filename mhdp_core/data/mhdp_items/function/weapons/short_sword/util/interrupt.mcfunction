@@ -12,6 +12,10 @@
     attribute @s generic.attack_damage modifier add mhdp_core:weapon_attack_damage 5.0 add_value
     effect clear @s slowness
 
+# タイマー初期化
+    scoreboard players set @s Wpn.GeneralTimer 0
+    scoreboard players set @s Wpn.AnimationTimer 0
+
 # 状態タグ削除
     tag @s remove Ply.Weapon.StaminaNotRegen
     tag @s remove Ply.Weapon.Guard

@@ -16,4 +16,4 @@
     execute if entity @s[tag=Ply.State.PlayingQuest] run item modify entity @s weapon.mainhand {function:set_count,count:-1,add:true}
 
 # 終了
-    scoreboard players set @s Ply.Ope.EatingTimer 0
+    scoreboard players set @s Ply.Ope.EatingTimer -40

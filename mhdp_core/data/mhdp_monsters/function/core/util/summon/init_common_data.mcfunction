@@ -29,9 +29,9 @@
 
 # スタン耐性値
     # 倍率取得
-        execute store result score #mhdp_temp_multiply MhdpCore run data get storage mhdp_core:temp TargetMonsterData.StunDamagePer
+        execute store result score @s Mns.Stun.Damage run data get storage mhdp_core:temp TargetMonsterData.StunDamage
     # 計算
-        scoreboard players operation @s Mns.Stun.Damage *= #mhdp_temp_multiply MhdpCore
+        scoreboard players operation @s Mns.Stun.Damage *= #mhdp_temp_hp_multiply_playercount MhdpCore
         execute store result score @s Mns.Stun.Damage.Max run scoreboard players operation @s Mns.Stun.Damage /= #const_100 Const
 
 # 減気耐性値
