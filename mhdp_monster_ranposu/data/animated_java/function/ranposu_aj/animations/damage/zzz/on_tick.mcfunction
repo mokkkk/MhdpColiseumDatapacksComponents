@@ -2,7 +2,7 @@
 scoreboard players remove @s aj.tween_duration 1
 execute if score @s aj.tween_duration matches 1.. run return 1
 execute if score @s aj.tween_duration matches 0 on passengers run data modify entity @s interpolation_duration set value 1
-execute store result storage aj:temp frame int 1 run scoreboard players get @s aj.frame
+execute store result storage aj:temp frame int 1 run scoreboard players get @s aj.damage.frame
 function animated_java:ranposu_aj/animations/damage/zzz/apply_frame with storage aj:temp
-execute if score @s aj.frame matches 65.. run return run function animated_java:ranposu_aj/animations/damage/pause
-scoreboard players add @s aj.frame 1
+execute if score @s aj.damage.frame matches 65.. run return run function animated_java:ranposu_aj/animations/damage/pause
+scoreboard players add @s aj.damage.frame 1
