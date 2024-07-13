@@ -41,7 +41,7 @@
         PoisonTimer:20,\
         PoisonEffectDamage:50,\
         BombDamage:400,\
-        BombEffectDamage:400,\
+        BombEffectDamage:200,\
         FlashBombEnable:true,\
         SoundBombEnable:false,\
         ParalyseTrapEnable:true,\
