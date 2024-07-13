@@ -10,6 +10,12 @@
 # 抜刀攻撃
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/short_sword/type_tec/0_drawattack/start
 
+# ガード
+    # 開始：右クリック短押し
+            execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_tec/24_guard/start
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Tec.Guard] run function mhdp_items:weapons/short_sword/type_tec/24_guard/main
+
 # 通常コンボ
     # 1段目
         # 開始：右クリック短押し
@@ -38,9 +44,7 @@
 
 # 盾攻撃コンボ
     # 盾攻撃
-        # 開始：スニーク中に右クリック
-            execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_tec/7_bash_1/start
-        # 処理
+       # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.Bash.1] run function mhdp_items:weapons/short_sword/type_tec/7_bash_1/main
     # バックナックル
         # 処理
