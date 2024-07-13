@@ -7,6 +7,10 @@
 # TODO: 武器の初期化処理
     say TODO:片手剣抜刀処理
 
+# タイマー初期化
+    scoreboard players set @s Wpn.GeneralTimer 0
+    scoreboard players set @s Wpn.AnimationTimer 0
+
 # サブ武器装備
     # タグ付与
         tag @s add Ply.Weapon.Drawing.Sub

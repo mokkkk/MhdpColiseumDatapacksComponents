@@ -37,7 +37,7 @@
         execute if data storage mhdp_core:temp Damage.VfxScale store result score #mhdp_temp_vfx_offset MhdpCore run data get storage mhdp_core:temp Damage.VfxScale[0]
     # Z軸回転取得
         data modify storage mhdp_core:temp Arg.VfxRotation set from storage mhdp_core:temp Damage.VfxRotation
-        execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 store result storage mhdp_core:temp Arg.VfxRotation int 1 run random roll 0..360
+        execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 store result storage mhdp_core:temp Arg.VfxRotation int 1 run random value 0..360
     # 位置オフセット取得
         function mhdp_core:player/damage/player_to_entity/vfx_calc_offset
     # 表示
@@ -52,9 +52,9 @@
     execute if score #mhdp_temp_defence_phys MhdpCore matches ..44 run data modify storage mhdp_core:temp Arg.Scale set value 1.0
     execute if score #mhdp_temp_defence_phys MhdpCore matches 45.. run data modify storage mhdp_core:temp Arg.Scale set value 1.0
     execute store result storage mhdp_core:temp Arg.Damage int 1 run scoreboard players get #mhdp_temp_damage_total MhdpCore
-    execute store result storage mhdp_core:temp Arg.RotX int 1 run random roll 0..90
-    execute store result storage mhdp_core:temp Arg.RotY int 1 run random roll 0..359
-    execute store result storage mhdp_core:temp Arg.Dist int 1 run random roll 0..9
+    execute store result storage mhdp_core:temp Arg.RotX int 1 run random value 0..90
+    execute store result storage mhdp_core:temp Arg.RotY int 1 run random value 0..359
+    execute store result storage mhdp_core:temp Arg.Dist int 1 run random value 0..9
     function mhdp_core:player/damage/player_to_entity/macro/m.summon_damage_text with storage mhdp_core:temp Arg
 
 # playsound item.wolf_armor.break master @a ~ ~ ~ 1 1

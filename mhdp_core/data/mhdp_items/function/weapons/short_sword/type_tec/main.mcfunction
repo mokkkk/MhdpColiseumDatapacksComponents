@@ -8,7 +8,7 @@
     function mhdp_items:weapons/short_sword/util/get_no_ope
 
 # 抜刀攻撃
-    # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/short_sword/type_tec/0_drawattack/start
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/short_sword/type_tec/0_drawattack/start
 
 # 通常コンボ
     # 1段目
@@ -77,11 +77,29 @@
     # 駆け上がり斬り
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.JumpSlash.High] run function mhdp_items:weapons/short_sword/type_tec/17_jumpslash_high/main
+    # フォールバッシュ
+        # 強
+            # 処理
+                execute if entity @s[tag=Wpn.Ss.Tec.Fall.High] run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/main
 
-# フォールバッシュ
-    # 強
+# 突進斬り
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Tec.MoveSlash] run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/main
+
+# 溜め斬り
+    # 溜め斬り
         # 処理
-            execute if entity @s[tag=Wpn.Ss.Tec.Fall.High] run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/main
-        
+            execute if entity @s[tag=Wpn.Ss.Tec.ChargeSlash] run function mhdp_items:weapons/short_sword/type_tec/20_chargeslash/main
+    # 駆け上がり斬り
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.JumpSlash] run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/main
+    # フォールバッシュ
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.Fall] run function mhdp_items:weapons/short_sword/type_tec/22_fall/main
+
+# 鉄蟲糸技：飛影
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Tec.Tobikage] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/main
+    
 # 終了
     tag @s remove Ply.Weapon.NoOpe

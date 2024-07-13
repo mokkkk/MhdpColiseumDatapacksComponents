@@ -10,8 +10,8 @@
 # 強制抜刀
     function mhdp_items:player/weapon/sheathe/force_drawing
 
-# 通常：抜刀溜めに移行
-    execute if entity @s[tag=!Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/great_sword/type_tec/5_charge_draw/start
+# 通常：突進斬りに移行
+    execute if entity @s[tag=!Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/start
 
-# 翔蟲：ハンティングエッジに移行
-    execute if entity @s[tag=Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/great_sword/type_tec/10_hunting_edge/start
+# 翔蟲：飛影に移行
+    execute if entity @s[tag=Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/start

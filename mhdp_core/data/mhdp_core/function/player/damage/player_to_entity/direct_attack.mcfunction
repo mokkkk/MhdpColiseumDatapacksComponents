@@ -33,7 +33,7 @@
 
 # 攻撃演出のランダム回転
     execute store result score #mhdp_temp_vfx_rotation_base MhdpCore run data get storage mhdp_core:temp Damage.VfxRotation 100
-    execute store result score #mhdp_temp_vfx_rotation_random MhdpCore run random roll -50..50
+    execute store result score #mhdp_temp_vfx_rotation_random MhdpCore run random value -50..50
     execute store result storage mhdp_core:temp Damage.VfxRotation float 0.01 run scoreboard players operation #mhdp_temp_vfx_rotation_base MhdpCore += #mhdp_temp_vfx_rotation_random MhdpCore
 
 # 対象のHPを回復

@@ -34,4 +34,4 @@
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches ..59 run scoreboard players set @s Wpn.GeneralTimer 60
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 75.. run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/end
+    execute if score @s Wpn.GeneralTimer matches 68.. run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/end

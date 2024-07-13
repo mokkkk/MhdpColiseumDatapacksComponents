@@ -5,7 +5,7 @@
 # @within function mhdp_core:player/damage/player_to_entity/main
 
 # 会心判定
-    execute store result score #mhdp_temp_crit_check MhdpCore run random roll 1..100
+    execute store result score #mhdp_temp_crit_check MhdpCore run random value 1..100
     execute if score #mhdp_temp_crit_value MhdpCore matches 1.. if score #mhdp_temp_crit_value MhdpCore >= #mhdp_temp_crit_check MhdpCore run tag @s add Ply.Temp.IsCrit
     scoreboard players remove #mhdp_temp_crit_check MhdpCore 101
     execute if score #mhdp_temp_crit_value MhdpCore matches ..-1 if score #mhdp_temp_crit_value MhdpCore <= #mhdp_temp_crit_check MhdpCore run tag @s add Ply.Temp.IsCritInverse
