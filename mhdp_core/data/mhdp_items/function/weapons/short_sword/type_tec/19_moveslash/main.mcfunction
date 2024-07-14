@@ -29,9 +29,10 @@
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 10000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -15 run function delta:api/launch_looking
+    execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 1 run tp @s @s
+    execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 10000
+    execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 1 rotated ~ -15 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Ope.IsAir
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..21 run function mhdp_items:core/buffering/a

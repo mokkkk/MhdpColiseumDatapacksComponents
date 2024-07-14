@@ -36,7 +36,7 @@
 
 # 以下の優先度で怯みを適用
     # 麻痺
-        execute if entity @s[tag=Mns.Temp.Damage.Paralysis]
+        execute if entity @s[tag=Mns.Temp.Damage.Paralysis] run function mhdp_monster_ranposu:core/damage/reaction/paralysis
     # スタン
         execute if entity @s[tag=Mns.Temp.Damage.Stun] run function mhdp_monster_ranposu:core/damage/reaction/stun
     # 減気

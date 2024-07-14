@@ -17,3 +17,4 @@
 
 # 終了
     scoreboard players set @s Ply.Ope.EatingTimer -40
+    scoreboard players set @s Wpn.DeactivateTimer 5

@@ -26,6 +26,13 @@
         execute if entity @s[tag=aj.ranposu_aj.animation.down_end.playing] run function mhdp_monster_ranposu:core/tick/animation/event/down_end/main
     # 怒り
         execute if entity @s[tag=aj.ranposu_aj.animation.anger.playing] run function mhdp_monster_ranposu:core/tick/animation/event/anger/main
+    # 麻痺
+        execute if entity @s[tag=aj.ranposu_aj.animation.state_paralysis_start.playing] run function mhdp_monster_ranposu:core/tick/animation/event/state_paralysis_start/main
+        execute if entity @s[tag=aj.ranposu_aj.animation.state_paralysis.playing] run function mhdp_monster_ranposu:core/tick/animation/event/state_paralysis/main
+        execute if entity @s[tag=aj.ranposu_aj.animation.state_paralysis_end.playing] run function mhdp_monster_ranposu:core/tick/animation/event/state_paralysis_end/main
+    # スタン
+        execute if entity @s[tag=aj.ranposu_aj.animation.state_stun.playing] run function mhdp_monster_ranposu:core/tick/animation/event/state_stun/main
+        execute if entity @s[tag=aj.ranposu_aj.animation.state_stun_end.playing] run function mhdp_monster_ranposu:core/tick/animation/event/state_stun_end/main
 
 # 討伐
     # 通常
