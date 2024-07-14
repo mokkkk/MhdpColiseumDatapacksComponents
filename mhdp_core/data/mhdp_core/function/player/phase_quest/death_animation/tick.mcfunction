@@ -14,6 +14,6 @@
 
 # クエスト中の終了処理
     execute if score @s Ply.Timer.DeathAnimation matches 100.. if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} run function mhdp_core:player/phase_quest/death_animation/end_on_quest
-
+    execute if score @s Ply.Timer.DeathAnimation matches 100.. if data storage mhdp_core:game_data ActiveQuest{State:"Succeed"} run function mhdp_core:player/phase_quest/death_animation/end_on_quest
 # 終了
     # execute if score @s Ply.Timer.DeathAnimation matches 100.. run tag @s remove Ply.Event.DeathAnimation

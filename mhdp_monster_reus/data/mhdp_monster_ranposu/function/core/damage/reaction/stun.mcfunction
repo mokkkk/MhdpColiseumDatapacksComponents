@@ -13,7 +13,7 @@
 
 # アニメーション再生処理
     # アニメーション再生
-        execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:ranposu_aj/animations/damage_down/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:ranposu_aj/animations/state_stun/tween {duration:1, to_frame: 0}
         execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monsters:core/util/damage/reaction_flying
     # ダウン時間設定
         scoreboard players set @s Mns.General.DownCount 6
