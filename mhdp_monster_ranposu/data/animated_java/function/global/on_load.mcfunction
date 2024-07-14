@@ -11,6 +11,7 @@ scoreboard objectives add aj.state_paralysis_start.frame dummy
 scoreboard objectives add aj.state_paralysis.frame dummy
 scoreboard objectives add aj.state_paralysis_end.frame dummy
 scoreboard objectives add aj.state_stun.frame dummy
+scoreboard objectives add aj.state_stun_end.frame dummy
 scoreboard objectives add aj.turn_right.frame dummy
 scoreboard objectives add aj.turn_left.frame dummy
 scoreboard objectives add aj.step_back.frame dummy
