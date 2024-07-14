@@ -7,6 +7,9 @@ scoreboard objectives add aj.idle.frame dummy
 scoreboard objectives add aj.search.frame dummy
 scoreboard objectives add aj.voice.frame dummy
 scoreboard objectives add aj.anger.frame dummy
+scoreboard objectives add aj.state_paralysis_start.frame dummy
+scoreboard objectives add aj.state_paralysis.frame dummy
+scoreboard objectives add aj.state_paralysis_end.frame dummy
 scoreboard objectives add aj.turn_right.frame dummy
 scoreboard objectives add aj.turn_left.frame dummy
 scoreboard objectives add aj.step_back.frame dummy
