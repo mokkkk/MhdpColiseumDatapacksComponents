@@ -7,6 +7,7 @@ tag @s remove aj.ranposu_aj.animation.anger.playing
 tag @s remove aj.ranposu_aj.animation.state_paralysis_start.playing
 tag @s remove aj.ranposu_aj.animation.state_paralysis.playing
 tag @s remove aj.ranposu_aj.animation.state_paralysis_end.playing
+tag @s remove aj.ranposu_aj.animation.state_stun.playing
 tag @s remove aj.ranposu_aj.animation.turn_right.playing
 tag @s remove aj.ranposu_aj.animation.turn_left.playing
 tag @s remove aj.ranposu_aj.animation.step_back.playing

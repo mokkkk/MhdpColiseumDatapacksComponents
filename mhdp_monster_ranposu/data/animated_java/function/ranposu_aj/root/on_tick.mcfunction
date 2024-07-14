@@ -9,6 +9,7 @@ execute if entity @s[tag=aj.ranposu_aj.animation.anger.playing] run function ani
 execute if entity @s[tag=aj.ranposu_aj.animation.state_paralysis_start.playing] run function animated_java:ranposu_aj/animations/state_paralysis_start/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.state_paralysis.playing] run function animated_java:ranposu_aj/animations/state_paralysis/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.state_paralysis_end.playing] run function animated_java:ranposu_aj/animations/state_paralysis_end/zzz/on_tick
+execute if entity @s[tag=aj.ranposu_aj.animation.state_stun.playing] run function animated_java:ranposu_aj/animations/state_stun/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.turn_right.playing] run function animated_java:ranposu_aj/animations/turn_right/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.turn_left.playing] run function animated_java:ranposu_aj/animations/turn_left/zzz/on_tick
 execute if entity @s[tag=aj.ranposu_aj.animation.step_back.playing] run function animated_java:ranposu_aj/animations/step_back/zzz/on_tick
