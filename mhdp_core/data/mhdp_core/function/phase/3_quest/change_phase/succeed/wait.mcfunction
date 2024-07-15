@@ -9,6 +9,7 @@
 
 # 通知
     execute if score #mhdp_core_timer MhdpCore matches 1 run tellraw @a[tag=Ply.State.PlayingQuest] {"text": "【戦いに勝利した！】"}
+    execute if score #mhdp_core_timer MhdpCore matches 1 run function mhdp_core:phase/3_quest/change_phase/succeed/show_clear_time
     execute if score #mhdp_core_timer MhdpCore matches 61 run tellraw @a[tag=Ply.State.PlayingQuest] {"text": "【目標を達成しました】"}
     execute if score #mhdp_core_timer MhdpCore matches 121 run tellraw @a[tag=Ply.State.PlayingQuest] {"text": "【30秒後に拠点に帰還します】"}
 
