@@ -1,4 +1,4 @@
-#> mhdp_monster_ranposu:core/tick/effect_anger
+#> mhdp_monster_reus:core/tick/effect_anger
 #
 # tick処理
 #

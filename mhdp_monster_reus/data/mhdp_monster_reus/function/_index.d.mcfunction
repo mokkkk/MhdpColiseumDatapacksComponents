@@ -6,9 +6,9 @@
 
 ## tag
 # item_display
-    #declare tag Mns.Root.Reus 青鳥竜Rootエンティティ
+    #declare tag Mns.Root.Reus 火竜Rootエンティティ
 # 当たり判定
-    #declare tag Mns.HitBox.Reus 青鳥竜当たり判定スライム
+    #declare tag Mns.HitBox.Reus 火竜当たり判定スライム
     #declare tag Mns.HitBox.Reus.Head 頭
     #declare tag Mns.HitBox.Reus.Body 胴
 # 一時

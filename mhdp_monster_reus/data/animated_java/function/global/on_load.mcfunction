@@ -53,7 +53,7 @@ scoreboard objectives add aj.fly_jump.frame dummy
 scoreboard objectives add aj.fly_flame_vertical.frame dummy
 scoreboard objectives add aj.fly_end.frame dummy
 scoreboard objectives add aj.fly_damage.frame dummy
-scoreboard objectives add aj.fly_death.frame dummy
+scoreboard objectives add aj.death_flying.frame dummy
 scoreboard players add aj.last_id aj.id 0
 data modify storage aj:temp args set value {}
 scoreboard players reset * aj.is_rig_loaded
