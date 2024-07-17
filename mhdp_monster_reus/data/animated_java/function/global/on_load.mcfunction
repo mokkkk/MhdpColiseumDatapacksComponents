@@ -4,6 +4,7 @@ scoreboard objectives add aj.id dummy
 scoreboard objectives add aj.is_rig_loaded dummy
 scoreboard objectives add aj.tween_duration dummy
 scoreboard objectives add aj.land_idle.frame dummy
+scoreboard objectives add aj.search.frame dummy
 scoreboard objectives add aj.land_voice.frame dummy
 scoreboard objectives add aj.land_anger.frame dummy
 scoreboard objectives add aj.land_turn_r.frame dummy
