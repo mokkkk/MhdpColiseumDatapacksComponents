@@ -16,3 +16,10 @@
 # 軸合わせ
     execute if entity @s[tag=aj.reus_aj.animation.land_turn_r.playing] run function mhdp_monster_reus:core/tick/animation/event/land_turn_r/main
     execute if entity @s[tag=aj.reus_aj.animation.land_turn_l.playing] run function mhdp_monster_reus:core/tick/animation/event/land_turn_l/main
+
+# 噛みつき
+    execute if entity @s[tag=aj.reus_aj.animation.land_bite_r.playing] run function mhdp_monster_reus:core/tick/animation/event/land_bite_r/main
+    execute if entity @s[tag=aj.reus_aj.animation.land_bite_l.playing] run function mhdp_monster_reus:core/tick/animation/event/land_bite_l/main
+
+# チャージ噛みつき
+    execute if entity @s[tag=aj.reus_aj.animation.land_chargebite.playing] run function mhdp_monster_reus:core/tick/animation/event/land_chargebite/main

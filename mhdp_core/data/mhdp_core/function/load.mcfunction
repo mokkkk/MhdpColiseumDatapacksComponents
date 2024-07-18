@@ -109,3 +109,6 @@
 
 ## モンスター用ロード処理
     function mhdp_monsters:load
+
+# 以下、デバッグ時に適宜モンスター個別のinit処理を記述
+    function mhdp_monster_reus:core/init/init_monster_data

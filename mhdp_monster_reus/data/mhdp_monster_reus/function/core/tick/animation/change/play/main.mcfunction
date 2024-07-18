@@ -17,6 +17,13 @@
 # 咆哮
     execute if entity @s[tag=Anim.Voice,tag=!Mns.State.IsFlying] run function animated_java:reus_aj/animations/land_voice/tween {duration:1, to_frame: 1}
 
+# 嚙みつき
+    execute if entity @s[tag=Anim.Bite.R] run function animated_java:reus_aj/animations/land_bite_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.Bite.L] run function animated_java:reus_aj/animations/land_bite_l/tween {duration:1, to_frame: 1}
+
+# チャージ嚙みつき
+    execute if entity @s[tag=Anim.ChargeBite] run function animated_java:reus_aj/animations/land_chargebite/tween {duration:1, to_frame: 1}
+
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag
     tag @s remove Mns.Temp.IsCombo

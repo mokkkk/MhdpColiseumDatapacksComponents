@@ -23,13 +23,5 @@
     #declare tag Anim.Turn.R
     #declare tag Anim.Turn.L
     #declare tag Anim.Voice
-    #declare tag Anim.Move
     #declare tag Anim.Bite
-    #declare tag Anim.BiteStrong
-    #declare tag Anim.Tail.R
-    #declare tag Anim.Tail.L
-    #declare tag Anim.MoveClaw
-    #declare tag Anim.Tackle
-    #declare tag Anim.Jump
-    #declare tag Anim.StepJump.R
-    #declare tag Anim.StepJump.L
+    #declare tag Anim.ChargeBite
