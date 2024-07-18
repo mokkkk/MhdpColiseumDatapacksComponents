@@ -20,7 +20,7 @@
         execute if entity @e[tag=Temp.Victim] as @e[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
 
 # 演出
-    playsound entity.generic.explode master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
+    playsound entity.generic.explode master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     particle explosion_emitter ^ ^1.5 ^6.5 0 0 0 0 1
     particle lava ^ ^1.5 ^6.5 1 1 1 0 10
 

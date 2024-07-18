@@ -4,5 +4,5 @@ execute if score @s aj.tween_duration matches 1.. run return 1
 execute if score @s aj.tween_duration matches 0 on passengers run data modify entity @s interpolation_duration set value 1
 execute store result storage aj:temp frame int 1 run scoreboard players get @s aj.land_dash_start_turn_r.frame
 function animated_java:reus_aj/animations/land_dash_start_turn_r/zzz/apply_frame with storage aj:temp
-execute if score @s aj.land_dash_start_turn_r.frame matches 27.. run return run function animated_java:reus_aj/animations/land_dash_start_turn_r/pause
+execute if score @s aj.land_dash_start_turn_r.frame matches 32.. run return run function animated_java:reus_aj/animations/land_dash_start_turn_r/pause
 scoreboard players add @s aj.land_dash_start_turn_r.frame 1

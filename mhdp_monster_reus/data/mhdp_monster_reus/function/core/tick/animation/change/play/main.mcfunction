@@ -17,6 +17,11 @@
 # 咆哮
     execute if entity @s[tag=Anim.Voice,tag=!Mns.State.IsFlying] run function animated_java:reus_aj/animations/land_voice/tween {duration:1, to_frame: 1}
 
+# 突進
+    execute if entity @s[tag=Anim.Dash.Start] run function animated_java:reus_aj/animations/land_dash_start/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.Dash.Start.R] run function animated_java:reus_aj/animations/land_dash_start_turn_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.Dash.Start.L] run function animated_java:reus_aj/animations/land_dash_start_turn_l/tween {duration:1, to_frame: 1}
+
 # 嚙みつき
     execute if entity @s[tag=Anim.Bite.R] run function animated_java:reus_aj/animations/land_bite_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Bite.L] run function animated_java:reus_aj/animations/land_bite_l/tween {duration:1, to_frame: 1}
