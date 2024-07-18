@@ -16,8 +16,8 @@
 
 # 咆哮怯み
     execute if score @s aj.land_voice.frame matches 44 run data modify storage mhdp_core:temp Damage set value {VoiceValue:2,VoiceTime:40,GuardValue:6}
-    execute if score @s aj.land_voice.frame matches 44 as @a[tag=Ply.State.EnableDamage,distance=..18] at @s run function mhdp_core:player/damage/voice/main
-    # execute if score @s aj.land_voice.frame matches 44 run data remove storage mhdp_core:temp Damage
+    execute if score @s aj.land_voice.frame matches 44 as @a[tag=Ply.State.EnableDamage,distance=..18] facing entity @s feet positioned as @s run function mhdp_core:player/damage/voice/main
+    execute if score @s aj.land_voice.frame matches 44 run data remove storage mhdp_core:temp Damage
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground

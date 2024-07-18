@@ -19,8 +19,6 @@
 # スキル効果適用
     function mhdp_core:player/skill/damage/voice
 
-    execute if data storage mhdp_core:temp Damage run say ダメージ設定済み
-
 # 咆哮
     execute if entity @s[tag=!Ply.Weapon.Guard] if score #mhdp_temp_voice_value MhdpCore matches 1.. run function mhdp_core:player/damage/voice/macro/m.apply_voice with storage mhdp_core:temp Damage
 
@@ -30,4 +28,3 @@
 # 終了
     scoreboard players reset #mhdp_temp_voice_value MhdpCore
     scoreboard players reset #mhdp_temp_knockback_strength MhdpCore
-
