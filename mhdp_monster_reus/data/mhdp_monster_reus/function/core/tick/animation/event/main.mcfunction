@@ -40,3 +40,6 @@
 
 # 攻撃後後隙
     execute if entity @s[tag=aj.reus_aj.animation.land_after_attack.playing] run function mhdp_monster_reus:core/tick/animation/event/land_after_attack/main
+
+# 床ドン
+    execute if entity @s[tag=aj.reus_aj.animation.land_jump.playing] run function mhdp_monster_reus:core/tick/animation/event/land_jump/main
