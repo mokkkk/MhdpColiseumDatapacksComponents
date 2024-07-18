@@ -26,7 +26,11 @@
         execute if entity @s[tag=aj.reus_aj.animation.land_dash.playing] run function mhdp_monster_reus:core/tick/animation/event/land_dash/main
     # 終了
         execute if entity @s[tag=aj.reus_aj.animation.land_dash_bite.playing] run function mhdp_monster_reus:core/tick/animation/event/land_dash_bite/main
-    
+
+# 尻尾回転
+    execute if entity @s[tag=aj.reus_aj.animation.land_tail_spin_r.playing] run function mhdp_monster_reus:core/tick/animation/event/land_tail_spin_r/main
+    execute if entity @s[tag=aj.reus_aj.animation.land_tail_spin_l.playing] run function mhdp_monster_reus:core/tick/animation/event/land_tail_spin_l/main
+
 # 噛みつき
     execute if entity @s[tag=aj.reus_aj.animation.land_bite_r.playing] run function mhdp_monster_reus:core/tick/animation/event/land_bite_r/main
     execute if entity @s[tag=aj.reus_aj.animation.land_bite_l.playing] run function mhdp_monster_reus:core/tick/animation/event/land_bite_l/main

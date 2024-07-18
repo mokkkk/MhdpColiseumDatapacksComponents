@@ -22,6 +22,10 @@
     execute if entity @s[tag=Anim.Dash.Start.R] run function animated_java:reus_aj/animations/land_dash_start_turn_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Dash.Start.L] run function animated_java:reus_aj/animations/land_dash_start_turn_l/tween {duration:1, to_frame: 1}
 
+# 尻尾回転
+    execute if entity @s[tag=Anim.TailSpin.R] run function animated_java:reus_aj/animations/land_tail_spin_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.TailSpin.L] run function animated_java:reus_aj/animations/land_tail_spin_l/tween {duration:1, to_frame: 1}
+
 # 嚙みつき
     execute if entity @s[tag=Anim.Bite.R] run function animated_java:reus_aj/animations/land_bite_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Bite.L] run function animated_java:reus_aj/animations/land_bite_l/tween {duration:1, to_frame: 1}

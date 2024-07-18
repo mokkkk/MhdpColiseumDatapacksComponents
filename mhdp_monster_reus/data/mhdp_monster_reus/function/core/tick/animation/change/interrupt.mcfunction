@@ -5,8 +5,8 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    # tag @s add Anim.ChargeBite
-    function mhdp_monster_reus:core/tick/animation/change/play/dash
+    tag @s add Anim.TailSpin.L
+    # function mhdp_monster_reus:core/tick/animation/change/play/dash
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn
