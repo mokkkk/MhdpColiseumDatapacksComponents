@@ -13,10 +13,10 @@
     # 胴部位耐久値
         scoreboard objectives add Mns.Reus.Body.Damage dummy
         scoreboard objectives add Mns.Reus.Body.Damage.Max dummy
-    # 怯み回数
-        scoreboard objectives add Mns.Reus.DamageCount dummy
     # 突進攻撃回数
         scoreboard objectives add Mns.Reus.DashCount dummy
+    # フェーズ
+        scoreboard objectives add Mns.Reus.PhaseCount dummy
 
 # メインデータ
     execute if data storage mhdp_core:monster_data MonsterData[{Uid:1002}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1002}]

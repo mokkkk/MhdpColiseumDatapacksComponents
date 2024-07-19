@@ -6,7 +6,8 @@
 
 # 事前処理
     # 待機アニメーション再生、動作する場合は後の処理でアニメーションを上書き
-        function animated_java:reus_aj/animations/land_idle/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=!Mns.Reus.State.Flying] run function animated_java:reus_aj/animations/land_idle/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=Mns.Reus.State.Flying] run function animated_java:reus_aj/animations/fly_idle/tween {duration:1, to_frame: 0}
     # 発見
         execute if entity @s[tag=!Mns.State.IsBattle] if score @s Mns.General.SearchTimer matches 2000.. run tag @s add Mns.Temp.IsFirstContact
         execute if entity @s[tag=Mns.Temp.IsFirstContact,tag=!Mns.State.IsBattle] run tag @s add Mns.State.IsBattle

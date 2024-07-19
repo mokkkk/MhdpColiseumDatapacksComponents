@@ -11,6 +11,8 @@
     #declare tag Mns.HitBox.Reus 火竜当たり判定スライム
     #declare tag Mns.HitBox.Reus.Head 頭
     #declare tag Mns.HitBox.Reus.Body 胴
+# 状態
+    #declare tag Mns.Reus.State.Flying 飛行形態
 # 一時
     #declare tag Mns.Temp.Damage.Head 頭怯み
     #declare tag Mns.Temp.Damage.Body 胴怯み

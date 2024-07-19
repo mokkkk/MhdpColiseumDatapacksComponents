@@ -8,7 +8,7 @@
     data modify storage mhdp_core:temp Temp.TargetTag set from storage mhdp_core:temp Temp.Tags[-1]
     data remove storage mhdp_core:temp Temp.Tags[-1]
 
-# 対象がアニメーションタグの場合、そのタグを消去する
+# 対象がアニメーションタグの場合、タグ付与
     data modify storage mhdp_core:temp Temp.TagPrefix set string storage mhdp_core:temp Temp.TargetTag 0 4
     execute if data storage mhdp_core:temp Temp{TagPrefix:"Anim"} run tag @s add Mns.Temp.IsAlreadyAnimation
     data remove storage mhdp_core:temp Temp.TargetTag 

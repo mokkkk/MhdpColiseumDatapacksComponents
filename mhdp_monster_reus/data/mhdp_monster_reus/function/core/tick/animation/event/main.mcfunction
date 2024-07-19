@@ -6,6 +6,7 @@
 
 # 待機
     execute if entity @s[tag=aj.reus_aj.animation.land_idle.playing] run function mhdp_monster_reus:core/tick/animation/event/land_idle/main
+    execute if entity @s[tag=aj.reus_aj.animation.fly_idle.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_idle/main
 
 # 探索
     execute if entity @s[tag=aj.reus_aj.animation.search.playing] run function mhdp_monster_reus:core/tick/animation/event/search/main
@@ -49,3 +50,12 @@
 
 # ブレス
     execute if entity @s[tag=aj.reus_aj.animation.land_breath.playing] run function mhdp_monster_reus:core/tick/animation/event/land_breath/main
+
+# 移動
+    execute if entity @s[tag=aj.reus_aj.animation.land_move.playing] run function mhdp_monster_reus:core/tick/animation/event/land_move/main
+
+# 飛行開始
+    execute if entity @s[tag=aj.reus_aj.animation.land_to_fly.playing] run function mhdp_monster_reus:core/tick/animation/event/land_to_fly/main
+
+# バックジャンプブレス
+    execute if entity @s[tag=aj.reus_aj.animation.land_bjb.playing] run function mhdp_monster_reus:core/tick/animation/event/land_bjb/main

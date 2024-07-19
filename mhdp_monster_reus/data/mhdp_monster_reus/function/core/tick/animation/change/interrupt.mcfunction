@@ -5,8 +5,8 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    # tag @s add Anim.Breath
-    function mhdp_monster_reus:core/tick/animation/change/play/breath
+    tag @s add Anim.Bjb
+    # function mhdp_monster_reus:core/tick/animation/change/play/breath
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn
