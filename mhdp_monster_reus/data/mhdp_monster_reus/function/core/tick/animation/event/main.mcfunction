@@ -43,3 +43,9 @@
 
 # 床ドン
     execute if entity @s[tag=aj.reus_aj.animation.land_jump.playing] run function mhdp_monster_reus:core/tick/animation/event/land_jump/main
+
+# バックステップ
+    execute if entity @s[tag=aj.reus_aj.animation.land_backstep.playing] run function mhdp_monster_reus:core/tick/animation/event/land_backstep/main
+
+# ブレス
+    execute if entity @s[tag=aj.reus_aj.animation.land_breath.playing] run function mhdp_monster_reus:core/tick/animation/event/land_breath/main
