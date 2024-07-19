@@ -11,3 +11,6 @@
     # execute if entity @s[tag=Mns.State.IsAnger] run scoreboard players add @s Mns.Temp.AngerSpeed.Timer 1
     # execute if score @s Mns.Temp.AngerSpeed.Timer >= @s Mns.Anger.Speed at @s run function mhdp_monster_reus:core/tick/tick_main
     # execute if score @s Mns.Temp.AngerSpeed.Timer >= @s Mns.Anger.Speed run scoreboard players set @s Mns.Temp.AngerSpeed.Timer 0
+
+# 弾処理
+    execute as @e[type=item_display,tag=Mns.Shot.Reus] at @s run function mhdp_monster_reus:core/tick/shot/tick

@@ -25,3 +25,10 @@
     #declare tag Anim.Voice
     #declare tag Anim.Bite
     #declare tag Anim.ChargeBite
+
+# その他Entity
+    # 発射物
+        #declare tag Mns.Shot.Reus 火竜弾
+        #declare tag Mns.Shot.Reus.Breath 火炎弾
+    # 攻撃位置
+        #declare tag Mns.ShotPos.Reus 射撃攻撃位置

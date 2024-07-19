@@ -85,6 +85,8 @@
         scoreboard objectives add Mns.HitBox.MonsterUid dummy
     # 部位Id
         scoreboard objectives add Mns.Hitbox.PartId dummy
+    # 発射物のタイマー
+        scoreboard objectives add Mns.Shot.Timer dummy
 
 # 一時的処理用
     # 回転速度

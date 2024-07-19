@@ -14,3 +14,5 @@
     data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"TailSpin",DamageValue:5.0f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 # 床ドン
     data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Jump",DamageValue:8.0f,GuardValue:5,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+# ブレス
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Breath",DamageValue:7.5f,GuardValue:4,ElementType:1,ElementMultiply:60,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
