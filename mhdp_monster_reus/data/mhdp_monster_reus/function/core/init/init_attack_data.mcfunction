@@ -7,12 +7,14 @@
 # 噛みつき
     data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"LandBite",DamageValue:5.0f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:1,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 # チャージ噛みつき
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"ChargeBite",DamageValue:11.0f,GuardValue:6,ElementType:1,ElementMultiply:40,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"ChargeBite",DamageValue:11.5f,GuardValue:6,ElementType:1,ElementMultiply:40,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 # 突進
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Dash",DamageValue:6.0f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Dash",DamageValue:6.3f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 # 尻尾回転
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"TailSpin",DamageValue:5.0f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"TailSpin",DamageValue:5.2f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 # 床ドン
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Jump",DamageValue:8.0f,GuardValue:5,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Jump",DamageValue:8.5f,GuardValue:5,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 # ブレス
     data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Breath",DamageValue:7.5f,GuardValue:4,ElementType:1,ElementMultiply:60,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+# ひっかき
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Claw",DamageValue:6.2f,GuardValue:4,ElementType:1,ElementMultiply:60,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}

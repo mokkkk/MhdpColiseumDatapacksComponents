@@ -1,4 +1,4 @@
-#> mhdp_core:player/damage/voice/apply
+#> mhdp_core:player/damage/fly_anger/apply
 #
 # モンスターからプレイヤーに対してのダメージ処理 ダメージ適用
 #

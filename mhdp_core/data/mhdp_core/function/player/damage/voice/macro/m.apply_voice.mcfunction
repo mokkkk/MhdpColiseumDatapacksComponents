@@ -14,4 +14,4 @@
         execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:core/switch/weapon_interrupt
 
 # 演出
-    tp @s ~ ~ ~ ~ ~5
+    execute at @s run tp @s ~ ~ ~ ~ ~5

@@ -28,5 +28,9 @@
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 状態更新
+    execute if score @s aj.land_backstep.frame matches 2 run tag @s add Mns.State.IsFlying
+    execute if score @s aj.land_backstep.frame matches 17 run tag @s remove Mns.State.IsFlying
+
 # 終了
     execute if score @s aj.land_backstep.frame matches 29 run function mhdp_monster_reus:core/tick/animation/event/land_backstep/end

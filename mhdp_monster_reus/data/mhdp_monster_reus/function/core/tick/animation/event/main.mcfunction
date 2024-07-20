@@ -13,10 +13,12 @@
 
 # 咆哮
     execute if entity @s[tag=aj.reus_aj.animation.land_voice.playing] run function mhdp_monster_reus:core/tick/animation/event/land_voice/main
+    execute if entity @s[tag=aj.reus_aj.animation.fly_anger.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_anger/main
 
 # 軸合わせ
     execute if entity @s[tag=aj.reus_aj.animation.land_turn_r.playing] run function mhdp_monster_reus:core/tick/animation/event/land_turn_r/main
     execute if entity @s[tag=aj.reus_aj.animation.land_turn_l.playing] run function mhdp_monster_reus:core/tick/animation/event/land_turn_l/main
+    execute if entity @s[tag=aj.reus_aj.animation.fly_turn.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_turn/main
 
 # 突進
     # 開始
@@ -59,3 +61,10 @@
 
 # バックジャンプブレス
     execute if entity @s[tag=aj.reus_aj.animation.land_bjb.playing] run function mhdp_monster_reus:core/tick/animation/event/land_bjb/main
+
+# 飛行回り込み
+    execute if entity @s[tag=aj.reus_aj.animation.fly_move_right.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_move_right/main
+    execute if entity @s[tag=aj.reus_aj.animation.fly_move_left.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_move_left/main
+
+# ひっかき
+    execute if entity @s[tag=aj.reus_aj.animation.fly_attack.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_attack/main

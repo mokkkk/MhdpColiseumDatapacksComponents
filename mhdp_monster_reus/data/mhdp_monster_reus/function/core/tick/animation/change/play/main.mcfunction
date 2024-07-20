@@ -17,6 +17,9 @@
 # 咆哮
     execute if entity @s[tag=Anim.Voice,tag=!Mns.State.IsFlying] run function animated_java:reus_aj/animations/land_voice/tween {duration:1, to_frame: 1}
 
+# 怒り開始
+    execute if entity @s[tag=Anim.Anger,tag=Mns.State.IsFlying] run function animated_java:reus_aj/animations/fly_anger/tween {duration:1, to_frame: 1}
+
 # 突進
     execute if entity @s[tag=Anim.Dash.Start] run function animated_java:reus_aj/animations/land_dash_start/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Dash.Start.R] run function animated_java:reus_aj/animations/land_dash_start_turn_r/tween {duration:1, to_frame: 1}
@@ -50,6 +53,13 @@
 
 # バックジャンプブレス
     execute if entity @s[tag=Anim.Bjb] run function animated_java:reus_aj/animations/land_bjb/tween {duration:1, to_frame: 1}
+
+# 飛行回り込み
+    execute if entity @s[tag=Anim.Fly.Move.R] run function animated_java:reus_aj/animations/fly_move_right/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.Fly.Move.L] run function animated_java:reus_aj/animations/fly_move_left/tween {duration:1, to_frame: 1}
+
+# ひっかき
+    execute if entity @s[tag=Anim.Fly.Attack] run function animated_java:reus_aj/animations/fly_attack/tween {duration:1, to_frame: 1}
 
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag

@@ -22,5 +22,8 @@
     execute if score @s aj.land_to_fly.frame matches 1..6 at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute if score @s aj.land_to_fly.frame matches 1..6 at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 状態更新
+    execute if score @s aj.land_to_fly.frame matches 6 run tag @s add Mns.State.IsFlying
+
 # 終了
     execute if score @s aj.land_to_fly.frame matches 21 run function mhdp_monster_reus:core/tick/animation/event/land_to_fly/end
