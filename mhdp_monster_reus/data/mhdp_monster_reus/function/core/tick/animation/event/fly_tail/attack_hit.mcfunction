@@ -1,6 +1,6 @@
-#> mhdp_monster_reus:core/tick/animation/event/land_tail_spin_r/attack_hit
+#> mhdp_monster_reus:core/tick/animation/event/fly_tail/attack_hit
 #
-# アニメーションイベントハンドラ 尻尾回転
+# アニメーションイベントハンドラ 飛行尻尾なぎはらい
 #
 # @within function mhdp_monster_reus:core/tick/animation/event/land_chargebite/main
 

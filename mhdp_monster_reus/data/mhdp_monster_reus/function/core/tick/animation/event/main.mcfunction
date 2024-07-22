@@ -74,3 +74,6 @@
 
 # 飛行尻尾なぎはらい
     execute if entity @s[tag=aj.reus_aj.animation.fly_tail.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_tail/main
+
+# 急襲
+    execute if entity @s[tag=aj.reus_aj.animation.fly_assault.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_assault/main

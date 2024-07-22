@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.Fly.Bite
+    tag @s add Anim.Fly.Assault
     # function mhdp_monster_reus:core/tick/animation/change/play/breath
 
 # 軸合わせ

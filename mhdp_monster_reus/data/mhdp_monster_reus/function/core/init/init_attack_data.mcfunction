@@ -22,3 +22,5 @@
     data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"FlyBite",DamageValue:3.2f,GuardValue:1,ElementType:0,ElementMultiply:0,Knockback:0,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 # 飛行尻尾なぎはらい
     data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"FlyTail",DamageValue:6.1f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+# 急襲
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Assault",DamageValue:8.5f,GuardValue:6,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
