@@ -17,4 +17,8 @@
 # ブレス
     data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Breath",DamageValue:7.5f,GuardValue:4,ElementType:1,ElementMultiply:60,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 # ひっかき
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Claw",DamageValue:6.2f,GuardValue:4,ElementType:1,ElementMultiply:60,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Claw",DamageValue:6.2f,GuardValue:3,ElementType:1,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+# 飛行嚙みつき
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"FlyBite",DamageValue:3.2f,GuardValue:1,ElementType:0,ElementMultiply:0,Knockback:0,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+# 飛行尻尾なぎはらい
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"FlyTail",DamageValue:6.1f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}

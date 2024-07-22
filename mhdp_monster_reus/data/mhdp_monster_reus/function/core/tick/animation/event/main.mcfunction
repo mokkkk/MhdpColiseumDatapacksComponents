@@ -68,3 +68,9 @@
 
 # ひっかき
     execute if entity @s[tag=aj.reus_aj.animation.fly_attack.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_attack/main
+
+# 飛行噛みつき
+    execute if entity @s[tag=aj.reus_aj.animation.fly_bite.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_bite/main
+
+# 飛行尻尾なぎはらい
+    execute if entity @s[tag=aj.reus_aj.animation.fly_tail.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_tail/main
