@@ -12,7 +12,7 @@
     execute as @e[type=marker,tag=Temp.Move.Target.Marker] at @s run function mhdp_monsters:core/util/other/on_ground
 
 # 移動ベクトル計算
-    scoreboard players set #mhdp_temp_move_tick MhdpCore 17
+    scoreboard players set #mhdp_temp_move_tick MhdpCore 12
     function mhdp_monsters:core/util/other/move_to_target_calc
 
 # 終了

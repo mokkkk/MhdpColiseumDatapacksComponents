@@ -4,5 +4,5 @@ execute if score @s aj.tween_duration matches 1.. run return 1
 execute if score @s aj.tween_duration matches 0 on passengers run data modify entity @s interpolation_duration set value 1
 execute store result storage aj:temp frame int 1 run scoreboard players get @s aj.fly_end.frame
 function animated_java:reus_aj/animations/fly_end/zzz/apply_frame with storage aj:temp
-execute if score @s aj.fly_end.frame matches 40.. run return run function animated_java:reus_aj/animations/fly_end/pause
+execute if score @s aj.fly_end.frame matches 55.. run return run function animated_java:reus_aj/animations/fly_end/pause
 scoreboard players add @s aj.fly_end.frame 1
