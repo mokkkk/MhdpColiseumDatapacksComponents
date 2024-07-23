@@ -8,11 +8,11 @@
     tag @n[tag=Mns.Target.Reus] add Temp.Move.Target
 
 # ターゲット配置
-    execute facing entity @n[tag=Mns.Target.Reus] feet rotated ~ 0 run summon marker ^ ^ ^ {Tags:["Temp.Move.Target.Marker"]}
+    execute facing entity @n[tag=Mns.Target.Reus] feet rotated ~ 0 run summon marker ^ ^ ^-8 {Tags:["Temp.Move.Target.Marker"]}
     execute as @e[type=marker,tag=Temp.Move.Target.Marker] at @s run function mhdp_monsters:core/util/other/on_ground
 
 # 移動ベクトル計算
-    scoreboard players set #mhdp_temp_move_tick MhdpCore 8
+    scoreboard players set #mhdp_temp_move_tick MhdpCore 16
     function mhdp_monsters:core/util/other/move_to_target_calc
 
 # 終了

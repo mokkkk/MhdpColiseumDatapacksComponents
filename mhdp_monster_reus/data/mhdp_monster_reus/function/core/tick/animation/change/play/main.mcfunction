@@ -77,6 +77,12 @@
 # なぎはらい火炎放射
     execute if entity @s[tag=Anim.Fly.Flame.Sweep] run function animated_java:reus_aj/animations/fly_flame_sweep/tween {duration:1, to_frame: 1}
 
+# 3連ブレス
+    execute if entity @s[tag=Anim.Fly.TripleBreath] run function animated_java:reus_aj/animations/fly_breath_triple/tween {duration:1, to_frame: 1}
+
+# 地走り火炎
+    execute if entity @s[tag=Anim.Fly.Flame.Vertical] run function animated_java:reus_aj/animations/fly_flame_vertical/tween {duration:1, to_frame: 1}
+
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag
     tag @s remove Mns.Temp.IsCombo

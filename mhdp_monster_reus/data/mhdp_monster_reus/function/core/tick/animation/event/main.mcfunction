@@ -84,3 +84,9 @@
 
 # なぎはらい火炎放射
     execute if entity @s[tag=aj.reus_aj.animation.fly_flame_sweep.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_flame_sweep/main
+
+# 3連ブレス
+    execute if entity @s[tag=aj.reus_aj.animation.fly_breath_triple.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_breath_triple/main
+
+# 地走り火炎
+    execute if entity @s[tag=aj.reus_aj.animation.fly_flame_vertical.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_flame_vertical/main
