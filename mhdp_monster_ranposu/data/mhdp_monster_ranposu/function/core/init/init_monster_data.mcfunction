@@ -34,7 +34,7 @@
         AngerDamagePer:12,\
         AngerTimer:60,\
         AngerAttackMult:110,\
-        AngerSpeed:5,\
+        AngerSpeed:10,\
         ParalysisDamage:500,\
         ParalysisTimer:10,\
         PoisonDamage:400,\

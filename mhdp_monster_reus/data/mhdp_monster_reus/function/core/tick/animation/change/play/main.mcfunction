@@ -70,6 +70,9 @@
 # 急襲
     execute if entity @s[tag=Anim.Fly.Assault] run function animated_java:reus_aj/animations/fly_assault/tween {duration:1, to_frame: 1}
 
+# 飛行ブレス
+    execute if entity @s[tag=Anim.Fly.MoveBreath.R] run function animated_java:reus_aj/animations/fly_movebreath_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.Fly.MoveBreath.L] run function animated_java:reus_aj/animations/fly_movebreath_l/tween {duration:1, to_frame: 1}
 
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag
