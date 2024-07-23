@@ -5,8 +5,8 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    # tag @s add Anim.Fly.MoveBreath.L
-    function mhdp_monster_reus:core/tick/animation/change/play/fly_movebreath
+    tag @s add Anim.Fly.Flame.Sweep
+    # function mhdp_monster_reus:core/tick/animation/change/play/fly_movebreath
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn

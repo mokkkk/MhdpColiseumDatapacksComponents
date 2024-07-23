@@ -81,3 +81,6 @@
 # 移動ブレス
     execute if entity @s[tag=aj.reus_aj.animation.fly_movebreath_r.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_movebreath_r/main
     execute if entity @s[tag=aj.reus_aj.animation.fly_movebreath_l.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_movebreath_l/main
+
+# なぎはらい火炎放射
+    execute if entity @s[tag=aj.reus_aj.animation.fly_flame_sweep.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_flame_sweep/main

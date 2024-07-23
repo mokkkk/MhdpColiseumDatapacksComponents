@@ -48,8 +48,8 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:false,\
         HallTrapTimer:15,\
-        HeadPartDamage:12,\
-        BodyPartDamage:20\
+        HeadPartDamage:11,\
+        BodyPartDamage:15\
     }
 
 # 肉質データ

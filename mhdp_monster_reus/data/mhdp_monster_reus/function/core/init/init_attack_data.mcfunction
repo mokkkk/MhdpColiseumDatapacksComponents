@@ -24,3 +24,5 @@
     data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"FlyTail",DamageValue:6.1f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 # 急襲
     data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"Assault",DamageValue:8.5f,GuardValue:6,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+# なぎはらい火炎放射
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {Name:"FlameSweep",DamageValue:10.8f,GuardValue:6,ElementType:1,ElementMultiply:60,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
