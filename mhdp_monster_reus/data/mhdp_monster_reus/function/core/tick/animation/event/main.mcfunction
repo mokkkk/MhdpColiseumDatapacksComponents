@@ -90,3 +90,6 @@
 
 # 地走り火炎
     execute if entity @s[tag=aj.reus_aj.animation.fly_flame_vertical.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_flame_vertical/main
+
+# 着地
+    execute if entity @s[tag=aj.reus_aj.animation.fly_end.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_end/main

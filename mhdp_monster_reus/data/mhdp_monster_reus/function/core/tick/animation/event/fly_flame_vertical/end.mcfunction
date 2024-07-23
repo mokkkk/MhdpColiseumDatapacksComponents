@@ -1,8 +1,8 @@
-#> mhdp_monster_reus:core/tick/animation/event/fly_idle/end
+#> mhdp_monster_reus:core/tick/animation/event/fly_flame_vertical/end
 #
-# アニメーションイベントハンドラ 待機・威嚇
+# アニメーションイベントハンドラ 地走り火炎
 #
-# @within function mhdp_monster_reus:core/tick/animation/event/fly_idle/main
+# @within function mhdp_monster_reus:core/tick/animation/event/fly_flame_vertical/main
 
-# 行動選択
-    function mhdp_monster_reus:core/tick/animation/change/main
+# 後隙
+    function animated_java:reus_aj/animations/land_after_attack/tween {duration:1, to_frame: 1}

@@ -9,12 +9,6 @@
     execute if score @s aj.fly_breath_triple.frame matches 6 run function mhdp_monster_reus:core/tick/animation/event/fly_breath_triple/turn_start
     execute if score @s aj.fly_breath_triple.frame matches 1..10 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
-# 移動
-    # execute if score @s aj.fly_breath_triple.frame matches 3..8 at @s run tp @s ^ ^ ^-0.1
-    # execute if score @s aj.fly_breath_triple.frame matches 21..31 at @s run tp @s ^ ^ ^0.8
-    # execute if score @s aj.fly_breath_triple.frame matches 32..40 at @s run tp @s ^ ^ ^0.5
-    # execute if score @s aj.fly_breath_triple.frame matches 41..48 at @s run tp @s ^ ^ ^0.3
-
 # 演出
     execute if score @s aj.fly_breath_triple.frame matches 2 run playsound entity.player.breath master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
     execute if score @s aj.fly_breath_triple.frame matches 6 run playsound entity.ender_dragon.flap master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7

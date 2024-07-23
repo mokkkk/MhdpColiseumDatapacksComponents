@@ -10,6 +10,7 @@
 
 # 移動
     execute if score @s aj.fly_flame_vertical.frame matches 2..18 at @s run tp @s ^ ^ ^-0.3
+    execute if score @s aj.fly_flame_vertical.frame matches 76..86 at @s run tp @s ^ ^ ^-0.2
     execute if score @s aj.fly_flame_vertical.frame matches 99 at @s run function mhdp_monster_reus:core/tick/animation/event/land_backstep/move_start
     execute if score @s aj.fly_flame_vertical.frame matches 99..105 at @s run function mhdp_monsters:core/util/other/move_to_target_move
 
@@ -41,6 +42,8 @@
     execute if score @s aj.fly_flame_vertical.frame matches 1..20 at @s unless block ~ ~-5.8 ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
     execute if score @s aj.fly_flame_vertical.frame matches 21..40 at @s if block ~ ~-4.6 ~ #mhdp_core:no_collision at @s run tp @s ~ ~-0.2 ~ ~ ~
     execute if score @s aj.fly_flame_vertical.frame matches 21..40 at @s unless block ~ ~-4.5 ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    execute if score @s aj.fly_flame_vertical.frame matches 76..98 at @s if block ~ ~-1.6 ~ #mhdp_core:no_collision at @s run tp @s ~ ~-0.2 ~ ~ ~
+    execute if score @s aj.fly_flame_vertical.frame matches 76..98 at @s unless block ~ ~-1.5 ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
     execute if score @s aj.fly_flame_vertical.frame matches 106.. at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute if score @s aj.fly_flame_vertical.frame matches 106.. at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
