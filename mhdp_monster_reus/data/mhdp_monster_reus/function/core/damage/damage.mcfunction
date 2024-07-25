@@ -51,7 +51,7 @@
     # 減気
         # execute if entity @s[tag=Mns.Temp.Damage.Tire]
     # 頭(独自)
-         # execute if entity @s[tag=Mns.Temp.Damage.Head] run function mhdp_monster_reus:core/damage/reaction/head
+         execute if entity @s[tag=Mns.Temp.Damage.Head] run function mhdp_monster_reus:core/damage/reaction/head
     # 胴(独自)
         # execute if entity @s[tag=Mns.Temp.Damage.Body] run function mhdp_monster_reus:core/damage/reaction/body
     # 怒り

@@ -12,9 +12,20 @@
     execute if entity @s[tag=aj.reus_aj.animation.search.playing] run function mhdp_monster_reus:core/tick/animation/event/search/main
 
 # 咆哮
-    execute if entity @s[tag=aj.reus_aj.animation.land_voice.playing] run function mhdp_monster_reus:core/tick/animation/event/land_voice/main
-    execute if entity @s[tag=aj.reus_aj.animation.land_anger.playing] run function mhdp_monster_reus:core/tick/animation/event/land_anger/main
-    execute if entity @s[tag=aj.reus_aj.animation.fly_anger.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_anger/main
+    # 通常
+        execute if entity @s[tag=aj.reus_aj.animation.land_voice.playing] run function mhdp_monster_reus:core/tick/animation/event/land_voice/main
+    # 地上怒り
+        execute if entity @s[tag=aj.reus_aj.animation.land_anger.playing] run function mhdp_monster_reus:core/tick/animation/event/land_anger/main
+    # 空中怒り
+        execute if entity @s[tag=aj.reus_aj.animation.fly_anger.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_anger/main
+
+# 怯み
+    # 地上
+        # 頭
+            execute if entity @s[tag=aj.reus_aj.animation.land_damage_head.playing] run function mhdp_monster_reus:core/tick/animation/event/land_damage_head/main
+        # 胴・足
+            execute if entity @s[tag=aj.reus_aj.animation.land_damage_r.playing] run function mhdp_monster_reus:core/tick/animation/event/land_damage_r/main
+            execute if entity @s[tag=aj.reus_aj.animation.land_damage_l.playing] run function mhdp_monster_reus:core/tick/animation/event/land_damage_l/main
 
 # 軸合わせ
     execute if entity @s[tag=aj.reus_aj.animation.land_turn_r.playing] run function mhdp_monster_reus:core/tick/animation/event/land_turn_r/main
