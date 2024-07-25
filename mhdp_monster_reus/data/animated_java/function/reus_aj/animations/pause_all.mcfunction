@@ -26,6 +26,7 @@ tag @s remove aj.reus_aj.animation.land_move.playing
 tag @s remove aj.reus_aj.animation.land_damage_head.playing
 tag @s remove aj.reus_aj.animation.land_damage_r.playing
 tag @s remove aj.reus_aj.animation.land_damage_l.playing
+tag @s remove aj.reus_aj.animation.land_damage_back.playing
 tag @s remove aj.reus_aj.animation.land_damage_tail.playing
 tag @s remove aj.reus_aj.animation.land_damage_down_r.playing
 tag @s remove aj.reus_aj.animation.land_damage_down_l.playing
