@@ -54,6 +54,8 @@
          execute if entity @s[tag=Mns.Temp.Damage.Head] run function mhdp_monster_reus:core/damage/reaction/head
     # 胴(独自)
         # execute if entity @s[tag=Mns.Temp.Damage.Body] run function mhdp_monster_reus:core/damage/reaction/body
+    # 尻尾(独自)
+         execute if entity @s[tag=Mns.Temp.Damage.Tail] run function mhdp_monster_reus:core/damage/reaction/tail
     # 怒り
         # execute if entity @s[tag=Mns.Temp.Damage.Anger] run function mhdp_monster_reus:core/damage/reaction/anger
 
@@ -72,5 +74,8 @@
     function mhdp_monsters:core/util/damage/remove_tags
     tag @s remove Mns.Temp.Damage.Head
     tag @s remove Mns.Temp.Damage.Body
+    tag @s remove Mns.Temp.Damage.Tail
+    tag @s remove Mns.Temp.Damage.LegR
+    tag @s remove Mns.Temp.Damage.LegL
 
 say 火竜被ダメージ
