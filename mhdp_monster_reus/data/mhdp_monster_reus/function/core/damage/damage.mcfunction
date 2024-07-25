@@ -33,6 +33,15 @@
     # 胴
         execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run scoreboard players operation @s Mns.Reus.Body.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Reus.Body.Damage matches ..0 run tag @s add Mns.Temp.Damage.Body
+    # 尻尾
+        execute if score #mhdp_temp_target_part_id MhdpCore matches 2 run scoreboard players operation @s Mns.Reus.Tail.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if score @s Mns.Reus.Tail.Damage matches ..0 run tag @s add Mns.Temp.Damage.Tail
+    # 右足
+        execute if score #mhdp_temp_target_part_id MhdpCore matches 3 run scoreboard players operation @s Mns.Reus.LegR.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if score @s Mns.Reus.LegR.Damage matches ..0 run tag @s add Mns.Temp.Damage.LegR
+    # 左足
+        execute if score #mhdp_temp_target_part_id MhdpCore matches 4 run scoreboard players operation @s Mns.Reus.LegL.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if score @s Mns.Reus.LegL.Damage matches ..0 run tag @s add Mns.Temp.Damage.LegL
 
 # 以下の優先度で怯みを適用
     # 麻痺

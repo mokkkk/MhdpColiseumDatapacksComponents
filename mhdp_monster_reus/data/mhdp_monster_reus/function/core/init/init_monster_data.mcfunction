@@ -13,6 +13,15 @@
     # 胴部位耐久値
         scoreboard objectives add Mns.Reus.Body.Damage dummy
         scoreboard objectives add Mns.Reus.Body.Damage.Max dummy
+    # 尻尾部位耐久値
+        scoreboard objectives add Mns.Reus.Tail.Damage dummy
+        scoreboard objectives add Mns.Reus.Tail.Damage.Max dummy
+    # 右足部位耐久値
+        scoreboard objectives add Mns.Reus.LegR.Damage dummy
+        scoreboard objectives add Mns.Reus.LegR.Damage.Max dummy
+    # 左足部位耐久値
+        scoreboard objectives add Mns.Reus.LegL.Damage dummy
+        scoreboard objectives add Mns.Reus.LegL.Damage.Max dummy
     # 突進攻撃回数
         scoreboard objectives add Mns.Reus.DashCount dummy
     # フェーズ
@@ -48,8 +57,11 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:false,\
         HallTrapTimer:15,\
-        HeadPartDamage:12,\
-        BodyPartDamage:20\
+        HeadPartDamage:10,\
+        BodyPartDamage:20,\
+        TailPartDamage:12,\
+        LegRPartDamage:11,\
+        LegLPartDamage:11\
     }
 
 # 肉質データ

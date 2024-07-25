@@ -13,6 +13,7 @@
 
 # 咆哮
     execute if entity @s[tag=aj.reus_aj.animation.land_voice.playing] run function mhdp_monster_reus:core/tick/animation/event/land_voice/main
+    execute if entity @s[tag=aj.reus_aj.animation.land_anger.playing] run function mhdp_monster_reus:core/tick/animation/event/land_anger/main
     execute if entity @s[tag=aj.reus_aj.animation.fly_anger.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_anger/main
 
 # 軸合わせ

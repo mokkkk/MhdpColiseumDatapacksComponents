@@ -18,6 +18,7 @@
     execute if entity @s[tag=Anim.Voice,tag=!Mns.State.IsFlying] run function animated_java:reus_aj/animations/land_voice/tween {duration:1, to_frame: 1}
 
 # 怒り開始
+    execute if entity @s[tag=Anim.Anger,tag=!Mns.State.IsFlying] run function animated_java:reus_aj/animations/land_anger/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Anger,tag=Mns.State.IsFlying] run function animated_java:reus_aj/animations/fly_anger/tween {duration:1, to_frame: 1}
 
 # 突進
