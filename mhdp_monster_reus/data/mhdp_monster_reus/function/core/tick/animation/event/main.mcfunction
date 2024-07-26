@@ -29,7 +29,9 @@
         # 尻尾
             execute if entity @s[tag=aj.reus_aj.animation.land_damage_tail.playing] run function mhdp_monster_reus:core/tick/animation/event/land_damage_tail/main
             execute if entity @s[tag=aj.reus_aj.animation.land_damage_back.playing] run function mhdp_monster_reus:core/tick/animation/event/land_damage_back/main
+        # ダウン
 
+        
 # 軸合わせ
     execute if entity @s[tag=aj.reus_aj.animation.land_turn_r.playing] run function mhdp_monster_reus:core/tick/animation/event/land_turn_r/main
     execute if entity @s[tag=aj.reus_aj.animation.land_turn_l.playing] run function mhdp_monster_reus:core/tick/animation/event/land_turn_l/main

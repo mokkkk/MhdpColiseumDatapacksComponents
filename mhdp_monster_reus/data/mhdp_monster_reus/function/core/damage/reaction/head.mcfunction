@@ -5,7 +5,7 @@
 # @within function mhdp_monster_reus:core/damage/damage
 
 # 部位破壊処理
-    # execute if entity @s[tag=!Mns.Break.Head] run function mhdp_monster_reus:core/damage/reaction/head_break
+    execute if entity @s[tag=!Mns.Break.Head] run function mhdp_monster_reus:core/damage/reaction/head_break
 
 # 共通処理
     # スコアリセット
@@ -15,9 +15,8 @@
     # 麻痺・ダウン・スタン時以外
         execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
     # アニメーション再生
-        # execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:reus_aj/animations/land_damage_head/tween {duration:1, to_frame: 0}
-        execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:reus_aj/animations/land_damage_back/tween {duration:1, to_frame: 0}
-        execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monsters:core/util/damage/reaction_flying
+        execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:reus_aj/animations/land_damage_head/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monster_reus:core/damage/reaction/flying
     # ダウン時間設定
         scoreboard players set @s Mns.General.DownCount 0
     # 攻撃者を向く

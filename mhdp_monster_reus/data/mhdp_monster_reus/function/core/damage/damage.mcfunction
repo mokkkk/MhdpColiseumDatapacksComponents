@@ -51,13 +51,13 @@
     # 減気
         # execute if entity @s[tag=Mns.Temp.Damage.Tire]
     # 頭(独自)
-         execute if entity @s[tag=Mns.Temp.Damage.Head] run function mhdp_monster_reus:core/damage/reaction/head
+         execute if entity @s[tag=Mns.Temp.Damage.Head] at @s run function mhdp_monster_reus:core/damage/reaction/head
     # 胴(独自)
-        # execute if entity @s[tag=Mns.Temp.Damage.Body] run function mhdp_monster_reus:core/damage/reaction/body
+        execute if entity @s[tag=Mns.Temp.Damage.Body] at @s run function mhdp_monster_reus:core/damage/reaction/body
     # 尻尾(独自)
-         execute if entity @s[tag=Mns.Temp.Damage.Tail] run function mhdp_monster_reus:core/damage/reaction/tail
+         execute if entity @s[tag=Mns.Temp.Damage.Tail] at @s run function mhdp_monster_reus:core/damage/reaction/tail
     # 怒り
-        # execute if entity @s[tag=Mns.Temp.Damage.Anger] run function mhdp_monster_reus:core/damage/reaction/anger
+        execute if entity @s[tag=Mns.Temp.Damage.Anger] at @s run function mhdp_monster_reus:core/damage/reaction/anger
 
 # 状態異常の発動
     # 毒

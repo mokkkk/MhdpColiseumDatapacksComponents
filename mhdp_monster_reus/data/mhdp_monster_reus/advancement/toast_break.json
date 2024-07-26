@@ -11,7 +11,7 @@
     "hidden": true,
     "icon": {
       "components": {
-        "minecraft:custom_model_data": 1001
+        "minecraft:custom_model_data": 1002
       },
       "id": "minecraft:red_dye"
     },

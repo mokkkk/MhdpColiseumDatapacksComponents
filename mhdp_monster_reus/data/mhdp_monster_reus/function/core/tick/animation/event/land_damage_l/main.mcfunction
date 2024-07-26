@@ -6,10 +6,11 @@
 
 # 移動
     execute if score @s aj.land_damage_l.frame matches 2..12 at @s run tp @s ^0.4 ^ ^
-    execute if score @s aj.land_damage_l.frame matches 13..20 at @s run tp @s ^0.1 ^ ^ ~8 ~
+    execute if score @s aj.land_damage_l.frame matches 13..20 at @s run tp @s ^0.1 ^ ^ ~10 ~
 
 # 効果音
-    execute if score @s aj.land_damage_l.frame matches 2 run playsound entity.ravager.hurt master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s aj.land_damage_l.frame matches 2 run playsound entity.ravager.hurt master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s aj.land_damage_l.frame matches 2 run playsound entity.ravager.attack master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
     execute if score @s aj.land_damage_l.frame matches 2..11 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 1 0.1 1 0 5
     execute if score @s aj.land_damage_l.frame matches 12 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
     execute if score @s aj.land_damage_l.frame matches 19 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
