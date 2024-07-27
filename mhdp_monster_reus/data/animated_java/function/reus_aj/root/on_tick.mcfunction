@@ -53,6 +53,7 @@ execute if entity @s[tag=aj.reus_aj.animation.fly_breath_triple.playing] run fun
 execute if entity @s[tag=aj.reus_aj.animation.fly_jump.playing] run function animated_java:reus_aj/animations/fly_jump/zzz/on_tick
 execute if entity @s[tag=aj.reus_aj.animation.fly_flame_vertical.playing] run function animated_java:reus_aj/animations/fly_flame_vertical/zzz/on_tick
 execute if entity @s[tag=aj.reus_aj.animation.fly_end.playing] run function animated_java:reus_aj/animations/fly_end/zzz/on_tick
+execute if entity @s[tag=aj.reus_aj.animation.fly_damage.playing] run function animated_java:reus_aj/animations/fly_damage/zzz/on_tick
 execute if entity @s[tag=aj.reus_aj.animation.fly_damage_down.playing] run function animated_java:reus_aj/animations/fly_damage_down/zzz/on_tick
 execute if entity @s[tag=aj.reus_aj.animation.death_flying.playing] run function animated_java:reus_aj/animations/death_flying/zzz/on_tick
 execute on passengers if entity @s[tag=aj.reus_aj.data] run function animated_java:reus_aj/root/zzz/1

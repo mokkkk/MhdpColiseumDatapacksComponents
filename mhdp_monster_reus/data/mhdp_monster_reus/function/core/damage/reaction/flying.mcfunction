@@ -8,4 +8,7 @@
     function mhdp_monsters:core/util/damage/set_pos_to_shadow
 
 # 怯み回数に応じて、怯みまたは墜落アニメーション再生
-    function animated_java:reus_aj/animations/fly_damage_down/tween {duration:1, to_frame: 1}
+    scoreboard players add @s Mns.Reus.Fly.Damage.Count 1
+    execute if score @s Mns.Reus.Fly.Damage.Count matches ..1 run function animated_java:reus_aj/animations/fly_damage/tween {duration:1, to_frame: 1}
+    execute if score @s Mns.Reus.Fly.Damage.Count matches 2.. run function animated_java:reus_aj/animations/fly_damage_down/tween {duration:1, to_frame: 1}
+    execute if score @s Mns.Reus.Fly.Damage.Count matches 2.. run scoreboard players set @s Mns.Reus.Fly.Damage.Count 0

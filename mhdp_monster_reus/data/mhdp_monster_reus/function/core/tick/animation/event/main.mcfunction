@@ -36,6 +36,8 @@
             execute if entity @s[tag=aj.reus_aj.animation.land_damage_down_l.playing] run function mhdp_monster_reus:core/tick/animation/event/land_damage_down_l/main
             execute if entity @s[tag=aj.reus_aj.animation.land_down_l.playing] run function mhdp_monster_reus:core/tick/animation/event/land_down_l/main
             execute if entity @s[tag=aj.reus_aj.animation.land_down_end_l.playing] run function mhdp_monster_reus:core/tick/animation/event/land_down_end_l/main
+        # 飛行中怯み
+            execute if entity @s[tag=aj.reus_aj.animation.fly_damage.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_damage/main
         # 飛行中ダウン
             execute if entity @s[tag=aj.reus_aj.animation.fly_damage_down.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_damage_down/main
 
