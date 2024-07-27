@@ -1,6 +1,6 @@
-#> mhdp_monster_reus:core/tick/animation/event/land_backstep/move_start
+#> mhdp_monster_reus:core/tick/animation/event/fly_damage_down/move_start
 #
-# アニメーションイベントハンドラ 着地
+# アニメーションイベントハンドラ 飛行中ダウン
 #
 # @within function mhdp_monster_reus:core/tick/animation/event/land_backstep/main
 
