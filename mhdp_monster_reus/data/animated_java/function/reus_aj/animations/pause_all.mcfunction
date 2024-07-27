@@ -51,5 +51,5 @@ tag @s remove aj.reus_aj.animation.fly_breath_triple.playing
 tag @s remove aj.reus_aj.animation.fly_jump.playing
 tag @s remove aj.reus_aj.animation.fly_flame_vertical.playing
 tag @s remove aj.reus_aj.animation.fly_end.playing
-tag @s remove aj.reus_aj.animation.fly_damage.playing
+tag @s remove aj.reus_aj.animation.fly_damage_down.playing
 tag @s remove aj.reus_aj.animation.death_flying.playing
