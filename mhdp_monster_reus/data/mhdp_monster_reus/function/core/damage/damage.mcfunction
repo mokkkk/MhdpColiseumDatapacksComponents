@@ -56,6 +56,8 @@
         execute if entity @s[tag=Mns.Temp.Damage.Body] at @s run function mhdp_monster_reus:core/damage/reaction/body
     # 尻尾(独自)
          execute if entity @s[tag=Mns.Temp.Damage.Tail] at @s run function mhdp_monster_reus:core/damage/reaction/tail
+    # 右足(独自)
+         execute if entity @s[tag=Mns.Temp.Damage.LegR] at @s run function mhdp_monster_reus:core/damage/reaction/leg_r
     # 怒り
         execute if entity @s[tag=Mns.Temp.Damage.Anger] at @s run function mhdp_monster_reus:core/damage/reaction/anger
 

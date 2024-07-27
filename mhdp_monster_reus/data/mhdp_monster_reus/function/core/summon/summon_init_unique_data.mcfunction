@@ -46,6 +46,8 @@
 # その他スコア初期化
     # フェーズ
         scoreboard players set @s Mns.Reus.PhaseCount 0
+    # 足怯み回数
+        scoreboard players set @s Mns.Reus.Leg.Damage.Count 0
 
 # 終了
     scoreboard players reset #mhdp_temp_monster_uid Mns.Uid

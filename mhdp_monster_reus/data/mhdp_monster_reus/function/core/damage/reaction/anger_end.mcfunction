@@ -9,5 +9,3 @@
         tag @s remove Mns.State.IsAnger
     # ボスバー更新
         bossbar set mhdp_monster:reus name [{"text":"火竜"},{"text":"\uE000","font":"minecraft:ui/monster_hp"}]
-
-say anger end

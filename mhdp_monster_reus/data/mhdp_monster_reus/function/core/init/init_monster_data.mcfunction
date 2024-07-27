@@ -26,6 +26,8 @@
         scoreboard objectives add Mns.Reus.DashCount dummy
     # フェーズ
         scoreboard objectives add Mns.Reus.PhaseCount dummy
+    # 足怯み回数
+        scoreboard objectives add Mns.Reus.Leg.Damage.Count dummy
 
 # メインデータ
     execute if data storage mhdp_core:monster_data MonsterData[{Uid:1002}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1002}]

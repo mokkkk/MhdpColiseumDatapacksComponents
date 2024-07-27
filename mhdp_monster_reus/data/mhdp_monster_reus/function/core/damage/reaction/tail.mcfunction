@@ -5,7 +5,9 @@
 # @within function mhdp_monster_reus:core/damage/damage
 
 # 部位破壊処理
+# 内部でMns.Reus.Temp.Tail.Breakを付与、部位破壊怯みの再生に使用
     # execute if entity @s[tag=!Mns.Break.Tail] run function mhdp_monster_reus:core/damage/reaction/tail_break
+    tag @s add Mns.Reus.Temp.Tail.Break
 
 # 共通処理
     # スコアリセット
@@ -15,12 +17,14 @@
     # 麻痺・ダウン・スタン時以外
         execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
     # アニメーション再生
-        execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged,tag=!Mns.Break.Tail] run function animated_java:reus_aj/animations/land_damage_tail/tween {duration:1, to_frame: 0}
-        execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged,tag=Mns.Break.Tail] run function animated_java:reus_aj/animations/land_damage_back/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged,tag=Mns.Reus.Temp.Tail.Break] run function animated_java:reus_aj/animations/land_damage_tail/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged,tag=!Mns.Reus.Temp.Tail.Break] run function animated_java:reus_aj/animations/land_damage_back/tween {duration:1, to_frame: 0}
         execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monsters:core/util/damage/reaction_flying
     # ダウン時間設定
         scoreboard players set @s Mns.General.DownCount 0
     # 演出
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
-        playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+
+# 終了
+    tag @s remove Mns.Reus.Temp.Tail.Break
