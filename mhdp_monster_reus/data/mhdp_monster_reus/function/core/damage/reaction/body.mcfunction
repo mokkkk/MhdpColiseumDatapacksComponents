@@ -23,7 +23,7 @@
             execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monster_reus:core/damage/reaction/flying
             tag @s remove Mns.Temp.Right
     # ダウン時間設定
-        scoreboard players set @s Mns.General.DownCount 0
+        scoreboard players set @s Mns.General.DownCount 4
     # 演出
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5

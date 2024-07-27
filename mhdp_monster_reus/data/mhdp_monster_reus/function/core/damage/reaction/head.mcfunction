@@ -18,7 +18,7 @@
         execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:reus_aj/animations/land_damage_head/tween {duration:1, to_frame: 0}
         execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monster_reus:core/damage/reaction/flying
     # ダウン時間設定
-        scoreboard players set @s Mns.General.DownCount 0
+        scoreboard players set @s Mns.General.DownCount 4
     # 攻撃者を向く
         execute at @s facing entity @a[tag=Temp.Attacker] feet run tp @s ~ ~ ~ ~ 0
     # 演出
