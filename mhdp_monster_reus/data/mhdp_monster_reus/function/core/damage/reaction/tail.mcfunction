@@ -19,7 +19,8 @@
     # アニメーション再生
         execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged,tag=Mns.Reus.Temp.Tail.Break] run function animated_java:reus_aj/animations/land_damage_tail/tween {duration:1, to_frame: 0}
         execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged,tag=!Mns.Reus.Temp.Tail.Break] run function animated_java:reus_aj/animations/land_damage_back/tween {duration:1, to_frame: 0}
-        execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monster_reus:core/damage/reaction/flying
+        execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged,tag=Mns.Reus.Temp.Tail.Break] run function mhdp_monster_reus:core/damage/reaction/flying_tail
+        execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged,tag=!Mns.Reus.Temp.Tail.Break] run function mhdp_monster_reus:core/damage/reaction/flying
     # ダウン時間設定
         scoreboard players set @s Mns.General.DownCount 0
     # 演出

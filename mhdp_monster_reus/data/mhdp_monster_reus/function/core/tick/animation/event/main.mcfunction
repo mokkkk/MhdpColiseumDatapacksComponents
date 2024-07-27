@@ -40,6 +40,8 @@
             execute if entity @s[tag=aj.reus_aj.animation.fly_damage.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_damage/main
         # 飛行中ダウン
             execute if entity @s[tag=aj.reus_aj.animation.fly_damage_down.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_damage_down/main
+        # 飛行中尻尾ダウン
+            execute if entity @s[tag=aj.reus_aj.animation.fly_damage_tail.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_damage_tail/main
 
 # 軸合わせ
     execute if entity @s[tag=aj.reus_aj.animation.land_turn_r.playing] run function mhdp_monster_reus:core/tick/animation/event/land_turn_r/main

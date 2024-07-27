@@ -1,6 +1,6 @@
 #> mhdp_monster_reus:core/tick/animation/event/land_damage_tail/main
 #
-# アニメーションイベントハンドラ 胴・足怯み
+# アニメーションイベントハンドラ 尻尾
 #
 # @within function mhdp_monster_reus:core/tick/animation/event/tick
 
@@ -8,7 +8,6 @@
     execute if score @s aj.land_damage_tail.frame matches 2..7 at @s run tp @s ^ ^ ^0.8 ~8 ~
     execute if score @s aj.land_damage_tail.frame matches 8..15 at @s run tp @s ^0.2 ^ ^0.3 ~8 ~
     execute if score @s aj.land_damage_tail.frame matches 16..27 at @s run tp @s ^0.2 ^ ^0.2 ~2 ~
-
     execute if score @s aj.land_damage_tail.frame matches 60..75 at @s run tp @s ^ ^ ^ ~4 ~
 
 # 効果音
