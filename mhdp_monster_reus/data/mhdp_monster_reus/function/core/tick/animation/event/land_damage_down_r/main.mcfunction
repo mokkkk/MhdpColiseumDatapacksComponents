@@ -5,7 +5,7 @@
 # @within function mhdp_monster_reus:core/tick/animation/event/tick
 
 # 移動
-    execute if score @s aj.land_damage_down_r.frame matches 2..9 at @s run tp @s ^0.2 ^ ^ ~-5 ~
+    execute if score @s aj.land_damage_down_r.frame matches 2..9 at @s run tp @s ^-0.2 ^ ^ ~-5 ~
     execute if score @s aj.land_damage_down_r.frame matches 10..18 at @s run tp @s ^ ^ ^ ~-1 ~
 
 # 効果音
@@ -17,6 +17,9 @@
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+
+# スタン中演出
+    execute if entity @s[tag=Mns.State.IsStun] on passengers if entity @s[tag=aj.data] run function mhdp_monster_reus:core/tick/animation/event/land_down_r/effect_stun with entity @s data.locators.pos_head
 
 # 終了
     execute if score @s aj.land_damage_down_r.frame matches 29 run function mhdp_monster_reus:core/tick/animation/event/land_damage_down_r/end

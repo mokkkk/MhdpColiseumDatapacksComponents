@@ -22,5 +22,8 @@
     execute if score @s aj.fly_damage_down.frame matches 16 run tag @s remove Mns.State.IsFlying
     execute if score @s aj.fly_damage_down.frame matches 16 run tag @s remove Mns.Reus.State.Flying
 
+# スタン中演出
+    execute if entity @s[tag=Mns.State.IsStun] on passengers if entity @s[tag=aj.data] run function mhdp_monster_reus:core/tick/animation/event/land_down_r/effect_stun with entity @s data.locators.pos_head
+
 # 終了
     execute if score @s aj.fly_damage_down.frame matches 33 run function mhdp_monster_reus:core/tick/animation/event/fly_damage_down/end

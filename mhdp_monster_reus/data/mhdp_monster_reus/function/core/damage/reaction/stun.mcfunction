@@ -1,8 +1,8 @@
-#> mhdp_monster_ranposu:core/damage/reaction/stun
+#> mhdp_monster_reus:core/damage/reaction/stun
 #
 # 怯みリアクション スタン
 #
-# @within function mhdp_monster_ranposu:core/damage/damage
+# @within function mhdp_monster_reus:core/damage/damage
 
 # 共通処理
     # 耐性値上昇
@@ -13,13 +13,12 @@
 
 # アニメーション再生処理
     # アニメーション再生
-        execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:ranposu_aj/animations/state_stun/tween {duration:1, to_frame: 0}
-        execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monsters:core/util/damage/reaction_flying
+        execute if entity @s[tag=aj.reus_aj.animation.land_down_r.playing] run tag @s add Mns.Temp.Right
+        execute if entity @s[tag=!Mns.Temp.Right] run function animated_java:reus_aj/animations/land_damage_down_r/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=Mns.Temp.Right] run function animated_java:reus_aj/animations/land_damage_down_l/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monster_reus:core/damage/reaction/flying
     # ダウン時間設定
-        scoreboard players set @s Mns.General.DownCount 6
-    # 攻撃者を向く
-        execute at @s facing entity @a[tag=Temp.Attacker] feet run tp @s ~ ~ ~ ~ 0
+        scoreboard players set @s Mns.General.DownCount 8
     # 演出
-        playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.9
-        playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.6
+        playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5

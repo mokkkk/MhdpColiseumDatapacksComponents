@@ -4,10 +4,8 @@
 #
 # @within function mhdp_monster_reus:core/damage/damage
 
-# 部位破壊処理
-# 内部でMns.Reus.Temp.Tail.Breakを付与、部位破壊怯みの再生に使用
-    # execute if entity @s[tag=!Mns.Break.Tail] run function mhdp_monster_reus:core/damage/reaction/tail_break
-    tag @s add Mns.Reus.Temp.Tail.Break
+# 切断属性のみ、部位破壊処理
+    execute if entity @s[tag=!Mns.Break.Tail] if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run function mhdp_monster_reus:core/damage/reaction/tail_break
 
 # 共通処理
     # スコアリセット

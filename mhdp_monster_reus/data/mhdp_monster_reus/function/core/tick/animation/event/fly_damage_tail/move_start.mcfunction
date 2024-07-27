@@ -8,7 +8,7 @@
     tag @n[tag=Mns.Target.Reus] add Temp.Move.Target
 
 # ターゲット配置
-    execute rotated ~ 0 run summon marker ^2 ^ ^11 {Tags:["Temp.Move.Target.Marker"]}
+    execute rotated ~ 0 run summon marker ^2 ^ ^8 {Tags:["Temp.Move.Target.Marker"]}
     execute as @e[type=marker,tag=Temp.Move.Target.Marker] at @s run function mhdp_monsters:core/util/other/on_ground
 
 # 移動ベクトル計算

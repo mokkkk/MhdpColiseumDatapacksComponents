@@ -47,21 +47,21 @@
     # 麻痺
         # execute if entity @s[tag=Mns.Temp.Damage.Paralysis] run function mhdp_monster_reus:core/damage/reaction/paralysis
     # スタン
-        # execute if entity @s[tag=Mns.Temp.Damage.Stun] run function mhdp_monster_reus:core/damage/reaction/stun
+        execute if entity @s[tag=Mns.Temp.Damage.Stun] run function mhdp_monster_reus:core/damage/reaction/stun
     # 減気
         # execute if entity @s[tag=Mns.Temp.Damage.Tire]
     # 頭(独自)
-        execute if entity @s[tag=Mns.Temp.Damage.Head] at @s run function mhdp_monster_reus:core/damage/reaction/head
+        execute if entity @s[tag=Mns.Temp.Damage.Head] run function mhdp_monster_reus:core/damage/reaction/head
     # 胴(独自)
-        execute if entity @s[tag=Mns.Temp.Damage.Body] at @s run function mhdp_monster_reus:core/damage/reaction/body
+        execute if entity @s[tag=Mns.Temp.Damage.Body] run function mhdp_monster_reus:core/damage/reaction/body
     # 尻尾(独自)
-        execute if entity @s[tag=Mns.Temp.Damage.Tail] at @s run function mhdp_monster_reus:core/damage/reaction/tail
+        execute if entity @s[tag=Mns.Temp.Damage.Tail] run function mhdp_monster_reus:core/damage/reaction/tail
     # 右足(独自)
-        execute if entity @s[tag=Mns.Temp.Damage.LegR] at @s run function mhdp_monster_reus:core/damage/reaction/leg_r
+        execute if entity @s[tag=Mns.Temp.Damage.LegR] run function mhdp_monster_reus:core/damage/reaction/leg_r
     # 左足(独自)
-        execute if entity @s[tag=Mns.Temp.Damage.LegL] at @s run function mhdp_monster_reus:core/damage/reaction/leg_l
+        execute if entity @s[tag=Mns.Temp.Damage.LegL] run function mhdp_monster_reus:core/damage/reaction/leg_l
     # 怒り
-        execute if entity @s[tag=Mns.Temp.Damage.Anger] at @s run function mhdp_monster_reus:core/damage/reaction/anger
+        execute if entity @s[tag=Mns.Temp.Damage.Anger] run function mhdp_monster_reus:core/damage/reaction/anger
 
 # 状態異常の発動
     # 毒

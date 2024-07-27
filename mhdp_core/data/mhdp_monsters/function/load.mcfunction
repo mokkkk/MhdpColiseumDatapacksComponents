@@ -79,6 +79,8 @@
     # その他
         # 閃光玉耐性時間
             scoreboard objectives add Mns.General.FlashBomb.ResistTimer dummy
+        # 剝ぎ取り可能回数
+            scoreboard objectives add Mns.General.Carving.Count dummy
 
 # 当たり判定処理用
     # モンスターUid
