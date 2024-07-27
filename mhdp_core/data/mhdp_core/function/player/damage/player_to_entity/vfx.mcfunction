@@ -51,5 +51,3 @@
 
 # ダメージ表示
     function mhdp_core:player/damage/player_to_entity/vfx_show_damage
-
-# playsound item.wolf_armor.break master @a ~ ~ ~ 1 1

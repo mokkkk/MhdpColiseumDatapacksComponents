@@ -6,3 +6,6 @@
 
 # ブレス
     execute if entity @s[tag=Mns.Shot.Reus.Breath] run function mhdp_monster_reus:core/tick/shot/breath/tick
+
+# 尻尾
+    execute if entity @s[tag=Mns.Shot.Reus.Tail] run function mhdp_monster_reus:core/tick/shot/tail/tick
