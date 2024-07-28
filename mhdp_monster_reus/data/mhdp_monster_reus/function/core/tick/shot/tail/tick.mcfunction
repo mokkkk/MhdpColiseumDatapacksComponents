@@ -14,8 +14,4 @@
     execute if score @s Mns.Shot.Timer matches 7..9 at @s run tp @s ~ ~0.5 ~ ~5 ~-5
     execute if score @s Mns.Shot.Timer matches 10..12 at @s run tp @s ~ ~-0.5 ~ ~3 ~-5
     execute if score @s Mns.Shot.Timer matches 13..18 at @s run tp @s ~ ~-1 ~ ~1 ~-5
-    execute if score @s Mns.Shot.Timer matches 18 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 1 0.1 1 0 10
-    execute if score @s Mns.Shot.Timer matches 18 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
-
-# 終了
-    # execute if score @s Mns.Shot.Timer matches 60.. run kill @s
+    execute if score @s Mns.Shot.Timer matches 18 run function mhdp_monster_reus:core/tick/shot/tail/move_end

@@ -5,7 +5,7 @@
 # @within function mhdp_monster_reus:core/damage/damage
 
 # 状態更新
-    # tag @s add Mns.Break.Tail
+    tag @s add Mns.Break.Tail
     tag @s add Mns.Reus.Temp.Tail.Break
 
 # ダウン・スタン・麻痺・罠をキャンセルする
@@ -20,8 +20,9 @@
     playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
 
 # モデル変更
-    # execute if entity @s[tag=!Mns.State.IsBlink] on passengers if entity @s[tag=aj.reus_aj.bone.tail_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 25
-    # execute if entity @s[tag=Mns.State.IsBlink] on passengers if entity @s[tag=aj.reus_aj.bone.tail_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 26
+    execute on passengers if entity @s[tag=aj.reus_aj.bone.tail_2] run data modify entity @s item.id set value "minecraft:white_dye"
+    execute on passengers if entity @s[tag=aj.reus_aj.bone.tail_2] run data modify entity @s item.components."minecraft:custom_model_data" set value 9
+    execute on passengers if entity @s[tag=aj.reus_aj.bone.tail_3] run data modify entity @s item.components."minecraft:custom_model_data" set value 1
 
 # 尻尾設置
     execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_reus:core/damage/reaction/macro/m.summon_tail with entity @s data.locators.pos_tail_3
