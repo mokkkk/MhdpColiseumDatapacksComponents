@@ -27,13 +27,13 @@
     # ターゲットがいない場合
         execute unless entity @e[tag=Mns.Target.Reus] run function mhdp_monster_reus:core/tick/animation/change/update_target
     # 一定以上行動した場合
-        execute if score @s Mns.General.ActCount.Target matches ..4 run function mhdp_monster_reus:core/tick/animation/change/update_target
+        execute if score @s Mns.General.ActCount.Target matches 4.. run function mhdp_monster_reus:core/tick/animation/change/update_target
 
 # 非怒り中・一定以上行動した場合、威嚇を選択(そのまま処理中断)
-    execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.ActCount.Idle matches 7.. run return run function mhdp_monsters:core/util/tick/skip
+    execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.ActCount.Idle matches 9.. run return run function mhdp_monsters:core/util/tick/skip
 
 # アニメーション選択
-    # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn] if entity @e[tag=Mns.Target.Reus] run function mhdp_monster_reus:core/tick/animation/change/random/main
+    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn] if entity @e[tag=Mns.Target.Reus] run function mhdp_monster_reus:core/tick/animation/change/random/main
 
 # 軸合わせアニメーション再生
     execute if entity @s[tag=Mns.Temp.IsTurn] store result score #mhdp_temp_result MhdpCore run function mhdp_monster_reus:core/tick/animation/change/play/turn

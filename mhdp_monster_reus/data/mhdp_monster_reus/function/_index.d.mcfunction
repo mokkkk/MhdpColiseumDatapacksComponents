@@ -16,10 +16,14 @@
 # 一時
     #declare tag Mns.Temp.Damage.Head 頭怯み
     #declare tag Mns.Temp.Damage.Body 胴怯み
+    #declare tag Mns.Temp.Damage.Tail 尻尾怯み
+    #declare tag Mns.Temp.Damage.LegR 右足怯み
+    #declare tag Mns.Temp.Damage.LegL 左足怯み
 # プレイヤー
     #declare tag Mns.Target.Reus 現在狙っているプレイヤー
 # 部位破壊
     #declare tag Mns.Break.Head 頭部位破壊
+    #declare tag Mns.Break.Tail 尻尾部位破壊
 # アニメーション
     #declare tag Anim.Idle
     #declare tag Anim.Turn.R
@@ -30,7 +34,8 @@
 
 # その他Entity
     # 発射物
-        #declare tag Mns.Shot.Reus 火竜弾
+        #declare tag Mns.Shot.Reus 火竜の弾全般
         #declare tag Mns.Shot.Reus.Breath 火炎弾
+        #declare tag Mns.Shot.Reus.Tail 切断後の尻尾
     # 攻撃位置
         #declare tag Mns.ShotPos.Reus 射撃攻撃位置

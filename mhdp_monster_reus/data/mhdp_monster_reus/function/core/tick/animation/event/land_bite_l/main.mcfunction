@@ -25,8 +25,8 @@
     execute if score @s aj.land_bite_l.frame matches 76 run playsound entity.ender_dragon.flap master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
 
 # 攻撃
-    execute if score @s aj.land_bite_l.frame matches 22 rotated ~-8 ~ run function mhdp_monster_reus:core/tick/animation/event/land_bite_l/attack
-    execute if score @s aj.land_bite_l.frame matches 54 rotated ~8 ~ run function mhdp_monster_reus:core/tick/animation/event/land_bite_l/attack
+    execute if score @s aj.land_bite_l.frame matches 22 rotated ~-5 ~ run function mhdp_monster_reus:core/tick/animation/event/land_bite_l/attack
+    execute if score @s aj.land_bite_l.frame matches 54 rotated ~5 ~ run function mhdp_monster_reus:core/tick/animation/event/land_bite_l/attack
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground

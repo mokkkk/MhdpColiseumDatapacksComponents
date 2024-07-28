@@ -11,7 +11,7 @@
 # 移動
     execute if score @s aj.fly_flame_vertical.frame matches 2..18 at @s run tp @s ^ ^ ^-0.3
     execute if score @s aj.fly_flame_vertical.frame matches 76..86 at @s run tp @s ^ ^ ^-0.2
-    execute if score @s aj.fly_flame_vertical.frame matches 99 at @s run function mhdp_monster_reus:core/tick/animation/event/land_backstep/move_start
+    execute if score @s aj.fly_flame_vertical.frame matches 99 at @s run function mhdp_monster_reus:core/tick/animation/event/fly_flame_vertical/move_start
     execute if score @s aj.fly_flame_vertical.frame matches 99..105 at @s run function mhdp_monsters:core/util/other/move_to_target_move
 
 # 演出

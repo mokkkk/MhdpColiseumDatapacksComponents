@@ -11,7 +11,7 @@
 
 # ヒット確認
     # 対プレイヤー
-        execute positioned ^ ^1 ^5.7 as @a[tag=Ply.State.EnableDamage,distance=..3] run tag @s add Temp.Hit
+        execute positioned ^ ^1 ^5.7 as @a[tag=Ply.State.EnableDamage,distance=..3.5] run tag @s add Temp.Hit
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         tag @a remove Temp.Hit
     # 対モンスター
