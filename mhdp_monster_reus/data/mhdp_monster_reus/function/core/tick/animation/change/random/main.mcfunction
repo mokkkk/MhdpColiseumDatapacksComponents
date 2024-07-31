@@ -7,14 +7,16 @@
 # 初回発見時
     execute if entity @s[tag=Mns.Temp.IsFirstContact] run return run function mhdp_monster_reus:core/tick/animation/change/random/first
 
-# 近距離
-    execute if entity @s[tag=!Mns.Reus.State.Flying] if entity @n[tag=Mns.Target.Reus,distance=..10] run return run function mhdp_monster_reus:core/tick/animation/change/random/near
-
-# 中距離
-    execute if entity @s[tag=!Mns.Reus.State.Flying] if entity @n[tag=Mns.Target.Reus,distance=..18] run return run function mhdp_monster_reus:core/tick/animation/change/random/middle
-
-# 遠距離
-    execute if entity @s[tag=!Mns.Reus.State.Flying] run return run function mhdp_monster_reus:core/tick/animation/change/random/far
+# 地上
+    # 近距離
+        execute if entity @s[tag=!Mns.Reus.State.Flying] if entity @n[tag=Mns.Target.Reus,distance=..10] run return run function mhdp_monster_reus:core/tick/animation/change/random/near
+    # 中距離
+        execute if entity @s[tag=!Mns.Reus.State.Flying] if entity @n[tag=Mns.Target.Reus,distance=..18] run return run function mhdp_monster_reus:core/tick/animation/change/random/middle
+    # 遠距離
+        execute if entity @s[tag=!Mns.Reus.State.Flying] run return run function mhdp_monster_reus:core/tick/animation/change/random/far
 
 # 飛行中
-    # return run function mhdp_monster_reus:core/tick/animation/change/random/flying
+    # 近距離
+        execute if entity @s[tag=Mns.Reus.State.Flying] if entity @n[tag=Mns.Target.Reus,distance=..13] run return run function mhdp_monster_reus:core/tick/animation/change/random/flying_near
+    # 中・遠距離
+        execute if entity @s[tag=Mns.Reus.State.Flying] run return run function mhdp_monster_reus:core/tick/animation/change/random/flying_middle
