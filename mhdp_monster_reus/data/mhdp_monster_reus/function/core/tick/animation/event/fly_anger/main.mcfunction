@@ -17,5 +17,8 @@
     execute if score @s aj.fly_anger.frame matches 17 as @a[tag=Ply.State.EnableDamage,distance=..18] facing entity @s feet positioned as @s run function mhdp_core:player/damage/voice/main
     execute if score @s aj.fly_anger.frame matches 17 run data remove storage mhdp_core:temp Damage
 
+# 状態更新
+    execute if entity @s[tag=!Mns.Reus.State.Flying] if score @s aj.fly_anger.frame matches 2 run function mhdp_monster_reus:core/tick/animation/event/fly_anger/change_phase
+
 # 終了
     execute if score @s aj.fly_anger.frame matches 66 run function mhdp_monster_reus:core/tick/animation/event/fly_anger/end

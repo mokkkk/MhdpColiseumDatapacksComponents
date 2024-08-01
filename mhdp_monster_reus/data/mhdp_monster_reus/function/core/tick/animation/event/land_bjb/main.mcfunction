@@ -32,6 +32,7 @@
 
 # 状態更新
     execute if score @s aj.land_bjb.frame matches 15 run tag @s add Mns.State.IsFlying
+    execute if entity @s[tag=!Mns.Reus.State.Flying] if score @s aj.land_bjb.frame matches 15 run function mhdp_monster_reus:core/tick/animation/event/land_bjb/change_phase
 
 # 終了
     execute if score @s aj.land_bjb.frame matches 33 run function mhdp_monster_reus:core/tick/animation/event/land_bjb/end

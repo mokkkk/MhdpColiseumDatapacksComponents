@@ -49,7 +49,7 @@
 
 # 状態変更
     execute if score @s aj.fly_flame_vertical.frame matches 106 run tag @s remove Mns.State.IsFlying
-    execute if score @s aj.fly_flame_vertical.frame matches 106 run tag @s remove Mns.Reus.State.Flying
+    execute if entity @s[tag=Mns.Reus.State.Flying] if score @s aj.fly_flame_vertical.frame matches 106 run function mhdp_monster_reus:core/tick/animation/event/fly_flame_vertical/change_phase
 
 # 終了
     execute if score @s aj.fly_flame_vertical.frame matches 129 run function mhdp_monster_reus:core/tick/animation/event/fly_flame_vertical/end

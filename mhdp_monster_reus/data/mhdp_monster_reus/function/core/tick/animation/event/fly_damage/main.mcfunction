@@ -15,5 +15,8 @@
     execute at @s if block ~ ~-2.2 ~ #mhdp_core:no_collision at @s run tp @s ~ ~-0.1 ~ ~ ~
     execute at @s unless block ~ ~-2.1 ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 状態更新
+    execute if entity @s[tag=!Mns.Reus.State.Flying] if score @s aj.fly_damage.frame matches 2 run function mhdp_monster_reus:core/tick/animation/event/fly_damage/change_phase
+
 # 終了
     execute if score @s aj.fly_damage.frame matches 69 run function mhdp_monster_reus:core/tick/animation/event/fly_damage/end

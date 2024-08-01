@@ -24,6 +24,7 @@
 
 # 状態更新
     execute if score @s aj.land_to_fly.frame matches 6 run tag @s add Mns.State.IsFlying
+    execute if entity @s[tag=!Mns.Reus.State.Flying] if score @s aj.land_to_fly.frame matches 6 run function mhdp_monster_reus:core/tick/animation/event/land_to_fly/change_phase
 
 # 終了
     execute if score @s aj.land_to_fly.frame matches 21 run function mhdp_monster_reus:core/tick/animation/event/land_to_fly/end

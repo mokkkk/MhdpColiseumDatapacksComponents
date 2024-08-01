@@ -30,7 +30,7 @@
 
 # 状態変更
     execute if score @s aj.fly_damage_tail.frame matches 16 run tag @s remove Mns.State.IsFlying
-    execute if score @s aj.fly_damage_tail.frame matches 16 run tag @s remove Mns.Reus.State.Flying
+    execute if entity @s[tag=Mns.Reus.State.Flying] if score @s aj.fly_damage_tail.frame matches 16 run function mhdp_monster_reus:core/tick/animation/event/fly_damage_tail/change_phase
 
 # 終了
     execute if score @s aj.fly_damage_tail.frame matches 136 run function mhdp_monster_reus:core/tick/animation/event/fly_damage_tail/end
