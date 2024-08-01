@@ -41,13 +41,13 @@
         JpName:"火竜",\
         ShowName:'{"text":"火竜"}',\
         ShowHp:true,\
-        Hp:12000,\
+        Hp:7000,\
         StunDamage:200,\
         TireDamage:300,\
         AngerDamagePer:12,\
         AngerTimer:60,\
         AngerAttackMult:110,\
-        AngerSpeed:5,\
+        AngerSpeed:10,\
         ParalysisDamage:500,\
         ParalysisTimer:10,\
         PoisonDamage:400,\
@@ -61,11 +61,11 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:false,\
         HallTrapTimer:15,\
-        HeadPartDamage:10,\
-        BodyPartDamage:20,\
-        TailPartDamage:12,\
-        LegRPartDamage:11,\
-        LegLPartDamage:11\
+        HeadPartDamage:7,\
+        BodyPartDamage:12,\
+        TailPartDamage:7,\
+        LegRPartDamage:7,\
+        LegLPartDamage:7\
     }
 
 # 肉質データ

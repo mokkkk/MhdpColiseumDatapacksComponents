@@ -84,6 +84,9 @@
 # 地走り火炎
     execute if entity @s[tag=Anim.Fly.Flame.Vertical] run function animated_java:reus_aj/animations/fly_flame_vertical/tween {duration:1, to_frame: 1}
 
+# 着地
+    execute if entity @s[tag=Anim.Fly.End] run function animated_java:reus_aj/animations/fly_end/tween {duration:1, to_frame: 1}\
+
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag
     tag @s remove Mns.Temp.IsCombo
