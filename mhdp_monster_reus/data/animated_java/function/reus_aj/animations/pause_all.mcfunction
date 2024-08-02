@@ -6,6 +6,9 @@ tag @s remove aj.reus_aj.animation.land_voice.playing
 tag @s remove aj.reus_aj.animation.land_anger.playing
 tag @s remove aj.reus_aj.animation.land_turn_r.playing
 tag @s remove aj.reus_aj.animation.land_turn_l.playing
+tag @s remove aj.reus_aj.animation.land_state_paralysis_start.playing
+tag @s remove aj.reus_aj.animation.land_state_paralysis.playing
+tag @s remove aj.reus_aj.animation.land_state_paralysis_end.playing
 tag @s remove aj.reus_aj.animation.land_dash_start.playing
 tag @s remove aj.reus_aj.animation.land_dash_start_turn_l.playing
 tag @s remove aj.reus_aj.animation.land_dash_start_turn_r.playing
@@ -55,3 +58,4 @@ tag @s remove aj.reus_aj.animation.fly_damage.playing
 tag @s remove aj.reus_aj.animation.fly_damage_tail.playing
 tag @s remove aj.reus_aj.animation.fly_damage_down.playing
 tag @s remove aj.reus_aj.animation.death_flying.playing
+tag @s remove aj.reus_aj.animation.fly_state_paralysis.playing

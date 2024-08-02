@@ -8,6 +8,9 @@ execute if entity @s[tag=aj.reus_aj.animation.land_voice.playing] run function a
 execute if entity @s[tag=aj.reus_aj.animation.land_anger.playing] run function animated_java:reus_aj/animations/land_anger/zzz/on_tick
 execute if entity @s[tag=aj.reus_aj.animation.land_turn_r.playing] run function animated_java:reus_aj/animations/land_turn_r/zzz/on_tick
 execute if entity @s[tag=aj.reus_aj.animation.land_turn_l.playing] run function animated_java:reus_aj/animations/land_turn_l/zzz/on_tick
+execute if entity @s[tag=aj.reus_aj.animation.land_state_paralysis_start.playing] run function animated_java:reus_aj/animations/land_state_paralysis_start/zzz/on_tick
+execute if entity @s[tag=aj.reus_aj.animation.land_state_paralysis.playing] run function animated_java:reus_aj/animations/land_state_paralysis/zzz/on_tick
+execute if entity @s[tag=aj.reus_aj.animation.land_state_paralysis_end.playing] run function animated_java:reus_aj/animations/land_state_paralysis_end/zzz/on_tick
 execute if entity @s[tag=aj.reus_aj.animation.land_dash_start.playing] run function animated_java:reus_aj/animations/land_dash_start/zzz/on_tick
 execute if entity @s[tag=aj.reus_aj.animation.land_dash_start_turn_l.playing] run function animated_java:reus_aj/animations/land_dash_start_turn_l/zzz/on_tick
 execute if entity @s[tag=aj.reus_aj.animation.land_dash_start_turn_r.playing] run function animated_java:reus_aj/animations/land_dash_start_turn_r/zzz/on_tick
@@ -57,6 +60,7 @@ execute if entity @s[tag=aj.reus_aj.animation.fly_damage.playing] run function a
 execute if entity @s[tag=aj.reus_aj.animation.fly_damage_tail.playing] run function animated_java:reus_aj/animations/fly_damage_tail/zzz/on_tick
 execute if entity @s[tag=aj.reus_aj.animation.fly_damage_down.playing] run function animated_java:reus_aj/animations/fly_damage_down/zzz/on_tick
 execute if entity @s[tag=aj.reus_aj.animation.death_flying.playing] run function animated_java:reus_aj/animations/death_flying/zzz/on_tick
+execute if entity @s[tag=aj.reus_aj.animation.fly_state_paralysis.playing] run function animated_java:reus_aj/animations/fly_state_paralysis/zzz/on_tick
 execute on passengers if entity @s[tag=aj.reus_aj.data] run function animated_java:reus_aj/root/zzz/1
 execute at @s on passengers run tp @s ~ ~ ~ ~ ~
 function #animated_java:reus_aj/as_root/post_tick
