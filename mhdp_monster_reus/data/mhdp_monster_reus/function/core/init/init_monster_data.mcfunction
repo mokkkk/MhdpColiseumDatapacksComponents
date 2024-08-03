@@ -47,7 +47,7 @@
         AngerDamagePer:10,\
         AngerTimer:60,\
         AngerAttackMult:120,\
-        AngerSpeed:10,\
+        AngerSpeed:8,\
         ParalysisDamage:500,\
         ParalysisTimer:10,\
         PoisonDamage:400,\
@@ -61,11 +61,11 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:false,\
         HallTrapTimer:15,\
-        HeadPartDamage:5,\
-        BodyPartDamage:12,\
-        TailPartDamage:7,\
-        LegRPartDamage:6,\
-        LegLPartDamage:6\
+        HeadPartDamage:3,\
+        BodyPartDamage:7,\
+        TailPartDamage:5,\
+        LegRPartDamage:4,\
+        LegLPartDamage:4\
     }
 
 # 肉質データ
@@ -75,7 +75,7 @@
     data modify storage mhdp_core:monster_data DefenceData append value {\
         Uid:1002,\
         Defences:[\
-            [65,70,60,0,15,25,10,30],\
+            [70,75,62,0,15,25,10,30],\
             [35,40,25,0,5,15,10,15],\
             [50,40,35,0,5,20,10,25],\
             [40,42,35,0,8,12,10,17],\
