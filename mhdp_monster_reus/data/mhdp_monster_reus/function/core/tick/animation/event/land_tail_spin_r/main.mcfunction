@@ -20,8 +20,8 @@
     execute if score @s aj.land_tail_spin_r.frame matches 70 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 1
     
 # 攻撃
-    execute if score @s aj.land_tail_spin_r.frame matches 25..37 run function mhdp_monster_reus:core/tick/animation/event/land_tail_spin_r/attack
-    execute if score @s aj.land_tail_spin_r.frame matches 70..82 run function mhdp_monster_reus:core/tick/animation/event/land_tail_spin_r/attack
+    execute if score @s aj.land_tail_spin_r.frame matches 27..39 run function mhdp_monster_reus:core/tick/animation/event/land_tail_spin_r/attack
+    execute if score @s aj.land_tail_spin_r.frame matches 72..84 run function mhdp_monster_reus:core/tick/animation/event/land_tail_spin_r/attack
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground

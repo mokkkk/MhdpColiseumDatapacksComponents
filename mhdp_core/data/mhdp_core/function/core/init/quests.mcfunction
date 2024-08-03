@@ -27,7 +27,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:1,Name:"火竜の狩猟",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:100,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:27,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1002,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
