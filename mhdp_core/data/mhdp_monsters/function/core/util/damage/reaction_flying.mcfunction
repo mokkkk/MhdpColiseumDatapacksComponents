@@ -13,6 +13,9 @@
 # 影の位置を参照して移動する
     function mhdp_monsters:core/util/damage/macro/m.set_pos_to_shadow with storage mhdp_core:temp Temp
 
+# 怯みアニメーション再生
+    function mhdp_monsters:core/util/damage/macro/m.play_damage_flying with storage mhdp_core:temp Temp
+
 # 終了
     tag @s remove Mns.State.IsFlying
     data remove storage mhdp_core:temp Temp

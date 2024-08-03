@@ -16,7 +16,8 @@
     data remove storage mhdp_core:game_data ActiveQuest.TargetMonsters[0]
 
 # 出現条件が最初からの場合、配置処理
-    execute if data storage mhdp_core:temp Arg{Timing:"Initial"} positioned as @e[type=marker,tag=Mk.Field.SummonPos,sort=random,limit=1] run function mhdp_monsters:core/switch/summon
+    execute store result storage mhdp_core:temp Temp.Rotate int 1 run random value 0..359
+    execute if data storage mhdp_core:temp Arg{Timing:"Initial"} positioned as @e[type=marker,tag=Mk.Field.SummonPos,sort=random,limit=1] run function mhdp_monsters:core/switch/summon with storage mhdp_core:temp Temp
     data modify storage mhdp_core:temp MonsterQuestData set from storage mhdp_core:temp Arg
     data remove storage mhdp_core:temp Arg
 

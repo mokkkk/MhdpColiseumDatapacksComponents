@@ -29,6 +29,8 @@
     # 制限時間(分)をtickに直す
         scoreboard players operation #mhdp_quest_timer MhdpCore *= #const_60 Const
         scoreboard players operation #mhdp_quest_timer MhdpCore *= #const_20 Const
-        
+    # クリアタイム初期化
+        scoreboard players set #mhdp_quest_timer_clear MhdpCore 0
+
 # クエスト開始
     data modify storage mhdp_core:game_data ActiveQuest.State set value "Playing"

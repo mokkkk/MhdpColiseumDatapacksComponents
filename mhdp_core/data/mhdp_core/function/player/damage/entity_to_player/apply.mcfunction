@@ -24,7 +24,7 @@
     function mhdp_core:player/damage/entity_to_player/knockback/main
 
 # スキル効果適用
-    function mhdp_core:player/damage/entity_to_player/skill/damage
+    function mhdp_core:player/skill/damage/damage
 
 # ダメージ
     # ダメージ軽減率適用
@@ -38,7 +38,7 @@
         function mhdp_core:player/damage/entity_to_player/macro/m.damage with storage mhdp_core:temp Arg
 
 # 演出
-    execute if entity @e[tag=Ply.Weapon.Guard] at @s run playsound item.shield.block master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
+    execute if entity @s[tag=Ply.Weapon.Guard] at @s run playsound item.shield.block master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
 
 # 終了
     scoreboard players reset #mhdp_temp_damage_reduction MhdpCore

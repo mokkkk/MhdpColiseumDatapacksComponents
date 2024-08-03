@@ -79,12 +79,16 @@
     # その他
         # 閃光玉耐性時間
             scoreboard objectives add Mns.General.FlashBomb.ResistTimer dummy
+        # 剝ぎ取り可能回数
+            scoreboard objectives add Mns.General.Carving.Count dummy
 
 # 当たり判定処理用
     # モンスターUid
         scoreboard objectives add Mns.HitBox.MonsterUid dummy
     # 部位Id
         scoreboard objectives add Mns.Hitbox.PartId dummy
+    # 発射物のタイマー
+        scoreboard objectives add Mns.Shot.Timer dummy
 
 # 一時的処理用
     # 回転速度

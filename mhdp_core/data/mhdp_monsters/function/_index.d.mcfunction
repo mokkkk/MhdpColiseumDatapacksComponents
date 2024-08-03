@@ -53,6 +53,8 @@
     #declare tag Mns.State.HpHalf Hp半減の処理実行済み
     #declare tag Mns.State.Death 討伐済み
     #declare tag Mns.State.IsBlink まばたき中
+    #declare tag Mns.State.IsCanCarving 剥ぎ取り可能
+    #declare tag Mns.State.IsEndCarving 剥ぎ取り終了
 # 当たり判定関連(Slime)
     #declare tag Mns.HitBox モンスターの当たり判定の共通タグ
     #declare tag Mns.HitBox.Init 初期化処理済みの当たり判定
