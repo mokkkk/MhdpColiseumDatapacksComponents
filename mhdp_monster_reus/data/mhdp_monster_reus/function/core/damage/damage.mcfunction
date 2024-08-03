@@ -45,7 +45,7 @@
 
 # 以下の優先度で怯みを適用
     # 麻痺
-        # execute if entity @s[tag=Mns.Temp.Damage.Paralysis] run function mhdp_monster_reus:core/damage/reaction/paralysis
+        execute if entity @s[tag=Mns.Temp.Damage.Paralysis] run function mhdp_monster_reus:core/damage/reaction/paralysis
     # スタン
         execute if entity @s[tag=Mns.Temp.Damage.Stun] run function mhdp_monster_reus:core/damage/reaction/stun
     # 減気
@@ -65,9 +65,9 @@
 
 # 状態異常の発動
     # 毒
-        # execute if entity @s[tag=Mns.Temp.Damage.Poison] run function mhdp_monsters:core/util/damage/reaction_poison
+        execute if entity @s[tag=Mns.Temp.Damage.Poison] run function mhdp_monsters:core/util/damage/reaction_poison
     # 爆破
-        # execute if entity @s[tag=Mns.Temp.Damage.Bomb] run function mhdp_monsters:core/util/damage/reaction_bomb
+        execute if entity @s[tag=Mns.Temp.Damage.Bomb] run function mhdp_monsters:core/util/damage/reaction_bomb
     # 龍気
         # execute if entity @s[tag=Mns.Temp.Damage.DragonAura]
 

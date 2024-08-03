@@ -20,8 +20,10 @@
 
 # 状態変更
     execute if score @s aj.fly_damage_down.frame matches 16 run tag @s remove Mns.State.IsFlying
-    execute if entity @s[tag=!Mns.Reus.State.Flying] if score @s aj.fly_damage_down.frame matches 16 run function mhdp_monster_reus:core/tick/animation/event/fly_damage_down/change_phase
+    execute if score @s aj.fly_damage_down.frame matches 16 run function mhdp_monster_reus:core/tick/animation/event/fly_damage_down/change_phase
 
+# 状態更新
+    execute if score @s aj.fly_damage_down.frame matches 2 run tag @s add Mns.State.IsDown
 
 # スタン中演出
     execute if entity @s[tag=Mns.State.IsStun] on passengers if entity @s[tag=aj.data] run function mhdp_monster_reus:core/tick/animation/event/land_down_r/effect_stun with entity @s data.locators.pos_head

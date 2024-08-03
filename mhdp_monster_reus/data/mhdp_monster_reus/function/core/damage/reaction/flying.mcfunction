@@ -7,8 +7,9 @@
 # 自身の影の位置に合わせる
     function mhdp_monsters:core/util/damage/set_pos_to_shadow
 
-# スタン時、確実に墜落する
+# スタンまたは麻痺時、確実に墜落する
     execute if entity @s[tag=Mns.State.IsStun] run scoreboard players set @s Mns.Reus.Fly.Damage.Count 2
+    execute if entity @s[tag=Mns.State.IsParalysis] run scoreboard players set @s Mns.Reus.Fly.Damage.Count 2
 
 # 怯み回数に応じて、怯みまたは墜落アニメーション再生
     scoreboard players add @s Mns.Reus.Fly.Damage.Count 1

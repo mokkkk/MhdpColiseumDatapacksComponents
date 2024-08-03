@@ -1,8 +1,8 @@
-#> mhdp_monster_ranposu:core/damage/reaction/paralysis
+#> mhdp_monster_reus:core/damage/reaction/paralysis
 #
 # 怯みリアクション 麻痺
 #
-# @within function mhdp_monster_ranposu:core/damage/damage
+# @within function mhdp_monster_reus:core/damage/damage
 
 # 共通処理
     # 耐性値上昇
@@ -13,6 +13,7 @@
 
 # アニメーション再生処理
     # アニメーション再生
-        function animated_java:ranposu_aj/animations/state_paralysis_start/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=!Mns.State.IsFlying] run function animated_java:reus_aj/animations/land_state_paralysis_start/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=Mns.State.IsFlying] run function mhdp_monster_reus:core/damage/reaction/flying
     # 効果時間設定
         scoreboard players operation @s Mns.Paralysis.Timer = @s Mns.Paralysis.Timer.Max

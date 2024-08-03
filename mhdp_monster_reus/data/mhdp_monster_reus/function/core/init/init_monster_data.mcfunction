@@ -41,12 +41,12 @@
         JpName:"火竜",\
         ShowName:'{"text":"火竜"}',\
         ShowHp:true,\
-        Hp:7000,\
+        Hp:6000,\
         StunDamage:200,\
         TireDamage:300,\
-        AngerDamagePer:12,\
+        AngerDamagePer:10,\
         AngerTimer:60,\
-        AngerAttackMult:110,\
+        AngerAttackMult:120,\
         AngerSpeed:10,\
         ParalysisDamage:500,\
         ParalysisTimer:10,\
