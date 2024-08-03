@@ -12,8 +12,8 @@
     particle flame ~ ~ ~ 0.2 0.2 0.2 0.02 10
 
 # 着弾
-    execute if entity @a[tag=Ply.State.EnableDamage,distance=..3] at @s run function mhdp_monster_reus:core/tick/shot/breath/damage
-    execute if entity @n[type=slime,tag=!Mns.HitBox.Reus,distance=..3] at @s run function mhdp_monster_reus:core/tick/shot/breath/damage
+    execute if entity @a[tag=Ply.State.EnableDamage,distance=..2.6] at @s run function mhdp_monster_reus:core/tick/shot/breath/damage
+    execute if entity @n[type=slime,tag=!Mns.HitBox.Reus,distance=..2.6] at @s run function mhdp_monster_reus:core/tick/shot/breath/damage
 
 # 移動
     execute unless block ^ ^ ^1 #mhdp_core:no_collision run function mhdp_monster_reus:core/tick/shot/breath/damage
