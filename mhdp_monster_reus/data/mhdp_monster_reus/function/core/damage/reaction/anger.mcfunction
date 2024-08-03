@@ -19,3 +19,5 @@
     # アニメーション再生
         execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:reus_aj/animations/land_anger/tween {duration:1, to_frame: 0}
         execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:reus_aj/animations/fly_anger/tween {duration:1, to_frame: 0}
+    # アニメーションタグ消去
+        function mhdp_monsters:core/util/other/remove_animation_tag

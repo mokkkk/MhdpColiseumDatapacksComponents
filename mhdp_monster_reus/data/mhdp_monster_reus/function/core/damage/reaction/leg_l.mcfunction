@@ -22,6 +22,8 @@
     # 演出
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    # アニメーションタグ消去
+        function mhdp_monsters:core/util/other/remove_animation_tag
 
 # 終了
     execute if score @s Mns.Reus.Leg.Damage.Count matches 2.. run scoreboard players set @s Mns.Reus.Leg.Damage.Count 0

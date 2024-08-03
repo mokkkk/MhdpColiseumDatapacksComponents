@@ -24,3 +24,5 @@
     # 演出
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    # アニメーションタグ消去
+        function mhdp_monsters:core/util/other/remove_animation_tag

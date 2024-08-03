@@ -17,3 +17,5 @@
         execute if entity @s[tag=Mns.State.IsFlying] run function mhdp_monster_reus:core/damage/reaction/flying
     # 効果時間設定
         scoreboard players operation @s Mns.Paralysis.Timer = @s Mns.Paralysis.Timer.Max
+    # アニメーションタグ消去
+        function mhdp_monsters:core/util/other/remove_animation_tag
