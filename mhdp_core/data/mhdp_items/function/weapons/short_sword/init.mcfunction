@@ -10,7 +10,7 @@
 # 地の型
     # 直接攻撃
         data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Normal.DirectAttack set value {AttackType:"Cut",DamageMult:10,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:3,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.02,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
-
+    # 剣コンボ
 # 天の型
     data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.DirectAttack set value {AttackType:Cut,DamageMult:8,PartDamageMult:100,ElementDamageMult:60,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.02,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
     data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Normal.1 set value {AttackType:Cut,DamageMult:18,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:3,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
