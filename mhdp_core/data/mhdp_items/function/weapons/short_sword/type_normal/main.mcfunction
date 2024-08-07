@@ -14,7 +14,7 @@
     # 開始：スニーク
             execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/24_guard/start
     # 処理
-        execute if entity @s[tag=Wpn.Ss.Tec.Guard] run function mhdp_items:weapons/short_sword/type_normal/24_guard/main
+        execute if entity @s[tag=Wpn.Ss.Normal.Guard] run function mhdp_items:weapons/short_sword/type_normal/24_guard/main
 
 # 剣攻撃コンボ
     # 1段目
@@ -38,17 +38,13 @@
 # 盾攻撃コンボ
     # 盾攻撃
        # 処理
-            execute if entity @s[tag=Wpn.Ss.Tec.Bash.1] run function mhdp_items:weapons/short_sword/type_normal/7_bash_1/main
+            execute if entity @s[tag=Wpn.Ss.Normal.Bash.1] run function mhdp_items:weapons/short_sword/type_normal/7_bash_1/main
     # バックナックル
         # 処理
-            execute if entity @s[tag=Wpn.Ss.Tec.Bash.2] run function mhdp_items:weapons/short_sword/type_normal/8_bash_2/main
+            execute if entity @s[tag=Wpn.Ss.Normal.Bash.2] run function mhdp_items:weapons/short_sword/type_normal/8_bash_2/main
     # ハードバッシュ
         # 処理
-            execute if entity @s[tag=Wpn.Ss.Tec.Bash.3] run function mhdp_items:weapons/short_sword/type_normal/9_bash_3/main
-
-# バックステップ
-    # 処理
-        execute if entity @s[tag=Wpn.Ss.Tec.Backstep] run function mhdp_items:weapons/short_sword/type_normal/12_backstep/main
+            execute if entity @s[tag=Wpn.Ss.Normal.Bash.3] run function mhdp_items:weapons/short_sword/type_normal/9_bash_3/main
 
 # 突進斬り
     # 処理
