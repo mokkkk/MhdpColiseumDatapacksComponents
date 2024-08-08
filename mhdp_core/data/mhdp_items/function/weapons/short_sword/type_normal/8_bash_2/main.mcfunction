@@ -41,4 +41,4 @@
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 11.. run function mhdp_items:weapons/short_sword/type_normal/8_bash_2/change_to_bash_3
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/short_sword/type_normal/8_bash_2/end
+    execute if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/short_sword/type_normal/8_bash_2/end

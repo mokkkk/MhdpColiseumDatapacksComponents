@@ -46,13 +46,16 @@
         # 処理
             execute if entity @s[tag=Wpn.Ss.Normal.Bash.3] run function mhdp_items:weapons/short_sword/type_normal/9_bash_3/main
 
-# 突進斬り
-    # 処理
-        execute if entity @s[tag=Wpn.Ss.Tec.MoveSlash] run function mhdp_items:weapons/short_sword/type_normal/19_moveslash/main
-
 # 鉄蟲糸技：飛影
-    # 処理
-        execute if entity @s[tag=Wpn.Ss.Tec.Tobikage] run function mhdp_items:weapons/short_sword/type_normal/23_tobikage/main
-    
+    # 飛影
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Normal.Tobikage] run function mhdp_items:weapons/short_sword/type_normal/23_tobikage/main
+    # 駆け上がり斬り
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Normal.JumpSlash.High] run function mhdp_items:weapons/short_sword/type_normal/17_jumpslash_high/main
+    # フォールバッシュ
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Normal.Fall.High] run function mhdp_items:weapons/short_sword/type_normal/18_fall_high/main
+
 # 終了
     tag @s remove Ply.Weapon.NoOpe

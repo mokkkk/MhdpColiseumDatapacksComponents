@@ -9,6 +9,7 @@
 
 # 強制抜刀
     function mhdp_items:player/weapon/sheathe/force_drawing
+    tag @s add Ply.Flag.DrawAttack
 
 # 通常：突進斬りに移行
     execute if entity @s[tag=!Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/start

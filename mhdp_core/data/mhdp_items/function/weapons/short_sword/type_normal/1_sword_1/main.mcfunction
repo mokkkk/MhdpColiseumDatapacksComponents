@@ -20,6 +20,7 @@
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/short_sword/type_normal/1_sword_1/attack
+    execute if score @s Wpn.GeneralTimer matches 4 run tag @s remove Ply.Flag.DrawAttack
 
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..2 run tp @s ~ ~ ~ ~-0.5 ~1
@@ -34,4 +35,4 @@
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_normal/1_sword_1/change_to_sword_2
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/short_sword/type_normal/1_sword_1/end
+    execute if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_normal/1_sword_1/end

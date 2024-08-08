@@ -20,6 +20,7 @@
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 8 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/attack
+    execute if score @s Wpn.GeneralTimer matches 9 run tag @s add Ply.Flag.DrawAttack
 
 # 演出
     execute if score @s Wpn.AnimationTimer matches 1..3 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
