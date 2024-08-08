@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_tec/23_tobikage/particle
+#> mhdp_items:weapons/short_sword/type_normal/23_tobikage/particle
 #
 # 飛影 演出
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/23_tobikage/main
+# @within function mhdp_items:weapons/short_sword/type_normal/23_tobikage/main
 
 # [ImportKey]: NobwRALgngDgpmAXGANgSwHYIDRgK55oAmSYARgGxkBmADAMwCMtAtFUawCwDs3FLZAIaDOLAExEKnOIIoAOMYzFkwuDIIC2CZIC3fAASNVYGIIBOmgM5JwAYwD2eDBCSNuuaqbsbrYAG6CUPG1wAA8kWgA6AE5cKCQWRgi5AF9k3Ag7H39A4LAwxBZIiliXCO5U3Dtqags4Z0RaXDI4AC80OFN4yM5cNAsAIVb20wBRAEc8AJQoAGUTGzgSRGoA2tSAXSA_3
 # 線 1

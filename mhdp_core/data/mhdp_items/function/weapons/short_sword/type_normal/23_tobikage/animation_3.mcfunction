@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_tec/23_tobikage/animation_3
+#> mhdp_items:weapons/short_sword/type_normal/23_tobikage/animation_3
 #
 # 飛影 アニメーション処理
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/23_tobikage/main
+# @within function mhdp_items:weapons/short_sword/type_normal/23_tobikage/main
 
 # データ設定
     data modify storage mhdp_core:temp Args.IsDrawing set value true

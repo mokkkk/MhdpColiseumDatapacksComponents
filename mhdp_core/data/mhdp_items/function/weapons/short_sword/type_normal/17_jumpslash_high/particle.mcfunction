@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_tec/16_just_4/particle
+#> mhdp_items:weapons/short_sword/type_normal/16_just_4/particle
 #
-# ジャストラッシュ4 演出
+# 駆け上がり斬り 演出
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/16_just_4/main
+# @within function mhdp_items:weapons/short_sword/type_normal/16_just_4/main
 
 # [ImportKey]: NobwRALgngDgpmAXGANgSwHYIDRgK55oAmSYAnACwAMAZgOwAcAxgEYC0RZDVbFAzCz5tuzNiwYA2AIxUGZOHAZ8ATGFwYAhgFsEyQFu+AAilqwMDQCdtAZyTgmAezwYISKXVw1z9rbbAA3DRQ8XXAADyQqADp3MCgkNilI5QBfZNwIe18AoJCwcMQ2KIBWXDjERL5U3HsaGis4F0QqXBY4AC80OHMI3DQrACF2zvMAUQBHPECUKABlMyY4EkQaQPrUgF0gA_3
 # 線 1

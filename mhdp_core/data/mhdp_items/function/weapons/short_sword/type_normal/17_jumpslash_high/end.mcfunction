@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/short_sword/type_tec/17_jumpslash_high/end
+#> mhdp_items:weapons/short_sword/type_normal/17_jumpslash_high/end
 #
 # 駆け上がり斬り 終了処理
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/17_jumpslash_high/main
+# @within function mhdp_items:weapons/short_sword/type_normal/17_jumpslash_high/main
 
 # タグ消去
-    tag @s remove Wpn.Ss.Tec.JumpSlash.High
+    tag @s remove Wpn.Ss.Normal.JumpSlash.High
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0

@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_tec/23_tobikage/animation_0
+#> mhdp_items:weapons/short_sword/type_normal/23_tobikage/animation_0
 #
 # 飛影 アニメーション処理
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/23_tobikage/main
+# @within function mhdp_items:weapons/short_sword/type_normal/23_tobikage/main
 
 # メイン
     # データ設定

@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/short_sword/type_tec/18_fall_high/end
+#> mhdp_items:weapons/short_sword/type_normal/18_fall_high/end
 #
 # フォールバッシュ・強 終了処理
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/18_fall_high/main
+# @within function mhdp_items:weapons/short_sword/type_normal/18_fall_high/main
 
 # タグ消去
-    tag @s remove Wpn.Ss.Tec.Fall.High
+    tag @s remove Wpn.Ss.Normal.Fall.High
     tag @s remove Ply.Flag.Hit
 
 # タイマー初期化

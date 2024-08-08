@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_tec/5_horizon_2/animation_3
+#> mhdp_items:weapons/short_sword/type_normal/5_horizon_2/animation_3
 #
 # 水平斬りコンボ2 アニメーション処理
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/5_horizon_2/main
+# @within function mhdp_items:weapons/short_sword/type_normal/5_horizon_2/main
 
 # データ設定
     data modify storage mhdp_core:temp Args.IsDrawing set value true

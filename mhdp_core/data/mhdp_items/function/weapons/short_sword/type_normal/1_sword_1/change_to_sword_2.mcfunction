@@ -15,4 +15,4 @@
     tag @s remove Wpn.Ss.Normal.Sword.1
     
 # 対象の処理を実行
-    function mhdp_items:weapons/short_sword/type_tec/2_normal_2/start
+    function mhdp_items:weapons/short_sword/type_normal/2_sword_2/start

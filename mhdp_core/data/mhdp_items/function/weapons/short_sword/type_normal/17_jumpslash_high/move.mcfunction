@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_tec/17_jumpslash_high/move
+#> mhdp_items:weapons/short_sword/type_normal/17_jumpslash_high/move
 #
 # 駆け上がり斬り メイン処理
 #
-# @within function mhdp_items:weapons/great_sword/type_tec/main
+# @within function mhdp_items:weapons/great_sword/type_normal/main
 
 # 移動
     tp @s @s

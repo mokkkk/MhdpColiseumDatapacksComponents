@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/short_sword/type_tec/23_tobikage/start
+#> mhdp_items:weapons/short_sword/type_normal/23_tobikage/start
 #
 # 飛影 開始
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/23_tobikage/change_to_chargeattack
+# @within function mhdp_items:weapons/short_sword/type_normal/23_tobikage/change_to_chargeattack
 
 # タグ付与
-    tag @s add Wpn.Ss.Tec.Tobikage
+    tag @s add Wpn.Ss.Normal.Tobikage
 
 # attribute設定
     attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength

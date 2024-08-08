@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/short_sword/type_tec/14_just_2/start
+#> mhdp_items:weapons/short_sword/type_normal/14_just_2/start
 #
-# ジャストラッシュ4 開始
+# フォールバッシュ 開始
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/1_charge/change_to_chargeattack
+# @within function mhdp_items:weapons/short_sword/type_normal/1_charge/change_to_chargeattack
 
 # タグ付与
-    tag @s add Wpn.Ss.Tec.Fall.High
+    tag @s add Wpn.Ss.Normal.Fall.High
 
 # attribute設定
     attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
