@@ -20,6 +20,7 @@
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/attack
+    execute if score @s Wpn.GeneralTimer matches 4 run tag @s add Ply.Flag.DrawAttack
 
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..2 run tp @s ~ ~ ~ ~-0.5 ~1

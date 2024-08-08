@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/short_sword/type_tec/2_normal_2/start
+#> mhdp_items:weapons/short_sword/type_tec/2_sword_2/start
 #
 # 通常コンボ1 開始
 #

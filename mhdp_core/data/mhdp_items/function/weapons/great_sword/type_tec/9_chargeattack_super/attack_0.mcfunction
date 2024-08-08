@@ -17,7 +17,7 @@
     execute if entity @e[tag=Temp.Victim] run tag @s add Ply.Flag.Hit
 
 # 攻撃
-    data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.1
+    data modify storage mhdp_core:temp Damage set value {AttackType:Cut,DamageMult:20,PartDamageMult:10,ElementDamageMult:60,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.02,IsVfxStrong:false,VfxScale:[3f,4f,3f]}
     execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
 # 終了
