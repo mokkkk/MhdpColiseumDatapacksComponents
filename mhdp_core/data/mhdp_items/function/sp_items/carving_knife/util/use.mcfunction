@@ -1,6 +1,6 @@
 #> mhdp_items:sp_items/carving_knife/util/use
 #
-# 剝ぎ取りナイフ使用開始処理
+# 剥ぎ取りナイフ使用開始処理
 #
 # @within function mhdp_items:core/switch/macro/m.drawing
 

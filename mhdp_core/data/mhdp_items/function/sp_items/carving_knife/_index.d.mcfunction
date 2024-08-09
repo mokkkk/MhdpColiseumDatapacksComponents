@@ -1,9 +1,7 @@
-#> mhdp_items:sp_items/wirebug/_index.d
+#> mhdp_items:sp_items/carving_knife/_index.d
 # @private
 
 #> tag
-# @within function mhdp_items:sp_items/wirebug/**
+# @within function mhdp_items:sp_items/carving_knife/**
 
 ## tag
-# 使用中
-    #declare tag Itm.Sp.Whetstone.Using 使用中

@@ -1,6 +1,6 @@
 #> mhdp_items:sp_items/carving_knife/main
 #
-# 剝ぎ取りナイフメイン処理
+# 剥ぎ取りナイフメイン処理
 #
 # @within function mhdp_items:sp_items/carving_knife/util/use
 
