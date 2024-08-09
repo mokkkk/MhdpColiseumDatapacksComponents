@@ -40,6 +40,7 @@
         UpperName:"Reus",\
         JpName:"火竜",\
         ShowName:'{"text":"火竜"}',\
+        LootTable:"mhdp_items:materials/reus",\
         ShowHp:true,\
         Hp:11000,\
         StunDamage:200,\

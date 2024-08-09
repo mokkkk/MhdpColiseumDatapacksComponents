@@ -27,6 +27,7 @@
         UpperName:"Ranposu",\
         JpName:"青鳥竜",\
         ShowName:'{"text":"青鳥竜"}',\
+        LootTable:"mhdp_items:materials/ranposu",\
         ShowHp:true,\
         Hp:10000,\
         StunDamage:200,\
