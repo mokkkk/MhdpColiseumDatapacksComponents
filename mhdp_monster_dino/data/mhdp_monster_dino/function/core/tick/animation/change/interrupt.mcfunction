@@ -9,8 +9,7 @@
     # function mhdp_monster_dino:core/tick/animation/change/play/bite
 
 # 軸合わせ
-    # tag @s add Mns.Temp.IsTurn
-    # scoreboard players set @s Mns.General.TurnCount 2
+    tag @s add Mns.Temp.IsTurn
 
 # アニメーション変更
     function mhdp_monster_dino:core/tick/animation/change/main

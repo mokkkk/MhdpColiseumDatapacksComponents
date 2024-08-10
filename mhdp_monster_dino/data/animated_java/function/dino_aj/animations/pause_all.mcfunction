@@ -4,7 +4,9 @@ tag @s remove aj.dino_aj.animation.pose.playing
 tag @s remove aj.dino_aj.animation.idle.playing
 tag @s remove aj.dino_aj.animation.move.playing
 tag @s remove aj.dino_aj.animation.move_stop.playing
+tag @s remove aj.dino_aj.animation.turn_r.playing
 tag @s remove aj.dino_aj.animation.turn_l.playing
+tag @s remove aj.dino_aj.animation.turn_big_r.playing
 tag @s remove aj.dino_aj.animation.turn_big_l.playing
 tag @s remove aj.dino_aj.animation.step_side_l.playing
 tag @s remove aj.dino_aj.animation.voice.playing

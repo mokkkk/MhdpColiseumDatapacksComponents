@@ -3,7 +3,9 @@ scoreboard objectives add aj.pose.frame dummy
 scoreboard objectives add aj.idle.frame dummy
 scoreboard objectives add aj.move.frame dummy
 scoreboard objectives add aj.move_stop.frame dummy
+scoreboard objectives add aj.turn_r.frame dummy
 scoreboard objectives add aj.turn_l.frame dummy
+scoreboard objectives add aj.turn_big_r.frame dummy
 scoreboard objectives add aj.turn_big_l.frame dummy
 scoreboard objectives add aj.step_side_l.frame dummy
 scoreboard objectives add aj.voice.frame dummy
