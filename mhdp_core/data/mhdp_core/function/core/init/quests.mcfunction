@@ -34,7 +34,16 @@
 
 # テスト用
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:2,Name:"DEBUG:さんどばっぐくん",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
+        ID:2,Name:"斬竜の狩猟",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        Content:{HpMultiply:9000,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+            {MonsterId:1003,Timing:"Initial",TargetMonsterId:-1}\
+        ]}\
+    }
+
+# テスト用
+    data modify storage mhdp_core:game_data QuestList append value {\
+        ID:3,Name:"DEBUG:さんどばっぐくん",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
         Content:{HpMultiply:9000,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:999,DeathCount:99999,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1}\
@@ -43,7 +52,7 @@
 
 # テスト用
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:3,Name:"DEBUG:テスト用クエスト2",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
+        ID:5,Name:"DEBUG:テスト用クエスト2",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
         Content:{HpMultiply:30,AttackMultiply:200,Field:"Coliseum",Time:"day",TimeLimit:5454,DeathCount:999,RewardMoney:15,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1},\
@@ -53,7 +62,7 @@
 
 # テスト用
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:4,Name:"DEBUG:とってもながいクエスト名てすと",Level:7,Pos:0,IsEmergency:false,HideMonsters:false,\
+        ID:8,Name:"DEBUG:とってもながいクエスト名てすと",Level:7,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
         Content:{HpMultiply:200,AttackMultiply:200,Field:"Coliseum",Time:"day",TimeLimit:999,DeathCount:999,RewardMoney:999,RewardId:-1,Monsters:[\
             {MonsterId:3,Timing:"Initial",TargetMonsterId:-1}\
@@ -62,7 +71,7 @@
 
 # テスト用
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:5,Name:"DEBUG:非表示クエスト",Level:7,Pos:0,IsEmergency:false,HideMonsters:true,\
+        ID:12,Name:"DEBUG:非表示クエスト",Level:7,Pos:0,IsEmergency:false,HideMonsters:true,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
         Content:{HpMultiply:200,AttackMultiply:200,Field:"Test",Time:"day",TimeLimit:999,DeathCount:999,RewardMoney:999,RewardId:-1,Monsters:[\
             {MonsterId:0,Timing:"Initial",TargetMonsterId:-1},\
