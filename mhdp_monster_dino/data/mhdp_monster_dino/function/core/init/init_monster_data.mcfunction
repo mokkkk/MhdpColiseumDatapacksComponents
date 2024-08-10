@@ -74,9 +74,9 @@
 # 肉質データ
 # 切断,打撃,弾,火,水,雷,氷,龍
 # 頭, 胴, 尻尾, 右脚, 左脚
-    execute if data storage mhdp_core:monster_data DefenceData[{Uid:1002}] run data remove storage mhdp_core:monster_data DefenceData[{Uid:1002}]
+    execute if data storage mhdp_core:monster_data DefenceData[{Uid:1003}] run data remove storage mhdp_core:monster_data DefenceData[{Uid:1003}]
     data modify storage mhdp_core:monster_data DefenceData append value {\
-        Uid:1002,\
+        Uid:1003,\
         Defences:[\
             [70,75,62,0,15,25,10,30],\
             [35,40,25,0,5,15,10,15],\
@@ -87,9 +87,9 @@
     }
 
 # 攻撃力データ
-    execute if data storage mhdp_core:monster_data AttackData[{Uid:1002}] run data remove storage mhdp_core:monster_data AttackData[{Uid:1002}]
+    execute if data storage mhdp_core:monster_data AttackData[{Uid:1003}] run data remove storage mhdp_core:monster_data AttackData[{Uid:1002}]
     data modify storage mhdp_core:monster_data AttackData append value {\
-        Uid:1002,\
+        Uid:1003,\
         Attacks:[{Id:"Bite"}]\
     }
     function mhdp_monster_dino:core/init/init_attack_data

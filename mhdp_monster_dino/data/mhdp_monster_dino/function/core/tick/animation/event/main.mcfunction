@@ -15,3 +15,7 @@
 
 # 嚙みつき
     execute if entity @s[tag=aj.dino_aj.animation.bite.playing] run function mhdp_monster_dino:core/tick/animation/event/bite/main
+
+# 2連嚙みつき
+    execute if entity @s[tag=aj.dino_aj.animation.bite_double_normal.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_double_normal/main
+    execute if entity @s[tag=aj.dino_aj.animation.bite_double_anger.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_double_anger/main

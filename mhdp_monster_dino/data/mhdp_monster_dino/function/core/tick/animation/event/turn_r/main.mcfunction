@@ -8,6 +8,9 @@
     execute if score @s aj.turn_r.frame matches 1 run function mhdp_monster_dino:core/tick/animation/event/turn_r/turn_start
     execute if score @s aj.turn_r.frame matches 2..20 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
+# 移動
+    execute if score @s aj.turn_r.frame matches 1..10 if entity @n[tag=Mns.Target.Dino,distance=..7] at @s run tp @s ^ ^ ^-0.3
+
 # 効果音
     execute if score @s aj.turn_r.frame matches 9 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
     execute if score @s aj.turn_r.frame matches 19 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
