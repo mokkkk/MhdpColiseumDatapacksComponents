@@ -11,7 +11,7 @@
     function mhdp_monsters:core/util/tick/tick
 
 # アニメーションイベントハンドラ
-    # function mhdp_monster_dino:core/tick/animation/event/main
+    function mhdp_monster_dino:core/tick/animation/event/main
 
 # その他演出
     # 怒り中・頭部の演出
