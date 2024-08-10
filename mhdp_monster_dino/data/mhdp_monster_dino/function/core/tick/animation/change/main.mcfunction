@@ -36,14 +36,17 @@
 
 # 軸合わせアニメーション再生
     execute if entity @s[tag=Mns.Temp.IsTurn] store result score #mhdp_temp_result MhdpCore run function mhdp_monster_dino:core/tick/animation/change/play/turn
+    execute if entity @s[tag=Mns.Temp.IsTurn.Big] store result score #mhdp_temp_result MhdpCore run function mhdp_monster_dino:core/tick/animation/change/play/turn_big_start
     # 軸合わせ不要な場合、すぐアニメーションを再生する
         execute if score #mhdp_temp_result MhdpCore matches 99 run tag @s remove Mns.Temp.IsTurn
+        execute if score #mhdp_temp_result MhdpCore matches 99 run tag @s remove Mns.Temp.IsTurn.Big
     scoreboard players reset #mhdp_temp_result MhdpCore
 
 # 軸合わせしない場合、攻撃アニメーション再生・タグ消去
-    execute if entity @s[tag=!Mns.Temp.IsTurn] run function mhdp_monster_dino:core/tick/animation/change/play/main
+    execute if entity @s[tag=!Mns.Temp.IsTurn,tag=!Mns.Temp.IsTurn.Big] run function mhdp_monster_dino:core/tick/animation/change/play/main
 
 # 終了
     tag @s remove Mns.Temp.IsTurn
+    tag @s remove Mns.Temp.IsTurn.Big
     tag @s remove Mns.Temp.IsFirstContact
     tag @s remove Mns.Temp.IsAlreadyAnimation

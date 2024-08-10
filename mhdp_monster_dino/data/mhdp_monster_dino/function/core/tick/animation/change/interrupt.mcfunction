@@ -9,7 +9,8 @@
     # function mhdp_monster_dino:core/tick/animation/change/play/bite
 
 # 軸合わせ
-    tag @s add Mns.Temp.IsTurn
+    # tag @s add Mns.Temp.IsTurn
+    tag @s add Mns.Temp.IsTurn.Big
 
 # アニメーション変更
     function mhdp_monster_dino:core/tick/animation/change/main
