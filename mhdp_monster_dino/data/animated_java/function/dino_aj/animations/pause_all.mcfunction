@@ -25,6 +25,3 @@ tag @s remove aj.dino_aj.animation.jump_tail_anger_r.playing
 tag @s remove aj.dino_aj.animation.tail_flame_l.playing
 tag @s remove aj.dino_aj.animation.roundforce.playing
 tag @s remove aj.dino_aj.animation.polish.playing
-tag @s remove aj.dino_aj.animation.tail_attack_l2.playing
-tag @s remove aj.dino_aj.animation.tail_side_r2.playing
-tag @s remove aj.dino_aj.animation.roundforce2.playing
