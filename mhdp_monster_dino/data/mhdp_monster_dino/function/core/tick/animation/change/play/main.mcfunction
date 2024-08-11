@@ -21,8 +21,11 @@
     execute if entity @s[tag=Anim.Bite] run function animated_java:dino_aj/animations/bite/tween {duration:1, to_frame: 1}
 
 # 2連噛みつき
-    # execute if entity @s[tag=Anim.BiteDouble] run function animated_java:dino_aj/animations/bite_double_normal/tween {duration:1, to_frame: 1}
-    execute if entity @s[tag=Anim.BiteDouble] run function animated_java:dino_aj/animations/bite_double_anger/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.BiteDouble,tag=!Mns.State.IsAnger] run function animated_java:dino_aj/animations/bite_double_normal/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.BiteDouble,tag=Mns.State.IsAnger] run function animated_java:dino_aj/animations/bite_double_anger/tween {duration:1, to_frame: 1}
+
+# 尻尾攻撃
+    execute if entity @s[tag=Anim.Tail.L] run function animated_java:dino_aj/animations/tail_attack_l/tween {duration:1, to_frame: 1}
 
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag

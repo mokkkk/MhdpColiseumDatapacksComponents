@@ -6,3 +6,6 @@
 
 # 噛みつき
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Bite",DamageValue:5.0f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+
+# 尻尾叩きつけ
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Tail",DamageValue:8.0f,GuardValue:4,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
