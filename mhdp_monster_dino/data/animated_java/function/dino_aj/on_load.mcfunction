@@ -19,6 +19,8 @@ scoreboard objectives add aj.breath_backstep.frame dummy
 scoreboard objectives add aj.breath_move_l.frame dummy
 scoreboard objectives add aj.tail_back_r.frame dummy
 scoreboard objectives add aj.tail_side_r.frame dummy
+scoreboard objectives add aj.tail_side_r4.frame dummy
+scoreboard objectives add aj.tail_side_r5.frame dummy
 scoreboard objectives add aj.tail_attack_l.frame dummy
 scoreboard objectives add aj.tail_attack_anger_l.frame dummy
 scoreboard objectives add aj.jump_tail_r.frame dummy
@@ -26,4 +28,6 @@ scoreboard objectives add aj.jump_tail_anger_r.frame dummy
 scoreboard objectives add aj.tail_flame_l.frame dummy
 scoreboard objectives add aj.roundforce.frame dummy
 scoreboard objectives add aj.polish.frame dummy
+scoreboard objectives add aj.tail_side_r2.frame dummy
+scoreboard objectives add aj.tail_side_r3.frame dummy
 execute as @e[type=item_display,tag=aj.dino_aj.root] unless score @s aj.is_rig_loaded matches 1 at @s run function animated_java:dino_aj/root/on_load

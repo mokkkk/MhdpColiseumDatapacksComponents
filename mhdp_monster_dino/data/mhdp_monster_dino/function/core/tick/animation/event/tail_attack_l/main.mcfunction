@@ -20,12 +20,10 @@
     execute if score @s aj.tail_attack_l.frame matches 16 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.tail_attack_l.frame matches 26 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.tail_attack_l.frame matches 26 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1.8 0.1 1.8 0 30
-    execute if score @s aj.tail_attack_l.frame matches 72 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    # execute if score @s aj.tail_attack_l.frame matches 38 run playsound entity.ender_dragon.growl master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.5 0.4
-    execute if score @s aj.tail_attack_l.frame matches 38..43 run playsound entity.hoglin.angry master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.5 0.4
-    execute if score @s aj.tail_attack_l.frame matches 38..43 run playsound entity.iron_golem.hurt master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.7 0.4
+    execute if score @s aj.tail_attack_l.frame matches 38..46 run playsound minecraft:entity.ravager.death master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.6 0.4
     execute if score @s aj.tail_attack_l.frame matches 38..39 run playsound minecraft:item.mace.smash_ground master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.8 0.4
     execute if score @s aj.tail_attack_l.frame matches 38..39 run playsound minecraft:item.mace.smash_ground master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.6 0.4
+    execute if score @s aj.tail_attack_l.frame matches 81 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 攻撃
     execute if score @s aj.tail_attack_l.frame matches 21..27 run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l/attack_tail
@@ -36,5 +34,4 @@
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 終了
-    execute if score @s aj.tail_attack_l.frame matches 108 run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l/end
-
+    execute if score @s aj.tail_attack_l.frame matches 119 run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l/end

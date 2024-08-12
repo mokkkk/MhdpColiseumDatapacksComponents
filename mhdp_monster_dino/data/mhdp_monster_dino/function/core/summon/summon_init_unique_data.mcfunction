@@ -5,7 +5,7 @@
 # @within function mhdp_monster_dino:core/summon/summon_init
 
 # ボスバー作成
-    bossbar add mhdp_monster:dino [{"text":"火竜"},{"text":"\uE000","font":"minecraft:ui/monster_hp"}]
+    bossbar add mhdp_monster:dino [{"text":"斬竜"},{"text":"\uE000","font":"minecraft:ui/monster_hp"}]
     execute store result bossbar mhdp_monster:dino max run scoreboard players get @s Mns.Hp
     execute store result bossbar mhdp_monster:dino value run scoreboard players get @s Mns.Hp
 

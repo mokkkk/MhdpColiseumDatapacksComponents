@@ -22,6 +22,8 @@ execute if entity @s[tag=aj.dino_aj.animation.breath_backstep.playing] run funct
 execute if entity @s[tag=aj.dino_aj.animation.breath_move_l.playing] run function animated_java:dino_aj/animations/breath_move_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.tail_back_r.playing] run function animated_java:dino_aj/animations/tail_back_r/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.tail_side_r.playing] run function animated_java:dino_aj/animations/tail_side_r/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.tail_side_r4.playing] run function animated_java:dino_aj/animations/tail_side_r4/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.tail_side_r5.playing] run function animated_java:dino_aj/animations/tail_side_r5/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.tail_attack_l.playing] run function animated_java:dino_aj/animations/tail_attack_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.tail_attack_anger_l.playing] run function animated_java:dino_aj/animations/tail_attack_anger_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.jump_tail_r.playing] run function animated_java:dino_aj/animations/jump_tail_r/zzz/on_tick
@@ -29,6 +31,8 @@ execute if entity @s[tag=aj.dino_aj.animation.jump_tail_anger_r.playing] run fun
 execute if entity @s[tag=aj.dino_aj.animation.tail_flame_l.playing] run function animated_java:dino_aj/animations/tail_flame_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.roundforce.playing] run function animated_java:dino_aj/animations/roundforce/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.polish.playing] run function animated_java:dino_aj/animations/polish/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.tail_side_r2.playing] run function animated_java:dino_aj/animations/tail_side_r2/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.tail_side_r3.playing] run function animated_java:dino_aj/animations/tail_side_r3/zzz/on_tick
 execute on passengers if entity @s[tag=aj.dino_aj.data] run function animated_java:dino_aj/root/zzz/1
 execute at @s on passengers run tp @s ~ ~ ~ ~ ~
 function #animated_java:dino_aj/as_root/post_tick

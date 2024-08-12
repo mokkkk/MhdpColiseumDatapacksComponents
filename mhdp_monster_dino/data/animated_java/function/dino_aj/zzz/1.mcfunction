@@ -40,14 +40,6 @@ data modify entity @s data.locators.tail_4.uuid set from storage aj:uuid main.ou
 summon minecraft:item_display ~ ~ ~ {Tags:['aj.new', 'aj.locator', 'aj.dino_aj.locator', 'aj.dino_aj.locator.shadow']}
 execute as @e[type=minecraft:item_display,tag=aj.new,tag=aj.locator,limit=1,distance=..0.01] run function animated_java:dino_aj/zzz/14
 data modify entity @s data.locators.shadow.uuid set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_body_1] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_body_1 set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_body_0] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_body_0 set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_neck_1] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_neck_1 set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_head_0] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_head_0 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.head_lower] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
 data modify entity @s data.bones.bone_head_lower set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
@@ -60,10 +52,6 @@ execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.neck_2] run fu
 data modify entity @s data.bones.bone_neck_2 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.body_0] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
 data modify entity @s data.bones.bone_body_0 set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_leg_left_1] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_leg_left_1 set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_leg_left_2] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_leg_left_2 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.leg_left_3] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
 data modify entity @s data.bones.bone_leg_left_3 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.leg_left_2] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
@@ -72,10 +60,6 @@ execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.leg_left_1] ru
 data modify entity @s data.bones.bone_leg_left_1 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.leg_left_0] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
 data modify entity @s data.bones.bone_leg_left_0 set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_leg_right_1] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_leg_right_1 set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_leg_right_2] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_leg_right_2 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.leg_right_3] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
 data modify entity @s data.bones.bone_leg_right_3 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.leg_right_2] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
@@ -84,14 +68,6 @@ execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.leg_right_1] r
 data modify entity @s data.bones.bone_leg_right_1 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.leg_right_0] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
 data modify entity @s data.bones.bone_leg_right_0 set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_tail_1] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_tail_1 set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_tail_2] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_tail_2 set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_tail_3] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_tail_3 set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.locator_tail_4] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_locator_tail_4 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.tail_4] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
 data modify entity @s data.bones.bone_tail_4 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.dino_aj.bone.tail_3] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
