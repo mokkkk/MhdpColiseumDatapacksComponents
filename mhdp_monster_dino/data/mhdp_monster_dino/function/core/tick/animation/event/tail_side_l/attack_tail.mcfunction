@@ -1,4 +1,4 @@
-#> mhdp_monster_dino:core/tick/animation/event/tail_side_r/attack_head
+#> mhdp_monster_dino:core/tick/animation/event/tail_side_l/attack_head
 #
 # アニメーションイベントハンドラ 尻尾攻撃・側面
 #
@@ -11,10 +11,10 @@
 
 # ヒット確認
     # 対プレイヤー
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/tail_side_r/m.attack_tail with entity @s data.locators.pos_tail_1
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/tail_side_r/m.attack_tail with entity @s data.locators.pos_tail_2
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/tail_side_r/m.attack_tail with entity @s data.locators.pos_tail_3
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/tail_side_r/m.attack_tail with entity @s data.locators.pos_tail_4
+        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/tail_side_l/m.attack_tail with entity @s data.locators.pos_tail_1
+        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/tail_side_l/m.attack_tail with entity @s data.locators.pos_tail_2
+        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/tail_side_l/m.attack_tail with entity @s data.locators.pos_tail_3
+        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/tail_side_l/m.attack_tail with entity @s data.locators.pos_tail_4
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         tag @a remove Temp.Hit
     # 対モンスター

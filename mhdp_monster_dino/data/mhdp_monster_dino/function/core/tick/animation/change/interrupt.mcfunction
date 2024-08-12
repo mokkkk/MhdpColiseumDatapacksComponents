@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.TailSide.R
+    tag @s add Anim.Tail.Anger.L
     # function mhdp_monster_dino:core/tick/animation/change/play/bite
 
 # 軸合わせ
