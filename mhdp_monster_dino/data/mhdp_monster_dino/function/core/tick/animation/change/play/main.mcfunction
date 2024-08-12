@@ -25,6 +25,7 @@
     execute if entity @s[tag=Anim.BiteDouble,tag=Mns.State.IsAnger] run function animated_java:dino_aj/animations/bite_double_anger/tween {duration:1, to_frame: 1}
 
 # 尻尾攻撃
+    execute if entity @s[tag=Anim.Tail.R] run function animated_java:dino_aj/animations/tail_attack_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Tail.L] run function animated_java:dino_aj/animations/tail_attack_l/tween {duration:1, to_frame: 1}
 
 # 尻尾攻撃・側面
