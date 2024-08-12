@@ -23,6 +23,7 @@ tag @s remove aj.dino_aj.animation.tail_side_r.playing
 tag @s remove aj.dino_aj.animation.tail_side_l.playing
 tag @s remove aj.dino_aj.animation.tail_attack_r.playing
 tag @s remove aj.dino_aj.animation.tail_attack_l.playing
+tag @s remove aj.dino_aj.animation.tail_attack_anger_r.playing
 tag @s remove aj.dino_aj.animation.tail_attack_anger_l.playing
 tag @s remove aj.dino_aj.animation.jump_tail_r.playing
 tag @s remove aj.dino_aj.animation.jump_tail_anger_r.playing
