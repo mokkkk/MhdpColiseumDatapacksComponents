@@ -36,3 +36,6 @@
 
 # 尻尾攻撃・飛びかかり
     execute if entity @s[tag=aj.dino_aj.animation.jump_tail_r.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/main
+    execute if entity @s[tag=aj.dino_aj.animation.jump_tail_l.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_l/main
+    execute if entity @s[tag=aj.dino_aj.animation.jump_tail_anger_r.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_r/main
+    execute if entity @s[tag=aj.dino_aj.animation.jump_tail_anger_l.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/main

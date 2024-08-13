@@ -26,6 +26,7 @@ scoreboard objectives add aj.tail_attack_l.frame dummy
 scoreboard objectives add aj.tail_attack_anger_r.frame dummy
 scoreboard objectives add aj.tail_attack_anger_l.frame dummy
 scoreboard objectives add aj.jump_tail_r.frame dummy
+scoreboard objectives add aj.jump_tail_l.frame dummy
 scoreboard objectives add aj.jump_tail_anger_r.frame dummy
 scoreboard objectives add aj.tail_flame_l.frame dummy
 scoreboard objectives add aj.roundforce.frame dummy

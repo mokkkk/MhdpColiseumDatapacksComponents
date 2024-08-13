@@ -6,7 +6,7 @@
 
 # タグ付与
     tag @s add Anim.TailJump.R
-    # function mhdp_monster_dino:core/tick/animation/change/play/tail
+    # function mhdp_monster_dino:core/tick/animation/change/play/tail_jump
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn

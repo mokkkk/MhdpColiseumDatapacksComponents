@@ -17,3 +17,6 @@
 
 # 尻尾攻撃・背面
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailBack",DamageValue:6.2f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+
+# 尻尾攻撃・飛びかかり
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailJump",DamageValue:8.8f,GuardValue:5,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}

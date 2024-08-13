@@ -29,6 +29,7 @@ execute if entity @s[tag=aj.dino_aj.animation.tail_attack_l.playing] run functio
 execute if entity @s[tag=aj.dino_aj.animation.tail_attack_anger_r.playing] run function animated_java:dino_aj/animations/tail_attack_anger_r/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.tail_attack_anger_l.playing] run function animated_java:dino_aj/animations/tail_attack_anger_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.jump_tail_r.playing] run function animated_java:dino_aj/animations/jump_tail_r/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.jump_tail_l.playing] run function animated_java:dino_aj/animations/jump_tail_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.jump_tail_anger_r.playing] run function animated_java:dino_aj/animations/jump_tail_anger_r/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.tail_flame_l.playing] run function animated_java:dino_aj/animations/tail_flame_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.roundforce.playing] run function animated_java:dino_aj/animations/roundforce/zzz/on_tick

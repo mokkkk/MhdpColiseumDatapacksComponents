@@ -1,14 +1,15 @@
 #> mhdp_monster_dino:core/tick/animation/event/jump_tail_r/main
 #
-# アニメーションイベントハンドラ 尻尾叩きつけ
+# アニメーションイベントハンドラ 尻尾攻撃・飛びかかり
 #
 # @within function mhdp_monster_dino:core/tick/animation/event/tick
 
 # 弱めの軸合わせ
     execute if score @s aj.jump_tail_r.frame matches 2 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/turn_start
     execute if score @s aj.jump_tail_r.frame matches 12 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/turn_start
-    execute if score @s aj.jump_tail_r.frame matches 23 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/turn_start
-    execute if score @s aj.jump_tail_r.frame matches 1..34 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.jump_tail_r.frame matches 30 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/turn_start
+    execute if score @s aj.jump_tail_r.frame matches 1..22 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.jump_tail_r.frame matches 30..39 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.jump_tail_r.frame matches 1..5 if entity @n[tag=Mns.Target.Dino,distance=..8] at @s run tp @s ^ ^ ^-0.2
