@@ -6,4 +6,5 @@
 
 # ヒット確認
     $execute positioned ^$(posx) ^$(posy) ^$(posz) as @a[tag=Ply.State.EnableDamage,distance=..2.5] run tag @s add Temp.Hit
-    $execute positioned ^$(posx) ^$(posy) ^$(posz) positioned ~ ~ ~ run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 0.7 0.1 0.7 0 10
+    $execute positioned ^$(posx) ^$(posy) ^$(posz) positioned ~ ~ ~ run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 0.7 0.1 0.7 0 5
+    $execute on vehicle if entity @s[tag=Mns.Dino.State.TailHeat] run particle lava ^$(posx) ^$(posy) ^$(posz) 0.3 0.1 0.3 0 1

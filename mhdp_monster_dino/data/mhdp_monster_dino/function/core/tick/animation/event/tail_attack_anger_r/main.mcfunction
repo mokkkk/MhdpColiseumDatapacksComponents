@@ -25,7 +25,8 @@
     execute if score @s aj.tail_attack_anger_r.frame matches 30..31 run playsound minecraft:item.mace.smash_ground master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.6 0.4
     execute if score @s aj.tail_attack_anger_r.frame matches 57 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.tail_attack_anger_r.frame matches 73..82 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s aj.tail_attack_anger_r.frame matches 75 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s aj.tail_attack_anger_r.frame matches 75 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    execute if score @s aj.tail_attack_anger_r.frame matches 75 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.tail_attack_anger_r.frame matches 84 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.tail_attack_anger_r.frame matches 114 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 

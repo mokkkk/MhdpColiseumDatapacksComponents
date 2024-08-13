@@ -1,4 +1,4 @@
-#> mhdp_monster_dino:core/tick/animation/event/tail_attack_r/attack
+#> mhdp_monster_dino:core/tick/animation/event/tail_attack_l/attack
 #
 # アニメーションイベントハンドラ 嚙みつき
 #
@@ -37,9 +37,6 @@
     playsound item.mace.smash_air master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if entity @s[tag=Mns.Dino.State.TailHeat] positioned ^ ^1 ^7 run particle lava ~ ~0 ~ 0.5 0.5 0.5 0 4
-    execute if entity @s[tag=Mns.Dino.State.TailHeat] positioned ^ ^1 ^9 run particle lava ~ ~0 ~ 0.5 0.5 0.5 0 4
-    execute if entity @s[tag=Mns.Dino.State.TailHeat] positioned ^ ^1 ^11 run particle lava ~ ~0 ~ 0.5 0.5 0.5 0 4
 
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit

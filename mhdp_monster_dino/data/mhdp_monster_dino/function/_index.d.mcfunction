@@ -1,18 +1,20 @@
-#> mhdp_monster_reus:_index.d
+#> mhdp_monster_dino:_index.d
 # @private
 
 #> tag
-# @within function mhdp_monster_reus:/**
+# @within function mhdp_monster_dino:/**
 
 ## tag
 # item_display
-    #declare tag Mns.Root.Reus 火竜Rootエンティティ
+    #declare tag Mns.Root.Dino 斬竜Rootエンティティ
 # 当たり判定
-    #declare tag Mns.HitBox.Reus 火竜当たり判定スライム
-    #declare tag Mns.HitBox.Reus.Head 頭
-    #declare tag Mns.HitBox.Reus.Body 胴
+    #declare tag Mns.HitBox.Dino 斬竜当たり判定スライム
+    #declare tag Mns.HitBox.Dino.Head 頭
+    #declare tag Mns.HitBox.Dino.Body 胴
 # 状態
-    #declare tag Mns.Reus.State.Flying 飛行形態
+    #declare tag Mns.Dino.State.HeadHeat 喉赤熱化
+    #declare tag Mns.Dino.State.TailHeat 尻尾赤熱化
+    #declare tag Mns.Dino.State.TailRust 尻尾錆び
 # 一時
     #declare tag Mns.Temp.Damage.Head 頭怯み
     #declare tag Mns.Temp.Damage.Body 胴怯み
@@ -20,7 +22,7 @@
     #declare tag Mns.Temp.Damage.LegR 右足怯み
     #declare tag Mns.Temp.Damage.LegL 左足怯み
 # プレイヤー
-    #declare tag Mns.Target.Reus 現在狙っているプレイヤー
+    #declare tag Mns.Target.Dino 現在狙っているプレイヤー
 # 部位破壊
     #declare tag Mns.Break.Head 頭部位破壊
     #declare tag Mns.Break.Tail 尻尾部位破壊
@@ -34,8 +36,8 @@
 
 # その他Entity
     # 発射物
-        #declare tag Mns.Shot.Reus 火竜の弾全般
-        #declare tag Mns.Shot.Reus.Breath 火炎弾
-        #declare tag Mns.Shot.Reus.Tail 切断後の尻尾
+        #declare tag Mns.Shot.Dino 火竜の弾全般
+        #declare tag Mns.Shot.Dino.Breath 火炎弾
+        #declare tag Mns.Shot.Dino.Tail 切断後の尻尾
     # 攻撃位置
-        #declare tag Mns.ShotPos.Reus 射撃攻撃位置
+        #declare tag Mns.ShotPos.Dino 射撃攻撃位置
