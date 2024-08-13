@@ -19,6 +19,7 @@ tag @s remove aj.dino_aj.animation.breath_triple.playing
 tag @s remove aj.dino_aj.animation.breath_backstep.playing
 tag @s remove aj.dino_aj.animation.breath_move_l.playing
 tag @s remove aj.dino_aj.animation.tail_back_r.playing
+tag @s remove aj.dino_aj.animation.tail_back_l.playing
 tag @s remove aj.dino_aj.animation.tail_side_r.playing
 tag @s remove aj.dino_aj.animation.tail_side_l.playing
 tag @s remove aj.dino_aj.animation.tail_attack_r.playing

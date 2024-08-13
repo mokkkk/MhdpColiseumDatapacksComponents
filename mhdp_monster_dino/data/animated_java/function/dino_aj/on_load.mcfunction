@@ -18,6 +18,7 @@ scoreboard objectives add aj.breath_triple.frame dummy
 scoreboard objectives add aj.breath_backstep.frame dummy
 scoreboard objectives add aj.breath_move_l.frame dummy
 scoreboard objectives add aj.tail_back_r.frame dummy
+scoreboard objectives add aj.tail_back_l.frame dummy
 scoreboard objectives add aj.tail_side_r.frame dummy
 scoreboard objectives add aj.tail_side_l.frame dummy
 scoreboard objectives add aj.tail_attack_r.frame dummy

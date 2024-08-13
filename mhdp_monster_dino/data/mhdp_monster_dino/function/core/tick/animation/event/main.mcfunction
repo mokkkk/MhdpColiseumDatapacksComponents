@@ -32,3 +32,4 @@
 
 # 尻尾攻撃・背面
     execute if entity @s[tag=aj.dino_aj.animation.tail_back_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_back_r/main
+    execute if entity @s[tag=aj.dino_aj.animation.tail_back_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_back_l/main

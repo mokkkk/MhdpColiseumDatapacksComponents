@@ -21,6 +21,7 @@ execute if entity @s[tag=aj.dino_aj.animation.breath_triple.playing] run functio
 execute if entity @s[tag=aj.dino_aj.animation.breath_backstep.playing] run function animated_java:dino_aj/animations/breath_backstep/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.breath_move_l.playing] run function animated_java:dino_aj/animations/breath_move_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.tail_back_r.playing] run function animated_java:dino_aj/animations/tail_back_r/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.tail_back_l.playing] run function animated_java:dino_aj/animations/tail_back_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.tail_side_r.playing] run function animated_java:dino_aj/animations/tail_side_r/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.tail_side_l.playing] run function animated_java:dino_aj/animations/tail_side_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.tail_attack_r.playing] run function animated_java:dino_aj/animations/tail_attack_r/zzz/on_tick
