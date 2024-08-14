@@ -8,8 +8,8 @@
     execute facing entity @n[tag=Mns.Target.Dino] feet rotated ~ 0 positioned ^ ^ ^3.0 rotated as @s positioned ^4.0 ^ ^ if entity @s[distance=..5.0] run tag @s add Mns.Temp.Right
 
 # 再生アニメーション決定
-    execute if entity @s[tag=Mns.Temp.Right] run tag @s add Anim.TailJump.R
-    execute if entity @s[tag=!Mns.Temp.Right] run tag @s add Anim.TailJump.L
+    execute if entity @s[tag=Mns.Temp.Right] run tag @s add Anim.TailJump.L
+    execute if entity @s[tag=!Mns.Temp.Right] run tag @s add Anim.TailJump.R
 
 # 終了
     tag @s remove Mns.Temp.Right
