@@ -7,6 +7,7 @@ scoreboard objectives add aj.turn_r.frame dummy
 scoreboard objectives add aj.turn_l.frame dummy
 scoreboard objectives add aj.turn_big_r.frame dummy
 scoreboard objectives add aj.turn_big_l.frame dummy
+scoreboard objectives add aj.step_side_r.frame dummy
 scoreboard objectives add aj.step_side_l.frame dummy
 scoreboard objectives add aj.voice.frame dummy
 scoreboard objectives add aj.anger.frame dummy
@@ -16,6 +17,7 @@ scoreboard objectives add aj.bite_double_anger.frame dummy
 scoreboard objectives add aj.breath.frame dummy
 scoreboard objectives add aj.breath_triple.frame dummy
 scoreboard objectives add aj.breath_backstep.frame dummy
+scoreboard objectives add aj.breath_move_r.frame dummy
 scoreboard objectives add aj.breath_move_l.frame dummy
 scoreboard objectives add aj.tail_back_r.frame dummy
 scoreboard objectives add aj.tail_back_l.frame dummy

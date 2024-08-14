@@ -8,6 +8,7 @@ tag @s remove aj.dino_aj.animation.turn_r.playing
 tag @s remove aj.dino_aj.animation.turn_l.playing
 tag @s remove aj.dino_aj.animation.turn_big_r.playing
 tag @s remove aj.dino_aj.animation.turn_big_l.playing
+tag @s remove aj.dino_aj.animation.step_side_r.playing
 tag @s remove aj.dino_aj.animation.step_side_l.playing
 tag @s remove aj.dino_aj.animation.voice.playing
 tag @s remove aj.dino_aj.animation.anger.playing
@@ -17,6 +18,7 @@ tag @s remove aj.dino_aj.animation.bite_double_anger.playing
 tag @s remove aj.dino_aj.animation.breath.playing
 tag @s remove aj.dino_aj.animation.breath_triple.playing
 tag @s remove aj.dino_aj.animation.breath_backstep.playing
+tag @s remove aj.dino_aj.animation.breath_move_r.playing
 tag @s remove aj.dino_aj.animation.breath_move_l.playing
 tag @s remove aj.dino_aj.animation.tail_back_r.playing
 tag @s remove aj.dino_aj.animation.tail_back_l.playing
