@@ -36,8 +36,10 @@
 
 # その他Entity
     # 発射物
-        #declare tag Mns.Shot.Dino 火竜の弾全般
-        #declare tag Mns.Shot.Dino.Breath 火炎弾
+        #declare tag Mns.Shot.Dino 斬竜の弾全般
+        #declare tag Mns.Shot.Dino.Flame 火炎弾
+        #declare tag Mns.Shot.Dino.Breath ブレス
+        #declare tag Mns.Shot.Dino.Breath.Land ブレス着弾後
         #declare tag Mns.Shot.Dino.Tail 切断後の尻尾
     # 攻撃位置
         #declare tag Mns.ShotPos.Dino 射撃攻撃位置

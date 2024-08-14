@@ -5,12 +5,14 @@
 # @within function mhdp_monster_dino:core/tick/animation/event/tick
 
 # 移動
+    execute if score @s aj.tail_back_l.frame matches 31 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_back_l/move_start
+    execute if score @s aj.tail_back_l.frame matches 34..43 at @s run function mhdp_monsters:core/util/other/move_to_target_move
     execute if score @s aj.tail_back_l.frame matches 2..8 at @s run tp @s ^ ^ ^ ~-3 ~
     execute if score @s aj.tail_back_l.frame matches 31..35 at @s run tp @s ^ ^ ^ ~1 ~
-    execute if score @s aj.tail_back_l.frame matches 36..40 at @s run tp @s ^ ^ ^-0.1 ~14 ~
-    execute if score @s aj.tail_back_l.frame matches 41..44 at @s run tp @s ^-0.5 ^ ^-0.3 ~12 ~
-    execute if score @s aj.tail_back_l.frame matches 45..55 at @s run tp @s ^-0.2 ^ ^-0.15 ~1 ~
-    execute if score @s aj.tail_back_l.frame matches 56..60 at @s run tp @s ^-0.1 ^ ^-0.05 ~0.2 ~
+    execute if score @s aj.tail_back_l.frame matches 36..40 at @s run tp @s ^ ^ ^ ~18 ~
+    execute if score @s aj.tail_back_l.frame matches 41..44 at @s run tp @s ^ ^ ^ ~16 ~
+    execute if score @s aj.tail_back_l.frame matches 45..55 at @s run tp @s ^ ^ ^-0.2 ~3 ~
+    execute if score @s aj.tail_back_l.frame matches 56..60 at @s run tp @s ^ ^ ^-0.1 ~0.2 ~
 
 # 効果音
     execute if score @s aj.tail_back_l.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1

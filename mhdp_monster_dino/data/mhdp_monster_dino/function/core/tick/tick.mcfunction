@@ -13,4 +13,4 @@
     # execute if score @s Mns.Temp.AngerSpeed.Timer >= @s Mns.Anger.Speed run scoreboard players set @s Mns.Temp.AngerSpeed.Timer 0
 
 # 弾処理
-    # execute as @e[type=item_display,tag=Mns.Shot.Dino] at @s run function mhdp_monster_dino:core/tick/shot/tick
+    execute as @e[type=item_display,tag=Mns.Shot.Dino] at @s run function mhdp_monster_dino:core/tick/shot/tick

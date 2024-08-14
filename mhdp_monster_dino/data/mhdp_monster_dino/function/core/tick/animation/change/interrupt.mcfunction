@@ -5,11 +5,11 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    # tag @s add Anim.Bite
-    function mhdp_monster_dino:core/tick/animation/change/play/tail_jump
+    tag @s add Anim.Breath.Triple
+    # function mhdp_monster_dino:core/tick/animation/change/play/tail_jump
 
 # 軸合わせ
-    # tag @s add Mns.Temp.IsTurn
+    tag @s add Mns.Temp.IsTurn
     # tag @s add Mns.Temp.IsTurn.Big
 
 # アニメーション変更

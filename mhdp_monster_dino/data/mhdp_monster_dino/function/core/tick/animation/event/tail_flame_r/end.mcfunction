@@ -1,6 +1,6 @@
-#> mhdp_monster_dino:core/tick/animation/event/tail_back_l/end
+#> mhdp_monster_dino:core/tick/animation/event/tail_attack_l/end
 #
-# アニメーションイベントハンドラ 尻尾攻撃・背面
+# アニメーションイベントハンドラ 尻尾叩きつけ
 #
 # @within function mhdp_monster_dino:core/tick/animation/event/tail_attack_l/main
 

@@ -1,4 +1,4 @@
-#> mhdp_monster_reus:core/tick/shot/breath/tick
+#> mhdp_monster_dino:core/tick/shot/breath/tick
 #
 # ブレスtick処理
 #
@@ -7,17 +7,9 @@
 # タイマー増加
     scoreboard players add @s Mns.Shot.Timer 1
 
-# 演出
-    particle flame ~ ~ ~ 0.5 0.5 0.5 0.1 5
-    particle flame ~ ~ ~ 0.2 0.2 0.2 0.02 10
-
-# 着弾
-    execute if entity @a[tag=Ply.State.EnableDamage,distance=..2.6] at @s run function mhdp_monster_reus:core/tick/shot/breath/damage
-    execute if entity @n[type=slime,tag=!Mns.HitBox.Reus,distance=..2.6] at @s run function mhdp_monster_reus:core/tick/shot/breath/damage
-
-# 移動
-    execute unless block ^ ^ ^1 #mhdp_core:no_collision run function mhdp_monster_reus:core/tick/shot/breath/damage
-    tp @s ^ ^ ^1
+# 処理を2回実行
+    execute if entity @s[tag=!Death] at @s run function mhdp_monster_dino:core/tick/shot/breath/main
+    execute if entity @s[tag=!Death] at @s run function mhdp_monster_dino:core/tick/shot/breath/main
 
 # 終了
-    execute if score @s Mns.Shot.Timer matches 30.. run function mhdp_monster_reus:core/tick/shot/breath/damage
+    execute if entity @s[tag=!Death] if score @s Mns.Shot.Timer matches 30.. positioned ~ ~1 ~ run function mhdp_monster_dino:core/tick/shot/breath/damage

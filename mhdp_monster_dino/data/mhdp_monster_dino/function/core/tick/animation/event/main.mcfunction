@@ -13,6 +13,12 @@
     execute if entity @s[tag=aj.dino_aj.animation.turn_big_l.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_big_l/main
     execute if entity @s[tag=aj.dino_aj.animation.turn_big_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_big_r/main
 
+# ブレス
+    execute if entity @s[tag=aj.dino_aj.animation.breath.playing] run function mhdp_monster_dino:core/tick/animation/event/breath/main
+
+# 3連ブレス
+    execute if entity @s[tag=aj.dino_aj.animation.breath_triple.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_triple/main
+
 # 嚙みつき
     execute if entity @s[tag=aj.dino_aj.animation.bite.playing] run function mhdp_monster_dino:core/tick/animation/event/bite/main
 
@@ -39,3 +45,7 @@
     execute if entity @s[tag=aj.dino_aj.animation.jump_tail_l.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_l/main
     execute if entity @s[tag=aj.dino_aj.animation.jump_tail_anger_r.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_r/main
     execute if entity @s[tag=aj.dino_aj.animation.jump_tail_anger_l.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/main
+
+# 火炎
+    execute if entity @s[tag=aj.dino_aj.animation.tail_flame_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_flame_r/main
+    execute if entity @s[tag=aj.dino_aj.animation.tail_flame_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_flame_l/main
