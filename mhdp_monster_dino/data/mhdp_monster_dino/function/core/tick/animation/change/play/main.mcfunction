@@ -23,8 +23,11 @@
 # 3連ブレス
     execute if entity @s[tag=Anim.Breath.Triple] run function animated_java:dino_aj/animations/breath_triple/tween {duration:1, to_frame: 1}
 
-# 3連ブレス
+# バックジャンプブレス
     execute if entity @s[tag=Anim.Breath.Back] run function animated_java:dino_aj/animations/breath_backstep/tween {duration:1, to_frame: 1}
+
+# 移動ブレス
+    execute if entity @s[tag=Anim.Breath.Move.L] run function animated_java:dino_aj/animations/breath_move_l/tween {duration:1, to_frame: 1}
 
 # 噛みつき
     execute if entity @s[tag=Anim.Bite] run function animated_java:dino_aj/animations/bite/tween {duration:1, to_frame: 1}

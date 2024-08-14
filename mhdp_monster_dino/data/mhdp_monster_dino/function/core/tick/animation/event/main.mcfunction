@@ -22,6 +22,9 @@
 # バックジャンプブレス
     execute if entity @s[tag=aj.dino_aj.animation.breath_backstep.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_backstep/main
 
+# 移動ブレス
+    execute if entity @s[tag=aj.dino_aj.animation.breath_move_l.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_move_l/main
+
 # 嚙みつき
     execute if entity @s[tag=aj.dino_aj.animation.bite.playing] run function mhdp_monster_dino:core/tick/animation/event/bite/main
 
