@@ -25,11 +25,11 @@
     execute if score @s aj.roundforce.frame matches 80 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.roundforce.frame matches 80 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1.8 0.1 1.8 0 30
     execute if score @s aj.roundforce.frame matches 81..94 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1 0.1 1 0 10
-    execute if score @s aj.roundforce.frame matches 12 run playsound minecraft:item.mace.smash_ground_heavy master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 2 0.6
-    execute if score @s aj.roundforce.frame matches 12 run playsound minecraft:item.mace.smash_ground_heavy master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 2 0.5
-    execute if score @s aj.roundforce.frame matches 12..76 run playsound minecraft:item.mace.smash_ground master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.6 0.2
-    execute if score @s aj.roundforce.frame matches 12..55 run playsound minecraft:block.grindstone.use master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 2 0.5
-    execute if score @s aj.roundforce.frame matches 56..76 run playsound minecraft:block.grindstone.use master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 2 0.6
+    execute if score @s aj.roundforce.frame matches 12 run playsound minecraft:item.mace.smash_ground_heavy master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
+    execute if score @s aj.roundforce.frame matches 12 run playsound minecraft:item.mace.smash_ground_heavy master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    execute if score @s aj.roundforce.frame matches 12..55 run playsound minecraft:block.grindstone.use master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    execute if score @s aj.roundforce.frame matches 56..76 run playsound minecraft:block.grindstone.use master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
+    execute if score @s aj.roundforce.frame matches 12..76 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^1 0.2 0.6 0.2
     execute if score @s aj.roundforce.frame matches 16..76 on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/roundforce/m.particle_head with entity @s data.locators.pos_head
     execute if score @s aj.roundforce.frame matches 80 run playsound block.chain.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     execute if score @s aj.roundforce.frame matches 80 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
@@ -37,10 +37,10 @@
     execute if score @s aj.roundforce.frame matches 80 run playsound minecraft:entity.breeze.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.roundforce.frame matches 80 run playsound minecraft:entity.breeze.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     execute if score @s aj.roundforce.frame matches 82 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    execute if score @s aj.roundforce.frame matches 123..129 run playsound minecraft:entity.ravager.attack master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.8 0.4
-    execute if score @s aj.roundforce.frame matches 123..129 run playsound minecraft:entity.hoglin.attack master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.65 0.4
-    execute if score @s aj.roundforce.frame matches 123..124 run playsound minecraft:item.mace.smash_ground master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.8 0.4
-    execute if score @s aj.roundforce.frame matches 123..124 run playsound minecraft:item.mace.smash_ground master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.6 0.4
+    execute if score @s aj.roundforce.frame matches 123..129 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.ravager.attack master @s ^ ^1 ^1 0.4 0.8 0.4
+    execute if score @s aj.roundforce.frame matches 123..129 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.hoglin.attack master @s ^ ^1 ^1 0.4 0.65 0.4
+    execute if score @s aj.roundforce.frame matches 123..129 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^1 0.4 0.8 0.4
+    execute if score @s aj.roundforce.frame matches 123..129 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^1 0.4 0.6 0.4
 
 # 攻撃
     execute if score @s aj.roundforce.frame matches 85 run function mhdp_monster_dino:core/tick/animation/event/roundforce/attack

@@ -16,10 +16,6 @@
 # 効果音
     execute if score @s aj.breath_backstep.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.breath_backstep.frame matches 2..30 on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/breath_backstep/m.particle_head with entity @s data.locators.pos_head
-    execute if score @s aj.breath_backstep.frame matches 31..37 run playsound minecraft:entity.ravager.attack master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.8 0.4
-    execute if score @s aj.breath_backstep.frame matches 31..37 run playsound minecraft:entity.hoglin.attack master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.65 0.4
-    execute if score @s aj.breath_backstep.frame matches 31..32 run playsound minecraft:item.mace.smash_ground master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.8 0.4
-    execute if score @s aj.breath_backstep.frame matches 31..32 run playsound minecraft:item.mace.smash_ground master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.6 0.4
 
 # 攻撃
     execute if score @s aj.breath_backstep.frame matches 32 on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/breath_backstep/shot with entity @s data.locators.pos_head
