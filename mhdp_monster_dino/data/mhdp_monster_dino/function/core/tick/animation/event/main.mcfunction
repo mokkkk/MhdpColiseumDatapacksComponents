@@ -19,6 +19,9 @@
 # 3連ブレス
     execute if entity @s[tag=aj.dino_aj.animation.breath_triple.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_triple/main
 
+# バックジャンプブレス
+    execute if entity @s[tag=aj.dino_aj.animation.breath_backstep.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_backstep/main
+
 # 嚙みつき
     execute if entity @s[tag=aj.dino_aj.animation.bite.playing] run function mhdp_monster_dino:core/tick/animation/event/bite/main
 

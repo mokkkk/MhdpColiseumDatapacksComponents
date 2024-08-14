@@ -25,7 +25,7 @@
 
 # 攻撃
     execute if score @s aj.breath_triple.frame matches 23 positioned as @n[tag=Mns.Target.Dino] run summon area_effect_cloud ~ ~0.1 ~ {Duration:25,DurationOnUse:0,Tags:["Mns.ShotPos.Dino.0"]}
-    execute if score @s aj.breath_triple.frame matches 23 positioned as @n[tag=Mns.ShotPos.Dino.0] facing entity @s feet rotated ~ 0 run summon area_effect_cloud ^-8 ^ ^3 {Duration:10,DurationOnUse:0,Tags:["Mns.ShotPos.Dino.1"]}
+    execute if score @s aj.breath_triple.frame matches 23 positioned as @n[tag=Mns.ShotPos.Dino.0] facing entity @s feet rotated ~ 0 run summon area_effect_cloud ^-8 ^ ^-3 {Duration:10,DurationOnUse:0,Tags:["Mns.ShotPos.Dino.1"]}
     execute if score @s aj.breath_triple.frame matches 23 positioned as @n[tag=Mns.ShotPos.Dino.0] facing entity @s feet rotated ~ 0 run summon area_effect_cloud ^8 ^ ^3 {Duration:43,DurationOnUse:0,Tags:["Mns.ShotPos.Dino.2"]}
     execute if score @s aj.breath_triple.frame matches 30 on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/breath_triple/shot_0 with entity @s data.locators.pos_head
     execute if score @s aj.breath_triple.frame matches 47 on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/breath_triple/shot_1 with entity @s data.locators.pos_head
