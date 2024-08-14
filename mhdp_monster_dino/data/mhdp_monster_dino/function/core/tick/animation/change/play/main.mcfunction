@@ -27,6 +27,7 @@
     execute if entity @s[tag=Anim.Breath.Back] run function animated_java:dino_aj/animations/breath_backstep/tween {duration:1, to_frame: 1}
 
 # 移動ブレス
+    execute if entity @s[tag=Anim.Breath.Move.R] run function animated_java:dino_aj/animations/breath_move_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Breath.Move.L] run function animated_java:dino_aj/animations/breath_move_l/tween {duration:1, to_frame: 1}
 
 # 噛みつき
@@ -59,6 +60,9 @@
 # 火炎
     execute if entity @s[tag=Anim.TailFlame.R] run function animated_java:dino_aj/animations/tail_flame_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.TailFlame.L] run function animated_java:dino_aj/animations/tail_flame_l/tween {duration:1, to_frame: 1}
+
+# 大回転斬り
+    execute if entity @s[tag=Anim.Round] run function animated_java:dino_aj/animations/roundforce/tween {duration:1, to_frame: 1}
 
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag

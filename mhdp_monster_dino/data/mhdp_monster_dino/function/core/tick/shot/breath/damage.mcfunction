@@ -13,11 +13,11 @@
 
 # ヒット確認
     # 対プレイヤー
-        execute positioned ^ ^ ^ as @a[tag=Ply.State.EnableDamage,distance=..3.5] run tag @s add Temp.Hit
+        execute positioned ^ ^ ^ as @a[tag=Ply.State.EnableDamage,distance=..4.2] run tag @s add Temp.Hit
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         tag @a remove Temp.Hit
     # 対モンスター
-        execute positioned ^ ^ ^ as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Dino,distance=..3.5] run tag @s add Temp.Hit
+        execute positioned ^ ^ ^ as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Dino,distance=..4.2] run tag @s add Temp.Hit
         execute if entity @e[tag=Temp.Hit] as @n[tag=Temp.Hit] run tag @s add Temp.Victim
         execute if entity @e[tag=Temp.Victim] as @e[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
 

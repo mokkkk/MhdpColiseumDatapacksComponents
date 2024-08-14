@@ -23,6 +23,7 @@
     execute if entity @s[tag=aj.dino_aj.animation.breath_backstep.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_backstep/main
 
 # 移動ブレス
+    execute if entity @s[tag=aj.dino_aj.animation.breath_move_r.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_move_r/main
     execute if entity @s[tag=aj.dino_aj.animation.breath_move_l.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_move_l/main
 
 # 嚙みつき
@@ -55,3 +56,6 @@
 # 火炎
     execute if entity @s[tag=aj.dino_aj.animation.tail_flame_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_flame_r/main
     execute if entity @s[tag=aj.dino_aj.animation.tail_flame_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_flame_l/main
+
+# 大回転斬り
+    execute if entity @s[tag=aj.dino_aj.animation.roundforce.playing] run function mhdp_monster_dino:core/tick/animation/event/roundforce/main
