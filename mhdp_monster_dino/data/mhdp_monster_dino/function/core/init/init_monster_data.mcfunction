@@ -32,6 +32,8 @@
             scoreboard objectives add Mns.Dino.PhaseCount.Head dummy
     # 足怯み回数
         scoreboard objectives add Mns.Dino.Leg.Damage.Count dummy
+    # 移動回数
+        scoreboard objectives add Mns.Dino.DashCount dummy
 
 # メインデータ
     execute if data storage mhdp_core:monster_data MonsterData[{Uid:1003}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1003}]
@@ -87,7 +89,7 @@
     }
 
 # 攻撃力データ
-    execute if data storage mhdp_core:monster_data AttackData[{Uid:1003}] run data remove storage mhdp_core:monster_data AttackData[{Uid:1002}]
+    execute if data storage mhdp_core:monster_data AttackData[{Uid:1003}] run data remove storage mhdp_core:monster_data AttackData[{Uid:1003}]
     data modify storage mhdp_core:monster_data AttackData append value {\
         Uid:1003,\
         Attacks:[{Id:"Bite"}]\

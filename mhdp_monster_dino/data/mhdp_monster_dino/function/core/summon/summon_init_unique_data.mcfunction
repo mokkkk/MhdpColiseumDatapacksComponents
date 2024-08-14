@@ -49,6 +49,9 @@
         scoreboard players set @s Mns.Dino.PhaseCount.Head 0
     # 足怯み回数
         scoreboard players set @s Mns.Dino.Leg.Damage.Count 0
+    # 移動回数
+        scoreboard players set @s Mns.Dino.DashCount 0
+
 # 終了
     scoreboard players reset #mhdp_temp_monster_uid Mns.Uid
 

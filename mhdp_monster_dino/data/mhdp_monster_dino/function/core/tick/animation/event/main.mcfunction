@@ -13,6 +13,9 @@
     execute if entity @s[tag=aj.dino_aj.animation.turn_big_l.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_big_l/main
     execute if entity @s[tag=aj.dino_aj.animation.turn_big_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_big_r/main
 
+# 移動
+    execute if entity @s[tag=aj.dino_aj.animation.move.playing] run function mhdp_monster_dino:core/tick/animation/event/move/main
+
 # ブレス
     execute if entity @s[tag=aj.dino_aj.animation.breath.playing] run function mhdp_monster_dino:core/tick/animation/event/breath/main
 
@@ -59,3 +62,6 @@
 
 # 大回転斬り
     execute if entity @s[tag=aj.dino_aj.animation.roundforce.playing] run function mhdp_monster_dino:core/tick/animation/event/roundforce/main
+
+# 研ぎ
+    execute if entity @s[tag=aj.dino_aj.animation.polish.playing] run function mhdp_monster_dino:core/tick/animation/event/polish/main

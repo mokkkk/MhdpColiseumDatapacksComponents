@@ -24,10 +24,12 @@
     execute if score @s aj.roundforce.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.roundforce.frame matches 80 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.roundforce.frame matches 80 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1.8 0.1 1.8 0 30
+    execute if score @s aj.roundforce.frame matches 81..94 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1 0.1 1 0 10
     execute if score @s aj.roundforce.frame matches 12 run playsound minecraft:item.mace.smash_ground_heavy master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 2 0.6
     execute if score @s aj.roundforce.frame matches 12 run playsound minecraft:item.mace.smash_ground_heavy master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 2 0.5
     execute if score @s aj.roundforce.frame matches 12..76 run playsound minecraft:item.mace.smash_ground master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.6 0.2
-    execute if score @s aj.roundforce.frame matches 12..76 run playsound minecraft:block.grindstone.use master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 2 0.5
+    execute if score @s aj.roundforce.frame matches 12..55 run playsound minecraft:block.grindstone.use master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 2 0.5
+    execute if score @s aj.roundforce.frame matches 56..76 run playsound minecraft:block.grindstone.use master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 2 0.6
     execute if score @s aj.roundforce.frame matches 16..76 on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/roundforce/m.particle_head with entity @s data.locators.pos_head
     execute if score @s aj.roundforce.frame matches 80 run playsound block.chain.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     execute if score @s aj.roundforce.frame matches 80 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
