@@ -21,8 +21,8 @@
     execute if score @s aj.fly_assault.frame matches 44 run playsound entity.ender_dragon.flap master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.fly_assault.frame matches 32..41 run particle cloud ^3.5 ^6.8 ^-0.8 0.1 0.1 0.1 0.05 3
     execute if score @s aj.fly_assault.frame matches 32..41 run particle cloud ^-3.5 ^6.8 ^-0.8 0.1 0.1 0.1 0.05 3
-    execute if score @s aj.fly_assault.frame matches 2..6 run playsound entity.ravager.attack master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.9 0.4
-    
+    execute if score @s aj.fly_assault.frame matches 2..6 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound entity.ravager.attack master @s ^ ^1 ^1 0.4 0.9 0.4
+
 # 攻撃
     execute if score @s aj.fly_assault.frame matches 32..42 run function mhdp_monster_reus:core/tick/animation/event/fly_assault/attack
 

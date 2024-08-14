@@ -6,5 +6,5 @@
 
 # アニメーション変更
     # tag @s add Anim.BiteDouble
-    tag @s add Anim.Tail.R
+    tag @s add Anim.Tail.Anger.R
     function mhdp_monster_dino:core/tick/animation/change/main

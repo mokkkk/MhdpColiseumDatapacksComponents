@@ -7,8 +7,8 @@
 # 演出
     execute if score @s aj.land_anger.frame matches 17..50 on passengers if entity @s[tag=aj.data] run function mhdp_monster_reus:core/tick/animation/event/land_anger/effect_voice with entity @s data.locators.pos_head
     execute if score @s aj.land_anger.frame matches 5 run playsound entity.hoglin.angry master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    execute if score @s aj.land_anger.frame matches 17..33 run playsound entity.ender_dragon.growl master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.5 0.4
-    execute if score @s aj.land_anger.frame matches 17..33 run playsound entity.ravager.attack master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 0.7 0.4
+    execute if score @s aj.land_anger.frame matches 17..33 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound entity.ender_dragon.growl master @s ^ ^1 ^1 0.4 0.5 0.4
+    execute if score @s aj.land_anger.frame matches 17..33 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound entity.ravager.attack master @s ^ ^1 ^1 0.4 0.7 0.4
     execute if score @s aj.land_anger.frame matches 17..43 run particle block{block_state:"minecraft:sand"} ^ ^ ^5 2 0.1 2 0 10
 
 # 咆哮怯み

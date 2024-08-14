@@ -25,10 +25,10 @@
     execute if score @s aj.tail_flame_l.frame matches 26..40 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.tail_flame_l.frame matches 26..40 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
     execute if score @s aj.tail_flame_l.frame matches 50 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    execute if score @s aj.tail_flame_l.frame matches 67..73 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.ravager.attack master @s ^ ^1 ^-1 0.4 0.8 0.4
-    execute if score @s aj.tail_flame_l.frame matches 67..73 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.hoglin.attack master @s ^ ^1 ^-1 0.4 0.65 0.4
-    execute if score @s aj.tail_flame_l.frame matches 67..68 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^-1 0.4 0.8 0.4
-    execute if score @s aj.tail_flame_l.frame matches 67..68 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^-1 0.4 0.6 0.4
+    execute if score @s aj.tail_flame_l.frame matches 67..73 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.ravager.attack master @s ^ ^1 ^1 0.4 0.8 0.4
+    execute if score @s aj.tail_flame_l.frame matches 67..73 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.hoglin.attack master @s ^ ^1 ^1 0.4 0.65 0.4
+    execute if score @s aj.tail_flame_l.frame matches 67..68 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^1 0.4 0.8 0.4
+    execute if score @s aj.tail_flame_l.frame matches 67..68 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^1 0.4 0.6 0.4
 
 # 攻撃
     execute if score @s aj.tail_flame_l.frame matches 26..40 run function mhdp_monster_dino:core/tick/animation/event/tail_flame_l/attack_tail

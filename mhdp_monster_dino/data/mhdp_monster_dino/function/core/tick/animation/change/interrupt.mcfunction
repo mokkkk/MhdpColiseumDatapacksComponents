@@ -5,8 +5,8 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.Polish
-    # function mhdp_monster_dino:core/tick/animation/change/play/breath_move
+    # tag @s add Anim.Move
+    function mhdp_monster_dino:core/tick/animation/change/play/tail_flame
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn
