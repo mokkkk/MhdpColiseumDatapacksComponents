@@ -21,6 +21,8 @@
     #declare tag Mns.Temp.Damage.Tail 尻尾怯み
     #declare tag Mns.Temp.Damage.LegR 右足怯み
     #declare tag Mns.Temp.Damage.LegL 左足怯み
+    #declare tag Mns.Dino.Temp.ToBite 移動から噛みつきに遷移する
+    #declare tag Mns.Dino.Temp.ToTail 移動から尻尾叩きつけに遷移する
 # プレイヤー
     #declare tag Mns.Target.Dino 現在狙っているプレイヤー
 # 部位破壊

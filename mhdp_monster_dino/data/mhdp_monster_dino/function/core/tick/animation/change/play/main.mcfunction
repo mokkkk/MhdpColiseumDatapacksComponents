@@ -14,8 +14,15 @@
     # execute if entity @s[tag=Anim.Turn.R] run function animated_java:dino_aj/animations/turn_right/tween {duration:1, to_frame: 1}
     # execute if entity @s[tag=Anim.Turn.L] run function animated_java:dino_aj/animations/turn_left/tween {duration:1, to_frame: 1}
 
+# 咆哮
+    execute if entity @s[tag=Anim.Voice] run function animated_java:dino_aj/animations/voice/tween {duration:1, to_frame: 1}
+
 # 移動
     execute if entity @s[tag=Anim.Move] run function animated_java:dino_aj/animations/move/tween {duration:1, to_frame: 1}
+
+# サイドステップ
+    execute if entity @s[tag=Anim.Step.R] run function animated_java:dino_aj/animations/step_side_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.Step.L] run function animated_java:dino_aj/animations/step_side_l/tween {duration:1, to_frame: 1}
 
 # 咆哮
     execute if entity @s[tag=Anim.Voice] run function animated_java:dino_aj/animations/voice/tween {duration:1, to_frame: 1}

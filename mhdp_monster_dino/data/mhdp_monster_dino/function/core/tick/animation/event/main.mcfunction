@@ -7,6 +7,9 @@
 # 待機
     execute if entity @s[tag=aj.dino_aj.animation.idle.playing] run function mhdp_monster_dino:core/tick/animation/event/idle/main
 
+# 咆哮
+    execute if entity @s[tag=aj.dino_aj.animation.voice.playing] run function mhdp_monster_dino:core/tick/animation/event/voice/main
+
 # 軸合わせ
     execute if entity @s[tag=aj.dino_aj.animation.turn_l.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_l/main
     execute if entity @s[tag=aj.dino_aj.animation.turn_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_r/main
@@ -15,6 +18,10 @@
 
 # 移動
     execute if entity @s[tag=aj.dino_aj.animation.move.playing] run function mhdp_monster_dino:core/tick/animation/event/move/main
+
+# サイドステップ
+    execute if entity @s[tag=aj.dino_aj.animation.step_side_r.playing] run function mhdp_monster_dino:core/tick/animation/event/step_side_r/main
+    execute if entity @s[tag=aj.dino_aj.animation.step_side_l.playing] run function mhdp_monster_dino:core/tick/animation/event/step_side_l/main
 
 # ブレス
     execute if entity @s[tag=aj.dino_aj.animation.breath.playing] run function mhdp_monster_dino:core/tick/animation/event/breath/main
