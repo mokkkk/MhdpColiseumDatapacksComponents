@@ -62,10 +62,10 @@
     execute if entity @s[tag=Anim.TailBack.L] run function animated_java:dino_aj/animations/tail_back_l/tween {duration:1, to_frame: 1}
 
 # 尻尾攻撃・飛びかかり
-    execute if entity @s[tag=Anim.TailJump.R] run function animated_java:dino_aj/animations/jump_tail_r/tween {duration:1, to_frame: 1}
-    execute if entity @s[tag=Anim.TailJump.L] run function animated_java:dino_aj/animations/jump_tail_l/tween {duration:1, to_frame: 1}
-    # execute if entity @s[tag=Anim.TailJump.R] run function animated_java:dino_aj/animations/jump_tail_anger_r/tween {duration:1, to_frame: 1}
-    # execute if entity @s[tag=Anim.TailJump.L] run function animated_java:dino_aj/animations/jump_tail_anger_l/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.TailJump.R,tag=!Mns.State.IsAnger] run function animated_java:dino_aj/animations/jump_tail_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.TailJump.L,tag=!Mns.State.IsAnger] run function animated_java:dino_aj/animations/jump_tail_l/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.TailJump.R,tag=Mns.State.IsAnger] run function animated_java:dino_aj/animations/jump_tail_anger_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.TailJump.L,tag=Mns.State.IsAnger] run function animated_java:dino_aj/animations/jump_tail_anger_l/tween {duration:1, to_frame: 1}
 
 # 火炎
     execute if entity @s[tag=Anim.TailFlame.R] run function animated_java:dino_aj/animations/tail_flame_r/tween {duration:1, to_frame: 1}

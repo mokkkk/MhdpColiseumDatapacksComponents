@@ -28,6 +28,7 @@
 # 部位破壊
     #declare tag Mns.Break.Head 頭部位破壊
     #declare tag Mns.Break.Tail 尻尾部位破壊
+    #declare tag Mns.Break.Tail.Cut 尻尾部位破壊・切断
 # アニメーション
     #declare tag Anim.Idle
     #declare tag Anim.Turn.R
