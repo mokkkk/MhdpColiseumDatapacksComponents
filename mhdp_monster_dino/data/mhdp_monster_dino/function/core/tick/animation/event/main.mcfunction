@@ -29,6 +29,11 @@
     execute if entity @s[tag=aj.dino_aj.animation.down_left.playing] run function mhdp_monster_dino:core/tick/animation/event/down_left/main
     execute if entity @s[tag=aj.dino_aj.animation.down_end_right.playing] run function mhdp_monster_dino:core/tick/animation/event/down_end_right/main
     execute if entity @s[tag=aj.dino_aj.animation.down_end_left.playing] run function mhdp_monster_dino:core/tick/animation/event/down_end_left/main
+    execute if entity @s[tag=aj.dino_aj.animation.damage_flying.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_flying/main
+
+# 討伐
+    execute if entity @s[tag=aj.dino_aj.animation.death.playing] run function mhdp_monster_dino:core/tick/animation/event/death/main
+    execute if entity @s[tag=aj.dino_aj.animation.death_flying.playing] run function mhdp_monster_dino:core/tick/animation/event/death_flying/main
 
 # 移動
     execute if entity @s[tag=aj.dino_aj.animation.move.playing] run function mhdp_monster_dino:core/tick/animation/event/move/main
