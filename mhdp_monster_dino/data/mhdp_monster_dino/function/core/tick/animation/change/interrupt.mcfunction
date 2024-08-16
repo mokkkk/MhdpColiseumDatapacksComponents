@@ -6,11 +6,13 @@
 
 # タグ付与
     # tag @s add Anim.Round
-    function mhdp_monster_dino:core/tick/animation/change/play/tail_jump
+    # function mhdp_monster_dino:core/tick/animation/change/play/tail_jump
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn
     # tag @s add Mns.Temp.IsTurn.Big
 
 # アニメーション変更
-    function mhdp_monster_dino:core/tick/animation/change/main
+    # function mhdp_monster_dino:core/tick/animation/change/main
+
+function animated_java:dino_aj/animations/damage_head/tween {duration:1, to_frame: 1}

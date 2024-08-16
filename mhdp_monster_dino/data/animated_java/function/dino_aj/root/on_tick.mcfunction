@@ -3,6 +3,21 @@ execute unless entity @s[tag=aj.dino_aj.root] run return 0
 execute unless score @s aj.is_rig_loaded matches 1 run function #animated_java:global/root/on_load
 function #animated_java:dino_aj/as_root/pre_tick
 execute if entity @s[tag=aj.dino_aj.animation.pose.playing] run function animated_java:dino_aj/animations/pose/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.damage_head.playing] run function animated_java:dino_aj/animations/damage_head/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.damage_tail_forward.playing] run function animated_java:dino_aj/animations/damage_tail_forward/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.damage_tail_back.playing] run function animated_java:dino_aj/animations/damage_tail_back/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.damage_tail_break.playing] run function animated_java:dino_aj/animations/damage_tail_break/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.damage_right.playing] run function animated_java:dino_aj/animations/damage_right/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.damage_left.playing] run function animated_java:dino_aj/animations/damage_left/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.damage_down_right.playing] run function animated_java:dino_aj/animations/damage_down_right/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.damage_down_left.playing] run function animated_java:dino_aj/animations/damage_down_left/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.down_right.playing] run function animated_java:dino_aj/animations/down_right/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.down_left.playing] run function animated_java:dino_aj/animations/down_left/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.down_end_right.playing] run function animated_java:dino_aj/animations/down_end_right/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.down_end_left.playing] run function animated_java:dino_aj/animations/down_end_left/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.damage_flying.playing] run function animated_java:dino_aj/animations/damage_flying/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.death_flying.playing] run function animated_java:dino_aj/animations/death_flying/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.death.playing] run function animated_java:dino_aj/animations/death/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.idle.playing] run function animated_java:dino_aj/animations/idle/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.move.playing] run function animated_java:dino_aj/animations/move/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.move_stop.playing] run function animated_java:dino_aj/animations/move_stop/zzz/on_tick
@@ -38,8 +53,6 @@ execute if entity @s[tag=aj.dino_aj.animation.tail_flame_r.playing] run function
 execute if entity @s[tag=aj.dino_aj.animation.tail_flame_l.playing] run function animated_java:dino_aj/animations/tail_flame_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.roundforce.playing] run function animated_java:dino_aj/animations/roundforce/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.polish.playing] run function animated_java:dino_aj/animations/polish/zzz/on_tick
-execute if entity @s[tag=aj.dino_aj.animation.tail_side_r2.playing] run function animated_java:dino_aj/animations/tail_side_r2/zzz/on_tick
-execute if entity @s[tag=aj.dino_aj.animation.tail_side_r3.playing] run function animated_java:dino_aj/animations/tail_side_r3/zzz/on_tick
 execute on passengers if entity @s[tag=aj.dino_aj.data] run function animated_java:dino_aj/root/zzz/1
 execute at @s on passengers run tp @s ~ ~ ~ ~ ~
 function #animated_java:dino_aj/as_root/post_tick
