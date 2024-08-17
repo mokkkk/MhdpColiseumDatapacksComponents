@@ -3,6 +3,7 @@ execute unless entity @s[tag=aj.dino_aj.root] run return 0
 execute unless score @s aj.is_rig_loaded matches 1 run function #animated_java:global/root/on_load
 function #animated_java:dino_aj/as_root/pre_tick
 execute if entity @s[tag=aj.dino_aj.animation.pose.playing] run function animated_java:dino_aj/animations/pose/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.search.playing] run function animated_java:dino_aj/animations/search/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.damage_head.playing] run function animated_java:dino_aj/animations/damage_head/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.damage_tail_forward.playing] run function animated_java:dino_aj/animations/damage_tail_forward/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.damage_tail_back.playing] run function animated_java:dino_aj/animations/damage_tail_back/zzz/on_tick
