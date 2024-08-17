@@ -18,7 +18,7 @@
         execute if entity @s[tag=Mns.Temp.Right] run function animated_java:dino_aj/animations/damage_down_left/tween {duration:1, to_frame: 0}
         execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monster_dino:core/damage/reaction/flying
     # ダウン時間設定
-        scoreboard players set @s Mns.General.DownCount 8
+        scoreboard players set @s Mns.General.DownCount 6
     # 演出
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5

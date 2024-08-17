@@ -6,6 +6,7 @@ effect give @s invisibility infinite 2 true
 effect give @s fire_resistance infinite 2 true
 scoreboard players operation @s Mns.HitBox.MonsterUid = #mhdp_temp_monster_uid Mns.Uid
 tag @s add Mns.HitBox
+tag @s add Mns.HitBox.Head
 tag @s add Mns.HitBox.Dino
 tag @s add Mns.HitBox.Dino.Head
 scoreboard players set @s Mns.Hitbox.PartId 0

@@ -61,7 +61,7 @@
     # 左足(独自)
         execute if entity @s[tag=Mns.Temp.Damage.LegL] run function mhdp_monster_dino:core/damage/reaction/leg_l
     # 怒り
-        # execute if entity @s[tag=Mns.Temp.Damage.Anger] run function mhdp_monster_dino:core/damage/reaction/anger
+        execute if entity @s[tag=Mns.Temp.Damage.Anger,tag=!Mns.State.IsFlying] run function mhdp_monster_dino:core/damage/reaction/anger
 
 # 状態異常の発動
     # 毒

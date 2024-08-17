@@ -9,6 +9,7 @@
 
 # 咆哮
     execute if entity @s[tag=aj.dino_aj.animation.voice.playing] run function mhdp_monster_dino:core/tick/animation/event/voice/main
+    execute if entity @s[tag=aj.dino_aj.animation.anger.playing] run function mhdp_monster_dino:core/tick/animation/event/anger/main
 
 # 軸合わせ
     execute if entity @s[tag=aj.dino_aj.animation.turn_l.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_l/main

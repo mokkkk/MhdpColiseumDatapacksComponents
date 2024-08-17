@@ -13,8 +13,8 @@ scoreboard objectives add aj.down_left.frame dummy
 scoreboard objectives add aj.down_end_right.frame dummy
 scoreboard objectives add aj.down_end_left.frame dummy
 scoreboard objectives add aj.damage_flying.frame dummy
-scoreboard objectives add aj.death_flying.frame dummy
 scoreboard objectives add aj.death.frame dummy
+scoreboard objectives add aj.death_flying.frame dummy
 scoreboard objectives add aj.idle.frame dummy
 scoreboard objectives add aj.move.frame dummy
 scoreboard objectives add aj.move_stop.frame dummy

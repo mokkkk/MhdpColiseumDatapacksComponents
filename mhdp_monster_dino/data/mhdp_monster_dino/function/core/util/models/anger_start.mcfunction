@@ -4,9 +4,6 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
 
-# 状態更新(一時)
-    tag @s add Mns.State.IsAnger
-
 # モデル変更
     execute on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.id set value "minecraft:white_dye"
     execute if entity @s[tag=!Mns.Break.Head,tag=!Mns.Dino.State.HeadHeat] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 10

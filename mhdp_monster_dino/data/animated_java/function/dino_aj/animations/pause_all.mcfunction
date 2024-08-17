@@ -14,8 +14,8 @@ tag @s remove aj.dino_aj.animation.down_left.playing
 tag @s remove aj.dino_aj.animation.down_end_right.playing
 tag @s remove aj.dino_aj.animation.down_end_left.playing
 tag @s remove aj.dino_aj.animation.damage_flying.playing
-tag @s remove aj.dino_aj.animation.death_flying.playing
 tag @s remove aj.dino_aj.animation.death.playing
+tag @s remove aj.dino_aj.animation.death_flying.playing
 tag @s remove aj.dino_aj.animation.idle.playing
 tag @s remove aj.dino_aj.animation.move.playing
 tag @s remove aj.dino_aj.animation.move_stop.playing
