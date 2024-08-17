@@ -48,7 +48,8 @@
         scoreboard players set @s Mns.Dino.PhaseCount.Tail 0
         scoreboard players set @s Mns.Dino.PhaseCount.Head 0
     # 足怯み回数
-        scoreboard players set @s Mns.Dino.Leg.Damage.Count 0
+        scoreboard players set @s Mns.Dino.LegR.Damage.Count 0
+        scoreboard players set @s Mns.Dino.LegL.Damage.Count 0
     # 移動回数
         scoreboard players set @s Mns.Dino.DashCount 0
 

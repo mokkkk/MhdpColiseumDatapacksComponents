@@ -30,8 +30,15 @@
             scoreboard objectives add Mns.Dino.PhaseCount.Tail dummy
         # 喉
             scoreboard objectives add Mns.Dino.PhaseCount.Head dummy
-    # 足怯み回数
-        scoreboard objectives add Mns.Dino.Leg.Damage.Count dummy
+    # 怯み回数
+        # 頭
+            scoreboard objectives add Mns.Dino.Head.Damage.Count dummy
+        # 尻尾
+            scoreboard objectives add Mns.Dino.Tail.Damage.Count dummy
+        # 右足
+            scoreboard objectives add Mns.Dino.LegR.Damage.Count dummy
+        # 左足
+            scoreboard objectives add Mns.Dino.LegL.Damage.Count dummy
     # 移動回数
         scoreboard objectives add Mns.Dino.DashCount dummy
 
