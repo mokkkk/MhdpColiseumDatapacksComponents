@@ -8,4 +8,4 @@
     scoreboard players add @s Mns.Dino.PhaseCount.Tail 1
 
 # フェーズ変更
-    execute if entity @s[tag=!Mns.Dino.State.TailHeat,tag=!Mns.Dino.State.TailRust] if score @s Mns.Dino.PhaseCount.Tail matches 5.. run function mhdp_monster_dino:core/util/models/heat_start
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat,tag=!Mns.Dino.State.TailRust] if score @s Mns.Dino.PhaseCount.Tail matches 6.. run function mhdp_monster_dino:core/util/models/heat_start

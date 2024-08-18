@@ -20,7 +20,7 @@
     # 麻痺・ダウン・スタン時以外
         execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
     # アニメーション再生
-        execute facing entity @n[tag=Mns.Target.Dino] feet rotated ~ 0 positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] at @s run tag @s add Mns.Temp.Forward
+        execute facing entity @n[tag=Temp.Attacker] feet rotated ~ 0 positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.3] at @s run tag @s add Mns.Temp.Forward
         execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged,tag=Mns.Dino.Temp.Tail.Break] run function animated_java:dino_aj/animations/damage_tail_break/tween {duration:1, to_frame: 0}
         execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Forward,tag=!Mns.Dino.Temp.Tail.Break] run function animated_java:dino_aj/animations/damage_tail_forward/tween {duration:1, to_frame: 0}
         execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged,tag=!Mns.Temp.Forward,tag=!Mns.Dino.Temp.Tail.Break] run function animated_java:dino_aj/animations/damage_tail_back/tween {duration:1, to_frame: 0}

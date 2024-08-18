@@ -1,12 +1,15 @@
-#> mhdp_monster_dino:core/util/models/anger_start
+#> mhdp_monster_dino:core/util/models/rust_start
 #
-# 尻尾赤熱化開始時のモデル変更
+# 尻錆び開始時のモデル変更
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
 
 # 状態更新(一時)
     tag @s remove Mns.Dino.State.TailHeat
     tag @s add Mns.Dino.State.TailRust
+
+# 部位ID更新
+    scoreboard players set @e[type=slime,tag=Mns.HitBox.Dino.Tail] Mns.Hitbox.PartId 7
 
 # モデル変更
     execute on passengers if entity @s[tag=aj.dino_aj.bone.tail_1] run data modify entity @s item.id set value "minecraft:white_dye"

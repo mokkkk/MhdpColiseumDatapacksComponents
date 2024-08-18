@@ -7,6 +7,8 @@
 # 噛みつき
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Bite",DamageValue:5.0f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:1,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Bite.Heat",DamageValue:6.0f,GuardValue:2,ElementType:1,ElementMultiply:20,Knockback:1,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+
+# 軸合わせ噛みつき
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Bite.Heat.Turn",DamageValue:3.0f,GuardValue:1,ElementType:1,ElementMultiply:20,Knockback:0,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
 # 尻尾攻撃・正面
@@ -36,5 +38,5 @@
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Breath",DamageValue:8.0f,GuardValue:3,ElementType:1,ElementMultiply:80,Knockback:1,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
 # 大回転斬り
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Round",DamageValue:12.0f,GuardValue:6,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:true,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Round.Heat",DamageValue:13.2f,GuardValue:6,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:true,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Round",DamageValue:10.0f,GuardValue:6,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:true,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Round.Heat",DamageValue:12.0f,GuardValue:6,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:true,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}

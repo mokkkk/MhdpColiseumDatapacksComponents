@@ -7,6 +7,9 @@
 # 状態更新(一時)
     tag @s remove Mns.Dino.State.HeadHeat
 
+# 部位ID更新
+    scoreboard players set @e[type=slime,tag=Mns.HitBox.Dino.Head] Mns.Hitbox.PartId 0
+    
 # モデル変更
     execute on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.id set value "minecraft:white_dye"
     execute if entity @s[tag=!Mns.Break.Head,tag=!Mns.State.IsAnger] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 15
