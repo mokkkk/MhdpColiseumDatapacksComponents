@@ -19,6 +19,8 @@
     execute if entity @s[tag=aj.dino_aj.animation.turn_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_r/main
     execute if entity @s[tag=aj.dino_aj.animation.turn_big_l.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_big_l/main
     execute if entity @s[tag=aj.dino_aj.animation.turn_big_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_big_r/main
+    execute if entity @s[tag=aj.dino_aj.animation.turn_bite_l.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_bite_l/main
+    execute if entity @s[tag=aj.dino_aj.animation.turn_bite_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_bite_r/main
 
 # 怯み
     execute if entity @s[tag=aj.dino_aj.animation.damage_head.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_head/main

@@ -44,6 +44,7 @@
 
 # 攻撃
     execute if score @s aj.roundforce.frame matches 85 run function mhdp_monster_dino:core/tick/animation/event/roundforce/attack
+    execute if score @s aj.roundforce.frame matches 87 run function mhdp_monster_dino:core/tick/animation/event/roundforce/attack
     execute if score @s aj.roundforce.frame matches 80..90 run function mhdp_monster_dino:core/tick/animation/event/roundforce/attack_tail
 
 # 接地

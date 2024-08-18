@@ -73,11 +73,11 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:true,\
         HallTrapTimer:15,\
-        HeadPartDamage:3,\
+        HeadPartDamage:8,\
         BodyPartDamage:7,\
         TailPartDamage:5,\
-        LegRPartDamage:4,\
-        LegLPartDamage:4\
+        LegRPartDamage:5,\
+        LegLPartDamage:5\
     }
 
 # 肉質データ

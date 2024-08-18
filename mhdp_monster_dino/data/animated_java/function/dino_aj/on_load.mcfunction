@@ -23,6 +23,8 @@ scoreboard objectives add aj.turn_r.frame dummy
 scoreboard objectives add aj.turn_l.frame dummy
 scoreboard objectives add aj.turn_big_r.frame dummy
 scoreboard objectives add aj.turn_big_l.frame dummy
+scoreboard objectives add aj.turn_bite_r.frame dummy
+scoreboard objectives add aj.turn_bite_l.frame dummy
 scoreboard objectives add aj.step_side_r.frame dummy
 scoreboard objectives add aj.step_side_l.frame dummy
 scoreboard objectives add aj.voice.frame dummy
