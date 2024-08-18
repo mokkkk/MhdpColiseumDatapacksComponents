@@ -11,10 +11,10 @@
         scoreboard players add @s Mns.Dino.Tail.Damage.Count 1
 
 # 部位破壊処理
-    execute if entity @s[tag=!Mns.Break.Tail] if score @s Mns.Dino.Tail.Damage.Count matches 2.. run function mhdp_monster_dino:core/damage/reaction/tail_break
+    execute if entity @s[tag=!Mns.Break.Tail] run function mhdp_monster_dino:core/damage/reaction/tail_break
 
 # 切断属性のみ、部位破壊・切断処理
-    execute if entity @s[tag=Mns.Dino.State.TailHeat,tag=Mns.Break.Tail,tag=!Mns.Break.Tail.Cut] if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run function mhdp_monster_dino:core/damage/reaction/tail_break_cut
+    execute if entity @s[tag=Mns.Dino.State.TailHeat,tag=Mns.Break.Tail,tag=!Mns.Break.Tail.Cut] if score @s Mns.Dino.Tail.Damage.Count matches 2.. if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run function mhdp_monster_dino:core/damage/reaction/tail_break_cut
 
 # アニメーション再生処理
     # 麻痺・ダウン・スタン時以外

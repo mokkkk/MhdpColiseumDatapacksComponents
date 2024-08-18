@@ -58,13 +58,13 @@
         TireDamage:300,\
         AngerDamagePer:10,\
         AngerTimer:60,\
-        AngerAttackMult:120,\
+        AngerAttackMult:115,\
         AngerSpeed:8,\
         ParalysisDamage:500,\
         ParalysisTimer:10,\
         PoisonDamage:400,\
-        PoisonTimer:20,\
-        PoisonEffectDamage:50,\
+        PoisonTimer:17,\
+        PoisonEffectDamage:60,\
         BombDamage:400,\
         BombEffectDamage:200,\
         FlashBombEnable:true,\
@@ -74,7 +74,7 @@
         HallTrapEnable:true,\
         HallTrapTimer:15,\
         HeadPartDamage:8,\
-        BodyPartDamage:7,\
+        BodyPartDamage:6,\
         TailPartDamage:5,\
         LegRPartDamage:5,\
         LegLPartDamage:5\

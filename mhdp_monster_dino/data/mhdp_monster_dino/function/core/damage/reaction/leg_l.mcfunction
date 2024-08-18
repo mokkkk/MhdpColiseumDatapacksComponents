@@ -27,6 +27,8 @@
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     # アニメーションタグ消去
         function mhdp_monsters:core/util/other/remove_animation_tag
-
+    # 状態設定
+        execute if score @s Mns.Dino.LegR.Damage.Count matches 2.. run tag @s add Mns.State.IsDown
+    
 # 終了
     execute if score @s Mns.Dino.LegL.Damage.Count matches 2.. run scoreboard players set @s Mns.Dino.LegL.Damage.Count 0

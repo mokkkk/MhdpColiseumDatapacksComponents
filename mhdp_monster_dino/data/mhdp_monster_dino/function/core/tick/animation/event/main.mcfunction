@@ -37,6 +37,12 @@
     execute if entity @s[tag=aj.dino_aj.animation.down_end_left.playing] run function mhdp_monster_dino:core/tick/animation/event/down_end_left/main
     execute if entity @s[tag=aj.dino_aj.animation.damage_flying.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_flying/main
 
+# 状態異常
+    # 麻痺
+        execute if entity @s[tag=aj.dino_aj.animation.state_paralysis_start.playing] run function mhdp_monster_dino:core/tick/animation/event/state_paralysis_start/main
+        execute if entity @s[tag=aj.dino_aj.animation.state_paralysis.playing] run function mhdp_monster_dino:core/tick/animation/event/state_paralysis/main
+        execute if entity @s[tag=aj.dino_aj.animation.state_paralysis_end.playing] run function mhdp_monster_dino:core/tick/animation/event/state_paralysis_end/main
+
 # 討伐
     execute if entity @s[tag=aj.dino_aj.animation.death.playing] run function mhdp_monster_dino:core/tick/animation/event/death/main
     execute if entity @s[tag=aj.dino_aj.animation.death_flying.playing] run function mhdp_monster_dino:core/tick/animation/event/death_flying/main
