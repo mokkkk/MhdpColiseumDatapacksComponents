@@ -12,7 +12,8 @@
         execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_r/m.attack_tail with entity @s data.locators.pos_tail_4
 
 # データ読み込み
-    execute if entity @a[tag=Temp.Hit] run data modify storage mhdp_core:temp Damage set from storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Tail"}]
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] run data modify storage mhdp_core:temp Damage set from storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Tail"}]
+    execute if entity @s[tag=Mns.Dino.State.TailHeat] run data modify storage mhdp_core:temp Damage set from storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Tail.Heat"}]
     execute if entity @s[tag=!Mns.State.IsAnger] if entity @a[tag=Temp.Hit] run scoreboard players set #mhdp_temp_attack_multiply_anger MhdpCore 100
     execute if entity @s[tag=Mns.State.IsAnger] if entity @a[tag=Temp.Hit] run scoreboard players operation #mhdp_temp_attack_multiply_anger MhdpCore = @s Mns.Anger.AttackMutiply
 
