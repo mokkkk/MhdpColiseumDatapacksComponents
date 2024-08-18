@@ -9,3 +9,6 @@
 
 # ブレス
     execute if entity @s[tag=Mns.Shot.Dino.Breath] run function mhdp_monster_dino:core/tick/shot/breath/tick
+
+# 尻尾
+    execute if entity @s[tag=Mns.Shot.Dino.Tail] run function mhdp_monster_dino:core/tick/shot/tail/tick

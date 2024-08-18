@@ -92,7 +92,7 @@
             [40,30,35,0,20,5,10,10],\
             [37,35,30,0,15,5,5,5],\
             [37,35,30,0,15,5,5,5],\
-            [70,75,62,0,25,10,15,15],\
+            [67,75,62,0,25,10,15,15],\
             [75,70,55,0,30,10,15,15],\
             [30,30,20,0,15,5,5,5]\
         ]\
@@ -102,7 +102,7 @@
     execute if data storage mhdp_core:monster_data AttackData[{Uid:1003}] run data remove storage mhdp_core:monster_data AttackData[{Uid:1003}]
     data modify storage mhdp_core:monster_data AttackData append value {\
         Uid:1003,\
-        Attacks:[{Id:"Bite"}]\
+        Attacks:[]\
     }
     function mhdp_monster_dino:core/init/init_attack_data
 

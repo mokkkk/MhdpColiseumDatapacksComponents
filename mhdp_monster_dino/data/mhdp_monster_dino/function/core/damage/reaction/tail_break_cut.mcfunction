@@ -1,4 +1,4 @@
-#> mhdp_monster_dino:core/damage/reaction/tail_break
+#> mhdp_monster_dino:core/damage/reaction/tail_break_cut
 #
 # 怯みリアクション 尻尾部位破壊
 #
@@ -23,7 +23,7 @@
     function mhdp_monster_dino:core/util/models/break_tail_cut
 
 # 尻尾設置
-    # execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/damage/reaction/macro/m.summon_tail with entity @s data.locators.pos_tail_3
+    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/damage/reaction/macro/m.summon_tail with entity @s data.locators.pos_tail_3
 
 # トースト表示
     function mhdp_monster_dino:core/util/show_toast
