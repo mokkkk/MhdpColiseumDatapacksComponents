@@ -14,11 +14,10 @@
     execute if score @s aj.land_tail_spin_l.frame matches 25..28 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.land_tail_spin_l.frame matches 50..53 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.land_tail_spin_l.frame matches 70..73 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s aj.land_tail_spin_l.frame matches 25..27 run playsound entity.ravager.attack master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 1 0.4
-    execute if score @s aj.land_tail_spin_l.frame matches 70..72 run playsound entity.ravager.attack master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 1 0.4
-    execute if score @s aj.land_tail_spin_l.frame matches 25 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 1
-    execute if score @s aj.land_tail_spin_l.frame matches 70 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent,distance=..48] ~ ~ ~ 1 1
-    
+    execute if score @s aj.land_tail_spin_l.frame matches 25..27 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound entity.ravager.attack master @s ^ ^1 ^1 1 1 0.4
+    execute if score @s aj.land_tail_spin_l.frame matches 70..72 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound entity.ravager.attack master @s ^ ^1 ^1 1 1 0.4
+    execute if score @s aj.land_tail_spin_l.frame matches 25 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
+    execute if score @s aj.land_tail_spin_l.frame matches 70 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
 # 攻撃
     execute if score @s aj.land_tail_spin_l.frame matches 27..39 run function mhdp_monster_reus:core/tick/animation/event/land_tail_spin_l/attack
     execute if score @s aj.land_tail_spin_l.frame matches 72..84 run function mhdp_monster_reus:core/tick/animation/event/land_tail_spin_l/attack

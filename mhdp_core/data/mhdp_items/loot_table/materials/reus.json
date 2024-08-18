@@ -1,0 +1,51 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{IsMhdpMaterial:1b}"
+                        },
+                        {
+                            "components": {
+                                "minecraft:custom_model_data": 11,
+                                "minecraft:item_name": "{\"text\":\"火竜の鱗\"}",
+                                "minecraft:lore": [
+                                    "{\"text\":\"熱を秘めた火竜の鱗。\",\"italic\":false}",
+                                    "{\"text\":\"今のところ使い道はない。\",\"italic\":false}"
+                                ]
+                            },
+                            "function": "minecraft:set_components"
+                        }
+                    ],
+                    "name": "minecraft:blue_dye",
+                    "type": "minecraft:item"
+                },
+                {
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{IsMhdpMaterial:1b}"
+                        },
+                        {
+                            "components": {
+                                "minecraft:custom_model_data": 12,
+                                "minecraft:item_name": "{\"text\":\"火竜の甲殻\"}",
+                                "minecraft:lore": [
+                                    "{\"text\":\"攻撃を弾く頑丈な火竜の甲殻。\",\"italic\":false}",
+                                    "{\"text\":\"今のところ使い道はない。\",\"italic\":false}"
+                                ]
+                            },
+                            "function": "minecraft:set_components"
+                        }
+                    ],
+                    "name": "minecraft:blue_dye",
+                    "type": "minecraft:item"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

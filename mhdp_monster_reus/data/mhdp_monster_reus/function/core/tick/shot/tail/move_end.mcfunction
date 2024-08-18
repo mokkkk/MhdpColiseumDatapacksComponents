@@ -7,6 +7,7 @@
 # 剥ぎ取り可能にする
     tag @s add Mns.State.IsCanCarving
     scoreboard players set @s Mns.General.Carving.Count 1
+    scoreboard players set @s Mns.Uid 1002
 
 # 演出
     particle block{block_state:"minecraft:sand"} ^ ^ ^ 1 0.1 1 0 10

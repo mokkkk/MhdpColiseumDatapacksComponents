@@ -4,5 +4,5 @@ execute if score @s aj.tween_duration matches 1.. run return 1
 execute if score @s aj.tween_duration matches 0 on passengers run data modify entity @s interpolation_duration set value 1
 execute store result storage aj:temp frame int 1 run scoreboard players get @s aj.anger.frame
 function animated_java:dino_aj/animations/anger/zzz/apply_frame with storage aj:temp
-execute if score @s aj.anger.frame matches 110.. run return run function animated_java:dino_aj/animations/anger/pause
+execute if score @s aj.anger.frame matches 106.. run return run function animated_java:dino_aj/animations/anger/pause
 scoreboard players add @s aj.anger.frame 1

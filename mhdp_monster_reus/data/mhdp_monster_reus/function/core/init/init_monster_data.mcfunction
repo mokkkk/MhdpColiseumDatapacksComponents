@@ -40,6 +40,7 @@
         UpperName:"Reus",\
         JpName:"火竜",\
         ShowName:'{"text":"火竜"}',\
+        LootTable:"mhdp_items:materials/reus",\
         ShowHp:true,\
         Hp:11000,\
         StunDamage:200,\
@@ -61,7 +62,7 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:false,\
         HallTrapTimer:15,\
-        HeadPartDamage:3,\
+        HeadPartDamage:7,\
         BodyPartDamage:7,\
         TailPartDamage:5,\
         LegRPartDamage:4,\
