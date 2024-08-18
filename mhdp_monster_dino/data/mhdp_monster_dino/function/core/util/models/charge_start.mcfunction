@@ -27,4 +27,4 @@
     execute on passengers if entity @s[tag=aj.dino_aj.bone.neck_2] run data modify entity @s item.components."minecraft:custom_model_data" set value 24
 
 # カウントセット
-    scoreboard players set @s Mns.Dino.PhaseCount.Head 20
+    scoreboard players set @s Mns.Dino.PhaseCount.Head 30

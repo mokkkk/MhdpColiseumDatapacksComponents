@@ -10,15 +10,17 @@
     tag @e[tag=Mns.Temp.Target] remove Mns.Temp.Target
 
 # 確率設定
-    data modify storage mhdp_core:temp Temp.AttackRandom set value {Breath.Back:0,Breath.Move:0}
+    data modify storage mhdp_core:temp Temp.AttackRandom set value {BreathBack:0,BreathMove:0,Bite:3,BiteDouble:2,Tail:4,TailSide:3,TailBack:0,TailFlame:2,Round:1,Step:2}
     # 正面
-        execute if entity @s[tag=Mns.Temp.Forward] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Dash:4}
+        execute if entity @s[tag=Mns.Temp.Forward] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Bite:4,BiteDouble:3,TailFlame:3}
     # 背面
-        execute if entity @s[tag=Mns.Temp.Back] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Tail:4}
+        execute if entity @s[tag=Mns.Temp.Back] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {TailBack:5}
     # 側面
-        execute if entity @s[tag=!Mns.Temp.Forward,tag=!Mns.Temp.Back] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Jump:3,Tail:3}
+        execute if entity @s[tag=!Mns.Temp.Forward,tag=!Mns.Temp.Back] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Bite:2,Step:3}
     # 怒り
-        execute if entity @s[tag=Mns.State.IsAnger] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {ChargeBite:4,Dash:4}
+        execute if entity @s[tag=Mns.State.IsAnger] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {BiteDouble:3,Round:2}
+    # 喉赤熱化
+        execute if entity @s[tag=Mns.Dino.State.HeadHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {BreathBack:3,BreathMove:3}
 
 # 決定
     function mhdp_monster_dino:core/tick/animation/change/random/macro/m.near with storage mhdp_core:temp Temp.AttackRandom
@@ -48,8 +50,9 @@
     execute if score #mndp_temp_action_id MhdpCore matches 10 run function mhdp_monster_dino:core/tick/animation/change/play/step
 
 # 軸合わせ
-    execute if entity @s[tag=Anim.Bite.R] run tag @s add Mns.Temp.IsTurn
-    execute if entity @s[tag=Anim.Bite.L] run tag @s add Mns.Temp.IsTurn
+    execute if entity @s[tag=Anim.Breath.Back] run tag @s add Mns.Temp.IsTurn
+    execute if entity @s[tag=Anim.Bite] run tag @s add Mns.Temp.IsTurn.Big
+    execute if entity @s[tag=Anim.BiteDouble] run tag @s add Mns.Temp.IsTurn
 
 # 終了
     tag @s remove Mns.Temp.Forward
@@ -57,4 +60,3 @@
     data remove storage mhdp_core:temp Temp.AttackRandom
     scoreboard players reset #mndp_temp_action_id MhdpCore
     kill @n[type=minecraft:item,nbt={Item:{components:{"minecraft:custom_data":{IsRandomTemp:1b}}}}]
-    execute if entity @s[tag=Mns.Temp.IsTurn] run scoreboard players set @s Mns.General.TurnCount 2

@@ -9,8 +9,8 @@
 
 # 地上
     # 近距離
-        execute if entity @n[tag=Mns.Target.Dino,distance=..10] run return run function mhdp_monster_dino:core/tick/animation/change/random/near
+        execute if entity @n[tag=Mns.Target.Dino,distance=..12] run return run function mhdp_monster_dino:core/tick/animation/change/random/near
     # 中距離
-        # execute if entity @n[tag=Mns.Target.Dino,distance=..18] run return run function mhdp_monster_dino:core/tick/animation/change/random/middle
+        execute if entity @n[tag=Mns.Target.Dino,distance=..25] run return run function mhdp_monster_dino:core/tick/animation/change/random/middle
     # 遠距離
-        # execute run return run function mhdp_monster_dino:core/tick/animation/change/random/far
+        execute run return run function mhdp_monster_dino:core/tick/animation/change/random/far

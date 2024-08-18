@@ -6,7 +6,8 @@
 
 # アニメーション変更
     execute if entity @s[tag=Mns.Dino.Temp.ToBite] run tag @s add Anim.BiteDouble
-    execute if entity @s[tag=Mns.Dino.Temp.ToTail] run tag @s add Anim.Tail.Anger.R
+    execute if entity @s[tag=Mns.Dino.Temp.ToTail,tag=!Mns.State.IsAnger] if score #mndp_temp_action_id MhdpCore matches 5 run function mhdp_monster_dino:core/tick/animation/change/play/tail
+    execute if entity @s[tag=Mns.Dino.Temp.ToTail,tag=Mns.State.IsAnger] if score #mndp_temp_action_id MhdpCore matches 5 run function mhdp_monster_dino:core/tick/animation/change/play/tail_anger
     function mhdp_monster_dino:core/tick/animation/change/main
 
 # 終了

@@ -29,7 +29,7 @@
         execute if score @s Mns.General.ActCount.Target matches 4.. run function mhdp_monster_dino:core/tick/animation/change/update_target
 
 # 非怒り中・一定以上行動した場合、威嚇を選択(そのまま処理中断)
-    # execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.ActCount.Idle matches 9.. run return run function mhdp_monsters:core/util/tick/skip
+    execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.ActCount.Idle matches 12.. run return run function mhdp_monsters:core/util/tick/skip
 
 # フェーズ移行
     # 尻尾風化
