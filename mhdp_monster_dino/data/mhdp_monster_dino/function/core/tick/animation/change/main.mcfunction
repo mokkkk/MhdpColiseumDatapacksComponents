@@ -41,7 +41,7 @@
         execute if entity @s[tag=Mns.Dino.State.HeadHeat] run function mhdp_monster_dino:core/util/phase/head_heat
 
 # アニメーション選択
-    # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn] if entity @e[tag=Mns.Target.Dino] run function mhdp_monster_dino:core/tick/animation/change/random/main
+    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn] if entity @e[tag=Mns.Target.Dino] run function mhdp_monster_dino:core/tick/animation/change/random/main
 
 # 軸合わせアニメーション再生
     execute if entity @s[tag=Mns.Temp.IsTurn] store result score #mhdp_temp_result MhdpCore run function mhdp_monster_dino:core/tick/animation/change/play/turn
