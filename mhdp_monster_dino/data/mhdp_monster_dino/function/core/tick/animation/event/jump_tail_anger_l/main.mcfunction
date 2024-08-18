@@ -55,5 +55,9 @@
     execute if score @s aj.jump_tail_anger_l.frame matches 24 run tag @s add Mns.State.IsFlying
     execute if score @s aj.jump_tail_anger_l.frame matches 37 run tag @s remove Mns.State.IsFlying
 
+# フェーズ
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.jump_tail_anger_l.frame matches 43 run function mhdp_monster_dino:core/util/phase/tail_heat
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.jump_tail_anger_l.frame matches 72 run function mhdp_monster_dino:core/util/phase/tail_heat
+
 # 終了
     execute if score @s aj.jump_tail_anger_l.frame matches 156 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/end

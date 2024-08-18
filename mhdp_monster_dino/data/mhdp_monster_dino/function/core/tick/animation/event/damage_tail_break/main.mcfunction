@@ -5,12 +5,13 @@
 # @within function mhdp_monster_dino:core/tick/animation/event/tick
 
 # 移動
-    execute if score @s aj.damage_tail_break.frame matches 2..8 at @s run tp @s ^ ^ ^0.7 ~-2 ~
-    execute if score @s aj.damage_tail_break.frame matches 9..15 at @s run tp @s ^ ^ ^0.4 ~-5 ~
-    execute if score @s aj.damage_tail_break.frame matches 19..29 at @s run tp @s ^-0.1 ^ ^ ~-1 ~
-    execute if score @s aj.damage_tail_break.frame matches 51..65 at @s run tp @s ^ ^ ^ ~-1 ~
-    execute if score @s aj.damage_tail_break.frame matches 66..77 at @s run tp @s ^0.1 ^ ^ ~-4 ~
-    execute if score @s aj.damage_tail_break.frame matches 78..85 at @s run tp @s ^ ^ ^ ~-1 ~
+    execute if score @s aj.damage_tail_break.frame matches 2..8 at @s run tp @s ^ ^ ^0.7 ~2 ~
+    execute if score @s aj.damage_tail_break.frame matches 9..15 at @s run tp @s ^ ^ ^0.4 ~5 ~
+    execute if score @s aj.damage_tail_break.frame matches 19..29 at @s run tp @s ^0.1 ^ ^ ~1 ~
+    execute if score @s aj.damage_tail_break.frame matches 30..39 at @s run tp @s ^0.2 ^ ^ ~ ~
+    execute if score @s aj.damage_tail_break.frame matches 51..65 at @s run tp @s ^ ^ ^ ~1 ~
+    execute if score @s aj.damage_tail_break.frame matches 66..77 at @s run tp @s ^0.1 ^ ^ ~4 ~
+    execute if score @s aj.damage_tail_break.frame matches 78..85 at @s run tp @s ^ ^ ^ ~1 ~
 
 # 効果音
     execute if score @s aj.damage_tail_break.frame matches 2..4 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1

@@ -1,15 +1,14 @@
-#> mhdp_monster_reus:core/tick/animation/change/random/first
+#> mhdp_monster_dino:core/tick/animation/change/random/first
 #
 # 初回遭遇時
 #
-# @within function mhdp_monster_reus:core/tick/animation/change/random/main
+# @within function mhdp_monster_dino:core/tick/animation/change/random/main
 
 # 咆哮
     tag @s add Anim.Voice
 
 # 軸合わせ
     tag @s add Mns.Temp.IsTurn
-    execute if entity @s[tag=Mns.Temp.IsTurn] run scoreboard players set @s Mns.General.TurnCount 2
 
 # 終了
     tag @s remove Mns.Temp.Forward

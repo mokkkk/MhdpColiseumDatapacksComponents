@@ -1,8 +1,8 @@
-#> mhdp_monster_reus:core/tick/animation/change/random/m.near
+#> mhdp_monster_dino:core/tick/animation/change/random/m.near
 #
 # 行動ランダム選択
 #
-# @within function mhdp_monster_reus:core/tick/animation/change/random/main
+# @within function mhdp_monster_dino:core/tick/animation/change/random/main
 
 $loot spawn ~ ~10 ~ loot {\
     "pools":[\

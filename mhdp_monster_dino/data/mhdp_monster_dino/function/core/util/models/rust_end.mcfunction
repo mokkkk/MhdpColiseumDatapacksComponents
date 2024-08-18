@@ -24,3 +24,6 @@
     execute if entity @s[tag=!Mns.Break.Tail,tag=!Mns.Break.Tail.Cut] on passengers if entity @s[tag=aj.dino_aj.bone.tail_4] run data modify entity @s item.components."minecraft:custom_model_data" set value 33
     execute if entity @s[tag=Mns.Break.Tail,tag=!Mns.Break.Tail.Cut] on passengers if entity @s[tag=aj.dino_aj.bone.tail_4] run data modify entity @s item.components."minecraft:custom_model_data" set value 50
     execute if entity @s[tag=Mns.Break.Tail.Cut] on passengers if entity @s[tag=aj.dino_aj.bone.tail_4] run data modify entity @s item.components."minecraft:custom_model_data" set value 51
+
+# カウントリセット
+    scoreboard players set @s Mns.Dino.PhaseCount.Tail 0

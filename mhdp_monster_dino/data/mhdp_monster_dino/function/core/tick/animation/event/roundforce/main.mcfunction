@@ -50,5 +50,9 @@
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# フェーズ
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.roundforce.frame matches 80 run function mhdp_monster_dino:core/util/phase/tail_heat
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.roundforce.frame matches 81 run function mhdp_monster_dino:core/util/phase/tail_heat
+
 # 終了
     execute if score @s aj.roundforce.frame matches 159 run function mhdp_monster_dino:core/tick/animation/event/roundforce/end

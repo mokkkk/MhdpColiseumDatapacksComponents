@@ -7,6 +7,9 @@
 # 待機
     execute if entity @s[tag=aj.dino_aj.animation.idle.playing] run function mhdp_monster_dino:core/tick/animation/event/idle/main
 
+# 警戒
+    execute if entity @s[tag=aj.dino_aj.animation.search.playing] run function mhdp_monster_dino:core/tick/animation/event/search/main
+
 # 咆哮
     execute if entity @s[tag=aj.dino_aj.animation.voice.playing] run function mhdp_monster_dino:core/tick/animation/event/voice/main
     execute if entity @s[tag=aj.dino_aj.animation.anger.playing] run function mhdp_monster_dino:core/tick/animation/event/anger/main

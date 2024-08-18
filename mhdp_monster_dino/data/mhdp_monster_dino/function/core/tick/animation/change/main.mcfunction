@@ -11,8 +11,8 @@
         execute if entity @s[tag=!Mns.State.IsBattle] if score @s Mns.General.SearchTimer matches 2000.. run tag @s add Mns.Temp.IsFirstContact
         execute if entity @s[tag=Mns.Temp.IsFirstContact,tag=!Mns.State.IsBattle] run tag @s add Mns.State.IsBattle
     # 非戦闘時は警戒アニメーションのみ再生
-        # execute if entity @s[tag=!Mns.State.IsBattle] if entity @n[tag=Ply.State.MnsTarget] run function animated_java:dino_aj/animations/search/tween {duration:1, to_frame: 0}
-        # execute if entity @s[tag=!Mns.State.IsBattle] run return 0
+        execute if entity @s[tag=!Mns.State.IsBattle] if entity @n[tag=Ply.State.MnsTarget] run function animated_java:dino_aj/animations/search/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=!Mns.State.IsBattle] run return 0
 
 # 共通処理
     # Animタグがすでについているか確認
@@ -31,8 +31,17 @@
 # 非怒り中・一定以上行動した場合、威嚇を選択(そのまま処理中断)
     # execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.ActCount.Idle matches 9.. run return run function mhdp_monsters:core/util/tick/skip
 
+# フェーズ移行
+    # 尻尾風化
+        execute if entity @s[tag=Mns.Dino.State.TailHeat] run function mhdp_monster_dino:core/util/phase/tail_rust
+    # 尻尾研ぎ(そのまま処理中断)
+        execute if entity @s[tag=Mns.Dino.State.TailRust] run scoreboard players add @s Mns.Dino.PhaseCount.Tail 1
+        execute if entity @s[tag=Mns.Dino.State.TailRust] if score @s Mns.Dino.PhaseCount.Tail matches 38.. if predicate {"condition":"minecraft:random_chance","chance":0.4} run return run function animated_java:dino_aj/animations/polish/tween {duration:1, to_frame: 0}
+    # 喉赤熱化
+        execute if entity @s[tag=Mns.Dino.State.HeadHeat] run function mhdp_monster_dino:core/util/phase/head_heat
+
 # アニメーション選択
-    # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn] if entity @e[tag=Mns.Target.Dino] run function mhdp_monster_dino:core/tick/animation/change/random/main
+    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn] if entity @e[tag=Mns.Target.Dino] run function mhdp_monster_dino:core/tick/animation/change/random/main
 
 # 軸合わせアニメーション再生
     execute if entity @s[tag=Mns.Temp.IsTurn] store result score #mhdp_temp_result MhdpCore run function mhdp_monster_dino:core/tick/animation/change/play/turn
