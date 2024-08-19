@@ -24,6 +24,7 @@
 
 # 怯み
     execute if entity @s[tag=aj.dino_aj.animation.damage_head.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_head/main
+    execute if entity @s[tag=aj.dino_aj.animation.damage_head_heat.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_head_heat/main
     execute if entity @s[tag=aj.dino_aj.animation.damage_tail_forward.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_tail_forward/main
     execute if entity @s[tag=aj.dino_aj.animation.damage_tail_back.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_tail_back/main
     execute if entity @s[tag=aj.dino_aj.animation.damage_tail_break.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_tail_break/main

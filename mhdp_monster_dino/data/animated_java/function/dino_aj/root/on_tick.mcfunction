@@ -8,6 +8,7 @@ execute if entity @s[tag=aj.dino_aj.animation.state_paralysis.playing] run funct
 execute if entity @s[tag=aj.dino_aj.animation.state_paralysis_end.playing] run function animated_java:dino_aj/animations/state_paralysis_end/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.search.playing] run function animated_java:dino_aj/animations/search/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.damage_head.playing] run function animated_java:dino_aj/animations/damage_head/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.damage_head_heat.playing] run function animated_java:dino_aj/animations/damage_head_heat/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.damage_tail_forward.playing] run function animated_java:dino_aj/animations/damage_tail_forward/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.damage_tail_back.playing] run function animated_java:dino_aj/animations/damage_tail_back/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.damage_tail_break.playing] run function animated_java:dino_aj/animations/damage_tail_break/zzz/on_tick

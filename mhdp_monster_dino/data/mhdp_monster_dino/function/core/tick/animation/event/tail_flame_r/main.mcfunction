@@ -32,7 +32,7 @@
 
 # 攻撃
     execute if score @s aj.tail_flame_r.frame matches 26..40 run function mhdp_monster_dino:core/tick/animation/event/tail_flame_r/attack_tail
-    execute if score @s aj.tail_flame_r.frame matches 37 positioned as @n[tag=Mns.Target.Dino] run summon area_effect_cloud ~ ~0.5 ~ {Duration:10,DurationOnUse:0,Tags:["Mns.ShotPos.Dino"]}
+    execute if score @s aj.tail_flame_r.frame matches 33 positioned as @n[tag=Mns.Target.Dino] run summon area_effect_cloud ~ ~0.5 ~ {Duration:10,DurationOnUse:0,Tags:["Mns.ShotPos.Dino"]}
     execute if score @s aj.tail_flame_r.frame matches 41 positioned ^-3 ^ ^5 rotated ~-3 ~ run function mhdp_monster_dino:core/tick/animation/event/tail_flame_r/attack
     execute if score @s aj.tail_flame_r.frame matches 42..47 run function mhdp_monster_dino:core/tick/animation/event/tail_flame_r/attack_tail_no_particle
 
