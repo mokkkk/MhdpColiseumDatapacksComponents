@@ -10,5 +10,8 @@
 # クエストボード
     execute if entity @s[tag=Other.Interaction.Board] run function mhdp_core:phase/1_village/quest/join/click
 
+# ベータ版処理
+    execute if data storage mhdp_core:game_data {IsBetaVersion:true} run function mhdp_core:beta/phase/1_village/select_weapon/click_ui
+
 # 終了
     execute if data entity @s interaction run data remove entity @s interaction
