@@ -34,6 +34,9 @@
 # 武器セット
     function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon
 
+# 体験版：アイテムセット
+    execute if data storage mhdp_core:game_data {IsBetaVersion:true} run function mhdp_core:beta/phase/2_village_to_quest/get_default_items
+
 # TODO:防具セット
 
 # 特殊装具の初期化
