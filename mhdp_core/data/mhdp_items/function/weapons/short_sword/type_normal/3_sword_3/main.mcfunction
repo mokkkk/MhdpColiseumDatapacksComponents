@@ -35,7 +35,7 @@
 
 # 遷移
     # 右クリック：剣コンボ4に移行
-        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 11.. run function mhdp_items:weapons/short_sword/type_normal/3_sword_3/change_to_sword_4
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_normal/3_sword_3/change_to_sword_4
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/type_normal/3_sword_3/end
