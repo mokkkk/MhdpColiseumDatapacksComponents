@@ -6,6 +6,7 @@ tag @s remove aj.dino_aj.animation.state_paralysis.playing
 tag @s remove aj.dino_aj.animation.state_paralysis_end.playing
 tag @s remove aj.dino_aj.animation.search.playing
 tag @s remove aj.dino_aj.animation.damage_head.playing
+tag @s remove aj.dino_aj.animation.damage_head_heat.playing
 tag @s remove aj.dino_aj.animation.damage_tail_forward.playing
 tag @s remove aj.dino_aj.animation.damage_tail_back.playing
 tag @s remove aj.dino_aj.animation.damage_tail_break.playing

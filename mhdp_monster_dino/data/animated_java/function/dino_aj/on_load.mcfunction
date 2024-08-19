@@ -5,6 +5,7 @@ scoreboard objectives add aj.state_paralysis.frame dummy
 scoreboard objectives add aj.state_paralysis_end.frame dummy
 scoreboard objectives add aj.search.frame dummy
 scoreboard objectives add aj.damage_head.frame dummy
+scoreboard objectives add aj.damage_head_heat.frame dummy
 scoreboard objectives add aj.damage_tail_forward.frame dummy
 scoreboard objectives add aj.damage_tail_back.frame dummy
 scoreboard objectives add aj.damage_tail_break.frame dummy

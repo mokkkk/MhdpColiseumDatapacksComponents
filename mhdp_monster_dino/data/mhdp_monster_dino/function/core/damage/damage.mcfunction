@@ -29,8 +29,11 @@
 # 部位ダメージの減算
     # 頭
         execute if score #mhdp_temp_target_part_id MhdpCore matches 0 run scoreboard players operation @s Mns.Dino.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if score #mhdp_temp_target_part_id MhdpCore matches 5 run scoreboard players operation @s Mns.Dino.Tail.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if score #mhdp_temp_target_part_id MhdpCore matches 5 run scoreboard players operation @s Mns.Dino.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Dino.Head.Damage matches ..0 run tag @s add Mns.Temp.Damage.Head
+        execute if entity @s[tag=Mns.Dino.State.HeadHeat] if score #mhdp_temp_target_part_id MhdpCore matches 0 run scoreboard players operation @s Mns.Dino.Sp.RedHead.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if entity @s[tag=Mns.Dino.State.HeadHeat] if score #mhdp_temp_target_part_id MhdpCore matches 5 run scoreboard players operation @s Mns.Dino.Sp.RedHead.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if score @s Mns.Dino.Sp.RedHead.Damage matches ..0 run tag @s add Mns.Temp.Damage.HeadHead
     # 胴
         execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run scoreboard players operation @s Mns.Dino.Body.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Dino.Body.Damage matches ..0 run tag @s add Mns.Temp.Damage.Body
@@ -54,6 +57,8 @@
         execute if entity @s[tag=Mns.Temp.Damage.Stun] run function mhdp_monster_dino:core/damage/reaction/stun
     # 減気
         # execute if entity @s[tag=Mns.Temp.Damage.Tire]
+    # 赤熱化頭(独自)
+        execute if entity @s[tag=Mns.Temp.Damage.HeadHead,tag=!Mns.State.IsFlying] run function mhdp_monster_dino:core/damage/reaction/head_heat
     # 頭(独自)
         execute if entity @s[tag=Mns.Temp.Damage.Head] run function mhdp_monster_dino:core/damage/reaction/head
     # 胴(独自)
@@ -81,6 +86,7 @@
 # 終了
     function mhdp_monsters:core/util/damage/remove_tags
     tag @s remove Mns.Temp.Damage.Head
+    tag @s remove Mns.Temp.Damage.HeadHead
     tag @s remove Mns.Temp.Damage.Body
     tag @s remove Mns.Temp.Damage.Tail
     tag @s remove Mns.Temp.Damage.LegR
