@@ -20,7 +20,7 @@
     execute if items entity @s weapon.offhand * run data modify storage mhdp_core:temp PlayerData.Item.Offhand set from storage mhdp_core:temp TempPlayerData.Inventory[{Slot:-106b}]
 
 # 前tickのPos
-    data modify storage mhdp_core:temp PlayerData.Pos.Pre set from storage mhdp_core:temp PlayerData.Pos
+    data modify storage mhdp_core:temp PlayerData.PrePos set from storage mhdp_core:temp PlayerData.Pos
 
 # 現tickのPos
     data modify storage mhdp_core:temp PlayerData.Pos set from storage mhdp_core:temp TempPlayerData.Pos

@@ -34,3 +34,4 @@
 
 # クエスト開始
     data modify storage mhdp_core:game_data ActiveQuest.State set value "Playing"
+    data modify storage mhdp_core:game_data ActiveQuest.IsCountDown set value false

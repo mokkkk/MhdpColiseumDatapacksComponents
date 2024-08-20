@@ -18,7 +18,7 @@
 # クエスト中処理
     execute if entity @s[tag=Ply.State.PlayingQuest] run function mhdp_core:player/phase_quest/tick
 
-# アイテム処理
+# 武器・アイテム処理
     function mhdp_items:player/tick
 
 # 終了
