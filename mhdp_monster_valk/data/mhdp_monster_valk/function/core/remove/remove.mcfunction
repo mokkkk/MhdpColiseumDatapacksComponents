@@ -1,19 +1,19 @@
-#> mhdp_monster_dino:core/remove/remove
+#> mhdp_monster_valk:core/remove/remove
 #
 # 消去処理を行う
 #
 # @within function 
 
 # 弾消去
-    kill @e[tag=Mns.Shot.Dino]
+    kill @e[tag=Mns.Shot.Valk]
 
 # 当たり判定を消去
-    execute as @e[type=slime,tag=Mns.HitBox.Dino] run function mhdp_monsters:core/util/other/remove_hitbox
+    execute as @e[type=slime,tag=Mns.HitBox.Valk] run function mhdp_monsters:core/util/other/remove_hitbox
 
 # ボスバー消去
-    bossbar remove mhdp_monster:dino
+    bossbar remove mhdp_monster:valk
 
 # モデル消去
-    function animated_java:dino_aj/remove/this
+    function animated_java:valk_aj/remove/this
 
-say 斬竜消去処理
+say 天彗龍消去処理
