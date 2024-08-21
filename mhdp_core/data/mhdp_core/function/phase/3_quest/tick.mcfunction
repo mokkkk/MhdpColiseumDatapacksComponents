@@ -5,8 +5,8 @@
 # @within function mhdp_core:phase/tick
 
 # 制限時間処理
-    execute if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} run scoreboard players add #mhdp_quest_timer_clear MhdpCore 1
-    execute if score #mhdp_quest_timer MhdpCore matches 0.. if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} run scoreboard players remove #mhdp_quest_timer MhdpCore 1
+    execute if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} if data storage mhdp_core:game_data ActiveQuest{IsCountDown:true} run scoreboard players add #mhdp_quest_timer_clear MhdpCore 1
+    execute if score #mhdp_quest_timer MhdpCore matches 0.. if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} if data storage mhdp_core:game_data ActiveQuest{IsCountDown:true} run scoreboard players remove #mhdp_quest_timer MhdpCore 1
     execute if score #mhdp_quest_timer MhdpCore matches 6001 run tellraw @a[tag=Ply.State.PlayingQuest] {"text": "【制限時間残り5分です】"}
     execute if score #mhdp_quest_timer MhdpCore matches 1201 run tellraw @a[tag=Ply.State.PlayingQuest] {"text": "【制限時間残り1分です】"}
     execute if score #mhdp_quest_timer MhdpCore matches 0 run tellraw @a[tag=Ply.State.PlayingQuest] {"text": "【制限時間切れです】"}

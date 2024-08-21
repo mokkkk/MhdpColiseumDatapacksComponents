@@ -15,6 +15,8 @@
         execute if data storage mhdp_core:temp Errors{IsQuestNotExist:true} run tellraw @a[tag=Ply.State.QuestMember] {"text":" - 【対象のクエストは存在しません】","color": "red"}
 
 # プレイヤー関連のエラー内容に応じた表示
+    # 体験版：武器を選択していない
+        execute if entity @a[tag=Ply.Temp.Error.BetaNotSelectedWeapon] run tellraw @a[tag=Ply.Temp.Error.BetaNotSelectedWeapon] [{"text":" - 【使用する武器を選択してください】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.BetaNotSelectedWeapon]","color": "red"}]
     # ゲームモード
         execute if entity @a[tag=Ply.Temp.Error.Gamemode] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【ゲームモードをアドベンチャーに設定してください】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.Gamemode]","color": "red"}]
     # カーソルにアイテムを保持している
@@ -31,6 +33,7 @@
         execute if entity @a[tag=Ply.Temp.Error.DuplicateSpItems] run tellraw @a[tag=Ply.State.QuestMember] [{"text":" - 【同じ種類の特殊装具は1つまでしか所持できません】\n 対象：","color": "red"},{"selector":"@a[tag=Ply.Temp.Error.DuplicateSpItems]","color": "red"}]
 
 # 終了
+    tag @a remove Ply.Temp.Error.BetaNotSelectedWeapon
     tag @a remove Ply.Temp.Error.Gamemode
     tag @a remove Ply.Temp.Error.HasCursorItem
     tag @a remove Ply.Temp.Error.HasNotWeapons

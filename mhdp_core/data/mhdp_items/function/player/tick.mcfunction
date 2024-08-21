@@ -15,8 +15,11 @@
     # 先行入力
         execute if score @s Ply.Timer.Buffering matches 1.. run function mhdp_items:core/buffering/tick
 
-# フレーム回避
-    execute if entity @s[tag=Ply.Ope.IsSprinting,tag=Ply.Ope.StartJump] run scoreboard players set @s Ply.Timer.Avoid 3
+# ジャンプ関連処理
+    # ベクトルジャンプ
+        # execute if entity @s[tag=Ply.Ope.StartJump,tag=Ply.Weapon.Drawing,tag=!Ply.Ope.IsSprinting] run function mhdp_items:player/weapon/move_jump/main
+    # ダッシュジャンプ時、無敵時間を設定
+        execute if entity @s[tag=Ply.Ope.IsSprinting,tag=Ply.Ope.StartJump] run scoreboard players set @s Ply.Timer.Avoid 3
 
 # ヒットストップ処理
     execute if entity @s[tag=!Ply.Weapon.HisStop] if score @s Wpn.HitStopTimer matches 1.. run tag @s add Ply.Weapon.HisStop

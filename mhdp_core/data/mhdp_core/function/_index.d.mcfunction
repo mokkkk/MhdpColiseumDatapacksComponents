@@ -118,3 +118,12 @@
         #declare tag Other.Text.Vfx.Slash 斬撃エフェクト
     # 一時
         #declare tag Other.Temp.Right 左右確認に一時的に使用、必ず同function内でリセットする
+# 体験版用
+    # player
+        #declare tag Beta.Ply.SelectedWeapon 武器選択済み
+        #declare tag Beta.Ply.Weapon.GreatSword 大剣
+        #declare tag Beta.Ply.Weapon.ShortSword 片手剣
+    # interaction
+        #declare tag Beta.Ui
+        #declare tag Beta.Interaction.Ss.Normal 片手剣地の型
+        #declare tag Beta.Interaction.Ss.Tec 片手剣天の型

@@ -16,3 +16,6 @@
 
 # ボスバーの表示
     execute as @e[type=item_display,tag=Mns.Root] run function mhdp_monsters:core/switch/show_bossbar
+
+# 最初にプレイヤーが移動した場合、カウントダウンを開始する
+    execute if data storage mhdp_core:game_data ActiveQuest{IsCountDown:false} run data modify storage mhdp_core:game_data ActiveQuest.IsCountDown set value true
