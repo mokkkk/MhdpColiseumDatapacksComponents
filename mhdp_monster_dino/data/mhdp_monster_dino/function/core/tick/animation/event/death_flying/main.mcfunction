@@ -22,5 +22,9 @@
     execute if score @s aj.death_flying.frame matches 15.. at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute if score @s aj.death_flying.frame matches 15.. at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 剝ぎ取り可能
+    execute if score @s aj.death_flying.frame matches 65 run tag @s add Mns.State.IsCanCarving
+    execute if score @s aj.death_flying.frame matches 65 run scoreboard players set @s Mns.General.Carving.Count 3
+
 # 終了
     execute if score @s aj.death_flying.frame matches 66 run function mhdp_monster_dino:core/tick/animation/event/death_flying/end

@@ -67,6 +67,11 @@
     #declare tag Temp.Move.Target.Marker 対象の位置取得用マーカー
     #declare tag Temp.Bomb.Marker 爆破ダメージ処理用のマーカー
 
+# 演出量
+    #declare tag Effect.General 演出共通
+    #declare tag Effect.CrackGround 地割れ
+    #declare tag Effect.CrackGround.A 地割れ A
+
 ## score_holder
     #declare score_holder #mhdp_temp_player_count クエスト参加プレイヤー数
     #declare score_holder #mhdp_temp_hp_multiply_quest クエストによるHP倍率

@@ -10,7 +10,7 @@
     execute if score @s aj.tail_attack_l.frame matches 1..18 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
-    execute if score @s aj.tail_attack_l.frame matches 1..5 if entity @n[tag=Mns.Target.Dino,distance=..8] at @s run tp @s ^ ^ ^-0.2
+    execute if score @s aj.tail_attack_l.frame matches 1..5 if entity @n[tag=Mns.Target.Dino,distance=..8] at @s run tp @s ^ ^ ^-0.5
     execute if score @s aj.tail_attack_l.frame matches 16..25 unless entity @n[tag=Mns.Target.Dino,distance=..9] at @s run tp @s ^ ^ ^0.4
     execute if score @s aj.tail_attack_l.frame matches 81..87 at @s run tp @s ^ ^ ^-0.1
 
