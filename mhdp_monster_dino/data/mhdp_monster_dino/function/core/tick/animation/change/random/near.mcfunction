@@ -10,15 +10,15 @@
     tag @e[tag=Mns.Temp.Target] remove Mns.Temp.Target
 
 # 確率設定
-    data modify storage mhdp_core:temp Temp.AttackRandom set value {BreathBack:0,BreathMove:0,Bite:3,BiteDouble:2,Tail:4,TailSide:3,TailBack:0,TailFlame:0,Round:2,Step:2}
+    data modify storage mhdp_core:temp Temp.AttackRandom set value {BreathBack:0,BreathMove:0,Bite:3,BiteDouble:0,Tail:4,TailSide:3,TailBack:0,TailFlame:0,Round:2,Step:2}
     # 正面
-        execute if entity @s[tag=Mns.Temp.Forward] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Bite:4,BiteDouble:3}
+        execute if entity @s[tag=Mns.Temp.Forward] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Bite:4}
     # 背面
         execute if entity @s[tag=Mns.Temp.Back] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {TailBack:5}
     # 側面
         execute if entity @s[tag=!Mns.Temp.Forward,tag=!Mns.Temp.Back] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Bite:2,Step:4}
     # 怒り
-        execute if entity @s[tag=Mns.State.IsAnger] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {BiteDouble:3,Round:2}
+        execute if entity @s[tag=Mns.State.IsAnger] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Round:2}
     # 喉赤熱化
         execute if entity @s[tag=Mns.Dino.State.HeadHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {BreathBack:3,BreathMove:3}
 

@@ -9,6 +9,7 @@
 
 # 抜刀攻撃
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/short_sword/type_normal/0_drawattack/start
+    execute if entity @s[tag=Ply.Ope.StartSneak,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/short_sword/type_normal/0_drawattack/start_guard
 
 # ガード
     # 開始：スニーク
