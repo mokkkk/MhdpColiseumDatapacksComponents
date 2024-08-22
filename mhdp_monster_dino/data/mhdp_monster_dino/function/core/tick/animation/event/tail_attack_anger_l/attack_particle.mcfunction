@@ -1,4 +1,4 @@
-#> mhdp_monster_dino:core/tick/animation/event/tail_attack_r/attack_particle
+#> mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_l/attack_particle
 #
 # アニメーションイベントハンドラ 尻尾攻撃
 #
