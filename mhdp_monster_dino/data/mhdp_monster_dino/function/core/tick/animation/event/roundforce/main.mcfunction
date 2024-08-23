@@ -14,7 +14,7 @@
     execute if score @s aj.roundforce.frame matches 1..60 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
-    execute if score @s aj.roundforce.frame matches 1..5 if entity @n[tag=Mns.Target.Dino,distance=..8] at @s run tp @s ^ ^ ^-0.2
+    execute if score @s aj.roundforce.frame matches 1..5 if entity @n[tag=Mns.Target.Dino,distance=..8] at @s run tp @s ^ ^ ^-0.4
     execute if score @s aj.roundforce.frame matches 81..86 at @s run tp @s ^ ^ ^1.2
     execute if score @s aj.roundforce.frame matches 87..96 at @s run tp @s ^ ^ ^0.8
     execute if score @s aj.roundforce.frame matches 97..105 at @s run tp @s ^ ^ ^0.3

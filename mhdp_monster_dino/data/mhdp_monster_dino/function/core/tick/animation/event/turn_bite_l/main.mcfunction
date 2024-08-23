@@ -12,6 +12,7 @@
     execute if score @s aj.turn_bite_l.frame matches 1..9 if entity @n[tag=Mns.Target.Dino,distance=..7] at @s run tp @s ^ ^ ^-0.15
 
 # 攻撃
+    execute if score @s aj.turn_bite_l.frame matches 10..16 run function mhdp_monster_dino:core/tick/animation/event/turn_bite_l/attack_head
     execute if score @s aj.turn_bite_l.frame matches 16 run function mhdp_monster_dino:core/tick/animation/event/turn_bite_l/attack
 
 # 接地

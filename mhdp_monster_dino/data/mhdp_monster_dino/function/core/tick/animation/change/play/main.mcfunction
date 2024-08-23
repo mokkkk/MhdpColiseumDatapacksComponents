@@ -20,6 +20,9 @@
 # 移動
     execute if entity @s[tag=Anim.Move] run function animated_java:dino_aj/animations/move/tween {duration:1, to_frame: 1}
 
+# 車庫入れ
+    execute if entity @s[tag=Anim.MoveBack] run function animated_java:dino_aj/animations/move_back/tween {duration:1, to_frame: 1}
+
 # サイドステップ
     execute if entity @s[tag=Anim.Step.R] run function animated_java:dino_aj/animations/step_side_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Step.L] run function animated_java:dino_aj/animations/step_side_l/tween {duration:1, to_frame: 1}

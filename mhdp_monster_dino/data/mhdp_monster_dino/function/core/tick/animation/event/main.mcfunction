@@ -51,6 +51,9 @@
 # 移動
     execute if entity @s[tag=aj.dino_aj.animation.move.playing] run function mhdp_monster_dino:core/tick/animation/event/move/main
 
+# 車庫入れ
+    execute if entity @s[tag=aj.dino_aj.animation.move_back.playing] run function mhdp_monster_dino:core/tick/animation/event/move_back/main
+
 # サイドステップ
     execute if entity @s[tag=aj.dino_aj.animation.step_side_r.playing] run function mhdp_monster_dino:core/tick/animation/event/step_side_r/main
     execute if entity @s[tag=aj.dino_aj.animation.step_side_l.playing] run function mhdp_monster_dino:core/tick/animation/event/step_side_l/main

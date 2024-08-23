@@ -14,6 +14,7 @@
     # 対プレイヤー
         execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/bite/m.attack_head with entity @s data.locators.pos_head
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
+        execute if entity @a[tag=Mns.Target.Dino,tag=Temp.Hit] run tag @s add Mns.Temp.IsHit
         tag @a remove Temp.Hit
 
 # 終了

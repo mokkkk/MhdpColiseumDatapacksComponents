@@ -18,7 +18,6 @@
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         tag @a remove Temp.Hit
     # 対モンスター
-        # execute positioned ^ ^1 ^7 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Dino,distance=..2.6] run tag @s add Temp.Hit
         execute positioned ^ ^1 ^7 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Dino,distance=..2.6] run tag @s add Temp.Hit
         execute positioned ^ ^1 ^9 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Dino,distance=..2.6] run tag @s add Temp.Hit
         execute positioned ^ ^1 ^11 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Dino,distance=..2.6] run tag @s add Temp.Hit
@@ -26,21 +25,15 @@
         execute if entity @n[tag=Temp.Victim] as @n[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
 
 # 演出
-    execute positioned ^ ^1 ^7 run particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 0.2 0.1 0.2 0.5 5 normal
-    execute positioned ^ ^1 ^9 run particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 0.2 0.1 0.2 0.5 5 normal
-    execute positioned ^ ^1 ^11 run particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 0.2 0.1 0.2 0.5 5 normal
-    execute positioned ^ ^1 ^7 run particle explosion ~ ~0 ~ 0.5 0.5 0.5 0 2
-    execute positioned ^ ^1 ^9 run particle explosion ~ ~0 ~ 0.5 0.5 0.5 0 2
-    execute positioned ^ ^1 ^11 run particle explosion ~ ~0 ~ 0.5 0.5 0.5 0 2
+    execute positioned ^ ^1 ^7 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/attack_particle
+    execute positioned ^ ^1 ^9 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/attack_particle
+    execute positioned ^ ^1 ^11 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/attack_particle
     playsound entity.ravager.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
     playsound entity.ravager.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     playsound item.mace.smash_air master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     playsound item.mace.smash_air master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if entity @s[tag=Mns.Dino.State.TailHeat] positioned ^ ^1 ^7 run particle lava ~ ~0 ~ 0.5 0.5 0.5 0 4
-    execute if entity @s[tag=Mns.Dino.State.TailHeat] positioned ^ ^1 ^9 run particle lava ~ ~0 ~ 0.5 0.5 0.5 0 4
-    execute if entity @s[tag=Mns.Dino.State.TailHeat] positioned ^ ^1 ^11 run particle lava ~ ~0 ~ 0.5 0.5 0.5 0 4
 
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit
