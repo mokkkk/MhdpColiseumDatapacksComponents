@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/great_sword/type_tec/0_drawattack/start_guard
+#> mhdp_items:weapons/great_sword/type_tec/0_drawattack/start
 #
 # 抜刀攻撃 開始
 #
@@ -9,6 +9,6 @@
 
 # 強制抜刀
     function mhdp_items:player/weapon/sheathe/force_drawing
-    
+
 # ガードに移行
-    function mhdp_items:weapons/short_sword/type_tec/24_guard/start
+    function mhdp_items:weapons/great_sword/type_tec/4_guard/start
