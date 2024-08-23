@@ -14,6 +14,7 @@
     # 対プレイヤー
         execute positioned ^ ^1 ^7 as @a[tag=Ply.State.EnableDamage,distance=..2.6] run tag @s add Temp.Hit
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
+        execute if entity @a[tag=Mns.Target.Dino,tag=Temp.Hit] run tag @s add Mns.Temp.IsHit
         tag @a remove Temp.Hit
     # 対モンスター
         execute positioned ^ ^1 ^7 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Dino,distance=..2.6] run tag @s add Temp.Hit

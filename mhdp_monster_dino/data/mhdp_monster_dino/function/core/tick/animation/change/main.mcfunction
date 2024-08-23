@@ -59,3 +59,4 @@
     tag @s remove Mns.Temp.IsTurn.Big
     tag @s remove Mns.Temp.IsFirstContact
     tag @s remove Mns.Temp.IsAlreadyAnimation
+    tag @s remove Mns.Temp.IsHit
