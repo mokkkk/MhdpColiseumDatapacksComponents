@@ -51,7 +51,7 @@
 
 # 軸合わせ
     execute if entity @s[tag=Anim.Breath.Back] run tag @s add Mns.Temp.IsTurn
-    execute if entity @s[tag=Anim.Bite] run tag @s add Mns.Temp.IsTurn.Big
+    execute if entity @s[tag=Anim.Bite] run tag @s add Mns.Temp.IsTurn
     execute if entity @s[tag=Anim.BiteDouble] run tag @s add Mns.Temp.IsTurn
 
 # 終了

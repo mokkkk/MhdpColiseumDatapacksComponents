@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.Bite
+    tag @s add Anim.Round
     # function mhdp_monster_dino:core/tick/animation/change/play/tail_jump
 
 # 軸合わせ
@@ -15,4 +15,4 @@
 # アニメーション変更
     function mhdp_monster_dino:core/tick/animation/change/main
 
-# function animated_java:dino_aj/animations/damage_head_heat/tween {duration:1, to_frame: 1}
+# function animated_java:dino_aj/animations/move_back/tween {duration:1, to_frame: 1}
