@@ -26,6 +26,7 @@ execute if entity @s[tag=aj.dino_aj.animation.death_flying.playing] run function
 execute if entity @s[tag=aj.dino_aj.animation.idle.playing] run function animated_java:dino_aj/animations/idle/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.move.playing] run function animated_java:dino_aj/animations/move/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.move_stop.playing] run function animated_java:dino_aj/animations/move_stop/zzz/on_tick
+execute if entity @s[tag=aj.dino_aj.animation.move_back.playing] run function animated_java:dino_aj/animations/move_back/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.turn_r.playing] run function animated_java:dino_aj/animations/turn_r/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.turn_l.playing] run function animated_java:dino_aj/animations/turn_l/zzz/on_tick
 execute if entity @s[tag=aj.dino_aj.animation.turn_big_r.playing] run function animated_java:dino_aj/animations/turn_big_r/zzz/on_tick

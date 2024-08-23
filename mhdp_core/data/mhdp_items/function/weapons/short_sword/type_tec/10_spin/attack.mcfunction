@@ -5,8 +5,10 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
 
 # 命中判定
-    execute anchored eyes positioned ^ ^ ^1 positioned ~-1 ~-1 ~-1 run tag @e[type=slime,tag=Mns.HitBox,dx=2,dy=2,dz=2] add Temp.Hit
-    execute anchored eyes positioned ^ ^ ^2 positioned ~-0.6 ~-0.6 ~-0.6 run tag @e[type=slime,tag=Mns.HitBox,dx=1.2,dy=1.2,dz=1.2] add Temp.Hit
+    execute anchored eyes positioned ^ ^ ^1 positioned ~-0.5 ~-0.5 ~-0.5 run tag @e[type=slime,tag=Mns.HitBox,dx=1,dy=1,dz=1] add Temp.Hit
+    execute anchored eyes positioned ^ ^ ^2 positioned ~-0.5 ~-0.5 ~-0.5 run tag @e[type=slime,tag=Mns.HitBox,dx=1,dy=1,dz=1] add Temp.Hit
+    execute anchored eyes positioned ^ ^ ^3 positioned ~-0.5 ~-0.5 ~-0.5 run tag @e[type=slime,tag=Mns.HitBox,dx=1,dy=1,dz=1] add Temp.Hit
+    execute anchored eyes positioned ^ ^ ^4 positioned ~-0.5 ~-0.5 ~-0.5 run tag @e[type=slime,tag=Mns.HitBox,dx=1,dy=1,dz=1] add Temp.Hit
 
 # ターゲット決定
     execute as @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] run tag @s add Temp.Victim

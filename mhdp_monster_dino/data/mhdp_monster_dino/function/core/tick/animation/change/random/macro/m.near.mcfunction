@@ -12,7 +12,7 @@ $loot spawn ~ ~10 ~ loot {\
                 {"type":"minecraft:item","name":"minecraft:paper","weight":$(BreathBack),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:1,IsRandomTemp:1b}"}]},\
                 {"type":"minecraft:item","name":"minecraft:paper","weight":$(BreathMove),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:2,IsRandomTemp:1b}"}]},\
                 {"type":"minecraft:item","name":"minecraft:paper","weight":$(Bite),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:3,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(BiteDouble),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:4,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(MoveBack),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:4,IsRandomTemp:1b}"}]},\
                 {"type":"minecraft:item","name":"minecraft:paper","weight":$(Tail),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:5,IsRandomTemp:1b}"}]},\
                 {"type":"minecraft:item","name":"minecraft:paper","weight":$(TailSide),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:6,IsRandomTemp:1b}"}]},\
                 {"type":"minecraft:item","name":"minecraft:paper","weight":$(TailBack),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:7,IsRandomTemp:1b}"}]},\

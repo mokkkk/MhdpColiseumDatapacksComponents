@@ -23,6 +23,7 @@ scoreboard objectives add aj.death_flying.frame dummy
 scoreboard objectives add aj.idle.frame dummy
 scoreboard objectives add aj.move.frame dummy
 scoreboard objectives add aj.move_stop.frame dummy
+scoreboard objectives add aj.move_back.frame dummy
 scoreboard objectives add aj.turn_r.frame dummy
 scoreboard objectives add aj.turn_l.frame dummy
 scoreboard objectives add aj.turn_big_r.frame dummy

@@ -12,8 +12,8 @@
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Bite.Heat.Turn",DamageValue:3.0f,GuardValue:1,ElementType:1,ElementMultiply:20,Knockback:0,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
 # 尻尾攻撃・正面
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Tail",DamageValue:8.4f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Tail.Heat",DamageValue:10.2f,GuardValue:4,ElementType:1,ElementMultiply:20,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Tail",DamageValue:8.4f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Tail.Heat",DamageValue:10.2f,GuardValue:4,ElementType:1,ElementMultiply:20,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
     # 引き戻し
         data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Tail.Anger.Back",DamageValue:3.0f,GuardValue:1,ElementType:0,ElementMultiply:0,Knockback:0,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
@@ -22,8 +22,8 @@
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailSide.Heat",DamageValue:8.9f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
 # 尻尾攻撃・背面
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailBack",DamageValue:6.2f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailBack.Heat",DamageValue:7.8f,GuardValue:3,ElementType:1,ElementMultiply:20,Knockback:2,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailBack",DamageValue:6.2f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailBack.Heat",DamageValue:7.8f,GuardValue:3,ElementType:1,ElementMultiply:20,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
 # 尻尾攻撃・飛びかかり
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailJump",DamageValue:7.8f,GuardValue:5,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}

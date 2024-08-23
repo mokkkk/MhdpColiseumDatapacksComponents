@@ -9,7 +9,6 @@
 
 # 強制抜刀
     function mhdp_items:player/weapon/sheathe/force_drawing
-    tag @s add Ply.Flag.DrawAttack
     
 # ガードに移行
     function mhdp_items:weapons/short_sword/type_normal/24_guard/start
