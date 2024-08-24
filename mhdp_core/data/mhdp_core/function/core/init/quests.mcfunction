@@ -27,7 +27,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:1,Name:"中級：火竜の狩猟",Level:2,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:27,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:21,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1002,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
@@ -36,7 +36,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:2,Name:"上級：斬竜の狩猟",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:28,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:24,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1003,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
