@@ -10,7 +10,7 @@
 
 # 移動
     execute if score @s aj.land_chargebite.frame matches 1..10 at @s run tp @s ^ ^ ^-0.1
-    execute if score @s aj.land_chargebite.frame matches 43..53 unless entity @n[tag=Mns.Target.Reus,distance=..7] at @s run tp @s ^ ^ ^0.8
+    execute if score @s aj.land_chargebite.frame matches 43..53 unless entity @n[tag=Mns.Target.Reus,distance=..8] at @s run tp @s ^ ^ ^0.8
 
 # 演出
     execute if score @s aj.land_chargebite.frame matches 2 run playsound entity.ender_dragon.flap master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7

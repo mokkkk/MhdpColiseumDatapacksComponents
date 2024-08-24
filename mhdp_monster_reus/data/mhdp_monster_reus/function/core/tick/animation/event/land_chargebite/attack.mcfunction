@@ -11,18 +11,18 @@
 
 # ヒット確認
     # 対プレイヤー
-        execute positioned ^ ^1 ^6.5 as @a[tag=Ply.State.EnableDamage,distance=..4.3] run tag @s add Temp.Hit
+        execute positioned ^ ^1 ^7.5 as @a[tag=Ply.State.EnableDamage,distance=..4.3] run tag @s add Temp.Hit
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         tag @a remove Temp.Hit
     # 対モンスター
-        execute positioned ^ ^1 ^6.5 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Reus,distance=..4.3] run tag @s add Temp.Hit
+        execute positioned ^ ^1 ^7.5 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Reus,distance=..4.3] run tag @s add Temp.Hit
         execute if entity @e[tag=Temp.Hit] as @n[tag=Temp.Hit] run tag @s add Temp.Victim
         execute if entity @e[tag=Temp.Victim] as @e[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
 
 # 演出
     playsound entity.generic.explode master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    particle explosion_emitter ^ ^1.5 ^6.5 0 0 0 0 1
-    particle lava ^ ^1.5 ^6.5 1 1 1 0 10
+    particle explosion_emitter ^ ^1.5 ^7.5 0 0 0 0 1
+    particle lava ^ ^1.5 ^7.5 1 1 1 0 10
 
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit

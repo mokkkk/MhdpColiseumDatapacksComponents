@@ -14,7 +14,7 @@
 
 # 攻撃
     execute if score @s aj.land_breath.frame matches 16 positioned as @n[tag=Mns.Target.Reus] run summon area_effect_cloud ~ ~0.5 ~ {Duration:10,DurationOnUse:0,Tags:["Mns.ShotPos.Reus"]}
-    execute if score @s aj.land_breath.frame matches 25 positioned ^ ^1.3 ^5 run function mhdp_monster_reus:core/tick/animation/event/land_breath/shot
+    execute if score @s aj.land_breath.frame matches 25 positioned ^ ^1.3 ^7 run function mhdp_monster_reus:core/tick/animation/event/land_breath/shot
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
