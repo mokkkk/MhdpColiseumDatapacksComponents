@@ -33,5 +33,8 @@
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 喉赤熱化中はキャンセルしてブレスに移行
+    execute if entity @s[tag=Mns.Dino.State.HeadHeat] if score @s aj.tail_back_r.frame matches 52 run function mhdp_monster_dino:core/tick/animation/event/tail_back_r/combo
+
 # 終了
     execute if score @s aj.tail_back_r.frame matches 94 run function mhdp_monster_dino:core/tick/animation/event/tail_back_r/end

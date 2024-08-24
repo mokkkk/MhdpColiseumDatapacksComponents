@@ -45,6 +45,7 @@
 
 # 噛みつき
     execute if entity @s[tag=Anim.Bite] run function animated_java:dino_aj/animations/bite/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.BiteToTail] run function animated_java:dino_aj/animations/bite_to_tail/tween {duration:1, to_frame: 1}
 
 # 2連噛みつき
     execute if entity @s[tag=Anim.BiteDouble,tag=!Mns.State.IsAnger] run function animated_java:dino_aj/animations/bite_double_normal/tween {duration:1, to_frame: 1}
@@ -55,7 +56,8 @@
     execute if entity @s[tag=Anim.Tail.L] run function animated_java:dino_aj/animations/tail_attack_l/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Tail.Anger.R] run function animated_java:dino_aj/animations/tail_attack_anger_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Tail.Anger.L] run function animated_java:dino_aj/animations/tail_attack_anger_l/tween {duration:1, to_frame: 1}
-
+    execute if entity @s[tag=Anim.Tail.Step.R] run function animated_java:dino_aj/animations/tail_attack_r_to_step_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.Tail.Step.L] run function animated_java:dino_aj/animations/tail_attack_l_to_step_l/tween {duration:1, to_frame: 1}
 # 尻尾攻撃・側面
     execute if entity @s[tag=Anim.TailSide.R] run function animated_java:dino_aj/animations/tail_side_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.TailSide.L] run function animated_java:dino_aj/animations/tail_side_l/tween {duration:1, to_frame: 1}

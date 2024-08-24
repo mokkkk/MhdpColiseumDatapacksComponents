@@ -20,8 +20,8 @@
     execute if score #mhdp_temp_guard_value MhdpCore matches ..0 run scoreboard players remove @s Ply.Stats.Stamina 150
     execute if score #mhdp_temp_guard_value MhdpCore matches 1 run scoreboard players remove @s Ply.Stats.Stamina 180
     execute if score #mhdp_temp_guard_value MhdpCore matches 2 run scoreboard players remove @s Ply.Stats.Stamina 220
-    execute if score #mhdp_temp_guard_value MhdpCore matches 3 run scoreboard players remove @s Ply.Stats.Stamina 270
-    execute if score #mhdp_temp_guard_value MhdpCore matches 4 run scoreboard players remove @s Ply.Stats.Stamina 320
+    execute if score #mhdp_temp_guard_value MhdpCore matches 3 run scoreboard players remove @s Ply.Stats.Stamina 300
+    execute if score #mhdp_temp_guard_value MhdpCore matches 4 run scoreboard players remove @s Ply.Stats.Stamina 400
 
 # ガード失敗時判定
     # 威力値が高い場合
@@ -30,20 +30,20 @@
         execute if score @s Ply.Stats.Stamina matches ..0 run tag @s remove Ply.Weapon.Guard
 
 # ガード成功時、ノックバックの値を上書き
-    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches ..2 if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 1
-    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 3..4 if score #mhdp_temp_knockback_strength MhdpCore matches 2.. run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 2
+    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches ..2 if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 2
+    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 3..4 if score #mhdp_temp_knockback_strength MhdpCore matches 2.. run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 3
 
 # ガード成功時、ダメージ軽減率設定
     execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches ..0 run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 0
     execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 1 run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 10
-    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 2 run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 20
-    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 3 run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 30
-    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 4 run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 50
+    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 2 run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 25
+    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 3 run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 45
+    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 4 run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 60
 
 # ガード成功時、のけぞり時間設定
     execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches ..0 run scoreboard players set @s Wpn.GuardStopTimer 8
-    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 1..2 run scoreboard players set @s Wpn.GuardStopTimer 15
-    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 3..4 run scoreboard players set @s Wpn.GuardStopTimer 25
+    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 1..2 run scoreboard players set @s Wpn.GuardStopTimer 18
+    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 3..4 run scoreboard players set @s Wpn.GuardStopTimer 28
 
 # 無敵時間上書き
     execute if entity @s[tag=Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsDisableDamageInterval:false} run scoreboard players set @s Ply.Timer.DamageInterval 8

@@ -36,7 +36,7 @@
         execute if entity @s[tag=Mns.Dino.State.TailHeat] run function mhdp_monster_dino:core/util/phase/tail_rust
     # 尻尾研ぎ(そのまま処理中断)
         execute if entity @s[tag=Mns.Dino.State.TailRust] run scoreboard players add @s Mns.Dino.PhaseCount.Tail 1
-        execute if entity @s[tag=Mns.Dino.State.TailRust] if score @s Mns.Dino.PhaseCount.Tail matches 38.. if predicate {"condition":"minecraft:random_chance","chance":0.4} run return run function animated_java:dino_aj/animations/polish/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=Mns.Dino.State.TailRust] if score @s Mns.Dino.PhaseCount.Tail matches 20.. if predicate {"condition":"minecraft:random_chance","chance":0.4} run return run function animated_java:dino_aj/animations/polish/tween {duration:1, to_frame: 0}
     # 喉赤熱化
         execute if entity @s[tag=Mns.Dino.State.HeadHeat] run function mhdp_monster_dino:core/util/phase/head_heat_end
 
