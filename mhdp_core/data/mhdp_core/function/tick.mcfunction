@@ -22,5 +22,3 @@
 # 特殊Entityの個別処理
     execute as @e[type=text_display,tag=Other.Text.Vfx] at @s run function mhdp_core:other_entity/vfx/tick
     execute as @e[tag=Effect.General] at @s run function mhdp_monsters:core/effect/tick
-
-say おはよう
