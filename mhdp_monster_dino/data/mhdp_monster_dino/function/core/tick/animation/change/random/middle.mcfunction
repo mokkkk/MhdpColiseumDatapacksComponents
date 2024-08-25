@@ -10,19 +10,19 @@
     tag @e[tag=Mns.Temp.Target] remove Mns.Temp.Target
 
 # 確率設定
-    data modify storage mhdp_core:temp Temp.AttackRandom set value {Breath:0,BreathTriple:0,BreathMove:0,MoveBite:3,MoveTail:2,TailJump:3,TailFlame:2,Round:1,Step:2}
+    data modify storage mhdp_core:temp Temp.AttackRandom set value {Breath:0,BreathTriple:0,BreathMove:0,MoveBite:3,MoveTail:2,TailJump:2,TailFlame:2,Round:1,Step:2}
     # 正面
-        execute if entity @s[tag=Mns.Temp.Forward] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Bite:4,BiteDouble:3,TailFlame:3}
+        execute if entity @s[tag=Mns.Temp.Forward] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Bite:4,MoveBite:3,TailFlame:3}
     # 背面
         # execute if entity @s[tag=Mns.Temp.Back] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {}
     # 側面
         execute if entity @s[tag=!Mns.Temp.Forward,tag=!Mns.Temp.Back] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Step:3}
     # 怒り
-        execute if entity @s[tag=Mns.State.IsAnger] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {TailJump:4,Round:2}
+        execute if entity @s[tag=Mns.State.IsAnger] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {TailJump:3,Round:2}
     # 喉赤熱化
-        execute if entity @s[tag=Mns.Dino.State.HeadHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Breath:4,BreathTriple:3,BreathMove:4}
+        execute if entity @s[tag=Mns.Dino.State.HeadHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Breath:3,BreathTriple:2,BreathMove:3}
     # 尻尾赤熱化
-        execute if entity @s[tag=Mns.Dino.State.TailHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {TailJump:4}
+        execute if entity @s[tag=Mns.Dino.State.TailHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {TailJump:3}
 
 # 決定
     function mhdp_monster_dino:core/tick/animation/change/random/macro/m.middle with storage mhdp_core:temp Temp.AttackRandom
