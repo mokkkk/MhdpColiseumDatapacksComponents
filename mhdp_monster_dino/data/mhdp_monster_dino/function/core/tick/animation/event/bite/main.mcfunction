@@ -7,7 +7,8 @@
 # 弱めの軸合わせ
     execute if score @s aj.bite.frame matches 1 run function mhdp_monster_dino:core/tick/animation/event/bite/turn_start
     execute if score @s aj.bite.frame matches 6 run function mhdp_monster_dino:core/tick/animation/event/bite/turn_start
-    execute if score @s aj.bite.frame matches 1..10 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.bite.frame matches 9 run function mhdp_monster_dino:core/tick/animation/event/bite/turn_start
+    execute if score @s aj.bite.frame matches 1..14 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.bite.frame matches 1..5 if entity @n[tag=Mns.Target.Dino,distance=..9] at @s run tp @s ^ ^ ^-0.5

@@ -9,12 +9,12 @@
     execute if score @s aj.jump_tail_l.frame matches 12 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_l/turn_start
     execute if score @s aj.jump_tail_l.frame matches 30 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_l/turn_start
     execute if score @s aj.jump_tail_l.frame matches 1..22 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
-    execute if score @s aj.jump_tail_l.frame matches 30..34 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.jump_tail_l.frame matches 30..35 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.jump_tail_l.frame matches 1..5 if entity @n[tag=Mns.Target.Dino,distance=..8] at @s run tp @s ^ ^ ^-0.2
     execute if score @s aj.jump_tail_l.frame matches 23 at @s run function mhdp_monster_dino:core/tick/animation/event/jump_tail_l/move_start
-    execute if score @s aj.jump_tail_l.frame matches 24..34 at @s run function mhdp_monsters:core/util/other/move_to_target_move
+    execute if score @s aj.jump_tail_l.frame matches 24..37 at @s run function mhdp_monsters:core/util/other/move_to_target_move
 
 # 効果音
     execute if score @s aj.jump_tail_l.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1

@@ -1,4 +1,4 @@
-#> mhdp_monster_dino:core/tick/animation/event/bite/attack_head
+#> mhdp_monster_dino:core/tick/animation/event/bite_double_normal/attack_head
 #
 # アニメーションイベントハンドラ 嚙みつき
 #
@@ -12,7 +12,7 @@
 
 # ヒット確認
     # 対プレイヤー
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/bite/m.attack_head with entity @s data.locators.pos_head
+        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/bite_double_normal/m.attack_head with entity @s data.locators.pos_head
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         tag @a remove Temp.Hit
 

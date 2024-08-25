@@ -32,8 +32,7 @@
 # 移動ブレス
     execute if score #mndp_temp_action_id MhdpCore matches 2 run function mhdp_monster_dino:core/tick/animation/change/play/breath_move
 # 噛みつき
-    execute if entity @s[tag=!Mns.State.IsAnger] if score #mndp_temp_action_id MhdpCore matches 3 run tag @s add Anim.Bite
-    execute if entity @s[tag=Mns.State.IsAnger] if score #mndp_temp_action_id MhdpCore matches 3 run tag @s add Anim.BiteToTail
+    execute if score #mndp_temp_action_id MhdpCore matches 3 run function mhdp_monster_dino:core/tick/animation/change/play/bite
 # 車庫入れ
     execute if score #mndp_temp_action_id MhdpCore matches 4 run tag @s add Anim.MoveBack
 # 尻尾攻撃

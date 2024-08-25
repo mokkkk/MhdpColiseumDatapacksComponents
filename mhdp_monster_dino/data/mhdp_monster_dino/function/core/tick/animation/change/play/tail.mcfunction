@@ -18,3 +18,4 @@
 
 # 終了
     tag @s remove Mns.Temp.Right
+    tag @s remove Mns.Temp.Step

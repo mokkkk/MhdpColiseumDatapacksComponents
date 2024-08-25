@@ -34,6 +34,8 @@
     playsound item.mace.smash_air master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    playsound entity.iron_golem.death master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    playsound entity.iron_golem.death master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.57
 
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit
