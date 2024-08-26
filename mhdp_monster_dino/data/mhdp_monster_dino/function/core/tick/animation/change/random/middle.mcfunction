@@ -20,7 +20,7 @@
     # 怒り
         execute if entity @s[tag=Mns.State.IsAnger] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {TailJump:3,Round:2}
     # 喉赤熱化
-        execute if entity @s[tag=Mns.Dino.State.HeadHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Breath:3,BreathTriple:2,BreathMove:3}
+        execute if entity @s[tag=Mns.Dino.State.HeadHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Breath:2,BreathTriple:2}
     # 尻尾赤熱化
         execute if entity @s[tag=Mns.Dino.State.TailHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {TailJump:3}
 
