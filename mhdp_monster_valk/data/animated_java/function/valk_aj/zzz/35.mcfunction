@@ -7,6 +7,8 @@ data modify storage aj:temp uuid set from entity @s data.locators.neck_1.uuid
 function animated_java:valk_aj/zzz/execute with storage aj:temp
 data modify storage aj:temp uuid set from entity @s data.locators.neck_0.uuid
 function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_head.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
 data modify storage aj:temp uuid set from entity @s data.locators.head_0.uuid
 function animated_java:valk_aj/zzz/execute with storage aj:temp
 data modify storage aj:temp uuid set from entity @s data.locators.arm_right_0.uuid

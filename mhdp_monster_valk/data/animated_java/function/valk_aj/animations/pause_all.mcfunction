@@ -2,6 +2,10 @@
 execute unless entity @s[type=item_display,tag=aj.valk_aj.root] run return run function animated_java:global/errors/function_not_executed_as_root_entity {'export_namespace': 'valk_aj', 'function_path': 'animated_java:valk_aj/animations/pause_all'}
 tag @s remove aj.valk_aj.animation.jacket_pose.playing
 tag @s remove aj.valk_aj.animation.lance_pose.playing
+tag @s remove aj.valk_aj.animation.lance_voice.playing
+tag @s remove aj.valk_aj.animation.lance_voice3.playing
+tag @s remove aj.valk_aj.animation.lance_voice2.playing
+tag @s remove aj.valk_aj.animation.lance_turn_r.playing
 tag @s remove aj.valk_aj.animation.lance_spear_l.playing
 tag @s remove aj.valk_aj.animation.lance_spear_to_spin_l.playing
 tag @s remove aj.valk_aj.animation.lance_spear_l_to_r.playing
@@ -20,7 +24,11 @@ tag @s remove aj.valk_aj.animation.shoot_vertical_l.playing
 tag @s remove aj.valk_aj.animation.shoot_sweep_l.playing
 tag @s remove aj.valk_aj.animation.shoot_shot_forward.playing
 tag @s remove aj.valk_aj.animation.shoot_shot_horizon.playing
+tag @s remove aj.valk_aj.animation.shoot_bomb_side.playing
+tag @s remove aj.valk_aj.animation.shoot_bomb_side3.playing
+tag @s remove aj.valk_aj.animation.shoot_bomb_side2.playing
 tag @s remove aj.valk_aj.animation.shoot_sault.playing
+tag @s remove aj.valk_aj.animation.shoot_sault5.playing
 tag @s remove aj.valk_aj.animation.shoot_sault4.playing
 tag @s remove aj.valk_aj.animation.shoot_sault_1.playing
 tag @s remove aj.valk_aj.animation.shoot_sault_test.playing
@@ -29,3 +37,4 @@ tag @s remove aj.valk_aj.animation.shoot_sault6.playing
 tag @s remove aj.valk_aj.animation.shoot_move_to_sault_sample.playing
 tag @s remove aj.valk_aj.animation.shoot_sault3.playing
 tag @s remove aj.valk_aj.animation.shoot_sault2.playing
+tag @s remove aj.valk_aj.animation.lance_tackle3.playing
