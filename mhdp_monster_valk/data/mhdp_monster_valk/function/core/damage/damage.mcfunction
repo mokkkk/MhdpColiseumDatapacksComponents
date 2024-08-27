@@ -92,4 +92,4 @@
     tag @s remove Mns.Temp.Damage.LegR
     tag @s remove Mns.Temp.Damage.LegL
 
-say 斬竜被ダメージ
+say 天彗龍被ダメージ

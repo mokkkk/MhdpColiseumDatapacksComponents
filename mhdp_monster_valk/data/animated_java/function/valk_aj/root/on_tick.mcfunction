@@ -8,6 +8,7 @@ execute if entity @s[tag=aj.valk_aj.animation.lance_voice.playing] run function 
 execute if entity @s[tag=aj.valk_aj.animation.lance_voice3.playing] run function animated_java:valk_aj/animations/lance_voice3/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_voice2.playing] run function animated_java:valk_aj/animations/lance_voice2/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_turn_r.playing] run function animated_java:valk_aj/animations/lance_turn_r/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_turn_l.playing] run function animated_java:valk_aj/animations/lance_turn_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_spear_l.playing] run function animated_java:valk_aj/animations/lance_spear_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_spear_to_spin_l.playing] run function animated_java:valk_aj/animations/lance_spear_to_spin_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_spear_l_to_r.playing] run function animated_java:valk_aj/animations/lance_spear_l_to_r/zzz/on_tick

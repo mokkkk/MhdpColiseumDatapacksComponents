@@ -6,6 +6,7 @@ tag @s remove aj.valk_aj.animation.lance_voice.playing
 tag @s remove aj.valk_aj.animation.lance_voice3.playing
 tag @s remove aj.valk_aj.animation.lance_voice2.playing
 tag @s remove aj.valk_aj.animation.lance_turn_r.playing
+tag @s remove aj.valk_aj.animation.lance_turn_l.playing
 tag @s remove aj.valk_aj.animation.lance_spear_l.playing
 tag @s remove aj.valk_aj.animation.lance_spear_to_spin_l.playing
 tag @s remove aj.valk_aj.animation.lance_spear_l_to_r.playing

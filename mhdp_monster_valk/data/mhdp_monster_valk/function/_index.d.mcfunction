@@ -12,6 +12,7 @@
     #declare tag Mns.HitBox.Valk.Head 頭
     #declare tag Mns.HitBox.Valk.Body 胴
 # 状態
+    #declare tag Mns.Valk.State.IsShoot 龍気形態
 # 一時
     #declare tag Mns.Temp.Damage.Head 頭怯み
     #declare tag Mns.Temp.Damage.Body 胴怯み
