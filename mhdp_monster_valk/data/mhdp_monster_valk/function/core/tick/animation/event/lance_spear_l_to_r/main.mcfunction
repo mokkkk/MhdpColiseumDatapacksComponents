@@ -1,6 +1,6 @@
 #> mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/main
 #
-# アニメーションイベントハンドラ 咆哮
+# アニメーションイベントハンドラ 2連突き
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
@@ -8,11 +8,21 @@
     execute if score @s aj.lance_spear_l_to_r.frame matches 2 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/turn_start
     execute if score @s aj.lance_spear_l_to_r.frame matches 11 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/turn_start
     execute if score @s aj.lance_spear_l_to_r.frame matches 2..20 run function mhdp_monsters:core/util/other/turn_to_target_rotate
-    execute if score @s aj.lance_spear_l_to_r.frame matches 42 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/turn_start
-    execute if score @s aj.lance_spear_l_to_r.frame matches 43..52 run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.lance_spear_l_to_r.frame matches 44 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/turn_start
+    execute if score @s aj.lance_spear_l_to_r.frame matches 44..54 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 効果音
     execute if score @s aj.lance_spear_l_to_r.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s aj.lance_spear_l_to_r.frame matches 10 run playsound item.firecharge.use master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s aj.lance_spear_l_to_r.frame matches 13 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 30
+    execute if score @s aj.lance_spear_l_to_r.frame matches 38 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 30
+    execute if score @s aj.lance_spear_l_to_r.frame matches 62 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 30
+    execute if score @s aj.lance_spear_l_to_r.frame matches 67 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s aj.lance_spear_l_to_r.frame matches 87 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+
+# 攻撃
+    execute if score @s aj.lance_spear_l_to_r.frame matches 38 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/attack_l
+    execute if score @s aj.lance_spear_l_to_r.frame matches 62 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/attack_r
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
