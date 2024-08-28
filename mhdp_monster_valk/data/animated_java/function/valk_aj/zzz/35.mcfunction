@@ -15,6 +15,18 @@ data modify storage aj:temp uuid set from entity @s data.locators.arm_right_0.uu
 function animated_java:valk_aj/zzz/execute with storage aj:temp
 data modify storage aj:temp uuid set from entity @s data.locators.arm_left_0.uuid
 function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_r_0.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_r_1.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_r_2.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_r_3.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_r_4.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_r_5.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
 data modify storage aj:temp uuid set from entity @s data.locators.finger_right_0.uuid
 function animated_java:valk_aj/zzz/execute with storage aj:temp
 data modify storage aj:temp uuid set from entity @s data.locators.finger_right_1.uuid
@@ -22,6 +34,18 @@ function animated_java:valk_aj/zzz/execute with storage aj:temp
 data modify storage aj:temp uuid set from entity @s data.locators.finger_right_2.uuid
 function animated_java:valk_aj/zzz/execute with storage aj:temp
 data modify storage aj:temp uuid set from entity @s data.locators.finger_right_3.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_l_0.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_l_1.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_l_2.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_l_3.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_l_4.uuid
+function animated_java:valk_aj/zzz/execute with storage aj:temp
+data modify storage aj:temp uuid set from entity @s data.locators.pos_wing_l_5.uuid
 function animated_java:valk_aj/zzz/execute with storage aj:temp
 data modify storage aj:temp uuid set from entity @s data.locators.finger_left_0.uuid
 function animated_java:valk_aj/zzz/execute with storage aj:temp
