@@ -18,7 +18,7 @@
     # 遠距離・喉赤熱化
         execute if entity @s[tag=Mns.Dino.State.HeadHeat,tag=!Mns.Temp.Near] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {BreathMove:5}
     # 近距離・喉赤熱化
-        execute if entity @s[tag=Mns.Temp.Near,tag=Mns.Dino.State.HeadHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {BreathBack:4}
+        execute if entity @s[tag=Mns.Temp.Near,tag=Mns.Dino.State.HeadHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {BreathBack:2}
 
 # 決定
     function mhdp_monster_dino:core/tick/animation/change/random/macro/m.move with storage mhdp_core:temp Temp.AttackRandom

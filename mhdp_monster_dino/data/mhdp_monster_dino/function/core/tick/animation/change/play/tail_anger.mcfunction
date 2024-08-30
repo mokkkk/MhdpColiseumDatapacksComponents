@@ -8,8 +8,8 @@
     execute facing entity @n[tag=Mns.Target.Dino] feet rotated ~ 0 positioned ^ ^ ^3.0 rotated as @s positioned ^4.0 ^ ^ if entity @s[distance=..5.0] run tag @s add Mns.Temp.Right
 
 # 確率でステップコンボを使用
-    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if predicate {"condition":"minecraft:random_chance","chance":0.35} run tag @s add Mns.Temp.Step
-    execute if entity @s[tag=Mns.Dino.State.TailHeat] if predicate {"condition":"minecraft:random_chance","chance":0.6} run tag @s add Mns.Temp.Step
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if predicate {"condition":"minecraft:random_chance","chance":0.45} run tag @s add Mns.Temp.Step
+    execute if entity @s[tag=Mns.Dino.State.TailHeat] if predicate {"condition":"minecraft:random_chance","chance":0.8} run tag @s add Mns.Temp.Step
 
 # 再生アニメーション決定
     execute if entity @s[tag=Mns.Temp.Right,tag=!Mns.Temp.Step] run tag @s add Anim.Tail.Anger.R
