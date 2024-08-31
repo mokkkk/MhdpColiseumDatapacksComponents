@@ -42,4 +42,4 @@
     execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.bite_to_tail.frame matches 57 run function mhdp_monster_dino:core/util/phase/tail_heat
 
 # 終了
-    execute if score @s aj.bite_to_tail.frame matches 149 run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/end
+    execute if score @s aj.bite_to_tail.frame matches 138 run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/end
