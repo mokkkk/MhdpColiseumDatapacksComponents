@@ -35,7 +35,7 @@
 
 # 尻尾攻撃・飛びかかり
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailJump",DamageValue:7.8f,GuardValue:5,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailJump.Heat",DamageValue:9.0f,GuardValue:5,ElementType:1,ElementMultiply:30,Knockback:3,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailJump.Heat",DamageValue:9.0f,GuardValue:6,ElementType:1,ElementMultiply:30,Knockback:3,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
 # 火炎・尻尾
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailFlame.Tail",DamageValue:7.2f,GuardValue:3,ElementType:1,ElementMultiply:20,Knockback:2,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
@@ -46,5 +46,5 @@
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Breath",DamageValue:8.0f,GuardValue:5,ElementType:1,ElementMultiply:80,Knockback:1,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
 # 大回転斬り
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Round",DamageValue:12.0f,GuardValue:7,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:true,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Round.Heat",DamageValue:14.0f,GuardValue:7,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:true,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Round",DamageValue:12.0f,GuardValue:7,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:true,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Round.Heat",DamageValue:14.0f,GuardValue:7,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:true,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}

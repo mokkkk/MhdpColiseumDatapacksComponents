@@ -17,7 +17,7 @@
     execute if score #mhdp_temp_knockback_strength MhdpCore matches ..0 run scoreboard players set $strength delta.api.launch 0
     execute if score #mhdp_temp_knockback_strength MhdpCore matches 1 run scoreboard players set $strength delta.api.launch 8000
     execute if score #mhdp_temp_knockback_strength MhdpCore matches 2 run scoreboard players set $strength delta.api.launch 12000
-    execute if score #mhdp_temp_knockback_strength MhdpCore matches 3.. run scoreboard players set $strength delta.api.launch 22000
+    execute if score #mhdp_temp_knockback_strength MhdpCore matches 3.. run scoreboard players set $strength delta.api.launch 24000
 
 # ノックバック適用
     execute if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run tp @s @s
