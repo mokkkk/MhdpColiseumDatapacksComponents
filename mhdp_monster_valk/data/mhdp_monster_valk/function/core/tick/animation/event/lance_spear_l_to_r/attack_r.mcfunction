@@ -29,10 +29,10 @@
         execute if entity @n[tag=Temp.Victim] as @n[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
 
 # 演出
+    playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
-    playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
+    playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
 
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit

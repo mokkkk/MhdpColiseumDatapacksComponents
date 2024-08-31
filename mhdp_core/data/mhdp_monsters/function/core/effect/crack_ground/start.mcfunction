@@ -9,10 +9,10 @@
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^1 ^ 0.4 0.1 0.4 0.4 35 normal
 
 # 召喚
-    summon block_display ^1.2 ^-0.5 ^0.8 {start_interpolation:-1,interpolation_duration:3,brightness:{sky:15,block:15},Tags:["Effect.General","Effect.CrackGround","Effect.CrackGround.A","Start"],block_state:{Name:"minecraft:sandstone"}}
-    summon block_display ^-1.0 ^-0.3 ^0.8 {start_interpolation:-1,interpolation_duration:3,brightness:{sky:15,block:15},Tags:["Effect.General","Effect.CrackGround","Effect.CrackGround.B","Start"],block_state:{Name:"minecraft:sandstone"}}
-    summon block_display ^1.2 ^-0.4 ^-0.8 {start_interpolation:-1,interpolation_duration:3,brightness:{sky:15,block:15},Tags:["Effect.General","Effect.CrackGround","Effect.CrackGround.C","Start"],block_state:{Name:"minecraft:sandstone"}}
-    summon block_display ^-0.8 ^-0.3 ^-0.8 {start_interpolation:-1,interpolation_duration:3,brightness:{sky:15,block:15},Tags:["Effect.General","Effect.CrackGround","Effect.CrackGround.D","Start"],block_state:{Name:"minecraft:sandstone"}}
+    summon block_display ^1 ^-1.2 ^1.1 {start_interpolation:-1,interpolation_duration:3,brightness:{sky:15,block:15},Tags:["Effect.General","Effect.CrackGround","Effect.CrackGround.A","Start"],block_state:{Name:"minecraft:sandstone"}}
+    summon block_display ^-1.1 ^-1.2 ^1 {start_interpolation:-1,interpolation_duration:3,brightness:{sky:15,block:15},Tags:["Effect.General","Effect.CrackGround","Effect.CrackGround.B","Start"],block_state:{Name:"minecraft:sandstone"}}
+    summon block_display ^1 ^-1.2 ^-1.1 {start_interpolation:-1,interpolation_duration:3,brightness:{sky:15,block:15},Tags:["Effect.General","Effect.CrackGround","Effect.CrackGround.C","Start"],block_state:{Name:"minecraft:sandstone"}}
+    summon block_display ^-1.1 ^-1.2 ^-1 {start_interpolation:-1,interpolation_duration:3,brightness:{sky:15,block:15},Tags:["Effect.General","Effect.CrackGround","Effect.CrackGround.D","Start"],block_state:{Name:"minecraft:sandstone"}}
 
 # 角度設定
     execute as @e[type=block_display,tag=Effect.CrackGround,tag=Start] positioned as @s run tp @s ~ ~ ~ ~ 0

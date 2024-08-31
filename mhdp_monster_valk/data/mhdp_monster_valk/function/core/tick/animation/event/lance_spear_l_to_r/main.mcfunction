@@ -22,7 +22,9 @@
 
 # 攻撃
     execute if score @s aj.lance_spear_l_to_r.frame matches 38 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/attack_l
+    execute if score @s aj.lance_spear_l_to_r.frame matches 42 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s aj.lance_spear_l_to_r.frame matches 62 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/attack_r
+    execute if score @s aj.lance_spear_l_to_r.frame matches 66 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
