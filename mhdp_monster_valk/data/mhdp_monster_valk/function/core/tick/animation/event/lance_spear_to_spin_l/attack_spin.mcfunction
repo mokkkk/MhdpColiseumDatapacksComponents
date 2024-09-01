@@ -11,7 +11,6 @@
 
 # ヒット確認
     # 対プレイヤー
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/m.attack_spin with entity @s data.locators.pos_wing_l_0
         execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/m.attack_spin with entity @s data.locators.pos_wing_l_1
         execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/m.attack_spin with entity @s data.locators.pos_wing_l_2
         execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/m.attack_spin with entity @s data.locators.pos_wing_l_3

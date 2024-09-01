@@ -11,7 +11,7 @@
 
 # 移動
     execute if score @s aj.lance_spear_to_spin_l.frame matches 1..5 if entity @n[tag=Mns.Target.Valk,distance=..11] at @s run tp @s ^ ^ ^-0.5
-    execute if score @s aj.lance_spear_to_spin_l.frame matches 67..81 at @s run tp @s ^-1 ^ ^-0.5 ~-8 ~
+    execute if score @s aj.lance_spear_to_spin_l.frame matches 67..81 at @s run tp @s ^-1 ^ ^-0.2 ~-8 ~
 
 # 効果音
     execute if score @s aj.lance_spear_to_spin_l.frame matches 2..4 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1.2 0.4

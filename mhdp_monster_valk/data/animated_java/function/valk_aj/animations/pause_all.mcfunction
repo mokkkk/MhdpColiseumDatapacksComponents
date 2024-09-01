@@ -9,7 +9,9 @@ tag @s remove aj.valk_aj.animation.lance_spear_l.playing
 tag @s remove aj.valk_aj.animation.lance_spear_l_to_r.playing
 tag @s remove aj.valk_aj.animation.lance_spear_r_to_l.playing
 tag @s remove aj.valk_aj.animation.lance_spear_to_spin_l.playing
+tag @s remove aj.valk_aj.animation.lance_spear_to_spin_r.playing
 tag @s remove aj.valk_aj.animation.lance_vertical_r.playing
+tag @s remove aj.valk_aj.animation.lance_vertical_l.playing
 tag @s remove aj.valk_aj.animation.lance_vertical_turn_l.playing
 tag @s remove aj.valk_aj.animation.lance_bite.playing
 tag @s remove aj.valk_aj.animation.lance_dashattack.playing
@@ -25,5 +27,7 @@ tag @s remove aj.valk_aj.animation.shoot_sweep_l.playing
 tag @s remove aj.valk_aj.animation.shoot_shot_forward.playing
 tag @s remove aj.valk_aj.animation.shoot_shot_horizon.playing
 tag @s remove aj.valk_aj.animation.shoot_bomb_forward.playing
+tag @s remove aj.valk_aj.animation.shoot_bomb_forward3.playing
+tag @s remove aj.valk_aj.animation.shoot_bomb_forward2.playing
 tag @s remove aj.valk_aj.animation.shoot_bomb_side.playing
 tag @s remove aj.valk_aj.animation.shoot_sault.playing
