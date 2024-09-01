@@ -11,7 +11,6 @@
 
 # ヒット確認
     # 対プレイヤー
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_r_to_l/m.attack with entity @s data.locators.pos_wing_r_0
         execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_r_to_l/m.attack with entity @s data.locators.pos_wing_r_1
         execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_r_to_l/m.attack with entity @s data.locators.pos_wing_r_2
         execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_r_to_l/m.attack with entity @s data.locators.pos_wing_r_3
@@ -30,6 +29,8 @@
 
 # 演出
     playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
+    playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
     playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3

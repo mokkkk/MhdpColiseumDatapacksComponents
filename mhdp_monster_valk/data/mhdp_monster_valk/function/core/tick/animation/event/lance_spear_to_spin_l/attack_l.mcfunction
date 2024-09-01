@@ -1,6 +1,6 @@
-#> mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/attack_l
+#> mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/attack_l
 #
-# アニメーションイベントハンドラ 2連突き
+# アニメーションイベントハンドラ 翼槍回転斬り
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
@@ -11,11 +11,11 @@
 
 # ヒット確認
     # 対プレイヤー
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/m.attack with entity @s data.locators.pos_wing_l_1
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/m.attack with entity @s data.locators.pos_wing_l_2
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/m.attack with entity @s data.locators.pos_wing_l_3
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/m.attack with entity @s data.locators.pos_wing_l_4
-        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/m.attack with entity @s data.locators.pos_wing_l_5
+        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/m.attack with entity @s data.locators.pos_wing_l_1
+        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/m.attack with entity @s data.locators.pos_wing_l_2
+        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/m.attack with entity @s data.locators.pos_wing_l_3
+        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/m.attack with entity @s data.locators.pos_wing_l_4
+        execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/m.attack with entity @s data.locators.pos_wing_l_5
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         execute if entity @a[tag=Mns.Target.Dino,tag=Temp.Hit] run tag @s add Mns.Temp.IsHit
         tag @a remove Temp.Hit

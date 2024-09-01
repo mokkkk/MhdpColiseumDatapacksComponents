@@ -23,3 +23,6 @@
 # 2連突き
     execute if entity @s[tag=aj.valk_aj.animation.lance_spear_l_to_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_spear_r_to_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_r_to_l/main
+
+# 翼槍回転斬り
+    execute if entity @s[tag=aj.valk_aj.animation.lance_spear_to_spin_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/main
