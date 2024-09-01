@@ -40,7 +40,7 @@
 
 # 攻撃
     execute if score @s aj.lance_vertical_l.frame matches 20 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l/attack_hand
-    execute if score @s aj.lance_vertical_l.frame matches 49 positioned ^1.2 ^1 ^7 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l/attack
+    execute if score @s aj.lance_vertical_l.frame matches 48 positioned ^1.2 ^1 ^7 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l/attack
     execute if score @s aj.lance_vertical_l.frame matches 52 positioned ^1.2 ^1 ^7 rotated ~ -90 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l/particle_ring
 
 # 接地

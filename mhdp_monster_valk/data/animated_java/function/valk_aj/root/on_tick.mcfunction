@@ -14,6 +14,7 @@ execute if entity @s[tag=aj.valk_aj.animation.lance_spear_to_spin_l.playing] run
 execute if entity @s[tag=aj.valk_aj.animation.lance_spear_to_spin_r.playing] run function animated_java:valk_aj/animations/lance_spear_to_spin_r/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_vertical_r.playing] run function animated_java:valk_aj/animations/lance_vertical_r/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_vertical_l.playing] run function animated_java:valk_aj/animations/lance_vertical_l/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_vertical_turn_r.playing] run function animated_java:valk_aj/animations/lance_vertical_turn_r/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_vertical_turn_l.playing] run function animated_java:valk_aj/animations/lance_vertical_turn_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_bite.playing] run function animated_java:valk_aj/animations/lance_bite/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_dashattack.playing] run function animated_java:valk_aj/animations/lance_dashattack/zzz/on_tick

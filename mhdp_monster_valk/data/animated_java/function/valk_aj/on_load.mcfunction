@@ -11,6 +11,7 @@ scoreboard objectives add aj.lance_spear_to_spin_l.frame dummy
 scoreboard objectives add aj.lance_spear_to_spin_r.frame dummy
 scoreboard objectives add aj.lance_vertical_r.frame dummy
 scoreboard objectives add aj.lance_vertical_l.frame dummy
+scoreboard objectives add aj.lance_vertical_turn_r.frame dummy
 scoreboard objectives add aj.lance_vertical_turn_l.frame dummy
 scoreboard objectives add aj.lance_bite.frame dummy
 scoreboard objectives add aj.lance_dashattack.frame dummy

@@ -5,8 +5,8 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.Spear.RtoSpin
-    # function mhdp_monster_valk:core/tick/animation/change/play/tail
+    # tag @s add Anim.Vertical.Turn.R
+    function mhdp_monster_valk:core/tick/animation/change/play/vertical_turn
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn

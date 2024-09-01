@@ -12,6 +12,7 @@ tag @s remove aj.valk_aj.animation.lance_spear_to_spin_l.playing
 tag @s remove aj.valk_aj.animation.lance_spear_to_spin_r.playing
 tag @s remove aj.valk_aj.animation.lance_vertical_r.playing
 tag @s remove aj.valk_aj.animation.lance_vertical_l.playing
+tag @s remove aj.valk_aj.animation.lance_vertical_turn_r.playing
 tag @s remove aj.valk_aj.animation.lance_vertical_turn_l.playing
 tag @s remove aj.valk_aj.animation.lance_bite.playing
 tag @s remove aj.valk_aj.animation.lance_dashattack.playing
