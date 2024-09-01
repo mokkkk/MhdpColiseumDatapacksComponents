@@ -2,12 +2,11 @@
 scoreboard objectives add aj.jacket_pose.frame dummy
 scoreboard objectives add aj.lance_pose.frame dummy
 scoreboard objectives add aj.lance_voice.frame dummy
-scoreboard objectives add aj.lance_voice3.frame dummy
-scoreboard objectives add aj.lance_voice2.frame dummy
 scoreboard objectives add aj.lance_turn_r.frame dummy
 scoreboard objectives add aj.lance_turn_l.frame dummy
 scoreboard objectives add aj.lance_spear_l.frame dummy
 scoreboard objectives add aj.lance_spear_l_to_r.frame dummy
+scoreboard objectives add aj.lance_spear_r_to_l.frame dummy
 scoreboard objectives add aj.lance_spear_to_spin_l.frame dummy
 scoreboard objectives add aj.lance_vertical_r.frame dummy
 scoreboard objectives add aj.lance_vertical_turn_l.frame dummy
@@ -24,18 +23,7 @@ scoreboard objectives add aj.shoot_vertical_l.frame dummy
 scoreboard objectives add aj.shoot_sweep_l.frame dummy
 scoreboard objectives add aj.shoot_shot_forward.frame dummy
 scoreboard objectives add aj.shoot_shot_horizon.frame dummy
+scoreboard objectives add aj.shoot_bomb_forward.frame dummy
 scoreboard objectives add aj.shoot_bomb_side.frame dummy
-scoreboard objectives add aj.shoot_bomb_side3.frame dummy
-scoreboard objectives add aj.shoot_bomb_side2.frame dummy
 scoreboard objectives add aj.shoot_sault.frame dummy
-scoreboard objectives add aj.shoot_sault5.frame dummy
-scoreboard objectives add aj.shoot_sault4.frame dummy
-scoreboard objectives add aj.shoot_sault_1.frame dummy
-scoreboard objectives add aj.shoot_sault_test.frame dummy
-scoreboard objectives add aj.shoot_sault_z_rotation.frame dummy
-scoreboard objectives add aj.shoot_sault6.frame dummy
-scoreboard objectives add aj.shoot_move_to_sault_sample.frame dummy
-scoreboard objectives add aj.shoot_sault3.frame dummy
-scoreboard objectives add aj.shoot_sault2.frame dummy
-scoreboard objectives add aj.lance_tackle3.frame dummy
 execute as @e[type=item_display,tag=aj.valk_aj.root] unless score @s aj.is_rig_loaded matches 1 at @s run function animated_java:valk_aj/root/on_load
