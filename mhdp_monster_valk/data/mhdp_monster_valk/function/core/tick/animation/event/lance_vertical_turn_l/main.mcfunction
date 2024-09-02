@@ -42,5 +42,8 @@
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 2連
+    execute if score @s aj.lance_vertical_turn_l.frame matches 65 run function animated_java:valk_aj/animations/lance_vertical_l_to_r/tween {duration:1, to_frame: 1}
+
 # 終了
     execute if score @s aj.lance_vertical_turn_l.frame matches 124 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_turn_l/end
