@@ -11,6 +11,8 @@
     execute if entity @s[tag=Anim.Voice] run function animated_java:valk_aj/animations/lance_voice/tween {duration:1, to_frame: 1}
 
 # 彗龍
+    # 移動
+        execute if entity @s[tag=Anim.MoveStart.Lance] run function animated_java:valk_aj/animations/lance_move_start/tween {duration:1, to_frame: 1}
     # 2連突き
         execute if entity @s[tag=Anim.Spear.RtoL] run function animated_java:valk_aj/animations/lance_spear_r_to_l/tween {duration:1, to_frame: 1}
         execute if entity @s[tag=Anim.Spear.LtoR] run function animated_java:valk_aj/animations/lance_spear_l_to_r/tween {duration:1, to_frame: 1}

@@ -34,6 +34,15 @@
     execute if score @s aj.lance_spear_l_to_r.frame matches 35..37 on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/m.particle_ring with entity @s data.locators.pos_wing_l_2
     execute if score @s aj.lance_spear_l_to_r.frame matches 59..61 on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/m.particle_ring with entity @s data.locators.pos_wing_r_2
 
+    execute if score @s aj.lance_spear_l_to_r.frame matches 47 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s aj.lance_spear_l_to_r.frame matches 47 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s aj.lance_spear_l_to_r.frame matches 47 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s aj.lance_spear_l_to_r.frame matches 47 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
+    execute if score @s aj.lance_spear_l_to_r.frame matches 70 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s aj.lance_spear_l_to_r.frame matches 70 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s aj.lance_spear_l_to_r.frame matches 70 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s aj.lance_spear_l_to_r.frame matches 70 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
+
 # 攻撃
     execute if score @s aj.lance_spear_l_to_r.frame matches 38 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/attack_l
     execute if score @s aj.lance_spear_l_to_r.frame matches 42 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8

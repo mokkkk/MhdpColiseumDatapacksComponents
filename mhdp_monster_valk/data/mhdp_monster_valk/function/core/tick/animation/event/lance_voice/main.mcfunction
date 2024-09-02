@@ -10,20 +10,18 @@
 
     execute if score @s aj.lance_voice.frame matches 44..55 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.4 1.8 0.4
     execute if score @s aj.lance_voice.frame matches 44..55 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.4 2 0.4
-    execute if score @s aj.lance_voice.frame matches 56..75 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.4 1.3 0.4
-    execute if score @s aj.lance_voice.frame matches 56..75 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.4 1.5 0.4
-    execute if score @s aj.lance_voice.frame matches 44..75 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.hurt master @s ^ ^1 ^1 0.4 1.5 0.4
-    execute if score @s aj.lance_voice.frame matches 44..75 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.hurt master @s ^ ^1 ^1 0.4 1.2 0.4
+    execute if score @s aj.lance_voice.frame matches 56..85 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.4 1.3 0.4
+    execute if score @s aj.lance_voice.frame matches 56..85 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.4 1.5 0.4
     execute if score @s aj.lance_voice.frame matches 44..53 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1 0.4
     execute if score @s aj.lance_voice.frame matches 44..53 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1.2 0.4
     execute if score @s aj.lance_voice.frame matches 54..65 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 0.7 0.4
     execute if score @s aj.lance_voice.frame matches 54..65 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 0.6 0.4
-    execute if score @s aj.lance_voice.frame matches 66..75 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 2 0.4
-    execute if score @s aj.lance_voice.frame matches 66..75 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1.6 0.4
+    execute if score @s aj.lance_voice.frame matches 66..85 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 2 0.4
+    execute if score @s aj.lance_voice.frame matches 66..85 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1.6 0.4
     execute if score @s aj.lance_voice.frame matches 44..65 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound entity.warden.death master @s ^ ^1 ^1 0.5 0.75 0.5
     execute if score @s aj.lance_voice.frame matches 44..45 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound entity.warden.sonic_boom master @s ^ ^1 ^1 0.5 0.9 0.5
     execute if score @s aj.lance_voice.frame matches 44..45 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound entity.warden.sonic_boom master @s ^ ^1 ^1 0.5 0.75 0.5
-    execute if score @s aj.lance_voice.frame matches 39..75 on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_voice/m.particle_head with entity @s data.locators.pos_head
+    execute if score @s aj.lance_voice.frame matches 39..85 on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_voice/m.particle_head with entity @s data.locators.pos_head
 
 # 咆哮怯み
     execute if score @s aj.lance_voice.frame matches 40 run data modify storage mhdp_core:temp Damage set value {VoiceValue:2,VoiceTime:40,GuardValue:6}

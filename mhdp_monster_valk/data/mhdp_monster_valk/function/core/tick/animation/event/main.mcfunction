@@ -20,6 +20,10 @@
     execute if entity @s[tag=aj.valk_aj.animation.lance_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_turn_r/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_turn_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_turn_l/main
 
+# 移動
+    execute if entity @s[tag=aj.valk_aj.animation.lance_move_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_move_start/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_move.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_move/main
+
 # 2連突き
     execute if entity @s[tag=aj.valk_aj.animation.lance_spear_r_to_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_r_to_l/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_spear_l_to_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/main

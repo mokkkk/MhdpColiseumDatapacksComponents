@@ -33,7 +33,9 @@
     execute if score @s aj.lance_spear_to_spin_r.frame matches 66 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_r/sound_spin
     execute if score @s aj.lance_spear_to_spin_r.frame matches 67..81 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 5
     execute if score @s aj.lance_spear_to_spin_r.frame matches 69..76 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s aj.lance_spear_to_spin_r.frame matches 100 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
+    execute if score @s aj.lance_spear_to_spin_r.frame matches 100 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s aj.lance_spear_to_spin_r.frame matches 100 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s aj.lance_spear_to_spin_r.frame matches 100 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
     execute if score @s aj.lance_spear_to_spin_r.frame matches 100 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
     execute if score @s aj.lance_spear_to_spin_r.frame matches 110 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
