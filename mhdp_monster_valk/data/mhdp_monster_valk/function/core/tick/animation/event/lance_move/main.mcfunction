@@ -21,5 +21,5 @@
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 移動対象にある程度近づいた場合、または対象が見つからない場合終了
-    execute if entity @n[type=area_effect_cloud,tag=Mns.MovePos.Valk,distance=..6] run function mhdp_monster_valk:core/tick/animation/event/lance_move/end
+    execute if entity @n[type=area_effect_cloud,tag=Mns.MovePos.Valk,distance=..4] run function mhdp_monster_valk:core/tick/animation/event/lance_move/end
     execute unless entity @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] run function mhdp_monster_valk:core/tick/animation/event/lance_move/end

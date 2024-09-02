@@ -6,11 +6,10 @@
 
 # タグ付与
     # tag @s add Anim.MoveStart.Lance
-    function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin_move
+    function mhdp_monster_valk:core/tick/animation/change/play/spear
 
 # 軸合わせ
-    # tag @s add Mns.Temp.IsTurn
-    # tag @s add Mns.Temp.IsTurn.Big
+     tag @s add Mns.Temp.IsTurn
 
 # アニメーション変更
     function mhdp_monster_valk:core/tick/animation/change/main
