@@ -13,3 +13,6 @@
 # 翼槍叩きつけ
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Vertical.Hand",DamageValue:4.0f,GuardValue:1,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Vertical",DamageValue:10.0f,GuardValue:6,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+
+# 噛みつき
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Bite",DamageValue:6.0f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
