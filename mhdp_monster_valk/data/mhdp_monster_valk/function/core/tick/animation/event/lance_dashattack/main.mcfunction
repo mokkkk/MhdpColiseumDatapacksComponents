@@ -6,9 +6,10 @@
 
 # 軸合わせ
     execute if score @s aj.lance_dashattack.frame matches 2 run function mhdp_monster_valk:core/tick/animation/event/lance_dashattack/turn_start
-    execute if score @s aj.lance_dashattack.frame matches 2..6 run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.lance_dashattack.frame matches 2..8 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
+    execute if score @s aj.lance_dashattack.frame matches 2..8 at @s run tp @s ^ ^ ^-0.3
     execute if score @s aj.lance_dashattack.frame matches 15..20 at @s run tp @s ^ ^ ^0.6
     execute if score @s aj.lance_dashattack.frame matches 21..28 at @s run tp @s ^ ^ ^0.3
     execute if score @s aj.lance_dashattack.frame matches 29..35 at @s run tp @s ^ ^ ^0.1
@@ -33,7 +34,7 @@
 
 # 攻撃
     execute if score @s aj.lance_dashattack.frame matches 20 run function mhdp_monster_valk:core/tick/animation/event/lance_dashattack/attack
-    execute if score @s aj.lance_dashattack.frame matches 21..32 run function mhdp_monster_valk:core/tick/animation/event/lance_dashattack/attack_dash
+    execute if score @s aj.lance_dashattack.frame matches 21..28 run function mhdp_monster_valk:core/tick/animation/event/lance_dashattack/attack_dash
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground

@@ -6,7 +6,7 @@
 
 # タグ付与
     # tag @s add Anim.DashAttack
-    function mhdp_monster_valk:core/tick/animation/change/play/dashattack_move
+    function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin_move
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn

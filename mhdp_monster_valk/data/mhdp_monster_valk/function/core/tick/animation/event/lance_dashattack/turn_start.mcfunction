@@ -6,7 +6,7 @@
 
 # 角度計算
     tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
-    scoreboard players set #mhdp_temp_rotate_tick MhdpCore 10
+    scoreboard players set #mhdp_temp_rotate_tick MhdpCore 9
     function mhdp_monsters:core/util/other/turn_to_target_calc
 
 # 終了
