@@ -44,3 +44,6 @@
 
 # 噛みつき
     execute if entity @s[tag=aj.valk_aj.animation.lance_bite.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_bite/main
+
+# 突進攻撃
+    execute if entity @s[tag=aj.valk_aj.animation.lance_dashattack.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_dashattack/main
