@@ -47,3 +47,6 @@
 
 # 突進攻撃
     execute if entity @s[tag=aj.valk_aj.animation.lance_dashattack.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_dashattack/main
+
+# 蛇行突進
+    execute if entity @s[tag=aj.valk_aj.animation.lance_tackle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_tackle/main

@@ -19,3 +19,6 @@
 
 # 突進攻撃
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"DashAttack",DamageValue:5.8f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:true,LaunchType:2,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+
+# 蛇行突進
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Tackle",DamageValue:6.5f,GuardValue:4,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
