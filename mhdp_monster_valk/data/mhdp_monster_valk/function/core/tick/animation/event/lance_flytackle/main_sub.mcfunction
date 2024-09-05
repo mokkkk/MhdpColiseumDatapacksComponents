@@ -12,6 +12,7 @@
     particle dust{color:[1.000,0.412,0.412],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
     particle dust{color:[1.000,0.569,0.569],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
     particle dust{color:[1.000,0.569,0.569],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
+    particle dust{color:[10000000000.0,1.0,1.0],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
     particle flash ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
 
 # 攻撃
