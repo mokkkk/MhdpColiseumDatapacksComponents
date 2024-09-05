@@ -20,6 +20,12 @@
     execute if score @s aj.lance_tackle.frame matches 74..97 at @s run tp @s ^ ^ ^-0.05
 
 # 効果音
+    execute if score @s aj.lance_tackle.frame matches 2..4 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1.2 0.4
+    execute if score @s aj.lance_tackle.frame matches 2..4 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 0.9 0.4
+    execute if score @s aj.lance_tackle.frame matches 2..4 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1.4 0.4
+    execute if score @s aj.lance_tackle.frame matches 2 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.hurt master @s ^ ^1 ^1 0.4 1.5 0.4
+    execute if score @s aj.lance_tackle.frame matches 2 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.hurt master @s ^ ^1 ^1 0.4 1.2 0.4
+    
     execute if score @s aj.lance_tackle.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.lance_tackle.frame matches 23 run function mhdp_monster_valk:core/tick/animation/event/lance_tackle/sound
     execute if score @s aj.lance_tackle.frame matches 39 run function mhdp_monster_valk:core/tick/animation/event/lance_tackle/sound

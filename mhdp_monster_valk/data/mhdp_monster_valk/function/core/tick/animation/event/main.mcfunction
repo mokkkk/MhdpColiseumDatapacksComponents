@@ -50,3 +50,6 @@
 
 # 蛇行突進
     execute if entity @s[tag=aj.valk_aj.animation.lance_tackle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_tackle/main
+
+# 滑空突進
+    execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_start/main

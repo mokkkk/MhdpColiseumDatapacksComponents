@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.Tackle
+    tag @s add Anim.JetTackle
     # function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin_move
 
 # 軸合わせ
