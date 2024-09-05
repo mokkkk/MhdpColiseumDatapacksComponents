@@ -2050,6 +2050,8 @@
 			"data/animated_java/function/valk_aj/animations/lance_flytackle/set_frame.mcfunction",
 			"data/animated_java/function/valk_aj/animations/lance_flytackle/apply_frame.mcfunction",
 			"data/animated_java/function/valk_aj/animations/lance_flytackle/tween.mcfunction",
+			"data/animated_java/function/valk_aj/animations/lance_flytackle/zzz/zzz/0.mcfunction",
+			"data/animated_java/function/valk_aj/animations/lance_flytackle/zzz/zzz/1.mcfunction",
 			"data/animated_java/function/valk_aj/animations/lance_flytackle/zzz/on_tick.mcfunction",
 			"data/animated_java/function/valk_aj/animations/lance_flytackle/zzz/set_frame.mcfunction",
 			"data/animated_java/function/valk_aj/animations/lance_flytackle/zzz/apply_frame.mcfunction",
