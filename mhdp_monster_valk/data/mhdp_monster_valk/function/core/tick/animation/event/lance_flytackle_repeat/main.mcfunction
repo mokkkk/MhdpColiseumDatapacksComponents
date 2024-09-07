@@ -32,8 +32,8 @@
 
 ## 折り返し
 # 軸合わせ
-    execute if score @s aj.lance_flytackle_repeat.frame matches 26..38 run tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
-    execute if score @s aj.lance_flytackle_repeat.frame matches 26..38 run function mhdp_monsters:core/util/other/turn_to_target_accurate
+    execute if score @s aj.lance_flytackle_repeat.frame matches 26..42 run tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
+    execute if score @s aj.lance_flytackle_repeat.frame matches 26..42 run function mhdp_monsters:core/util/other/turn_to_target_accurate
 
 # 移動
     execute if score @s aj.lance_flytackle_repeat.frame matches 26..45 at @s run tp @s ^ ^ ^0.6
@@ -52,10 +52,11 @@
     execute if score @s aj.lance_flytackle_repeat.frame matches 47 run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_repeat/particle_launch
 
 # 移動位置決定
-    execute if score @s aj.lance_flytackle_repeat.frame matches 38 positioned as @n[tag=Mns.Target.Valk] rotated ~ 0 positioned ^ ^0.5 ^ run summon area_effect_cloud ^ ^ ^ {Duration:200,DurationOnUse:0,Tags:["Mns.MovePos.Valk"]}
-    execute if score @s aj.lance_flytackle_repeat.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] at @s run function mhdp_monsters:core/util/other/on_ground
-    execute if score @s aj.lance_flytackle_repeat.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] at @s run tp @s ~ ~0.5 ~
-    execute if score @s aj.lance_flytackle_repeat.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] positioned as @s if block ^ ^ ^3.5 #mhdp_core:no_collision run tp @s ^ ^ ^5
+    execute if score @s aj.lance_flytackle_repeat.frame matches 42 positioned as @n[tag=Mns.Target.Valk] rotated ~ 0 positioned ^ ^0.5 ^ run summon area_effect_cloud ^ ^ ^ {Duration:200,DurationOnUse:0,Tags:["Mns.MovePos.Valk"]}
+    execute if score @s aj.lance_flytackle_repeat.frame matches 42 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] at @s run function mhdp_monsters:core/util/other/on_ground
+    execute if score @s aj.lance_flytackle_repeat.frame matches 42 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] at @s run tp @s ~ ~0.5 ~ ~ ~
+    execute if score @s aj.lance_flytackle_repeat.frame matches 42 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] positioned as @s if block ^ ^ ^5 #mhdp_core:no_collision run tp @s ^ ^ ^5
+    execute if score @s aj.lance_flytackle_repeat.frame matches 42..53 if entity @n[type=area_effect_cloud,tag=Mns.MovePos.Valk,distance=..4] as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] run kill @s
 
 # 攻撃
     execute if score @s aj.lance_flytackle_repeat.frame matches 48..53 run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_repeat/attack
