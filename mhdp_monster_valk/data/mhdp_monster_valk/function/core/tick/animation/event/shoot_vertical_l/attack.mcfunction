@@ -12,8 +12,9 @@
 # ヒット確認
     # 対プレイヤー
         execute positioned ^ ^ ^0 as @a[tag=Ply.State.EnableDamage,distance=..4.5] run tag @s add Temp.Hit
-        execute positioned ^ ^ ^3 as @a[tag=Ply.State.EnableDamage,distance=..5.5] run tag @s add Temp.Hit
-        execute positioned ^ ^ ^6 as @a[tag=Ply.State.EnableDamage,distance=..6.5] run tag @s add Temp.Hit
+        execute positioned ^ ^ ^3 as @a[tag=Ply.State.EnableDamage,distance=..5] run tag @s add Temp.Hit
+        execute positioned ^ ^ ^6 as @a[tag=Ply.State.EnableDamage,distance=..5.5] run tag @s add Temp.Hit
+        execute positioned ^-2.3 ^ ^4.5 as @a[tag=Ply.State.EnableDamage,distance=..5.5] run tag @s add Temp.Hit
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         tag @a remove Temp.Hit
     # 対モンスター
@@ -23,6 +24,8 @@
 
 # 演出
     particle explosion ~ ~ ~ 1 0.1 1 0 10
+    execute positioned ^ ^ ^3 run particle explosion ~ ~ ~ 2 0.1 2 0 10
+    execute positioned ^ ^ ^6 run particle explosion ~ ~ ~ 3 0.1 3 0 10
     execute at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound entity.wither.break_block master @s ^ ^1 ^1 0.4 0.8 0.4
     playsound item.mace.smash_ground master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     playsound item.mace.smash_ground master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5

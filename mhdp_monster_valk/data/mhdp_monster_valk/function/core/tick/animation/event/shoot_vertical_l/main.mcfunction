@@ -49,4 +49,4 @@
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 終了
-    execute if score @s aj.shoot_vertical_l.frame matches 124 run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_l/end
+    execute if score @s aj.shoot_vertical_l.frame matches 114 run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_l/end

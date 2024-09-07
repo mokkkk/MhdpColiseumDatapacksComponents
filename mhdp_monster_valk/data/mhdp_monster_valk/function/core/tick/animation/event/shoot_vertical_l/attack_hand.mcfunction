@@ -1,4 +1,4 @@
-#> mhdp_monster_valk:core/tick/animation/event/lance_vertical_l/attack_hand
+#> mhdp_monster_valk:core/tick/animation/event/shoot_vertical_l/attack_hand
 #
 # アニメーションイベントハンドラ 翼槍叩きつけ お手部分
 #
@@ -11,16 +11,16 @@
 
 # ヒット確認
     # 対プレイヤー
-        execute positioned ^-1.5 ^1 ^8 as @a[tag=Ply.State.EnableDamage,distance=..1.7] run tag @s add Temp.Hit
+        execute positioned ^1.5 ^1 ^8 as @a[tag=Ply.State.EnableDamage,distance=..1.7] run tag @s add Temp.Hit
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         tag @a remove Temp.Hit
     # 対モンスター
-        execute positioned ^-1.5 ^1 ^8 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Valk,distance=..1.7] run tag @s add Temp.Hit
+        execute positioned ^1.5 ^1 ^8 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Valk,distance=..1.7] run tag @s add Temp.Hit
         execute if entity @n[tag=Temp.Hit] as @n[tag=Temp.Hit] run tag @s add Temp.Victim
         execute if entity @n[tag=Temp.Victim] as @n[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
 
 # 演出
-    particle block{block_state:"minecraft:sand"} ^-1.5 ^1 ^8 0.4 0 0.4 0 10
+    particle block{block_state:"minecraft:sand"} ^1.5 ^1 ^8 0.4 0 0.4 0 10
 
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit

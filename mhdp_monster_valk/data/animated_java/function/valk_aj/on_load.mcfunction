@@ -31,6 +31,7 @@ scoreboard objectives add aj.shoot_idle.frame dummy
 scoreboard objectives add aj.shoot_to_lance.frame dummy
 scoreboard objectives add aj.shoot_move_start.frame dummy
 scoreboard objectives add aj.shoot_move.frame dummy
+scoreboard objectives add aj.shoot_vertical_r.frame dummy
 scoreboard objectives add aj.shoot_vertical_l.frame dummy
 scoreboard objectives add aj.shoot_sweep_l.frame dummy
 scoreboard objectives add aj.shoot_shot_forward.frame dummy

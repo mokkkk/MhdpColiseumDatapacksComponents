@@ -34,6 +34,7 @@ execute if entity @s[tag=aj.valk_aj.animation.shoot_idle.playing] run function a
 execute if entity @s[tag=aj.valk_aj.animation.shoot_to_lance.playing] run function animated_java:valk_aj/animations/shoot_to_lance/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_move_start.playing] run function animated_java:valk_aj/animations/shoot_move_start/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_move.playing] run function animated_java:valk_aj/animations/shoot_move/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.shoot_vertical_r.playing] run function animated_java:valk_aj/animations/shoot_vertical_r/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_vertical_l.playing] run function animated_java:valk_aj/animations/shoot_vertical_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_sweep_l.playing] run function animated_java:valk_aj/animations/shoot_sweep_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_shot_forward.playing] run function animated_java:valk_aj/animations/shoot_shot_forward/zzz/on_tick

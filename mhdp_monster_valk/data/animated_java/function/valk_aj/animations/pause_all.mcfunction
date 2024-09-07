@@ -32,6 +32,7 @@ tag @s remove aj.valk_aj.animation.shoot_idle.playing
 tag @s remove aj.valk_aj.animation.shoot_to_lance.playing
 tag @s remove aj.valk_aj.animation.shoot_move_start.playing
 tag @s remove aj.valk_aj.animation.shoot_move.playing
+tag @s remove aj.valk_aj.animation.shoot_vertical_r.playing
 tag @s remove aj.valk_aj.animation.shoot_vertical_l.playing
 tag @s remove aj.valk_aj.animation.shoot_sweep_l.playing
 tag @s remove aj.valk_aj.animation.shoot_shot_forward.playing
