@@ -11,7 +11,7 @@
 
 ## 彗龍
 # 待機
-    # execute if entity @s[tag=aj.valk_aj.animation.idle.playing] run function mhdp_monster_valk:core/tick/animation/event/idle/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_idle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle/main
 
 # 咆哮
     execute if entity @s[tag=aj.valk_aj.animation.lance_voice.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_voice/main
@@ -55,3 +55,4 @@
     execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_start/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_end.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_end/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_repeat.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_repeat/main

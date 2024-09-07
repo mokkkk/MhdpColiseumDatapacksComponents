@@ -20,4 +20,4 @@
 
 # 移動対象にある程度近づいた場合、または対象が見つからない場合終了
     execute if entity @n[type=area_effect_cloud,tag=Mns.MovePos.Valk,distance=..4] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle/end
-    execute unless entity @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle/end
+    execute if entity @s[tag=!Mns.Temp.Valk.EndFlyTackle] unless entity @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle/end

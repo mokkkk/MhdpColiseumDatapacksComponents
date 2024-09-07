@@ -35,9 +35,9 @@
     execute if score @s aj.lance_flytackle_start.frame matches 38 positioned as @n[tag=Mns.Target.Valk] rotated ~ 0 positioned ^ ^0.5 ^ run summon area_effect_cloud ^ ^ ^ {Duration:200,DurationOnUse:0,Tags:["Mns.MovePos.Valk"]}
     execute if score @s aj.lance_flytackle_start.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] at @s run function mhdp_monsters:core/util/other/on_ground
     execute if score @s aj.lance_flytackle_start.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] at @s run tp @s ~ ~0.5 ~
-    execute if score @s aj.lance_flytackle_start.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] positioned as @s if block ^ ^ ^3.5 #mhdp_core:no_collision run tp @s ^ ^ ^5
-    # execute if score @s aj.lance_flytackle_start.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] positioned as @s if block ^ ^ ^3.5 #mhdp_core:no_collision run tp @s ^ ^ ^5
-    # execute if score @s aj.lance_flytackle_start.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] positioned as @s if block ^ ^ ^3.5 #mhdp_core:no_collision run tp @s ^ ^ ^5
+    execute if score @s aj.lance_flytackle_start.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] positioned as @s if block ^ ^ ^5 #mhdp_core:no_collision run tp @s ^ ^ ^5
+    execute if score @s aj.lance_flytackle_start.frame matches 38 if score @s Mns.Valk.JetCount matches 2.. as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] positioned as @s if block ^ ^ ^3 #mhdp_core:no_collision run tp @s ^ ^ ^3
+    execute if score @s aj.lance_flytackle_start.frame matches 38 if score @s Mns.Valk.JetCount matches 2.. as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] positioned as @s if block ^ ^ ^3 #mhdp_core:no_collision run tp @s ^ ^ ^3
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground

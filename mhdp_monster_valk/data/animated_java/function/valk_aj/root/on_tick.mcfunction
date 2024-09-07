@@ -4,6 +4,8 @@ execute unless score @s aj.is_rig_loaded matches 1 run function #animated_java:g
 function #animated_java:valk_aj/as_root/pre_tick
 execute if entity @s[tag=aj.valk_aj.animation.jacket_pose.playing] run function animated_java:valk_aj/animations/jacket_pose/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_pose.playing] run function animated_java:valk_aj/animations/lance_pose/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_idle.playing] run function animated_java:valk_aj/animations/lance_idle/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_to_shoot.playing] run function animated_java:valk_aj/animations/lance_to_shoot/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_voice.playing] run function animated_java:valk_aj/animations/lance_voice/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_turn_r.playing] run function animated_java:valk_aj/animations/lance_turn_r/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_turn_l.playing] run function animated_java:valk_aj/animations/lance_turn_l/zzz/on_tick
@@ -26,7 +28,9 @@ execute if entity @s[tag=aj.valk_aj.animation.lance_tackle.playing] run function
 execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_start.playing] run function animated_java:valk_aj/animations/lance_flytackle_start/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle.playing] run function animated_java:valk_aj/animations/lance_flytackle/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_end.playing] run function animated_java:valk_aj/animations/lance_flytackle_end/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_repeat.playing] run function animated_java:valk_aj/animations/lance_flytackle_repeat/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_pose.playing] run function animated_java:valk_aj/animations/shoot_pose/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.shoot_to_lance.playing] run function animated_java:valk_aj/animations/shoot_to_lance/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_move_start.playing] run function animated_java:valk_aj/animations/shoot_move_start/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_move.playing] run function animated_java:valk_aj/animations/shoot_move/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_vertical_l.playing] run function animated_java:valk_aj/animations/shoot_vertical_l/zzz/on_tick
@@ -34,8 +38,6 @@ execute if entity @s[tag=aj.valk_aj.animation.shoot_sweep_l.playing] run functio
 execute if entity @s[tag=aj.valk_aj.animation.shoot_shot_forward.playing] run function animated_java:valk_aj/animations/shoot_shot_forward/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_shot_horizon.playing] run function animated_java:valk_aj/animations/shoot_shot_horizon/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_bomb_forward.playing] run function animated_java:valk_aj/animations/shoot_bomb_forward/zzz/on_tick
-execute if entity @s[tag=aj.valk_aj.animation.shoot_bomb_forward3.playing] run function animated_java:valk_aj/animations/shoot_bomb_forward3/zzz/on_tick
-execute if entity @s[tag=aj.valk_aj.animation.shoot_bomb_forward2.playing] run function animated_java:valk_aj/animations/shoot_bomb_forward2/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_bomb_side.playing] run function animated_java:valk_aj/animations/shoot_bomb_side/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_sault.playing] run function animated_java:valk_aj/animations/shoot_sault/zzz/on_tick
 execute on passengers if entity @s[tag=aj.valk_aj.data] run function animated_java:valk_aj/root/zzz/1

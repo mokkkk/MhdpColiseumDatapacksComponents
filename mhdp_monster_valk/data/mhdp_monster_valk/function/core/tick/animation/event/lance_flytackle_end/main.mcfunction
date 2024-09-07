@@ -5,6 +5,9 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 
+
+
+
 # 移動
     execute if score @s aj.lance_flytackle_end.frame matches 1..7 at @s run tp @s ^ ^ ^1 ~-3 ~
     execute if score @s aj.lance_flytackle_end.frame matches 8..16 at @s run tp @s ^ ^ ^ ~21 ~

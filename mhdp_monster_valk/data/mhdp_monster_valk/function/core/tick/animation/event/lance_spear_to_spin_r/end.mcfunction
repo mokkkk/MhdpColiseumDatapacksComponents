@@ -2,7 +2,7 @@
 #
 # アニメーションイベントハンドラ 翼槍回転斬り
 #
-# @within function mhdp_monster_valk:core/tick/animation/event/lance_voice/main
+# @within function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_r/main
 
-# 行動選択
-    function mhdp_monster_valk:core/tick/animation/change/main
+# 確定で威嚇
+    function animated_java:valk_aj/animations/lance_idle/tween {duration:1, to_frame: 0}
