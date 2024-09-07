@@ -28,3 +28,7 @@
 
 # 翼叩きつけ
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"VerticalS",DamageValue:12.0f,GuardValue:6,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+
+# 薙ぎ払い
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Sweep",DamageValue:8.6f,GuardValue:4,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Sweep.Anger",DamageValue:9.5f,GuardValue:5,ElementType:5,ElementMultiply:40,Knockback:3,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}

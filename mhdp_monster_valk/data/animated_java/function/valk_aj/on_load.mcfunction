@@ -33,7 +33,10 @@ scoreboard objectives add aj.shoot_move_start.frame dummy
 scoreboard objectives add aj.shoot_move.frame dummy
 scoreboard objectives add aj.shoot_vertical_r.frame dummy
 scoreboard objectives add aj.shoot_vertical_l.frame dummy
+scoreboard objectives add aj.shoot_sweep_r.frame dummy
 scoreboard objectives add aj.shoot_sweep_l.frame dummy
+scoreboard objectives add aj.shoot_sweep_anger_r.frame dummy
+scoreboard objectives add aj.shoot_sweep_anger_l.frame dummy
 scoreboard objectives add aj.shoot_shot_forward.frame dummy
 scoreboard objectives add aj.shoot_shot_horizon.frame dummy
 scoreboard objectives add aj.shoot_bomb_forward.frame dummy

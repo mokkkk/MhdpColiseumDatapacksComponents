@@ -12,8 +12,8 @@
 
 # 移動
     execute if score @s aj.shoot_vertical_l.frame matches 1..19 if entity @n[tag=Mns.Target.Valk,distance=..11] at @s run tp @s ^ ^ ^-0.5
-    execute if score @s aj.shoot_vertical_l.frame matches 6..19 unless entity @n[tag=Mns.Target.Valk,distance=..8] at @s run tp @s ^ ^ ^0.1
-    execute if score @s aj.shoot_vertical_l.frame matches 20..30 unless entity @n[tag=Mns.Target.Valk,distance=..8] at @s run tp @s ^ ^ ^0.4
+    execute if score @s aj.shoot_vertical_l.frame matches 6..19 unless entity @n[tag=Mns.Target.Valk,distance=..11] at @s run tp @s ^ ^ ^0.1
+    execute if score @s aj.shoot_vertical_l.frame matches 20..30 unless entity @n[tag=Mns.Target.Valk,distance=..11] at @s run tp @s ^ ^ ^0.8
     execute if score @s aj.shoot_vertical_l.frame matches 45..51 run tp @s ~ ~ ~ ~2 ~
     execute if score @s aj.shoot_vertical_l.frame matches 78..84 at @s run tp @s ^ ^ ^-0.2
     execute if score @s aj.shoot_vertical_l.frame matches 85..90 at @s run tp @s ^ ^ ^-0.1

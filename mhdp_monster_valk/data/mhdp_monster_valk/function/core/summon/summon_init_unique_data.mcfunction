@@ -56,4 +56,4 @@
 
 # アニメーション再生
     # 待機
-        execute if entity @s[tag=Mns.Temp.IsIdleAnimation] run function animated_java:valk_aj/animations/lance_pose/play
+        execute if entity @s[tag=Mns.Temp.IsIdleAnimation] run function animated_java:valk_aj/animations/lance_idle/play

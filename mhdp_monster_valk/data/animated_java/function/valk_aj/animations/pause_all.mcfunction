@@ -34,7 +34,10 @@ tag @s remove aj.valk_aj.animation.shoot_move_start.playing
 tag @s remove aj.valk_aj.animation.shoot_move.playing
 tag @s remove aj.valk_aj.animation.shoot_vertical_r.playing
 tag @s remove aj.valk_aj.animation.shoot_vertical_l.playing
+tag @s remove aj.valk_aj.animation.shoot_sweep_r.playing
 tag @s remove aj.valk_aj.animation.shoot_sweep_l.playing
+tag @s remove aj.valk_aj.animation.shoot_sweep_anger_r.playing
+tag @s remove aj.valk_aj.animation.shoot_sweep_anger_l.playing
 tag @s remove aj.valk_aj.animation.shoot_shot_forward.playing
 tag @s remove aj.valk_aj.animation.shoot_shot_horizon.playing
 tag @s remove aj.valk_aj.animation.shoot_bomb_forward.playing

@@ -40,7 +40,10 @@
     # 翼叩きつけ
         execute if entity @s[tag=Anim.VerticalS.R] run function animated_java:valk_aj/animations/shoot_vertical_r/tween {duration:1, to_frame: 1}
         execute if entity @s[tag=Anim.VerticalS.L] run function animated_java:valk_aj/animations/shoot_vertical_l/tween {duration:1, to_frame: 1}
-    
+    # 薙ぎ払い
+        # execute if entity @s[tag=Anim.Sweep.L] run function animated_java:valk_aj/animations/shoot_sweep_l/tween {duration:1, to_frame: 1}
+        execute if entity @s[tag=Anim.Sweep.L] run function animated_java:valk_aj/animations/shoot_sweep_anger_l/tween {duration:1, to_frame: 1}
+
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag
     tag @s remove Mns.Temp.IsCombo
