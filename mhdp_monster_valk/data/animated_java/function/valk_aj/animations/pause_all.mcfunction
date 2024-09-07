@@ -28,6 +28,7 @@ tag @s remove aj.valk_aj.animation.lance_flytackle.playing
 tag @s remove aj.valk_aj.animation.lance_flytackle_end.playing
 tag @s remove aj.valk_aj.animation.lance_flytackle_repeat.playing
 tag @s remove aj.valk_aj.animation.shoot_pose.playing
+tag @s remove aj.valk_aj.animation.shoot_idle.playing
 tag @s remove aj.valk_aj.animation.shoot_to_lance.playing
 tag @s remove aj.valk_aj.animation.shoot_move_start.playing
 tag @s remove aj.valk_aj.animation.shoot_move.playing

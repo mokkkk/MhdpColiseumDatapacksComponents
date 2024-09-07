@@ -27,6 +27,7 @@ scoreboard objectives add aj.lance_flytackle.frame dummy
 scoreboard objectives add aj.lance_flytackle_end.frame dummy
 scoreboard objectives add aj.lance_flytackle_repeat.frame dummy
 scoreboard objectives add aj.shoot_pose.frame dummy
+scoreboard objectives add aj.shoot_idle.frame dummy
 scoreboard objectives add aj.shoot_to_lance.frame dummy
 scoreboard objectives add aj.shoot_move_start.frame dummy
 scoreboard objectives add aj.shoot_move.frame dummy

@@ -30,6 +30,7 @@ execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle.playing] run funct
 execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_end.playing] run function animated_java:valk_aj/animations/lance_flytackle_end/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_repeat.playing] run function animated_java:valk_aj/animations/lance_flytackle_repeat/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_pose.playing] run function animated_java:valk_aj/animations/shoot_pose/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.shoot_idle.playing] run function animated_java:valk_aj/animations/shoot_idle/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_to_lance.playing] run function animated_java:valk_aj/animations/shoot_to_lance/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_move_start.playing] run function animated_java:valk_aj/animations/shoot_move_start/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_move.playing] run function animated_java:valk_aj/animations/shoot_move/zzz/on_tick

@@ -11,6 +11,8 @@
     execute if entity @s[tag=Anim.Voice] run function animated_java:valk_aj/animations/lance_voice/tween {duration:1, to_frame: 1}
 
 # 彗龍
+    # 変形・彗龍→龍気
+        execute if entity @s[tag=Anim.Change.LanceToShoot] run function animated_java:valk_aj/animations/lance_to_shoot/tween {duration:1, to_frame: 1}
     # 移動
         execute if entity @s[tag=Anim.MoveStart.Lance] run function animated_java:valk_aj/animations/lance_move_start/tween {duration:1, to_frame: 1}
     # 2連突き
@@ -33,6 +35,8 @@
         execute if entity @s[tag=Anim.Tackle] run function animated_java:valk_aj/animations/lance_tackle/tween {duration:1, to_frame: 1}
     # 滑空突進
         execute if entity @s[tag=Anim.JetTackle] run function animated_java:valk_aj/animations/lance_flytackle_start/tween {duration:1, to_frame: 1}
+    # 変形・龍気→彗龍
+        execute if entity @s[tag=Anim.Change.ShootToLance] run function animated_java:valk_aj/animations/shoot_to_lance/tween {duration:1, to_frame: 1}
 
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag

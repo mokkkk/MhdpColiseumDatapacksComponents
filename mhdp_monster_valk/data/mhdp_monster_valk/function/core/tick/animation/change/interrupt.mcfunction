@@ -5,8 +5,8 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    # tag @s add Anim.JetTackle
-    function mhdp_monster_valk:core/tick/animation/change/play/jet_tackle
+    # tag @s add Anim.Change.LanceToShoot
+    function mhdp_monster_valk:core/tick/animation/change/play/change_phase
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn
