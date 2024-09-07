@@ -72,5 +72,7 @@
     execute if entity @s[tag=aj.valk_aj.animation.shoot_vertical_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_l/main
 
 # 薙ぎ払い
+    execute if entity @s[tag=aj.valk_aj.animation.shoot_sweep_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_r/main
     execute if entity @s[tag=aj.valk_aj.animation.shoot_sweep_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_l/main
+    execute if entity @s[tag=aj.valk_aj.animation.shoot_sweep_anger_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_anger_r/main
     execute if entity @s[tag=aj.valk_aj.animation.shoot_sweep_anger_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_anger_l/main

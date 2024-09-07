@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.Sweep.L
+    tag @s add Anim.Sweep.R
     # function mhdp_monster_valk:core/tick/animation/change/play/change_phase
 
 # 軸合わせ
