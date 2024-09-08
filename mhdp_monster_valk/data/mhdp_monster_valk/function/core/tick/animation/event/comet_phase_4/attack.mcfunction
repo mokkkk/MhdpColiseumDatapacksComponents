@@ -29,6 +29,7 @@
     playsound entity.generic.explode master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.6
     playsound item.mace.smash_ground_heavy master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.6
     playsound item.mace.smash_ground_heavy master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.5
+    playsound item.mace.smash_ground_heavy master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.8
     particle explosion_emitter ~ ~2 ~ 3 1 3 0 20 force
     particle gust_emitter_large ~ ~2 ~ 3 1 3 0 20 force
     particle large_smoke ~ ~2 ~ 3 1 3 0.1 100 force

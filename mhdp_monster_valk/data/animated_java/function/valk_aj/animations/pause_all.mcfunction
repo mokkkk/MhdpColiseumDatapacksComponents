@@ -3,6 +3,7 @@ execute unless entity @s[type=item_display,tag=aj.valk_aj.root] run return run f
 tag @s remove aj.valk_aj.animation.jacket_pose.playing
 tag @s remove aj.valk_aj.animation.lance_pose.playing
 tag @s remove aj.valk_aj.animation.lance_idle.playing
+tag @s remove aj.valk_aj.animation.lance_idle_short.playing
 tag @s remove aj.valk_aj.animation.lance_to_shoot.playing
 tag @s remove aj.valk_aj.animation.lance_voice.playing
 tag @s remove aj.valk_aj.animation.lance_turn_r.playing
@@ -44,10 +45,12 @@ tag @s remove aj.valk_aj.animation.shoot_bomb_forward.playing
 tag @s remove aj.valk_aj.animation.shoot_bomb_side.playing
 tag @s remove aj.valk_aj.animation.shoot_sault.playing
 tag @s remove aj.valk_aj.animation.comet_phase_1.playing
+tag @s remove aj.valk_aj.animation.comet_phase_1_2.playing
 tag @s remove aj.valk_aj.animation.comet_phase_2.playing
 tag @s remove aj.valk_aj.animation.comet_phase_3.playing
 tag @s remove aj.valk_aj.animation.comet_phase_3_2.playing
 tag @s remove aj.valk_aj.animation.comet_phase_4.playing
+tag @s remove aj.valk_aj.animation.comet_phase_5.playing
 tag @s remove aj.valk_aj.animation.comet_phase_2_1.playing
 tag @s remove aj.valk_aj.animation.comet_phase_2_2.playing
 tag @s remove aj.valk_aj.animation.comet_4.playing

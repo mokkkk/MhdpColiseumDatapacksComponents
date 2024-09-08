@@ -12,6 +12,7 @@
 ## 彗龍
 # 待機
     execute if entity @s[tag=aj.valk_aj.animation.lance_idle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_idle_short.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle_short/main
 
 # 変形・彗龍→龍気
     execute if entity @s[tag=aj.valk_aj.animation.lance_to_shoot.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_to_shoot/main
@@ -82,3 +83,4 @@
     execute if entity @s[tag=aj.valk_aj.animation.comet_phase_2.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_2/main
     execute if entity @s[tag=aj.valk_aj.animation.comet_phase_3.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_3/main
     execute if entity @s[tag=aj.valk_aj.animation.comet_phase_4.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_4/main
+    execute if entity @s[tag=aj.valk_aj.animation.comet_phase_5.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_5/main

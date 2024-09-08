@@ -31,8 +31,8 @@
     execute if score @s aj.comet_phase_4.frame matches 8 run kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.Jet]
 
 # 無音
-    execute if score @s aj.comet_phase_4.frame matches 2..5 run playsound item.trident.thunder master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
-    execute if score @s aj.comet_phase_4.frame matches 2..5 run playsound item.trident.thunder master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s aj.comet_phase_4.frame matches 2..5 run playsound item.trident.thunder master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.2
+    execute if score @s aj.comet_phase_4.frame matches 2..5 run playsound item.trident.thunder master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1
     execute if score @s aj.comet_phase_4.frame matches 5 run tag @a[tag=Ply.State.MnsTarget] add Ply.State.IsSilent
     execute if score @s aj.comet_phase_4.frame matches 65 run tag @a[tag=Ply.State.MnsTarget] remove Ply.State.IsSilent
 

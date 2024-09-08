@@ -2,6 +2,7 @@
 scoreboard objectives add aj.jacket_pose.frame dummy
 scoreboard objectives add aj.lance_pose.frame dummy
 scoreboard objectives add aj.lance_idle.frame dummy
+scoreboard objectives add aj.lance_idle_short.frame dummy
 scoreboard objectives add aj.lance_to_shoot.frame dummy
 scoreboard objectives add aj.lance_voice.frame dummy
 scoreboard objectives add aj.lance_turn_r.frame dummy
@@ -43,10 +44,12 @@ scoreboard objectives add aj.shoot_bomb_forward.frame dummy
 scoreboard objectives add aj.shoot_bomb_side.frame dummy
 scoreboard objectives add aj.shoot_sault.frame dummy
 scoreboard objectives add aj.comet_phase_1.frame dummy
+scoreboard objectives add aj.comet_phase_1_2.frame dummy
 scoreboard objectives add aj.comet_phase_2.frame dummy
 scoreboard objectives add aj.comet_phase_3.frame dummy
 scoreboard objectives add aj.comet_phase_3_2.frame dummy
 scoreboard objectives add aj.comet_phase_4.frame dummy
+scoreboard objectives add aj.comet_phase_5.frame dummy
 scoreboard objectives add aj.comet_phase_2_1.frame dummy
 scoreboard objectives add aj.comet_phase_2_2.frame dummy
 scoreboard objectives add aj.comet_4.frame dummy
