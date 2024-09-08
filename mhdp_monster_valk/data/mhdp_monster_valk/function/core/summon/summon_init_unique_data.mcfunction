@@ -51,6 +51,9 @@
     # 移動回数
         scoreboard players set @s Mns.Valk.DashCount 0
 
+# テキストディスプレイ設定
+    execute on passengers if entity @s[tag=aj.valk_aj.bone.comet_star] run data merge entity @s {view_range:30f,see_through:1b}
+
 # 終了
     scoreboard players reset #mhdp_temp_monster_uid Mns.Uid
 
