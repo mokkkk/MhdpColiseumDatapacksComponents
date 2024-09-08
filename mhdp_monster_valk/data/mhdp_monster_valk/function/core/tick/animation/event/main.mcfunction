@@ -81,3 +81,4 @@
     execute if entity @s[tag=aj.valk_aj.animation.comet_phase_1.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/main
     execute if entity @s[tag=aj.valk_aj.animation.comet_phase_2.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_2/main
     execute if entity @s[tag=aj.valk_aj.animation.comet_phase_3.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_3/main
+    execute if entity @s[tag=aj.valk_aj.animation.comet_phase_4.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_4/main

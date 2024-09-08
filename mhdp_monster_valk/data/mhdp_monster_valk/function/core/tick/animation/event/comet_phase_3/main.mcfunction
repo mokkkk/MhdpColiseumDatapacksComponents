@@ -5,8 +5,7 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 移動
-    # execute if score @s aj.comet_phase_3.frame matches 2 at @s run function mhdp_monster_valk:core/tick/animation/event/comet_phase_3/move_start
-    # execute if score @s aj.comet_phase_3.frame matches 2..19 at @s run function mhdp_monsters:core/util/other/move_to_target_move
+    execute if score @s aj.comet_phase_3.frame matches 2..10 at @s run tp @s ^ ^ ^1
 
 # 効果音
     execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_3/m.particle with entity @s data.locators.pos_head
