@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:**
 # @input
 #        storage mhdp_core:temp Damage.DamageValue ダメージ量
-#        storage mhdp_core:temp Damage.GuardValue 威力値
+#        storage mhdp_core:temp Damage.GuardValue 威力値、20以上の場合回避不可
 #        storage mhdp_core:temp Damage.ElementType 属性種別
 #        storage mhdp_core:temp Damage.ElementMultiply 属性比重
 #        storage mhdp_core:temp Damage.Knockback ノックバックタイプ
@@ -17,13 +17,16 @@
 # @output
 #        score #mhdp_temp_damage_total MhdpCore 総ダメージ量
 
+# 威力値取得
+    execute store result score #mhdp_temp_guard_value MhdpCore run data get storage mhdp_core:temp Damage.GuardValue
+
 # 処理の中断
     # プレイヤー以外が実行者の場合
         execute unless entity @s[type=player] run return 0
     # 無敵時間
         execute if score @s Ply.Timer.DamageInterval matches 1.. run return 0
     # フレーム回避
-        execute if score @s Ply.Timer.Avoid matches 1.. at @s run return run function mhdp_core:player/damage/entity_to_player/avoid/main
+        execute if score @s Ply.Timer.Avoid matches 1.. if score #mhdp_temp_guard_value MhdpCore matches ..19 at @s run return run function mhdp_core:player/damage/entity_to_player/avoid/main
 
 # 基礎ダメージ計算
     # クエストによる攻撃力倍率

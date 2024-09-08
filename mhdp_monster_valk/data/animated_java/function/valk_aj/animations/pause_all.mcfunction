@@ -46,6 +46,7 @@ tag @s remove aj.valk_aj.animation.shoot_sault.playing
 tag @s remove aj.valk_aj.animation.comet_phase_1.playing
 tag @s remove aj.valk_aj.animation.comet_phase_2.playing
 tag @s remove aj.valk_aj.animation.comet_phase_3.playing
+tag @s remove aj.valk_aj.animation.comet_phase_3_2.playing
 tag @s remove aj.valk_aj.animation.comet_phase_4.playing
 tag @s remove aj.valk_aj.animation.comet_phase_2_1.playing
 tag @s remove aj.valk_aj.animation.comet_phase_2_2.playing

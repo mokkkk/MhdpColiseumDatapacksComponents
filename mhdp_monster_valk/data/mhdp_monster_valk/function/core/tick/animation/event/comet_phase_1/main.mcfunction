@@ -27,6 +27,11 @@
     execute if score @s aj.comet_phase_1.frame matches 2..57 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/particle
     execute if score @s aj.comet_phase_1.frame matches 58..70 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/particle_launch
 
+# 風圧怯み
+    execute if score @s aj.comet_phase_1.frame matches 56 run data modify storage mhdp_core:temp Damage set value {WindValue:2,GuardValue:1}
+    execute if score @s aj.comet_phase_1.frame matches 56 positioned ^ ^ ^ as @a[tag=Ply.State.EnableDamage,distance=..12] facing entity @s feet positioned as @s run function mhdp_core:player/damage/wind/main
+    execute if score @s aj.comet_phase_1.frame matches 56 run data remove storage mhdp_core:temp Damage
+
 # 演出
     execute if score @s aj.comet_phase_1.frame matches 70 at @s on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/m.summon_vfx with entity @s data.locators.shadow
     

@@ -45,6 +45,7 @@ scoreboard objectives add aj.shoot_sault.frame dummy
 scoreboard objectives add aj.comet_phase_1.frame dummy
 scoreboard objectives add aj.comet_phase_2.frame dummy
 scoreboard objectives add aj.comet_phase_3.frame dummy
+scoreboard objectives add aj.comet_phase_3_2.frame dummy
 scoreboard objectives add aj.comet_phase_4.frame dummy
 scoreboard objectives add aj.comet_phase_2_1.frame dummy
 scoreboard objectives add aj.comet_phase_2_2.frame dummy

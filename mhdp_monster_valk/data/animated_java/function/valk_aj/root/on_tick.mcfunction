@@ -48,6 +48,7 @@ execute if entity @s[tag=aj.valk_aj.animation.shoot_sault.playing] run function 
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_1.playing] run function animated_java:valk_aj/animations/comet_phase_1/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_2.playing] run function animated_java:valk_aj/animations/comet_phase_2/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_3.playing] run function animated_java:valk_aj/animations/comet_phase_3/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.comet_phase_3_2.playing] run function animated_java:valk_aj/animations/comet_phase_3_2/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_4.playing] run function animated_java:valk_aj/animations/comet_phase_4/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_2_1.playing] run function animated_java:valk_aj/animations/comet_phase_2_1/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_2_2.playing] run function animated_java:valk_aj/animations/comet_phase_2_2/zzz/on_tick

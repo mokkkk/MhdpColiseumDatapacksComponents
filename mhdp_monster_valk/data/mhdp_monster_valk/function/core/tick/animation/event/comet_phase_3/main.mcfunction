@@ -23,9 +23,13 @@
     # execute if score @s aj.comet_phase_3.frame matches 2 at @s facing entity @n[type=area_effect_cloud,tag=Mns.RotatePos.Valk] feet run tp @s ~ ~ ~ ~ 0
     # execute if score @s aj.comet_phase_3.frame matches 2 run kill @e[type=area_effect_cloud,tag=Mns.RotatePos.Valk]
 
+# 演出
+    execute if score @s aj.comet_phase_3.frame matches 2 at @s on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_3/m.summon_vfx_jet with entity @s data.locators.shadow
+    execute if score @s aj.comet_phase_3.frame matches 2..20 at @s on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_3/m.tp_vfx_jet with entity @s data.locators.shadow
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 終了
-    execute if score @s aj.comet_phase_3.frame matches 19 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_3/end
+    execute if score @s aj.comet_phase_3.frame matches 20 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_3/end
