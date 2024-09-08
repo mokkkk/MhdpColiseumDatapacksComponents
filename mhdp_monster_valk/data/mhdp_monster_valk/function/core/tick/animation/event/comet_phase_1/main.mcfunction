@@ -13,4 +13,4 @@
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 終了
-    execute if score @s aj.comet_phase_1.frame matches 79 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/end
+    execute if score @s aj.comet_phase_1.frame matches 99 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/end
