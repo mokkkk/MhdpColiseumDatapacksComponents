@@ -45,6 +45,7 @@ execute if entity @s[tag=aj.valk_aj.animation.shoot_shot_horizon.playing] run fu
 execute if entity @s[tag=aj.valk_aj.animation.shoot_bomb_forward.playing] run function animated_java:valk_aj/animations/shoot_bomb_forward/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_bomb_side.playing] run function animated_java:valk_aj/animations/shoot_bomb_side/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.shoot_sault.playing] run function animated_java:valk_aj/animations/shoot_sault/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.comet_0.playing] run function animated_java:valk_aj/animations/comet_0/zzz/on_tick
 execute on passengers if entity @s[tag=aj.valk_aj.data] run function animated_java:valk_aj/root/zzz/1
 execute at @s on passengers run tp @s ~ ~ ~ ~ ~
 function #animated_java:valk_aj/as_root/post_tick

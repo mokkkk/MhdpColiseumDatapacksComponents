@@ -42,4 +42,5 @@ scoreboard objectives add aj.shoot_shot_horizon.frame dummy
 scoreboard objectives add aj.shoot_bomb_forward.frame dummy
 scoreboard objectives add aj.shoot_bomb_side.frame dummy
 scoreboard objectives add aj.shoot_sault.frame dummy
+scoreboard objectives add aj.comet_0.frame dummy
 execute as @e[type=item_display,tag=aj.valk_aj.root] unless score @s aj.is_rig_loaded matches 1 at @s run function animated_java:valk_aj/root/on_load
