@@ -9,6 +9,7 @@
     # execute if score @s aj.comet_phase_3.frame matches 2..19 at @s run function mhdp_monsters:core/util/other/move_to_target_move
 
 # 効果音
+    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_3/m.particle with entity @s data.locators.pos_head
     # execute if score @s aj.comet_phase_3.frame matches 12 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     # execute if score @s aj.comet_phase_3.frame matches 36 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     # execute if score @s aj.comet_phase_3.frame matches 12 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.4 0.9 0.4

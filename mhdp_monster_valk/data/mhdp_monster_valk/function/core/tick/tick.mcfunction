@@ -14,3 +14,4 @@
 
 # 弾処理
     execute as @e[type=item_display,tag=Mns.Shot.Valk] at @s run function mhdp_monster_valk:core/tick/shot/tick
+    execute as @e[type=text_display,tag=Mns.Shot.Valk] at @s run function mhdp_monster_valk:core/tick/shot/tick

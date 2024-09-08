@@ -34,6 +34,8 @@
             scoreboard objectives add Mns.Valk.LegL.Damage.Count dummy
     # 移動回数
         scoreboard objectives add Mns.Valk.DashCount dummy
+    # サブカウント
+        scoreboard objectives add Mns.Valk.SubCount dummy
     # 滑空突進往復回数
         scoreboard objectives add Mns.Valk.JetCount dummy
 
