@@ -33,6 +33,10 @@
     execute if score @s aj.comet_phase_2.frame matches 61..90 at @s on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_2/m.tp_vfx_star_turn with entity @s data.locators.pos_comet_star
     function mhdp_monster_valk:core/tick/animation/event/comet_phase_2/change_text
     execute if score @s aj.comet_phase_2.frame matches 60 at @s on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_2/m.summon_vfx with entity @s data.locators.pos_comet_star
+    # execute if score @s aj.comet_phase_2.frame matches 67 run data merge entity @n[type=text_display,tag=Mns.Shot.Valk.Vfx.Star] {interpolation_duration:12,start_interpolation:-1L}
+    # execute if score @s aj.comet_phase_2.frame matches 67 run data modify entity @n[type=text_display,tag=Mns.Shot.Valk.Vfx.Star] transformation.scale set value [20f,20f,1f]
+    # execute if score @s aj.comet_phase_2.frame matches 84 run data merge entity @n[type=text_display,tag=Mns.Shot.Valk.Vfx.Star] {interpolation_duration:6,start_interpolation:-1L}
+    # execute if score @s aj.comet_phase_2.frame matches 84 run data modify entity @n[type=text_display,tag=Mns.Shot.Valk.Vfx.Star] transformation.scale set value [85f,85f,1f]
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
