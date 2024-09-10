@@ -96,3 +96,6 @@
 
 # 側面爆発
     execute if entity @s[tag=aj.valk_aj.animation.shoot_bomb_side.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/main
+
+# 前転
+    execute if entity @s[tag=aj.valk_aj.animation.shoot_sault.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sault/main
