@@ -89,3 +89,4 @@
     # 直線
         execute if entity @s[tag=aj.valk_aj.animation.shoot_shot_forward.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_forward/main
     # 拡散
+        execute if entity @s[tag=aj.valk_aj.animation.shoot_shot_horizon.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_horizon/main

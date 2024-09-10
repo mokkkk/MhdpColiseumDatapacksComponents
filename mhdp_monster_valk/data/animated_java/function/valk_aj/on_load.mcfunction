@@ -44,15 +44,8 @@ scoreboard objectives add aj.shoot_bomb_forward.frame dummy
 scoreboard objectives add aj.shoot_bomb_side.frame dummy
 scoreboard objectives add aj.shoot_sault.frame dummy
 scoreboard objectives add aj.comet_phase_1.frame dummy
-scoreboard objectives add aj.comet_phase_1_2.frame dummy
 scoreboard objectives add aj.comet_phase_2.frame dummy
 scoreboard objectives add aj.comet_phase_3.frame dummy
-scoreboard objectives add aj.comet_phase_3_2.frame dummy
 scoreboard objectives add aj.comet_phase_4.frame dummy
 scoreboard objectives add aj.comet_phase_5.frame dummy
-scoreboard objectives add aj.comet_phase_2_1.frame dummy
-scoreboard objectives add aj.comet_phase_2_2.frame dummy
-scoreboard objectives add aj.comet_4.frame dummy
-scoreboard objectives add aj.comet_3.frame dummy
-scoreboard objectives add aj.comet_2.frame dummy
 execute as @e[type=item_display,tag=aj.valk_aj.root] unless score @s aj.is_rig_loaded matches 1 at @s run function animated_java:valk_aj/root/on_load
