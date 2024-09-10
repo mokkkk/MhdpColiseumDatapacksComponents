@@ -1,4 +1,4 @@
-#> mhdp_monster_valk:core/tick/animation/event/comet_phase_1/m.particle
+#> mhdp_monster_valk:core/tick/animation/event/shoot_shot_forward/m.particle
 #
 # アニメーションイベントハンドラ 滑空突進開始
 #

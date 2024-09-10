@@ -1,4 +1,4 @@
-#> mhdp_monster_valk:core/tick/animation/event/shoot_shot_forward/main
+#> mhdp_monster_valk:core/tick/animation/event/shoot_shot_horizon/main
 #
 # アニメーションイベントハンドラ 射撃
 #
@@ -8,7 +8,7 @@
     $summon item_display ^$(posx) ^$(posy) ^$(posz) {teleport_duration:3,Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Shot","Start"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.7f,0.7f,0.7f]},item:{id:"minecraft:air",count:1}}
 
 # 初期化
-    execute as @n[type=item_display,tag=Mns.Shot.Valk.Shot,tag=Start] at @s facing entity @n[type=area_effect_cloud,tag=Mns.ShotPos.Valk] feet run tp @s ~ ~ ~ ~ ~
+    execute as @n[type=item_display,tag=Mns.Shot.Valk.Shot,tag=Start] at @s facing entity @n[type=area_effect_cloud,tag=Mns.ShotPos.Valk3] feet run tp @s ~ ~ ~ ~ ~
 
 # 演出
     $particle flash ^$(posx) ^$(posy) ^$(posz) 0 0 0 0 1 force
@@ -18,4 +18,4 @@
     playsound entity.shulker.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
 
 # 終了
-    tag @n[type=item_display,tag=Mns.Shot.Valk.Flame,tag=Start] remove Start
+    tag @n[type=item_display,tag=Mns.Shot.Valk.Shot,tag=Start] remove Start

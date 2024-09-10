@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # メイン処理
-    function mhdp_monster_valk:core/tick/tick_main
+    execute at @s run function mhdp_monster_valk:core/tick/tick_main
 
 # 怒り中、一定時間ごとにメイン処理を再度実行
     # execute if entity @s[tag=Mns.State.IsAnger] run scoreboard players add @s Mns.Temp.AngerSpeed.Timer 1

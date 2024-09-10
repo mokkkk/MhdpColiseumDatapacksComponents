@@ -90,3 +90,9 @@
         execute if entity @s[tag=aj.valk_aj.animation.shoot_shot_forward.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_forward/main
     # 拡散
         execute if entity @s[tag=aj.valk_aj.animation.shoot_shot_horizon.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_horizon/main
+
+# 前方爆発
+    execute if entity @s[tag=aj.valk_aj.animation.shoot_bomb_forward.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/main
+
+# 側面爆発
+    execute if entity @s[tag=aj.valk_aj.animation.shoot_bomb_side.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/main
