@@ -5,7 +5,7 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 移動
-    execute if score @s aj.shoot_bomb_side.frame matches 48..55 at @s run tp @s ^ ^ ^-0.5
+    execute if score @s aj.shoot_bomb_side.frame matches 48..55 at @s run tp @s ^ ^ ^-0.7
 
 # 効果音
     execute if score @s aj.shoot_bomb_side.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1

@@ -9,7 +9,7 @@
     execute if score @s aj.shoot_bomb_forward.frame matches 2..10 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
-    execute if score @s aj.shoot_bomb_forward.frame matches 40..56 at @s run tp @s ^ ^ ^-1.4
+    execute if score @s aj.shoot_bomb_forward.frame matches 40..56 at @s run tp @s ^ ^ ^-1.1
     execute if score @s aj.shoot_bomb_forward.frame matches 57..62 at @s run tp @s ^ ^ ^-0.2
 
 # 効果音

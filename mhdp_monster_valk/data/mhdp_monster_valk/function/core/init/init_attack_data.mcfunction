@@ -40,5 +40,5 @@
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Shot",DamageValue:6.5f,GuardValue:3,ElementType:5,ElementMultiply:100,Knockback:1,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
 # 爆発
-    data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Bomb",DamageValue:8.5f,GuardValue:4,ElementType:5,ElementMultiply:100,Knockback:2,IsLaunch:true,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
-
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Bomb.Side",DamageValue:8.5f,GuardValue:6,ElementType:5,ElementMultiply:100,Knockback:2,IsLaunch:true,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Bomb.Forward",DamageValue:8.5f,GuardValue:5,ElementType:5,ElementMultiply:100,Knockback:2,IsLaunch:true,LaunchType:2,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
