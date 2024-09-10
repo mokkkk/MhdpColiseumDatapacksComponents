@@ -33,5 +33,8 @@
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Sweep",DamageValue:8.6f,GuardValue:4,ElementType:0,ElementMultiply:0,Knockback:3,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Sweep.Anger",DamageValue:9.5f,GuardValue:5,ElementType:5,ElementMultiply:40,Knockback:3,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
+# 射撃
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Shot",DamageValue:5.5f,GuardValue:3,ElementType:5,ElementMultiply:100,Knockback:1,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+
 # 彗星
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Comet",DamageValue:21.0f,GuardValue:20,ElementType:5,ElementMultiply:10,Knockback:3,IsLaunch:true,LaunchType:2,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}

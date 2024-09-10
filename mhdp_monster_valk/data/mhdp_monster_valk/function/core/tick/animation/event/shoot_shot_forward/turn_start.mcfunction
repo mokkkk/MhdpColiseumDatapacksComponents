@@ -1,4 +1,4 @@
-#> mhdp_monster_valk:core/tick/animation/event/shoot_sweep_r/turn_start
+#> mhdp_monster_valk:core/tick/animation/event/shoot_sweep_anger_l/turn_start
 #
 # アニメーションイベントハンドラ 薙ぎ払い
 #
@@ -6,7 +6,7 @@
 
 # 角度計算
     tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
-    scoreboard players set #mhdp_temp_rotate_tick MhdpCore 5
+    scoreboard players set #mhdp_temp_rotate_tick MhdpCore 10
     function mhdp_monsters:core/util/other/turn_to_target_calc
 
 # 終了
