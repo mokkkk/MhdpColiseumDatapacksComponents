@@ -75,6 +75,10 @@
 # 変形・龍気→彗龍
     execute if entity @s[tag=aj.valk_aj.animation.shoot_to_lance.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_to_lance/main
 
+# 移動
+    execute if entity @s[tag=aj.valk_aj.animation.shoot_move_start.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_move_start/main
+    execute if entity @s[tag=aj.valk_aj.animation.shoot_move.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_move/main
+
 # 翼叩きつけ
     execute if entity @s[tag=aj.valk_aj.animation.shoot_vertical_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_r/main
     execute if entity @s[tag=aj.valk_aj.animation.shoot_vertical_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_l/main
