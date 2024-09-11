@@ -43,7 +43,9 @@ tag @s remove aj.valk_aj.animation.shoot_shot_forward.playing
 tag @s remove aj.valk_aj.animation.shoot_shot_horizon.playing
 tag @s remove aj.valk_aj.animation.shoot_bomb_forward.playing
 tag @s remove aj.valk_aj.animation.shoot_bomb_side.playing
+tag @s remove aj.valk_aj.animation.shoot_sault_before.playing
 tag @s remove aj.valk_aj.animation.shoot_sault.playing
+tag @s remove aj.valk_aj.animation.shoot_sault4.playing
 tag @s remove aj.valk_aj.animation.shoot_sault3.playing
 tag @s remove aj.valk_aj.animation.shoot_sault2.playing
 tag @s remove aj.valk_aj.animation.comet_phase_1.playing

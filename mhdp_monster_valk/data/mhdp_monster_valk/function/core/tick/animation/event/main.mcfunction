@@ -4,8 +4,6 @@
 #
 # @within function mhdp_monster_valk:core/tick/tick
 
-
-
 # 警戒
     # execute if entity @s[tag=aj.valk_aj.animation.search.playing] run function mhdp_monster_valk:core/tick/animation/event/search/main
 
@@ -102,4 +100,5 @@
     execute if entity @s[tag=aj.valk_aj.animation.shoot_bomb_side.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/main
 
 # 前転
+    execute if entity @s[tag=aj.valk_aj.animation.shoot_sault_before.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sault_before/main
     execute if entity @s[tag=aj.valk_aj.animation.shoot_sault.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sault/main

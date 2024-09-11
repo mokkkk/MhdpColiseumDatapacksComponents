@@ -42,7 +42,9 @@ scoreboard objectives add aj.shoot_shot_forward.frame dummy
 scoreboard objectives add aj.shoot_shot_horizon.frame dummy
 scoreboard objectives add aj.shoot_bomb_forward.frame dummy
 scoreboard objectives add aj.shoot_bomb_side.frame dummy
+scoreboard objectives add aj.shoot_sault_before.frame dummy
 scoreboard objectives add aj.shoot_sault.frame dummy
+scoreboard objectives add aj.shoot_sault4.frame dummy
 scoreboard objectives add aj.shoot_sault3.frame dummy
 scoreboard objectives add aj.shoot_sault2.frame dummy
 scoreboard objectives add aj.comet_phase_1.frame dummy
