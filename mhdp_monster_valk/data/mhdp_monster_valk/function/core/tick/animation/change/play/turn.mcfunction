@@ -13,6 +13,8 @@
 # 再生アニメーション決定
     execute if entity @s[tag=Mns.Temp.Right,tag=!Mns.Valk.State.IsShoot] run function animated_java:valk_aj/animations/lance_turn_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=!Mns.Temp.Right,tag=!Mns.Valk.State.IsShoot] run function animated_java:valk_aj/animations/lance_turn_l/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Mns.Temp.Right,tag=Mns.Valk.State.IsShoot] run function animated_java:valk_aj/animations/shoot_turn_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=!Mns.Temp.Right,tag=Mns.Valk.State.IsShoot] run function animated_java:valk_aj/animations/shoot_turn_l/tween {duration:1, to_frame: 1}
 
 # 終了
     tag @s remove Mns.Temp.Right

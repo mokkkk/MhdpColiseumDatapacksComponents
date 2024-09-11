@@ -30,6 +30,8 @@ tag @s remove aj.valk_aj.animation.lance_flytackle_end.playing
 tag @s remove aj.valk_aj.animation.lance_flytackle_repeat.playing
 tag @s remove aj.valk_aj.animation.shoot_pose.playing
 tag @s remove aj.valk_aj.animation.shoot_idle.playing
+tag @s remove aj.valk_aj.animation.shoot_turn_r.playing
+tag @s remove aj.valk_aj.animation.shoot_turn_l.playing
 tag @s remove aj.valk_aj.animation.shoot_to_lance.playing
 tag @s remove aj.valk_aj.animation.shoot_move_start.playing
 tag @s remove aj.valk_aj.animation.shoot_move.playing

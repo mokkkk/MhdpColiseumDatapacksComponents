@@ -4,10 +4,7 @@
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
-# 軸合わせ
-
 # 移動
-    
     execute if score @s aj.shoot_sault.frame matches 2..8 at @s run tp @s ^ ^ ^1
     execute if score @s aj.shoot_sault.frame matches 9..19 at @s run tp @s ^ ^ ^0.7
     execute if score @s aj.shoot_sault.frame matches 19 at @s run function mhdp_monster_valk:core/tick/animation/event/shoot_sault/move_start
@@ -26,15 +23,11 @@
     execute if score @s aj.shoot_sault.frame matches 2 run playsound entity.player.breath master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 2
     execute if score @s aj.shoot_sault.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.shoot_sault.frame matches 2 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 30
-    execute if score @s aj.shoot_sault.frame matches 57..59 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1.2 0.4
-    execute if score @s aj.shoot_sault.frame matches 57..59 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 0.7 0.4
-    execute if score @s aj.shoot_sault.frame matches 57..59 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 0.5 0.4
-    execute if score @s aj.shoot_sault.frame matches 57 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.hurt master @s ^ ^1 ^1 0.4 1.5 0.4
-    execute if score @s aj.shoot_sault.frame matches 57 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.hurt master @s ^ ^1 ^1 0.4 1.2 0.4
     execute if score @s aj.shoot_sault.frame matches 33 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.shoot_sault.frame matches 33 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 30
     execute if score @s aj.shoot_sault.frame matches 33..38 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.shoot_sault.frame matches 33..38 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 5
+    execute if score @s aj.shoot_sault.frame matches 57 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 演出
     execute if score @s aj.shoot_sault.frame matches 2..16 run function mhdp_monster_valk:core/tick/animation/event/shoot_sault/particle
