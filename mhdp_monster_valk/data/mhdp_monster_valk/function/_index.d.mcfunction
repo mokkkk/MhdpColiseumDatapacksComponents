@@ -25,6 +25,8 @@
 # 部位破壊
     #declare tag Mns.Break.Head 頭部位破壊
     #declare tag Mns.Break.Tail 尻尾部位破壊
+    #declare tag Mns.Break.Wing.R 右翼部位破壊
+    #declare tag Mns.Break.Wing.L 左翼部位破壊
 # アニメーション
 
 # その他Entity
