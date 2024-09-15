@@ -37,6 +37,10 @@
 # 形態変化
     execute if score @s aj.shoot_bomb_forward.frame matches 53 run tag @s remove Mns.Valk.State.IsShoot
 
+# モデル演出
+    execute if score @s aj.shoot_bomb_forward.frame matches 2 run function mhdp_monster_valk:core/util/models/ignite_start
+    execute if score @s aj.shoot_bomb_forward.frame matches 75 run function mhdp_monster_valk:core/util/models/ignite_end
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

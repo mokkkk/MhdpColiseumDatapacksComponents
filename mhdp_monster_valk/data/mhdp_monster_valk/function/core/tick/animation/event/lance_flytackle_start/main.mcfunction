@@ -39,6 +39,9 @@
     execute if score @s aj.lance_flytackle_start.frame matches 38 if score @s Mns.Valk.JetCount matches 2.. as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] positioned as @s if block ^ ^ ^3 #mhdp_core:no_collision run tp @s ^ ^ ^3
     execute if score @s aj.lance_flytackle_start.frame matches 38 if score @s Mns.Valk.JetCount matches 2.. as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] positioned as @s if block ^ ^ ^3 #mhdp_core:no_collision run tp @s ^ ^ ^3
 
+# モデル演出
+    execute if score @s aj.lance_flytackle_start.frame matches 5 run function mhdp_monster_valk:core/util/models/ignite_start
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

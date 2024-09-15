@@ -39,6 +39,10 @@
     execute if score @s aj.shoot_shot_horizon.frame matches 32 on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_horizon/m.shot_r with entity @s data.locators.pos_muzzle_r_0
     execute if score @s aj.shoot_shot_horizon.frame matches 33 on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_horizon/m.shot_l with entity @s data.locators.pos_muzzle_l_0
 
+# モデル演出
+    execute if score @s aj.shoot_shot_horizon.frame matches 2 run function mhdp_monster_valk:core/util/models/ignite_start
+    execute if score @s aj.shoot_shot_horizon.frame matches 40 run function mhdp_monster_valk:core/util/models/ignite_end
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

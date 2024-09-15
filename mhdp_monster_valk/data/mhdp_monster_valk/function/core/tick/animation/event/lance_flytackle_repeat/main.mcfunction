@@ -30,6 +30,9 @@
 # 攻撃
     execute if score @s aj.lance_flytackle_repeat.frame matches 2..8 run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_repeat/attack
 
+# モデル演出
+    execute if score @s aj.lance_flytackle_repeat.frame matches 20 run function mhdp_monster_valk:core/util/models/ignite_end
+
 ## 折り返し
 # 軸合わせ
     execute if score @s aj.lance_flytackle_repeat.frame matches 26..42 run tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
@@ -60,6 +63,9 @@
 
 # 攻撃
     execute if score @s aj.lance_flytackle_repeat.frame matches 48..53 run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_repeat/attack
+
+# モデル演出
+    execute if score @s aj.lance_flytackle_repeat.frame matches 43 run function mhdp_monster_valk:core/util/models/ignite_start
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground

@@ -35,6 +35,10 @@
 # 攻撃
     execute if score @s aj.shoot_sault.frame matches 17 run function mhdp_monster_valk:core/tick/animation/event/shoot_sault/attack
 
+# モデル演出
+    execute if score @s aj.shoot_sault.frame matches 2 run function mhdp_monster_valk:core/util/models/ignite_start
+    execute if score @s aj.shoot_sault.frame matches 33 run function mhdp_monster_valk:core/util/models/ignite_end
+
 # 形態変化
     execute if score @s aj.shoot_sault.frame matches 53 run tag @s remove Mns.Valk.State.IsShoot
 

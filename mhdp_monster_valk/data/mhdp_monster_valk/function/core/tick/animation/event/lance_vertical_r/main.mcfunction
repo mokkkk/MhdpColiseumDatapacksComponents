@@ -45,12 +45,16 @@
     execute if score @s aj.lance_vertical_r.frame matches 48 positioned ^-1.2 ^1 ^7 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_r/attack
     execute if score @s aj.lance_vertical_r.frame matches 52 positioned ^-1.2 ^1 ^7 rotated ~ -90 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_r/particle_ring
 
+# モデル演出
+    execute if score @s aj.lance_vertical_r.frame matches 33 run function mhdp_monster_valk:core/util/models/ignite_start_right
+    execute if score @s aj.lance_vertical_r.frame matches 65 run function mhdp_monster_valk:core/util/models/ignite_end_right
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 2連
-    execute if score @s aj.lance_vertical_r.frame matches 65 run function animated_java:valk_aj/animations/lance_vertical_r_to_l/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Mns.State.IsAnger] if score @s aj.lance_vertical_r.frame matches 65 run function animated_java:valk_aj/animations/lance_vertical_r_to_l/tween {duration:1, to_frame: 1}
 
 # 終了
     execute if score @s aj.lance_vertical_r.frame matches 124 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_r/end

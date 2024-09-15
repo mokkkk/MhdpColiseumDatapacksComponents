@@ -33,9 +33,13 @@
     execute if score @s aj.lance_vertical_l_to_r.frame matches 20 positioned ^-1.2 ^1 ^7 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l_to_r/attack
     execute if score @s aj.lance_vertical_l_to_r.frame matches 24 positioned ^-1.2 ^1 ^7 rotated ~ -90 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l_to_r/particle_ring
 
+# モデル演出
+    execute if score @s aj.lance_vertical_l_to_r.frame matches 10 run function mhdp_monster_valk:core/util/models/ignite_start_right
+    execute if score @s aj.lance_vertical_l_to_r.frame matches 32 run function mhdp_monster_valk:core/util/models/ignite_end_right
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 終了
-    execute if score @s aj.lance_vertical_l_to_r.frame matches 124 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l_to_r/end
+    execute if score @s aj.lance_vertical_l_to_r.frame matches 95 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l_to_r/end

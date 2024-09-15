@@ -35,6 +35,9 @@
 # 攻撃
     execute if score @s aj.lance_flytackle_end.frame matches 2..8 run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_end/attack
 
+# モデル演出
+    execute if score @s aj.lance_flytackle_end.frame matches 35 run function mhdp_monster_valk:core/util/models/ignite_end
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

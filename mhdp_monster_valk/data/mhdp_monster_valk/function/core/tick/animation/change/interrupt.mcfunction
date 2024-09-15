@@ -5,11 +5,11 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.Voice
-    # function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin_move
+    # tag @s add Anim.Bomb.Side
+    function mhdp_monster_valk:core/tick/animation/change/play/sault_move
 
 # 軸合わせ
-    tag @s add Mns.Temp.IsTurn
+    # tag @s add Mns.Temp.IsTurn
 
 # アニメーション変更
     function mhdp_monster_valk:core/tick/animation/change/main

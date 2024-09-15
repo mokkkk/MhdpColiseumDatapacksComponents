@@ -44,6 +44,10 @@
     execute if score @s aj.shoot_vertical_l.frame matches 51 positioned ^3 ^1 ^9 run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_l/attack
     execute if score @s aj.shoot_vertical_l.frame matches 53 positioned ^3 ^1 ^9 rotated ~ -90 run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_l/particle_ring
 
+# モデル演出
+    execute if score @s aj.shoot_vertical_l.frame matches 42 run function mhdp_monster_valk:core/util/models/ignite_start_left
+    execute if score @s aj.shoot_vertical_l.frame matches 70 run function mhdp_monster_valk:core/util/models/ignite_end_left
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

@@ -46,7 +46,11 @@
     execute if score @s aj.lance_spear_to_spin_r.frame matches 68 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
     execute if score @s aj.lance_spear_to_spin_r.frame matches 68 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
     execute if score @s aj.lance_spear_to_spin_r.frame matches 68 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
-    
+
+# モデル演出
+    execute if score @s aj.lance_spear_to_spin_r.frame matches 10 run function mhdp_monster_valk:core/util/models/ignite_start_right
+    execute if score @s aj.lance_spear_to_spin_r.frame matches 100 run function mhdp_monster_valk:core/util/models/ignite_end_right
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

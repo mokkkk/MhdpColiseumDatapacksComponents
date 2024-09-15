@@ -36,6 +36,10 @@
     execute if score @s aj.shoot_sweep_anger_l.frame matches 49..53 run particle block{block_state:"minecraft:sand"} ^3 ^ ^8 2 0.1 2 0 10
     execute if score @s aj.shoot_sweep_anger_l.frame matches 54..57 run particle block{block_state:"minecraft:sand"} ^ ^ ^8 2 0.1 2 0 10
 
+# モデル演出
+    execute if score @s aj.shoot_sweep_anger_l.frame matches 5 run function mhdp_monster_valk:core/util/models/ignite_start_left
+    execute if score @s aj.shoot_sweep_anger_l.frame matches 62 run function mhdp_monster_valk:core/util/models/ignite_end_left
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
