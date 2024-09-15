@@ -14,5 +14,5 @@
     function mhdp_monster_valk:core/tick/animation/event/main
 
 # その他演出
-    # 怒り中・頭部の演出
-        # execute if entity @s[tag=Mns.State.IsAnger] on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/effect_anger with entity @s data.locators.pos_head
+    # 怒り中演出
+        execute if entity @s[tag=Mns.State.IsAnger] run function mhdp_monster_valk:core/tick/effect_anger

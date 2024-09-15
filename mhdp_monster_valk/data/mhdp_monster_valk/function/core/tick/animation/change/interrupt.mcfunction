@@ -5,8 +5,8 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    # tag @s add Anim.Bomb.Side
-    function mhdp_monster_valk:core/tick/animation/change/play/sault_move
+    tag @s add Anim.Comet
+    # function mhdp_monster_valk:core/tick/animation/change/play/sault_move
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn
