@@ -15,4 +15,4 @@
     # function mhdp_monster_valk:core/tick/animation/change/main
 
 # 直接再生
-    function animated_java:valk_aj/animations/lance_damage_head/tween {duration:1, to_frame: 1}
+    function animated_java:valk_aj/animations/lance_damage_down_r/tween {duration:1, to_frame: 1}
