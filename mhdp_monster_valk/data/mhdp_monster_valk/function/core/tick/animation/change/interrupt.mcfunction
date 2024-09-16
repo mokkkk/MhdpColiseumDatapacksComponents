@@ -5,11 +5,14 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.Comet
+    # tag @s add Anim.Comet
     # function mhdp_monster_valk:core/tick/animation/change/play/sault_move
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn
 
 # アニメーション変更
-    function mhdp_monster_valk:core/tick/animation/change/main
+    # function mhdp_monster_valk:core/tick/animation/change/main
+
+# 直接再生
+    function animated_java:valk_aj/animations/lance_damage_head/tween {duration:1, to_frame: 1}

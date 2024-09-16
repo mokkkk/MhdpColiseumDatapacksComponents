@@ -12,6 +12,17 @@
     execute if entity @s[tag=aj.valk_aj.animation.lance_idle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_idle_short.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle_short/main
 
+# 怯み
+    # 頭
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_head.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_head/main
+    # 翼
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_wing_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_wing_r/main
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_wing_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_wing_l/main
+    # 胴・腕・脚
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_body_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_body_r/main
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_body_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_body_l/main
+    # 尻尾
+
 # 変形・彗龍→龍気
     execute if entity @s[tag=aj.valk_aj.animation.lance_to_shoot.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_to_shoot/main
 
