@@ -42,5 +42,8 @@
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 状態
+    execute if score @s aj.lance_flytackle_end.frame matches 8 run tag @s remove Mns.State.IsFlying
+
 # 終了
     execute if score @s aj.lance_flytackle_end.frame matches 67 run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_end/end

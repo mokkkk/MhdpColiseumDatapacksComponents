@@ -20,6 +20,7 @@ scoreboard objectives add aj.lance_damage_flying.frame dummy
 scoreboard objectives add aj.lance_to_shoot.frame dummy
 scoreboard objectives add aj.lance_voice.frame dummy
 scoreboard objectives add aj.lance_anger.frame dummy
+scoreboard objectives add aj.lance_moveback.frame dummy
 scoreboard objectives add aj.lance_turn_r.frame dummy
 scoreboard objectives add aj.lance_turn_l.frame dummy
 scoreboard objectives add aj.lance_move_start.frame dummy
@@ -44,6 +45,7 @@ scoreboard objectives add aj.lance_flytackle_end.frame dummy
 scoreboard objectives add aj.lance_flytackle_repeat.frame dummy
 scoreboard objectives add aj.shoot_pose.frame dummy
 scoreboard objectives add aj.shoot_idle.frame dummy
+scoreboard objectives add aj.shoot_step.frame dummy
 scoreboard objectives add aj.shoot_turn_r.frame dummy
 scoreboard objectives add aj.shoot_turn_l.frame dummy
 scoreboard objectives add aj.shoot_to_lance.frame dummy

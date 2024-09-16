@@ -21,5 +21,8 @@
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 形態変化
+    execute if score @s aj.lance_damage_down_r.frame matches 1 run tag @s remove Mns.Valk.State.IsShoot
+
 # 終了
     execute if score @s aj.lance_damage_down_r.frame matches 29 run function mhdp_monster_valk:core/tick/animation/event/lance_damage_down_r/end

@@ -20,3 +20,4 @@
         execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:valk_aj/animations/lance_anger/tween {duration:1, to_frame: 0}
     # モデル変更
         function mhdp_monster_valk:core/util/models/anger_start
+        function mhdp_monster_valk:core/util/models/model_interrupt

@@ -21,6 +21,7 @@ tag @s remove aj.valk_aj.animation.lance_damage_flying.playing
 tag @s remove aj.valk_aj.animation.lance_to_shoot.playing
 tag @s remove aj.valk_aj.animation.lance_voice.playing
 tag @s remove aj.valk_aj.animation.lance_anger.playing
+tag @s remove aj.valk_aj.animation.lance_moveback.playing
 tag @s remove aj.valk_aj.animation.lance_turn_r.playing
 tag @s remove aj.valk_aj.animation.lance_turn_l.playing
 tag @s remove aj.valk_aj.animation.lance_move_start.playing
@@ -45,6 +46,7 @@ tag @s remove aj.valk_aj.animation.lance_flytackle_end.playing
 tag @s remove aj.valk_aj.animation.lance_flytackle_repeat.playing
 tag @s remove aj.valk_aj.animation.shoot_pose.playing
 tag @s remove aj.valk_aj.animation.shoot_idle.playing
+tag @s remove aj.valk_aj.animation.shoot_step.playing
 tag @s remove aj.valk_aj.animation.shoot_turn_r.playing
 tag @s remove aj.valk_aj.animation.shoot_turn_l.playing
 tag @s remove aj.valk_aj.animation.shoot_to_lance.playing

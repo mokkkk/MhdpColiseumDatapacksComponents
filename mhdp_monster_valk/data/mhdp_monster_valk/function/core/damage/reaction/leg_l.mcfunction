@@ -26,6 +26,8 @@
         function mhdp_monsters:core/util/other/remove_animation_tag
     # 状態設定
         execute if score @s Mns.Valk.LegL.Damage.Count matches 3.. run tag @s add Mns.State.IsDown
+    # モデル変更
+        function mhdp_monster_valk:core/util/models/model_interrupt
 
 # 終了
     execute if score @s Mns.Valk.LegL.Damage.Count matches 3.. run scoreboard players set @s Mns.Valk.LegL.Damage.Count 0
