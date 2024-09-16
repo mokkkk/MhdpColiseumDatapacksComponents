@@ -17,4 +17,4 @@
     # execute if entity @s[tag=Mns.Shot.Valk.Breath] run function mhdp_monster_valk:core/tick/shot/breath/tick
 
 # 尻尾
-    # execute if entity @s[tag=Mns.Shot.Valk.Tail] run function mhdp_monster_valk:core/tick/shot/tail/tick
+    execute if entity @s[tag=Mns.Shot.Valk.Tail] run function mhdp_monster_valk:core/tick/shot/tail/tick

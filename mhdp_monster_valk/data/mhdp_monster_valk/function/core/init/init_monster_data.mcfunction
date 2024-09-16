@@ -16,22 +16,41 @@
     # 尻尾部位耐久値
         scoreboard objectives add Mns.Valk.Tail.Damage dummy
         scoreboard objectives add Mns.Valk.Tail.Damage.Max dummy
+    # 右腕部位耐久値
+        scoreboard objectives add Mns.Valk.ArmR.Damage dummy
+        scoreboard objectives add Mns.Valk.ArmR.Damage.Max dummy
+    # 左腕部位耐久値
+        scoreboard objectives add Mns.Valk.ArmL.Damage dummy
+        scoreboard objectives add Mns.Valk.ArmL.Damage.Max dummy
     # 右足部位耐久値
         scoreboard objectives add Mns.Valk.LegR.Damage dummy
         scoreboard objectives add Mns.Valk.LegR.Damage.Max dummy
     # 左足部位耐久値
         scoreboard objectives add Mns.Valk.LegL.Damage dummy
         scoreboard objectives add Mns.Valk.LegL.Damage.Max dummy
-    # フェーズ
+    # 右翼部位耐久値
+        scoreboard objectives add Mns.Valk.WingR.Damage dummy
+        scoreboard objectives add Mns.Valk.WingR.Damage.Max dummy
+    # 左翼部位耐久値
+        scoreboard objectives add Mns.Valk.WingL.Damage dummy
+        scoreboard objectives add Mns.Valk.WingL.Damage.Max dummy
+
+# フェーズ
     # 怯み回数
         # 頭
             scoreboard objectives add Mns.Valk.Head.Damage.Count dummy
         # 尻尾
             scoreboard objectives add Mns.Valk.Tail.Damage.Count dummy
+        # 右腕
+            scoreboard objectives add Mns.Valk.ArmR.Damage.Count dummy
+        # 左腕
+            scoreboard objectives add Mns.Valk.ArmL.Damage.Count dummy
         # 右足
             scoreboard objectives add Mns.Valk.LegR.Damage.Count dummy
         # 左足
             scoreboard objectives add Mns.Valk.LegL.Damage.Count dummy
+    # フェーズ
+        scoreboard objectives add Mns.Valk.PhaseCount dummy
     # 移動回数
         scoreboard objectives add Mns.Valk.DashCount dummy
     # サブカウント
@@ -70,11 +89,15 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:true,\
         HallTrapTimer:15,\
-        HeadPartDamage:8,\
-        BodyPartDamage:6,\
-        TailPartDamage:5,\
-        LegRPartDamage:5,\
-        LegLPartDamage:5\
+        HeadPartDamage:9,\
+        BodyPartDamage:8,\
+        TailPartDamage:6,\
+        ArmRPartDamage:7,\
+        ArmLPartDamage:7,\
+        LegRPartDamage:7,\
+        LegLPartDamage:7,\
+        WingRPartDamage:7,\
+        WingLPartDamage:7\
     }
 
 # 肉質データ

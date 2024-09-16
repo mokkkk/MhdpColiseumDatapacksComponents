@@ -1,8 +1,8 @@
-#> mhdp_monster_dino:core/tick/shot/tail/move_start
+#> mhdp_monster_valk:core/tick/shot/tail/move_start
 #
 # 尻尾tick処理
 #
-# @within function mhdp_monster_dino:core/tick/shot/tail/tick
+# @within function mhdp_monster_valk:core/tick/shot/tail/tick
 
 # ターゲット配置
     summon marker ^5 ^ ^-6 {Tags:["Temp.Move.Target.Marker"]}

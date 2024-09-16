@@ -1,4 +1,4 @@
-#> mhdp_monster_valk:core/damage/reaction/leg_r
+#> mhdp_monster_valk:core/damage/reaction/arm_r
 #
 # 怯みリアクション 右足
 #
@@ -6,16 +6,19 @@
 
 # 共通処理
     # スコアリセット
-        scoreboard players operation @s Mns.Valk.LegR.Damage = @s Mns.Valk.LegR.Damage.Max
+        scoreboard players operation @s Mns.Valk.ArmL.Damage = @s Mns.Valk.ArmL.Damage.Max
     # カウンター増加
-        scoreboard players add @s Mns.Valk.LegR.Damage.Count 1
+        scoreboard players add @s Mns.Valk.ArmL.Damage.Count 1
+
+# 部位破壊処理
+    execute if entity @s[tag=!Mns.Break.Arm.L] run function mhdp_monster_valk:core/damage/reaction/arm_l_break
 
 # アニメーション再生処理
     # 麻痺・ダウン・スタン時以外
         execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
     # アニメーション再生
-            execute if score @s Mns.Valk.LegR.Damage.Count matches ..1 run function animated_java:valk_aj/animations/lance_damage_body_r/tween {duration:1, to_frame: 0}
-            execute if score @s Mns.Valk.LegR.Damage.Count matches 2.. run function animated_java:valk_aj/animations/lance_damage_down_r/tween {duration:1, to_frame: 0}
+            execute if score @s Mns.Valk.ArmL.Damage.Count matches ..1 run function animated_java:valk_aj/animations/lance_damage_body_l/tween {duration:1, to_frame: 0}
+            execute if score @s Mns.Valk.ArmL.Damage.Count matches 2.. run function animated_java:valk_aj/animations/lance_damage_down_l/tween {duration:1, to_frame: 0}
             execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monster_valk:core/damage/reaction/flying
     # ダウン時間設定
         scoreboard players set @s Mns.General.DownCount 5
@@ -25,7 +28,7 @@
     # アニメーションタグ消去
         function mhdp_monsters:core/util/other/remove_animation_tag
     # 状態設定
-        execute if score @s Mns.Valk.LegR.Damage.Count matches 2.. run tag @s add Mns.State.IsDown
+        execute if score @s Mns.Valk.ArmL.Damage.Count matches 2.. run tag @s add Mns.State.IsDown
 
 # 終了
-    execute if score @s Mns.Valk.LegR.Damage.Count matches 2.. run scoreboard players set @s Mns.Valk.LegR.Damage.Count 0
+    execute if score @s Mns.Valk.ArmL.Damage.Count matches 2.. run scoreboard players set @s Mns.Valk.ArmL.Damage.Count 0
