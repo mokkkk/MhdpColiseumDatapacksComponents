@@ -20,6 +20,7 @@ tag @s remove aj.valk_aj.animation.lance_damage_tail_break.playing
 tag @s remove aj.valk_aj.animation.lance_damage_flying.playing
 tag @s remove aj.valk_aj.animation.lance_to_shoot.playing
 tag @s remove aj.valk_aj.animation.lance_voice.playing
+tag @s remove aj.valk_aj.animation.lance_anger.playing
 tag @s remove aj.valk_aj.animation.lance_turn_r.playing
 tag @s remove aj.valk_aj.animation.lance_turn_l.playing
 tag @s remove aj.valk_aj.animation.lance_move_start.playing

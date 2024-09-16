@@ -70,11 +70,11 @@
         LootTable:"mhdp_items:materials/valk",\
         ShowHp:true,\
         Hp:13000,\
-        StunDamage:200,\
+        StunDamage:400,\
         TireDamage:300,\
         AngerDamagePer:10,\
-        AngerTimer:60,\
-        AngerAttackMult:120,\
+        AngerTimer:120,\
+        AngerAttackMult:125,\
         AngerSpeed:10,\
         ParalysisDamage:500,\
         ParalysisTimer:10,\
@@ -85,10 +85,10 @@
         BombEffectDamage:200,\
         FlashBombEnable:true,\
         SoundBombEnable:false,\
-        ParalyseTrapEnable:true,\
-        ParalyseTrapTimer:10,\
-        HallTrapEnable:true,\
-        HallTrapTimer:15,\
+        ParalyseTrapEnable:false,\
+        ParalyseTrapTimer:0,\
+        HallTrapEnable:false,\
+        HallTrapTimer:0,\
         HeadPartDamage:9,\
         BodyPartDamage:8,\
         TailPartDamage:6,\

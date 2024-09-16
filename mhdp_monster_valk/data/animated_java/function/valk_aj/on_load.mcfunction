@@ -19,6 +19,7 @@ scoreboard objectives add aj.lance_damage_tail_break.frame dummy
 scoreboard objectives add aj.lance_damage_flying.frame dummy
 scoreboard objectives add aj.lance_to_shoot.frame dummy
 scoreboard objectives add aj.lance_voice.frame dummy
+scoreboard objectives add aj.lance_anger.frame dummy
 scoreboard objectives add aj.lance_turn_r.frame dummy
 scoreboard objectives add aj.lance_turn_l.frame dummy
 scoreboard objectives add aj.lance_move_start.frame dummy

@@ -21,7 +21,7 @@
     # 連続行動回数加算
         execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] run scoreboard players add @s Mns.General.ActCount.Target 1
     # 怒り終了
-        # execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches ..0 run function mhdp_monster_valk:core/damage/reaction/anger_end
+        execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches ..0 run function mhdp_monster_valk:core/damage/reaction/anger_end
 
 # ターゲット更新
     # ターゲットがいない場合

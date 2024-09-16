@@ -39,6 +39,7 @@
 
 # 咆哮
     execute if entity @s[tag=aj.valk_aj.animation.lance_voice.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_voice/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_anger.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_anger/main
 
 # 軸合わせ
     execute if entity @s[tag=aj.valk_aj.animation.lance_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_turn_r/main

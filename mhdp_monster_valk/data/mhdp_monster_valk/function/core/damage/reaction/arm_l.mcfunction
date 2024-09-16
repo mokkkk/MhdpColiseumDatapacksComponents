@@ -17,8 +17,8 @@
     # 麻痺・ダウン・スタン時以外
         execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
     # アニメーション再生
-            execute if score @s Mns.Valk.ArmL.Damage.Count matches ..1 run function animated_java:valk_aj/animations/lance_damage_body_l/tween {duration:1, to_frame: 0}
-            execute if score @s Mns.Valk.ArmL.Damage.Count matches 2.. run function animated_java:valk_aj/animations/lance_damage_down_l/tween {duration:1, to_frame: 0}
+            execute if score @s Mns.Valk.ArmL.Damage.Count matches ..2 run function animated_java:valk_aj/animations/lance_damage_body_l/tween {duration:1, to_frame: 0}
+            execute if score @s Mns.Valk.ArmL.Damage.Count matches 3.. run function animated_java:valk_aj/animations/lance_damage_down_l/tween {duration:1, to_frame: 0}
             execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monster_valk:core/damage/reaction/flying
     # ダウン時間設定
         scoreboard players set @s Mns.General.DownCount 5
@@ -28,7 +28,7 @@
     # アニメーションタグ消去
         function mhdp_monsters:core/util/other/remove_animation_tag
     # 状態設定
-        execute if score @s Mns.Valk.ArmL.Damage.Count matches 2.. run tag @s add Mns.State.IsDown
+        execute if score @s Mns.Valk.ArmL.Damage.Count matches 3.. run tag @s add Mns.State.IsDown
 
 # 終了
-    execute if score @s Mns.Valk.ArmL.Damage.Count matches 2.. run scoreboard players set @s Mns.Valk.ArmL.Damage.Count 0
+    execute if score @s Mns.Valk.ArmL.Damage.Count matches 3.. run scoreboard players set @s Mns.Valk.ArmL.Damage.Count 0
