@@ -19,6 +19,7 @@ execute if entity @s[tag=aj.valk_aj.animation.lance_down_end_r.playing] run func
 execute if entity @s[tag=aj.valk_aj.animation.lance_down_end_l.playing] run function animated_java:valk_aj/animations/lance_down_end_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_tail.playing] run function animated_java:valk_aj/animations/lance_damage_tail/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_tail_break.playing] run function animated_java:valk_aj/animations/lance_damage_tail_break/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_damage_flying.playing] run function animated_java:valk_aj/animations/lance_damage_flying/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_to_shoot.playing] run function animated_java:valk_aj/animations/lance_to_shoot/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_voice.playing] run function animated_java:valk_aj/animations/lance_voice/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_turn_r.playing] run function animated_java:valk_aj/animations/lance_turn_r/zzz/on_tick

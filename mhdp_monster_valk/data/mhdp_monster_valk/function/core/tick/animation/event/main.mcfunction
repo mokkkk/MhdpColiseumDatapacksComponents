@@ -28,6 +28,11 @@
         execute if entity @s[tag=aj.valk_aj.animation.lance_damage_down_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_down_r/main
         execute if entity @s[tag=aj.valk_aj.animation.lance_down_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_down_r/main
         execute if entity @s[tag=aj.valk_aj.animation.lance_down_end_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_down_end_r/main
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_down_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_down_l/main
+        execute if entity @s[tag=aj.valk_aj.animation.lance_down_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_down_l/main
+        execute if entity @s[tag=aj.valk_aj.animation.lance_down_end_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_down_end_l/main
+    # 飛行中ダウン
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_flying/main
 
 # 変形・彗龍→龍気
     execute if entity @s[tag=aj.valk_aj.animation.lance_to_shoot.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_to_shoot/main

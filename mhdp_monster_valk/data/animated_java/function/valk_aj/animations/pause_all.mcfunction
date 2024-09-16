@@ -17,6 +17,7 @@ tag @s remove aj.valk_aj.animation.lance_down_end_r.playing
 tag @s remove aj.valk_aj.animation.lance_down_end_l.playing
 tag @s remove aj.valk_aj.animation.lance_damage_tail.playing
 tag @s remove aj.valk_aj.animation.lance_damage_tail_break.playing
+tag @s remove aj.valk_aj.animation.lance_damage_flying.playing
 tag @s remove aj.valk_aj.animation.lance_to_shoot.playing
 tag @s remove aj.valk_aj.animation.lance_voice.playing
 tag @s remove aj.valk_aj.animation.lance_turn_r.playing
