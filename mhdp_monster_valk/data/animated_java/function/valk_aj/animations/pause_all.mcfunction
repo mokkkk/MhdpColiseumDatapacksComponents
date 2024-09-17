@@ -2,7 +2,7 @@
 execute unless entity @s[type=item_display,tag=aj.valk_aj.root] run return run function animated_java:global/errors/function_not_executed_as_root_entity {'export_namespace': 'valk_aj', 'function_path': 'animated_java:valk_aj/animations/pause_all'}
 tag @s remove aj.valk_aj.animation.jacket_pose.playing
 tag @s remove aj.valk_aj.animation.lance_pose.playing
-tag @s remove aj.valk_aj.animation.lance_death2.playing
+tag @s remove aj.valk_aj.animation.state_paralysis.playing
 tag @s remove aj.valk_aj.animation.lance_idle.playing
 tag @s remove aj.valk_aj.animation.lance_idle_short.playing
 tag @s remove aj.valk_aj.animation.lance_damage_head.playing
