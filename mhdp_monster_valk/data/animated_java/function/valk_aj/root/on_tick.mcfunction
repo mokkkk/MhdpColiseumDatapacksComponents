@@ -4,6 +4,7 @@ execute unless score @s aj.is_rig_loaded matches 1 run function #animated_java:g
 function #animated_java:valk_aj/as_root/pre_tick
 execute if entity @s[tag=aj.valk_aj.animation.jacket_pose.playing] run function animated_java:valk_aj/animations/jacket_pose/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_pose.playing] run function animated_java:valk_aj/animations/lance_pose/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_death2.playing] run function animated_java:valk_aj/animations/lance_death2/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_idle.playing] run function animated_java:valk_aj/animations/lance_idle/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_idle_short.playing] run function animated_java:valk_aj/animations/lance_idle_short/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_head.playing] run function animated_java:valk_aj/animations/lance_damage_head/zzz/on_tick
@@ -20,6 +21,8 @@ execute if entity @s[tag=aj.valk_aj.animation.lance_down_end_l.playing] run func
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_tail.playing] run function animated_java:valk_aj/animations/lance_damage_tail/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_tail_break.playing] run function animated_java:valk_aj/animations/lance_damage_tail_break/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_flying.playing] run function animated_java:valk_aj/animations/lance_damage_flying/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_death.playing] run function animated_java:valk_aj/animations/lance_death/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_death_flying.playing] run function animated_java:valk_aj/animations/lance_death_flying/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_to_shoot.playing] run function animated_java:valk_aj/animations/lance_to_shoot/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_voice.playing] run function animated_java:valk_aj/animations/lance_voice/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_anger.playing] run function animated_java:valk_aj/animations/lance_anger/zzz/on_tick

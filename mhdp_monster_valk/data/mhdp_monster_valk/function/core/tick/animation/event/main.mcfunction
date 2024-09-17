@@ -45,6 +45,9 @@
     execute if entity @s[tag=aj.valk_aj.animation.lance_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_turn_r/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_turn_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_turn_l/main
 
+# 車庫入れ
+    execute if entity @s[tag=aj.valk_aj.animation.lance_moveback.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_moveback/main
+
 # 移動
     execute if entity @s[tag=aj.valk_aj.animation.lance_move_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_move_start/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_move.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_move/main
@@ -99,6 +102,9 @@
 # 軸合わせ
     execute if entity @s[tag=aj.valk_aj.animation.shoot_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_turn_r/main
     execute if entity @s[tag=aj.valk_aj.animation.shoot_turn_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_turn_l/main
+
+# ステップ
+    execute if entity @s[tag=aj.valk_aj.animation.shoot_step.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_step/main
 
 # 移動
     execute if entity @s[tag=aj.valk_aj.animation.shoot_move_start.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_move_start/main

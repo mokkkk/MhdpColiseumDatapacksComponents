@@ -40,6 +40,8 @@
         execute if entity @s[tag=Anim.Comet] run function animated_java:valk_aj/animations/comet_phase_1/tween {duration:1, to_frame: 1}
     # 変形・龍気→彗龍
         execute if entity @s[tag=Anim.Change.ShootToLance] run function animated_java:valk_aj/animations/shoot_to_lance/tween {duration:1, to_frame: 1}
+    # ステップ
+        execute if entity @s[tag=Anim.Step] run function animated_java:valk_aj/animations/shoot_step/tween {duration:1, to_frame: 1}
     # 翼叩きつけ
         execute if entity @s[tag=Anim.VerticalS.R] run function animated_java:valk_aj/animations/shoot_vertical_r/tween {duration:1, to_frame: 1}
         execute if entity @s[tag=Anim.VerticalS.L] run function animated_java:valk_aj/animations/shoot_vertical_l/tween {duration:1, to_frame: 1}
