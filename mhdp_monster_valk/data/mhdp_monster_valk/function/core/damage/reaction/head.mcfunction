@@ -22,7 +22,8 @@
     # ダウン時間設定
         scoreboard players set @s Mns.General.DownCount 2
     # 状態設定
-        execute if entity @s[tag=Mns.State.IsFlying] run tag @s add Mns.State.IsDown
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_flying.playing] run tag @s add Mns.State.IsDown
+        tag @s remove Mns.State.IsDisableAngerSpeed
     # 攻撃者を向く
         execute at @s facing entity @a[tag=Temp.Attacker] feet run tp @s ~ ~ ~ ~ 0
     # 演出
@@ -30,5 +31,5 @@
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     # アニメーションタグ消去
         function mhdp_monsters:core/util/other/remove_animation_tag
-    # モデル変更
+    # モデル変更(天彗龍の一部演出をリセットするため)
         function mhdp_monster_valk:core/util/models/model_interrupt

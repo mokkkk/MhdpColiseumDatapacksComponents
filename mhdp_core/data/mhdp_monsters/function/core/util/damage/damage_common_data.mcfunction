@@ -18,9 +18,14 @@
 #        score #mhdp_temp_damage_tire_value MhdpCore 減気量
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
 
+# 部位ダメージ無効時、部位ダメージ量を0にする
+    execute if entity @s[tag=Mns.State.IsDisablePartDamage] run scoreboard players set #mhdp_temp_damage_partdamage_value MhdpCore 0
+
 # HP
     scoreboard players operation @s Mns.Hp -= #mhdp_temp_damage_total MhdpCore
     scoreboard players operation @s Mns.Hp.Half -= #mhdp_temp_damage_total MhdpCore
+    # 討伐無効時、HPを1残す
+        execute if entity @s[tag=Mns.State.IsDisableDeath] if score @s Mns.Hp matches ..0 run scoreboard players set @s Mns.Hp 1
     # クエストのHP半減時処理を呼び出す
         execute if entity @s[tag=!Mns.State.HpHalf] if score @s Mns.Hp.Half matches ..0 run function mhdp_monsters:core/util/damage/check_hp_half
     # 討伐処理を呼び出す

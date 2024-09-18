@@ -10,6 +10,7 @@
         execute store result score @s Mns.Stun.Damage run scoreboard players operation @s Mns.Stun.Damage.Max /= #const_100 Const
     # 状態設定
         tag @s add Mns.State.IsStun
+        tag @s remove Mns.State.IsDisableAngerSpeed
 
 # アニメーション再生処理
     # アニメーション再生

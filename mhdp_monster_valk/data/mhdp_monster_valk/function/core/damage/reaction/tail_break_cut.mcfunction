@@ -5,7 +5,7 @@
 # @within function mhdp_monster_valk:core/damage/damage
 
 # 状態更新
-    # tag @s add Mns.Break.Tail 
+    tag @s add Mns.Break.Tail 
     tag @s add Mns.Valk.Temp.Tail.Break
 
 # ダウン・スタン・麻痺・罠をキャンセルする

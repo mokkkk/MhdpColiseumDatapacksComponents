@@ -39,6 +39,11 @@
     execute if score @s aj.comet_phase_1.frame matches 2 run function mhdp_monster_valk:core/util/models/ignite_start
     execute if score @s aj.comet_phase_1.frame matches 70 run function mhdp_monster_valk:core/util/models/chest_glow_end
 
+# 状態設定
+    execute if score @s aj.comet_phase_1.frame matches 2 run tag @s add Mns.State.IsDisableAngerSpeed
+    execute if score @s aj.comet_phase_1.frame matches 2 run tag @s add Mns.State.IsDisableDeath
+    execute if score @s aj.comet_phase_1.frame matches 2 run tag @s add Mns.State.IsDisablePartDamage
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
