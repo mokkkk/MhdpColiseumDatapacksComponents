@@ -34,6 +34,10 @@
     # 飛行中ダウン
         execute if entity @s[tag=aj.valk_aj.animation.lance_damage_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_flying/main
 
+# 討伐
+    execute if entity @s[tag=aj.valk_aj.animation.lance_death.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_death/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_death_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_death_flying/main
+
 # 変形・彗龍→龍気
     execute if entity @s[tag=aj.valk_aj.animation.lance_to_shoot.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_to_shoot/main
 
