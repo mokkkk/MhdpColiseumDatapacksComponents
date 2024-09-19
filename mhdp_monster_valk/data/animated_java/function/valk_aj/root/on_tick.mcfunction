@@ -4,6 +4,10 @@ execute unless score @s aj.is_rig_loaded matches 1 run function #animated_java:g
 function #animated_java:valk_aj/as_root/pre_tick
 execute if entity @s[tag=aj.valk_aj.animation.jacket_pose.playing] run function animated_java:valk_aj/animations/jacket_pose/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_pose.playing] run function animated_java:valk_aj/animations/lance_pose/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_charge_start.playing] run function animated_java:valk_aj/animations/lance_charge_start/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_charge.playing] run function animated_java:valk_aj/animations/lance_charge/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_charge_end.playing] run function animated_java:valk_aj/animations/lance_charge_end/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_charge_damage.playing] run function animated_java:valk_aj/animations/lance_charge_damage/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.state_paralysis.playing] run function animated_java:valk_aj/animations/state_paralysis/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_idle.playing] run function animated_java:valk_aj/animations/lance_idle/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_idle_short.playing] run function animated_java:valk_aj/animations/lance_idle_short/zzz/on_tick
@@ -74,6 +78,7 @@ execute if entity @s[tag=aj.valk_aj.animation.comet_phase_2.playing] run functio
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_3.playing] run function animated_java:valk_aj/animations/comet_phase_3/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_4.playing] run function animated_java:valk_aj/animations/comet_phase_4/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_5.playing] run function animated_java:valk_aj/animations/comet_phase_5/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_charge2.playing] run function animated_java:valk_aj/animations/lance_charge2/zzz/on_tick
 execute on passengers if entity @s[tag=aj.valk_aj.data] run function animated_java:valk_aj/root/zzz/1
 execute at @s on passengers run tp @s ~ ~ ~ ~ ~
 function #animated_java:valk_aj/as_root/post_tick
