@@ -5,7 +5,6 @@ tag @s add aj.valk_aj.animation.shoot_to_lance.playing
 $scoreboard players set @s aj.tween_duration $(duration)
 $scoreboard players set @s aj.shoot_to_lance.frame $(to_frame)
 scoreboard players operation #this aj.i = @s aj.tween_duration
-scoreboard players add @s aj.tween_duration 1
 tag @s add aj.transforms_only
 execute at @s run function animated_java:valk_aj/animations/shoot_to_lance/zzz/apply_frame {frame: 0}
 $execute at @s run function animated_java:valk_aj/animations/shoot_to_lance/zzz/apply_frame {frame: $(to_frame)}
