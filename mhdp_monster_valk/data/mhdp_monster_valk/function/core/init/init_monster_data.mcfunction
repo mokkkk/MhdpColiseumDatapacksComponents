@@ -57,6 +57,8 @@
         scoreboard objectives add Mns.Valk.SubCount dummy
     # 滑空突進往復回数
         scoreboard objectives add Mns.Valk.JetCount dummy
+    # 龍気吸引回数
+        scoreboard objectives add Mns.Valk.ChargeCount dummy
 
 # メインデータ
     execute if data storage mhdp_core:monster_data MonsterData[{Uid:1004}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1004}]
