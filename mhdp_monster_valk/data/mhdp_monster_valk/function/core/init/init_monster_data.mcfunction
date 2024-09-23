@@ -104,7 +104,7 @@
 
 # 肉質データ
 # 切断,打撃,弾,火,水,雷,氷,龍
-# 頭, 胴, 尻尾, 右腕, 左腕, 右脚, 左脚, 右翼, 左翼
+# 頭, 胴, 尻尾, 右腕, 左腕, 右脚, 左脚, 右翼, 左翼, 胸(吸引中)
     execute if data storage mhdp_core:monster_data DefenceData[{Uid:1004}] run data remove storage mhdp_core:monster_data DefenceData[{Uid:1004}]
     data modify storage mhdp_core:monster_data DefenceData append value {\
         Uid:1004,\
@@ -117,7 +117,8 @@
             [37,35,30,0,15,5,5,5],\
             [37,35,30,0,15,5,5,5],\
             [37,35,30,0,15,5,5,5],\
-            [37,35,30,0,15,5,5,5]\
+            [37,35,30,0,15,5,5,5],\
+            [80,80,65,0,15,5,5,5]\
         ]\
     }
 

@@ -8,4 +8,5 @@ scoreboard players operation @s Mns.HitBox.MonsterUid = #mhdp_temp_monster_uid M
 tag @s add Mns.HitBox
 tag @s add Mns.HitBox.Valk
 tag @s add Mns.HitBox.Valk.Body
+tag @s add Mns.HitBox.Valk.Body0
 scoreboard players set @s Mns.Hitbox.PartId 1

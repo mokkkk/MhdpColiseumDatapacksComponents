@@ -16,5 +16,8 @@
 # モデル演出
     execute if score @s aj.lance_charge_start.frame matches 27 run function mhdp_monster_valk:core/util/models/chest_glow_start
 
+# 肉質変化
+    execute if score @s aj.lance_charge_start.frame matches 27 as @e[type=slime,tag=Mns.HitBox.Valk.Body0] run scoreboard players set @s Mns.Hitbox.PartId 9
+
 # 終了
     execute if score @s aj.lance_charge_start.frame matches 28 run function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/end
