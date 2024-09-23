@@ -23,7 +23,7 @@
             execute store result score #mhdp_temp_multiply MhdpCore run data get storage mhdp_core:temp TargetMonsterData.BodyPartDamage
         # 計算
             scoreboard players operation @s Mns.Valk.Body.Damage *= #mhdp_temp_multiply MhdpCore
-            execute store result score @s Mns.Valk.Body.Damage.Max run scoreboard players operation @s Mns.Valk.Body.Damage /= #const_100 Const
+            execute store result score @s Mns.Valk.BodySp.Damage.Max store result score @s Mns.Valk.BodySp.Damage store result score @s Mns.Valk.Body.Damage.Max run scoreboard players operation @s Mns.Valk.Body.Damage /= #const_100 Const
     # 尻尾
         # 倍率取得
             execute store result score #mhdp_temp_multiply MhdpCore run data get storage mhdp_core:temp TargetMonsterData.TailPartDamage

@@ -33,6 +33,8 @@
     # 胴
         execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run scoreboard players operation @s Mns.Valk.Body.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Valk.Body.Damage matches ..0 run tag @s add Mns.Temp.Damage.Body
+        execute if score #mhdp_temp_target_part_id MhdpCore matches 9 run scoreboard players operation @s Mns.Valk.BodySp.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if score @s Mns.Valk.BodySp.Damage matches ..0 run tag @s add Mns.Temp.Damage.BodySp
     # 尻尾
         execute if score #mhdp_temp_target_part_id MhdpCore matches 2 run scoreboard players operation @s Mns.Valk.Tail.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Valk.Tail.Damage matches ..0 run tag @s add Mns.Temp.Damage.Tail
@@ -62,6 +64,8 @@
         execute if entity @s[tag=Mns.Temp.Damage.Stun] run function mhdp_monster_valk:core/damage/reaction/stun
     # 減気
         # execute if entity @s[tag=Mns.Temp.Damage.Tire]
+    # 胴吸引中(独自)
+        execute if entity @s[tag=Mns.Temp.Damage.BodySp] run function mhdp_monster_valk:core/damage/reaction/body_sp
     # 頭(独自)
         execute if entity @s[tag=Mns.Temp.Damage.Head] run function mhdp_monster_valk:core/damage/reaction/head
     # 胴(独自)
@@ -106,5 +110,6 @@
     tag @s remove Mns.Temp.Damage.LegL
     tag @s remove Mns.Temp.Damage.WingR
     tag @s remove Mns.Temp.Damage.WingL
+    tag @s remove Mns.Temp.Damage.BodySp
 
 say 天彗龍被ダメージ

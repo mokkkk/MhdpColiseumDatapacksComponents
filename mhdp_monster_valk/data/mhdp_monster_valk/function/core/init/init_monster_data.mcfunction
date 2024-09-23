@@ -34,6 +34,9 @@
     # 左翼部位耐久値
         scoreboard objectives add Mns.Valk.WingL.Damage dummy
         scoreboard objectives add Mns.Valk.WingL.Damage.Max dummy
+    # 胴部位耐久値(吸引中)
+        scoreboard objectives add Mns.Valk.BodySp.Damage dummy
+        scoreboard objectives add Mns.Valk.BodySp.Damage.Max dummy
 
 # フェーズ
     # 怯み回数

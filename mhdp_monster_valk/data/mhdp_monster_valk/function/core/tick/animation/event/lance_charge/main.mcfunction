@@ -21,5 +21,5 @@
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 終了
-    execute if score @s aj.lance_charge.frame matches 44 run return run function animated_java:valk_aj/animations/lance_charge_damage/tween {duration:1, to_frame: 1}
+    # execute if score @s aj.lance_charge.frame matches 44 run return run function animated_java:valk_aj/animations/lance_charge_damage/tween {duration:1, to_frame: 1}
     execute if score @s aj.lance_charge.frame matches 44 run function mhdp_monster_valk:core/tick/animation/event/lance_charge/end
