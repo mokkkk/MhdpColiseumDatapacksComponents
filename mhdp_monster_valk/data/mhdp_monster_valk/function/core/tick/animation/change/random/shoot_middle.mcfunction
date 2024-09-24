@@ -34,6 +34,9 @@
 # 前転
     execute if score #mndp_temp_action_id MhdpCore matches 3 run function mhdp_monster_valk:core/tick/animation/change/play/sault_move
 
+# 軸合わせ
+    execute if entity @s[tag=Anim.Sault] run tag @s add Mns.Temp.IsTurn
+
 # 終了
     tag @s remove Mns.Temp.Forward
     tag @s remove Mns.Temp.Back

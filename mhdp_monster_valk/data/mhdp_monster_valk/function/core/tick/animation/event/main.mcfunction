@@ -12,6 +12,10 @@
     execute if entity @s[tag=aj.valk_aj.animation.lance_idle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_idle_short.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle_short/main
 
+# 討伐
+    execute if entity @s[tag=aj.valk_aj.animation.lance_death.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_death/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_death_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_death_flying/main
+
 # 怯み
     # 頭
         execute if entity @s[tag=aj.valk_aj.animation.lance_damage_head.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_head/main
@@ -39,10 +43,6 @@
     execute if entity @s[tag=aj.valk_aj.animation.lance_charge.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_charge_end.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_end/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_charge_damage.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_damage/main
-
-# 討伐
-    execute if entity @s[tag=aj.valk_aj.animation.lance_death.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_death/main
-    execute if entity @s[tag=aj.valk_aj.animation.lance_death_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_death_flying/main
 
 # 変形・彗龍→龍気
     execute if entity @s[tag=aj.valk_aj.animation.lance_to_shoot.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_to_shoot/main

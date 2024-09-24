@@ -16,7 +16,7 @@
     execute as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] at @s run function mhdp_monsters:core/util/other/on_ground
 
 # 再生アニメーション決定
-    tag @s add Anim.MoveStart.Shoot
+    tag @s add Anim.Sault
 
 # 終了
     tag @s remove Mns.Temp.Right

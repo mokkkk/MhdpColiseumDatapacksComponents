@@ -86,14 +86,14 @@
         AngerDamagePer:10,\
         AngerTimer:120,\
         AngerAttackMult:125,\
-        AngerSpeed:10,\
-        ParalysisDamage:500,\
+        AngerSpeed:8,\
+        ParalysisDamage:600,\
         ParalysisTimer:10,\
-        PoisonDamage:400,\
-        PoisonTimer:17,\
+        PoisonDamage:500,\
+        PoisonTimer:25,\
         PoisonEffectDamage:60,\
         BombDamage:400,\
-        BombEffectDamage:200,\
+        BombEffectDamage:150,\
         FlashBombEnable:true,\
         SoundBombEnable:false,\
         ParalyseTrapEnable:false,\
@@ -118,16 +118,16 @@
     data modify storage mhdp_core:monster_data DefenceData append value {\
         Uid:1004,\
         Defences:[\
-            [50,55,62,0,25,10,15,15],\
-            [35,40,25,0,15,5,10,10],\
-            [40,30,35,0,20,5,10,10],\
-            [37,35,30,0,15,5,5,5],\
-            [37,35,30,0,15,5,5,5],\
-            [37,35,30,0,15,5,5,5],\
-            [37,35,30,0,15,5,5,5],\
-            [37,35,30,0,15,5,5,5],\
-            [37,35,30,0,15,5,5,5],\
-            [80,80,65,0,15,5,5,5]\
+            [55,55,50,25,25,25,25,0],\
+            [40,40,40,20,20,20,20,0],\
+            [45,30,25,20,20,20,20,0],\
+            [32,31,26,25,25,25,25,0],\
+            [32,31,26,25,25,25,25,0],\
+            [32,31,26,15,15,15,15,0],\
+            [32,31,26,15,15,15,15,0],\
+            [25,35,25,25,25,25,25,0],\
+            [25,35,25,25,25,25,25,0],\
+            [80,80,60,25,25,25,25,0]\
         ]\
     }
 

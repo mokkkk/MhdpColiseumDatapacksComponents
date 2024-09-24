@@ -23,7 +23,7 @@ scoreboard objectives add aj.lance_damage_tail.frame dummy
 scoreboard objectives add aj.lance_damage_tail_break.frame dummy
 scoreboard objectives add aj.lance_damage_flying.frame dummy
 scoreboard objectives add aj.lance_death.frame dummy
-scoreboard objectives add aj.lance_death_flying.frame dummy
+scoreboard objectives add aj.death_flying.frame dummy
 scoreboard objectives add aj.lance_to_shoot.frame dummy
 scoreboard objectives add aj.lance_voice.frame dummy
 scoreboard objectives add aj.lance_anger.frame dummy

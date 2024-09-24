@@ -11,11 +11,11 @@
 
 # ヒット確認
     # 対プレイヤー
-        execute positioned ^ ^1 ^3 as @a[tag=Ply.State.EnableDamage,distance=..16] run tag @s add Temp.Hit
-        execute positioned ^ ^1 ^-3 as @a[tag=Ply.State.EnableDamage,distance=..16] run tag @s add Temp.Hit
-        execute positioned ^ ^1 ^-8 as @a[tag=Ply.State.EnableDamage,distance=..16] run tag @s add Temp.Hit
-        execute positioned ^ ^1 ^-13 as @a[tag=Ply.State.EnableDamage,distance=..16] run tag @s add Temp.Hit
-        execute positioned ^ ^1 ^-18 as @a[tag=Ply.State.EnableDamage,distance=..16] run tag @s add Temp.Hit
+        execute positioned ^ ^1 ^3 as @a[tag=Ply.State.EnableDamage,distance=..14] run tag @s add Temp.Hit
+        execute positioned ^ ^1 ^-3 as @a[tag=Ply.State.EnableDamage,distance=..14] run tag @s add Temp.Hit
+        execute positioned ^ ^1 ^-8 as @a[tag=Ply.State.EnableDamage,distance=..14] run tag @s add Temp.Hit
+        execute positioned ^ ^1 ^-13 as @a[tag=Ply.State.EnableDamage,distance=..14] run tag @s add Temp.Hit
+        execute positioned ^ ^1 ^-18 as @a[tag=Ply.State.EnableDamage,distance=..14] run tag @s add Temp.Hit
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         execute if entity @a[tag=Mns.Target.Dino,tag=Temp.Hit] run tag @s add Mns.Temp.IsHit
         tag @a remove Temp.Hit

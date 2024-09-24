@@ -66,7 +66,7 @@
     # 側面爆発
         execute if entity @s[tag=Anim.Bomb.Side] run function animated_java:valk_aj/animations/shoot_bomb_side/tween {duration:1, to_frame: 1}
     # 前転
-        execute if entity @s[tag=Anim.Sault] run function animated_java:valk_aj/animations/shoot_sault/tween {duration:1, to_frame: 1}
+        execute if entity @s[tag=Anim.Sault] run function animated_java:valk_aj/animations/shoot_sault_before/tween {duration:1, to_frame: 1}
 
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag

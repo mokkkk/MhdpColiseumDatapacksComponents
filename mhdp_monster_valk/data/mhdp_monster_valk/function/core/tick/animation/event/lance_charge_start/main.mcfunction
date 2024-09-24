@@ -18,6 +18,8 @@
 
 # 肉質変化
     execute if score @s aj.lance_charge_start.frame matches 27 as @e[type=slime,tag=Mns.HitBox.Valk.Body0] run scoreboard players set @s Mns.Hitbox.PartId 9
+    execute if score @s aj.lance_charge_start.frame matches 27 as @e[type=slime,tag=Mns.HitBox.Valk.ArmR] run scoreboard players set @s Mns.Hitbox.PartId 9
+    execute if score @s aj.lance_charge_start.frame matches 27 as @e[type=slime,tag=Mns.HitBox.Valk.ArmL] run scoreboard players set @s Mns.Hitbox.PartId 9
 
 # 終了
     execute if score @s aj.lance_charge_start.frame matches 28 run function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/end

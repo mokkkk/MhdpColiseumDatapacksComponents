@@ -40,3 +40,5 @@
     data remove storage mhdp_core:temp Temp.AttackRandom
     scoreboard players reset #mndp_temp_action_id MhdpCore
     kill @n[type=minecraft:item,nbt={Item:{components:{"minecraft:custom_data":{IsRandomTemp:1b}}}}]
+
+say 位置リセット

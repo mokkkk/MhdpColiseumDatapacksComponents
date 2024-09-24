@@ -31,7 +31,7 @@
     execute if entity @s[tag=Mns.Temp.ChangePhase] run return run tag @s remove Mns.Temp.ChangePhase
 
 # 大技
-    execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Comet matches 30.. run return run tag @s add Anim.Comet
+    execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Comet matches 50.. run return run tag @s add Anim.Comet
 
 # 準大技
     execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Move matches 13.. if predicate {"condition":"minecraft:random_chance","chance":0.4} run return run function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin_move

@@ -21,7 +21,7 @@
     # 連続行動回数加算
         execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] run scoreboard players add @s Mns.General.ActCount.Target 1
     # 怒り終了
-        execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches ..0 run function mhdp_monster_valk:core/damage/reaction/anger_end
+        execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches ..0 run function mhdp_monster_valk:core/damage/reaction/anger_end
 
 # ターゲット更新
     # ターゲットがいない場合
@@ -30,7 +30,7 @@
         execute if score @s Mns.General.ActCount.Target matches 6.. run function mhdp_monster_valk:core/tick/animation/change/update_target
 
 # 非怒り中・一定以上行動した場合、威嚇を選択(そのまま処理中断)
-    execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.ActCount.Idle matches 25.. run return run function mhdp_monsters:core/util/tick/skip
+    execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.ActCount.Idle matches 18.. run return run function mhdp_monsters:core/util/tick/skip
 
 # アニメーション選択
     execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn] if entity @e[tag=Mns.Target.Valk] run function mhdp_monster_valk:core/tick/animation/change/random/main
@@ -40,8 +40,6 @@
     # 軸合わせ不要な場合、すぐアニメーションを再生する
         execute if score #mhdp_temp_result MhdpCore matches 99 run tag @s remove Mns.Temp.IsTurn
     scoreboard players reset #mhdp_temp_result MhdpCore
-
-# フェーズ移行アニメーション再生
 
 # 軸合わせしない場合、攻撃アニメーション再生・タグ消去
     execute if entity @s[tag=!Mns.Temp.IsTurn,tag=!Mns.Temp.IsTurn.Big] run function mhdp_monster_valk:core/tick/animation/change/play/main

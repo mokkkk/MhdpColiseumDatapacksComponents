@@ -21,6 +21,8 @@
 
 # 肉質変化
     execute if score @s aj.lance_charge_end.frame matches 2 as @e[type=slime,tag=Mns.HitBox.Valk.Body0] run scoreboard players set @s Mns.Hitbox.PartId 1
+    execute if score @s aj.lance_charge_end.frame matches 2 as @e[type=slime,tag=Mns.HitBox.Valk.ArmR] run scoreboard players set @s Mns.Hitbox.PartId 3
+    execute if score @s aj.lance_charge_end.frame matches 2 as @e[type=slime,tag=Mns.HitBox.Valk.ArmL] run scoreboard players set @s Mns.Hitbox.PartId 4
 
 # 終了
     execute if score @s aj.lance_charge_end.frame matches 34 run function mhdp_monster_valk:core/tick/animation/event/lance_charge_end/end
