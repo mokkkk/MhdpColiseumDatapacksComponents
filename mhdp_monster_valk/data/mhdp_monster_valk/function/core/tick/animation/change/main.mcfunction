@@ -12,8 +12,8 @@
         execute if entity @s[tag=!Mns.State.IsBattle] if score @s Mns.General.SearchTimer matches 2000.. run tag @s add Mns.Temp.IsFirstContact
         execute if entity @s[tag=Mns.Temp.IsFirstContact,tag=!Mns.State.IsBattle] run tag @s add Mns.State.IsBattle
     # 非戦闘時は警戒アニメーションのみ再生
-        # execute if entity @s[tag=!Mns.State.IsBattle] if entity @n[tag=Ply.State.MnsTarget] run function animated_java:valk_aj/animations/search/tween {duration:1, to_frame: 0}
-        # execute if entity @s[tag=!Mns.State.IsBattle] run return 0
+        execute if entity @s[tag=!Mns.State.IsBattle] if entity @n[tag=Ply.State.MnsTarget] run function animated_java:valk_aj/animations/lance_search/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=!Mns.State.IsBattle] run return 0
 
 # 共通処理
     # Animタグがすでについているか確認

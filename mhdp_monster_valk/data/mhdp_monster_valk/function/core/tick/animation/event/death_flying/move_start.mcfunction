@@ -1,8 +1,8 @@
-#> mhdp_monster_valk:core/tick/animation/event/lance_death_flying/move_start
+#> mhdp_monster_valk:core/tick/animation/event/death_flying/move_start
 #
 # アニメーションイベントハンドラ 討伐
 #
-# @within function mhdp_monster_dino:core/tick/animation/event/lance_death_flying/main
+# @within function mhdp_monster_dino:core/tick/animation/event/death_flying/main
 
 # ターゲット配置
     summon marker ^ ^ ^ {Tags:["Temp.Move.Target.Marker"]}

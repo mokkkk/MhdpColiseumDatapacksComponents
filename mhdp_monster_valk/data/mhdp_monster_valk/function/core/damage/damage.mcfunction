@@ -59,7 +59,7 @@
 
 # 以下の優先度で怯みを適用
     # 麻痺
-        # execute if entity @s[tag=Mns.Temp.Damage.Paralysis,tag=!Mns.State.IsFlying] run function mhdp_monster_valk:core/damage/reaction/paralysis
+        execute if entity @s[tag=Mns.Temp.Damage.Paralysis,tag=!Mns.State.IsFlying] run function mhdp_monster_valk:core/damage/reaction/paralysis
     # スタン
         execute if entity @s[tag=Mns.Temp.Damage.Stun] run function mhdp_monster_valk:core/damage/reaction/stun
     # 減気

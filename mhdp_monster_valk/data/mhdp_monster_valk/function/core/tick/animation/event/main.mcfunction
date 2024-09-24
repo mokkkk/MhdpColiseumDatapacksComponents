@@ -4,18 +4,22 @@
 #
 # @within function mhdp_monster_valk:core/tick/tick
 
+## 共通
 # 警戒
-    # execute if entity @s[tag=aj.valk_aj.animation.search.playing] run function mhdp_monster_valk:core/tick/animation/event/search/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_search.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_search/main
 
-## 彗龍
 # 待機
     execute if entity @s[tag=aj.valk_aj.animation.lance_idle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_idle_short.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle_short/main
 
 # 討伐
     execute if entity @s[tag=aj.valk_aj.animation.lance_death.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_death/main
-    execute if entity @s[tag=aj.valk_aj.animation.lance_death_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_death_flying/main
+    execute if entity @s[tag=aj.valk_aj.animation.death_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/death_flying/main
 
+# 麻痺
+    execute if entity @s[tag=aj.valk_aj.animation.state_paralysis.playing] run function mhdp_monster_valk:core/tick/animation/event/state_paralysis/main
+
+## 彗龍
 # 怯み
     # 頭
         execute if entity @s[tag=aj.valk_aj.animation.lance_damage_head.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_head/main

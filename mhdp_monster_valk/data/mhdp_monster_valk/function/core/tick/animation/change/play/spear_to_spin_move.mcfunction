@@ -22,5 +22,3 @@
 
 # 終了
     tag @s remove Mns.Temp.Right
-
-say 準大技
