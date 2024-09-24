@@ -1,8 +1,8 @@
-#> mhdp_monster_dino:core/tick/animation/change/random/first
+#> mhdp_monster_valk:core/tick/animation/change/random/first
 #
 # 初回遭遇時
 #
-# @within function mhdp_monster_dino:core/tick/animation/change/random/main
+# @within function mhdp_monster_valk:core/tick/animation/change/random/main
 
 # 咆哮
     tag @s add Anim.Voice

@@ -15,6 +15,8 @@
         execute if entity @s[tag=Anim.Charge] run function animated_java:valk_aj/animations/lance_charge_start/tween {duration:1, to_frame: 1}
     # 変形・彗龍→龍気
         execute if entity @s[tag=Anim.Change.LanceToShoot] run function animated_java:valk_aj/animations/lance_to_shoot/tween {duration:1, to_frame: 1}
+    # 車庫入れ
+        execute if entity @s[tag=Anim.MoveBack,tag=!Mns.Valk.State.IsShoot] run function animated_java:valk_aj/animations/lance_moveback/tween {duration:1, to_frame: 1}
     # 移動
         execute if entity @s[tag=Anim.MoveStart.Lance] run function animated_java:valk_aj/animations/lance_move_start/tween {duration:1, to_frame: 1}
         execute if entity @s[tag=Anim.MoveStart.Shoot] run function animated_java:valk_aj/animations/shoot_move_start/tween {duration:1, to_frame: 1}
@@ -44,6 +46,8 @@
 ## 龍気
     # 変形・龍気→彗龍
         execute if entity @s[tag=Anim.Change.ShootToLance] run function animated_java:valk_aj/animations/shoot_to_lance/tween {duration:1, to_frame: 1}
+    # 車庫入れ
+        execute if entity @s[tag=Anim.MoveBack,tag=Mns.Valk.State.IsShoot] run function animated_java:valk_aj/animations/shoot_moveback/tween {duration:1, to_frame: 1}
     # ステップ
         execute if entity @s[tag=Anim.Step] run function animated_java:valk_aj/animations/shoot_step/tween {duration:1, to_frame: 1}
     # 翼叩きつけ

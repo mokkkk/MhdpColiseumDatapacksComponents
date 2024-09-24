@@ -54,6 +54,8 @@
             scoreboard objectives add Mns.Valk.LegL.Damage.Count dummy
     # フェーズ
         scoreboard objectives add Mns.Valk.PhaseCount dummy
+        scoreboard objectives add Mns.Valk.PhaseCount.Comet dummy
+        scoreboard objectives add Mns.Valk.PhaseCount.Move dummy
     # 移動回数
         scoreboard objectives add Mns.Valk.DashCount dummy
     # サブカウント
@@ -62,6 +64,8 @@
         scoreboard objectives add Mns.Valk.JetCount dummy
     # 龍気吸引回数
         scoreboard objectives add Mns.Valk.ChargeCount dummy
+    # 怒り終了回数
+        scoreboard objectives add Mns.Valk.EndAngerCount dummy
 
 # メインデータ
     execute if data storage mhdp_core:monster_data MonsterData[{Uid:1004}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1004}]

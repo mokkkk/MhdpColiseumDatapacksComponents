@@ -120,6 +120,9 @@
     execute if entity @s[tag=aj.valk_aj.animation.shoot_move_start.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_move_start/main
     execute if entity @s[tag=aj.valk_aj.animation.shoot_move.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_move/main
 
+# 車庫入れ
+    execute if entity @s[tag=aj.valk_aj.animation.shoot_moveback.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_moveback/main
+
 # 翼叩きつけ
     execute if entity @s[tag=aj.valk_aj.animation.shoot_vertical_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_r/main
     execute if entity @s[tag=aj.valk_aj.animation.shoot_vertical_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_l/main

@@ -27,21 +27,21 @@
     # ターゲットがいない場合
         execute unless entity @e[tag=Mns.Target.Valk] run function mhdp_monster_valk:core/tick/animation/change/update_target
     # 一定以上行動した場合
-        execute if score @s Mns.General.ActCount.Target matches 4.. run function mhdp_monster_valk:core/tick/animation/change/update_target
+        execute if score @s Mns.General.ActCount.Target matches 6.. run function mhdp_monster_valk:core/tick/animation/change/update_target
 
 # 非怒り中・一定以上行動した場合、威嚇を選択(そのまま処理中断)
-    execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.ActCount.Idle matches 12.. run return run function mhdp_monsters:core/util/tick/skip
-
-# フェーズ移行
+    execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.ActCount.Idle matches 25.. run return run function mhdp_monsters:core/util/tick/skip
 
 # アニメーション選択
-    # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn] if entity @e[tag=Mns.Target.Valk] run function mhdp_monster_valk:core/tick/animation/change/random/main
+    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn] if entity @e[tag=Mns.Target.Valk] run function mhdp_monster_valk:core/tick/animation/change/random/main
 
 # 軸合わせアニメーション再生
     execute if entity @s[tag=Mns.Temp.IsTurn] store result score #mhdp_temp_result MhdpCore run function mhdp_monster_valk:core/tick/animation/change/play/turn
     # 軸合わせ不要な場合、すぐアニメーションを再生する
         execute if score #mhdp_temp_result MhdpCore matches 99 run tag @s remove Mns.Temp.IsTurn
     scoreboard players reset #mhdp_temp_result MhdpCore
+
+# フェーズ移行アニメーション再生
 
 # 軸合わせしない場合、攻撃アニメーション再生・タグ消去
     execute if entity @s[tag=!Mns.Temp.IsTurn,tag=!Mns.Temp.IsTurn.Big] run function mhdp_monster_valk:core/tick/animation/change/play/main

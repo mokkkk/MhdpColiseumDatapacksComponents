@@ -20,6 +20,12 @@
     #declare tag Mns.Temp.Damage.LegR 右足怯み
     #declare tag Mns.Temp.Damage.LegL 左足怯み
     #declare tag Mns.Temp.Valk.MoveToSpin 移動から回転攻撃に移行
+    #declare tag Mns.Temp.Valk.MoveToDashAttack 移動から突進に移行
+    #declare tag Mns.Temp.Valk.MoveToChangePhase 移動から変形に移行
+    #declare tag Mns.Temp.Valk.StepToVertical.R ステップから叩きつけに移行
+    #declare tag Mns.Temp.Valk.StepToVertical.L ステップから叩きつけに移行
+    #declare tag Mns.Temp.Valk.StepToBombSide ステップから側面爆発に移行
+    #declare tag Mns.Temp.Valk.EndFlyTackle 滑空突進終了
 # プレイヤー
     #declare tag Mns.Target.Valk 現在狙っているプレイヤー
 # 部位破壊

@@ -1,8 +1,8 @@
-#> mhdp_monster_valk:core/tick/animation/event/lance_moveback/end
+#> mhdp_monster_valk:core/tick/animation/event/shoot_moveback/end
 #
 # アニメーションイベントハンドラ 車庫入れ
 #
-# @within function mhdp_monster_valk:core/tick/animation/event/lance_moveback/main
+# @within function mhdp_monster_valk:core/tick/animation/event/shoot_moveback/main
 
 # 変形に移行
     execute if entity @s[tag=Mns.Temp.Valk.MoveToChangePhase] run function mhdp_monster_valk:core/tick/animation/change/play/change_phase
