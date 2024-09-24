@@ -85,7 +85,7 @@
     # 左翼(独自)
         execute if entity @s[tag=Mns.Temp.Damage.WingL] run function mhdp_monster_valk:core/damage/reaction/wing_l
     # 怒り
-        execute if entity @s[tag=Mns.Temp.Damage.Anger,tag=!Mns.State.IsFlying] run function mhdp_monster_valk:core/damage/reaction/anger
+        execute if entity @s[tag=Mns.Temp.Damage.Anger,tag=!Mns.State.IsFlying,tag=!aj.valk_aj.animation.lance_charge.playing] run function mhdp_monster_valk:core/damage/reaction/anger
 
 # 状態異常の発動
     # 毒
