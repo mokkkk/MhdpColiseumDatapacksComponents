@@ -5,7 +5,7 @@
 # @within function mhdp_monster_dino:core/tick/animation/event/tick
 
 # 弱めの軸合わせ
-    execute if score @s aj.tail_attack_anger_l.frame matches 1 run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_l/turn_start
+    execute if score @s aj.tail_attack_anger_l.frame matches 2 run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_l/turn_start
     execute if score @s aj.tail_attack_anger_l.frame matches 10 run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_l/turn_start
     execute if score @s aj.tail_attack_anger_l.frame matches 1..18 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 

@@ -7,7 +7,8 @@
 # 弱めの軸合わせ
     execute if score @s aj.bite.frame matches 1 run function mhdp_monster_dino:core/tick/animation/event/bite/turn_start
     execute if score @s aj.bite.frame matches 6 run function mhdp_monster_dino:core/tick/animation/event/bite/turn_start
-    execute if score @s aj.bite.frame matches 1..10 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.bite.frame matches 9 run function mhdp_monster_dino:core/tick/animation/event/bite/turn_start
+    execute if score @s aj.bite.frame matches 1..11 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.bite.frame matches 1..5 if entity @n[tag=Mns.Target.Dino,distance=..9] at @s run tp @s ^ ^ ^-0.5
@@ -28,9 +29,6 @@
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
-
-# 怒り中、攻撃がヒットした場合尻尾攻撃に遷移
-    execute if entity @s[tag=Mns.State.IsAnger,tag=Mns.Temp.IsHit] if score @s aj.bite.frame matches 32 run function mhdp_monster_dino:core/tick/animation/event/bite/combo
 
 # 終了
     execute if score @s aj.bite.frame matches 65 run function mhdp_monster_dino:core/tick/animation/event/bite/end

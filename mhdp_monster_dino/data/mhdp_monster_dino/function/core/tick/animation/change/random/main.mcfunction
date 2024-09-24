@@ -8,11 +8,11 @@
     execute if entity @s[tag=Mns.Temp.IsFirstContact] run return run function mhdp_monster_dino:core/tick/animation/change/random/first
 
 # 行動回数加算
-    execute if entity @n[tag=Mns.Target.Dino,distance=..12] run scoreboard players add @s Mns.General.ActCount.Move 1
-    execute if entity @n[tag=Mns.Target.Dino,distance=12.1..] run scoreboard players remove @s Mns.General.ActCount.Move 1
+    execute if entity @n[tag=Mns.Target.Dino,distance=..12] run scoreboard players add @s Mns.General.ActCount.Move 2
+    execute if entity @n[tag=Mns.Target.Dino,distance=12.1..] run scoreboard players add @s Mns.General.ActCount.Move 1
 
 # 張り付き対策の位置リセット
-    execute if score @s Mns.General.ActCount.Move matches 4.. if entity @n[tag=Mns.Target.Dino,distance=..12] run return run function mhdp_monster_dino:core/tick/animation/change/random/move
+    execute if score @s Mns.General.ActCount.Move matches 8.. if entity @n[tag=Mns.Target.Dino,distance=..12] run return run function mhdp_monster_dino:core/tick/animation/change/random/move
 
 # 地上
     # 近距離

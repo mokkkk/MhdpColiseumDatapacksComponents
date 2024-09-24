@@ -18,7 +18,6 @@
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         tag @a remove Temp.Hit
     # 対モンスター
-        # execute positioned ^ ^1 ^7 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Dino,distance=..2.6] run tag @s add Temp.Hit
         execute positioned ^ ^1 ^7 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Dino,distance=..2.6] run tag @s add Temp.Hit
         execute positioned ^ ^1 ^9 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Dino,distance=..2.6] run tag @s add Temp.Hit
         execute positioned ^ ^1 ^11 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Dino,distance=..2.6] run tag @s add Temp.Hit
@@ -35,6 +34,8 @@
     playsound item.mace.smash_air master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    playsound entity.iron_golem.death master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    playsound entity.iron_golem.death master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.57
 
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit

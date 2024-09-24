@@ -35,6 +35,7 @@ scoreboard objectives add aj.step_side_l.frame dummy
 scoreboard objectives add aj.voice.frame dummy
 scoreboard objectives add aj.anger.frame dummy
 scoreboard objectives add aj.bite.frame dummy
+scoreboard objectives add aj.bite_to_tail.frame dummy
 scoreboard objectives add aj.bite_double_normal.frame dummy
 scoreboard objectives add aj.bite_double_anger.frame dummy
 scoreboard objectives add aj.breath.frame dummy
@@ -50,6 +51,8 @@ scoreboard objectives add aj.tail_attack_r.frame dummy
 scoreboard objectives add aj.tail_attack_l.frame dummy
 scoreboard objectives add aj.tail_attack_anger_r.frame dummy
 scoreboard objectives add aj.tail_attack_anger_l.frame dummy
+scoreboard objectives add aj.tail_attack_r_to_step_r.frame dummy
+scoreboard objectives add aj.tail_attack_l_to_step_l.frame dummy
 scoreboard objectives add aj.jump_tail_r.frame dummy
 scoreboard objectives add aj.jump_tail_l.frame dummy
 scoreboard objectives add aj.jump_tail_anger_r.frame dummy

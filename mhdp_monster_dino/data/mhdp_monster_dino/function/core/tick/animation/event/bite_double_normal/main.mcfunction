@@ -7,7 +7,7 @@
 # 弱めの軸合わせ
     execute if score @s aj.bite_double_normal.frame matches 1 run function mhdp_monster_dino:core/tick/animation/event/bite_double_normal/turn_start
     execute if score @s aj.bite_double_normal.frame matches 6 run function mhdp_monster_dino:core/tick/animation/event/bite_double_normal/turn_start
-    execute if score @s aj.bite_double_normal.frame matches 2..10 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.bite_double_normal.frame matches 2..11 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.bite_double_normal.frame matches 1..17 at @s run tp @s ^ ^ ^0.3

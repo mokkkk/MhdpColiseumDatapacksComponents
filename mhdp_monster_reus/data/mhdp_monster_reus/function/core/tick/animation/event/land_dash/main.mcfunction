@@ -10,7 +10,7 @@
 # 演出
     execute if score @s aj.land_dash.frame matches 2 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
     execute if score @s aj.land_dash.frame matches 13 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
-    particle block{block_state:"minecraft:sand"} ^ ^0.5 ^ 0.7 0.1 0.7 0 1
+    particle block{block_state:"minecraft:sand"} ^ ^0.6 ^ 0.7 0.1 0.7 0 1
 
 # 攻撃
     function mhdp_monster_reus:core/tick/animation/event/land_dash/attack

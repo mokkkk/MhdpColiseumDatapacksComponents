@@ -18,10 +18,10 @@
 
 # 効果音
     execute if score @s aj.tail_flame_r.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s aj.tail_flame_r.frame matches 12 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s aj.tail_flame_r.frame matches 12 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    execute if score @s aj.tail_flame_r.frame matches 12 run particle block{block_state:"minecraft:sand"} ^3 ^0.1 ^-7 1.2 0.1 1.2 0 10
-    execute if score @s aj.tail_flame_r.frame matches 12 run particle block{block_state:"minecraft:sand"} ^4 ^0.1 ^-8 1.2 0.1 1.2 0 10
+    execute if score @s aj.tail_flame_r.frame matches 14 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s aj.tail_flame_r.frame matches 14 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s aj.tail_flame_r.frame matches 14 run particle block{block_state:"minecraft:sand"} ^3 ^0.1 ^-7 1.2 0.1 1.2 0 10
+    execute if score @s aj.tail_flame_r.frame matches 14 run particle block{block_state:"minecraft:sand"} ^4 ^0.1 ^-8 1.2 0.1 1.2 0 10
     execute if score @s aj.tail_flame_r.frame matches 26..40 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.tail_flame_r.frame matches 26..40 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
     execute if score @s aj.tail_flame_r.frame matches 50 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7

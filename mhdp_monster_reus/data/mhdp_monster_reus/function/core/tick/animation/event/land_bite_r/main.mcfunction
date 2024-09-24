@@ -10,12 +10,12 @@
     execute if score @s aj.land_bite_r.frame matches 1..10 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
-    execute if score @s aj.land_bite_r.frame matches 1..5 at @s run tp @s ^ ^ ^-0.3
-    execute if score @s aj.land_bite_r.frame matches 6..10 at @s run tp @s ^ ^ ^-0.1
-    execute if score @s aj.land_bite_r.frame matches 18..23 unless entity @n[tag=Mns.Target.Reus,distance=..7] at @s run tp @s ^ ^ ^0.4
-    execute if score @s aj.land_bite_r.frame matches 24..38 unless entity @n[tag=Mns.Target.Reus,distance=..7] at @s run tp @s ^ ^ ^0.05
-    execute if score @s aj.land_bite_r.frame matches 50..55 unless entity @n[tag=Mns.Target.Reus,distance=..7] at @s run tp @s ^ ^ ^0.4
-    execute if score @s aj.land_bite_r.frame matches 56..70 unless entity @n[tag=Mns.Target.Reus,distance=..7] at @s run tp @s ^ ^ ^0.05
+    execute if score @s aj.land_bite_r.frame matches 1..5 if entity @n[tag=Mns.Target.Reus,distance=..7] at @s run tp @s ^ ^ ^-0.5
+    execute if score @s aj.land_bite_r.frame matches 6..10 at @s run tp @s ^ ^ ^-0.2
+    execute if score @s aj.land_bite_r.frame matches 18..23 unless entity @n[tag=Mns.Target.Reus,distance=..7] at @s run tp @s ^ ^ ^0.6
+    execute if score @s aj.land_bite_r.frame matches 24..38 unless entity @n[tag=Mns.Target.Reus,distance=..7] at @s run tp @s ^ ^ ^0.1
+    execute if score @s aj.land_bite_r.frame matches 50..55 unless entity @n[tag=Mns.Target.Reus,distance=..7] at @s run tp @s ^ ^ ^0.6
+    execute if score @s aj.land_bite_r.frame matches 56..70 unless entity @n[tag=Mns.Target.Reus,distance=..7] at @s run tp @s ^ ^ ^0.1
 
 # 効果音
     execute if score @s aj.land_bite_r.frame matches 1 run playsound entity.ender_dragon.flap master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7

@@ -42,7 +42,6 @@
         execute if score #mhdp_temp_target_part_id MhdpCore matches 6 run scoreboard players operation @s Mns.Dino.Tail.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score #mhdp_temp_target_part_id MhdpCore matches 7 run scoreboard players operation @s Mns.Dino.Tail.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Dino.Tail.Damage matches ..0 run tag @s add Mns.Temp.Damage.Tail
-        
     # 右足
         execute if score #mhdp_temp_target_part_id MhdpCore matches 3 run scoreboard players operation @s Mns.Dino.LegR.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Dino.LegR.Damage matches ..0 run tag @s add Mns.Temp.Damage.LegR

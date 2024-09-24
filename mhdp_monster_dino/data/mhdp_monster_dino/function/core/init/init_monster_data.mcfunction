@@ -59,7 +59,7 @@
         AngerDamagePer:10,\
         AngerTimer:60,\
         AngerAttackMult:115,\
-        AngerSpeed:8,\
+        AngerSpeed:9,\
         ParalysisDamage:500,\
         ParalysisTimer:10,\
         PoisonDamage:400,\
@@ -73,9 +73,9 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:true,\
         HallTrapTimer:15,\
-        HeadPartDamage:8,\
+        HeadPartDamage:10,\
         BodyPartDamage:6,\
-        TailPartDamage:5,\
+        TailPartDamage:8,\
         LegRPartDamage:5,\
         LegLPartDamage:5\
     }

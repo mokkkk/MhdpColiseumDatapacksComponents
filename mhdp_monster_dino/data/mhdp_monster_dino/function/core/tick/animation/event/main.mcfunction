@@ -73,6 +73,8 @@
 
 # 嚙みつき
     execute if entity @s[tag=aj.dino_aj.animation.bite.playing] run function mhdp_monster_dino:core/tick/animation/event/bite/main
+    # 噛みつき→尻尾コンボ
+        execute if entity @s[tag=aj.dino_aj.animation.bite_to_tail.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/main
 
 # 2連嚙みつき
     execute if entity @s[tag=aj.dino_aj.animation.bite_double_normal.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_double_normal/main
@@ -83,6 +85,9 @@
     execute if entity @s[tag=aj.dino_aj.animation.tail_attack_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l/main
     execute if entity @s[tag=aj.dino_aj.animation.tail_attack_anger_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_r/main
     execute if entity @s[tag=aj.dino_aj.animation.tail_attack_anger_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_l/main
+    # 尻尾攻撃→ステップコンボ
+        execute if entity @s[tag=aj.dino_aj.animation.tail_attack_r_to_step_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_r_to_step_r/main
+        execute if entity @s[tag=aj.dino_aj.animation.tail_attack_l_to_step_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l_to_step_l/main
 
 # 尻尾攻撃・側面
     execute if entity @s[tag=aj.dino_aj.animation.tail_side_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_side_r/main

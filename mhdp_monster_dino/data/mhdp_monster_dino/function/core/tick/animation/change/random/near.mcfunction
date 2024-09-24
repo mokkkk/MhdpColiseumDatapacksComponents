@@ -10,17 +10,17 @@
     tag @e[tag=Mns.Temp.Target] remove Mns.Temp.Target
 
 # 確率設定
-    data modify storage mhdp_core:temp Temp.AttackRandom set value {BreathBack:0,BreathMove:0,Bite:3,MoveBack:0,Tail:4,TailSide:3,TailBack:0,TailFlame:0,Round:2,Step:1}
+    data modify storage mhdp_core:temp Temp.AttackRandom set value {BreathBack:0,BreathMove:0,Bite:3,MoveBack:0,Tail:4,TailSide:3,TailBack:0,TailFlame:0,Round:1,Step:1}
     # 正面
         execute if entity @s[tag=Mns.Temp.Forward] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Bite:4}
     # 背面
-        execute if entity @s[tag=Mns.Temp.Back] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {TailBack:5}
+        execute if entity @s[tag=Mns.Temp.Back] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {TailBack:8}
     # 側面
         execute if entity @s[tag=!Mns.Temp.Forward,tag=!Mns.Temp.Back] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Bite:2,MoveBack:1,Step:3}
     # 怒り
         execute if entity @s[tag=Mns.State.IsAnger] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {Round:2}
     # 喉赤熱化
-        execute if entity @s[tag=Mns.Dino.State.HeadHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {BreathBack:3,BreathMove:3}
+        execute if entity @s[tag=Mns.Dino.State.HeadHeat] run data modify storage mhdp_core:temp Temp.AttackRandom merge value {BreathBack:1,BreathMove:1}
 
 # 決定
     function mhdp_monster_dino:core/tick/animation/change/random/macro/m.near with storage mhdp_core:temp Temp.AttackRandom
@@ -32,7 +32,7 @@
 # 移動ブレス
     execute if score #mndp_temp_action_id MhdpCore matches 2 run function mhdp_monster_dino:core/tick/animation/change/play/breath_move
 # 噛みつき
-    execute if score #mndp_temp_action_id MhdpCore matches 3 run tag @s add Anim.Bite
+    execute if score #mndp_temp_action_id MhdpCore matches 3 run function mhdp_monster_dino:core/tick/animation/change/play/bite
 # 車庫入れ
     execute if score #mndp_temp_action_id MhdpCore matches 4 run tag @s add Anim.MoveBack
 # 尻尾攻撃
