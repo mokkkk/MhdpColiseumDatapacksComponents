@@ -27,5 +27,9 @@
 # まばたき
     execute if score @s aj.death_flying.frame matches 120 run scoreboard players set @s Mns.General.BlinkTimer 10000000
 
+# 剝ぎ取り可能
+    execute if score @s aj.death_flying.frame matches 132 run tag @s add Mns.State.IsCanCarving
+    execute if score @s aj.death_flying.frame matches 132 run scoreboard players set @s Mns.General.Carving.Count 4
+
 # 終了
     # execute if score @s aj.death_flying.frame matches 69 run function mhdp_monster_valk:core/tick/animation/event/death_flying/end

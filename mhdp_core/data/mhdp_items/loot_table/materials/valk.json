@@ -1,0 +1,52 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{IsMhdpMaterial:1b}"
+                        },
+                        {
+                            "components": {
+                                "minecraft:custom_model_data": 31,
+                                "minecraft:item_name": "{\"text\":\"天彗龍の上鱗\"}",
+                                "minecraft:lore": [
+                                    "{\"text\":\"音速の移動に耐える強靭な鱗。\",\"italic\":false}",
+                                    "{\"text\":\"今のところ使い道はない。\",\"italic\":false}"
+                                ]
+                            },
+                            "function": "minecraft:set_components"
+                        }
+                    ],
+                    "name": "minecraft:blue_dye",
+                    "type": "minecraft:item"
+                },
+                {
+                    "functions": [
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{IsMhdpMaterial:1b}"
+                        },
+                        {
+                            "components": {
+                                "minecraft:custom_model_data": 32,
+                                "minecraft:item_name": "{\"text\":\"天彗龍の堅殻\"}",
+                                "minecraft:lore": [
+                                    "{\"text\":\"頑丈な天彗龍の甲殻。\",\"italic\":false}",
+                                    "{\"text\":\"音速の衝撃でも傷ひとつつかない強度を誇る。\",\"italic\":false}",
+                                    "{\"text\":\"今のところ使い道はない。\",\"italic\":false}"
+                                ]
+                            },
+                            "function": "minecraft:set_components"
+                        }
+                    ],
+                    "name": "minecraft:blue_dye",
+                    "type": "minecraft:item"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
