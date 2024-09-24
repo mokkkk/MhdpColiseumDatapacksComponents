@@ -4,6 +4,9 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
+# カウンターリセット
+    scoreboard players set @s Mns.Valk.PhaseCount.Move 0
+
 # 左右ランダム
     execute if predicate {"condition":"minecraft:random_chance","chance":0.5} run tag @s add Mns.Temp.Right
 

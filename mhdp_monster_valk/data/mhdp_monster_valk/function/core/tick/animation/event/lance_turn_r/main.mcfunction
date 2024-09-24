@@ -5,7 +5,7 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.lance_turn_r.frame matches 1 run function mhdp_monster_valk:core/tick/animation/event/lance_turn_r/turn_start
+    execute if score @s aj.lance_turn_r.frame matches 2 run function mhdp_monster_valk:core/tick/animation/event/lance_turn_r/turn_start
     execute if score @s aj.lance_turn_r.frame matches 2..15 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動

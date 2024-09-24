@@ -5,8 +5,8 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.lance_turn_l.frame matches 1 run function mhdp_monster_valk:core/tick/animation/event/lance_turn_l/turn_start
-    execute if score @s aj.lance_turn_l.frame matches 2..15 run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.lance_turn_l.frame matches 2 run function mhdp_monster_valk:core/tick/animation/event/lance_turn_l/turn_start
+    execute if score @s aj.lance_turn_l.frame matches 2..15 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.lance_turn_l.frame matches 1..10 if entity @n[tag=Mns.Target.Valk,distance=..7] at @s run tp @s ^ ^ ^-0.3

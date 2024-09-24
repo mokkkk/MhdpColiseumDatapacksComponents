@@ -66,6 +66,8 @@
         scoreboard objectives add Mns.Valk.ChargeCount dummy
     # 怒り終了回数
         scoreboard objectives add Mns.Valk.EndAngerCount dummy
+    # 移動を伴う技のクールタイム
+        scoreboard objectives add Mns.Valk.MoveSkill.CoolDown dummy
 
 # メインデータ
     execute if data storage mhdp_core:monster_data MonsterData[{Uid:1004}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1004}]

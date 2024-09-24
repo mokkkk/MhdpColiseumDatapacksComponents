@@ -5,6 +5,7 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 角度計算
+    kill @n[type=area_effect_cloud,tag=Temp.Rotate.Target]
     tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
     scoreboard players set #mhdp_temp_rotate_tick MhdpCore 14
     function mhdp_monsters:core/util/other/turn_to_target_calc
