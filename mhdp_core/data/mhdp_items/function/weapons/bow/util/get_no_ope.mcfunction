@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/bow/util/get_no_ope
 #
-# 片手剣の無操作状態取得
+# 弓の無操作状態取得
 #
 # @within function mhdp_items:core/*
 
