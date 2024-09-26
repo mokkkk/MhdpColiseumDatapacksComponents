@@ -12,9 +12,11 @@
     execute if score @s aj.lance_vertical_l.frame matches 33..42 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
-    execute if score @s aj.lance_vertical_l.frame matches 1..5 if entity @n[tag=Mns.Target.Valk,distance=..11] at @s run tp @s ^ ^ ^-0.5
+    execute if score @s aj.lance_vertical_l.frame matches 1..5 if entity @n[tag=Mns.Target.Valk,distance=..15] at @s run tp @s ^ ^ ^-0.5
+    execute if score @s aj.lance_vertical_l.frame matches 6..10 if entity @n[tag=Mns.Target.Valk,distance=..15] at @s run tp @s ^ ^ ^-0.3
     execute if score @s aj.lance_vertical_l.frame matches 11..19 unless entity @n[tag=Mns.Target.Valk,distance=..8] at @s run tp @s ^ ^ ^0.4 ~-1 ~
-    execute if score @s aj.lance_vertical_l.frame matches 37..48 unless entity @n[tag=Mns.Target.Valk,distance=..8] at @s run tp @s ^ ^ ^0.8
+    execute if score @s aj.lance_vertical_l.frame matches 34..38 if entity @n[tag=Mns.Target.Valk,distance=..12] at @s run tp @s ^ ^ ^-0.3
+    execute if score @s aj.lance_vertical_l.frame matches 39..48 unless entity @n[tag=Mns.Target.Valk,distance=..8] at @s run tp @s ^ ^ ^0.8
     execute if score @s aj.lance_vertical_l.frame matches 80..90 at @s run tp @s ^ ^ ^-0.2
     execute if score @s aj.lance_vertical_l.frame matches 91..96 at @s run tp @s ^ ^ ^-0.1
 

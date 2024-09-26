@@ -7,8 +7,8 @@
 # 軸合わせ
     execute if score @s aj.shoot_moveback.frame matches 2 run function mhdp_monster_valk:core/tick/animation/event/shoot_moveback/turn_start
     execute if score @s aj.shoot_moveback.frame matches 2..15 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
-    execute if score @s aj.shoot_moveback.frame matches 2..15 at @s run tp @s ^ ^ ^-0.7
-    execute if score @s aj.shoot_moveback.frame matches 16..22 at @s run tp @s ^ ^ ^-0.3
+    execute if score @s aj.shoot_moveback.frame matches 2..15 at @s run tp @s ^ ^ ^-0.4
+    execute if score @s aj.shoot_moveback.frame matches 16..22 at @s run tp @s ^ ^ ^-0.2
 
 # 効果音
     execute if score @s aj.shoot_moveback.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7

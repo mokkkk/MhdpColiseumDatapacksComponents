@@ -13,8 +13,8 @@
     # 対プレイヤー
         execute positioned ^ ^ ^0 as @a[tag=Ply.State.EnableDamage,distance=..4.5] run tag @s add Temp.Hit
         execute positioned ^ ^ ^3 as @a[tag=Ply.State.EnableDamage,distance=..5] run tag @s add Temp.Hit
-        execute positioned ^ ^ ^6 as @a[tag=Ply.State.EnableDamage,distance=..5.5] run tag @s add Temp.Hit
-        execute positioned ^2.3 ^ ^4.5 as @a[tag=Ply.State.EnableDamage,distance=..5.5] run tag @s add Temp.Hit
+        execute positioned ^ ^ ^5 as @a[tag=Ply.State.EnableDamage,distance=..4.5] run tag @s add Temp.Hit
+        execute positioned ^-2.3 ^ ^4.5 as @a[tag=Ply.State.EnableDamage,distance=..4.5] run tag @s add Temp.Hit
         execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
         tag @a remove Temp.Hit
     # 対モンスター

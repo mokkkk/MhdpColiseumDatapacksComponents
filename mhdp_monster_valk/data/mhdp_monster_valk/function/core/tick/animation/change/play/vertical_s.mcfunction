@@ -8,8 +8,8 @@
     execute facing entity @n[tag=Mns.Target.Valk] feet rotated ~ 0 positioned ^ ^ ^3.0 rotated as @s positioned ^4.0 ^ ^ if entity @s[distance=..5.0] run tag @s add Mns.Temp.Right
 
 # ターゲットがある程度遠くにいる場合、そのまま発動
-    execute if entity @s[tag=Mns.Temp.Right] if entity @n[tag=Mns.Target.Valk,distance=15..] run tag @s add Anim.VerticalS.R
-    execute if entity @s[tag=!Mns.Temp.Right] if entity @n[tag=Mns.Target.Valk,distance=15..] run tag @s add Anim.VerticalS.L
+    execute if entity @s[tag=Mns.Temp.Right] if entity @n[tag=Mns.Target.Valk,distance=16..] run tag @s add Anim.VerticalS.R
+    execute if entity @s[tag=!Mns.Temp.Right] if entity @n[tag=Mns.Target.Valk,distance=16..] run tag @s add Anim.VerticalS.L
     execute if entity @s[tag=Anim.VerticalS.R] run return run tag @s remove Mns.Temp.Right
     execute if entity @s[tag=Anim.VerticalS.L] run return run tag @s remove Mns.Temp.Right
 
