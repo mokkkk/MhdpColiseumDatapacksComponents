@@ -9,7 +9,7 @@
     execute if score @s aj.lance_flytackle_start.frame matches 1..38 run function mhdp_monsters:core/util/other/turn_to_target_accurate
 
 # 移動
-    execute if score @s aj.lance_flytackle_start.frame matches 1..12 if entity @n[tag=Mns.Target.Valk,distance=..15] at @s run tp @s ^ ^ ^-0.8
+    execute if score @s aj.lance_flytackle_start.frame matches 1..12 if entity @n[tag=Mns.Target.Valk,distance=..18] at @s run tp @s ^ ^ ^-0.8
 
 # 効果音
     execute if score @s aj.lance_flytackle_start.frame matches 14..15 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1.1 0.4
