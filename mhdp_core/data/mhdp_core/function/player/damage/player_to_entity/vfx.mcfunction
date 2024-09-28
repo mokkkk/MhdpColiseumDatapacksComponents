@@ -16,6 +16,8 @@
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound item.wolf_armor.damage master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 2
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 run playsound minecraft:entity.player.attack.crit master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.8
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 run playsound minecraft:entity.player.attack.weak master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 run playsound item.trident.hit master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 run playsound item.trident.hit master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
 
 # 肉質に応じてヒットストップを減らす
     execute if score #mhdp_temp_defence_phys MhdpCore matches ..30 if score @s Wpn.HitStopTimer matches 3.. run scoreboard players set @s Wpn.HitStopTimer 2
@@ -48,6 +50,8 @@
             execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 if data storage mhdp_core:temp Damage{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function mhdp_core:player/damage/player_to_entity/macro/m.summon_slash_effect with storage mhdp_core:temp Arg
         # 打撃
             execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 if data storage mhdp_core:temp Damage{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function mhdp_core:player/damage/player_to_entity/macro/m.summon_blow_effect with storage mhdp_core:temp Arg
+        # 打撃
+            execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 if data storage mhdp_core:temp Damage{IsShowVfx:true} run particle enchanted_hit ~ ~0.5 ~ 0 0 0 0.3 10
 
 # ダメージ表示
     function mhdp_core:player/damage/player_to_entity/vfx_show_damage

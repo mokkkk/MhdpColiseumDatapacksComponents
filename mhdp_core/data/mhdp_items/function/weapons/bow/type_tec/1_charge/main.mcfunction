@@ -27,14 +27,11 @@
     execute if entity @s[tag=!Skill.Stamina.ShortCharge.1,tag=!Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Bw.ChargeTimer 5
     execute if entity @s[tag=Skill.Stamina.ShortCharge.1] run scoreboard players add @s Wpn.Bw.ChargeTimer 6
     execute if entity @s[tag=Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Bw.ChargeTimer 7
-    execute if entity @s[tag=!Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeTimer matches 140.. if score @s Wpn.Bw.ChargeCount matches ..1 run function mhdp_items:weapons/bow/type_tec/1_charge/up_charge_count
-    execute if entity @s[tag=Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeTimer matches 140.. if score @s Wpn.Bw.ChargeCount matches ..2 run function mhdp_items:weapons/bow/type_tec/1_charge/up_charge_count
+    execute if entity @s[tag=!Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeTimer matches 120.. if score @s Wpn.Bw.ChargeCount matches ..1 run function mhdp_items:weapons/bow/type_tec/1_charge/up_charge_count
+    execute if entity @s[tag=Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeTimer matches 120.. if score @s Wpn.Bw.ChargeCount matches ..2 run function mhdp_items:weapons/bow/type_tec/1_charge/up_charge_count
 
 # 遷移
     # 右クリックを離した場合、射撃に移行
         execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_shot
-    # 溜めすぎた場合、自動的に溜め斬りに移行
-        # execute if score @s Wpn.Gs.ChargeTimer matches 450.. run scoreboard players set @s Wpn.Gs.ChargeCount 2
-        # execute if score @s Wpn.Gs.ChargeTimer matches 450.. run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_chargeattack
-    # ジャンプした場合、タックルに移行
+    # ジャンプした場合、チャージステップに移行
         # execute if entity @s[tag=Ply.Ope.StartJump,tag=!Wpn.Gs.Normal.ChargeSlash] if score @s Wpn.GeneralTimer matches 15.. if score @s Ply.Stats.Stamina matches 150.. run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_tackle

@@ -27,7 +27,7 @@
     # execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/bow/type_tec/3_shot_max/particle
 
 # 攻撃
-    # execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/bow/type_tec/3_shot_max/attack
+    execute if score @s Wpn.GeneralTimer matches 3 positioned ~ ~1.65 ~ run function mhdp_items:weapons/bow/type_tec/3_shot_max/attack
 
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1 run tp @s ~ ~ ~ ~0.5 ~-0.5
