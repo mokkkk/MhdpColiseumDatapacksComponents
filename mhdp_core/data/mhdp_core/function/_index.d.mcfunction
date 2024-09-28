@@ -118,6 +118,8 @@
         #declare tag Other.Text.Vfx.Slash 斬撃エフェクト
     # 一時
         #declare tag Other.Temp.Right 左右確認に一時的に使用、必ず同function内でリセットする
+    # 射撃
+        #declare tag Other.Shot 射撃Entityの共通タグ
 # 体験版用
     # player
         #declare tag Beta.Ply.SelectedWeapon 武器選択済み

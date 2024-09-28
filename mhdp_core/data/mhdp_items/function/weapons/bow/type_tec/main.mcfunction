@@ -9,7 +9,6 @@
 
 # 抜刀攻撃
     # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/bow/type_tec/0_drawattack/start
-    # execute if entity @s[tag=Ply.Ope.StartSneak,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/bow/type_tec/0_drawattack/start_guard
 
 # 溜め
     # 通常
@@ -22,6 +21,9 @@
     # 通常
         # 処理
             execute if entity @s[tag=Wpn.Bw.Tec.Shot] run function mhdp_items:weapons/bow/type_tec/2_shot_normal/main
+    # 最大溜め
+        # 処理
+            execute if entity @s[tag=Wpn.Bw.Tec.Shot.Max] run function mhdp_items:weapons/bow/type_tec/3_shot_max/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

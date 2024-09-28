@@ -52,6 +52,11 @@
             scoreboard objectives add Wpn.Gs.ChargeCount dummy
         # 溜め斬り段階
             scoreboard objectives add Wpn.Gs.ChargeSlashCount dummy
+    # 弓
+        # 溜め時間
+            scoreboard objectives add Wpn.Bw.ChargeTimer dummy
+        # 溜め段階
+            scoreboard objectives add Wpn.Bw.ChargeCount dummy
 # 特殊装具ごとの特殊スコア
     # 砥石
         # 処理タイマー

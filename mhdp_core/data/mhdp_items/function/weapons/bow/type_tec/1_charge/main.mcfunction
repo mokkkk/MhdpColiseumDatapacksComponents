@@ -15,8 +15,8 @@
     execute if score @s Wpn.AnimationTimer matches 3..4 run playsound item.crossbow.loading_middle master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
     execute if score @s Wpn.AnimationTimer matches ..2 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_0
     execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_1
-    execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_2
-    execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_3
+    execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_2
+    execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_3
 
 # 移動制限
     # effect give @s slowness 1 3 true
@@ -24,12 +24,11 @@
     # execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.3 add_value
 
 # 溜め
-    # execute if entity @s[tag=!Skill.Stamina.ShortCharge.1,tag=!Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Gs.ChargeTimer 5
-    # execute if entity @s[tag=Skill.Stamina.ShortCharge.1] run scoreboard players add @s Wpn.Gs.ChargeTimer 6
-    # execute if entity @s[tag=Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Gs.ChargeTimer 7
-    # execute if score @s Wpn.Gs.ChargeTimer matches 100.. if score @s Wpn.Gs.ChargeCount matches ..0 run function mhdp_items:weapons/bow/type_tec/1_charge/up_charge_count
-    # execute if score @s Wpn.Gs.ChargeTimer matches 200.. if score @s Wpn.Gs.ChargeCount matches ..1 run function mhdp_items:weapons/bow/type_tec/1_charge/up_charge_count
-    # execute if score @s Wpn.Gs.ChargeTimer matches 300.. if score @s Wpn.Gs.ChargeCount matches ..2 run function mhdp_items:weapons/bow/type_tec/1_charge/up_charge_count
+    execute if entity @s[tag=!Skill.Stamina.ShortCharge.1,tag=!Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Bw.ChargeTimer 5
+    execute if entity @s[tag=Skill.Stamina.ShortCharge.1] run scoreboard players add @s Wpn.Bw.ChargeTimer 6
+    execute if entity @s[tag=Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Bw.ChargeTimer 7
+    execute if entity @s[tag=!Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeTimer matches 140.. if score @s Wpn.Bw.ChargeCount matches ..1 run function mhdp_items:weapons/bow/type_tec/1_charge/up_charge_count
+    execute if entity @s[tag=Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeTimer matches 140.. if score @s Wpn.Bw.ChargeCount matches ..2 run function mhdp_items:weapons/bow/type_tec/1_charge/up_charge_count
 
 # 遷移
     # 右クリックを離した場合、射撃に移行

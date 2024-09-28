@@ -16,4 +16,6 @@
     
 # 対象の処理を実行
     # function mhdp_items:weapons/bow/type_tec/1_charge/end
-    function mhdp_items:weapons/bow/type_tec/2_shot_normal/start
+    execute if entity @s[tag=!Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeCount matches ..1 run return run function mhdp_items:weapons/bow/type_tec/2_shot_normal/start
+    execute if entity @s[tag=Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeCount matches ..2 run return run function mhdp_items:weapons/bow/type_tec/2_shot_normal/start
+    function mhdp_items:weapons/bow/type_tec/3_shot_max/start
