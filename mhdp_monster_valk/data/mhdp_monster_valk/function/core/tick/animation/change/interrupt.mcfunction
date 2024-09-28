@@ -6,10 +6,10 @@
 
 # タグ付与
     # tag @s add Anim.Comet
-    function mhdp_monster_valk:core/tick/animation/change/play/change_phase
+    function mhdp_monster_valk:core/tick/animation/change/play/spear
 
 # 軸合わせ
-    # tag @s add Mns.Temp.IsTurn
+    tag @s add Mns.Temp.IsTurn
 
 # アニメーション変更
     function mhdp_monster_valk:core/tick/animation/change/main

@@ -9,4 +9,4 @@
     scoreboard players set #mhdp_arg_cmd_offset MhdpCore 9
     data modify storage mhdp_core:temp Args.Slot set value "mainhand"
 # アニメーション
-    function mhdp_items:core/util/item_modify_animation
+    function mhdp_items:core/util/item_modify_no_attack
