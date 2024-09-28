@@ -10,4 +10,4 @@
     data modify storage mhdp_core:temp Args.Slot set value "mainhand"
 
 # アニメーション
-    function mhdp_items:core/util/item_modify_no_attack
+    function mhdp_items:core/util/item_modify_animation

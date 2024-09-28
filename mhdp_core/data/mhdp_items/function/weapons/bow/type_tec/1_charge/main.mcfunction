@@ -14,8 +14,9 @@
     execute if score @s Wpn.AnimationTimer matches 3..4 run playsound item.crossbow.loading_middle master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
     execute if score @s Wpn.AnimationTimer matches 3..4 run playsound item.crossbow.loading_middle master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
     execute if score @s Wpn.AnimationTimer matches ..2 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_0
-    execute if score @s Wpn.AnimationTimer matches 5..7 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_1
-    execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_2
+    execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_1
+    execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_2
+    execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_3
 
 # 移動制限
     # effect give @s slowness 1 3 true
