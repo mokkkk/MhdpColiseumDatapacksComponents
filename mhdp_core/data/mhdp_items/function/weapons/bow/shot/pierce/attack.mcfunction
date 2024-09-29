@@ -41,6 +41,9 @@
         execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches 3.. run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Pierce.4.Crit
     execute as @a[tag=Ply.Temp.TargetSub] if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
+# ゲージ上昇
+    execute as @a[tag=Ply.Temp.TargetSub] run scoreboard players add @s Wpn.Bw.Gauge 3
+
 # 終了
     scoreboard players reset #mhdp_temp_crit_min MhdpCore
     scoreboard players reset #mhdp_temp_crit_max MhdpCore

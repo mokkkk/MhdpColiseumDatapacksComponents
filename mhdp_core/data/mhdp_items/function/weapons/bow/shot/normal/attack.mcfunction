@@ -36,6 +36,9 @@
         execute if entity @s[tag=Wpn.Bw.Shot.Bottle.Strong] run function mhdp_items:weapons/bow/shot/normal/attack_bottle_strong
     execute as @a[tag=Ply.Temp.TargetSub] if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
+# ゲージ上昇
+    execute as @a[tag=Ply.Temp.TargetSub] run scoreboard players add @s Wpn.Bw.Gauge 4
+
 # 終了
     scoreboard players reset #mhdp_temp_crit_min MhdpCore
     scoreboard players reset #mhdp_temp_crit_max MhdpCore

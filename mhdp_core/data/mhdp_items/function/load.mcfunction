@@ -80,7 +80,7 @@
             scoreboard objectives add Itm.Wirebug.CoolTime dummy
 
 ## 定数定義
-    scoreboard players set #const_bow_bottle_strong_multiply Const 135
+    scoreboard players set #const_bow_bottle_strong_multiply Const 125
 
 ## init
     function mhdp_items:core/init/item_data

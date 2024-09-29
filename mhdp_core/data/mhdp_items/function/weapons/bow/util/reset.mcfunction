@@ -19,6 +19,8 @@
     scoreboard players reset @s Wpn.Bw.ChargeCount
     scoreboard players reset @s Wpn.Bw.HormingTarget
     scoreboard players reset @s Wpn.Bw.HormingTimer
+    scoreboard players reset @s Wpn.Bw.Bottle.Type
+    scoreboard players reset @s Wpn.Bw.Bottle.Count
 
 # ステータス削除
     attribute @s generic.attack_speed modifier remove mhdp_core:weapon_attack

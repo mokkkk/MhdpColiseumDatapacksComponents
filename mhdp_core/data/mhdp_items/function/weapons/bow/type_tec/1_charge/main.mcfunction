@@ -19,9 +19,6 @@
     execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_3
 
 # 移動制限
-    # effect give @s slowness 1 3 true
-    # execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    # execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.3 add_value
 
 # 溜め
     execute if entity @s[tag=!Skill.Stamina.ShortCharge.1,tag=!Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Bw.ChargeTimer 5
@@ -32,6 +29,7 @@
 
 # スタミナ消費
     scoreboard players remove @s Ply.Stats.Stamina 2
+    scoreboard players add @s Wpn.Bw.Gauge 1
 
 # 遷移
     # 右クリックを離した場合、射撃に移行

@@ -4,5 +4,21 @@
 #
 # @within function mhdp_items:core/switch/macro/m.ui
 
-# 処理なし
-    # say 弓UI描画処理
+# UI設定
+    scoreboard players operation #mhdp_temp_gauge MhdpCore = @s Wpn.Bw.Gauge
+    function mhdp_items:weapons/bow/util/ui/append
+    scoreboard players remove #mhdp_temp_gauge MhdpCore 100
+    function mhdp_items:weapons/bow/util/ui/append
+    scoreboard players remove #mhdp_temp_gauge MhdpCore 100
+    function mhdp_items:weapons/bow/util/ui/append
+
+# 表示
+    data modify storage mhdp_core:temp UI.Weapon set value '[\
+        {"interpret":true,"nbt":"UI.ExArray[0]","storage":"mhdp_core:temp"},\
+        {"interpret":true,"nbt":"UI.ExArray[1]","storage":"mhdp_core:temp"},\
+        {"interpret":true,"nbt":"UI.ExArray[2]","storage":"mhdp_core:temp"},\
+        {"text":"\\uF802","font": "space"}\
+    ]'
+
+# 終了
+    scoreboard players reset #mhdp_temp_gauge

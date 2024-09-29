@@ -23,6 +23,9 @@
     execute if score @n[type=marker,tag=Mk.Temp.PlayerPos.0] MhdpCore matches 1.. rotated as @n[type=marker,tag=Mk.Temp.PlayerPos.0] run function delta:api/launch_looking
     execute unless score @n[type=marker,tag=Mk.Temp.PlayerPos.0] MhdpCore matches 1.. rotated ~ 0 run function delta:api/launch_looking
 
+# 無敵時間設定
+    scoreboard players set @s Ply.Timer.Avoid 3
+
 # 終了
     kill @n[type=marker,tag=Mk.Temp.PlayerPos.0]
     data remove storage mhdp_core:temp Temp

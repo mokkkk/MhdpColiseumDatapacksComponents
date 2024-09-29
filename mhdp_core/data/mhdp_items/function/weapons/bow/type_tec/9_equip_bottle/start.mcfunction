@@ -18,4 +18,7 @@
     scoreboard players set @s Wpn.Bw.ChargeTimer 0
     scoreboard players set @s Wpn.Bw.ChargeCount 0
 
+# ゲージ消費
+    scoreboard players remove @s Wpn.Bw.Gauge 100
+
 say 弓 ビン装填
