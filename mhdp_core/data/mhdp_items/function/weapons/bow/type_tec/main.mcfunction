@@ -34,11 +34,17 @@
 
 # 剛射
     # 処理
-            execute if entity @s[tag=Wpn.Bw.Tec.Shot.Power] run function mhdp_items:weapons/bow/type_tec/5_shot_power/main
+        execute if entity @s[tag=Wpn.Bw.Tec.Shot.Power] run function mhdp_items:weapons/bow/type_tec/5_shot_power/main
 
 # 竜の一矢
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.Shot.Pierce] run function mhdp_items:weapons/bow/type_tec/6_shot_pierce/main
+
+# ビン装填
+    # 開始：スニーク+右クリック短押し
+        execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/start
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Tec.Equip] run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/main
 
 # 導ノ矢
     # 開始：スニーク+右クリック長押し

@@ -51,8 +51,13 @@
     execute if score @s Wpn.GeneralTimer matches 15 run scoreboard players remove @s Ply.Stats.Stamina 100
 
 # 先行入力
-
+    execute if entity @s[tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 1..29 run function mhdp_items:core/buffering/a
+    
 # 遷移
+    # 右クリック長押し：溜めに移行
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 15..29 run function mhdp_items:weapons/bow/type_tec/7_shot_horming/change_to_charge
+    # ジャンプ：チャージステップに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 15..29 if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/change_to_chargestep
 
 # 終了
-    execute if entity @s[tag=Wpn.Bw.Tec.Shot.Horming] if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/end
+    execute if entity @s[tag=Wpn.Bw.Tec.Shot.Horming] if score @s Wpn.GeneralTimer matches 30.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/end

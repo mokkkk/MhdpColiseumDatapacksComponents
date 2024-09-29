@@ -9,3 +9,7 @@
 
 # タグ付与
     tag @s add Ply.Weapon.Equip.Bow
+
+# スコア初期化
+    scoreboard players set @s Wpn.Bw.Bottle.Type 0
+    scoreboard players set @s Wpn.Bw.Bottle.Count 0

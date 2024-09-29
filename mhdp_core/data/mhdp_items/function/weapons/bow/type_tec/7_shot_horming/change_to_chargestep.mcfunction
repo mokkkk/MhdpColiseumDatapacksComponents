@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/bow/type_tec/5_shot_power/change_to_charge
+#> mhdp_items:weapons/bow/type_tec/7_shot_horming/change_to_charge
 #
-# 剛射 → チャージステップ
+# 導ノ矢 → チャージステップ
 #
 # @within function mhdp_items:weapons/bow/type_tec/1_charge/main
 
@@ -12,7 +12,7 @@
     function mhdp_items:weapons/bow/util/end_attack
 
 # タグ消去
-    tag @s remove Wpn.Bw.Tec.Shot.Power
+    tag @s remove Wpn.Bw.Tec.Shot.Horming
     
 # 対象の処理を実行
     function mhdp_items:weapons/bow/type_tec/4_charge_step/start

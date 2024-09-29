@@ -13,5 +13,8 @@
     execute if entity @s[tag=Ply.Flag.HideSharpness] run data modify storage mhdp_core:temp UI.Sharpness set value '[{"text":"\\uF888\\uF888\\uF888\\uF888\\uF888\\uF888\\uF802","font":"space"}]'
     execute if entity @s[tag=!Ply.Flag.HideSharpness] run data modify storage mhdp_core:temp UI.Sharpness set value '["",{"score":{"name":"#mhdp_temp_sharpness","objective":"MhdpCore"},"font":"ui/sharpness"}]'
 
+# 弓の場合、代わりにビンゲージを表示
+    execute if entity @s[tag=Ply.Weapon.Equip.Bow] run function mhdp_items:weapons/bow/util/ui_bottle
+
 # 終了
     tag @s remove Ply.Flag.HideSharpness

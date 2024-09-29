@@ -20,3 +20,4 @@
     #declare tag Wpn.Bw.Shot.Normal 矢・通常
     #declare tag Wpn.Bw.Shot.Pierce 矢・竜の一矢
     #declare tag Wpn.Bw.Shot.Pierce.HormingEnd 矢・竜の一矢・ホーミング終了
+    #declare tag Wpn.Bw.Shot.Bottle.Strong 強撃ビン

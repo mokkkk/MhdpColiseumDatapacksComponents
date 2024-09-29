@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_charge
+#> mhdp_items:weapons/bow/type_tec/7_shot_horming/change_to_charge
 #
-# 射撃 → 溜め
+# 導ノ矢 → 溜め
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/1_normal_1/main
+# @within function mhdp_items:weapons/bow/type_tec/1_charge/main
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0
@@ -12,7 +12,7 @@
     function mhdp_items:weapons/bow/util/end_attack
 
 # タグ消去
-    tag @s remove Wpn.Bw.Tec.Shot
+    tag @s remove Wpn.Bw.Tec.Shot.Horming
     
 # 対象の処理を実行
     function mhdp_items:weapons/bow/type_tec/1_charge/start_from_shot

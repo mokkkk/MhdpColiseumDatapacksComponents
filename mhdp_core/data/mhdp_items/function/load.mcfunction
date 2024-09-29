@@ -63,6 +63,12 @@
             scoreboard objectives add Wpn.Bw.HormingTimer dummy
         # 導ノ矢ホーミングターゲット
             scoreboard objectives add Wpn.Bw.HormingTarget dummy
+        # 仕込み矢ゲージ
+            scoreboard objectives add Wpn.Bw.Gauge dummy
+        # ビン種別
+            scoreboard objectives add Wpn.Bw.Bottle.Type dummy
+        # ビン本数
+            scoreboard objectives add Wpn.Bw.Bottle.Count dummy
 # 特殊装具ごとの特殊スコア
     # 砥石
         # 処理タイマー
@@ -72,6 +78,9 @@
             scoreboard objectives add Itm.Wirebug.GeneralTimer dummy
         # クールタイム
             scoreboard objectives add Itm.Wirebug.CoolTime dummy
+
+## 定数定義
+    scoreboard players set #const_bow_bottle_strong_multiply Const 135
 
 ## init
     function mhdp_items:core/init/item_data
