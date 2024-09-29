@@ -8,12 +8,12 @@
     function mhdp_items:weapons/bow/util/get_no_ope
 
 # 抜刀攻撃
-    # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/bow/type_tec/0_drawattack/start
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/0_drawattack/start
 
 # 溜め
     # 通常
         # 開始：右クリック長押し
-            execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/bow/type_tec/1_charge/start
+            execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/1_charge/start
         # 処理
             execute if entity @s[tag=Wpn.Bw.Tec.Charge] run function mhdp_items:weapons/bow/type_tec/1_charge/main
 
@@ -28,6 +28,10 @@
 # チャージステップ
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.ChargeStep] run function mhdp_items:weapons/bow/type_tec/4_charge_step/main
+
+# 剛射
+    # 処理
+            execute if entity @s[tag=Wpn.Bw.Tec.Shot.Power] run function mhdp_items:weapons/bow/type_tec/5_shot_power/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

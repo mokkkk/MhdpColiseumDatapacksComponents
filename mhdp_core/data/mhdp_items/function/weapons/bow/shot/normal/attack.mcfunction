@@ -13,10 +13,10 @@
     scoreboard players reset #mhdp_temp_target_player_uid
 
 # 攻撃対象を設定
-    tag @n[type=slime,tag=Mns.HitBox,dx=1,dy=1,dz=1] add Temp.Victim
+    tag @n[type=slime,tag=Mns.HitBox] add Temp.Victim
 
 # クリティカル距離設定
-    scoreboard players set #mhdp_temp_crit_min MhdpCore 5
+    scoreboard players set #mhdp_temp_crit_min MhdpCore 3
     scoreboard players set #mhdp_temp_crit_max MhdpCore 9
     execute if score #mhdp_temp_crit_min MhdpCore <= @s Mns.Shot.Timer if score @s Mns.Shot.Timer <= #mhdp_temp_crit_max MhdpCore run tag @s add Temp.IsCrit
 

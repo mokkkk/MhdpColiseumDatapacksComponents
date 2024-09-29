@@ -16,7 +16,8 @@
 
 # タグ消去
     tag @s remove Wpn.Bw.Tec.ChargeStep
-    
+    tag @s remove Ply.Weapon.StaminaNotRegen
+
 # 対象の処理を実行
     execute if entity @s[tag=!Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeCount matches ..1 run return run function mhdp_items:weapons/bow/type_tec/2_shot_normal/start
     execute if entity @s[tag=Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeCount matches ..2 run return run function mhdp_items:weapons/bow/type_tec/2_shot_normal/start

@@ -30,8 +30,12 @@
     execute if entity @s[tag=!Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeTimer matches 100.. if score @s Wpn.Bw.ChargeCount matches ..1 run function mhdp_items:weapons/bow/type_tec/1_charge/up_charge_count
     execute if entity @s[tag=Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeTimer matches 100.. if score @s Wpn.Bw.ChargeCount matches ..2 run function mhdp_items:weapons/bow/type_tec/1_charge/up_charge_count
 
+# スタミナ消費
+    scoreboard players remove @s Ply.Stats.Stamina 2
+
 # 遷移
     # 右クリックを離した場合、射撃に移行
-        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_shot
+        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_shot
+        execute if score @s Ply.Stats.Stamina matches ..0 run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_shot
     # ジャンプした場合、チャージステップに移行
-        execute if entity @s[tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 15.. if score @s Ply.Stats.Stamina matches 120.. run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_chargestep
+        execute if entity @s[tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 12.. if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_chargestep

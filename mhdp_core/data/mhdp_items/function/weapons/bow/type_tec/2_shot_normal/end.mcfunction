@@ -6,6 +6,7 @@
 
 # タグ消去
     tag @s remove Wpn.Bw.Tec.Shot
+    tag @s remove Ply.Weapon.StaminaNotRegen
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0

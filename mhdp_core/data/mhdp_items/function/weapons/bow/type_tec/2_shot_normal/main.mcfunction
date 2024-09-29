@@ -39,12 +39,17 @@
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/c
+    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.UsedEnderEye.Short] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/c
 
 # 遷移
     # 右クリック押し続け：溜めに移行
-        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 8.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_charge
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 8.. if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_charge
+    # スニーク+右クリック：剛射に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.C,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 8.. if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_shot_power
     # ジャンプ：チャージステップに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_chargestep
-
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 12.. if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_chargestep
+    
 # 終了
     execute if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/end
