@@ -47,5 +47,4 @@
         execute if entity @s[tag=Wpn.Bw.Tec.Shot.Horming] run function mhdp_items:weapons/bow/type_tec/7_shot_horming/main
 
 # 終了
-    execute if entity @s[tag=Ply.Weapon.NoOpe] run say no ope
     tag @s remove Ply.Weapon.NoOpe

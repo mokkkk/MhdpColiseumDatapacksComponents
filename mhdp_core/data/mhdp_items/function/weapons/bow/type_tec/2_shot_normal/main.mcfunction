@@ -55,4 +55,4 @@
         execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 12..15 run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_shot_pierce
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/end
+    execute if entity @s[tag=Wpn.Bw.Tec.Shot] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/end

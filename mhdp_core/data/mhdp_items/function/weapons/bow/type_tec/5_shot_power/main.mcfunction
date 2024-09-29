@@ -15,7 +15,6 @@
     execute if score @s Wpn.AnimationTimer matches 5 run playsound entity.arrow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
     execute if score @s Wpn.AnimationTimer matches 5 run playsound entity.arrow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
     
-    
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/bow/type_tec/5_shot_power/animation_0
     execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/bow/type_tec/5_shot_power/animation_1
     execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/bow/type_tec/5_shot_power/animation_2
@@ -52,4 +51,4 @@
         execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 12..21 run function mhdp_items:weapons/bow/type_tec/5_shot_power/change_to_shot_pierce
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 23.. run function mhdp_items:weapons/bow/type_tec/5_shot_power/end
+    execute if entity @s[tag=Wpn.Bw.Tec.Shot.Power] if score @s Wpn.GeneralTimer matches 23.. run function mhdp_items:weapons/bow/type_tec/5_shot_power/end

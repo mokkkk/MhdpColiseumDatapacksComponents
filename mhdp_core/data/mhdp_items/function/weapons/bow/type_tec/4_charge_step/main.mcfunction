@@ -34,4 +34,4 @@
         execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 8.. run function mhdp_items:weapons/bow/type_tec/4_charge_step/change_to_shot
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 21.. run function mhdp_items:weapons/bow/type_tec/4_charge_step/end
+    execute if entity @s[tag=Wpn.Bw.Tec.ChargeStep] if score @s Wpn.GeneralTimer matches 21.. run function mhdp_items:weapons/bow/type_tec/4_charge_step/end

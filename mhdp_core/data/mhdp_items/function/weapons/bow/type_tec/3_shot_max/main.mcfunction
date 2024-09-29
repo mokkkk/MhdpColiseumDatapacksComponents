@@ -60,4 +60,4 @@
         execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 12..21 run function mhdp_items:weapons/bow/type_tec/3_shot_max/change_to_shot_pierce
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/bow/type_tec/3_shot_max/end
+    execute if entity @s[tag=Wpn.Bw.Tec.Shot.Max] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/bow/type_tec/3_shot_max/end

@@ -12,7 +12,7 @@
         execute if entity @s[tag=Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeCount matches ..2 run scoreboard players add @s Wpn.Bw.ChargeCount 1
 
 # 共通処理
-    function mhdp_items:weapons/short_sword/util/end_attack
+    function mhdp_items:weapons/bow/util/end_attack
 
 # タグ消去
     tag @s remove Wpn.Bw.Tec.ChargeStep

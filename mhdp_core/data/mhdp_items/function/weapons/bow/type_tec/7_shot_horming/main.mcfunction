@@ -55,4 +55,4 @@
 # 遷移
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/end
+    execute if entity @s[tag=Wpn.Bw.Tec.Shot.Horming] if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/end

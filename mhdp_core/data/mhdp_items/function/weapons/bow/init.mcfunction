@@ -28,4 +28,6 @@
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Pierce.3.Crit set value {AttackType:Cut,DamageMult:22,PartDamageMult:100,ElementDamageMult:50,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:false,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Pierce.4.Crit set value {AttackType:Cut,DamageMult:25,PartDamageMult:100,ElementDamageMult:50,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:false,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
 
+    data modify storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Horming.Burst set value {AttackType:Shot,DamageMult:35,PartDamageMult:100,ElementDamageMult:50,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:false,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
+
 say -- 弓データ初期化

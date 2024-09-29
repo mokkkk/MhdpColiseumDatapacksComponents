@@ -22,7 +22,7 @@
     function mhdp_items:core/util/macro/m.get_no_ope_loop with storage mhdp_core:temp Args
 
 # タイマー設定
-    # execute if entity @s[tag=!Ply.Weapon.NoOpe] run scoreboard players set @s Wpn.NoOpeTimer 2
+    # execute if entity @s[tag=Ply.Weapon.NoOpe] run scoreboard players set @s Wpn.NoOpeTimer 2
 
 # 終了
     data remove storage mhdp_core:temp Temp

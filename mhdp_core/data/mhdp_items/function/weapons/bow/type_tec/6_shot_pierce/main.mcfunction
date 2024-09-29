@@ -59,4 +59,4 @@
 # 遷移
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 55.. run function mhdp_items:weapons/bow/type_tec/6_shot_pierce/end
+    execute if entity @s[tag=Wpn.Bw.Tec.Shot.Pierce] if score @s Wpn.GeneralTimer matches 55.. run function mhdp_items:weapons/bow/type_tec/6_shot_pierce/end

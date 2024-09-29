@@ -9,7 +9,7 @@
     scoreboard players set @s Wpn.AnimationTimer 0
 
 # 共通処理
-    function mhdp_items:weapons/short_sword/util/end_attack
+    function mhdp_items:weapons/bow/util/end_attack
 
 # タグ消去
     tag @s remove Wpn.Bw.Tec.Shot.Max
