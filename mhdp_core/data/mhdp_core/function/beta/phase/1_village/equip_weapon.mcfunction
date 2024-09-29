@@ -4,6 +4,10 @@
 #
 # @within function mhdp_core:phase/1_village/change_phase/check
 
+# ステータス設定
+    scoreboard players set @s Ply.Stats.DefenceValue 0
+    execute if entity @s[tag=Beta.Ply.Weapon.Bow] run scoreboard players set @s Ply.Stats.DefenceValue -35
+
 # アイテム消去
     clear @s
 

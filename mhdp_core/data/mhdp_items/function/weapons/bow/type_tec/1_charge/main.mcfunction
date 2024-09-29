@@ -29,7 +29,7 @@
 
 # スタミナ消費
     scoreboard players remove @s Ply.Stats.Stamina 2
-    scoreboard players add @s Wpn.Bw.Gauge 1
+    execute if score @s Wpn.GeneralTimer matches 10.. run scoreboard players add @s Wpn.Bw.Gauge 1
 
 # 遷移
     # 右クリックを離した場合、射撃に移行

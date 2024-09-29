@@ -11,6 +11,7 @@
     tag @s add Ply.Weapon.Equip.Bow
 
 # スコア初期化
+    scoreboard players set @s Wpn.Bw.Gauge 0
     scoreboard players set @s Wpn.Bw.Bottle.Count 0
     # ビン種別
         scoreboard players set @s Wpn.Bw.Bottle.Type 0

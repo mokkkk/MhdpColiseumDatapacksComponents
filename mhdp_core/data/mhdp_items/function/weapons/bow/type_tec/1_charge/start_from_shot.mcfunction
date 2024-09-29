@@ -17,6 +17,5 @@
     scoreboard players set @s Wpn.Bw.ChargeTimer 0
     execute if entity @s[tag=!Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeCount matches ..1 run scoreboard players add @s Wpn.Bw.ChargeCount 1
     execute if entity @s[tag=Skill.Extra.BowChargeUp] if score @s Wpn.Bw.ChargeCount matches ..2 run scoreboard players add @s Wpn.Bw.ChargeCount 1
-    execute if entity @s[tag=Ply.Weapon.Bow.IsHorming] run scoreboard players set @s Wpn.Bw.ChargeCount 2
 
 say 弓・溜め

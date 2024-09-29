@@ -15,7 +15,7 @@
 
 # 溜め
     # 通常
-        # 開始：立ち+右クリック長押し
+        # 開始：立ち+右クリック
             execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/1_charge/start
         # 処理
             execute if entity @s[tag=Wpn.Bw.Tec.Charge] run function mhdp_items:weapons/bow/type_tec/1_charge/main
@@ -51,6 +51,10 @@
         execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Wpn.Bw.Gauge matches 100.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.Shot.Horming] run function mhdp_items:weapons/bow/type_tec/7_shot_horming/main
+
+# 飛翔睨み撃ち
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Tec.FlyingShot] run function mhdp_items:weapons/bow/type_tec/10_flying_shot/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

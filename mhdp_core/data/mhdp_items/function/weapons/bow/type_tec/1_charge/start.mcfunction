@@ -20,6 +20,5 @@
 # その他初期化
     scoreboard players set @s Wpn.Bw.ChargeTimer 0
     scoreboard players set @s Wpn.Bw.ChargeCount 0
-    execute if entity @s[tag=Ply.Weapon.Bow.IsHorming] run scoreboard players set @s Wpn.Bw.ChargeCount 2
 
 say 弓・溜め

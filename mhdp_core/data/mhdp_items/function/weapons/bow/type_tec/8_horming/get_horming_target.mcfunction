@@ -13,7 +13,7 @@
 
 # 自分が発射した矢に対して実行
     scoreboard players operation #mhdo_temp_uuid MhdpCore = @s Ply.Uid
-    execute as @e[type=item_display,tag=Other.Shot] unless entity @s[tag=!Wpn.Bw.Shot.Normal,tag=!Wpn.Bw.Shot.Pierce] if entity @s[tag=!Wpn.Bw.Shot.Pierce.HormingEnd] if score @s Ply.Uid = #mhdo_temp_uuid MhdpCore at @s if score @s Mns.Shot.Timer matches 2..7 run function mhdp_items:weapons/bow/type_tec/8_horming/arrow_horming
+    execute as @e[type=item_display,tag=Other.Shot] unless entity @s[tag=!Wpn.Bw.Shot.Normal,tag=!Wpn.Bw.Shot.Pierce] if entity @s[tag=!Wpn.Bw.Shot.Pierce.HormingEnd] if score @s Ply.Uid = #mhdo_temp_uuid MhdpCore at @s if score @s Mns.Shot.Timer matches 2..10 run function mhdp_items:weapons/bow/type_tec/8_horming/arrow_horming
 
 # 終了
     tag @e[tag=Temp.Horming.Target] remove Temp.Horming.Target
