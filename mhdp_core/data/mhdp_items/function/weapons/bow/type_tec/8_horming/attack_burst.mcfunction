@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/bow/type_tec/7_shot_horming/attack_burst
+#> mhdp_items:weapons/bow/type_tec/8_horming/attack_burst
 #
 # 導ノ矢 攻撃判定
 #

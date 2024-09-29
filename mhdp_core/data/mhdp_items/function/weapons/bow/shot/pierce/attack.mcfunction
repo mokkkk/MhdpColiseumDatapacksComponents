@@ -7,6 +7,9 @@
 # 一時タグ消去
     tag @s remove Temp.This
 
+# 一度でもヒットした場合、ホーミングしなくなる
+    tag @s add Wpn.Bw.Shot.Pierce.HormingEnd
+
 # ヒット数増加
     scoreboard players add @s MhdpCore 1
     scoreboard players add @s Wpn.GeneralTimer 1
