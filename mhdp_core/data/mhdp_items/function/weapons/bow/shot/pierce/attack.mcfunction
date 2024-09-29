@@ -9,6 +9,7 @@
 
 # ヒット数増加
     scoreboard players add @s MhdpCore 1
+    scoreboard players add @s Wpn.GeneralTimer 1
 
 # 攻撃主を取得
     scoreboard players operation #mhdp_temp_target_player_uid Ply.Uid = @s Ply.Uid
@@ -41,4 +42,4 @@
     scoreboard players reset #mhdp_temp_crit_min MhdpCore
     scoreboard players reset #mhdp_temp_crit_max MhdpCore
     tag @a remove Ply.Temp.TargetSub
-    execute if score @s MhdpCore matches 6.. run tag @s add Death
+    execute if score @s MhdpCore matches 8.. run tag @s add Death

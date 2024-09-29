@@ -16,4 +16,4 @@
 
 # 終了
     execute unless block ^ ^ ^ #mhdp_core:no_collision run kill @s
-    execute if score @s Mns.Shot.Timer matches 20.. run kill @s
+    execute if score @s Mns.Shot.Timer matches 40.. run kill @s

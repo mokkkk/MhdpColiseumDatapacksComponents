@@ -46,13 +46,13 @@
 
 # 遷移
     # 右クリック押し続け：溜めに移行
-        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.B,tag=!Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 8.. if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_charge
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.B,tag=!Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 8..15 if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_charge
     # スニーク+右クリック短押し：剛射に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.C,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 8.. if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_shot_power
+        execute if entity @s[tag=Ply.Ope.Buffering.C,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 8..15 if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_shot_power
     # ジャンプ：チャージステップに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 12.. if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_chargestep
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 12..15 if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_chargestep
     # スニーク+右クリック長押し：竜の一矢に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_shot_pierce
+        execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 12..15 run function mhdp_items:weapons/bow/type_tec/2_shot_normal/change_to_shot_pierce
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/end

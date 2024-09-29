@@ -9,3 +9,9 @@
         execute if entity @s[tag=Wpn.Bw.Shot.Normal] run function mhdp_items:weapons/bow/shot/normal/tick
     # 竜の一矢
         execute if entity @s[tag=Wpn.Bw.Shot.Pierce] run function mhdp_items:weapons/bow/shot/pierce/tick
+    # 導ノ矢
+        execute if entity @s[tag=Wpn.Bw.Shot.Horming] run function mhdp_items:weapons/bow/shot/horming/tick
+
+# 行方不明対策
+    execute unless loaded ^ ^ ^2 run say unless loaded
+    execute unless loaded ^ ^ ^2 run kill @s

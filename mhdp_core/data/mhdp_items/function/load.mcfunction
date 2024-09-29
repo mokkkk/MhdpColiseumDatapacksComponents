@@ -44,6 +44,8 @@
         scoreboard objectives add Wpn.GuardStopTimer dummy
     # 武器の使用停止時間
         scoreboard objectives add Wpn.DeactivateTimer dummy
+    # 武器の無操作取得用
+        scoreboard objectives add Wpn.NoOpeTimer dummy
 # 武器ごとの特殊スコア
     # 大剣
         # 溜め時間
@@ -57,6 +59,10 @@
             scoreboard objectives add Wpn.Bw.ChargeTimer dummy
         # 溜め段階
             scoreboard objectives add Wpn.Bw.ChargeCount dummy
+        # 導ノ矢効果時間
+            scoreboard objectives add Wpn.Bw.HormingTimer dummy
+        # 導ノ矢ホーミングターゲット
+            scoreboard objectives add Wpn.Bw.HormingTarget dummy
 # 特殊装具ごとの特殊スコア
     # 砥石
         # 処理タイマー

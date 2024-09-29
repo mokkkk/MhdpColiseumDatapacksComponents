@@ -52,12 +52,12 @@
 
 # 遷移
     # ジャンプ：チャージステップに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 12.. if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/3_shot_max/change_to_chargestep
+        execute if entity @s[tag=Ply.Ope.Buffering.A,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 12..21 if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/3_shot_max/change_to_chargestep
     # スニーク+右クリック：剛射に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 8.. if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/3_shot_max/change_to_shot_power
-        execute if entity @s[tag=Ply.Ope.Buffering.C,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 8.. if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/3_shot_max/change_to_shot_power
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 8..21 if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/3_shot_max/change_to_shot_power
+        execute if entity @s[tag=Ply.Ope.Buffering.C,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 8..21 if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/3_shot_max/change_to_shot_power
     # スニーク+右クリック長押し：竜の一矢に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/bow/type_tec/3_shot_max/change_to_shot_pierce
+        execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 12..21 run function mhdp_items:weapons/bow/type_tec/3_shot_max/change_to_shot_pierce
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/bow/type_tec/3_shot_max/end

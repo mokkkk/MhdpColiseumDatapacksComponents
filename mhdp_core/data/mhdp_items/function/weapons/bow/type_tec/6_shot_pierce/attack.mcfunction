@@ -5,8 +5,7 @@
 # @within function mhdp_items:weapons/bow/type_tec/6_shot_pierce/main
 
 # 矢を召喚
-    summon item_display ^ ^ ^ {teleport_duration:0,Tags:["Other.Shot","Wpn.Bw.Shot.Pierce","Start"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.2f,1.2f,1.2f]},item:{id:"minecraft:paper",count:1,components:{custom_model_data:10000}}}
-    execute positioned ^ ^ ^ run tp @n[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Pierce,tag=Start] ~ ~ ~ ~ ~-0.5
+    function mhdp_items:weapons/bow/shot/pierce/summon
 
 # データ設定
     scoreboard players operation @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Pierce,tag=Start] Ply.Uid = @s Ply.Uid

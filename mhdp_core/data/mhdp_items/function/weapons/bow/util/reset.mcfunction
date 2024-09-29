@@ -12,10 +12,13 @@
 
 # タグ消去
     tag @s remove Ply.Weapon.Equip.Bow
+    tag @s remove Ply.Weapon.Bow.IsHorming
 
 # 専用スコア消去
     scoreboard players reset @s Wpn.Bw.ChargeTimer
     scoreboard players reset @s Wpn.Bw.ChargeCount
+    scoreboard players reset @s Wpn.Bw.HormingTarget
+    scoreboard players reset @s Wpn.Bw.HormingTimer
 
 # ステータス削除
     attribute @s generic.attack_speed modifier remove mhdp_core:weapon_attack
