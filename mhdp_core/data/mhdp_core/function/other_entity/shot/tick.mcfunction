@@ -7,3 +7,5 @@
 # 弓
     # 通常矢
         execute if entity @s[tag=Wpn.Bw.Shot.Normal] run function mhdp_items:weapons/bow/shot/normal/tick
+    # 竜の一矢
+        execute if entity @s[tag=Wpn.Bw.Shot.Pierce] run function mhdp_items:weapons/bow/shot/pierce/tick

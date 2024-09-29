@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/bow/shot/normal/tick
+#> mhdp_items:weapons/bow/shot/pierce/tick
 #
-# 矢の処理
+# 竜の一矢の処理
 #
 # @within function mhdp_items:/**
 
@@ -10,9 +10,12 @@
 # teleport_duration設定
     execute if score @s Mns.Shot.Timer matches 1 run data modify entity @s teleport_duration set value 1
 
+# 演出
+    execute if score @s Mns.Shot.Timer matches ..5 run function mhdp_items:weapons/bow/shot/pierce/particle
+
 # メイン処理実行
-    execute if entity @s[tag=!Death] at @s run function mhdp_items:weapons/bow/shot/normal/main
-    execute if entity @s[tag=!Death] at @s run function mhdp_items:weapons/bow/shot/normal/main
+    execute at @s run function mhdp_items:weapons/bow/shot/pierce/main
+    execute at @s run function mhdp_items:weapons/bow/shot/pierce/main
 
 # 終了
     execute unless block ^ ^ ^ #mhdp_core:no_collision run kill @s

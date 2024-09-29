@@ -13,5 +13,5 @@
 
 # 攻撃
     tag @s add Temp.This
-    execute if entity @s[tag=!Death] at @s positioned ~-0.75 ~-0.75 ~-0.75 as @n[type=slime,tag=Mns.HitBox,dx=1,dy=1,dz=1] positioned ~0.5 ~0.5 ~0.5 if entity @s[dx=1,dy=1,dz=1] as @n[tag=Temp.This] at @s run function mhdp_items:weapons/bow/shot/normal/attack
+    execute if entity @s[tag=!Death] at @s positioned ~-0.6 ~-0.6 ~-0.6 as @n[type=slime,tag=Mns.HitBox,dx=1,dy=1,dz=1] positioned ~0.3 ~0.3 ~0.3 if entity @s[dx=1,dy=1,dz=1] as @n[tag=Temp.This] at @s run function mhdp_items:weapons/bow/shot/normal/attack
     tag @s remove Temp.This
