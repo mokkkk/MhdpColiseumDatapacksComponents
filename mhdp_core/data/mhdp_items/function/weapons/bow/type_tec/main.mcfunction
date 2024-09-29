@@ -25,5 +25,9 @@
         # 処理
             execute if entity @s[tag=Wpn.Bw.Tec.Shot.Max] run function mhdp_items:weapons/bow/type_tec/3_shot_max/main
 
+# チャージステップ
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Tec.ChargeStep] run function mhdp_items:weapons/bow/type_tec/4_charge_step/main
+
 # 終了
     tag @s remove Ply.Weapon.NoOpe
