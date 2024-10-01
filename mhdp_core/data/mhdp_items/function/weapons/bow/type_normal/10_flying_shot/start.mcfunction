@@ -1,15 +1,15 @@
-#> mhdp_items:weapons/bow/type_tec/10_flying_shot/start
+#> mhdp_items:weapons/bow/type_normal/10_flying_shot/start
 #
 # 飛翔睨み撃ち 開始
 #
-# @within function mhdp_items:weapons/bow/type_tec/main
+# @within function mhdp_items:weapons/bow/type_normal/main
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0
     scoreboard players set @s Wpn.AnimationTimer 0
 
 # タグ付与
-    tag @s add Wpn.Bw.Tec.FlyingShot
+    tag @s add Wpn.Bw.Normal.FlyingShot
 
 # attribute設定
     attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
@@ -30,6 +30,6 @@
     scoreboard players set @s Itm.Wirebug.CoolTime 400
 
 # 跳ねる
-    function mhdp_items:weapons/bow/type_tec/10_flying_shot/start_move
+    function mhdp_items:weapons/bow/type_normal/10_flying_shot/start_move
 
 say 弓・飛翔睨み撃ち

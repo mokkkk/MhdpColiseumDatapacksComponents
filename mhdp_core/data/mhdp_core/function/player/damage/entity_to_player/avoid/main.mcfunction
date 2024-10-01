@@ -7,9 +7,9 @@
 # 効果音
     playsound entity.player.attack.sweep master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 2
 
+# フレーム回避成功時の処理を実行
+    function mhdp_items:core/switch/weapon_avoid
+
 # 無敵時間設定
     scoreboard players set @s Ply.Timer.Avoid 0
     scoreboard players set @s Ply.Timer.DamageInterval 10
-
-# フレーム回避成功時の処理を実行
-    function mhdp_items:core/switch/weapon_avoid

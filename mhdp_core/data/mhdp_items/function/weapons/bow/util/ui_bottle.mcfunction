@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:core/switch/macro/m.ui
 
+# 地の型では使用しない
+    execute if entity @s[tag=!Ply.Weapon.Type.Tech] run return 0
+
 # UI設定
     data modify storage mhdp_core:temp UI.BowBottleArray set value []
     scoreboard players operation #mhdp_temp_bottle MhdpCore = @s Wpn.Bw.Bottle.Count
@@ -38,5 +41,3 @@
 
 # 終了
     scoreboard players reset #mhdp_temp_bottle
-
-# say bottle 60px + 1px

@@ -26,7 +26,7 @@
     execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Bw.FlyingShot.Count matches ..2 positioned ~ ~1.65 ~ run function mhdp_items:weapons/bow/type_tec/10_flying_shot/attack
 
 # 再度溜める
-    execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 7.. run scoreboard players set @s Wpn.GeneralTimer 0
+    execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.Bw.FlyingShot.Count matches ..2 if score @s Wpn.GeneralTimer matches 7.. run scoreboard players set @s Wpn.GeneralTimer 0
 
 # 終了
     execute if entity @s[tag=!Ply.Ope.IsAir] run function mhdp_items:weapons/bow/type_tec/10_flying_shot/end

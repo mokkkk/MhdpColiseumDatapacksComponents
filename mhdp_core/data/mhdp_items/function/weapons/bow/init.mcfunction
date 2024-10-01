@@ -8,6 +8,14 @@
     data modify storage mhdp_core:game_data WeaponAttackData.Bow set value {}
 
 # 地の型
+    data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.1 set value {AttackType:Shot,DamageMult:11,PartDamageMult:100,ElementDamageMult:50,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.2 set value {AttackType:Shot,DamageMult:11,PartDamageMult:100,ElementDamageMult:70,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.3 set value {AttackType:Shot,DamageMult:11,PartDamageMult:100,ElementDamageMult:90,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.4 set value {AttackType:Shot,DamageMult:11,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.1.Crit set value {AttackType:Shot,DamageMult:20,PartDamageMult:100,ElementDamageMult:80,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.2.Crit set value {AttackType:Shot,DamageMult:20,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.3.Crit set value {AttackType:Shot,DamageMult:20,PartDamageMult:100,ElementDamageMult:125,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.4.Crit set value {AttackType:Shot,DamageMult:20,PartDamageMult:100,ElementDamageMult:135,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
 
 # 天の型
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Shot.1 set value {AttackType:Shot,DamageMult:10,PartDamageMult:100,ElementDamageMult:50,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}

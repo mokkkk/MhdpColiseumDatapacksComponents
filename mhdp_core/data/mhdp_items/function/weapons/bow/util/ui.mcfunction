@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:core/switch/macro/m.ui
 
+# 地の型では使用しない
+    execute if entity @s[tag=!Ply.Weapon.Type.Tech] run return 0
+
 # UI設定
     scoreboard players operation #mhdp_temp_gauge MhdpCore = @s Wpn.Bw.Gauge
     function mhdp_items:weapons/bow/util/ui/append
