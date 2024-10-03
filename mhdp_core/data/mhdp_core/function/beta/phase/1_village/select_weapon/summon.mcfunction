@@ -8,12 +8,12 @@
     kill @e[tag=Beta.Ui]
 
 # text
-    summon text_display 234 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Ss.Normal"],text:'{"bold":true,"color":"#FF8282","text":"[片手剣・地ノ型]"}'}
-    summon text_display 236 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Ss.Tec"],text:'{"bold":true,"color":"#78FFED","text":"[片手剣・天ノ型]"}'}
-    summon text_display 238 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Gs.Normal"],text:'{"bold":true,"color":"#FF8282","text":"[大剣・地ノ型]"}'}
-    summon text_display 240 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Gs.Tec"],text:'{"bold":true,"color":"#78FFED","text":"[大剣・天ノ型]"}'}
-    summon text_display 242 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Bw.Normal"],text:'{"bold":true,"color":"#FF8282","text":"[弓・地ノ型]"}'}
-    summon text_display 244 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Bw.Tec"],text:'{"bold":true,"color":"#78FFED","text":"[弓・天ノ型]"}'}
+    summon text_display 234 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Ss.Normal"],text:'{"bold":true,"color":"#FF8282","text":"[片手剣・地ノ型]"}',alignment:"center"}
+    summon text_display 236 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Ss.Tec"],text:'{"bold":true,"color":"#78FFED","text":"[片手剣・天ノ型]"}',alignment:"center"}
+    summon text_display 238 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Gs.Normal"],text:'{"bold":true,"color":"#FF8282","text":"[大剣・地ノ型]"}',alignment:"center"}
+    summon text_display 240 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Gs.Tec"],text:'{"bold":true,"color":"#78FFED","text":"[大剣・天ノ型]"}',alignment:"center"}
+    summon text_display 242 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Bw.Normal"],text:'{"bold":true,"color":"#FF8282","text":"[弓・地ノ型]"}',alignment:"center"}
+    summon text_display 244 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Bw.Tec"],text:'{"bold":true,"color":"#78FFED","text":"[弓・天ノ型]"}',alignment:"center"}
 
 # Interaction
     summon interaction 234 63 198 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Ss.Normal"],response:1b}

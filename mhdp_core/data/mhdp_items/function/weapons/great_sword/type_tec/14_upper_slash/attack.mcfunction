@@ -15,8 +15,8 @@
     execute as @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] run tag @s add Temp.Victim
 
 # ヒットストップ    
-    execute if score @s Wpn.Gs.ChargeCount matches ..1 if entity @e[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 3
-    execute if score @s Wpn.Gs.ChargeCount matches 2.. if entity @e[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 5
+    execute if score @s Wpn.Gs.ChargeCount matches ..1 if entity @e[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 5
+    execute if score @s Wpn.Gs.ChargeCount matches 2.. if entity @e[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 7
     execute if entity @e[tag=Temp.Victim] run tp @s @s
 
 # 攻撃

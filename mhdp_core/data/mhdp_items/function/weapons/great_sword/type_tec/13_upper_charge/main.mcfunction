@@ -31,7 +31,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 7000
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 3000
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function delta:api/launch_looking
 
 # 演出
