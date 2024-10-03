@@ -11,10 +11,10 @@
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
     execute if score @s Wpn.AnimationTimer matches ..2 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_0
-    execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_2
-    execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_3
-    execute if score @s Wpn.AnimationTimer matches 11 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_4
-    execute if score @s Wpn.AnimationTimer matches 14 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_5
+    execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_2
+    execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_3
+    execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_4
+    execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_5
 
 # 移動制限
     effect give @s slowness 1 3 true
@@ -35,7 +35,7 @@
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function delta:api/launch_looking
 
 # 演出
-   execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..5 run tp @s ~ ~ ~ ~ ~1
+   execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..5 run tp @s ~ ~ ~ ~ ~0.6
    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..8 at @s run tp @s ~ ~ ~ ~0.5 ~
 
 # 遷移
