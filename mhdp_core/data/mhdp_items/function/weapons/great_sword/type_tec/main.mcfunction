@@ -46,6 +46,14 @@
     # 処理
         execute if entity @s[tag=Wpn.Gs.Tec.Guard] run function mhdp_items:weapons/great_sword/type_tec/4_guard/main
 
+# 相殺斬り上げ
+    # 溜め
+        # 処理
+            execute if entity @s[tag=Wpn.Gs.Tec.UpperCharge] run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/main
+    # 攻撃
+        # 処理
+            execute if entity @s[tag=Wpn.Gs.Tec.Upper] run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/main
+
 # 鉄蟲糸技：ハンティングエッジ
     # 攻撃
         execute if entity @s[tag=Wpn.Gs.Tec.HuntingEdge] run function mhdp_items:weapons/great_sword/type_tec/10_hunting_edge/main

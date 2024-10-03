@@ -19,7 +19,9 @@
 # 移動
     tp @s @s
     tp @s ~ ~ ~0.5
-    scoreboard players set $strength delta.api.launch 20000
+    scoreboard players set $strength delta.api.launch 15000
+    # 後ろに移動した場合、移動距離を短くする
+        execute if score @n[type=marker,tag=Mk.Temp.PlayerPos.0] MhdpCore matches 1.. positioned as @s rotated as @n[type=marker,tag=Mk.Temp.PlayerPos.0] positioned ^ ^ ^1 rotated as @s rotated ~ 0 positioned ^-0.1 ^ ^1 if entity @s[distance=..1.2] run scoreboard players set $strength delta.api.launch 8000
     execute if score @n[type=marker,tag=Mk.Temp.PlayerPos.0] MhdpCore matches 1.. rotated as @n[type=marker,tag=Mk.Temp.PlayerPos.0] run function delta:api/launch_looking
     execute unless score @n[type=marker,tag=Mk.Temp.PlayerPos.0] MhdpCore matches 1.. rotated ~ 0 run function delta:api/launch_looking
 
