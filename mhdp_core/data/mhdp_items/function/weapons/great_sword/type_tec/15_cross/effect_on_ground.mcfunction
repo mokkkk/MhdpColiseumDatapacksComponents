@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/great_sword/type_tec/2_chargeattack/effect_on_ground
+#> mhdp_items:weapons/great_sword/type_tec/15_cross/effect_on_ground
 #
 # 溜め アニメーション処理
 #

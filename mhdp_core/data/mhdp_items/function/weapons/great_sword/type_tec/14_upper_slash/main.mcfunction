@@ -50,8 +50,8 @@
     execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 rotated ~180 -20 run function delta:api/launch_looking
 
 # 遷移
-    # 右クリックを離した場合、溜めに移行
-        # execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/change_to_charge
+    # 右クリック時：十字斬りに移行
+        execute if entity @s[tag=Ply.Flag.Counter,tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/change_to_cross
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/end
