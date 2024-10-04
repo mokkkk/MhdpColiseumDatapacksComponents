@@ -44,6 +44,7 @@
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
 
 # 演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..8 at @s run tp @s ~ ~ ~ ~0.5 ~
 
 # アーマー
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.Armod.Hyper
