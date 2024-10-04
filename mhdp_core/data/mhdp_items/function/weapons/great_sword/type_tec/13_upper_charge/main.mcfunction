@@ -14,7 +14,7 @@
     execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_2
     execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_3
     execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_4
-    execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_5
+    # execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/animation_5
 
 # 移動制限
     effect give @s slowness 1 3 true
@@ -31,7 +31,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 3000
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 6000
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function delta:api/launch_looking
 
 # 演出

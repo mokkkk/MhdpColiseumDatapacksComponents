@@ -15,6 +15,7 @@
             execute if entity @s[tag=Ply.Weapon.NoOpe] run function mhdp_items:core/util/item_modify_animation
     # 終了
         tag @s remove Ply.Weapon.NoOpe
+        tag @s remove Ply.Flag.Counter
 
 # attributeリセット
     attribute @s generic.attack_speed modifier remove mhdp_core:weapon_attack_speed

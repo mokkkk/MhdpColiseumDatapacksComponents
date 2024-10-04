@@ -40,5 +40,9 @@
     data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Tackle.1 set value {AttackType:Blow,DamageMult:26,PartDamageMult:100,ElementDamageMult:0,StunValue:30,TireValue:50,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0,IsVfxStrong:false,VfxScale:[5f,5f,5f]}
     data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Tackle.2 set value {AttackType:Blow,DamageMult:35,PartDamageMult:100,ElementDamageMult:0,StunValue:40,TireValue:50,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0,IsVfxStrong:false,VfxScale:[5f,5f,5f]}
     data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Tackle.3 set value {AttackType:Blow,DamageMult:50,PartDamageMult:100,ElementDamageMult:0,StunValue:55,TireValue:50,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0,IsVfxStrong:false,VfxScale:[5f,5f,5f]}
-
+    data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.1 set value {AttackType:Cut,DamageMult:70,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:50,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-2.7,IsVfxStrong:false,VfxScale:[5f,8f,5f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.2 set value {AttackType:Cut,DamageMult:108,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:50,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-2.7,IsVfxStrong:false,VfxScale:[5f,8f,5f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.3 set value {AttackType:Cut,DamageMult:140,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:50,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-2.7,IsVfxStrong:false,VfxScale:[5f,8f,5f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.Pursuit set value {AttackType:Cut,DamageMult:140,PartDamageMult:200,ElementDamageMult:100,StunValue:0,TireValue:150,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:false,VfxRotation:-2.7,IsVfxStrong:false,VfxScale:[5f,8f,5f]}
+    
 say -- 大剣データ初期化

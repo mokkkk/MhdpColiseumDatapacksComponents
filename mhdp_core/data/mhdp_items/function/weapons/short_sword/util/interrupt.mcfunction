@@ -24,6 +24,7 @@
     tag @s remove Ply.Flag.DrawAttack
     tag @s remove Ply.Flag.Hit
     tag @s remove Ply.Flag.Just.Success
+    tag @s remove Ply.Flag.Counter
 
 # アニメーション停止
     function mhdp_items:weapons/short_sword/util/stop_all_animations

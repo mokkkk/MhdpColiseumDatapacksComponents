@@ -20,6 +20,9 @@
 # ガード判定
     execute if entity @s[tag=Ply.Weapon.Guard] run function mhdp_core:player/damage/entity_to_player/guard/main
 
+# 被ダメージ時処理
+    execute if entity @s[tag=!Ply.Weapon.Guard] run function mhdp_items:core/switch/weapon_on_damage
+
 # ノックバック
     function mhdp_core:player/damage/entity_to_player/knockback/main
 
