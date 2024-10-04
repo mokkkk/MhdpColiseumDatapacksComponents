@@ -32,6 +32,14 @@
     # 処理
         execute if entity @s[tag=Wpn.Gs.Normal.Guard] run function mhdp_items:weapons/great_sword/type_normal/4_guard/main
 
+# 十字斬り
+    # 溜め
+        # 処理
+            execute if entity @s[tag=Wpn.Gs.Normal.CrossCharge] run function mhdp_items:weapons/great_sword/type_normal/13_cross_charge/main
+    # 攻撃
+        # 処理
+            execute if entity @s[tag=Wpn.Gs.Normal.Cross] run function mhdp_items:weapons/great_sword/type_normal/14_cross/main
+
 # 鉄蟲糸技：ハンティングエッジ
     # 攻撃
         execute if entity @s[tag=Wpn.Gs.Normal.HuntingEdge] run function mhdp_items:weapons/great_sword/type_normal/10_hunting_edge/main

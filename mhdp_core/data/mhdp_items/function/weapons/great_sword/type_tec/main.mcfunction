@@ -56,7 +56,7 @@
 
 # 十字斬り
     # 処理
-            execute if entity @s[tag=Wpn.Gs.Tec.Cross] run function mhdp_items:weapons/great_sword/type_tec/15_cross/main
+        execute if entity @s[tag=Wpn.Gs.Tec.Cross] run function mhdp_items:weapons/great_sword/type_tec/15_cross/main
 
 # 鉄蟲糸技：ハンティングエッジ
     # 攻撃
