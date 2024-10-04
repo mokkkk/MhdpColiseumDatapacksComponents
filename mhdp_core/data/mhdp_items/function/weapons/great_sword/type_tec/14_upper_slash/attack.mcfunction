@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
 
 # デバッグ
-    tag @s add Ply.Flag.Counter
+    # tag @s add Ply.Flag.Counter
 
 # 命中判定
     execute anchored eyes positioned ^ ^ ^1 positioned ~-0.5 ~-0.5 ~-0.5 run tag @e[type=slime,tag=Mns.HitBox,dx=1,dy=1,dz=1] add Temp.Hit

@@ -24,9 +24,9 @@
     execute if entity @s[tag=!Skill.Stamina.ShortCharge.1,tag=!Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Gs.ChargeTimer 5
     execute if entity @s[tag=Skill.Stamina.ShortCharge.1] run scoreboard players add @s Wpn.Gs.ChargeTimer 6
     execute if entity @s[tag=Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Gs.ChargeTimer 7
-    execute if score @s Wpn.Gs.ChargeTimer matches 200.. if score @s Wpn.Gs.ChargeCount matches ..0 run function mhdp_items:weapons/great_sword/type_normal/13_cross_charge/up_charge_count
-    execute if score @s Wpn.Gs.ChargeTimer matches 400.. if score @s Wpn.Gs.ChargeCount matches ..1 run function mhdp_items:weapons/great_sword/type_normal/13_cross_charge/up_charge_count
-    execute if score @s Wpn.Gs.ChargeTimer matches 600.. if score @s Wpn.Gs.ChargeCount matches ..2 run function mhdp_items:weapons/great_sword/type_normal/13_cross_charge/up_charge_count
+    execute if score @s Wpn.Gs.ChargeTimer matches 170.. if score @s Wpn.Gs.ChargeCount matches ..0 run function mhdp_items:weapons/great_sword/type_normal/13_cross_charge/up_charge_count
+    execute if score @s Wpn.Gs.ChargeTimer matches 340.. if score @s Wpn.Gs.ChargeCount matches ..1 run function mhdp_items:weapons/great_sword/type_normal/13_cross_charge/up_charge_count
+    execute if score @s Wpn.Gs.ChargeTimer matches 510.. if score @s Wpn.Gs.ChargeCount matches ..2 run function mhdp_items:weapons/great_sword/type_normal/13_cross_charge/up_charge_count
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
