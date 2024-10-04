@@ -18,6 +18,8 @@
     execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/animation_4
     execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/animation_5
     execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/animation_6
+    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 18 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
+    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 18 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/animation_7
     execute if score @s Wpn.AnimationTimer matches 2 positioned ^ ^ ^1 rotated ~ ~-10 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/particle
     execute if score @s Wpn.AnimationTimer matches 3 positioned ^ ^2 ^0.3 rotated ~ ~-40 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/particle
     execute if score @s Wpn.AnimationTimer matches 4 positioned ^ ^ ^0.3 rotated ~ ~-80 positioned ^ ^ ^1.3 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/particle
@@ -45,13 +47,14 @@
     execute if score @s Wpn.AnimationTimer matches 3 rotated ~ 0 run function delta:api/launch_looking
     execute if score @s Wpn.AnimationTimer matches 6 run tp @s @s
     execute if entity @s[tag=!Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength delta.api.launch 4000
-    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength delta.api.launch 12000
+    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength delta.api.launch 16000
     execute if entity @s[tag=!Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 rotated ~ -60 run function delta:api/launch_looking
     execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 rotated ~180 -20 run function delta:api/launch_looking
 
 # 遷移
-    # 右クリック時：十字斬りに移行
+    # カウンター成功後、右クリック時：十字斬りに移行
         execute if entity @s[tag=Ply.Flag.Counter,tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/change_to_cross
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/end
+    execute if entity @s[tag=!Ply.Flag.Counter] if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/end
+    execute if score @s Wpn.GeneralTimer matches 65.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/end
