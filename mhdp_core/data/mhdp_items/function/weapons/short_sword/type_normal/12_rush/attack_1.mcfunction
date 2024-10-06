@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/short_sword/type_normal/11_spin/attack
+#> mhdp_items:weapons/short_sword/type_tec/2_normal_2/attack_2
 #
-# 回転斬り 攻撃判定
+# 通常コンボ3 攻撃判定
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
 
@@ -17,7 +17,7 @@
     execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
 
 # 攻撃
-    data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Normal.Rush.1
+    data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Normal.Rush.2
     execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
 # 終了
