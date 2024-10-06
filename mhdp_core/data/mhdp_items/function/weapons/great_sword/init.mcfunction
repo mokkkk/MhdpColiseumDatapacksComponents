@@ -52,6 +52,6 @@
     data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.3 set value {AttackType:Cut,DamageMult:140,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:50,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-2.7,IsVfxStrong:false,VfxScale:[5f,8f,5f]}
     data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.Pursuit set value {AttackType:Cut,DamageMult:30,PartDamageMult:300,ElementDamageMult:100,StunValue:0,TireValue:150,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:false,VfxRotation:-2.7,IsVfxStrong:false,VfxScale:[5f,8f,5f]}
     data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Cross.1 set value {AttackType:Cut,DamageMult:33,PartDamageMult:150,ElementDamageMult:100,StunValue:0,TireValue:30,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-1.3,IsVfxStrong:false,VfxScale:[6f,8f,6f]}
-    data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Cross.2 set value {AttackType:Cut,DamageMult:45,PartDamageMult:150,ElementDamageMult:100,StunValue:0,TireValue:30,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:0.1,IsVfxStrong:false,VfxScale:[6f,8f,6f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Cross.2 set value {AttackType:Cut,DamageMult:45,PartDamageMult:150,ElementDamageMult:100,StunValue:0,TireValue:30,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[6f,8f,6f]}
     
 say -- 大剣データ初期化

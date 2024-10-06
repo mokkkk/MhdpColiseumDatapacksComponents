@@ -34,10 +34,13 @@ scoreboard objectives add aj.lance_turn_l.frame dummy
 scoreboard objectives add aj.lance_move_start.frame dummy
 scoreboard objectives add aj.lance_move.frame dummy
 scoreboard objectives add aj.lance_spear_l.frame dummy
-scoreboard objectives add aj.lance_spear_r_to_l.frame dummy
+scoreboard objectives add aj.lance_spear_r.frame dummy
 scoreboard objectives add aj.lance_spear_l_to_r.frame dummy
+scoreboard objectives add aj.lance_spear_r_to_l.frame dummy
 scoreboard objectives add aj.lance_spear_to_spin_l.frame dummy
 scoreboard objectives add aj.lance_spear_to_spin_r.frame dummy
+scoreboard objectives add aj.lance_upper_r.frame dummy
+scoreboard objectives add aj.lance_upper_l.frame dummy
 scoreboard objectives add aj.lance_vertical_r.frame dummy
 scoreboard objectives add aj.lance_vertical_l.frame dummy
 scoreboard objectives add aj.lance_vertical_r_to_l.frame dummy
@@ -77,5 +80,4 @@ scoreboard objectives add aj.comet_phase_2.frame dummy
 scoreboard objectives add aj.comet_phase_3.frame dummy
 scoreboard objectives add aj.comet_phase_4.frame dummy
 scoreboard objectives add aj.comet_phase_5.frame dummy
-scoreboard objectives add aj.lance_charge2.frame dummy
 execute as @e[type=item_display,tag=aj.valk_aj.root] unless score @s aj.is_rig_loaded matches 1 at @s run function animated_java:valk_aj/root/on_load

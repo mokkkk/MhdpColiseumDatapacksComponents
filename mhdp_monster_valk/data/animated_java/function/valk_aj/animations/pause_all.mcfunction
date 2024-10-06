@@ -35,10 +35,13 @@ tag @s remove aj.valk_aj.animation.lance_turn_l.playing
 tag @s remove aj.valk_aj.animation.lance_move_start.playing
 tag @s remove aj.valk_aj.animation.lance_move.playing
 tag @s remove aj.valk_aj.animation.lance_spear_l.playing
-tag @s remove aj.valk_aj.animation.lance_spear_r_to_l.playing
+tag @s remove aj.valk_aj.animation.lance_spear_r.playing
 tag @s remove aj.valk_aj.animation.lance_spear_l_to_r.playing
+tag @s remove aj.valk_aj.animation.lance_spear_r_to_l.playing
 tag @s remove aj.valk_aj.animation.lance_spear_to_spin_l.playing
 tag @s remove aj.valk_aj.animation.lance_spear_to_spin_r.playing
+tag @s remove aj.valk_aj.animation.lance_upper_r.playing
+tag @s remove aj.valk_aj.animation.lance_upper_l.playing
 tag @s remove aj.valk_aj.animation.lance_vertical_r.playing
 tag @s remove aj.valk_aj.animation.lance_vertical_l.playing
 tag @s remove aj.valk_aj.animation.lance_vertical_r_to_l.playing
@@ -78,4 +81,3 @@ tag @s remove aj.valk_aj.animation.comet_phase_2.playing
 tag @s remove aj.valk_aj.animation.comet_phase_3.playing
 tag @s remove aj.valk_aj.animation.comet_phase_4.playing
 tag @s remove aj.valk_aj.animation.comet_phase_5.playing
-tag @s remove aj.valk_aj.animation.lance_charge2.playing

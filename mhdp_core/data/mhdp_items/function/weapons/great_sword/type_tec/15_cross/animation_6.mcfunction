@@ -6,7 +6,7 @@
 
 # データ設定
     data modify storage mhdp_core:temp Args.IsDrawing set value true
-    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 18
+    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 7
     data modify storage mhdp_core:temp Args.Slot set value "mainhand"
 
 # アニメーション
