@@ -10,7 +10,7 @@
 # 咆哮
     execute if entity @s[tag=Anim.Voice] run function animated_java:valk_aj/animations/lance_voice/tween {duration:1, to_frame: 1}
 
-# 彗龍
+## 彗龍
     # 龍気吸引
         execute if entity @s[tag=Anim.Charge] run function animated_java:valk_aj/animations/lance_charge_start/tween {duration:1, to_frame: 1}
     # 変形・彗龍→龍気
