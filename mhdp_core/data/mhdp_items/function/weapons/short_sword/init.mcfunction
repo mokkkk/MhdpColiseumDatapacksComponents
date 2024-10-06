@@ -21,6 +21,9 @@
     data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Normal.Fall.High.1 set value {AttackType:Blow,DamageMult:50,PartDamageMult:100,ElementDamageMult:0,StunValue:30,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0,IsVfxStrong:true,VfxScale:[6f,6f,6f,]}
     data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Normal.Fall.High.2 set value {AttackType:Blow,DamageMult:45,PartDamageMult:100,ElementDamageMult:0,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:false,VfxRotation:0,IsVfxStrong:false,VfxScale:[1f,1f,1f]}
 
+    data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Normal.Spin set value {AttackType:Cut,DamageMult:45,PartDamageMult:100,ElementDamageMult:120,StunValue:0,TireValue:8,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:1.6,IsVfxStrong:false,VfxScale:[4f,6f,4f]}
+
+
 # 天の型
     data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.DirectAttack set value {AttackType:Cut,DamageMult:8,PartDamageMult:100,ElementDamageMult:50,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.02,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
     data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Normal.1 set value {AttackType:Cut,DamageMult:18,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:3,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}

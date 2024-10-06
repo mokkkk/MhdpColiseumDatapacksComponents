@@ -13,7 +13,7 @@
 
 # ガード
     # 開始：スニーク
-            execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/24_guard/start
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/24_guard/start
     # 処理
         execute if entity @s[tag=Wpn.Ss.Normal.Guard] run function mhdp_items:weapons/short_sword/type_normal/24_guard/main
 
@@ -36,6 +36,14 @@
         # 処理
             execute if entity @s[tag=Wpn.Ss.Normal.Sword.5] run function mhdp_items:weapons/short_sword/type_normal/5_sword_5/main
 
+# 溜め
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Normal.Charge] run function mhdp_items:weapons/short_sword/type_normal/10_charge/main
+    
+# 回転斬り
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Normal.Spin] run function mhdp_items:weapons/short_sword/type_normal/11_spin/main
+
 # 盾攻撃コンボ
     # 盾攻撃
        # 処理
@@ -47,6 +55,10 @@
         # 処理
             execute if entity @s[tag=Wpn.Ss.Normal.Bash.3] run function mhdp_items:weapons/short_sword/type_normal/9_bash_3/main
 
+# 剣盾ラッシュ
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Normal.Rush] run function mhdp_items:weapons/short_sword/type_normal/12_rush/main
+    
 # 鉄蟲糸技：飛影
     # 飛影
         # 処理

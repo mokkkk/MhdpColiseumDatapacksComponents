@@ -37,8 +37,8 @@
     execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function delta:api/launch_looking
 
 # 遷移
-    # スニーク＋右クリック：バックナックルに移行
-        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 11.. run function mhdp_items:weapons/short_sword/type_normal/8_bash_2/change_to_bash_3
+    # 自動：バックナックルに移行
+        execute if score @s Wpn.GeneralTimer matches 11.. run function mhdp_items:weapons/short_sword/type_normal/8_bash_2/change_to_bash_3
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/short_sword/type_normal/8_bash_2/end
