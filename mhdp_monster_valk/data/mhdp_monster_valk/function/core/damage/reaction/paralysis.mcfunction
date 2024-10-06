@@ -18,3 +18,5 @@
         scoreboard players operation @s Mns.Paralysis.Timer = @s Mns.Paralysis.Timer.Max
     # アニメーションタグ消去
         function mhdp_monsters:core/util/other/remove_animation_tag
+    # その他
+        kill @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]

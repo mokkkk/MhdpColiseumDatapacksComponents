@@ -33,3 +33,5 @@
         function mhdp_monsters:core/util/other/remove_animation_tag
     # モデル変更(天彗龍の一部演出をリセットするため)
         function mhdp_monster_valk:core/util/models/model_interrupt
+    # その他
+        kill @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]

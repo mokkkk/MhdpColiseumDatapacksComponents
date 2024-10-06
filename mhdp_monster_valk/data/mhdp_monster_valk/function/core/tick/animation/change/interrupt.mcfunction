@@ -5,11 +5,11 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.Comet
-    # function mhdp_monster_valk:core/tick/animation/change/play/spear
+    # tag @s add Anim.Comet
+    function mhdp_monster_valk:core/tick/animation/change/play/jet_tackle
 
 # 軸合わせ
-    tag @s add Mns.Temp.IsTurn
+    # tag @s add Mns.Temp.IsTurn
 
 # アニメーション変更
     function mhdp_monster_valk:core/tick/animation/change/main
