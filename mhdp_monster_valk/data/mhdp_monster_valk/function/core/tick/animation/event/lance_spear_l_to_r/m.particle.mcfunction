@@ -1,4 +1,4 @@
-#> mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/m.attack
+#> mhdp_monster_valk:core/tick/animation/event/lance_upper_l/m.attack
 #
 # アニメーションイベントハンドラ 振りむき翼槍叩きつけ
 #

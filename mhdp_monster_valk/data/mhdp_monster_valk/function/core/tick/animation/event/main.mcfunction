@@ -84,6 +84,10 @@
         execute if entity @s[tag=aj.valk_aj.animation.lance_vertical_r_to_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_r_to_l/main
         execute if entity @s[tag=aj.valk_aj.animation.lance_vertical_l_to_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l_to_r/main
 
+# 翼槍突き上げ
+    execute if entity @s[tag=aj.valk_aj.animation.lance_upper_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_upper_r/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_upper_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_upper_l/main
+
 # 噛みつき
     execute if entity @s[tag=aj.valk_aj.animation.lance_bite.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_bite/main
 

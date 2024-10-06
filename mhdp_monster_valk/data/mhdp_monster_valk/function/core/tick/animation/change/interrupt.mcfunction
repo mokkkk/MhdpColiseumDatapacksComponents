@@ -5,8 +5,8 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # タグ付与
-    tag @s add Anim.Shoot.H
-    # function mhdp_monster_valk:core/tick/animation/change/play/change_phase
+    # tag @s add Anim.Upper.R
+    function mhdp_monster_valk:core/tick/animation/change/play/vertical
 
 # 軸合わせ
     # tag @s add Mns.Temp.IsTurn
