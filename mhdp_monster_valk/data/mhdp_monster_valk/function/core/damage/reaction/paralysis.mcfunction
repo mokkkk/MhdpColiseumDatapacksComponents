@@ -19,4 +19,4 @@
     # アニメーションタグ消去
         function mhdp_monsters:core/util/other/remove_animation_tag
     # その他
-        kill @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
+        kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]

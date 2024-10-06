@@ -32,4 +32,4 @@
     # モデル変更
         function mhdp_monster_valk:core/util/models/model_interrupt
     # その他
-        kill @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
+        kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]

@@ -16,5 +16,8 @@
 # 赤flash演出
     execute if entity @s[tag=Mns.Shot.Valk.Vfx.RedFlash] run function mhdp_monster_valk:core/tick/shot/vfx_red_flash/tick
 
+# 雷演出
+    execute if entity @s[tag=Mns.Shot.Valk.Vfx.Thunder] run function mhdp_monster_valk:core/tick/shot/vfx_thunder/tick
+
 # 尻尾
     execute if entity @s[tag=Mns.Shot.Valk.Tail] run function mhdp_monster_valk:core/tick/shot/tail/tick
