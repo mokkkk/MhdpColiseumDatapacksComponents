@@ -6,4 +6,4 @@
 
 # ヒット確認
     $execute positioned ^$(posx) ^$(posy) ^$(posz) run particle flash ~ ~ ~ 0 0 0 0 1
-    $execute positioned ^$(posx) ^$(posy) ^$(posz) run particle dust{color:[1.000,0.412,0.412],scale:4} ^ ^ ^ 1 1 1 0.15 5 force
+    $execute positioned ^$(posx) ^$(posy) ^$(posz) run particle dust{color:[1.000,0.112,0.312],scale:4} ^ ^ ^ 1 1 1 0.15 5 force

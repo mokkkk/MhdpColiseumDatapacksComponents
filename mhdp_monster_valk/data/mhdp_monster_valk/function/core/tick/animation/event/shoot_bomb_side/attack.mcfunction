@@ -24,10 +24,10 @@
         execute if entity @n[tag=Temp.Victim] as @n[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
 
 # 演出
-    particle dust{color:[1.000,0.412,0.412],scale:3} ^6 ^6 ^1 0.8 0.8 0.8 0.15 13
-    particle dust{color:[1.000,0.412,0.412],scale:3} ^6 ^3 ^1 0.8 0.8 0.8 0.15 13
-    particle dust{color:[1.000,0.412,0.412],scale:3} ^-6 ^6 ^1 0.8 0.8 0.8 0.15 13
-    particle dust{color:[1.000,0.412,0.412],scale:3} ^-6 ^3 ^1 0.8 0.8 0.8 0.15 13
+    particle dust{color:[1.000,0.112,0.312],scale:3} ^6 ^6 ^1 0.8 0.8 0.8 0.15 13
+    particle dust{color:[1.000,0.112,0.312],scale:3} ^6 ^3 ^1 0.8 0.8 0.8 0.15 13
+    particle dust{color:[1.000,0.112,0.312],scale:3} ^-6 ^6 ^1 0.8 0.8 0.8 0.15 13
+    particle dust{color:[1.000,0.112,0.312],scale:3} ^-6 ^3 ^1 0.8 0.8 0.8 0.15 13
     playsound entity.generic.explode master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     particle explosion_emitter ^6 ^1 ^2 0.3 0.3 0.3 0 1
     particle explosion_emitter ^-6 ^1 ^2 0.3 0.3 0.3 0 1
