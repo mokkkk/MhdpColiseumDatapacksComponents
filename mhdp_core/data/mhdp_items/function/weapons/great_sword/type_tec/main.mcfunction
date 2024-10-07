@@ -14,7 +14,7 @@
 # 溜め
     # 通常
         # 開始：右クリック長押し
-            execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/great_sword/type_tec/1_charge/start
+            execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/great_sword/type_tec/1_charge/start
         # 処理
             execute if entity @s[tag=Wpn.Gs.Tec.Charge,tag=!Ply.Flag.DrawAttack] if score @s Wpn.Gs.ChargeSlashCount matches 0 run function mhdp_items:weapons/great_sword/type_tec/1_charge/main
             execute if entity @s[tag=Wpn.Gs.Tec.Charge,tag=Ply.Flag.DrawAttack] if score @s Wpn.Gs.ChargeSlashCount matches 0 run function mhdp_items:weapons/great_sword/type_tec/5_charge_draw/main
@@ -40,19 +40,21 @@
     # 処理
         execute if entity @s[tag=Wpn.Gs.Tec.Tackle] run function mhdp_items:weapons/great_sword/type_tec/3_tackle/main
 
-# ガード
-    # 開始：スニーク
-        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/great_sword/type_tec/4_guard/start
-    # 処理
-        execute if entity @s[tag=Wpn.Gs.Tec.Guard] run function mhdp_items:weapons/great_sword/type_tec/4_guard/main
-
 # 相殺斬り上げ
     # 溜め
+        # 開始
+            execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/start
         # 処理
             execute if entity @s[tag=Wpn.Gs.Tec.UpperCharge] run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/main
     # 攻撃
         # 処理
             execute if entity @s[tag=Wpn.Gs.Tec.Upper] run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/main
+
+# ガード
+    # 開始：スニーク
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/great_sword/type_tec/4_guard/start
+    # 処理
+        execute if entity @s[tag=Wpn.Gs.Tec.Guard] run function mhdp_items:weapons/great_sword/type_tec/4_guard/main
 
 # 十字斬り
     # 移動
