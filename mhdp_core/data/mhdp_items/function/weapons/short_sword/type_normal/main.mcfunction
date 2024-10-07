@@ -13,14 +13,14 @@
 
 # ガード
     # 開始：スニーク
-        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/24_guard/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/24_guard/start
     # 処理
         execute if entity @s[tag=Wpn.Ss.Normal.Guard] run function mhdp_items:weapons/short_sword/type_normal/24_guard/main
 
 # 剣攻撃コンボ
     # 1段目
         # 開始：右クリック短押し
-            execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_normal/1_sword_1/start
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_normal/1_sword_1/start
         # 処理
             execute if entity @s[tag=Wpn.Ss.Normal.Sword.1] run function mhdp_items:weapons/short_sword/type_normal/1_sword_1/main
     # 2段目

@@ -14,7 +14,7 @@
     execute at @n[tag=Temp.Victim] run particle firework ~ ~1 ~ 0 0 0 0.3 15
     execute at @n[tag=Temp.Victim] run playsound entity.firework_rocket.blast master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
     data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Horming.Burst
-    execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
+    execute if entity @e[tag=Temp.Victim] at @n[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
 # 終了
     tag @e[tag=Temp.Horming.Target] remove Temp.Horming.Target

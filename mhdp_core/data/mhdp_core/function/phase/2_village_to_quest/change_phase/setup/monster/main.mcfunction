@@ -8,7 +8,7 @@
 
 # 位置決定
     summon marker ~ ~ ~ {Tags:["Mk.Field.SummonPos"]}
-    execute positioned as @e[type=marker,tag=Mk.Field.Center] run spreadplayers ~ ~ 10 40 false @e[type=marker,tag=Mk.Field.SummonPos]
+    execute positioned as @e[type=marker,tag=Mk.Field.Center] run spreadplayers ~ ~ 10 20 false @e[type=marker,tag=Mk.Field.SummonPos]
 
 # モンスターIDを取得
     data modify storage mhdp_core:temp Arg.MonsterUid set from storage mhdp_core:game_data ActiveQuest.TargetMonsters[0].MonsterId

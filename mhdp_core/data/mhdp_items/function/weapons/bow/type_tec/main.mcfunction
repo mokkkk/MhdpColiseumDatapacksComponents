@@ -16,7 +16,7 @@
 # 溜め
     # 通常
         # 開始：立ち+右クリック
-            execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/1_charge/start
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/1_charge/start
         # 処理
             execute if entity @s[tag=Wpn.Bw.Tec.Charge] run function mhdp_items:weapons/bow/type_tec/1_charge/main
 
@@ -42,13 +42,13 @@
 
 # ビン装填
     # 開始：スニーク+右クリック短押し
-        execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Wpn.Bw.Gauge matches 100.. run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Wpn.Bw.Gauge matches 100.. run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.Equip] run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/main
 
 # 導ノ矢
     # 開始：スニーク+右クリック長押し
-        execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Wpn.Bw.Gauge matches 100.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Wpn.Bw.Gauge matches 100.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.Shot.Horming] run function mhdp_items:weapons/bow/type_tec/7_shot_horming/main
 

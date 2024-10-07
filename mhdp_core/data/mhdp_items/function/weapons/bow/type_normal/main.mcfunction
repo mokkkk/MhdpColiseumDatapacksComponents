@@ -16,7 +16,7 @@
 # 溜め
     # 通常
         # 開始：立ち+右クリック
-            execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_normal/1_charge/start
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_normal/1_charge/start
         # 処理
             execute if entity @s[tag=Wpn.Bw.Normal.Charge] run function mhdp_items:weapons/bow/type_normal/1_charge/main
 

@@ -16,5 +16,5 @@
     tag @s remove Ply.Flag.NormalSheathe
     tag @s remove Ply.Weapon.Drawing
     tag @s remove Ply.Weapon.Drawing.Sub
-
+    
 say 通常納刀

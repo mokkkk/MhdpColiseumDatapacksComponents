@@ -1,6 +1,6 @@
 #> mhdp_items:sp_items/wirebug/util/use
 #
-# 武器の抜刀時処理
+# 特殊装具の使用時
 #
 # @within function mhdp_items:core/switch/macro/m.drawing
 
@@ -9,7 +9,7 @@
     execute if score @s Itm.Wirebug.CoolTime matches 1.. run return 0
 
 # クールタイム設定
-    scoreboard players set @s Itm.Wirebug.CoolTime 40
+    scoreboard players set @s Itm.Wirebug.CoolTime 200
 
 # 使用開始
     scoreboard players set @s Itm.Wirebug.GeneralTimer 0
