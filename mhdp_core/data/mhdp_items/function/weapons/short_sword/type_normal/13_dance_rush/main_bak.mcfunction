@@ -23,7 +23,6 @@
     execute if score @s Wpn.AnimationTimer matches 10 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_0
     execute if score @s Wpn.AnimationTimer matches 10 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_0
     execute if score @s Wpn.AnimationTimer matches 10 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_0
-    
     execute if score @s Wpn.AnimationTimer matches 17 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/animation_8
     execute if score @s Wpn.AnimationTimer matches 18 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/animation_9
     execute if score @s Wpn.AnimationTimer matches 19..21 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/animation_10
@@ -31,7 +30,6 @@
     execute if score @s Wpn.AnimationTimer matches 25 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/animation_12
     execute if score @s Wpn.AnimationTimer matches 26 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/animation_13
     execute if score @s Wpn.AnimationTimer matches 27 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/animation_14
-
     execute if score @s Wpn.AnimationTimer matches 35 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/animation_15
     execute if score @s Wpn.AnimationTimer matches 36 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/animation_16
     execute if score @s Wpn.AnimationTimer matches 37 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/animation_17
@@ -131,9 +129,5 @@
 
 # 終了
     execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 13 run scoreboard players set @s Wpn.GeneralTimer 1000
-    execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 28 run scoreboard players set @s Wpn.GeneralTimer 1000
-    execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 48 run scoreboard players set @s Wpn.GeneralTimer 1000
-    execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 57 run scoreboard players set @s Wpn.GeneralTimer 1000
-    execute if score @s Wpn.GeneralTimer matches 90 run scoreboard players set @s Wpn.GeneralTimer 1010
-    execute if score @s Wpn.GeneralTimer matches 1000.. run scoreboard players set @s Wpn.AnimationTimer 1000
-    execute if score @s Wpn.GeneralTimer matches 1010.. run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/end
+    execute if score @s Wpn.GeneralTimer matches 90 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/end
+    execute if score @s Wpn.GeneralTimer matches 90.. run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/end
