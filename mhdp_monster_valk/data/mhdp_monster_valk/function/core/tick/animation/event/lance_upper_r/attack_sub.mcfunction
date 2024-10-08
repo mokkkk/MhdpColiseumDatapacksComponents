@@ -17,4 +17,4 @@
 # 演出
     particle explosion_emitter ^ ^0.3 ^ 0.3 0.3 0.3 0 1
     particle gust_emitter_large ^ ^ ^ 0.3 0.3 0.3 0 3
-    particle dust{color:[1.000,0.112,0.312],scale:4} ^ ^0.3 ^ 1 1 1 0.15 5
+    particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^0.3 ^ 1 1 1 0.15 5

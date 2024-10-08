@@ -8,8 +8,8 @@
     execute at @s run tp @s ^ ^ ^2
 
 # 演出
-    particle dust{color:[1.000,0.112,0.312],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
-    particle dust{color:[1.000,0.112,0.312],scale:4} ^ ^2 ^-1.5 0.5 0.5 0.5 0.15 3
+    particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
+    particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^2 ^-1.5 0.5 0.5 0.5 0.15 3
     # particle dust{color:[1.000,0.369,0.369],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
     # particle dust{color:[1.000,0.369,0.369],scale:4} ^ ^2 ^-1.5 0.5 0.5 0.5 0.15 3
     # particle dust{color:[10000000000.0,1.0,1.0],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3

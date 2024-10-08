@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # 演出
-    particle dust{color:[1.000,0.112,0.312],scale:2} ^ ^ ^ 0.4 0.4 0.4 0.15 3
+    particle dust{color:[1.000,0.000,0.152],scale:2} ^ ^ ^ 0.4 0.4 0.4 0.15 3
 
 # 着弾
     execute if entity @a[tag=Ply.State.EnableDamage,distance=..1.5] at @s run function mhdp_monster_valk:core/tick/shot/shot/damage

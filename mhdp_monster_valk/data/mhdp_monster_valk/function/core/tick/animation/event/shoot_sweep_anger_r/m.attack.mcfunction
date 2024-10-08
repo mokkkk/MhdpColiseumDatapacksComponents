@@ -16,6 +16,6 @@
     # $execute positioned ^$(posx) ^$(posy) ^$(posz) positioned ^ ^2.5 ^ run particle cloud ^ ^ ^ 0.3 0.3 0.3 0.1 2
     # $execute positioned ^$(posx) ^$(posy) ^$(posz) positioned ^ ^5 ^ run particle cloud ^ ^ ^ 0.3 0.3 0.3 0.1 2
 
-    $execute positioned ^$(posx) ^$(posy) ^$(posz) run particle dust{color:[1.000,0.112,0.312],scale:4} ^ ^ ^ 0.5 0.5 0.5 0.15 3
-    $execute positioned ^$(posx) ^$(posy) ^$(posz) positioned ^ ^2.5 ^ run particle dust{color:[1.000,0.112,0.312],scale:4} ^ ^ ^ 0.5 0.5 0.5 0.15 3
-    $execute positioned ^$(posx) ^$(posy) ^$(posz) positioned ^ ^5 ^ run particle dust{color:[1.000,0.112,0.312],scale:4} ^ ^ ^ 0.5 0.5 0.5 0.15 3
+    $execute positioned ^$(posx) ^$(posy) ^$(posz) run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^ ^ 0.5 0.5 0.5 0.15 3
+    $execute positioned ^$(posx) ^$(posy) ^$(posz) positioned ^ ^2.5 ^ run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^ ^ 0.5 0.5 0.5 0.15 3
+    $execute positioned ^$(posx) ^$(posy) ^$(posz) positioned ^ ^5 ^ run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^ ^ 0.5 0.5 0.5 0.15 3

@@ -20,7 +20,7 @@
     execute if score @s aj.comet_phase_4.frame matches 72 run particle block{block_state:"minecraft:sand"} ^ ^ ^6 1 0.1 1 0 10
 
 # 演出
-    execute if score @s aj.comet_phase_4.frame matches 2..15 run particle dust{color:[1.000,0.112,0.312],scale:4} ^ ^ ^3 2 2 2 0.15 10 force
+    execute if score @s aj.comet_phase_4.frame matches 2..15 run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^ ^3 2 2 2 0.15 10 force
     execute if score @s aj.comet_phase_4.frame matches 2..15 run particle explosion ^ ^2 ^6 2 2 2 0 10 force
     execute if score @s aj.comet_phase_4.frame matches 2..5 run particle gust_emitter_large ~ ~2 ~ 3 1 3 0 3 force
     execute if score @s aj.comet_phase_4.frame matches 2..15 at @s on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_4/m.tp_vfx_jet with entity @s data.locators.shadow
