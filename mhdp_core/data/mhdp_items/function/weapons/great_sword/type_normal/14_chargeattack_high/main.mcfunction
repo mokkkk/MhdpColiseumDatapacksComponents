@@ -38,8 +38,12 @@
     execute if score @s Wpn.AnimationTimer matches 4 if score @s Wpn.Gs.ChargeCount matches 3.. run scoreboard players set $strength delta.api.launch 3000
     execute if score @s Wpn.AnimationTimer matches 4 if score @s Wpn.Gs.ChargeCount matches 3.. rotated ~ -60 run function delta:api/launch_looking
 
+# アーマー
+    execute if score @s Wpn.GeneralTimer matches 1 if score @s Wpn.Gs.ChargeCount matches 3.. run tag @s add Ply.Weapon.Armod.Hyper
+    execute if score @s Wpn.GeneralTimer matches 4 if score @s Wpn.Gs.ChargeCount matches 3.. run tag @s remove Ply.Weapon.Armod.Hyper
+
 # 演出
    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 55.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/end
+    execute if score @s Wpn.GeneralTimer matches 45.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/end
