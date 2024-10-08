@@ -10,7 +10,6 @@
     execute if score @s Wpn.Bw.ChargeCount matches ..0 run function mhdp_items:weapons/bow/shot/normal/summon_0
     execute if score @s Wpn.Bw.ChargeCount matches 1 run function mhdp_items:weapons/bow/shot/normal/summon_1
     execute if score @s Wpn.Bw.ChargeCount matches 2.. run function mhdp_items:weapons/bow/shot/normal/summon_2
-    execute if entity @s[tag=Ply.Weapon.Bow.IsHorming] run scoreboard players operation @s Wpn.Bw.ChargeCount = #mhdo_temp_charge_count MhdpCore
 
 # データ設定
     scoreboard players operation @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Normal,tag=Start] Ply.Uid = @s Ply.Uid
@@ -18,5 +17,6 @@
     execute if score @s Wpn.Bw.Bottle.Count matches 1.. run function mhdp_items:weapons/bow/shot/apply_bottle_effect
 
 # 終了
+    execute if entity @s[tag=Ply.Weapon.Bow.IsHorming] run scoreboard players operation @s Wpn.Bw.ChargeCount = #mhdo_temp_charge_count MhdpCore
     tag @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Normal,tag=Start] remove Start
     scoreboard players reset #mhdo_temp_charge_count MhdpCore
