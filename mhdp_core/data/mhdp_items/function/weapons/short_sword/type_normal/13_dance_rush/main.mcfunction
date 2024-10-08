@@ -130,7 +130,7 @@
 # 終了
     execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 13 run scoreboard players set @s Wpn.GeneralTimer 1000
     execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 28 run scoreboard players set @s Wpn.GeneralTimer 1000
-    execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 48 run scoreboard players set @s Wpn.GeneralTimer 1000
+    # execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 48 run scoreboard players set @s Wpn.GeneralTimer 1000
     execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 57 run scoreboard players set @s Wpn.GeneralTimer 1000
     execute if score @s Wpn.GeneralTimer matches 90 run scoreboard players set @s Wpn.GeneralTimer 1010
     execute if score @s Wpn.GeneralTimer matches 1000.. run scoreboard players set @s Wpn.AnimationTimer 1000

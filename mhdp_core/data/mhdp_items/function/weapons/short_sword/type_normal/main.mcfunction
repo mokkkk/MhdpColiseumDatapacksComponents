@@ -55,11 +55,11 @@
         # 処理
             execute if entity @s[tag=Wpn.Ss.Normal.Bash.3] run function mhdp_items:weapons/short_sword/type_normal/9_bash_3/main
 
-# 剣盾ラッシュ
+# 剣盾ラッシュ(旧)
     # 処理
-        execute if entity @s[tag=Wpn.Ss.Normal.Rush] run function mhdp_items:weapons/short_sword/type_normal/12_rush/main
+        # execute if entity @s[tag=Wpn.Ss.Normal.Rush] run function mhdp_items:weapons/short_sword/type_normal/12_rush/main
 
-# 剣の舞
+# 剣盾ラッシュ
     # 処理
         execute if entity @s[tag=Wpn.Ss.Normal.DanceRush] run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/main
 
