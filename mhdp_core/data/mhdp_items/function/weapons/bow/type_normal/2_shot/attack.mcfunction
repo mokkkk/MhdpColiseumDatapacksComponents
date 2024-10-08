@@ -10,7 +10,8 @@
     execute if score @s Wpn.Bw.ChargeCount matches ..0 run function mhdp_items:weapons/bow/shot/normal_n/summon_0
     execute if score @s Wpn.Bw.ChargeCount matches 1 run function mhdp_items:weapons/bow/shot/normal_n/summon_1
     execute if score @s Wpn.Bw.ChargeCount matches 2 run function mhdp_items:weapons/bow/shot/normal_n/summon_2
-    execute if score @s Wpn.Bw.ChargeCount matches 3.. run function mhdp_items:weapons/bow/shot/normal_n/summon_3
+    execute if score @s Wpn.Bw.ChargeCount matches 3 run function mhdp_items:weapons/bow/shot/normal_n/summon_3
+    execute if score @s Wpn.Bw.ChargeCount matches 4.. run function mhdp_items:weapons/bow/shot/normal_n/summon_4
     execute if entity @s[tag=Ply.Weapon.Bow.IsHorming] run scoreboard players operation @s Wpn.Bw.ChargeCount = #mhdo_temp_charge_count MhdpCore
 
 # データ設定

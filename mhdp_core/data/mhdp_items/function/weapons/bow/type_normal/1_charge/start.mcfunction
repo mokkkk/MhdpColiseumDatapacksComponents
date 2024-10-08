@@ -10,6 +10,7 @@
 
 # タグ付与
     tag @s add Wpn.Bw.Normal.Charge
+    tag @s remove Ply.Weapon.NoOpe
 
 # attribute設定
     attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value

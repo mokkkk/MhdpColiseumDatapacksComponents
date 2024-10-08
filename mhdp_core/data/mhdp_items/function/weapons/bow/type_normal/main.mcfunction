@@ -27,7 +27,17 @@
 
 # 剛射
     # 処理
-        execute if entity @s[tag=Wpn.Bw.Normal.Shot.Power] run function mhdp_items:weapons/bow/type_normal/5_shot_power/main
+        # execute if entity @s[tag=Wpn.Bw.Normal.Shot.Power] run function mhdp_items:weapons/bow/type_normal/5_shot_power/main
+
+# 竜の一矢
+    # 開始：スニーク+右クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_normal/6_shot_pierce/start
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Normal.Shot.Pierce] run function mhdp_items:weapons/bow/type_normal/6_shot_pierce/main
+
+# 竜の千々矢
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Normal.Shot.Shower] run function mhdp_items:weapons/bow/type_normal/7_shot_shower/main
 
 # 飛翔睨み撃ち
     # 処理

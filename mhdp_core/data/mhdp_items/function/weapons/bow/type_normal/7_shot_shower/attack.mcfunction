@@ -8,10 +8,9 @@
     function mhdp_items:weapons/bow/shot/pierce/summon
 
 # データ設定
-    tellraw @a [{"text": "Charge:"},{"score":{"name":"@s","objective":"Wpn.Bw.ChargeCount"}}]
     scoreboard players operation @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Pierce,tag=Start] Ply.Uid = @s Ply.Uid
-    scoreboard players operation @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Pierce,tag=Start] Wpn.Bw.ChargeCount = @s Wpn.Bw.ChargeCount
- 
+    scoreboard players operation @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Pierce,tag=Start] Wpn.Bw.ChargeCount = #mhdp_temp_bow_charge_count MhdpCore
+
 # 演出
     execute positioned ^ ^ ^1 run function mhdp_items:weapons/bow/type_tec/6_shot_pierce/particle
 

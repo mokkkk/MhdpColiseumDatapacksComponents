@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/bow/type_normal/main
 
 # 処理
-    scoreboard players set @s Wpn.Bw.ChargeCount 3
+    scoreboard players add @s Wpn.Bw.ChargeCount 1
 
 # 演出
     execute positioned ~ ~1.65 ~ run particle crit ^ ^ ^0.1 0 0 0 1 10

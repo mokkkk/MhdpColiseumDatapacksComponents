@@ -6,8 +6,15 @@
 
 # 演出
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
-    playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.6
-    particle explosion ^ ^0.1 ^1.5 0 0 0 0 1 normal
-    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 0.2 0.1 0.2 0.9 10 normal
-    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^2.5 0.2 0.1 0.2 0.9 10 normal
-    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^3.5 0.2 0.1 0.2 0.9 10 normal
+    playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
+    playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.9
+    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 0.3 0.1 0.3 1 12 normal
+    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^2.5 0.3 0.1 0.3 1 12 normal
+    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^3.5 0.3 0.1 0.3 1 12 normal
+    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^4.5 0.3 0.1 0.3 1 12 normal
+    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^5.5 0.3 0.1 0.3 1 12 normal
+    particle explosion ^ ^ ^1.5 0.3 0.1 0.3 0 1
+    particle explosion ^ ^ ^2.5 0.3 0.1 0.3 0 1
+    particle explosion ^ ^ ^3.5 0.3 0.1 0.3 0 1
+    particle explosion ^ ^ ^4.5 0.3 0.1 0.3 0 1
+    particle explosion ^ ^ ^5.5 0.3 0.1 0.3 0 1
