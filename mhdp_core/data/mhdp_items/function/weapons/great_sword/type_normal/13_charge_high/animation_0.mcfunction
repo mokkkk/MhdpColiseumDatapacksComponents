@@ -1,12 +1,12 @@
-#> mhdp_items:weapons/great_sword/type_tec/15_cross/animation_2
+#> mhdp_items:weapons/great_sword/type_normal/1_charge/animation_0
 #
-# 十字斬り アニメーション処理
+# 大溜め アニメーション処理
 #
-# @within function mhdp_items:weapons/great_sword/type_tec/15_cross/main
+# @within function mhdp_items:weapons/great_sword/type_normal/1_charge/main
 
 # データ設定
     data modify storage mhdp_core:temp Args.IsDrawing set value true
-    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 14
+    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 25
     data modify storage mhdp_core:temp Args.Slot set value "mainhand"
 
 # アニメーション

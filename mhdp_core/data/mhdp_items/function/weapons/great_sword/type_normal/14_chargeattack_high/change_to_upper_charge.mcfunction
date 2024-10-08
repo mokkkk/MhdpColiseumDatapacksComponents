@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/great_sword/type_tec/2_chargeattack/change_to_charge
+#> mhdp_items:weapons/great_sword/type_tec/7_chargeattack_high/change_to_upper_charge
 #
-# 溜め斬り → 溜め
+# 強溜め斬り → 相殺斬り上げ・溜め
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/2_chargeattack/main
 
@@ -15,4 +15,4 @@
     tag @s remove Wpn.Gs.Tec.ChargeSlash
     
 # 対象の処理を実行
-    function mhdp_items:weapons/great_sword/type_tec/1_charge/start_with_other
+    function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/start

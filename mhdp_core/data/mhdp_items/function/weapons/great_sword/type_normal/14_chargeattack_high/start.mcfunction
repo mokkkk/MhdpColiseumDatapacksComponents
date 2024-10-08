@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/great_sword/type_tec/15_cross/start
+#> mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/start
 #
 # 溜め斬り 開始
 #
@@ -11,4 +11,4 @@
     attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
     attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -1 add_value
 
-say 大剣・十字斬り
+say 大剣・大溜め斬り

@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/great_sword/type_normal/13_cross_charge/change_to_chargeattack
+#> mhdp_items:weapons/great_sword/type_normal/13_charge_high/change_to_chargeattack
 #
-# 十字斬り溜め → 十字斬り
+# 大溜め → 大溜め斬り
 #
-# @within function mhdp_items:weapons/great_sword/type_normal/13_cross_charge/main
+# @within function mhdp_items:weapons/great_sword/type_normal/13_charge_high/main
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0
@@ -15,4 +15,4 @@
     tag @s remove Wpn.Gs.Normal.CrossCharge
     
 # 対象の処理を実行
-    function mhdp_items:weapons/great_sword/type_normal/14_cross/start
+    function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/start

@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/great_sword/type_tec/15_cross/animation_3
+#> mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/animation_0
 #
-# 相殺斬り上げ アニメーション処理
+# 溜め アニメーション処理
 #
-# @within function mhdp_items:weapons/great_sword/type_tec/15_cross/main
+# @within function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/main
 
 # データ設定
     data modify storage mhdp_core:temp Args.IsDrawing set value true

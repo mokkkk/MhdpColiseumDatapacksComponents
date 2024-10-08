@@ -2,7 +2,7 @@
 #
 # 十字斬り溜め → 十字斬り
 #
-# @within function mhdp_items:weapons/great_sword/type_normal/13_cross_charge/main
+# @within function mhdp_items:weapons/great_sword/type_normal/13_charge_high/main
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0
@@ -17,4 +17,4 @@
     tag @s remove Ply.Weapon.Guard
     
 # 対象の処理を実行
-    function mhdp_items:weapons/great_sword/type_normal/13_cross_charge/start
+    function mhdp_items:weapons/great_sword/type_normal/13_charge_high/start

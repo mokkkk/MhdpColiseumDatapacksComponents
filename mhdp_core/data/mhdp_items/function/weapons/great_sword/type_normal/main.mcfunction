@@ -13,7 +13,7 @@
 
 # 溜め
     # 開始：右クリック長押し
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/great_sword/type_normal/1_charge/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/great_sword/type_normal/1_charge/start
     # 処理
         execute if entity @s[tag=Wpn.Gs.Normal.Charge,tag=!Ply.Flag.DrawAttack] run function mhdp_items:weapons/great_sword/type_normal/1_charge/main
         execute if entity @s[tag=Wpn.Gs.Normal.Charge,tag=Ply.Flag.DrawAttack] run function mhdp_items:weapons/great_sword/type_normal/5_charge_draw/main
@@ -26,19 +26,20 @@
     # 処理
         execute if entity @s[tag=Wpn.Gs.Normal.Tackle] run function mhdp_items:weapons/great_sword/type_normal/3_tackle/main
 
+# 大溜め斬り
+    # 溜め
+        # 処理
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/start
+            execute if entity @s[tag=Wpn.Gs.Normal.CrossCharge] run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/main
+    # 攻撃
+        # 処理
+            execute if entity @s[tag=Wpn.Gs.Normal.Cross] run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/main
+
 # ガード
     # 開始：スニーク
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/great_sword/type_normal/4_guard/start
     # 処理
         execute if entity @s[tag=Wpn.Gs.Normal.Guard] run function mhdp_items:weapons/great_sword/type_normal/4_guard/main
-
-# 十字斬り
-    # 溜め
-        # 処理
-            execute if entity @s[tag=Wpn.Gs.Normal.CrossCharge] run function mhdp_items:weapons/great_sword/type_normal/13_cross_charge/main
-    # 攻撃
-        # 処理
-            execute if entity @s[tag=Wpn.Gs.Normal.Cross] run function mhdp_items:weapons/great_sword/type_normal/14_cross/main
 
 # 鉄蟲糸技：ハンティングエッジ
     # 攻撃

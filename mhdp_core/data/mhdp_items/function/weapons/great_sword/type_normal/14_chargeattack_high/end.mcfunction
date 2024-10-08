@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/great_sword/type_normal/14_cross/end
+#> mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/end
 #
-# 十字斬り 終了処理
+# 溜め斬り 終了処理
 #
-# @within function mhdp_items:weapons/great_sword/type_normal/14_cross/main
+# @within function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/main
 
 # タグ消去
     tag @s remove Wpn.Gs.Normal.Cross

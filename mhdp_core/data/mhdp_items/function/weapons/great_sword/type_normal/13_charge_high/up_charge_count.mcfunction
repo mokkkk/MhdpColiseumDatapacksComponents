@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/great_sword/type_normal/13_cross_charge/up_charge_count
+#> mhdp_items:weapons/great_sword/type_normal/13_charge_high/up_charge_count
 #
-# 十字斬り溜め メイン処理
+# 大溜め メイン処理
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
