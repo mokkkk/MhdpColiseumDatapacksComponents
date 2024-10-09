@@ -29,18 +29,10 @@
 
 # 攻撃
     # 通常
-        execute if score @s Wpn.Bw.ChargeCount matches ..0 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Pierce.1
-        execute if score @s Wpn.Bw.ChargeCount matches 1 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Pierce.2
-        execute if score @s Wpn.Bw.ChargeCount matches 2 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Pierce.3
-        execute if score @s Wpn.Bw.ChargeCount matches 3.. run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Pierce.4
+        data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Pierce
     # クリティカル距離
         execute if entity @s[tag=Temp.IsCrit] as @a[tag=Ply.Temp.TargetSub] at @s run playsound entity.arrow.hit_player master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
-        execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches ..0 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Pierce.1.Crit
-        execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches 1 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Pierce.2.Crit
-        execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches 2 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Pierce.3.Crit
-        execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches 3.. run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Pierce.4.Crit
-    # 導ノ矢補正
-        execute if entity @a[tag=Ply.Temp.TargetSub,tag=Ply.Weapon.Bow.IsHorming] if score @a[tag=Ply.Temp.TargetSub,limit=1] Wpn.Bw.HormingTarget = @n[tag=Temp.Victim] Entity.Uuid run function mhdp_items:weapons/bow/shot/normal/attack_horming
+        execute if entity @s[tag=Temp.IsCrit] run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Pierce.Crit
     execute as @a[tag=Ply.Temp.TargetSub] if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
 # ゲージ上昇

@@ -8,6 +8,7 @@
     tp @s ^ ^ ^1
     execute if score @s Mns.Shot.Timer matches 7.. at @s run tp @s ^ ^ ^ ~ ~0.8
     particle crit ~ ~ ~ 0 0 0 0 1 force
+    particle crit ~ ~ ~ 0.5 0.5 0.5 0 1 force
 
 # 命中判定
     tag @s add Temp.This

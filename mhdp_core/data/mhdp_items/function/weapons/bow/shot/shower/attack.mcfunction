@@ -19,11 +19,11 @@
 
 # 攻撃
     # 通常
-        data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Shot.1
+        data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shower
     # クリティカル距離
         execute if entity @s[tag=Temp.IsCrit] as @a[tag=Ply.Temp.TargetSub] at @s run stopsound @s master entity.arrow.hit_player
         execute if entity @s[tag=Temp.IsCrit] as @a[tag=Ply.Temp.TargetSub] at @s run playsound entity.arrow.hit_player master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
-        execute if entity @s[tag=Temp.IsCrit] run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Shot.1.Crit
+        execute if entity @s[tag=Temp.IsCrit] run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shower.Crit
     execute as @a[tag=Ply.Temp.TargetSub] if entity @n[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
 # 終了

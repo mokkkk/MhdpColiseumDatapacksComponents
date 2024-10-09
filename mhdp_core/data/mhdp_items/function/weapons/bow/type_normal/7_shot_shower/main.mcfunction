@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/bow/type_normal/7_shot_shower/main
 #
-# 竜の一矢 メイン処理
+# 竜の千々矢 メイン処理
 #
 # @within function mhdp_items:weapons/bow/type_normal/main
 
@@ -12,14 +12,9 @@
     execute if score @s Wpn.AnimationTimer matches 1..2 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
     execute if score @s Wpn.AnimationTimer matches 1..2 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
 
-    execute if score @s Wpn.GeneralTimer matches 1001 run playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
-    execute if score @s Wpn.GeneralTimer matches 1001 run playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.1
-    execute if score @s Wpn.GeneralTimer matches 1001 run playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    execute if score @s Wpn.GeneralTimer matches 1001 run playsound entity.arrow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
-    execute if score @s Wpn.GeneralTimer matches 1001 run playsound entity.arrow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
-    execute if score @s Wpn.GeneralTimer matches 1001 run playsound entity.firework_rocket.launch master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
-    execute if score @s Wpn.GeneralTimer matches 1001 run playsound entity.firework_rocket.launch master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    
+    execute if score @s Wpn.GeneralTimer matches 1001 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/effect_shot
+    execute if score @s Wpn.GeneralTimer matches 1003 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/effect_shot
+
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/animation_0
     execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/animation_1
     execute if score @s Wpn.GeneralTimer matches 1001 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/animation_4
