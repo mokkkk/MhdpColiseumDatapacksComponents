@@ -5,7 +5,7 @@
 # @within function mhdp_core:player/damage/player_to_entity/main
 
 # 効果音
-    playsound minecraft:entity.generic.hurt master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    # playsound minecraft:entity.generic.hurt master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # ダメージ表示
     data modify storage mhdp_core:temp Arg.Color set value "#FF6F00"
