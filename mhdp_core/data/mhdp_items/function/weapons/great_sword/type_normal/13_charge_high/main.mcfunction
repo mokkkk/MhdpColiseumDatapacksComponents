@@ -30,9 +30,9 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 4000
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 10000
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function delta:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set $strength delta.api.launch 4000
+    execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set $strength delta.api.launch 7000
     execute if score @s Wpn.GeneralTimer matches 3 rotated ~180 0 run function delta:api/launch_looking
 # 演出
    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..8 at @s run tp @s ~ ~ ~ ~ ~-0.5

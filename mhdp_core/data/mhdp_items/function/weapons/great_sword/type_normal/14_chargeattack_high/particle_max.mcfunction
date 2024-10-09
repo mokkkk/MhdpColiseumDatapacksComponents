@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/great_sword/type_tec/7_chargeattack_high/particle
+#> mhdp_items:weapons/great_sword/type_tec/7_chargeattack_high/particle_max
 #
 # 溜め斬り 演出
 #
@@ -30,3 +30,20 @@ particle crit ^ ^1.61972 ^1.60655 0.15 0.15 0.15 0.2 5
 particle crit ^ ^2.18571 ^1.43843 0.15 0.15 0.15 0.2 5
 particle crit ^ ^2.7458 ^1.23625 0.15 0.15 0.15 0.2 5
 particle crit ^ ^3.3 ^1 0.15 0.15 0.15 0.2 5
+
+# [ImportKey]: NobwRALgngDgpmAXGANgSwHYIDRgK55oAmSYAHGQJwBm1ATAMYCGAtEXACx0scCMjLAEbUA7BxYA2EQwDMvJgAYArIzglcGJgFsEyQFu+AAl5hcMJgCdtAZyTgGAezwYISXgtzVz9rbbAA3JhQ8XXAAD1cAOkpcKCQWXiiAX0TcCHtfAKCQsHDEXhikGQiZZNx7Wis4F0R3MEE4AC80OHMkBQiRXDQrACFG5vMAUQBHPECUKABlMwY1JGpAytLwaHhSdCwTfEISZGEyKTg6VgkyIm4OJUpKFkpGbhE1Jn4iWePBLc0dUkNeFgcYLFTBZrL4HE5qrwZB4vD5EOBMsFfLk6BEyAVECxURJSpB0vD-IEkQTcglOmBYogOBFeLjytRKtVavUmi02h0ur1+i0RmMUBNpkxZrsFiglokALpAA_3
+# 線 1-copy
+particle firework ^ ^-2.6 ^2.8 0.15 0.15 0.15 0.05 1
+particle firework ^ ^-1.45183 ^2.80854 0.15 0.15 0.15 0.05 1
+particle firework ^ ^-0.31626 ^2.74033 0.15 0.15 0.15 0.05 1
+particle firework ^ ^0.8067 ^2.59538 0.15 0.15 0.15 0.05 1
+particle firework ^ ^1.91707 ^2.37367 0.15 0.15 0.15 0.05 1
+particle firework ^ ^3.01484 ^2.07521 0.15 0.15 0.15 0.05 1
+particle firework ^ ^4.1 ^1.7 0.15 0.15 0.15 0.05 1
+# 線 1
+particle firework ^ ^-1.9 ^1.9 0.15 0.15 0.15 0.05 1
+particle firework ^ ^-0.70318 ^1.93843 0.15 0.15 0.15 0.05 1
+particle firework ^ ^0.47006 ^1.84061 0.15 0.15 0.15 0.05 1
+particle firework ^ ^1.61972 ^1.60655 0.15 0.15 0.15 0.05 1
+particle firework ^ ^2.7458 ^1.23625 0.15 0.15 0.15 0.05 1
+particle firework ^ ^3.3 ^1 0.15 0.15 0.15 0.05 1
