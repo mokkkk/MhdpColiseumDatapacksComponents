@@ -12,6 +12,10 @@
     execute if score @s aj.lance_charge_end.frame matches 2..20 run function mhdp_monster_valk:core/tick/animation/event/lance_charge_end/particle
     execute if score @s aj.lance_charge_end.frame matches 10 run particle explosion ~ ~3 ~ 4 4 4 0 30
 
+# 演出
+    execute if score @s aj.lance_charge_end.frame matches 10 on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_end/m.effect with entity @s data.locators.pos_muzzle_r_1
+    execute if score @s aj.lance_charge_end.frame matches 10 on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_end/m.effect with entity @s data.locators.pos_muzzle_l_1
+
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~

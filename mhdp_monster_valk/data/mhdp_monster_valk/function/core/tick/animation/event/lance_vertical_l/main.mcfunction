@@ -42,6 +42,9 @@
     execute if score @s aj.lance_vertical_l.frame matches 124 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.lance_vertical_l.frame matches 39..48 on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/m.particle with entity @s data.locators.pos_wing_l_3
 
+# 演出
+    execute if score @s aj.lance_vertical_l.frame matches 38 run summon text_display ^-2 ^1 ^-6 {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.RedFlash"],default_background:0b,brightness:{sky:15,block:15},text:'{"text":"0","font":"vfx/valstrax"}',transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[8f,8f,8f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
+
 # 攻撃
     execute if score @s aj.lance_vertical_l.frame matches 20 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l/attack_hand
     execute if score @s aj.lance_vertical_l.frame matches 48 positioned ^1.2 ^1 ^7 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l/attack
