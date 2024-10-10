@@ -11,7 +11,8 @@
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1..2 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
     execute if score @s Wpn.AnimationTimer matches 1..2 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
-
+    
+    execute if score @s Wpn.GeneralTimer matches 5 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/effect_charge
     execute if score @s Wpn.GeneralTimer matches 1001 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/effect_shot
     execute if score @s Wpn.GeneralTimer matches 1003 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/effect_shot
 

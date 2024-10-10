@@ -18,14 +18,13 @@
     execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/animation_2
     execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/animation_3
     execute if score @s Wpn.AnimationTimer matches 8 rotated ~ 0 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/effect_on_ground
-    execute if score @s Wpn.AnimationTimer matches 4 if score @s Wpn.Gs.ChargeCount matches ..2 positioned ^ ^2 ^1 rotated ~ ~-30 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/particle
-    execute if score @s Wpn.AnimationTimer matches 5 if score @s Wpn.Gs.ChargeCount matches ..2 positioned ^ ^ ^1.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/particle
-    execute if score @s Wpn.AnimationTimer matches 4 if score @s Wpn.Gs.ChargeCount matches 3.. positioned ^ ^2 ^1 rotated ~ ~-30 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/particle_max
-    execute if score @s Wpn.AnimationTimer matches 5 if score @s Wpn.Gs.ChargeCount matches 3.. positioned ^ ^ ^1.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/particle_max
+    execute if score @s Wpn.AnimationTimer matches 4 positioned ^ ^2 ^1 rotated ~ ~-30 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/particle
+    execute if score @s Wpn.AnimationTimer matches 5 positioned ^ ^ ^1.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/particle
     
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 6 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack
     execute if score @s Wpn.GeneralTimer matches 9 if score @s Wpn.Gs.ChargeCount matches 3.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack_pursuit
+    execute if score @s Wpn.GeneralTimer matches 12 if score @s Wpn.Gs.ChargeCount matches 3.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack_pursuit
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 3 true
