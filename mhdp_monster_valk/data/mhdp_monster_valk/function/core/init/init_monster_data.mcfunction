@@ -139,4 +139,4 @@
     }
     function mhdp_monster_valk:core/init/init_attack_data
 
-say 天彗龍 init monster data
+# say 天彗龍 init monster data

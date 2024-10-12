@@ -16,4 +16,4 @@
 # モデル消去
     function animated_java:valk_aj/remove/this
 
-say 天彗龍消去処理
+# say 天彗龍消去処理
