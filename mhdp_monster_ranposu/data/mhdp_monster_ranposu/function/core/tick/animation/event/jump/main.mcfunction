@@ -22,7 +22,7 @@
     execute if score @s aj.jump.frame matches 37 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 攻撃
-    execute if score @s aj.jump.frame matches 26..38 run function mhdp_monster_ranposu:core/tick/animation/event/jump/attack
+    execute if score @s aj.jump.frame matches 28..38 run function mhdp_monster_ranposu:core/tick/animation/event/jump/attack
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground

@@ -64,5 +64,6 @@
     data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.MoveSlash set value {AttackType:Cut,DamageMult:22,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:3,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:2.8,IsVfxStrong:false,VfxScale:[5f,8f,5f]}
     data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.ChargeSlash set value {AttackType:Cut,DamageMult:50,PartDamageMult:150,ElementDamageMult:200,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:2.8,IsVfxStrong:false,VfxScale:[5f,8f,5f]}
     data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Tobikage set value {AttackType:Cut,DamageMult:18,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:4,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.1,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Counter set value {AttackType:Cut,DamageMult:30,PartDamageMult:80,ElementDamageMult:100,StunValue:0,TireValue:3,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:0.9,IsVfxStrong:false,VfxScale:[6f,8f,6f]}
 
 say -- 片手剣データ初期化

@@ -16,6 +16,9 @@
             execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_tec/24_guard/start
     # 処理
         execute if entity @s[tag=Wpn.Ss.Tec.Guard] run function mhdp_items:weapons/short_sword/type_tec/24_guard/main
+        execute if entity @s[tag=Wpn.Ss.Tec.Guard.Just] run function mhdp_items:weapons/short_sword/type_tec/24_guard/main_just
+    # カウンター斬り
+        execute if entity @s[tag=Wpn.Ss.Tec.Counter] run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/main
 
 # 通常コンボ
     # 1段目

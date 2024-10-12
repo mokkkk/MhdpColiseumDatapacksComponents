@@ -13,5 +13,3 @@
 
 # 終了
     scoreboard players reset #mhdp_temp_jump_strength MhdpCore
-
-say ジャンプ回避

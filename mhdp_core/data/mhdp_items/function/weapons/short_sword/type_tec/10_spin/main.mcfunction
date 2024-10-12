@@ -48,7 +48,7 @@
 # 遷移
     # スニーク+ジャンプ時：バックステップに移行
         execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/change_to_backstep
-    # 右クリック短押し：通常コンボ2に移行
+    # 右クリック短押し：通常コンボ1に移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/change_to_normal_1
 
 # 終了
