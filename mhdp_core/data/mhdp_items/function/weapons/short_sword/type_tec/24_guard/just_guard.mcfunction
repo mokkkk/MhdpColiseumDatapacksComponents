@@ -14,8 +14,13 @@
 # スタミナ消費・のけぞりを最小化
     scoreboard players set #mhdp_temp_guard_stamina MhdpCore 0
     scoreboard players set @s Wpn.GuardStopTimer 1
-    scoreboard players set #mhdp_temp_knockback_strength MhdpCore 1
+    scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
     scoreboard players operation #mhdp_temp_damage_reduction MhdpCore /= #const_2 Const
+
+# 後ずさる
+    tp @s @s
+    scoreboard players set $strength delta.api.launch 10000
+    execute at @s rotated ~180 0 run function delta:api/launch_looking
 
 # ジャストガードに移行
     # タグ付与
