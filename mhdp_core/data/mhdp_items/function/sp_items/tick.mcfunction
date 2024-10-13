@@ -12,3 +12,5 @@
         function mhdp_items:sp_items/whetstone/tick
     # 翔蟲
         execute if entity @s[tag=Itm.Sp.Wirebug] run function mhdp_items:sp_items/wirebug/tick
+    # 不動の装衣
+        execute if entity @s[tag=Itm.Sp.ImmovableCloth] run function mhdp_items:sp_items/immovable_cloth/tick

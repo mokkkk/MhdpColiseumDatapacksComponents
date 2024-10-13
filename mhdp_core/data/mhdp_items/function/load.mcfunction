@@ -85,7 +85,12 @@
             scoreboard objectives add Itm.Wirebug.GeneralTimer dummy
         # クールタイム
             scoreboard objectives add Itm.Wirebug.CoolTime dummy
-
+    # 不動の装衣
+        # 処理タイマー
+            scoreboard objectives add Itm.ImmovableCloth.GeneralTimer dummy
+        # クールタイム
+            scoreboard objectives add Itm.ImmovableCloth.CoolTime dummy
+        
 ## 定数定義
     # 強撃ビン補正値
         scoreboard players set #const_bow_bottle_strong_multiply Const 125
