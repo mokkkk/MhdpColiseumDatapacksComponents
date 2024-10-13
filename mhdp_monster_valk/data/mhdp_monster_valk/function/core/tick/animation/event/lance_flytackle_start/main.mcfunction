@@ -5,8 +5,8 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.lance_flytackle_start.frame matches 1..38 run tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
-    execute if score @s aj.lance_flytackle_start.frame matches 1..38 run function mhdp_monsters:core/util/other/turn_to_target_accurate
+    execute if score @s aj.lance_flytackle_start.frame matches 1..36 run tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
+    execute if score @s aj.lance_flytackle_start.frame matches 1..36 run function mhdp_monsters:core/util/other/turn_to_target_accurate
 
 # 移動
     execute if score @s aj.lance_flytackle_start.frame matches 1..12 if entity @n[tag=Mns.Target.Valk,distance=..18] at @s run tp @s ^ ^ ^-0.8

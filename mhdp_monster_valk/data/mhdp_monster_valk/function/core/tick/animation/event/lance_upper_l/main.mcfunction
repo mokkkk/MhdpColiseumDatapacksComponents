@@ -19,7 +19,8 @@
     execute if score @s aj.lance_upper_l.frame matches 34..40 at @s run tp @s ^ ^ ^-0.7
     execute if score @s aj.lance_upper_l.frame matches 34..50 at @s run tp @s ^ ^ ^-0.1
     execute if score @s aj.lance_upper_l.frame matches 51..58 at @s run tp @s ^ ^ ^0.7
-    execute if score @s aj.lance_upper_l.frame matches 59..69 at @s run tp @s ^ ^ ^0.3
+    execute if score @s aj.lance_upper_l.frame matches 59..69 at @s run tp @s ^ ^ ^0.4
+    execute if score @s aj.lance_upper_l.frame matches 71..85 at @s run tp @s ^ ^ ^0.3
 
 # 効果音
     execute if score @s aj.lance_upper_l.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1

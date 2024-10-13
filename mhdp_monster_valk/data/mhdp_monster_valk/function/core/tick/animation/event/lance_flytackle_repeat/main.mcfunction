@@ -35,8 +35,8 @@
 
 ## 折り返し
 # 軸合わせ
-    execute if score @s aj.lance_flytackle_repeat.frame matches 26..42 run tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
-    execute if score @s aj.lance_flytackle_repeat.frame matches 26..42 run function mhdp_monsters:core/util/other/turn_to_target_accurate
+    execute if score @s aj.lance_flytackle_repeat.frame matches 26..40 run tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
+    execute if score @s aj.lance_flytackle_repeat.frame matches 26..40 run function mhdp_monsters:core/util/other/turn_to_target_accurate
 
 # 移動
     execute if score @s aj.lance_flytackle_repeat.frame matches 26..45 at @s run tp @s ^ ^ ^0.6

@@ -37,6 +37,9 @@
     execute positioned ~ ~2 ~ rotated ~ -90 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_4/particle_ring
     execute positioned ~ ~3 ~ rotated ~ -90 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_4/particle_ring
 
+    # summon text_display ^ ^1 ^5 {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.Bomb"],default_background:0b,brightness:{sky:15,block:15},text:'{"text":"0","font":"vfx/valstrax"}',transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[12f,12f,12f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,billboard:"center",alignment:"left"}
+    
+
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit
     data remove storage mhdp_core:temp Damage
