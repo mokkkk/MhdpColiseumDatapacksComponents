@@ -12,8 +12,8 @@
     execute if score @s aj.lance_vertical_r_to_l.frame matches 1..8 if entity @n[tag=Mns.Target.Valk,distance=..9] at @s run tp @s ^ ^ ^-0.5
     execute if score @s aj.lance_vertical_r_to_l.frame matches 9..15 unless entity @n[tag=Mns.Target.Valk,distance=..12] at @s run tp @s ^ ^ ^1.2
     execute if score @s aj.lance_vertical_r_to_l.frame matches 16..20 unless entity @n[tag=Mns.Target.Valk,distance=..8] at @s run tp @s ^ ^ ^0.8
-    execute if score @s aj.lance_vertical_r_to_l.frame matches 52..62 at @s run tp @s ^ ^ ^-0.2
-    execute if score @s aj.lance_vertical_r_to_l.frame matches 63..68 at @s run tp @s ^ ^ ^-0.1
+    execute if score @s aj.lance_vertical_r_to_l.frame matches 52..62 at @s run tp @s ^ ^ ^-0.1
+    execute if score @s aj.lance_vertical_r_to_l.frame matches 63..68 at @s run tp @s ^ ^ ^-0.05
 
 # 効果音
     execute if score @s aj.lance_vertical_r_to_l.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
