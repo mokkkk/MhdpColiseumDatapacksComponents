@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_tec/10_spin/animation_3
+#> mhdp_items:weapons/short_sword/type_tec/6_horizon_3/animation_2
 #
-# 回転斬り アニメーション処理
+# 水平斬りコンボ3 アニメーション処理
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/10_spin/main
+# @within function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/main
 
 # データ設定
     data modify storage mhdp_core:temp Args.IsDrawing set value true
