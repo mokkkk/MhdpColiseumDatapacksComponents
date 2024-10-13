@@ -22,3 +22,4 @@
     # クエスト失敗時
         execute if data storage mhdp_core:game_data ActiveQuest{State:"Failed"} run function mhdp_core:phase/3_quest/change_phase/failed/wait
     # クエストリタイア時
+        execute if data storage mhdp_core:game_data ActiveQuest{State:"Retired"} run function mhdp_core:phase/3_quest/change_phase/retired/wait
