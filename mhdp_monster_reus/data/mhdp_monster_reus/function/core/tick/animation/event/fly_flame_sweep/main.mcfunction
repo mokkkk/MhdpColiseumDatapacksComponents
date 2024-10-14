@@ -5,8 +5,8 @@
 # @within function mhdp_monster_reus:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.fly_flame_sweep.frame matches 1..30 run tag @n[tag=Mns.Target.Reus] add Temp.Rotate.Target
-    execute if score @s aj.fly_flame_sweep.frame matches 1..30 at @s run function mhdp_monsters:core/util/other/turn_to_target_accurate
+    execute if score @s aj.fly_flame_sweep.frame matches 2..30 run tag @n[tag=Mns.Target.Reus] add Temp.Rotate.Target
+    execute if score @s aj.fly_flame_sweep.frame matches 2..30 at @s run function mhdp_monsters:core/util/other/turn_to_target_accurate
 
 # 演出
     execute if score @s aj.fly_flame_sweep.frame matches 2 run playsound entity.player.breath master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9

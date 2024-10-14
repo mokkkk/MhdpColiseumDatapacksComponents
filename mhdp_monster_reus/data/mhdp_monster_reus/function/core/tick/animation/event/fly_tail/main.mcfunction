@@ -5,7 +5,7 @@
 # @within function mhdp_monster_reus:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.fly_tail.frame matches 1 run function mhdp_monster_reus:core/tick/animation/event/fly_tail/turn_start
+    execute if score @s aj.fly_tail.frame matches 2 run function mhdp_monster_reus:core/tick/animation/event/fly_tail/turn_start
     execute if score @s aj.fly_tail.frame matches 2..8 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動

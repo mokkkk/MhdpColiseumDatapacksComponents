@@ -5,7 +5,7 @@
 # @within function mhdp_monster_reus:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.fly_turn.frame matches 1 run function mhdp_monster_reus:core/tick/animation/event/fly_turn/turn_start
+    execute if score @s aj.fly_turn.frame matches 2 run function mhdp_monster_reus:core/tick/animation/event/fly_turn/turn_start
     execute if score @s aj.fly_turn.frame matches 2..12 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 効果音

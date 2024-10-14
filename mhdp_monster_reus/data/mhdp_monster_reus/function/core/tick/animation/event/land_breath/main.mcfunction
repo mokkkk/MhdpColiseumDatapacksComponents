@@ -5,9 +5,9 @@
 # @within function mhdp_monster_reus:core/tick/animation/event/tick
 
 # 軸合わせ・弱め
-    execute if score @s aj.land_breath.frame matches 1 run function mhdp_monster_reus:core/tick/animation/event/land_breath/turn_start
+    execute if score @s aj.land_breath.frame matches 2 run function mhdp_monster_reus:core/tick/animation/event/land_breath/turn_start
     execute if score @s aj.land_breath.frame matches 8 run function mhdp_monster_reus:core/tick/animation/event/land_breath/turn_start
-    execute if score @s aj.land_breath.frame matches 1..16 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.land_breath.frame matches 2..16 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 演出
     execute if score @s aj.land_breath.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
