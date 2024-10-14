@@ -103,6 +103,10 @@
     execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_end.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_end/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_repeat.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_repeat/main
 
+# 龍閃
+    execute if entity @s[tag=aj.valk_aj.animation.lance_biim_1.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_biim_2.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/main
+
 # 彗星
     execute if entity @s[tag=aj.valk_aj.animation.comet_phase_1.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/main
     execute if entity @s[tag=aj.valk_aj.animation.comet_phase_2.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_2/main

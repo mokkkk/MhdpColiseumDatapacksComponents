@@ -43,6 +43,8 @@
         execute if entity @s[tag=Anim.Tackle] run function animated_java:valk_aj/animations/lance_tackle/tween {duration:1, to_frame: 1}
     # 滑空突進
         execute if entity @s[tag=Anim.JetTackle] run function animated_java:valk_aj/animations/lance_flytackle_start/tween {duration:1, to_frame: 1}
+    # 龍閃
+        execute if entity @s[tag=Anim.Beam] run function animated_java:valk_aj/animations/lance_biim_1/tween {duration:1, to_frame: 1}
     # 彗星
         execute if entity @s[tag=Anim.Comet] run function animated_java:valk_aj/animations/comet_phase_1/tween {duration:1, to_frame: 1}
 
@@ -70,7 +72,7 @@
         execute if entity @s[tag=Anim.Bomb.Side] run function animated_java:valk_aj/animations/shoot_bomb_side/tween {duration:1, to_frame: 1}
     # 前転
         execute if entity @s[tag=Anim.Sault] run function animated_java:valk_aj/animations/shoot_sault_before/tween {duration:1, to_frame: 1}
-
+    
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag
     tag @s remove Mns.Temp.IsCombo
