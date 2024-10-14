@@ -85,7 +85,3 @@ data modify storage aj:temp uuid set from entity @s data.locators.shadow.uuid
 function animated_java:valk_aj/zzz/execute with storage aj:temp
 data modify storage aj:temp uuid set from entity @s data.locators.pos_comet_star.uuid
 function animated_java:valk_aj/zzz/execute with storage aj:temp
-data modify storage aj:temp uuid set from entity @s data.locators.beam_start.uuid
-function animated_java:valk_aj/zzz/execute with storage aj:temp
-data modify storage aj:temp uuid set from entity @s data.locators.beam_end.uuid
-function animated_java:valk_aj/zzz/execute with storage aj:temp

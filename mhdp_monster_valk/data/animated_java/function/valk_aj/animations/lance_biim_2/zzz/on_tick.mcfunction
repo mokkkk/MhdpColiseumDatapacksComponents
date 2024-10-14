@@ -4,5 +4,5 @@ execute if score @s aj.tween_duration matches 1.. run return 1
 execute if score @s aj.tween_duration matches 0 on passengers run data modify entity @s interpolation_duration set value 1
 execute store result storage aj:temp frame int 1 run scoreboard players get @s aj.lance_biim_2.frame
 function animated_java:valk_aj/animations/lance_biim_2/zzz/apply_frame with storage aj:temp
-execute if score @s aj.lance_biim_2.frame matches 141.. run return run function animated_java:valk_aj/animations/lance_biim_2/pause
+execute if score @s aj.lance_biim_2.frame matches 156.. run return run function animated_java:valk_aj/animations/lance_biim_2/pause
 scoreboard players add @s aj.lance_biim_2.frame 1

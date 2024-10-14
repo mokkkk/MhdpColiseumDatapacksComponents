@@ -174,5 +174,3 @@ execute on vehicle on passengers if entity @s[tag=aj.valk_aj.bone.body_1] run fu
 data modify entity @s data.bones.bone_body_1 set from storage aj:uuid main.out
 execute on vehicle on passengers if entity @s[tag=aj.valk_aj.bone.comet_star] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
 data modify entity @s data.bones.text_display_comet_star set from storage aj:uuid main.out
-execute on vehicle on passengers if entity @s[tag=aj.valk_aj.bone.beam_model] run function animated_java:global/internal/gu/convert_uuid_array_to_string with entity @s
-data modify entity @s data.bones.bone_beam_model set from storage aj:uuid main.out

@@ -20,10 +20,10 @@
     execute if score @s aj.lance_biim_2.frame matches 67 run particle block{block_state:"minecraft:sand"} ^ ^ ^3 2 0.1 2 0 30
     execute if score @s aj.lance_biim_2.frame matches 87 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.lance_biim_2.frame matches 87 run particle block{block_state:"minecraft:sand"} ^ ^ ^3 2 0.1 2 0 30
-    execute if score @s aj.lance_biim_2.frame matches 117 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
-    execute if score @s aj.lance_biim_2.frame matches 117 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
-    execute if score @s aj.lance_biim_2.frame matches 117 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
-    execute if score @s aj.lance_biim_2.frame matches 117 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.7
+    execute if score @s aj.lance_biim_2.frame matches 134 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
+    execute if score @s aj.lance_biim_2.frame matches 134 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
+    execute if score @s aj.lance_biim_2.frame matches 134 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
+    execute if score @s aj.lance_biim_2.frame matches 134 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.7
 
     execute if score @s aj.lance_biim_2.frame matches 4..8 run playsound entity.warden.sonic_boom master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.lance_biim_2.frame matches 4..8 run playsound entity.warden.sonic_boom master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
@@ -74,4 +74,4 @@
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # 終了
-    execute if score @s aj.lance_biim_2.frame matches 140 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/end
+    execute if score @s aj.lance_biim_2.frame matches 155 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/end
