@@ -29,6 +29,9 @@
 # 滑空突進
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"JetTackle",DamageValue:9.2f,GuardValue:5,ElementType:5,ElementMultiply:10,Knockback:2,IsLaunch:true,LaunchType:2,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
+# 龍閃
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Beam",DamageValue:16.5f,GuardValue:5,ElementType:5,ElementMultiply:100,Knockback:3,IsLaunch:true,LaunchType:2,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+
 # 彗星
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {Name:"Comet",DamageValue:21.0f,GuardValue:20,ElementType:5,ElementMultiply:10,Knockback:3,IsLaunch:true,LaunchType:2,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 

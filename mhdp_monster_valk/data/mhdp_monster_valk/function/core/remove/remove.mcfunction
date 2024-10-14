@@ -16,4 +16,7 @@
 # モデル消去
     function animated_java:valk_aj/remove/this
 
+# 一部スコア消去
+    scoreboard players reset #mhdp_temp_valk_flash_scale MhdpCore
+
 # say 天彗龍消去処理

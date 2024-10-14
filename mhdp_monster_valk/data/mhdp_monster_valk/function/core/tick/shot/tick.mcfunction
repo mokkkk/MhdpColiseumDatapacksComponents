@@ -22,5 +22,8 @@
 # 爆発演出
     execute if entity @s[tag=Mns.Shot.Valk.Vfx.Bomb] run function mhdp_monster_valk:core/tick/shot/vfx_bomb/tick
 
+# 龍閃演出
+    execute if entity @s[tag=Mns.Shot.Valk.Vfx.Beam] run function mhdp_monster_valk:core/tick/shot/vfx_beam/tick
+
 # 尻尾
     execute if entity @s[tag=Mns.Shot.Valk.Tail] run function mhdp_monster_valk:core/tick/shot/tail/tick
