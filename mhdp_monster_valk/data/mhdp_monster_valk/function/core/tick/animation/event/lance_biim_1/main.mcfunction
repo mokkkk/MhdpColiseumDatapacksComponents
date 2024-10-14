@@ -25,7 +25,6 @@
     execute if score @s aj.lance_biim_1.frame matches 43..63 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/particle_2
     execute if score @s aj.lance_biim_1.frame matches 43 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/thunder_start
     execute if score @s aj.lance_biim_1.frame matches 44..63 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/thunder_tick
-    execute if score @s aj.lance_biim_1.frame matches 64 run kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
 
 # モデル演出
     execute if score @s aj.lance_biim_1.frame matches 2 run function mhdp_monster_valk:core/util/models/ignite_start
