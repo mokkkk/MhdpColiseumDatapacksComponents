@@ -42,3 +42,5 @@ function animated_java:valk_aj/root/zzz/80 with entity @s data.locators.tail_3
 function animated_java:valk_aj/root/zzz/82 with entity @s data.locators.tail_4
 function animated_java:valk_aj/root/zzz/84 with entity @s data.locators.shadow
 function animated_java:valk_aj/root/zzz/86 with entity @s data.locators.pos_comet_star
+function animated_java:valk_aj/root/zzz/88 with entity @s data.locators.beam_start
+function animated_java:valk_aj/root/zzz/90 with entity @s data.locators.beam_end

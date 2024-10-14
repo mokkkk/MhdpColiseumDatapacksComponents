@@ -34,9 +34,7 @@
     
 # 演出
     execute if score @s aj.lance_biim_2.frame matches 5 at @s run function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/effect_beam
-    execute if score @s aj.lance_biim_2.frame matches 11 at @s run function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/effect_beam
     execute if score @s aj.lance_biim_2.frame matches 17 at @s run function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/effect_beam
-    execute if score @s aj.lance_biim_2.frame matches 23 at @s run function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/effect_beam
     execute if score @s aj.lance_biim_2.frame matches 29 at @s run function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/effect_beam
     execute if score @s aj.lance_biim_2.frame matches 70 at @s run function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/effect_beam
     execute if score @s aj.lance_biim_2.frame matches 5..36 at @s run particle dust_pillar{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0.2 3
