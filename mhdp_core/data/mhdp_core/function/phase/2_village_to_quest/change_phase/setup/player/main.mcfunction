@@ -8,7 +8,7 @@
     execute unless entity @s[tag=Ply.State.HasUid] run function mhdp_core:player/data/uid_get
 
 # 状態変更
-    tag @s add Ply.State.PlayingQuest
+    # tag @s add Ply.State.PlayingQuest
     tag @s add Ply.State.UsingWeapon
 
 # effect・attribute設定

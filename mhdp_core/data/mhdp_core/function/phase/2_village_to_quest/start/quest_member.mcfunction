@@ -4,6 +4,9 @@
 #
 # @within function mhdp_core:phase/2_village_to_quest/start/main
 
+# クエスト開始
+    tag @s add Ply.State.PlayingQuest
+
 # チーム移行
     team join Team.QuestPlaying @s
 
@@ -26,6 +29,9 @@
 
 # 適用
     function mhdp_core:player/data/save_data
+
+# 連番ID適用
+    scoreboard players operation @s Ply.Other.QuestSerialId = #mhdp_core_quest_serial_id QuestSerialId
 
 # 終了
     data remove storage mhdp_core:temp TempPlayerData

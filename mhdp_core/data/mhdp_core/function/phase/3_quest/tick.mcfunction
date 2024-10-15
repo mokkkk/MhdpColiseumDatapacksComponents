@@ -4,6 +4,9 @@
 #
 # @within function mhdp_core:phase/tick
 
+# クエスト参加者の存在確認
+    execute if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} unless entity @a[tag=Ply.State.PlayingQuest] run function mhdp_core:phase/3_quest/end/retired_no_player
+
 # 制限時間処理
     execute if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} if data storage mhdp_core:game_data ActiveQuest{IsCountDown:true} run scoreboard players add #mhdp_quest_timer_clear MhdpCore 1
     execute if score #mhdp_quest_timer MhdpCore matches 0.. if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} if data storage mhdp_core:game_data ActiveQuest{IsCountDown:true} run scoreboard players remove #mhdp_quest_timer MhdpCore 1
