@@ -5,8 +5,8 @@
 # @within function mhdp_monster_reus:core/tick/animation/event/tick
 
 # 弱めの軸合わせ
-    execute if score @s aj.land_dash_start.frame matches 1 run function mhdp_monster_reus:core/tick/animation/event/land_dash_start/turn_start
-    execute if score @s aj.land_dash_start.frame matches 1..10 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.land_dash_start.frame matches 2 run function mhdp_monster_reus:core/tick/animation/event/land_dash_start/turn_start
+    execute if score @s aj.land_dash_start.frame matches 2..10 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.land_dash_start.frame matches 15..19 at @s run tp @s ^ ^ ^0.1

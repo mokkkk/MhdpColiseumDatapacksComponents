@@ -13,14 +13,14 @@
 
 # ガード
     # 開始：スニーク
-            execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/24_guard/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/24_guard/start
     # 処理
         execute if entity @s[tag=Wpn.Ss.Normal.Guard] run function mhdp_items:weapons/short_sword/type_normal/24_guard/main
 
 # 剣攻撃コンボ
     # 1段目
         # 開始：右クリック短押し
-            execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_normal/1_sword_1/start
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_normal/1_sword_1/start
         # 処理
             execute if entity @s[tag=Wpn.Ss.Normal.Sword.1] run function mhdp_items:weapons/short_sword/type_normal/1_sword_1/main
     # 2段目
@@ -36,6 +36,14 @@
         # 処理
             execute if entity @s[tag=Wpn.Ss.Normal.Sword.5] run function mhdp_items:weapons/short_sword/type_normal/5_sword_5/main
 
+# 溜め
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Normal.Charge] run function mhdp_items:weapons/short_sword/type_normal/10_charge/main
+    
+# 回転斬り
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Normal.Spin] run function mhdp_items:weapons/short_sword/type_normal/11_spin/main
+
 # 盾攻撃コンボ
     # 盾攻撃
        # 処理
@@ -46,6 +54,14 @@
     # ハードバッシュ
         # 処理
             execute if entity @s[tag=Wpn.Ss.Normal.Bash.3] run function mhdp_items:weapons/short_sword/type_normal/9_bash_3/main
+
+# 剣盾ラッシュ(旧)
+    # 処理
+        # execute if entity @s[tag=Wpn.Ss.Normal.Rush] run function mhdp_items:weapons/short_sword/type_normal/12_rush/main
+
+# 剣盾ラッシュ
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Normal.DanceRush] run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/main
 
 # 鉄蟲糸技：飛影
     # 飛影

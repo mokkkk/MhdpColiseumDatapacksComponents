@@ -11,3 +11,7 @@
 # 大剣
     execute if entity @s[tag=Beta.Interaction.Gs.Normal] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/select_weapon/select_great_sword_normal
     execute if entity @s[tag=Beta.Interaction.Gs.Tec] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/select_weapon/select_great_sword_tec
+
+# 弓
+    execute if entity @s[tag=Beta.Interaction.Bw.Normal] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/select_weapon/select_bow_normal
+    execute if entity @s[tag=Beta.Interaction.Bw.Tec] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/select_weapon/select_bow_tec

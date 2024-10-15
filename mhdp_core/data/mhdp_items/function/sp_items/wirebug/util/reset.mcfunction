@@ -1,6 +1,6 @@
 #> mhdp_items:sp_items/wirebug/util/reset
 #
-# 武器の初期化処理
+# 特殊装具のリセット処理
 #
 # @within function mhdp_items:core/switch/item/init
 

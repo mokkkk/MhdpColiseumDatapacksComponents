@@ -10,7 +10,9 @@
     execute if score @s aj.lance_spear_to_spin_l.frame matches 2..20 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
-    execute if score @s aj.lance_spear_to_spin_l.frame matches 1..5 if entity @n[tag=Mns.Target.Valk,distance=..11] at @s run tp @s ^ ^ ^-0.5
+    execute if score @s aj.lance_spear_to_spin_l.frame matches 1..4 if entity @n[tag=Mns.Target.Valk,distance=..15] at @s run tp @s ^ ^ ^-1
+    execute if score @s aj.lance_spear_to_spin_l.frame matches 5..8 if entity @n[tag=Mns.Target.Valk,distance=..15] at @s run tp @s ^ ^ ^-0.5
+    execute if score @s aj.lance_spear_to_spin_l.frame matches 30..38 unless entity @n[tag=Mns.Target.Valk,distance=..15] at @s run tp @s ^ ^ ^0.3
     execute if score @s aj.lance_spear_to_spin_l.frame matches 67..81 at @s run tp @s ^-1 ^ ^-0.2 ~-8 ~
 
 # 効果音

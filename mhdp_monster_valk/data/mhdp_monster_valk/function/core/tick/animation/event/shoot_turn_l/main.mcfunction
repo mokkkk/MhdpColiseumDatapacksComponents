@@ -9,7 +9,7 @@
     execute if score @s aj.shoot_turn_l.frame matches 2..15 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
-    execute if score @s aj.shoot_turn_l.frame matches 1..10 if entity @n[tag=Mns.Target.Valk,distance=..7] at @s run tp @s ^ ^ ^-0.3
+    execute if score @s aj.shoot_turn_l.frame matches 1..10 if entity @n[tag=Mns.Target.Valk,distance=..9] at @s run tp @s ^ ^ ^-0.4
 
 # 効果音
     execute if score @s aj.shoot_turn_l.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7

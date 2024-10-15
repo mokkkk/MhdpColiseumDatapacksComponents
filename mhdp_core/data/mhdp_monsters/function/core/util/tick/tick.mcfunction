@@ -38,3 +38,7 @@
         execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches 1.. run scoreboard players remove @s Mns.Anger.Timer 1
     # 毒
         execute if entity @s[tag=Mns.State.IsPoison,tag=!Mns.State.Death] run function mhdp_monsters:core/util/tick/condition_poison
+
+# バグ対策
+    # forceload範囲外に出た場合、強制的にremove
+        execute at @s unless function mhdp_monsters:core/util/tick/check_force_load run function mhdp_monsters:core/util/tick/force_remove

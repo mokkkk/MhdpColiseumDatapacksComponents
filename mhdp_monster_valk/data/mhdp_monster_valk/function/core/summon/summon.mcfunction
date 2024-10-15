@@ -19,4 +19,4 @@
 # Rootエンティティ対象に初期化処理を実行
     execute as @e[type=item_display,tag=Mns.Root.Valk] at @s run function mhdp_monster_valk:core/summon/summon_init
 
-say 天彗龍召喚処理
+# say 天彗龍召喚処理

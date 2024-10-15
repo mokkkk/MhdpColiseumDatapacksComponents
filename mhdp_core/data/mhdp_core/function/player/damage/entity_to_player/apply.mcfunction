@@ -20,6 +20,9 @@
 # ガード判定
     execute if entity @s[tag=Ply.Weapon.Guard] run function mhdp_core:player/damage/entity_to_player/guard/main
 
+# 被ダメージ時処理
+    execute if entity @s[tag=!Ply.Weapon.Guard] run function mhdp_items:core/switch/weapon_on_damage
+
 # ノックバック
     function mhdp_core:player/damage/entity_to_player/knockback/main
 
@@ -39,6 +42,10 @@
 
 # 演出
     execute if entity @s[tag=Ply.Weapon.Guard] at @s run playsound item.shield.block master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
+    execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] at @s run playsound block.chain.break master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] at @s run playsound block.chain.break master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] at @s run playsound block.chain.break master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] at @s run particle firework ~ ~1 ~ 0 0 0 0.3 20
 
 # 終了
     scoreboard players reset #mhdp_temp_damage_reduction MhdpCore

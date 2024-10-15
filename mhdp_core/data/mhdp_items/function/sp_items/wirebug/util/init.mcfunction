@@ -1,6 +1,7 @@
 #> mhdp_items:sp_items/wirebug/util/init
 #
 # 特殊装具の初期化処理
+# 右記functionにも、初期化処理を追加すること- mhdp_items:core/switch/item/init
 #
 # @within function mhdp_items:core/switch/item/init
 

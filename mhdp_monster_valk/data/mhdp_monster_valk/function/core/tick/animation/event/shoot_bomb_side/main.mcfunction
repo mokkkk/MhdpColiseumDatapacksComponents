@@ -5,7 +5,7 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 移動
-    execute if score @s aj.shoot_bomb_side.frame matches 48..55 at @s run tp @s ^ ^ ^-0.7
+    execute if score @s aj.shoot_bomb_side.frame matches 48..58 at @s run tp @s ^ ^ ^-0.7
 
 # 効果音
     execute if score @s aj.shoot_bomb_side.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
@@ -19,7 +19,9 @@
     execute if score @s aj.shoot_bomb_side.frame matches 55 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 30
 
 # 演出
-    execute if score @s aj.shoot_bomb_side.frame matches 2..33 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/particle
+    execute if score @s aj.shoot_bomb_side.frame matches 8 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/thunder
+    execute if score @s aj.shoot_bomb_side.frame matches 3..44 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/particle
+    execute if score @s aj.shoot_bomb_side.frame matches 45 run kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
 
 # 攻撃
     execute if score @s aj.shoot_bomb_side.frame matches 45 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/attack

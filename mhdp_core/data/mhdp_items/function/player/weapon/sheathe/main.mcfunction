@@ -31,3 +31,6 @@
         # execute if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Weapon.Drawing.Sub,tag=!Ply.Flag.NormalSheathe] if items entity @s weapon.offhand * run function mhdp_items:player/weapon/sheathe/force_sheathe
 
 # その他処理
+    # 一時的に武器無操作
+        execute if entity @s[tag=Ply.Flag.NormalSheathe] run scoreboard players add @s Wpn.DeactivateTimer 5
+        execute if entity @s[tag=!Ply.Weapon.Deactivated] if score @s Wpn.DeactivateTimer matches 1.. run tag @s add Ply.Weapon.Deactivated

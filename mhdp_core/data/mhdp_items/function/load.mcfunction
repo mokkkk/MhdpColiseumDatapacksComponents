@@ -44,6 +44,8 @@
         scoreboard objectives add Wpn.GuardStopTimer dummy
     # 武器の使用停止時間
         scoreboard objectives add Wpn.DeactivateTimer dummy
+    # 武器の無操作取得用
+        scoreboard objectives add Wpn.NoOpeTimer dummy
 # 武器ごとの特殊スコア
     # 大剣
         # 溜め時間
@@ -52,6 +54,28 @@
             scoreboard objectives add Wpn.Gs.ChargeCount dummy
         # 溜め斬り段階
             scoreboard objectives add Wpn.Gs.ChargeSlashCount dummy
+    # 片手剣
+        # 溜め時間
+            scoreboard objectives add Wpn.Ss.ChargeTimer dummy
+        # 溜め段階
+            scoreboard objectives add Wpn.Ss.ChargeCount dummy
+    # 弓
+        # 溜め時間
+            scoreboard objectives add Wpn.Bw.ChargeTimer dummy
+        # 溜め段階
+            scoreboard objectives add Wpn.Bw.ChargeCount dummy
+        # 導ノ矢効果時間
+            scoreboard objectives add Wpn.Bw.HormingTimer dummy
+        # 導ノ矢ホーミングターゲット
+            scoreboard objectives add Wpn.Bw.HormingTarget dummy
+        # 仕込み矢ゲージ
+            scoreboard objectives add Wpn.Bw.Gauge dummy
+        # ビン種別
+            scoreboard objectives add Wpn.Bw.Bottle.Type dummy
+        # ビン本数
+            scoreboard objectives add Wpn.Bw.Bottle.Count dummy
+        # 飛翔睨み撃ち回数
+            scoreboard objectives add Wpn.Bw.FlyingShot.Count dummy
 # 特殊装具ごとの特殊スコア
     # 砥石
         # 処理タイマー
@@ -61,6 +85,17 @@
             scoreboard objectives add Itm.Wirebug.GeneralTimer dummy
         # クールタイム
             scoreboard objectives add Itm.Wirebug.CoolTime dummy
+    # 不動の装衣
+        # 処理タイマー
+            scoreboard objectives add Itm.ImmovableCloth.GeneralTimer dummy
+        # クールタイム
+            scoreboard objectives add Itm.ImmovableCloth.CoolTime dummy
+        
+## 定数定義
+    # 強撃ビン補正値
+        scoreboard players set #const_bow_bottle_strong_multiply Const 125
+    # 導ノ矢補正値
+        scoreboard players set #const_bow_horming_multiply Const 120
 
 ## init
     function mhdp_items:core/init/item_data

@@ -13,11 +13,13 @@
     execute if score @s aj.lance_flytackle_end.frame matches 8..19 at @s run function mhdp_monsters:core/util/other/move_to_target_move
 
 # 演出
-    execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.412,0.412],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
-    execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.412,0.412],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
-    execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.569,0.569],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
-    execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.569,0.569],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
+    execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
+    execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
+    # execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.369,0.369],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
+    # execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.369,0.369],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
     execute if score @s aj.lance_flytackle_end.frame matches 2..31 run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_end/particle
+    execute if score @s aj.lance_flytackle_end.frame matches 2..6 run tp @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash,tag=Mns.Shot.Valk.Vfx.RedFlash.Long] ^ ^3 ^
+    execute if score @s aj.lance_flytackle_end.frame matches 7.. run kill @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
 
 # 効果音
     execute if score @s aj.lance_flytackle_end.frame matches 8 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7

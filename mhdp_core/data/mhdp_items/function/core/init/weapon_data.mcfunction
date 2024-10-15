@@ -13,3 +13,5 @@ say 武器データ初期化
     function mhdp_items:weapons/great_sword/init
 # 片手剣
     function mhdp_items:weapons/short_sword/init
+# 弓
+    function mhdp_items:weapons/bow/init

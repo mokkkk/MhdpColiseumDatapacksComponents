@@ -11,10 +11,11 @@
     execute if score @s aj.lance_vertical_turn_l.frame matches 37..40 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
+    execute if score @s aj.lance_vertical_turn_l.frame matches 1..10 if entity @n[tag=Mns.Target.Valk,distance=..12] at @s run tp @s ^ ^ ^0.25
     execute if score @s aj.lance_vertical_turn_l.frame matches 31..33 at @s run tp @s ^0.3 ^ ^0.3
     execute if score @s aj.lance_vertical_turn_l.frame matches 37..48 unless entity @n[tag=Mns.Target.Valk,distance=..8] at @s run tp @s ^ ^ ^0.8
-    execute if score @s aj.lance_vertical_turn_l.frame matches 80..90 at @s run tp @s ^ ^ ^-0.2
-    execute if score @s aj.lance_vertical_turn_l.frame matches 91..96 at @s run tp @s ^ ^ ^-0.1
+    execute if score @s aj.lance_vertical_turn_l.frame matches 80..90 at @s run tp @s ^ ^ ^-0.1
+    execute if score @s aj.lance_vertical_turn_l.frame matches 91..96 at @s run tp @s ^ ^ ^-0.05
 
 # 効果音
     execute if score @s aj.lance_vertical_turn_l.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1

@@ -43,6 +43,9 @@
     tag @s remove Ply.Weapon.Drawing
     tag @s remove Ply.Weapon.Drawing.Sub
 
+# 一時的に武器無操作
+    scoreboard players add @s Wpn.DeactivateTimer 5
+
 # データの取得し直し
     data modify storage mhdp_core:temp TempPlayerData set from entity @s
     function mhdp_core:player/data/items/get_data_items

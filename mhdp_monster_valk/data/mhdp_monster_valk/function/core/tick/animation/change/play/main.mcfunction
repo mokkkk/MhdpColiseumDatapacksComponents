@@ -10,7 +10,7 @@
 # 咆哮
     execute if entity @s[tag=Anim.Voice] run function animated_java:valk_aj/animations/lance_voice/tween {duration:1, to_frame: 1}
 
-# 彗龍
+## 彗龍
     # 龍気吸引
         execute if entity @s[tag=Anim.Charge] run function animated_java:valk_aj/animations/lance_charge_start/tween {duration:1, to_frame: 1}
     # 変形・彗龍→龍気
@@ -32,6 +32,9 @@
     # 振りむき翼槍叩きつけ
         execute if entity @s[tag=Anim.Vertical.Turn.R] run function animated_java:valk_aj/animations/lance_vertical_turn_r/tween {duration:1, to_frame: 1}
         execute if entity @s[tag=Anim.Vertical.Turn.L] run function animated_java:valk_aj/animations/lance_vertical_turn_l/tween {duration:1, to_frame: 1}
+    # 翼槍叩きつけ
+        execute if entity @s[tag=Anim.Upper.R] run function animated_java:valk_aj/animations/lance_upper_r/tween {duration:1, to_frame: 1}
+        execute if entity @s[tag=Anim.Upper.L] run function animated_java:valk_aj/animations/lance_upper_l/tween {duration:1, to_frame: 1}
     # 噛みつき
         execute if entity @s[tag=Anim.Bite] run function animated_java:valk_aj/animations/lance_bite/tween {duration:1, to_frame: 1}
     # 突進攻撃
@@ -40,6 +43,8 @@
         execute if entity @s[tag=Anim.Tackle] run function animated_java:valk_aj/animations/lance_tackle/tween {duration:1, to_frame: 1}
     # 滑空突進
         execute if entity @s[tag=Anim.JetTackle] run function animated_java:valk_aj/animations/lance_flytackle_start/tween {duration:1, to_frame: 1}
+    # 龍閃
+        execute if entity @s[tag=Anim.Beam] run function animated_java:valk_aj/animations/lance_biim_1/tween {duration:1, to_frame: 1}
     # 彗星
         execute if entity @s[tag=Anim.Comet] run function animated_java:valk_aj/animations/comet_phase_1/tween {duration:1, to_frame: 1}
 
@@ -67,7 +72,7 @@
         execute if entity @s[tag=Anim.Bomb.Side] run function animated_java:valk_aj/animations/shoot_bomb_side/tween {duration:1, to_frame: 1}
     # 前転
         execute if entity @s[tag=Anim.Sault] run function animated_java:valk_aj/animations/shoot_sault_before/tween {duration:1, to_frame: 1}
-
+    
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag
     tag @s remove Mns.Temp.IsCombo

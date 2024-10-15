@@ -6,13 +6,15 @@
 
 # 軸合わせ
     execute if score @s aj.lance_spear_l_to_r.frame matches 2 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/turn_start
-    execute if score @s aj.lance_spear_l_to_r.frame matches 11 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/turn_start
+    execute if score @s aj.lance_spear_l_to_r.frame matches 11 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/turn_start_adjust
     execute if score @s aj.lance_spear_l_to_r.frame matches 2..20 run function mhdp_monsters:core/util/other/turn_to_target_rotate
-    execute if score @s aj.lance_spear_l_to_r.frame matches 44 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/turn_start
+    execute if score @s aj.lance_spear_l_to_r.frame matches 44 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/turn_start_adjust
     execute if score @s aj.lance_spear_l_to_r.frame matches 44..54 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
-    execute if score @s aj.lance_spear_l_to_r.frame matches 1..5 if entity @n[tag=Mns.Target.Valk,distance=..11] at @s run tp @s ^ ^ ^-0.5
+    execute if score @s aj.lance_spear_l_to_r.frame matches 1..4 if entity @n[tag=Mns.Target.Valk,distance=..15] at @s run tp @s ^ ^ ^-1
+    execute if score @s aj.lance_spear_l_to_r.frame matches 5..8 if entity @n[tag=Mns.Target.Valk,distance=..15] at @s run tp @s ^ ^ ^-0.5
+    execute if score @s aj.lance_spear_l_to_r.frame matches 30..38 unless entity @n[tag=Mns.Target.Valk,distance=..15] at @s run tp @s ^ ^ ^0.3
 
 # 効果音
     execute if score @s aj.lance_spear_l_to_r.frame matches 2..4 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1.2 0.4

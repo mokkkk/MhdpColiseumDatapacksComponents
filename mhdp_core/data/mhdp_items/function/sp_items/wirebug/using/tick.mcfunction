@@ -31,3 +31,5 @@
 # 終了
     execute if score @s Itm.Wirebug.GeneralTimer matches 1..9 run tag @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target] remove Mk.Sp.Wirebug.Rotation.Target
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Itm.Wirebug.GeneralTimer matches 19.. run function mhdp_items:sp_items/wirebug/using/end
+    execute if entity @s[tag=Itm.Sp.Wirebug.UsedSkill] run function mhdp_items:sp_items/wirebug/using/end
+    execute if score @s Itm.Wirebug.GeneralTimer matches 50.. run function mhdp_items:sp_items/wirebug/using/end

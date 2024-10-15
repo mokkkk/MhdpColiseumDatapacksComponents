@@ -10,6 +10,8 @@
 # 操作
     #declare tag Wpn.Gs.Tec.Charge 溜め
     #declare tag Wpn.Gs.Tec.ChargeSlash 溜め斬り
+    #declare tag Wpn.Gs.Tec.UpperCharge 相殺斬り上げ・溜め
+    #declare tag Wpn.Gs.Tec.Upper 相殺斬り上げ
     #declare tag Wpn.Gs.Tec.Tackle タックル
     #declare tag Wpn.Gs.Tec.Guard ガード
     #declare tag Wpn.Gs.Tec.HuntingEdge 鉄蟲糸技：ハンティングエッジ

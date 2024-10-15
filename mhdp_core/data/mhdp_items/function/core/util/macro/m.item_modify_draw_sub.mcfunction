@@ -4,5 +4,8 @@
 #
 # @within function mhdp_items:core/util/item_modify_draw
 
+# 武器にのみ実行する
+    $execute unless items entity @s weapon.$(Slot) ender_eye[] run return run data remove storage mhdp_core:temp Args
+
 # アイテム書き換え
     $item modify entity @s weapon.$(Slot) [{"function": "minecraft:set_name","entity": "this","target": "custom_name","name": ""},{function:set_custom_data,tag:{IsDrawing:1b,IsMhdpWeapon:1b,IsSubWeapon:1b,IsUsing:1b}},{function: set_components, components:{custom_model_data:$(Cmd),hide_tooltip:{}}}]

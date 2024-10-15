@@ -12,4 +12,5 @@
     tag @s add Beta.Ply.SelectedWeapon
     tag @s add Beta.Ply.Weapon.ShortSword
     tag @s remove Beta.Ply.Weapon.GreatSword
+    tag @s remove Beta.Ply.Weapon.Bow
     tag @s remove Ply.Weapon.Type.Tech

@@ -32,8 +32,10 @@
     execute if score @s Wpn.GeneralTimer matches 5 run tag @s remove Ply.Flag.DrawAttack
 
 # 遷移
-    # 右クリックを離した場合、溜めに移行
-        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/type_tec/2_chargeattack/change_to_charge
+    # 立ち+右クリック長押し：溜めに移行
+        execute if entity @s[tag=!Ply.Ope.IsSneaking,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/type_tec/2_chargeattack/change_to_charge
+    # スニーク+右クリック長押し：反撃斬り上げ溜めに移行
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/type_tec/2_chargeattack/change_to_upper_charge
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/type_tec/2_chargeattack/end

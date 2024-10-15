@@ -38,6 +38,7 @@
         #declare tag Ply.Flag.NormalSheathe 通常納刀フラグ
         #declare tag Ply.Flag.DrawAttack 抜刀攻撃フラグ
         #declare tag Ply.Flag.Hit 武器攻撃命中フラグ
+        #declare tag Ply.Flag.Counter カウンター成功フラグ
     # オプション
         #declare tag Ply.Option.DisableCameraEffect オプション：画面効果無効化
 # 一時

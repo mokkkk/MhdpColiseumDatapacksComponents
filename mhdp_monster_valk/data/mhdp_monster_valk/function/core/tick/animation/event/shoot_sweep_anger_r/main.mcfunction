@@ -27,8 +27,7 @@
     execute if score @s aj.shoot_sweep_anger_r.frame matches 50 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
     execute if score @s aj.shoot_sweep_anger_r.frame matches 50 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
 
-    execute if score @s aj.shoot_sweep_anger_r.frame matches 16 run playsound item.firecharge.use master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    execute if score @s aj.shoot_sweep_anger_r.frame matches 26 run playsound item.firecharge.use master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s aj.shoot_sweep_anger_r.frame matches 2 run playsound item.firecharge.use master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
     execute if score @s aj.shoot_sweep_anger_r.frame matches 28..47 run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_anger_r/particle
     
 # 攻撃

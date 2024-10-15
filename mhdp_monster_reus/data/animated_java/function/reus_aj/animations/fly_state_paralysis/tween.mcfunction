@@ -5,7 +5,6 @@ tag @s add aj.reus_aj.animation.fly_state_paralysis.playing
 $scoreboard players set @s aj.tween_duration $(duration)
 $scoreboard players set @s aj.fly_state_paralysis.frame $(to_frame)
 scoreboard players operation #this aj.i = @s aj.tween_duration
-scoreboard players add @s aj.tween_duration 1
 tag @s add aj.transforms_only
 execute at @s run function animated_java:reus_aj/animations/fly_state_paralysis/zzz/apply_frame {frame: 0}
 $execute at @s run function animated_java:reus_aj/animations/fly_state_paralysis/zzz/apply_frame {frame: $(to_frame)}

@@ -7,10 +7,11 @@
 # タグ付与
     tag @s add Wpn.Ss.Tec.Guard
     tag @s add Ply.Weapon.Guard
+    tag @s remove Ply.Weapon.NoOpe
 
 # attribute設定
     attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -1 add_value
+    attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
 
 # スタミナ回復停止
     tag @s add Ply.Weapon.StaminaNotRegen

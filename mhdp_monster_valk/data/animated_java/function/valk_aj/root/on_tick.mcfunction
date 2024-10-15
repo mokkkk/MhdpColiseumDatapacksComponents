@@ -2,7 +2,6 @@
 execute unless entity @s[tag=aj.valk_aj.root] run return 0
 execute unless score @s aj.is_rig_loaded matches 1 run function #animated_java:global/root/on_load
 function #animated_java:valk_aj/as_root/pre_tick
-execute if entity @s[tag=aj.valk_aj.animation.jacket_pose.playing] run function animated_java:valk_aj/animations/jacket_pose/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_pose.playing] run function animated_java:valk_aj/animations/lance_pose/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_search.playing] run function animated_java:valk_aj/animations/lance_search/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_charge_start.playing] run function animated_java:valk_aj/animations/lance_charge_start/zzz/on_tick
@@ -37,10 +36,13 @@ execute if entity @s[tag=aj.valk_aj.animation.lance_turn_l.playing] run function
 execute if entity @s[tag=aj.valk_aj.animation.lance_move_start.playing] run function animated_java:valk_aj/animations/lance_move_start/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_move.playing] run function animated_java:valk_aj/animations/lance_move/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_spear_l.playing] run function animated_java:valk_aj/animations/lance_spear_l/zzz/on_tick
-execute if entity @s[tag=aj.valk_aj.animation.lance_spear_r_to_l.playing] run function animated_java:valk_aj/animations/lance_spear_r_to_l/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_spear_r.playing] run function animated_java:valk_aj/animations/lance_spear_r/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_spear_l_to_r.playing] run function animated_java:valk_aj/animations/lance_spear_l_to_r/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_spear_r_to_l.playing] run function animated_java:valk_aj/animations/lance_spear_r_to_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_spear_to_spin_l.playing] run function animated_java:valk_aj/animations/lance_spear_to_spin_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_spear_to_spin_r.playing] run function animated_java:valk_aj/animations/lance_spear_to_spin_r/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_upper_r.playing] run function animated_java:valk_aj/animations/lance_upper_r/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_upper_l.playing] run function animated_java:valk_aj/animations/lance_upper_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_vertical_r.playing] run function animated_java:valk_aj/animations/lance_vertical_r/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_vertical_l.playing] run function animated_java:valk_aj/animations/lance_vertical_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_vertical_r_to_l.playing] run function animated_java:valk_aj/animations/lance_vertical_r_to_l/zzz/on_tick
@@ -80,7 +82,8 @@ execute if entity @s[tag=aj.valk_aj.animation.comet_phase_2.playing] run functio
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_3.playing] run function animated_java:valk_aj/animations/comet_phase_3/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_4.playing] run function animated_java:valk_aj/animations/comet_phase_4/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.comet_phase_5.playing] run function animated_java:valk_aj/animations/comet_phase_5/zzz/on_tick
-execute if entity @s[tag=aj.valk_aj.animation.lance_charge2.playing] run function animated_java:valk_aj/animations/lance_charge2/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_biim_1.playing] run function animated_java:valk_aj/animations/lance_biim_1/zzz/on_tick
+execute if entity @s[tag=aj.valk_aj.animation.lance_biim_2.playing] run function animated_java:valk_aj/animations/lance_biim_2/zzz/on_tick
 execute on passengers if entity @s[tag=aj.valk_aj.data] run function animated_java:valk_aj/root/zzz/1
 execute at @s on passengers run tp @s ~ ~ ~ ~ ~
 function #animated_java:valk_aj/as_root/post_tick

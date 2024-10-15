@@ -84,6 +84,10 @@
         execute if entity @s[tag=aj.valk_aj.animation.lance_vertical_r_to_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_r_to_l/main
         execute if entity @s[tag=aj.valk_aj.animation.lance_vertical_l_to_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l_to_r/main
 
+# 翼槍突き上げ
+    execute if entity @s[tag=aj.valk_aj.animation.lance_upper_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_upper_r/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_upper_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_upper_l/main
+
 # 噛みつき
     execute if entity @s[tag=aj.valk_aj.animation.lance_bite.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_bite/main
 
@@ -98,6 +102,10 @@
     execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_end.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_end/main
     execute if entity @s[tag=aj.valk_aj.animation.lance_flytackle_repeat.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_repeat/main
+
+# 龍閃
+    execute if entity @s[tag=aj.valk_aj.animation.lance_biim_1.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/main
+    execute if entity @s[tag=aj.valk_aj.animation.lance_biim_2.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/main
 
 # 彗星
     execute if entity @s[tag=aj.valk_aj.animation.comet_phase_1.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/main

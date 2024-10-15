@@ -112,4 +112,4 @@
     tag @s remove Mns.Temp.Damage.WingL
     tag @s remove Mns.Temp.Damage.BodySp
 
-say 天彗龍被ダメージ
+# say 天彗龍被ダメージ

@@ -5,11 +5,11 @@
 # @within function mhdp_monster_reus:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.land_chargebite.frame matches 1..38 run tag @n[tag=Mns.Target.Reus] add Temp.Rotate.Target
-    execute if score @s aj.land_chargebite.frame matches 1..38 at @s run function mhdp_monsters:core/util/other/turn_to_target_accurate
+    execute if score @s aj.land_chargebite.frame matches 2..38 run tag @n[tag=Mns.Target.Reus] add Temp.Rotate.Target
+    execute if score @s aj.land_chargebite.frame matches 2..38 at @s run function mhdp_monsters:core/util/other/turn_to_target_accurate
 
 # 移動
-    execute if score @s aj.land_chargebite.frame matches 1..10 at @s run tp @s ^ ^ ^-0.1
+    execute if score @s aj.land_chargebite.frame matches 2..10 at @s run tp @s ^ ^ ^-0.1
     execute if score @s aj.land_chargebite.frame matches 43..53 unless entity @n[tag=Mns.Target.Reus,distance=..8] at @s run tp @s ^ ^ ^0.8
 
 # 演出

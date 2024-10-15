@@ -13,11 +13,11 @@
     execute if score @s aj.lance_flytackle_repeat.frame matches 8..19 at @s run function mhdp_monsters:core/util/other/move_to_target_move
 
 # 演出
-    execute if score @s aj.lance_flytackle_repeat.frame matches 2..8 run particle dust{color:[1.000,0.412,0.412],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
-    execute if score @s aj.lance_flytackle_repeat.frame matches 2..8 run particle dust{color:[1.000,0.412,0.412],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
-    execute if score @s aj.lance_flytackle_repeat.frame matches 2..8 run particle dust{color:[1.000,0.569,0.569],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
-    execute if score @s aj.lance_flytackle_repeat.frame matches 2..8 run particle dust{color:[1.000,0.569,0.569],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
+    execute if score @s aj.lance_flytackle_repeat.frame matches 2..8 run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
+    execute if score @s aj.lance_flytackle_repeat.frame matches 2..8 run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
     execute if score @s aj.lance_flytackle_repeat.frame matches 2..31 run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_repeat/particle_end
+    execute if score @s aj.lance_flytackle_repeat.frame matches 2..6 run tp @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash,tag=Mns.Shot.Valk.Vfx.RedFlash.Long] ^ ^3 ^
+    execute if score @s aj.lance_flytackle_repeat.frame matches 7 run kill @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
 
 # 効果音
     execute if score @s aj.lance_flytackle_repeat.frame matches 8 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
@@ -35,8 +35,8 @@
 
 ## 折り返し
 # 軸合わせ
-    execute if score @s aj.lance_flytackle_repeat.frame matches 26..42 run tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
-    execute if score @s aj.lance_flytackle_repeat.frame matches 26..42 run function mhdp_monsters:core/util/other/turn_to_target_accurate
+    execute if score @s aj.lance_flytackle_repeat.frame matches 26..40 run tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
+    execute if score @s aj.lance_flytackle_repeat.frame matches 26..40 run function mhdp_monsters:core/util/other/turn_to_target_accurate
 
 # 移動
     execute if score @s aj.lance_flytackle_repeat.frame matches 26..45 at @s run tp @s ^ ^ ^0.6
@@ -63,6 +63,10 @@
 
 # 攻撃
     execute if score @s aj.lance_flytackle_repeat.frame matches 48..53 run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_repeat/attack
+
+# 演出
+    execute if score @s aj.lance_flytackle_repeat.frame matches 47 positioned ^ ^3 ^ run summon text_display ^-1 ^ ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.RedFlash","Mns.Shot.Valk.Vfx.RedFlash.Long"],default_background:0b,brightness:{sky:15,block:15},text:'{"text":"0","font":"vfx/valstrax"}',transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[12f,12f,12f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
+    execute if score @s aj.lance_flytackle_repeat.frame matches 47.. run tp @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash,tag=Mns.Shot.Valk.Vfx.RedFlash.Long] ^ ^3 ^
 
 # モデル演出
     execute if score @s aj.lance_flytackle_repeat.frame matches 43 run function mhdp_monster_valk:core/util/models/ignite_start

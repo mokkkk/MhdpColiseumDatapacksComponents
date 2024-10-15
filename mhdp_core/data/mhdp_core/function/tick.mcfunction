@@ -19,6 +19,13 @@
 # モンスターの個別処理
     execute as @e[type=item_display,tag=Mns.Root] at @s run function mhdp_monsters:core/switch/tick
 
+# 射撃Entityの処理
+# モンスターの射撃は各モンスターの処理に移譲する
+    execute as @e[type=item_display,tag=Other.Shot] at @s run function mhdp_core:other_entity/shot/tick
+
 # 特殊Entityの個別処理
     execute as @e[type=text_display,tag=Other.Text.Vfx] at @s run function mhdp_core:other_entity/vfx/tick
     execute as @e[tag=Effect.General] at @s run function mhdp_monsters:core/effect/tick
+
+# tick終了時処理
+    function mhdp_core:core/on_end_tick

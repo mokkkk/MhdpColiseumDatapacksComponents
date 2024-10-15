@@ -17,6 +17,7 @@
     #declare score_holder #mhdp_core_timer 全般的な処理に使用するタイマー
     #declare score_holder #mhdp_core_loading_quest_id 現在受注しているクエストのID
     #declare score_holder #mhdp_core_pre_played_quest_id 前回受注したクエストのID
+    #declare score_holder #mhdp_core_quest_serial_id 前回受注したクエストの連番ID
 # クエスト処理用
     #declare score_holder #mhdp_quest_timer_max クエストの最大制限時間
     #declare score_holder #mhdp_quest_timer クエストの制限時間
@@ -118,6 +119,8 @@
         #declare tag Other.Text.Vfx.Slash 斬撃エフェクト
     # 一時
         #declare tag Other.Temp.Right 左右確認に一時的に使用、必ず同function内でリセットする
+    # 射撃
+        #declare tag Other.Shot 射撃Entityの共通タグ
 # 体験版用
     # player
         #declare tag Beta.Ply.SelectedWeapon 武器選択済み

@@ -24,12 +24,14 @@
     execute if score @s aj.shoot_bomb_forward.frame matches 55 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 30
 
 # 演出
+    execute if score @s aj.shoot_bomb_forward.frame matches 8 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/thunder
     execute if score @s aj.shoot_bomb_forward.frame matches 2..38 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/particle
     execute if score @s aj.shoot_bomb_forward.frame matches 19..38 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/particle_2
     execute if score @s aj.shoot_bomb_forward.frame matches 82 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
     execute if score @s aj.shoot_bomb_forward.frame matches 82 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
     execute if score @s aj.shoot_bomb_forward.frame matches 82 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
     execute if score @s aj.shoot_bomb_forward.frame matches 82 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
+    execute if score @s aj.shoot_bomb_forward.frame matches 38 run kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
 
 # 攻撃
     execute if score @s aj.shoot_bomb_forward.frame matches 39 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/attack

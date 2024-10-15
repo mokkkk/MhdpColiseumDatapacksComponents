@@ -4,5 +4,5 @@ execute if score @s aj.tween_duration matches 1.. run return 1
 execute if score @s aj.tween_duration matches 0 on passengers run data modify entity @s interpolation_duration set value 1
 execute store result storage aj:temp frame int 1 run scoreboard players get @s aj.lance_dashattack.frame
 function animated_java:valk_aj/animations/lance_dashattack/zzz/apply_frame with storage aj:temp
-execute if score @s aj.lance_dashattack.frame matches 60.. run return run function animated_java:valk_aj/animations/lance_dashattack/pause
+execute if score @s aj.lance_dashattack.frame matches 57.. run return run function animated_java:valk_aj/animations/lance_dashattack/pause
 scoreboard players add @s aj.lance_dashattack.frame 1

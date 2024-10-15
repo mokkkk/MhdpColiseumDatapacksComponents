@@ -5,8 +5,8 @@
 # @within function mhdp_monster_reus:core/tick/animation/event/tick
 
 # 軸合わせ・弱め
-    execute if score @s aj.land_bjb.frame matches 1 run function mhdp_monster_reus:core/tick/animation/event/land_bjb/turn_start
-    execute if score @s aj.land_bjb.frame matches 1..8 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.land_bjb.frame matches 2 run function mhdp_monster_reus:core/tick/animation/event/land_bjb/turn_start
+    execute if score @s aj.land_bjb.frame matches 2..8 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.land_bjb.frame matches 15..18 at @s run tp @s ^ ^0.4 ^-0.7

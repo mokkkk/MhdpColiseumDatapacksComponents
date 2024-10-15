@@ -15,7 +15,7 @@
 
 # リスポーン時処理
 
-# クエスト中処理
+# クエスト関連処理
     execute if entity @s[tag=Ply.State.PlayingQuest] run function mhdp_core:player/phase_quest/tick
 
 # 武器・アイテム処理

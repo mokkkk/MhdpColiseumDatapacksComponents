@@ -5,9 +5,9 @@
 # @within function mhdp_monster_reus:core/tick/animation/event/tick
 
 # 軸合わせ・弱め
-    execute if score @s aj.fly_bite.frame matches 1 run function mhdp_monster_reus:core/tick/animation/event/fly_bite/turn_start
+    execute if score @s aj.fly_bite.frame matches 2 run function mhdp_monster_reus:core/tick/animation/event/fly_bite/turn_start
     execute if score @s aj.fly_bite.frame matches 6 run function mhdp_monster_reus:core/tick/animation/event/fly_bite/turn_start
-    execute if score @s aj.fly_bite.frame matches 1..10 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.fly_bite.frame matches 2..10 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.fly_bite.frame matches 3..8 at @s run tp @s ^ ^ ^-0.1

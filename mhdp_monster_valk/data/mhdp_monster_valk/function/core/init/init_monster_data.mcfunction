@@ -56,6 +56,7 @@
         scoreboard objectives add Mns.Valk.PhaseCount dummy
         scoreboard objectives add Mns.Valk.PhaseCount.Comet dummy
         scoreboard objectives add Mns.Valk.PhaseCount.Move dummy
+        scoreboard objectives add Mns.Valk.PhaseCount.Beam dummy
     # 移動回数
         scoreboard objectives add Mns.Valk.DashCount dummy
     # サブカウント
@@ -139,4 +140,4 @@
     }
     function mhdp_monster_valk:core/init/init_attack_data
 
-say 天彗龍 init monster data
+# say 天彗龍 init monster data

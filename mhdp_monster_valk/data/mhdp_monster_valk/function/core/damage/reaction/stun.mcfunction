@@ -25,3 +25,5 @@
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     # アニメーションタグ消去
         function mhdp_monsters:core/util/other/remove_animation_tag
+    # その他
+        kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]

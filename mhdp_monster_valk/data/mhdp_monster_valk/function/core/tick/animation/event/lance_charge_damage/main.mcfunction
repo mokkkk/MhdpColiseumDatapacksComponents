@@ -19,7 +19,8 @@
     execute if score @s aj.lance_charge_damage.frame matches 20 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
     execute if score @s aj.lance_charge_damage.frame matches 6 run playsound entity.generic.explode master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    execute if score @s aj.lance_charge_damage.frame matches 6 run particle explosion_emitter ^ ^4 ^-2 0 0 0 0 1
+    execute if score @s aj.lance_charge_damage.frame matches 6 run particle explosion ^ ^4 ^-2 1.2 1.2 1.2 0 8
+    execute if score @s aj.lance_charge_damage.frame matches 6 run summon text_display ^ ^3 ^-2 {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.Bomb"],default_background:0b,brightness:{sky:15,block:15},text:'{"text":"0","font":"vfx/valstrax"}',transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[5f,5f,5f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,billboard:"center",alignment:"left"}
 
 # 接地
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground

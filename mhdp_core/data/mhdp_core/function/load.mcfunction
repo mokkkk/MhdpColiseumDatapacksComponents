@@ -10,6 +10,7 @@
 ## Scoreboard定義
 # Mhdp基本処理用
     scoreboard objectives add MhdpCore dummy
+    scoreboard objectives add QuestSerialId dummy
     scoreboard objectives add Const dummy
 
 # プレイヤー関連
@@ -47,6 +48,8 @@
     # その他処理用
         # 攻撃対象の保持
             scoreboard objectives add Ply.Other.AttackTargetUuid dummy
+        # 参加したクエストの連番ID
+            scoreboard objectives add Ply.Other.QuestSerialId dummy
 
 # モンスター関連
     # UID

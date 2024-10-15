@@ -30,6 +30,12 @@
     scoreboard players reset #mhdp_quest_deathcount_max MhdpCore
     scoreboard players reset #mhdp_quest_deathcount MhdpCore
     time set 5000
+    # 連番増加
+        scoreboard players add #mhdp_core_quest_serial_id QuestSerialId 1
+
+# forceloadのリセット
+    forceload remove all
+    forceload add 0 0
 
 # フェーズ変更
     data modify storage mhdp_core:game_data Phase set value 1

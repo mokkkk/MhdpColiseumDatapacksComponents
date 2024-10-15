@@ -51,3 +51,4 @@ execute on passengers if entity @s[tag=aj.valk_aj.bone.tail_2] run function anim
 execute on passengers if entity @s[tag=aj.valk_aj.bone.tail_1] run function animated_java:valk_aj/variants/default/zzz/48
 execute on passengers if entity @s[tag=aj.valk_aj.bone.tail_0] run function animated_java:valk_aj/variants/default/zzz/49
 execute on passengers if entity @s[tag=aj.valk_aj.bone.body_1] run function animated_java:valk_aj/variants/default/zzz/50
+execute on passengers if entity @s[tag=aj.valk_aj.bone.beam_model] run function animated_java:valk_aj/variants/default/zzz/51
