@@ -9,7 +9,7 @@
     function mhdp_core:phase/2_village_to_quest/start/quest/enable_datapack
     data remove storage mhdp_core:temp Monsters
 
-# マップ関連初期化
+# マップ個別処理(初期化)
     # 大闘技場
         execute if data storage mhdp_core:game_data ActiveQuest{Field:"Coliseum"} run function mhdp_core:phase/2_village_to_quest/change_phase/setup/map/coliseum
 

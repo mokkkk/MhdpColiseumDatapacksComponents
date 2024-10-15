@@ -10,4 +10,3 @@
 
 # 通知
     tellraw @a {"text":"【クエスト参加者が居なくなったため、クエストを中断します】","color": "red"}
-    say Quest Retire : No Player

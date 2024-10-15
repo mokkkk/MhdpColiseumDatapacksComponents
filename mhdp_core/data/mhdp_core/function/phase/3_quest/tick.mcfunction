@@ -15,7 +15,7 @@
     execute if score #mhdp_quest_timer MhdpCore matches 0 run tellraw @a[tag=Ply.State.PlayingQuest] {"text": "【制限時間切れです】"}
     execute if score #mhdp_quest_timer MhdpCore matches 0 run function mhdp_core:phase/3_quest/end/failed
 
-# マップ個別処理
+# マップ個別処理(tick)
     # 大闘技場
         execute if data storage mhdp_core:game_data ActiveQuest{Field:"Coliseum"} run function mhdp_core:phase/3_quest/map/coliseum/main
 

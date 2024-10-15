@@ -49,6 +49,7 @@
     attribute @s generic.max_health modifier remove mhdp_core:quest_max_health
     attribute @s generic.jump_strength modifier remove mhdp_core:quest_jump_strength
     attribute @s generic.jump_strength modifier remove mhdp_core:sp_item_jump_strength
+    attribute @s generic.movement_speed modifier remove mhdp_core:quest_movement_speed
 
 # UIの消去
     title @s actionbar {"text":""}
