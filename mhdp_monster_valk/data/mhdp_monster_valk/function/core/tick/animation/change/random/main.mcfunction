@@ -12,6 +12,7 @@
     execute if entity @n[tag=Mns.Target.Valk,distance=14.1..] run scoreboard players remove @s Mns.General.ActCount.Move 1
     scoreboard players add @s Mns.Valk.PhaseCount.Comet 1
     scoreboard players add @s Mns.Valk.PhaseCount.Move 1
+    scoreboard players add @s Mns.Valk.PhaseCount.Beam 1
 
 # フェーズ移行カウント加算
     scoreboard players add @s Mns.Valk.PhaseCount 1
@@ -35,6 +36,7 @@
 
 # 準大技
     execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Move matches 13.. if predicate {"condition":"minecraft:random_chance","chance":0.4} run return run function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin_move
+    execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Beam matches 30.. if predicate {"condition":"minecraft:random_chance","chance":0.6} run return run function mhdp_monster_valk:core/tick/animation/change/play/beam
 
 # 彗龍
     # 近距離

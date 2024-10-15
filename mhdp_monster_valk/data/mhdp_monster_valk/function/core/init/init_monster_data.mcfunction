@@ -56,6 +56,7 @@
         scoreboard objectives add Mns.Valk.PhaseCount dummy
         scoreboard objectives add Mns.Valk.PhaseCount.Comet dummy
         scoreboard objectives add Mns.Valk.PhaseCount.Move dummy
+        scoreboard objectives add Mns.Valk.PhaseCount.Beam dummy
     # 移動回数
         scoreboard objectives add Mns.Valk.DashCount dummy
     # サブカウント

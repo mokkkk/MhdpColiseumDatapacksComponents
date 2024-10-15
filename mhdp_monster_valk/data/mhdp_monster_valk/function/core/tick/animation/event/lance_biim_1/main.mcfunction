@@ -9,6 +9,7 @@
     execute if score @s aj.lance_biim_1.frame matches 1..52 run function mhdp_monsters:core/util/other/turn_to_target_accurate
 
 # 効果音
+    execute if score @s aj.lance_biim_1.frame matches 1..8 if entity @n[tag=Mns.Target.Valk,distance=..15] at @s run tp @s ^ ^ ^-0.5
     execute if score @s aj.lance_biim_1.frame matches 2..10 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.3 1.7 0.3
     execute if score @s aj.lance_biim_1.frame matches 2..10 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.3 1.8 0.3
     execute if score @s aj.lance_biim_1.frame matches 11..20 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.3 1.9 0.3
