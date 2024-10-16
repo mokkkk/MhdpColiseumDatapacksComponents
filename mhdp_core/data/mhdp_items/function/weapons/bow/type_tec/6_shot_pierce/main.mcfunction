@@ -39,6 +39,9 @@
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1 run tp @s ~ ~ ~ ~ ~-0.5
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 3..4 run tp @s ~ ~ ~ ~ ~0.25
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 45..46 run tp @s ~ ~ ~ ~1 ~-0.7
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 47..48 run tp @s ~ ~ ~ ~1 ~0.5
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 49..50 run tp @s ~ ~ ~ ~-0.3 ~
     execute if score @s Wpn.GeneralTimer matches 1..43 anchored eyes run particle crit ^ ^ ^0.5 0.1 0.1 0.1 0.5 1
 
 # 移動制限
