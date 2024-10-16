@@ -20,8 +20,8 @@
     execute if score @s aj.lance_biim_1.frame matches 11..20 run playsound entity.player.breath master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 2
     execute if score @s aj.lance_biim_1.frame matches 37 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.lance_biim_1.frame matches 37 run particle block{block_state:"minecraft:sand"} ^ ^ ^3 2 0.1 2 0 30
-    execute if score @s aj.lance_biim_1.frame matches 33..48 at @a[tag=!Ply.State.IsSilent,distance=..96] facing entity @s feet as @p run playsound entity.warden.sonic_charge master @s ^ ^1 ^1 0.4 1.7 0.4
-    execute if score @s aj.lance_biim_1.frame matches 49..55 at @a[tag=!Ply.State.IsSilent,distance=..96] facing entity @s feet as @p run playsound entity.warden.sonic_charge master @s ^ ^1 ^1 0.4 2 0.4
+    execute if score @s aj.lance_biim_1.frame matches 33..48 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound entity.warden.sonic_charge master @s ^ ^1 ^5 1 1.7 0.4
+    execute if score @s aj.lance_biim_1.frame matches 49..55 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound entity.warden.sonic_charge master @s ^ ^1 ^5 1 2 0.4
 
 # 演出
     execute if score @s aj.lance_biim_1.frame matches 2..63 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/particle_1

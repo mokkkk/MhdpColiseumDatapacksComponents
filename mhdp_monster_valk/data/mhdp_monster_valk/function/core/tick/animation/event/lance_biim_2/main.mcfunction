@@ -37,6 +37,7 @@
     execute if score @s aj.lance_biim_2.frame matches 2..7 at @a[tag=!Ply.State.IsSilent,distance=..96] facing entity @s feet as @p run playsound entity.phantom.death master @s ^ ^1 ^1 0.5 0.5 0.5
     execute if score @s aj.lance_biim_2.frame matches 10..66 at @a[tag=!Ply.State.IsSilent,distance=..96] facing entity @s feet as @p run playsound entity.warden.listening master @s ^ ^1 ^1 0.5 0.5 0.5
     execute if score @s aj.lance_biim_2.frame matches 10..66 at @a[tag=!Ply.State.IsSilent,distance=..96] facing entity @s feet as @p run playsound entity.phantom.death master @s ^ ^1 ^1 0.3 0.6 0.3
+    execute if score @s aj.lance_biim_2.frame matches 10..66 at @a[tag=!Ply.State.IsSilent,distance=..96] facing entity @s feet as @p run playsound entity.phantom.death master @s ^ ^1 ^1 0.3 0.5 0.3
     execute if score @s aj.lance_biim_2.frame matches 10..66 at @a[tag=!Ply.State.IsSilent,distance=..96] facing entity @s feet as @p run playsound entity.ghast.shoot master @s ^ ^1 ^1 0.3 0.5 0.5
     execute if score @s aj.lance_biim_2.frame matches 10..12 at @a[tag=!Ply.State.IsSilent,distance=..96] facing entity @s feet as @p run playsound entity.bee.hurt master @s ^ ^1 ^1 0.3 0.5 0.5
     execute if score @s aj.lance_biim_2.frame matches 65..70 at @a[tag=!Ply.State.IsSilent,distance=..96] facing entity @s feet as @p run playsound entity.ghast.shoot master @s ^ ^1 ^1 0.3 0.5 0.5
