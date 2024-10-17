@@ -15,3 +15,6 @@
 
 # attribute消去
     # なし
+
+# 演出
+    playsound item.armor.equip_chain master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1

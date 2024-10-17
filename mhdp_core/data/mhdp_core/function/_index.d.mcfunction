@@ -66,6 +66,7 @@
             #declare tag Ply.Ope.DroppedEnderEye エンダーアイ投げ捨て
         # ニンジン棒
             #declare tag Ply.Ope.StartUsingCoas ニンジン棒使用
+            #declare tag Ply.Ope.DroppedCoas ニンジン棒投げ捨て
         # ジャンプ
             #declare tag Ply.Ope.StartJump ジャンプ開始
         # ダッシュ

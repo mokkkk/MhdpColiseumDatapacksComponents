@@ -21,6 +21,8 @@
     # 操作
         # ニンジン棒使用回数
             scoreboard objectives add Ply.Ope.UsedCoas minecraft.used:carrot_on_a_stick
+        # ニンジン棒投げ捨て回数
+            scoreboard objectives add Ply.Ope.DropCoas dropped:carrot_on_a_stick
         # ジャンプ回数
             scoreboard objectives add Ply.Ope.Jump minecraft.custom:minecraft.jump
         # エンダーアイ投げ捨て回数
