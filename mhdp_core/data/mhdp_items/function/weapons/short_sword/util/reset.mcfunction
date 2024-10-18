@@ -19,5 +19,5 @@
 # ステータス削除
     attribute @s generic.attack_speed modifier remove mhdp_core:weapon_attack
     attribute @s generic.movement_speed modifier remove mhdp_core:weapon_movement_speed
-    attribute @s generic.movement_speed modifier remove mhdp_core:weapon_jump_strength
+    attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
     attribute @s generic.attack_damage modifier remove mhdp_core:weapon_attack_damage
