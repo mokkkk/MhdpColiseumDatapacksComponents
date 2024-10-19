@@ -57,8 +57,8 @@
 # チーム解除
     team leave @s
 
-# Beta版：アイテム消去
-    execute if data storage mhdp_core:game_data {IsBetaVersion:true} run clear @s
+# Beta版処理
+    execute if data storage mhdp_core:game_data {IsBetaVersion:true} run function mhdp_core:beta/phase/3_quest/end
 
 # 連番解除
     scoreboard players reset @s QuestSerialId
