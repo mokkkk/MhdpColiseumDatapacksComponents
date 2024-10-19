@@ -12,4 +12,4 @@
     attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
     attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -1 add_value
 
-say 片手剣 水平斬りコンボ1
+# say 武器操作：片手剣 水平斬りコンボ1

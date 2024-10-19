@@ -21,4 +21,4 @@
 # ゲージ消費
     scoreboard players remove @s Wpn.Bw.Gauge 100
 
-say 弓 ビン装填
+# say 武器操作：弓 ビン装填

@@ -32,4 +32,4 @@
 # 跳ねる
     function mhdp_items:weapons/bow/type_normal/10_flying_shot/start_move
 
-say 弓・飛翔睨み撃ち
+# say 武器操作：弓・飛翔睨み撃ち

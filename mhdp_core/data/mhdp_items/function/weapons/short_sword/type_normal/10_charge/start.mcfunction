@@ -15,4 +15,4 @@
     scoreboard players set @s Wpn.Ss.ChargeTimer 0
     scoreboard players set @s Wpn.Ss.ChargeCount 0
 
-say 片手剣 溜め
+# say 武器操作：片手剣 溜め

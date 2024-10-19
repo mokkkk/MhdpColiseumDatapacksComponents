@@ -106,4 +106,4 @@
     }
     function mhdp_monster_dino:core/init/init_attack_data
 
-say 斬竜 init monster data
+# say モンスター処理：斬竜 init monster data

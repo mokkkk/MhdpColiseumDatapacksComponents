@@ -16,4 +16,4 @@
 # モデル消去
     function animated_java:dino_aj/remove/this
 
-say 斬竜消去処理
+# say モンスター処理：斬竜消去処理

@@ -92,4 +92,4 @@
     }
     function mhdp_monster_reus:core/init/init_attack_data
 
-say 火竜 init monster data
+# say モンスター処理：火竜 init monster data

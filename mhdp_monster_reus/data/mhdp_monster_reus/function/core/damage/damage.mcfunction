@@ -82,4 +82,4 @@
     tag @s remove Mns.Temp.Damage.LegR
     tag @s remove Mns.Temp.Damage.LegL
 
-say 火竜被ダメージ
+# say モンスター処理：火竜被ダメージ

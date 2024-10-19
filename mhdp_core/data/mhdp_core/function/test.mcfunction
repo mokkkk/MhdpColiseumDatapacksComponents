@@ -1,6 +1,6 @@
-say a
-say b
-say c
-return run say d
-say e
-say f
+# say a
+# say b
+# say c
+# return run say d
+# say e
+# say f

@@ -13,4 +13,4 @@
 # モデル消去
     function animated_java:ranposu_aj/remove/this
 
-say ドスランポス消去処理
+# say モンスター処理：ドスランポス消去処理

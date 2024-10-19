@@ -66,4 +66,4 @@
     tag @s remove Mns.Temp.Damage.Head
     tag @s remove Mns.Temp.Damage.Body
 
-say 青鳥竜被ダメージ
+# say モンスター処理：青鳥竜被ダメージ

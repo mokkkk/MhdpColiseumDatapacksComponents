@@ -21,4 +21,4 @@
     scoreboard players set @s Wpn.Bw.ChargeTimer 0
     scoreboard players set @s Wpn.Bw.ChargeCount 0
 
-say 弓・溜め
+# say 武器操作：弓・溜め

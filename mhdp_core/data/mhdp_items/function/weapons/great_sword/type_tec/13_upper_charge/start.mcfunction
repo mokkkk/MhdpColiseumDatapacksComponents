@@ -16,4 +16,4 @@
     scoreboard players set @s Wpn.Gs.ChargeTimer 0
     scoreboard players set @s Wpn.Gs.ChargeCount 0
 
-say 大剣・相殺斬り上げ・溜め
+# say 武器操作：大剣・相殺斬り上げ・溜め

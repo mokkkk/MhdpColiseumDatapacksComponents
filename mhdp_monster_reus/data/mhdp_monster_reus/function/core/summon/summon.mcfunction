@@ -19,4 +19,4 @@
 # Rootエンティティ対象に初期化処理を実行
     execute as @e[type=item_display,tag=Mns.Root.Reus] at @s run function mhdp_monster_reus:core/summon/summon_init
 
-say 火竜召喚処理
+# say モンスター処理：火竜召喚処理

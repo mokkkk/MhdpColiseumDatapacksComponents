@@ -73,4 +73,4 @@
     }
     function mhdp_monster_ranposu:core/init/init_attack_data
 
-say 青鳥竜 init monster data
+# say モンスター処理：青鳥竜 init monster data
