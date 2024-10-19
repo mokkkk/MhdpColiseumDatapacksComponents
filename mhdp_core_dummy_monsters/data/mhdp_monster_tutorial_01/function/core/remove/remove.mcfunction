@@ -5,7 +5,7 @@
 # @within function 
 
 # 弾消去
-    kill @e[tag=Mns.Shot.tutorial_01]
+    kill @e[tag=Mns.Shot.Tutorial01]
 
 # 当たり判定を消去
     # なし
@@ -14,6 +14,6 @@
     # なし
 
 # モデル消去
-    # なし
+    kill @s
 
 say チュートリアル01消去処理
