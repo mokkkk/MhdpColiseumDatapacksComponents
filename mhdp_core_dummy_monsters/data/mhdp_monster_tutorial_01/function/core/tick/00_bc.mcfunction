@@ -1,8 +1,12 @@
-#> mhdp_monster_tutorial_01:core/tick/0_bc/main
+#> mhdp_monster_tutorial_01:core/tick/00_bc
 #
 # tick処理
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
+
+# 柵設置
+    execute if score @s Mns.General.DummyTimer matches 2 run fill 202 66 142 202 68 144 oak_fence keep
+    execute if score @s Mns.General.DummyTimer matches 260 run fill 202 66 142 202 68 144 air replace oak_fence
 
 # モンスターの行動無効、無敵化
     execute if score @s Mns.General.DummyTimer matches 10 run tag @n[tag=Mns.Root.Ranposu] add Mns.State.IsNotMove
@@ -27,7 +31,6 @@
         {"text":"  武器を使うためには、ホットバーに空きスロットが必要です。\n","color": "#00FFC3","bold": false},\
         {"text":"  1つ以上の空きスロットを作ってから移動してください","color": "#ff9900","bold": true},{"text":"。\n","color": "#00FFC3","bold": false}\
     ]
-
 
 # 遷移：誰かがフィールドに移動した時
     execute if entity @a[tag=Ply.State.PlayingQuest,tag=Ply.State.MnsTarget] if score @s Mns.General.DummyTimer matches 260.. run function mhdp_monster_tutorial_01:core/tick/change_phase

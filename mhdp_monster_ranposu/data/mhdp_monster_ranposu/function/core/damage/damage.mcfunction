@@ -26,6 +26,9 @@
     # 討伐時、処理を中断
         execute if entity @s[tag=Mns.State.Death] run return 0
     
+# チュートリアル
+    execute if entity @s[tag=Mns.State.Tutorial.IsDamage] run tag @s remove Mns.State.Tutorial.IsDamage
+
 # 部位ダメージの減算
     # 頭
         execute if score #mhdp_temp_target_part_id MhdpCore matches 0 run scoreboard players operation @s Mns.Ranposu.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore

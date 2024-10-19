@@ -1,4 +1,4 @@
-#> mhdp_monster_tutorial_01:core/tick/0_bc/main
+#> mhdp_monster_tutorial_01:core/tick/01_ui
 #
 # tick処理
 #
@@ -51,10 +51,10 @@
     execute if score @s Mns.General.DummyTimer matches 560 run tellraw @a[tag=Ply.State.PlayingQuest] [\
         {"text":"\n【 チュートリアル：画面表示・スタミナ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  ジャンプやダッシュなどの行動をとると、スタミナを消費します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  スタミナが尽きると、","color": "#00FFC3","bold": false},{"text":"ダッシュやジャンプができなくなります","color": "#ff9900","bold": true},{"text":"。\n","color": "#00FFC3","bold": false},\
+        {"text":"  スタミナが尽きると、","color": "#00FFC3","bold": false},{"text":"ジャンプおよびダッシュができなくなります","color": "#ff9900","bold": true},{"text":"。\n","color": "#00FFC3","bold": false},\
         {"text":"  スタミナは時間で自然に回復します。\n","color": "#00FFC3","bold": false},\
         {"text":"  スタミナが減ったら攻撃の手を止め、回復に専念しましょう。\n","color": "#00FFC3","bold": false}\
     ]
 
 # 遷移：一定時間経過後
-    # execute if score @s Mns.General.DummyTimer matches 460.. run function mhdp_monster_tutorial_01:core/tick/change_phase
+    execute if score @s Mns.General.DummyTimer matches 660.. run function mhdp_monster_tutorial_01:core/tick/change_phase
