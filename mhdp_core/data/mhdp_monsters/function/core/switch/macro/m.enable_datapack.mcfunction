@@ -7,4 +7,4 @@
 # 対象のモンスターのデータパックをロード
     $datapack enable "file/mhdp_monster_$(Prefix)"
 
-say enable_datapack.macro
+# say モンスター共通：enable_datapack.macro

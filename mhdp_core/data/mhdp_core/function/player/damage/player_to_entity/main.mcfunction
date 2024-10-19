@@ -135,9 +135,9 @@
     # 総ダメージ
         scoreboard players operation #mhdp_temp_damage_total MhdpCore += #mhdp_temp_damage_element_value MhdpCore
 
-    tellraw @a [{"text":"物理ダメージ:"},{"score":{"name":"#mhdp_temp_damage_phys_value","objective":"MhdpCore"}}]
-    tellraw @a [{"text":"属性ダメージ:"},{"score":{"name":"#mhdp_temp_damage_element_value","objective":"MhdpCore"}}]
-    tellraw @a [{"text":"ダメージ合計:"},{"score":{"name":"#mhdp_temp_damage_total","objective":"MhdpCore"}}]
+    # tellraw @a [{"text":"DEBUG:物理ダメージ:"},{"score":{"name":"#mhdp_temp_damage_phys_value","objective":"MhdpCore"}}]
+    # tellraw @a [{"text":"DEBUG:属性ダメージ:"},{"score":{"name":"#mhdp_temp_damage_element_value","objective":"MhdpCore"}}]
+    # tellraw @a [{"text":"DEBUG:ダメージ合計:"},{"score":{"name":"#mhdp_temp_damage_total","objective":"MhdpCore"}}]
 
 # 演出
     execute positioned as @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] run function mhdp_core:player/damage/player_to_entity/vfx

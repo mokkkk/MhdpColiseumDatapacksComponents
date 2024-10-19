@@ -58,6 +58,8 @@
     #declare tag Mns.State.IsDisableAngerSpeed 怒り状態の高速化無効
     #declare tag Mns.State.IsDisableDeath 討伐無効
     #declare tag Mns.State.IsDisablePartDamage 部位ダメージ無効
+    #declare tag Mns.State.IsNotMove 攻撃しない
+    #declare tag Mns.State.IsDisableDamage ダメージ無効
 # 当たり判定関連(Slime)
     #declare tag Mns.HitBox モンスターの当たり判定の共通タグ
     #declare tag Mns.HitBox.Init 初期化処理済みの当たり判定

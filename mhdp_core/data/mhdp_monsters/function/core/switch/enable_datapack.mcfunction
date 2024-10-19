@@ -10,4 +10,4 @@
     data remove storage mhdp_core:temp Temp
     data remove storage mhdp_core:temp Arg
 
-say enable_datapack
+# say モンスター共通：enable_datapack

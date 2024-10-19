@@ -5,6 +5,7 @@
 # @within function 
 
 # 弾消去
+    tp @e[tag=Mns.Shot.Tutorial01] ~ ~100 ~
     kill @e[tag=Mns.Shot.Tutorial01]
 
 # 当たり判定を消去

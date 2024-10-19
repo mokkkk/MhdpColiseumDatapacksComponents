@@ -33,7 +33,7 @@
     execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.ActCount.Idle matches 18.. run return run function mhdp_monsters:core/util/tick/skip
 
 # アニメーション選択
-    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn] if entity @e[tag=Mns.Target.Valk] run function mhdp_monster_valk:core/tick/animation/change/random/main
+    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn,tag=!Mns.State.IsNotMove] if entity @e[tag=Mns.Target.Valk] run function mhdp_monster_valk:core/tick/animation/change/random/main
 
 # 軸合わせアニメーション再生
     execute if entity @s[tag=Mns.Temp.IsTurn] store result score #mhdp_temp_result MhdpCore run function mhdp_monster_valk:core/tick/animation/change/play/turn

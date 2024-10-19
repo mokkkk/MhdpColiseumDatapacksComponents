@@ -5,7 +5,7 @@
 # @within function mhdp_items:core/switch/macro/m.drawing
 
 # TODO: 武器の初期化処理
-    say TODO:片手剣抜刀処理
+    # say TODO:片手剣抜刀処理
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0

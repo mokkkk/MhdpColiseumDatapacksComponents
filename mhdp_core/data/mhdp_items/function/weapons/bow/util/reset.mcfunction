@@ -5,7 +5,7 @@
 # @within function mhdp_items:core/switch/macro/m.reset
 
 # TODO: 武器のリセット処理
-    say TODO:弓リセット処理
+    # say TODO:弓リセット処理
 
 # 割り込み処理
     function mhdp_items:weapons/bow/util/interrupt
