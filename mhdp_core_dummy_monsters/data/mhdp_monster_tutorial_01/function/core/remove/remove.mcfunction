@@ -1,19 +1,19 @@
-#> mhdp_monster_dino:core/remove/remove
+#> mhdp_monster_tutorial_01:core/remove/remove
 #
 # 消去処理を行う
 #
 # @within function 
 
 # 弾消去
-    kill @e[tag=Mns.Shot.Dino]
+    kill @e[tag=Mns.Shot.tutorial_01]
 
 # 当たり判定を消去
-    execute as @e[type=slime,tag=Mns.HitBox.Dino] run function mhdp_monsters:core/util/other/remove_hitbox
+    # なし
 
 # ボスバー消去
-    bossbar remove mhdp_monster:dino
+    # なし
 
 # モデル消去
-    function animated_java:dino_aj/remove/this
+    # なし
 
-say 斬竜消去処理
+say チュートリアル01消去処理

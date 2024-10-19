@@ -13,12 +13,12 @@
     execute if data storage mhdp_core:monster_data MonsterData[{Uid:9001}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:9001}]
     data modify storage mhdp_core:monster_data MonsterData append value {\
         Uid:9001,\
-        Icon:"uE013",\
+        Icon:"NONE",\
         Name:"tutorial_01",\
         UpperName:"Tutorial01",\
         JpName:"チュートリアル01",\
         ShowName:'{"text":"チュートリアル01"}',\
-        LootTable:"mhdp_items:materials/dino",\
+        LootTable:"mhdp_items:materials/tutorial_01",\
         ShowHp:true,\
         Hp:10000,\
         StunDamage:0,\
@@ -58,6 +58,6 @@
     #     Uid:9001,\
     #     Attacks:[]\
     # }
-    # function mhdp_monster_dino:core/init/init_attack_data
+    # function mhdp_monster_tutorial_01:core/init/init_attack_data
 
 say チュートリアル01 init monster data

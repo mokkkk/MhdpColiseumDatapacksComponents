@@ -28,6 +28,9 @@
             scoreboard objectives add Mns.General.BlinkTimer dummy
         # 討伐後の消滅時間
             scoreboard objectives add Mns.General.RemoveTimer dummy
+        # メイン処理用(Dummy)
+            scoreboard objectives add Mns.General.DummyTimer dummy
+            scoreboard objectives add Mns.General.DummyCounter dummy
     # パラメータ系
         # 実体力
             scoreboard objectives add Mns.Hp dummy

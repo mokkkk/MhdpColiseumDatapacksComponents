@@ -1,4 +1,4 @@
-#> mhdp_monster_dino:core/death/death
+#> mhdp_monster_tutorial_01:core/death/death
 #
 # 死亡時の処理
 #
@@ -6,17 +6,15 @@
 
 # 状態更新
     tag @s add Mns.State.Death
-    tag @s remove Mns.State.IsAnger
 
 # アニメーション再生
-    execute if entity @s[tag=!Mns.State.IsFlying] run function animated_java:dino_aj/animations/death/tween {duration:1, to_frame: 0}
-    execute if entity @s[tag=Mns.State.IsFlying] run function mhdp_monsters:core/util/damage/death_flying
+    # なし
 
 # 当たり判定を消去
-    execute as @e[type=slime,tag=Mns.HitBox.Dino] run function mhdp_monsters:core/util/other/remove_hitbox
+    # なし
 
 # ボスバー消去
-    bossbar remove mhdp_monster:dino
+    # なし
 
 # クエストの死亡時処理を呼び出す
     execute store result storage mhdp_core:temp Arg.MonsterUid int 1 run scoreboard players get @s Mns.Uid
