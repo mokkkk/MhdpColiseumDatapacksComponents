@@ -14,3 +14,6 @@
 
 # attribute初期化
     # 無し
+
+# 防具消去
+    clear @s *[custom_data~{Immovable:1b}]

@@ -27,6 +27,9 @@
 # 演出
     playsound item.armor.equip_chain master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1
 
+# 防具消去
+    clear @s *[custom_data~{Immovable:1b}]
+
 # 終了
     scoreboard players reset #mhdp_temp_usetime MhdpCore
     scoreboard players reset #mhdp_temp_usetime_max MhdpCore
