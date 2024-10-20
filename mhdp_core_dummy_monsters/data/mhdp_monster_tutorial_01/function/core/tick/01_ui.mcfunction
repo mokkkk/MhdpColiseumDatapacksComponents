@@ -47,8 +47,8 @@
         {"text":"\n\n  これは ","color": "#00FFC3","bold": false},{"text":"スタミナゲージ","color": "#ff9900","bold": true},{"text":" です。\n","color": "#00FFC3","bold": false}\
     ]
     
-    execute if score @s Mns.General.DummyTimer matches 560 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
-    execute if score @s Mns.General.DummyTimer matches 560 run tellraw @a[tag=Ply.State.PlayingQuest] [\
+    execute if score @s Mns.General.DummyTimer matches 660 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
+    execute if score @s Mns.General.DummyTimer matches 660 run tellraw @a[tag=Ply.State.PlayingQuest] [\
         {"text":"\n【 チュートリアル：画面表示・スタミナ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  ジャンプやダッシュなどの行動をとると、スタミナを消費します。\n","color": "#00FFC3","bold": false},\
         {"text":"  スタミナが尽きると、","color": "#00FFC3","bold": false},{"text":"ジャンプおよびダッシュができなくなります","color": "#ff9900","bold": true},{"text":"。\n","color": "#00FFC3","bold": false},\
@@ -57,4 +57,4 @@
     ]
 
 # 遷移：一定時間経過後
-    execute if score @s Mns.General.DummyTimer matches 660.. run function mhdp_monster_tutorial_01:core/tick/change_phase
+    execute if score @s Mns.General.DummyTimer matches 800.. run function mhdp_monster_tutorial_01:core/tick/change_phase

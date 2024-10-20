@@ -27,12 +27,26 @@
     execute if score @s Mns.General.DummyCounter matches 4 run function mhdp_monster_tutorial_01:core/tick/04_weapon_base_attack
 
 # ガードと回避
+# モンスターの攻撃のダメージは大きいので、できれば避ける
+# 攻撃をガード、回避成功できるまで待つ
+    execute if score @s Mns.General.DummyCounter matches 5 run function mhdp_monster_tutorial_01:core/tick/05_monster_attack
+    execute if score @s Mns.General.DummyCounter matches 6 run function mhdp_monster_tutorial_01:core/tick/06_monster_attack_guard
 
 # モンスターの部位と部位破壊
+# モンスターの部位ごとに与えられるダメージが違う
+# 頭を集中して攻撃すると破壊できる
+# 一部モンスターは、部位破壊することで有利に戦える
+
 # 怒り状態
+# 怒り状態は非常に危険
+# 回避に専念しても良い
+
 # アイテムと特殊装具(翔蟲)
+# アイテムの効果は説明文に書かれている
+# 特殊装具のUI例と、鉄蟲糸技の使い方
 
 # 本番
+
 # 剥ぎ取り
 
 # 終了
