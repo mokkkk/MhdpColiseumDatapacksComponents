@@ -14,3 +14,6 @@
     summon interaction 225 64 200 {width:1.5f,height:2f,Tags:["Other.Interaction.UI","Other.Interaction.Board"],response:1b}
     summon interaction 226 64 200 {width:1.5f,height:2f,Tags:["Other.Interaction.UI","Other.Interaction.Board"],response:1b}
     summon interaction 227 64 200 {width:1.5f,height:2f,Tags:["Other.Interaction.UI","Other.Interaction.Board"],response:1b}
+
+# クエスト受注書
+    execute unless block 241 64 215 lectern run setblock 241 64 215 lectern[facing=north,has_book=true] replace

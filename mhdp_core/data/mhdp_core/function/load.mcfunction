@@ -53,6 +53,10 @@
         # 参加したクエストの連番ID
             scoreboard objectives add Ply.Other.QuestSerialId dummy
 
+# 村人関連
+    # タイマー
+        scoreboard objectives add Vlg.General.Timer dummy
+
 # モンスター関連
     # UID
         scoreboard objectives add Mns.Uid dummy

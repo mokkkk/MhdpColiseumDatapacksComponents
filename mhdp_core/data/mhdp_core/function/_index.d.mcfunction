@@ -102,6 +102,11 @@
             #declare tag Ply.Temp.Error.DuplicateSpItems 同じ種類の特殊装具を2つ以上持っているエラー
     # チュートリアル
         #declare tag Ply.Temp.Tutorial.Avoid 回避チュートリアル
+# 村人
+    # 処理用
+        #declare tag Vlg.Root 村人の共通タグ
+    # 村人
+        #declare tag Vlg.VillageTutorial 村チュートリアル再生用
 # マーカー
     # 処理用
         #declare tag Mk.Field.Center フィールドの中心に設置されるマーカー
@@ -120,6 +125,7 @@
         #declare tag Other.Text.Vfx エフェクト表示用共通のテキストディスプレイ
         #declare tag Other.Text.Vfx.Strong エフェクト表示・強撃
         #declare tag Other.Text.Vfx.Slash 斬撃エフェクト
+        #declare tag Other.Text.Tutorial チュートリアル再生用のテキスト
     # 一時
         #declare tag Other.Temp.Right 左右確認に一時的に使用、必ず同function内でリセットする
     # 射撃

@@ -7,6 +7,12 @@
 # 初期化
     kill @e[tag=Beta.Ui]
 
+# 村チュートリアル再生用
+    summon text_display 259 65 202 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial"],text:'{"bold":true,"color":"white","text":"[チュートリアル再生]"}',alignment:"center"}
+    summon text_display 259 64.6 202 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
+    summon interaction 259 63 202 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial"],response:1b}
+    summon item_display 259 64 202 {item:{id:"minecraft:bell",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial"],billboard:"vertical"}
+
 # Text
     summon text_display 234 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Ss.Normal"],text:'{"bold":true,"color":"#FF8282","text":"[片手剣・地ノ型]"}',alignment:"center"}
     summon text_display 238 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Gs.Normal"],text:'{"bold":true,"color":"#FF8282","text":"[大剣・地ノ型]"}',alignment:"center"}
@@ -26,7 +32,7 @@
     setblock 236 63 199 oak_slab replace
     setblock 238 63 199 lectern[facing=south,has_book=true]{Book:{id:"minecraft:written_book",count:1,components:{"minecraft:written_book_content":{title:"",author:"",pages:['[{"text":"大剣・地ノ型\\n\\n難易度：","color":"black"},{"text":"★★","color":"gold"},{"text":"★★","color":"dark_gray"},{"text":"\\n\\n特徴：\\n　動作は遅いが、威力の高い一撃を放つ。最大まで溜めて放つ溜め斬りは、トップクラスの威力を誇る。\\n　ガード可能で、一撃離脱の戦い方を得意とする。","color":"black"}]']}}}} replace
     setblock 240 63 199 oak_slab replace
-    setblock 242 63 199 lectern[facing=south,has_book=true]{Book:{id:"minecraft:written_book",count:1,components:{"minecraft:written_book_content":{title:"",author:"",pages:['[{"text":"弓・地ノ型\\n\\n難易度：","color":"black"},{"text":"★★","color":"gold"},{"text":"★★","color":"dark_gray"},{"text":"\\n\\n特徴：\\n　遠距離攻撃ができる。適正距離を保つことで、高いダメージを与えられる。\\n　防御力が下がるため、攻撃に当たらない立ち回りが必要。","color":"black"}]']}}}} replace
+    setblock 242 63 199 lectern[facing=south,has_book=true]{Book:{id:"minecraft:written_book",count:1,components:{"minecraft:written_book_content":{title:"",author:"",pages:['[{"text":"弓・地ノ型\\n\\n難易度：","color":"black"},{"text":"★★","color":"gold"},{"text":"★★","color":"dark_gray"},{"text":"\\n\\n特徴：\\n　マインクラフト標準の弓に似た感覚で操作できる。適正距離を保つことで、高いダメージを与えられる。\\n　防御力が下がるため、攻撃に当たらない立ち回りが必要。","color":"black"}]']}}}} replace
     setblock 244 63 199 oak_slab replace
 
 # チュートリアルクリア後、天の型解放

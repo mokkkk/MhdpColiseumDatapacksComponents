@@ -14,3 +14,6 @@
     data modify storage mhdp_core:game_data QuestList[{ID:12}].State.Visible set value true
     data modify storage mhdp_core:game_data QuestList[{ID:13}].State.Visible set value true
     data modify storage mhdp_core:game_data QuestList[{ID:14}].State.Visible set value true
+
+# 通知
+    tellraw @a {"text":"\n\n【天ノ型が選択できるようになりました】","color": "gold"}
