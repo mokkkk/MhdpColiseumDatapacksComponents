@@ -62,6 +62,7 @@
     #declare tag Mns.State.IsDisableDamage ダメージ無効
 # モンスター関連・チュートリアル用
     #declare tag Mns.State.Tutorial.IsDamage ダメージを受けた
+    #declare tag Mns.State.Tutorial.IsBroken 部位破壊された
 # 当たり判定関連(Slime)
     #declare tag Mns.HitBox モンスターの当たり判定の共通タグ
     #declare tag Mns.HitBox.Init 初期化処理済みの当たり判定

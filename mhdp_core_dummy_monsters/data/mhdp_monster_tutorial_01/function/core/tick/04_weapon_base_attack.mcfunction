@@ -20,11 +20,11 @@
     execute if score @s Mns.General.DummyTimer matches 260 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Mns.General.DummyTimer matches 260 run tellraw @a[tag=Ply.State.PlayingQuest] [\
         {"text":"\n【 チュートリアル：武器の操作 攻撃 ","color":"#00FFC3","bold": true},{"text":"2/4","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text": "  ","color": "#00FFC3","bold": false},{"text":"地の型","color": "#ff9900","bold": true},{"text": " の場合、スニークせずに マウス","color": "#00FFC3","bold": false},{"keybind":"key.use","color": "#00FFC3","bold": false},{"text":" を長押しすることで、\n","color": "#00FFC3","bold": false},\
+        {"text": "  ","color": "#00FFC3","bold": false},{"text":"地ノ型","color": "#ff9900","bold": true},{"text": " の場合、スニークせずに マウス","color": "#00FFC3","bold": false},{"keybind":"key.use","color": "#00FFC3","bold": false},{"text":" を長押しすることで、\n","color": "#00FFC3","bold": false},\
         {"text":"  隙の少ない通常攻撃を出すことができます。\n","color": "#00FFC3","bold": false}\
     ]
 
-    execute if score @s Mns.General.DummyTimer matches 350 run tag @n[tag=Mns.Root.Ranposu] add Mns.State.Tutorial.IsDamage
+    execute if score @s Mns.General.DummyTimer matches 260 run tag @n[tag=Mns.Root.Ranposu] add Mns.State.Tutorial.IsDamage
     execute if entity @n[tag=Mns.Root.Ranposu,tag=Mns.State.Tutorial.IsDamage] if score @s Mns.General.DummyTimer matches 400..410 run scoreboard players remove @s Mns.General.DummyTimer 1
 
     execute if score @s Mns.General.DummyTimer matches 460 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
@@ -36,11 +36,13 @@
         {"text":"  基本的に、長時間溜めるほど攻撃の威力が高くなります。\n","color": "#00FFC3","bold": false}\
     ]
 
+    execute if score @s Mns.General.DummyTimer matches 660 run tag @n[tag=Mns.Root.Ranposu] add Mns.State.Tutorial.IsDamage
     execute if score @s Mns.General.DummyTimer matches 660 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Mns.General.DummyTimer matches 660 run tellraw @a[tag=Ply.State.PlayingQuest] [\
         {"text":"\n【 チュートリアル：武器の操作 攻撃 ","color":"#00FFC3","bold": true},{"text":"4/4","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  スニークしながら マウス","color": "#00FFC3","bold": false},{"keybind":"key.use","color": "#00FFC3","bold": false},{"text":" を長押しすることで、\n","color": "#00FFC3","bold": false},\
-        {"text":"  隙が大きい代わりに威力が高い ","color": "#00FFC3","bold": false},{"text":"強攻撃","color": "#ff9900","bold": true},{"text":" を出すことができます。\n","color": "#00FFC3","bold": false}\
+        {"text":"  隙が大きい代わりに威力が高い ","color": "#00FFC3","bold": false},{"text":"強攻撃","color": "#ff9900","bold": true},{"text":" を出すことができます。\n","color": "#00FFC3","bold": false},\
+        {"text":"  モンスターの転倒時など、大きな隙を狙って強攻撃を当てましょう。\n","color": "#00FFC3","bold": false}\
     ]
 
 # 遷移：攻撃後

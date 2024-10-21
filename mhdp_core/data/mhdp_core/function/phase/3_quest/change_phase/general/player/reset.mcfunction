@@ -34,6 +34,8 @@
         tag @s remove Ply.Weapon.Drawing.Sub
     # スキル関連
         tag @s remove Ply.State.IsUsedGuts
+    # チュートリアル関連    
+        tag @s remove Ply.Temp.Tutorial.Avoid
 
 # ターゲットタグの消去
     function mhdp_monsters:core/util/other/remove_target_tag

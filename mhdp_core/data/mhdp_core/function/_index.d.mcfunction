@@ -100,6 +100,8 @@
             #declare tag Ply.Temp.Error.HasNotWeaponOffhand オフハンドに武器を持っていないエラー
             #declare tag Ply.Temp.Error.HasManySpItems 特殊装具を3つ以上持っているエラー
             #declare tag Ply.Temp.Error.DuplicateSpItems 同じ種類の特殊装具を2つ以上持っているエラー
+    # チュートリアル
+        #declare tag Ply.Temp.Tutorial.Avoid 回避チュートリアル
 # マーカー
     # 処理用
         #declare tag Mk.Field.Center フィールドの中心に設置されるマーカー

@@ -6,6 +6,7 @@
 
 # 部位破壊処理
     execute if entity @s[tag=!Mns.Break.Head] run function mhdp_monster_ranposu:core/damage/reaction/head_break
+    tag @s remove Mns.State.Tutorial.IsBroken
 
 # 共通処理
     # スコアリセット
