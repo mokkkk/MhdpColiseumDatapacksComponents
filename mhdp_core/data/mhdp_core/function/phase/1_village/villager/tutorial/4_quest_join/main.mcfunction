@@ -13,5 +13,5 @@
         {"text":"  マルチプレイの場合、このボードを右クリックすると、\n","color": "#00FFC3","bold": false},\
         {"text":"  受注されているクエストに参加することができます。\n","color": "#00FFC3","bold": false},\
         {"text":"  クエストに参加した人の頭上には、\n","color": "#00FFC3","bold": false},\
-        {"text":"  半券マーク ","color": "#00FFC3","bold": false},{"text":"b","font":"icons/mhdp_icons","color": "white","bold": false},{"text":" が表示されます。\n","color": "#00FFC3","bold": false}\
+        {"text":"  半券マーク","color": "#00FFC3","bold": false},{"text":"b","font":"icons/mhdp_icons","color": "white","bold": false},{"text":" が表示されます。\n","color": "#00FFC3","bold": false}\
     ]

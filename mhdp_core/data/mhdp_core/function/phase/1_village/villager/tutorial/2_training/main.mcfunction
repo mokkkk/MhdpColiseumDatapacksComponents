@@ -12,5 +12,6 @@
         {"text":"\n【 チュートリアル：訓練所 ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  この箇所から、訓練所に移動することができます。\n","color": "#00FFC3","bold": false},\
         {"text":"  訓練所は、チュートリアルクエストのクリア後に解禁されます。\n","color": "#00FFC3","bold": false},\
+        {"text":"  また、訓練所を利用するには武器を選択している必要があります。\n","color": "#00FFC3","bold": false},\
         {"text":"  武器の動作を練習したいときに利用してください。\n","color": "#00FFC3","bold": false}\
     ]
