@@ -4,12 +4,6 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
-# # test
-#     scoreboard players add @s Mns.General.DummyTimer 1
-#     execute if score @s Mns.General.DummyTimer matches 2 run say チュートリアルです
-#     execute if score @s Mns.General.DummyTimer matches 62 run say さようなら
-#     execute if score @s Mns.General.DummyTimer matches 122 run function mhdp_monster_tutorial_01:core/death/death
-
 # タイマー増加
     scoreboard players add @s Mns.General.DummyTimer 1
 
