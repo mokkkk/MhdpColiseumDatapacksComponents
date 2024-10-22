@@ -12,5 +12,8 @@
         {"text":"  武器の抜刀ができます。\n","color": "#00FFC3","bold": false}\
     ]
 
+# スコア設定
+    # scoreboard players set @s Mns.Tutorial.Text 0
+
 # 遷移：武器抜刀後
     execute if entity @a[tag=Ply.Weapon.Drawing] if score @s Mns.General.DummyTimer matches 60.. run function mhdp_monster_tutorial_01:core/tick/change_phase

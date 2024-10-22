@@ -62,6 +62,8 @@
         scoreboard objectives add Mns.Uid dummy
     # その他EntityのUuid
         scoreboard objectives add Entity.Uuid dummy
+    # チュートリアル用
+        scoreboard objectives add Mns.Tutorial.Text dummy {"text":""}
 
 ## Scoreboard初期値設定
 # プレイヤーUID
@@ -91,6 +93,7 @@
     team add Team.QuestMember
     team add Team.QuestPlaying
     team add Team.NoCollision
+    team modify Team.QuestPlaying color gray
     team modify Team.QuestHost prefix [{"text":"a","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.QuestMember prefix [{"text":"b","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.QuestPlaying prefix [{"text":"c","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]

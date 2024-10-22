@@ -24,7 +24,7 @@
         ]}\
     }
 
-# テスト用
+# 初級：青鳥竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:10,Name:"初級：青鳥竜の狩猟",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
@@ -33,7 +33,7 @@
         ]}\
     }
 
-# テスト用
+# 中級：火竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:11,Name:"中級：火竜の狩猟",Level:2,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
@@ -42,7 +42,7 @@
         ]}\
     }
 
-# テスト用
+# 上級：斬竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:12,Name:"上級：斬竜の狩猟",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
@@ -51,7 +51,7 @@
         ]}\
     }
 
-# テスト用
+# 超上級：天彗龍の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:13,Name:"超上級：???の狩猟",Level:4,Pos:0,IsEmergency:false,HideMonsters:true,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
@@ -60,7 +60,7 @@
         ]}\
     }
 
-# テスト用
+# 初級：青鳥竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:14,Name:"初級：青鳥竜の狩猟(高難度)",Level:4,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
@@ -69,7 +69,7 @@
         ]}\
     }
 
-# テスト用
+# 中級：火竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:15,Name:"中級：火竜の狩猟(高難度)",Level:5,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
@@ -78,7 +78,7 @@
         ]}\
     }
 
-# テスト用
+# 上級：斬竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:16,Name:"上級：斬竜の狩猟(高難度)",Level:6,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
@@ -87,7 +87,7 @@
         ]}\
     }
 
-# テスト用
+# 超上級：天彗龍の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:17,Name:"超上級：???の狩猟(高難度)",Level:7,Pos:0,IsEmergency:false,HideMonsters:true,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\

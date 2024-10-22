@@ -7,6 +7,9 @@
 # 弾消去
     tp @e[tag=Mns.Shot.Tutorial01] ~ ~100 ~
     kill @e[tag=Mns.Shot.Tutorial01]
+    scoreboard objectives setdisplay sidebar.team.gray
+    scoreboard players reset $mhdp_temp_tutorial_text Mns.Tutorial.Text
+    scoreboard players reset $mhdp_temp_tutorial_value Mns.Tutorial.Text
 
 # 当たり判定を消去
     # なし

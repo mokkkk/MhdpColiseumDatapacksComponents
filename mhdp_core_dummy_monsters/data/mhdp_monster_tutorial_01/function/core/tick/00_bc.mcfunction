@@ -32,5 +32,14 @@
         {"text":"  1つ以上の空きスロットを作ってから移動してください","color": "#ff9900","bold": true},{"text":"。\n","color": "#00FFC3","bold": false}\
     ]
 
+# スコアボード設定
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard objectives setdisplay sidebar.team.gray Mns.Tutorial.Text
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players set $mhdp_temp_tutorial_text Mns.Tutorial.Text 0
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players set $mhdp_temp_tutorial_value Mns.Tutorial.Text 0
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display name $mhdp_temp_tutorial_text Mns.Tutorial.Text {"text":"チュートリアル：","color":"gold","bold":true}
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display numberformat $mhdp_temp_tutorial_text Mns.Tutorial.Text fixed {"text":""}
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display name $mhdp_temp_tutorial_value Mns.Tutorial.Text {"text":"フィールドに移動する","color":"green"}
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display numberformat $mhdp_temp_tutorial_value Mns.Tutorial.Text fixed {"text":""}
+
 # 遷移：誰かがフィールドに移動した時
     execute if entity @a[tag=Ply.State.PlayingQuest,tag=Ply.State.MnsTarget] if score @s Mns.General.DummyTimer matches 260.. run function mhdp_monster_tutorial_01:core/tick/change_phase
