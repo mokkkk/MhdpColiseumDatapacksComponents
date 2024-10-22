@@ -34,7 +34,8 @@
         tag @s remove Ply.Weapon.Drawing.Sub
     # スキル関連
         tag @s remove Ply.State.IsUsedGuts
-    # チュートリアル関連    
+    # チュートリアル関連
+        tag @s remove Ply.Temp.Tutorial.DrawAttack
         tag @s remove Ply.Temp.Tutorial.Avoid
 
 # ターゲットタグの消去

@@ -101,6 +101,7 @@
             #declare tag Ply.Temp.Error.HasManySpItems 特殊装具を3つ以上持っているエラー
             #declare tag Ply.Temp.Error.DuplicateSpItems 同じ種類の特殊装具を2つ以上持っているエラー
     # チュートリアル
+        #declare tag Ply.Temp.Tutorial.DrawAttack 抜刀攻撃チュートリアル
         #declare tag Ply.Temp.Tutorial.Avoid 回避チュートリアル
 # 村人
     # 処理用

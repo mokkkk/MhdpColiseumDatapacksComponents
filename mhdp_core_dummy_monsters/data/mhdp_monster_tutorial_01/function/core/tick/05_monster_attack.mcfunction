@@ -4,11 +4,8 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
-# チュートリアル用タグ付与
-    execute if score @s Mns.General.DummyTimer matches 60 run tag @n[tag=Mns.Root.Ranposu] add Mns.State.Tutorial.IsDamage
-
 # モンスターの行動開始
-    execute if score @s Mns.General.DummyTimer matches 10 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsNotMove
+    execute if score @s Mns.General.DummyTimer matches 200 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsNotMove
 
 # メッセージ
     execute if score @s Mns.General.DummyTimer matches 60 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
@@ -45,5 +42,21 @@
         {"text":"  どちらもダメージはありませんが、できる限り回避するようにしましょう。\n","color": "#00FFC3","bold": false}\
     ]
 
+# 初期スコア表示
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display name $mhdp_temp_tutorial_value Mns.Tutorial.Text {"text":"青鳥竜の攻撃を耐える：残り","color":"green"}
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display numberformat $mhdp_temp_tutorial_value Mns.Tutorial.Text styled {"color":"green"}
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players reset $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text
+
+# スコア設定
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players set $mhdp_temp_tutorial_value Mns.Tutorial.Text 60
+    # チュートリアル完了：回避
+        scoreboard players add @s MhdpCore 1
+        execute if score @s MhdpCore matches 20.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0.. run scoreboard players remove $mhdp_temp_tutorial_value Mns.Tutorial.Text 1
+        execute if score @s MhdpCore matches 20.. run scoreboard players set @s MhdpCore 0
+        execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0 run scoreboard players display name $mhdp_temp_tutorial_value Mns.Tutorial.Text {"text":"青鳥竜の攻撃を耐える：","color":"green"}
+        execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0 run scoreboard players display numberformat $mhdp_temp_tutorial_value Mns.Tutorial.Text fixed {"text":"OK!","color":"green"}
+    tag @n[tag=Mns.Root.Ranposu] add Mns.State.Tutorial.IsDamage
+
 # 遷移：攻撃後
-    execute if entity @n[tag=Mns.Root.Ranposu,tag=!Mns.State.Tutorial.IsDamage] if score @s Mns.General.DummyTimer matches 800.. run function mhdp_monster_tutorial_01:core/tick/change_phase
+    execute if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches ..0 \
+            if score @s Mns.General.DummyTimer matches 800.. run function mhdp_monster_tutorial_01:core/tick/change_phase

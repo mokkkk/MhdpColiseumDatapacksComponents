@@ -12,8 +12,16 @@
         {"text":"  武器の抜刀ができます。\n","color": "#00FFC3","bold": false}\
     ]
 
+# 初期スコア表示
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display name $mhdp_temp_tutorial_value Mns.Tutorial.Text {"text":"武器を抜刀する：残り","color":"green"}
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display numberformat $mhdp_temp_tutorial_value Mns.Tutorial.Text styled {"color":"green"}
 # スコア設定
-    # scoreboard players set @s Mns.Tutorial.Text 0
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players set $mhdp_temp_tutorial_value Mns.Tutorial.Text 1
+    execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0.. if entity @a[tag=Ply.State.PlayingQuest,tag=Ply.Weapon.Drawing] run scoreboard players remove $mhdp_temp_tutorial_value Mns.Tutorial.Text 1
+    # チュートリアル完了
+        execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0 run scoreboard players display name $mhdp_temp_tutorial_value Mns.Tutorial.Text {"text":"武器を抜刀する：","color":"green"}
+        execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0 run scoreboard players display numberformat $mhdp_temp_tutorial_value Mns.Tutorial.Text fixed {"text":"OK!","color":"green"}
 
 # 遷移：武器抜刀後
-    execute if entity @a[tag=Ply.Weapon.Drawing] if score @s Mns.General.DummyTimer matches 60.. run function mhdp_monster_tutorial_01:core/tick/change_phase
+    execute if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches ..0 \
+            if score @s Mns.General.DummyTimer matches 150.. run function mhdp_monster_tutorial_01:core/tick/change_phase

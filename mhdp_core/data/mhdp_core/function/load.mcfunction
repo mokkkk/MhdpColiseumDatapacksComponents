@@ -63,7 +63,8 @@
     # その他EntityのUuid
         scoreboard objectives add Entity.Uuid dummy
     # チュートリアル用
-        scoreboard objectives add Mns.Tutorial.Text dummy {"text":""}
+        scoreboard objectives add Mns.Tutorial.Text dummy {"text":"チュートリアル：","color":"gold","bold":true}
+        scoreboard objectives modify Mns.Tutorial.Text displayname {"text":"チュートリアル","color":"gold","bold":true,"underlined":true}
 
 ## Scoreboard初期値設定
 # プレイヤーUID

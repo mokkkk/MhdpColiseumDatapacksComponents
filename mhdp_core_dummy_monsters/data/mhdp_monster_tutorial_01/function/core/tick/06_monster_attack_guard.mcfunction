@@ -27,4 +27,4 @@
     ]
 
 # 遷移：攻撃後
-    execute if score @s Mns.General.DummyTimer matches 400.. run function mhdp_monster_tutorial_01:core/tick/change_phase
+    # execute if score @s Mns.General.DummyTimer matches 400.. run function mhdp_monster_tutorial_01:core/tick/change_phase
