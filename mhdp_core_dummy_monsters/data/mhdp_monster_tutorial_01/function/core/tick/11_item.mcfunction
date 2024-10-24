@@ -43,6 +43,7 @@
         {"text":"  空を飛んでモンスターの攻撃を回避することもできます。\n","color": "#00FFC3","bold": false},\
         {"text":"  さらに、翔蟲による移動中に","color": "#00FFC3","bold": false},{"text":"抜刀攻撃","color": "#00FFC3","bold": false},{"text":" をすると、\n","color": "#00FFC3","bold": false},\
         {"text":"  ","color": "#00FFC3","bold": false},{"text":"鉄蟲糸技","color": "#ff9900","bold": true},{"text":" という特殊な攻撃を行うことができます。\n","color": "#00FFC3","bold": false},\
+        {"text":"  片手剣や大剣は、移動中の抜刀攻撃をモンスターに当てることで発動します。","color": "#00FFC3","bold": false},\
         {"text":"  ホットバーは、翔蟲の隣を空欄にしておき、\n  抜刀攻撃を出しやすくすると良いでしょう。\n","color": "#00FFC3","bold": false}\
     ]
 

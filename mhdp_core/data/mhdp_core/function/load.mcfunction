@@ -56,7 +56,10 @@
 # 村人関連
     # タイマー
         scoreboard objectives add Vlg.General.Timer dummy
-
+        scoreboard objectives add Vlg.General.Timer.Sub dummy
+    # カウンター
+        scoreboard objectives add Vlg.General.Counter dummy
+    
 # モンスター関連
     # UID
         scoreboard objectives add Mns.Uid dummy
