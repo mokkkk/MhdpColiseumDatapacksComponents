@@ -29,6 +29,9 @@
         {"text":"  モンスターによって有効な部位は異なるので、\n  戦う相手によって狙う部位を変えましょう。\n","color": "#00FFC3","bold": false}\
     ]
 
+# スコア表示
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display name $mhdp_temp_tutorial_value Mns.Tutorial.Text {"text":"部位破壊についての説明を聞く","color":"green"}
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display numberformat $mhdp_temp_tutorial_value Mns.Tutorial.Text blank
 
 # 遷移：怒り状態移行後
     execute if entity @n[tag=Mns.Root.Ranposu,tag=Mns.State.IsAnger] if score @s Mns.General.DummyTimer matches 400.. run function mhdp_monster_tutorial_01:core/tick/change_phase

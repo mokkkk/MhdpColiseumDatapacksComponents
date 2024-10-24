@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # チュートリアル用タグ付与
-    execute if score @s Mns.General.DummyTimer matches 10 run tag @a[tag=Ply.State.PlayingQuest] add Ply.Temp.Tutorial.Avoid
+    execute if score @s Mns.General.DummyTimer matches 2 run tag @a[tag=Ply.State.PlayingQuest] add Ply.Temp.Tutorial.Avoid
 
 # モンスターの行動開始
     execute if score @s Mns.General.DummyTimer matches 10 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsNotMove
@@ -35,7 +35,7 @@
 # スコア設定
     execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players set $mhdp_temp_tutorial_value Mns.Tutorial.Text 1
     # チュートリアル完了：ジャンプ回避
-        execute if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0.. if entity @a[tag=Ply.State.PlayingQuest,tag=!Ply.Temp.Tutorial.Avoid] run scoreboard players remove $mhdp_temp_tutorial_value Mns.Tutorial.Text 1
+        execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0.. if entity @a[tag=Ply.State.PlayingQuest,tag=!Ply.Temp.Tutorial.Avoid] run scoreboard players remove $mhdp_temp_tutorial_value Mns.Tutorial.Text 1
         execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0 run scoreboard players display name $mhdp_temp_tutorial_value Mns.Tutorial.Text {"text":"ジャンプ回避でモンスターの攻撃を避ける：","color":"green"}
         execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0 run scoreboard players display numberformat $mhdp_temp_tutorial_value Mns.Tutorial.Text fixed {"text":"OK!","color":"green"}
 

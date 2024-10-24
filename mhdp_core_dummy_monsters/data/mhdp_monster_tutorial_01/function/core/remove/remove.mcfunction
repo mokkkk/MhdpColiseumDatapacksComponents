@@ -11,6 +11,7 @@
     scoreboard players reset $mhdp_temp_tutorial_text Mns.Tutorial.Text
     scoreboard players reset $mhdp_temp_tutorial_value Mns.Tutorial.Text
     scoreboard players reset $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text
+    scoreboard players reset $mhdp_temp_tutorial_value_3 Mns.Tutorial.Text
 
 # 当たり判定を消去
     # なし

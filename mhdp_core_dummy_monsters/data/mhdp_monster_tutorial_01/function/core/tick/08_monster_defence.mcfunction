@@ -5,8 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # チュートリアル用タグ付与
-    execute if score @s Mns.General.DummyTimer matches 10 run tag @a[tag=Ply.State.PlayingQuest] remove Ply.Temp.Tutorial.Avoid
-    execute if score @s Mns.General.DummyTimer matches 10 run tag @n[tag=Mns.Root.Ranposu] add Mns.State.Tutorial.IsBroken
+    execute if score @s Mns.General.DummyTimer matches 2 run tag @n[tag=Mns.Root.Ranposu] add Mns.State.Tutorial.IsBroken
 
 # モンスターの行動停止
     execute if score @s Mns.General.DummyTimer matches 10 run tag @n[tag=Mns.Root.Ranposu] add Mns.State.IsNotMove
@@ -29,6 +28,19 @@
         {"text":"  試しに、青鳥竜の頭を攻撃し続けてください。\n","color": "#00FFC3","bold": false}\
     ]
 
+# 初期スコア表示
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display name $mhdp_temp_tutorial_value Mns.Tutorial.Text {"text":"青鳥竜の頭を攻撃する：残り","color":"green"}
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players display numberformat $mhdp_temp_tutorial_value Mns.Tutorial.Text styled {"color":"green"}
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players reset $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text
+
+# スコア設定
+    execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players set $mhdp_temp_tutorial_value Mns.Tutorial.Text 1
+    # チュートリアル完了：ジャンプ回避
+        execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0.. if entity @n[tag=Mns.Root.Ranposu,tag=!Mns.State.Tutorial.IsBroken] run scoreboard players remove $mhdp_temp_tutorial_value Mns.Tutorial.Text 1
+        execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0 run scoreboard players display name $mhdp_temp_tutorial_value Mns.Tutorial.Text {"text":"青鳥竜の頭を攻撃する：","color":"green"}
+        execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0 run scoreboard players display numberformat $mhdp_temp_tutorial_value Mns.Tutorial.Text fixed {"text":"OK!","color":"green"}
+
 # 遷移：部位破壊成功後、または一定時間後
-    execute if entity @n[tag=Mns.Root.Ranposu,tag=!Mns.State.Tutorial.IsBroken] if score @s Mns.General.DummyTimer matches 260..3599 run function mhdp_monster_tutorial_01:core/tick/change_phase
+    execute if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches ..0 \
+            if score @s Mns.General.DummyTimer matches 400.. run function mhdp_monster_tutorial_01:core/tick/change_phase
     execute if score @s Mns.General.DummyTimer matches 7200.. run function mhdp_monster_tutorial_01:core/tick/change_phase
