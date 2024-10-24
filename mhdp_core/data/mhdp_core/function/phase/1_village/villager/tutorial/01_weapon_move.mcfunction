@@ -10,6 +10,7 @@
     execute if score @s Vlg.General.Timer matches 10 as @a[tag=!Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 10 run tellraw @a[tag=!Ply.State.PlayingQuest] [\
         {"text":"\n【 チュートリアル：武器の装備 ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  これから、本マップのプレイ方法について説明します。\n","color": "#00FFC3","bold": false},\
         {"text":"  初めてのプレイヤーは、武器を装備しましょう。\n","color": "#00FFC3","bold": false},\
         {"text":"  上空で点滅する ","color": "#00FFC3","bold": false},{"text":"↓","color": "#ff9900","bold": true},{"text":" マークを見つけて、","color": "#00FFC3","bold": false},\
         {"text":"  そこまで移動してください。\n","color": "#00FFC3","bold": false}\
