@@ -8,7 +8,7 @@
     execute if score @s Mns.General.DummyTimer matches 2 run tag @a[tag=Ply.State.PlayingQuest] add Ply.Temp.Tutorial.Avoid
 
 # モンスターの行動開始
-    execute if score @s Mns.General.DummyTimer matches 10 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsNotMove
+    execute if score @s Mns.General.DummyTimer matches 260 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsNotMove
 
 # メッセージ
     execute if score @s Mns.General.DummyTimer matches 60 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1

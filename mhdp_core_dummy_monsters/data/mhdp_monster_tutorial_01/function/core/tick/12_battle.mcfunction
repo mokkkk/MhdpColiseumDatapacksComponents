@@ -5,9 +5,9 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # モンスターの状態をデフォルトにする
-    execute if score @s Mns.General.DummyTimer matches 2 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsNotMove
-    execute if score @s Mns.General.DummyTimer matches 2 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsDisablePartDamage
-    execute if score @s Mns.General.DummyTimer matches 2 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsDisableDamage
+    execute if score @s Mns.General.DummyTimer matches 150 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsNotMove
+    execute if score @s Mns.General.DummyTimer matches 150 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsDisablePartDamage
+    execute if score @s Mns.General.DummyTimer matches 150 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsDisableDamage
 
 # メッセージ
     execute if score @s Mns.General.DummyTimer matches 60 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
