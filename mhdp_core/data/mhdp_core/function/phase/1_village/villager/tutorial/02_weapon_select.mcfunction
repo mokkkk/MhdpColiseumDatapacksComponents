@@ -10,7 +10,7 @@
     execute if score @s Vlg.General.Timer matches 10 as @a[tag=!Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 10 run tellraw @a[tag=!Ply.State.PlayingQuest] [\
         {"text":"\n【 チュートリアル：武器の装備 ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  使いたい武器を選んで ","color": "#00FFC3","bold": false},{"text":"右クリック","color": "#ff9900","bold": true},{"text":" で、選択できます。\n","color": "#00FFC3","bold": false},\
+        {"text":"  使いたい武器を ","color": "#00FFC3","bold": false},{"text":"右クリック","color": "#ff9900","bold": true},{"text":" で、選択できます。\n","color": "#00FFC3","bold": false},\
         {"text":"  武器は、クエスト出発時に自動で装備されます。\n","color": "#00FFC3","bold": false},\
         {"text":"  武器ごとの特徴は書見台の本に書かれているので、参考にしてください。\n","color": "#00FFC3","bold": false},\
         {"text":"  ","color": "#00FFC3","bold": false},{"text":"地ノ型","color": "#ff9900","bold": true},{"text":" は、武器の操作スタイルです。\n","color": "#00FFC3","bold": false},\

@@ -19,15 +19,15 @@
     execute if score @s Vlg.General.Counter matches 3 run function mhdp_core:phase/1_village/villager/tutorial/03_training_move
     execute if score @s Vlg.General.Counter matches 4 run function mhdp_core:phase/1_village/villager/tutorial/04_training
 
-# # クエスト受注
+# クエスト受注
     execute if score @s Vlg.General.Counter matches 5 run function mhdp_core:phase/1_village/villager/tutorial/05_quest_accept_move
     execute if score @s Vlg.General.Counter matches 6 run function mhdp_core:phase/1_village/villager/tutorial/06_quest_accept
 
-# # クエスト参加
+# クエスト参加
     execute if score @s Vlg.General.Counter matches 7 run function mhdp_core:phase/1_village/villager/tutorial/07_quest_join_move
     execute if score @s Vlg.General.Counter matches 8 run function mhdp_core:phase/1_village/villager/tutorial/08_quest_join
 
-# # クエスト出発
+# クエスト出発
     execute if score @s Vlg.General.Counter matches 9 run function mhdp_core:phase/1_village/villager/tutorial/09_quest_start_move
     execute if score @s Vlg.General.Counter matches 10 run function mhdp_core:phase/1_village/villager/tutorial/10_quest_start
 

@@ -28,6 +28,15 @@
 
     execute if score @s Mns.General.DummyTimer matches 460 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Mns.General.DummyTimer matches 460 run tellraw @a[tag=Ply.State.PlayingQuest] [\
+        {"text":"\n【 チュートリアル：モンスターリスト ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  一度でも戦ったことのあるモンスターは、\n","color": "#00FFC3","bold": false},\
+        {"text":"  拠点に置かれた ","color": "#00FFC3","bold": false},{"text":"モンスターリスト","color": "#ff9900","bold": true},{"text": " で情報を見ることができます。\n","color": "#00FFC3","bold": false},\
+        {"text":"  モンスターの生態や、攻略情報を調べることができます。\n","color": "#00FFC3","bold": false},\
+        {"text":"  青鳥竜の情報が追加されたので、拠点に戻ったら読んでみてください。\n","color": "#00FFC3","bold": false}\
+    ]
+
+    execute if score @s Mns.General.DummyTimer matches 660 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
+    execute if score @s Mns.General.DummyTimer matches 660 run tellraw @a[tag=Ply.State.PlayingQuest] [\
         {"text":"\n【 チュートリアル：最後に ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  これでチュートリアルは終了です。\n","color": "#00FFC3","bold": false},\
         {"text":"  様々なモンスターの狩猟を楽しんでください。\n","color": "#00FFC3","bold": false},\
@@ -35,4 +44,4 @@
     ]
 
 # 遷移：一定時間後
-    execute if score @s Mns.General.DummyTimer matches 600.. run function mhdp_monster_tutorial_01:core/tick/change_phase
+    execute if score @s Mns.General.DummyTimer matches 800.. run function mhdp_monster_tutorial_01:core/tick/change_phase

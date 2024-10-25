@@ -6,6 +6,7 @@
 
 # モンスターの行動開始
     execute if score @s Mns.General.DummyTimer matches 350 run tag @n[tag=Mns.Root.Ranposu] remove Mns.State.IsNotMove
+    execute if score @s Mns.General.DummyTimer matches 2 run tag @n[tag=Mns.Root.Ranposu] add Mns.State.Mns.State.IsDisablePartDamage
     execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players set @n[tag=Mns.Root.Ranposu] Mns.Anger.Timer 99999
 
 # メッセージ

@@ -34,11 +34,11 @@
     execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players set $mhdp_temp_tutorial_value Mns.Tutorial.Text 1
     execute if score @s Mns.General.DummyTimer matches 2 run scoreboard players set $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text 1
     # チュートリアル完了：納刀
-        execute if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0.. if entity @a[tag=Ply.State.PlayingQuest,tag=!Ply.Weapon.Drawing] run scoreboard players remove $mhdp_temp_tutorial_value Mns.Tutorial.Text 1
+        execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0.. if entity @a[tag=Ply.State.PlayingQuest,tag=!Ply.Weapon.Drawing] run scoreboard players remove $mhdp_temp_tutorial_value Mns.Tutorial.Text 1
         execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0 run scoreboard players display name $mhdp_temp_tutorial_value Mns.Tutorial.Text {"text":"武器を納刀する：","color":"green"}
         execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value Mns.Tutorial.Text matches 0 run scoreboard players display numberformat $mhdp_temp_tutorial_value Mns.Tutorial.Text fixed {"text":"OK!","color":"green"}
     # チュートリアル完了：抜刀攻撃
-        execute if score $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text matches 0.. if entity @a[tag=Ply.State.PlayingQuest,tag=!Ply.Temp.Tutorial.DrawAttack] run scoreboard players remove $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text 1
+        execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text matches 0.. if entity @a[tag=Ply.State.PlayingQuest,tag=!Ply.Temp.Tutorial.DrawAttack] run scoreboard players remove $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text 1
         execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text matches 0 run scoreboard players display name $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text {"text":"抜刀攻撃をする：","color":"green"}
         execute if score @s Mns.General.DummyTimer matches 3.. if score $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text matches 0 run scoreboard players display numberformat $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text fixed {"text":"OK!","color":"green"}
 
