@@ -128,6 +128,7 @@
 
 # 以下、デバッグ時に適宜モンスター個別のinit処理を記述
     function mhdp_monster_tutorial_01:core/init/init_monster_data
+    function mhdp_monster_karakuri:core/init/init_monster_data
 
 # 体験版用処理
     data modify storage mhdp_core:game_data IsBetaVersion set value true

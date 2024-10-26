@@ -13,6 +13,7 @@
     function mhdp_core:phase/2_village_to_quest/start/quest_member
     function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/main
     tag @s remove Ply.State.PlayingQuest
+    team leave @s
 
 # 訓練所利用タグを付与
     tag @s add Ply.State.IsTraining
@@ -20,3 +21,4 @@
 # 訓練所に移動
 # TODO:マップの適用が終わったら座標を更新する
     tp @s 139 58 -10 -90 ~
+    spawnpoint @s 139 58 -10 -90
