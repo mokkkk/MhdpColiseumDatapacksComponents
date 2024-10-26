@@ -10,5 +10,6 @@ execute at @s on passengers run tp @s ~ ~ ~ ~ ~
 data modify entity @s teleport_duration set value 1
 execute on passengers run data modify entity @s teleport_duration set value 1
 tag @s add Mns.Root
+tag @s add Mns.Root.NotRemove
 tag @s add Mns.Root.Karakuri
 function #animated_java:karakuri_aj/as_root/on_summon

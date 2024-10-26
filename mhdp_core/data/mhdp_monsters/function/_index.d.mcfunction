@@ -19,6 +19,7 @@
     #declare tag Mns.Param.IsHallTrapEnable 落とし穴有効共通タグ
 # モンスター関連・共通
     #declare tag Mns.Root モンスターのRootエンティティ共通タグ
+    #declare tag Mns.Root.NotRemove クエスト終了時にRemoveしない
 # モンスター関連・一時
     #declare tag Mns.Temp.IsIdleAnimation 待機アニメーションを再生する
     #declare tag Mns.Temp.IsSummonAnimation 登場アニメーションを再生する

@@ -4,6 +4,9 @@
 #
 # @within function mhdp_monster_karakuri:core/summon/summon_init
 
+# 位置合わせ用の移動
+    tp @s ^ ^ ^0.1
+
 # 終了
     scoreboard players reset #mhdp_temp_monster_uid Mns.Uid
 
