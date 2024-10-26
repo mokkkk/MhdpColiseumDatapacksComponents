@@ -7,6 +7,9 @@
 # チュートリアル
     execute if entity @s[tag=Beta.Interaction.Tutorial] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/tutorial/start
 
+# 闘技場
+    execute if entity @s[tag=Beta.Interaction.Training] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:phase/1_village/training_area/enter/check
+
 # 片手剣
     execute if entity @s[tag=Beta.Interaction.Ss.Normal] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/select_weapon/select_short_sword_normal
     execute if entity @s[tag=Beta.Interaction.Ss.Tec] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/select_weapon/select_short_sword_tec

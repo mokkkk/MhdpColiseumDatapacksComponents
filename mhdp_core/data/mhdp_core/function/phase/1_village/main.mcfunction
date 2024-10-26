@@ -10,3 +10,11 @@
 
 # 村人など
     execute as @e[type=item_display,tag=Vlg.Root] at @s run function mhdp_core:phase/1_village/villager/tick
+
+# 訓練所、今は仮の処理
+# TODO:闘技場処理は切り分けて、IsTrainingプレイヤーの数に応じて以下の処理を実行
+#   ・はじめてプレイヤーが入るとき、forceload開始
+#   ・プレイヤーが居る場合、闘技場tick処理
+#   ・プレイヤーが居なくなる場合、forceload解除
+# TODO:マップの更新が終わったら場所を変える
+    execute positioned 134 58 -10 as @a[tag=Ply.State.IsTraining,distance=..2] run function mhdp_core:phase/1_village/training_area/exit/player
