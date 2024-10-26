@@ -11,7 +11,7 @@
     kill @e[type=marker,tag=Mk.Field.Back]
 
 # プレイヤーの状態リセット
-    execute as @a run function mhdp_core:phase/3_quest/change_phase/general/player/reset
+    execute as @a[tag=Ply.State.PlayingQuest] run function mhdp_core:phase/3_quest/change_phase/general/player/reset
 
 # プレイヤーを拠点に戻す
     tp @a[tag=Ply.State.PlayingQuest] 266 63 204
