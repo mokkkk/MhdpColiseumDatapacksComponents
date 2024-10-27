@@ -13,6 +13,9 @@
 # からくり飛竜モード変更
     execute if entity @s[tag=Beta.Interaction.KarakuriOpe] as @a[tag=Ply.Temp.Target] at @s as @n[tag=Mns.Root.Karakuri] at @s run function mhdp_monster_karakuri:core/util/change_phase
 
+# 武器チュートリアル
+    execute if entity @s[tag=Beta.Interaction.WeaponTutorial] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:phase/1_village/villager/weapon_tutorial/start
+
 # 片手剣
     execute if entity @s[tag=Beta.Interaction.Ss.Normal] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/select_weapon/select_short_sword_normal
     execute if entity @s[tag=Beta.Interaction.Ss.Tec] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/select_weapon/select_short_sword_tec

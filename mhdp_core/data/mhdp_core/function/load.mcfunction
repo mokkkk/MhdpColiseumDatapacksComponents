@@ -62,7 +62,9 @@
     # 武器チュートリアル用
         # ターゲットプレイヤー
             scoreboard objectives add Vlg.WeaponTutorial.TargetPlayerUid dummy
-
+        # チュートリアルテキスト用
+            scoreboard objectives add Vlg.WeaponTutorial.Text dummy
+            scoreboard objectives modify Vlg.WeaponTutorial.Text displayname {"text":"訓練","color":"gold","bold":true,"underlined":true}
     
 # モンスター関連
     # UID
@@ -100,8 +102,10 @@
     team add Team.QuestHost
     team add Team.QuestMember
     team add Team.QuestPlaying
+    team add Team.WeaponTutorial
     team add Team.NoCollision
     team modify Team.QuestPlaying color gray
+    team modify Team.WeaponTutorial color gold
     team modify Team.QuestHost prefix [{"text":"a","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.QuestMember prefix [{"text":"b","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.QuestPlaying prefix [{"text":"c","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]

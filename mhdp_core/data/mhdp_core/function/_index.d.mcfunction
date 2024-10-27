@@ -108,7 +108,17 @@
     # 処理用
         #declare tag Vlg.Root 村人の共通タグ
     # 村人
-        #declare tag Vlg.VillageTutorial 村チュートリアル再生用
+        # 村チュートリアル
+            #declare tag Vlg.VillageTutorial 村チュートリアル再生用
+        # 武器チュートリアル
+            #declare tag Vlg.WeaponTutorial 武器チュートリアル再生用
+            #declare tag Vlg.WeaponTutorial.TargetPlayer 武器チュートリアルの対象プレイヤー
+            #declare tag Vlg.WeaponTutorial.ShortSword.Normal 片手剣・地ノ型
+            #declare tag Vlg.WeaponTutorial.ShortSword.Tec 片手剣・天ノ型
+            #declare tag Vlg.WeaponTutorial.GreatSword.Normal 大剣・地ノ型
+            #declare tag Vlg.WeaponTutorial.GreatSword.Tec 大剣・天ノ型
+            #declare tag Vlg.WeaponTutorial.Bow.Normal 弓・地ノ型
+            #declare tag Vlg.WeaponTutorial.Bow.Tec 弓・天ノ型
 # マーカー
     # 処理用
         #declare tag Mk.Field.Center フィールドの中心に設置されるマーカー

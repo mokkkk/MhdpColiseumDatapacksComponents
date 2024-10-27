@@ -10,6 +10,10 @@
 
 # 訓練所利用タグを削除
     tag @s remove Ply.State.IsTraining
+    tag @s remove Vlg.WeaponTutorial.TargetPlayer
+
+# 自身が最後の訓練所利用者だった場合、チュートリアルを中止
+    execute unless entity @a[tag=Ply.State.IsTraining] run function mhdp_core:phase/1_village/villager/weapon_tutorial/end
 
 # 村に移動
     tp @s 250 64 213 180 ~

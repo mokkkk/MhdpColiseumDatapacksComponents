@@ -25,7 +25,9 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..4 run tp @s ~ ~ ~ ~0.8 ~-1
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 2 true
+    attribute @s generic.movement_speed modifier remove mhdp_core:endereye_movement_speed
+    execute if score @s Wpn.GeneralTimer matches 1..14 if entity @s[tag=Ply.Ope.IsUsingEnderEye] run attribute @s generic.movement_speed modifier add mhdp_core:endereye_movement_speed 0.1 add_value
+    # execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 2 true
     execute if score @s Wpn.GeneralTimer matches 7 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
     execute if score @s Wpn.GeneralTimer matches 7 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
 

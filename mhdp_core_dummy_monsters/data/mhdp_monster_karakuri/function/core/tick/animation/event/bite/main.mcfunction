@@ -13,7 +13,7 @@
     execute if score @s aj.bite.frame matches 46 run playsound entity.wither.break_block master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
 
 # 攻撃
-    execute if score @s aj.bite.frame matches 44 run function mhdp_monster_karakuri:core/tick/animation/event/bite/attack
+    execute if score @s aj.bite.frame matches 46 run function mhdp_monster_karakuri:core/tick/animation/event/bite/attack
 
 # 接地
     # execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground

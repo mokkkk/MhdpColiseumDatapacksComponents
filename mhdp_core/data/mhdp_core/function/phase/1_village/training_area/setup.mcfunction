@@ -1,6 +1,6 @@
-#> mhdp_core:phase/1_village/training_area/enter/player
+#> mhdp_core:phase/1_village/training_area/setup
 #
-# 訓練所に移動する プレイヤー初期化処理
+# 訓練所のセットアップ
 #
 # @within function 
 
