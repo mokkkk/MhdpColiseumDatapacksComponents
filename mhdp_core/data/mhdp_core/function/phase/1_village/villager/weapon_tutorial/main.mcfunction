@@ -14,5 +14,5 @@
     execute if entity @s[tag=Vlg.WeaponTutorial.ShortSword.Tec] run function mhdp_core:phase/1_village/villager/weapon_tutorial/short_sword_tec/main
 
 # 対象プレイヤー更新
-    tag @a[tag=Ply.State.IsTraining,team=!Team.WeaponTutorial] remove Vlg.WeaponTutorial.TargetPlayer
-    tag @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] add Vlg.WeaponTutorial.TargetPlayer
+    tag @a[tag=Ply.State.IsTraining,team=!Team.WeaponTutorial,tag=Vlg.WeaponTutorial.TargetPlayer] remove Vlg.WeaponTutorial.TargetPlayer
+    tag @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=!Vlg.WeaponTutorial.TargetPlayer] add Vlg.WeaponTutorial.TargetPlayer
