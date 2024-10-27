@@ -18,6 +18,7 @@
 # クリティカル距離設定
     scoreboard players set #mhdp_temp_crit_min MhdpCore 1
     scoreboard players set #mhdp_temp_crit_max MhdpCore 10
+    execute if entity @s[tag=Wpn.Bw.Shot.Normal.Flying] run scoreboard players set #mhdp_temp_crit_max MhdpCore 30
     execute if score #mhdp_temp_crit_min MhdpCore <= @s Mns.Shot.Timer if score @s Mns.Shot.Timer <= #mhdp_temp_crit_max MhdpCore run tag @s add Temp.IsCrit
 
 # 攻撃
