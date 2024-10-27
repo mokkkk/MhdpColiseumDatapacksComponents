@@ -8,8 +8,8 @@
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
         {"text":"\n【 チュートリアル：片手剣・地ノ型の特徴 ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"片手剣・地ノ型","color": "#ff9900","bold": true},{"text":" は、Minecraft標準に近い戦い方で戦うことができる、\n","color": "#00FFC3","bold": false},\
-        {"text":"  とても扱いやすい武器種です。\n","color": "#00FFC3","bold": false}\
+        {"text":"  ","color": "#00FFC3","bold": false},{"text":"片手剣・地ノ型","color": "#ff9900","bold": true},{"text":" は、Minecraft標準に近い戦い方で戦うことができます。\n","color": "#00FFC3","bold": false},\
+        {"text":"  とてもシンプルな操作が特徴の、切断属性の武器です。\n","color": "#00FFC3","bold": false}\
     ]
 
     execute if score @s Vlg.General.Timer matches 210 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1

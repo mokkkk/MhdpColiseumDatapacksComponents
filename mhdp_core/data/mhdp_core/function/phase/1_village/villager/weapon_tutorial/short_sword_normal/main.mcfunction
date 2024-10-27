@@ -17,14 +17,20 @@
     execute if score @s Vlg.General.Counter matches 1 run function mhdp_core:phase/1_village/villager/weapon_tutorial/short_sword_normal/1_sword_combo
 
 # ガード
+    execute if score @s Vlg.General.Counter matches 2 run function mhdp_core:phase/1_village/villager/weapon_tutorial/short_sword_normal/2_guard
 
 # 回転斬り
+    execute if score @s Vlg.General.Counter matches 3 run function mhdp_core:phase/1_village/villager/weapon_tutorial/short_sword_normal/3_spin
 
 # 剣盾コンボ
+    execute if score @s Vlg.General.Counter matches 4 run function mhdp_core:phase/1_village/villager/weapon_tutorial/short_sword_normal/4_rush
 
 # 翔蟲装備：飛影
+    execute if score @s Vlg.General.Counter matches 5 unless entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Itm.Sp.Wirebug] run scoreboard players add @s Vlg.General.Counter 1
+    execute if score @s Vlg.General.Counter matches 5 run function mhdp_core:phase/1_village/villager/weapon_tutorial/short_sword_normal/5_tobikage
+
+# おわり
+    execute if score @s Vlg.General.Counter matches 6 run function mhdp_core:phase/1_village/villager/weapon_tutorial/short_sword_normal/6_end
 
 # 終了
-
-# 終了
-    execute if score @s Vlg.General.Counter matches 11.. run function mhdp_core:phase/1_village/villager/weapon_tutorial/end
+    execute if score @s Vlg.General.Counter matches 7.. run function mhdp_core:phase/1_village/villager/weapon_tutorial/end

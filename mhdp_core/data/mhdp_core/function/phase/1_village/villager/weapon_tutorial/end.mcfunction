@@ -6,14 +6,15 @@
 
 # スコア削除
     scoreboard objectives setdisplay sidebar.team.gold
-    scoreboard players reset $mhdp_temp_weapon_tutorial_text Mns.Tutorial.Text
-    scoreboard players reset $mhdp_temp_weapon_tutorial_value Mns.Tutorial.Text
-    scoreboard players reset $mhdp_temp_weapon_tutorial_value_2 Mns.Tutorial.Text
-    scoreboard players reset $mhdp_temp_weapon_tutorial_value_3 Mns.Tutorial.Text
+    scoreboard players reset $mhdp_temp_weapon_tutorial_text Vlg.WeaponTutorial.Text
+    scoreboard players reset $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text
+    scoreboard players reset $mhdp_temp_weapon_tutorial_value_2 Vlg.WeaponTutorial.Text
+    scoreboard players reset $mhdp_temp_weapon_tutorial_value_3 Vlg.WeaponTutorial.Text
 
 # チーム、タグ消去
     team leave @a[team=Team.WeaponTutorial]
     tag @a remove Vlg.WeaponTutorial.TargetPlayer
+    tag @a remove Ply.Temp.Tutorial.Guard
 
 # 終了
     kill @e[tag=Vlg.WeaponTutorial]
