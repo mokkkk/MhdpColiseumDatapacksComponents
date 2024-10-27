@@ -7,6 +7,14 @@
 # 初期化
     kill @e[tag=Beta.Ui]
 
+# 色々教える用
+    summon text_display 241 66 215 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"クエスト受注"}',alignment:"center"}
+    
+    execute if data storage mhdp_core:game_data QuestList[{ID:1}].State{IsPlayed:true} run summon text_display 235 66 218 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"青鳥竜の情報"}',alignment:"center"}
+    execute if data storage mhdp_core:game_data QuestList[{ID:11}].State{IsPlayed:true} run summon text_display 233 66 218 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"火竜の情報"}',alignment:"center"}
+    execute if data storage mhdp_core:game_data QuestList[{ID:12}].State{IsPlayed:true} run summon text_display 231 66 218 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"斬竜の情報"}',alignment:"center"}
+    execute if data storage mhdp_core:game_data QuestList[{ID:13}].State{IsPlayed:true} run summon text_display 229 66 218 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"天彗龍の情報"}',alignment:"center"}
+
 # 村チュートリアル再生用
     summon text_display 259 65 202 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial"],text:'{"bold":true,"color":"white","text":"[チュートリアル再生]"}',alignment:"center"}
     summon text_display 259 64.6 202 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
@@ -25,6 +33,13 @@
     summon text_display 145 59.6 -17 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.KarakuriOpe"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
     summon interaction 145 58 -17 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.KarakuriOpe"],response:1b}
     summon item_display 145 59 -17 {item:{id:"minecraft:iron_pickaxe",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.KarakuriOpe"],billboard:"vertical"}
+
+# 武器チュートリアル再生用
+# TODO:闘技場完成後、場所を移す
+    summon text_display 145 60 -2 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.WeaponTutorial"],text:'{"bold":true,"color":"white","text":"[武器の操作説明]"}',alignment:"center"}
+    summon text_display 145 59.6 -2 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.WeaponTutorial"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
+    summon interaction 145 58 -2 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.WeaponTutorial"],response:1b}
+    summon item_display 145 59 -2 {item:{id:"minecraft:book",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.WeaponTutorial"],billboard:"vertical"}
 
 # Text
     summon text_display 234 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Ss.Normal"],text:'{"bold":true,"color":"#FF8282","text":"[片手剣・地ノ型]"}',alignment:"center"}

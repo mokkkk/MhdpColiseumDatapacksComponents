@@ -59,6 +59,10 @@
         scoreboard objectives add Vlg.General.Timer.Sub dummy
     # カウンター
         scoreboard objectives add Vlg.General.Counter dummy
+    # 武器チュートリアル用
+        # ターゲットプレイヤー
+            scoreboard objectives add Vlg.WeaponTutorial.TargetPlayerUid dummy
+
     
 # モンスター関連
     # UID
