@@ -19,9 +19,15 @@
 # タックル
     execute if score @s Vlg.General.Counter matches 2 run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/2_tackle
 
-# 翔蟲装備：飛影
+# ガード
+    execute if score @s Vlg.General.Counter matches 3 run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/3_guard
+
+# 大溜め斬り
+    execute if score @s Vlg.General.Counter matches 4 run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/4_charge_great
+
+# 翔蟲装備：ハンティングエッジ
     execute if score @s Vlg.General.Counter matches 5 unless entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Itm.Sp.Wirebug] run scoreboard players add @s Vlg.General.Counter 1
-    execute if score @s Vlg.General.Counter matches 5 run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/5_tobikage
+    execute if score @s Vlg.General.Counter matches 5 run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/5_hunting_edge
 
 # おわり
     execute if score @s Vlg.General.Counter matches 6 run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/6_end
