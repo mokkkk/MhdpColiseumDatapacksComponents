@@ -13,8 +13,11 @@
 # 片手剣・天ノ型
     execute if entity @s[tag=Vlg.WeaponTutorial.ShortSword.Tec] run function mhdp_core:phase/1_village/villager/weapon_tutorial/short_sword_tec/main
 
-# 片手剣・地ノ型
+# 大剣・地ノ型
     execute if entity @s[tag=Vlg.WeaponTutorial.GreatSword.Normal] run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/main
+
+# 大剣・天ノ型
+    execute if entity @s[tag=Vlg.WeaponTutorial.GreatSword.Tec] run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_tec/main
 
 # 対象プレイヤー更新
     tag @a[tag=Ply.State.IsTraining,team=!Team.WeaponTutorial,tag=Vlg.WeaponTutorial.TargetPlayer] remove Vlg.WeaponTutorial.TargetPlayer
