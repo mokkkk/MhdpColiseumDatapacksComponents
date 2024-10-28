@@ -16,4 +16,4 @@
     tag @s remove Ply.Weapon.StaminaNotRegen
 
 # 対象の処理を実行
-    function mhdp_items:weapons/great_sword/type_normal/1_charge/start
+    function mhdp_items:weapons/great_sword/type_normal/1_charge/start_from_tackle
