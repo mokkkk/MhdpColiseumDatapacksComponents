@@ -12,7 +12,8 @@
         {"text":"  ","color": "#00FFC3","bold": false},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで発動する、\n","color": "#00FFC3","bold": false},\
         {"text":"  地ノ型の片手剣の主力技です。\n","color": "#00FFC3","bold": false},\
         {"text":"  最大で5回まで連続で使用でき、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"後半の攻撃","color": "#ff9900","bold": true},{"text":" ほど高威力になります。\n","color": "#00FFC3","bold": false}\
+        {"text":"  ","color": "#00FFC3","bold": false},{"text":"後半の攻撃","color": "#ff9900","bold": true},{"text":" ほど高威力になります。\n","color": "#00FFC3","bold": false},\
+        {"text":"  抜刀攻撃でも、剣コンボが発動します。\n","color": "#00FFC3","bold": false}\
     ]
 
     execute if score @s Vlg.General.Timer matches 210 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1

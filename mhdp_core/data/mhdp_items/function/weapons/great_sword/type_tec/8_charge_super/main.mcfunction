@@ -19,7 +19,7 @@
     execute if score @s Wpn.AnimationTimer matches 18 run function mhdp_items:weapons/great_sword/type_tec/8_charge_super/animation_5
 
 # 移動制限
-    effect give @s slowness 1 3 true
+    effect give @s slowness 1 5 true
     execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
     execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.3 add_value
 
