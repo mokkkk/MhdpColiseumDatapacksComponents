@@ -11,4 +11,4 @@
     particle crit ~ ~1 ~ 0 0 0 1 20
     execute if score @s Wpn.Gs.ChargeCount matches ..2 run playsound entity.arrow.hit_player master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 1
     execute if score @s Wpn.Gs.ChargeCount matches 3 run playsound entity.arrow.hit_player master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
-    execute if score @s Wpn.Gs.ChargeCount matches 3 positioned ~ ~1.4 ~ run particle flash ^ ^ ^0.1 0 0 0 0 1
+    execute if score @s Wpn.Gs.ChargeCount matches 3 positioned ~ ~1.4 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1

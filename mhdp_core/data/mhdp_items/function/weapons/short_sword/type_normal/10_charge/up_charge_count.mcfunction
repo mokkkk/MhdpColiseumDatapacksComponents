@@ -7,4 +7,4 @@
 # 演出
     particle crit ~ ~1 ~ 0 0 0 1 20
     playsound entity.arrow.hit_player master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 1
-    particle flash ^ ^ ^0.1 0 0 0 0 1
+    execute positioned ~ ~1.4 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1

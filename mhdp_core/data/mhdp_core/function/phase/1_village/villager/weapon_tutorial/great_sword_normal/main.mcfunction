@@ -17,7 +17,9 @@
     execute if score @s Vlg.General.Counter matches 1 run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/1_charge_slash
 
 # タックル
-    execute if score @s Vlg.General.Counter matches 2 run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/2_tackle
+    # 地の型からタックルを削除したため、スキップ
+        execute if score @s Vlg.General.Counter matches 2 run scoreboard players add @s Vlg.General.Counter 1
+    # execute if score @s Vlg.General.Counter matches 2 run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/2_tackle
 
 # ガード
     execute if score @s Vlg.General.Counter matches 3 run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/3_guard

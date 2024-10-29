@@ -24,7 +24,7 @@
 
 # タックル
     # 処理
-        execute if entity @s[tag=Wpn.Gs.Normal.Tackle] run function mhdp_items:weapons/great_sword/type_normal/3_tackle/main
+        # execute if entity @s[tag=Wpn.Gs.Normal.Tackle] run function mhdp_items:weapons/great_sword/type_normal/3_tackle/main
 
 # 大溜め斬り
     # 溜め
