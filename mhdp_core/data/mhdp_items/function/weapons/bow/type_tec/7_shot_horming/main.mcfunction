@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:weapons/bow/type_tec/main
 
+# 操作表示
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"導ノ矢"}
+
 # タイマー増加
     execute if score @s Wpn.GeneralTimer matches ..13 run scoreboard players add @s Wpn.GeneralTimer 1
     execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 14.. run scoreboard players add @s Wpn.GeneralTimer 1

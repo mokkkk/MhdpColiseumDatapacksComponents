@@ -44,16 +44,16 @@
     # 処理
         execute if entity @s[tag=Wpn.Ss.Normal.Spin] run function mhdp_items:weapons/short_sword/type_normal/11_spin/main
 
-# 盾攻撃コンボ
+# 盾攻撃コンボ(旧)
     # 盾攻撃
        # 処理
-            execute if entity @s[tag=Wpn.Ss.Normal.Bash.1] run function mhdp_items:weapons/short_sword/type_normal/7_bash_1/main
+            # execute if entity @s[tag=Wpn.Ss.Normal.Bash.1] run function mhdp_items:weapons/short_sword/type_normal/7_bash_1/main
     # バックナックル
         # 処理
-            execute if entity @s[tag=Wpn.Ss.Normal.Bash.2] run function mhdp_items:weapons/short_sword/type_normal/8_bash_2/main
+            # execute if entity @s[tag=Wpn.Ss.Normal.Bash.2] run function mhdp_items:weapons/short_sword/type_normal/8_bash_2/main
     # ハードバッシュ
         # 処理
-            execute if entity @s[tag=Wpn.Ss.Normal.Bash.3] run function mhdp_items:weapons/short_sword/type_normal/9_bash_3/main
+            # execute if entity @s[tag=Wpn.Ss.Normal.Bash.3] run function mhdp_items:weapons/short_sword/type_normal/9_bash_3/main
 
 # 剣盾ラッシュ(旧)
     # 処理
