@@ -58,4 +58,3 @@ scoreboard objectives add aj.fly_damage_tail.frame dummy
 scoreboard objectives add aj.fly_damage_down.frame dummy
 scoreboard objectives add aj.death_flying.frame dummy
 scoreboard objectives add aj.fly_state_paralysis.frame dummy
-execute as @e[type=item_display,tag=aj.reus_aj.root] unless score @s aj.is_rig_loaded matches 1 at @s run function animated_java:reus_aj/root/on_load
