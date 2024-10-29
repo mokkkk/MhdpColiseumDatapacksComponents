@@ -1,6 +1,6 @@
-#> mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/3_guard
+#> mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_tec/4_guard
 #
-# 武器チュートリアル 大剣・地ノ型
+# 武器チュートリアル 大剣・天ノ型
 #
 # @within function mhdp_core:tick
 

@@ -1,6 +1,6 @@
-#> mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/5_hunting_edge
+#> mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_tec/6_hunting_edge
 #
-# 武器チュートリアル 大剣・地ノ型
+# 武器チュートリアル 大剣・天ノ型
 #
 # @within function mhdp_core:tick
 
@@ -20,7 +20,8 @@
         {"text":"  命中後、空中で ","color": "#00FFC3","bold": false},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで","color": "#00FFC3","bold": false},\
         {"text":" ","color": "#00FFC3","bold": false},{"text":"空中溜め","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#00FFC3","bold": false},\
         {"text":"  通常の溜めと異なり、一瞬で溜めが溜まります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  そのまま、最大威力の溜め斬りを放つことができます。\n","color": "#00FFC3","bold": false}\
+        {"text":"  そのまま、最大威力の溜め斬りを放つことができます。\n","color": "#00FFC3","bold": false},\
+        {"text":"  着地後は、","color": "#00FFC3","bold": false},{"text":"マウス","color": "#00FFC3","bold": false},{"keybind":"key.use","color": "#00FFC3","bold": false},{"text":"長押しで強溜めに移行します。\n","color": "#00FFC3","bold": false}\
     ]
 
 # 初期スコア表示
@@ -28,17 +29,18 @@
     execute if score @s Vlg.General.Timer matches 2 run scoreboard players display numberformat $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text styled {"color":"yellow"}
     execute if score @s Vlg.General.Timer matches 2 run scoreboard players display name $mhdp_temp_weapon_tutorial_value_2 Vlg.WeaponTutorial.Text {"text":"最大まで溜めた空中溜め斬りを使用する：残り","color":"green"}
     execute if score @s Vlg.General.Timer matches 2 run scoreboard players display numberformat $mhdp_temp_weapon_tutorial_value_2 Vlg.WeaponTutorial.Text styled {"color":"yellow"}
+    execute if score @s Vlg.General.Timer matches 2 run scoreboard players reset $mhdp_temp_weapon_tutorial_value_3 Vlg.WeaponTutorial.Text
 # スコア設定
     execute if score @s Vlg.General.Timer matches 2 run scoreboard players set $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text 3
     execute if score @s Vlg.General.Timer matches 2 run scoreboard players set $mhdp_temp_weapon_tutorial_value_2 Vlg.WeaponTutorial.Text 3
     # スコア減算
         execute if score @s Vlg.General.Timer matches 3.. \
             if score $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text matches 0.. \
-            if entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Wpn.Gs.Normal.Charge.Edge,scores={Wpn.GeneralTimer=2}] run \
+            if entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Wpn.Gs.Tec.Charge.Edge,scores={Wpn.GeneralTimer=2}] run \
             scoreboard players remove $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text 1
         execute if score @s Vlg.General.Timer matches 3.. \
             if score $mhdp_temp_weapon_tutorial_value_2 Vlg.WeaponTutorial.Text matches 0.. \
-            if entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Wpn.Gs.Normal.ChargeSlash.Edge,scores={Wpn.GeneralTimer=2,Wpn.Gs.ChargeCount=3..}] run \
+            if entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Wpn.Gs.Tec.ChargeSlash.Edge,scores={Wpn.GeneralTimer=2,Wpn.Gs.ChargeCount=3..}] run \
             scoreboard players remove $mhdp_temp_weapon_tutorial_value_2 Vlg.WeaponTutorial.Text 1
     # チュートリアル完了
         execute if score @s Vlg.General.Timer matches 3.. \

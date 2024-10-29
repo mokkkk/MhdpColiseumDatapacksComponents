@@ -1,19 +1,28 @@
-#> mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/2_tackle
+#> mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_tec/2_tackle
 #
-# 武器チュートリアル 大剣・地ノ型
+# 武器チュートリアル 大剣・天ノ型
 #
 # @within function mhdp_core:tick
 
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：タックル ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  溜め中に ","color": "#00FFC3","bold": false},{"text":"ジャンプ","color": "#ff9900","bold": true},{"text":" すると、","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"タックル","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#00FFC3","bold": false},\
+        {"text":"\n【 チュートリアル：タックル ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  溜め中に ","color": "#00FFC3","bold": false},{"text":"ジャンプ","color": "#ff9900","bold": true},{"text":" すると","color": "#00FFC3","bold": false},\
+        {"text":" ","color": "#00FFC3","bold": false},{"text":"タックル","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#00FFC3","bold": false},\
         {"text":"  タックル中は ","color": "#00FFC3","bold": false},{"text":"モンスターの攻撃を受けても怯まず","color": "#ff9900","bold": true},{"text":" 、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"溜め段階を維持したまま","color": "#ff9900","bold": true},{"text":" 溜めに移行できます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  また、溜め段階に応じた打撃属性ダメージを与えます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ただし ","color": "#00FFC3","bold": false},{"text":"ダメージは無効化できない","color": "#ff9900","bold": true},{"text":" ので、HPに注意しましょう。\n","color": "#00FFC3","bold": false}\
+        {"text":"  溜め段階に応じた打撃属性ダメージを与えます。\n","color": "#00FFC3","bold": false},\
+        {"text":"  ただし ","color": "#00FFC3","bold": false},{"text":"ダメージは無効化できない","color": "#ff9900","bold": true},{"text":" ので、残りHPには注意しましょう。\n","color": "#00FFC3","bold": false}\
+    ]
+
+    execute if score @s Vlg.General.Timer matches 210 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
+    execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"\n【 チュートリアル：タックル ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  タックル中に","color": "#00FFC3","bold": false},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" を長押ししていると、\n","color": "#00FFC3","bold": false},\
+        {"text":"  そのまま溜めに移行します。\n","color": "#00FFC3","bold": false},\
+        {"text":"  その時 ","color": "#00FFC3","bold": false},{"text":"溜め斬りの段階が1つ進みます","color": "#ff9900","bold": true},{"text":" 。\n","color": "#00FFC3","bold": false},\
+        {"text":"  例えば、強溜め中にタックルを使用した場合、\n  タックル終了後は真溜めに移行します。\n","color": "#00FFC3","bold": false},\
+        {"text":"  モンスターの攻撃をやり過ごしつつ、\n  より強い溜め斬りをカウンターで放つことができます。\n","color": "#00FFC3","bold": false}\
     ]
 
 # 初期スコア表示
@@ -27,7 +36,7 @@
     # スコア減算
         execute if score @s Vlg.General.Timer matches 3.. \
             if score $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text matches 0.. \
-            if entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Wpn.Gs.Normal.Tackle,scores={Ply.Timer.DamageInterval=19}] run \
+            if entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Wpn.Gs.Tec.Tackle,scores={Ply.Timer.DamageInterval=19}] run \
             scoreboard players remove $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text 1
         execute if score @s Vlg.General.Timer matches 3.. \
             if score $mhdp_temp_weapon_tutorial_value_2 Vlg.WeaponTutorial.Text matches 0.. \
