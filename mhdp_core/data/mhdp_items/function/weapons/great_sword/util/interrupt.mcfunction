@@ -35,3 +35,5 @@
         scoreboard players set #mhdp_arg_cmd_offset MhdpCore 1
         data modify storage mhdp_core:temp Args.Slot set value "mainhand"
         execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function mhdp_items:core/util/item_modify_draw
+        data modify storage mhdp_core:temp Args.Slot set value "mainhand"
+        execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function mhdp_items:core/util/item_modify_draw
