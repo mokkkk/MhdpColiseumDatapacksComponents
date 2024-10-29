@@ -21,13 +21,13 @@
     execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
         {"text":"\n【 チュートリアル：溜め斬り ","color":"#00FFC3","bold": true},{"text":"2/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  溜め中は移動ができず、溜め斬り後は隙が大きいです。\n","color": "#00FFC3","bold": false},\
-        {"text":"  素早く納刀して隙をキャンセルすることで、\n","color": "#00FFC3","bold": false},\
+        {"text":"  素早く ","color": "#00FFC3","bold": false},{"text":"納刀して隙をキャンセル","color": "#ff9900","bold": true},{"text":" することで、","color": "#00FFC3","bold": false},\
         {"text":"  すぐにモンスターの攻撃の回避に移ることができます。\n","color": "#00FFC3","bold": false}\
     ]
 
     execute if score @s Vlg.General.Timer matches 410 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 410 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：溜め斬り ","color":"#00FFC3","bold": true},{"text":"1/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"\n【 チュートリアル：溜め斬り ","color":"#00FFC3","bold": true},{"text":"3/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  抜刀攻撃でも、溜め斬りが発動します。","color": "#00FFC3","bold": false},\
         {"text":"  空中で抜刀攻撃をすると、","color": "#00FFC3","bold": false},{"text":"前進しながら","color": "#ff9900","bold": true},{"text":" 溜めに移行します。\n","color": "#00FFC3","bold": false},\
         {"text":"  モンスターに近づきながら溜め斬りに移行できるので、\n","color": "#00FFC3","bold": false},\
