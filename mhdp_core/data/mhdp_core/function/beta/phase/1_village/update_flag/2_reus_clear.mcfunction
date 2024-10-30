@@ -11,4 +11,7 @@
     data modify storage mhdp_core:game_data QuestList[{ID:15}].State.Visible set value true
 
 # 通知
-    tellraw @a {"text":"\n\n【高難度クエストが解放されました】","color": "gold"}
+    title @a times 5 40 5
+    title @a subtitle {"text":"【高難度クエストが解放されました】","color": "gold","bold": true}
+    title @a title {"text":"","color": "gold"}
+    execute as @a at @s run playsound ui.button.click master @s ~ ~ ~ 2 1

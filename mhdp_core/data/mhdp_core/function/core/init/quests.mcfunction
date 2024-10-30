@@ -16,7 +16,7 @@
 
 # チュートリアル用
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:1,Name:"チュートリアル：青鳥竜の狩猟",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
+        ID:1,Name:"チュートリアル",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
         Content:{HpMultiply:12,AttackMultiply:20,Field:"Coliseum",Time:"day",TimeLimit:60,DeathCount:99,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1},\

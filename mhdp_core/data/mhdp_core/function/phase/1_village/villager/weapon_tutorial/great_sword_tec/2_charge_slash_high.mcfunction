@@ -8,30 +8,30 @@
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
         {"text":"\n【 チュートリアル：強溜め斬り ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  溜め斬り後に ","color": "#00FFC3","bold": false},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"強溜め斬り","color": "#ff9900","bold": true},{"text":" に移行します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ボタンを長押しする限り力を溜め、離すと攻撃します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  溜め斬りと同じく、3段階まで力を溜めることができ、\n  溜めすぎると威力が下がってしまいます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  通常の溜め斬りよりも高威力の攻撃ができます。\n","color": "#00FFC3","bold": false}\
+        {"text":"  溜め斬り後に ","color": "#FFFFFF","bold": false},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで、\n","color": "#FFFFFF","bold": false},\
+        {"text":"  ","color": "#FFFFFF","bold": false},{"text":"強溜め斬り","color": "#ff9900","bold": true},{"text":" に移行します。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  ボタンを長押しする限り力を溜め、離すと攻撃します。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  溜め斬りと同じく、3段階まで力を溜めることができ、\n  溜めすぎると威力が下がってしまいます。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  通常の溜め斬りよりも高威力の攻撃ができます。\n","color": "#FFFFFF","bold": false}\
     ]
 
     execute if score @s Vlg.General.Timer matches 210 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：真溜め斬り ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  強溜め斬り後に ","color": "#00FFC3","bold": false},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"真溜め斬り","color": "#ff9900","bold": true},{"text":" に移行します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ボタンを長押しする限り力を溜め、離すと攻撃します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  溜め段階や溜めすぎの注意点については、他と同じです。\n","color": "#00FFC3","bold": false}\
+        {"text":"【 チュートリアル：真溜め斬り ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  強溜め斬り後に ","color": "#FFFFFF","bold": false},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで、\n","color": "#FFFFFF","bold": false},\
+        {"text":"  ","color": "#FFFFFF","bold": false},{"text":"真溜め斬り","color": "#ff9900","bold": true},{"text":" に移行します。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  ボタンを長押しする限り力を溜め、離すと攻撃します。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  溜め段階や溜めすぎの注意点については、他と同じです。\n","color": "#FFFFFF","bold": false}\
     ]
 
     execute if score @s Vlg.General.Timer matches 410 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 410 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：真溜め斬り ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  溜め斬り、強溜め斬りを経る必要があるため、\n","color": "#00FFC3","bold": false},\
-        {"text":"  発動までに非常に時間がかかりますが、\n","color": "#00FFC3","bold": false},\
-        {"text":"  真溜め斬りは","color": "#00FFC3","bold": false},{"text":"全武器中最大の威力を誇る","color": "#ff9900","bold": true},{"text":" 攻撃です。\n","color": "#00FFC3","bold": false},\
-        {"text":"  後述のタックルなどを絡めて、積極的に狙いましょう。\n","color": "#00FFC3","bold": false},\
-        {"text":"  その代わり後隙は非常に長いので、\n  攻撃を当てた後は ","color": "#00FFC3","bold": false},{"text":"納刀キャンセル","color": "#ff9900","bold": true},{"text":" を駆使しましょう。\n","color": "#00FFC3","bold": false}\
+        {"text":"【 チュートリアル：真溜め斬り ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  溜め斬り、強溜め斬りを経る必要があるため、\n","color": "#FFFFFF","bold": false},\
+        {"text":"  発動までに非常に時間がかかりますが、\n","color": "#FFFFFF","bold": false},\
+        {"text":"  真溜め斬りは","color": "#FFFFFF","bold": false},{"text":"全武器中最大の威力を誇る","color": "#ff9900","bold": true},{"text":" 攻撃です。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  後述のタックルなどを絡めて、積極的に狙いましょう。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  その代わり後隙は非常に長いので、\n  攻撃を当てた後は ","color": "#FFFFFF","bold": false},{"text":"納刀キャンセル","color": "#ff9900","bold": true},{"text":" を駆使しましょう。\n","color": "#FFFFFF","bold": false}\
     ]
 
 # 初期スコア表示

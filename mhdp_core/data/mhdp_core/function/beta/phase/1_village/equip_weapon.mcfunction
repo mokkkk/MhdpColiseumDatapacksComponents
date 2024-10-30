@@ -6,7 +6,7 @@
 
 # ステータス設定
     scoreboard players set @s Ply.Stats.DefenceValue 0
-    execute if entity @s[tag=Beta.Ply.Weapon.Bow] run scoreboard players set @s Ply.Stats.DefenceValue -35
+    execute if entity @s[tag=Beta.Ply.Weapon.Bow] run scoreboard players set @s Ply.Stats.DefenceValue -15
 
 # アイテム消去
     clear @s

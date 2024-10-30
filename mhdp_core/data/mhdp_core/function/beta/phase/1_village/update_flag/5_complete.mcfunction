@@ -8,5 +8,8 @@
     data modify storage mhdp_core:save_data Flag.BetaComplete set value true
 
 # 通知
-    tellraw @a {"text":"\n\n【全てのクエストをクリアしました。おめでとうございます！】","bold": true,"color": "gold"}
+    title @a times 5 40 5
+    title @a subtitle {"text":"【全てのクエストをクリアしました。おめでとうございます！】","color": "gold","bold": true}
+    title @a title {"text":"","color": "gold"}
     advancement grant @a only adventure/kill_a_mob
+    execute as @a at @s run playsound ui.toast.challenge_complete master @s ~ ~ ~ 1 1

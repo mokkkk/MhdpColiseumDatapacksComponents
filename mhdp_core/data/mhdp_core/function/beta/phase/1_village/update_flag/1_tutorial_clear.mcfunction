@@ -16,4 +16,8 @@
     data modify storage mhdp_core:game_data QuestList[{ID:14}].State.Visible set value true
 
 # 通知
-    tellraw @a {"text":"\n\n【天ノ型が選択できるようになりました】","color": "gold"}
+    title @a times 5 40 5
+    title @a subtitle {"text":"【天の型が解放されました】","color": "gold","bold": true}
+    title @a title {"text":"","color": "gold"}
+    schedule function mhdp_core:beta/phase/1_village/update_flag/1_tutorial_clear_sub 60 append
+    execute as @a at @s run playsound ui.button.click master @s ~ ~ ~ 2 1

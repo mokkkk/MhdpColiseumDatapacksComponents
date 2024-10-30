@@ -8,18 +8,18 @@
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
         {"text":"\n【 チュートリアル：大剣・天ノ型の特徴 ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"大剣・天ノ型","color": "#ff9900","bold": true},{"text":" は、重い動作と強力な一撃、\n","color": "#00FFC3","bold": false},\
-        {"text":"  多数のアーマー技によるカウンターが特徴の、切断属性の武器です。\n","color": "#00FFC3","bold": false}\
+        {"text":"  ","color": "#FFFFFF","bold": false},{"text":"大剣・天ノ型","color": "#ff9900","bold": true},{"text":" は、重い動作と強力な一撃、\n","color": "#FFFFFF","bold": false},\
+        {"text":"  多数のアーマー技によるカウンターが特徴の、切断属性の武器です。\n","color": "#FFFFFF","bold": false}\
     ]
 
     execute if score @s Vlg.General.Timer matches 210 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：大剣・天ノ型の特徴 ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  天ノ型では、溜め → 強溜め → 真溜めのように、\n","color": "#00FFC3","bold": false},\
-        {"text":"  さらに威力の高い溜め斬りを連続で放つことができます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  それらを繋ぐタックルや相殺斬り上げを使い、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ダメージを受けながらもモンスターの攻撃をやり過ごし、\n","color": "#00FFC3","bold": false},\
-        {"text":"  本命の溜め斬りを当てる、カウンター寄りの戦い方を得意とします。\n","color": "#00FFC3","bold": false}\
+        {"text":"【 チュートリアル：大剣・天ノ型の特徴 ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  天ノ型では、溜め → 強溜め → 真溜めのように、\n","color": "#FFFFFF","bold": false},\
+        {"text":"  さらに威力の高い溜め斬りを連続で放つことができます。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  それらを繋ぐタックルや相殺斬り上げを使い、\n","color": "#FFFFFF","bold": false},\
+        {"text":"  ダメージを受けながらもモンスターの攻撃をやり過ごし、\n","color": "#FFFFFF","bold": false},\
+        {"text":"  本命の溜め斬りを当てる、カウンター寄りの戦い方を得意とします。\n","color": "#FFFFFF","bold": false}\
     ]
 
 # スコア表示
