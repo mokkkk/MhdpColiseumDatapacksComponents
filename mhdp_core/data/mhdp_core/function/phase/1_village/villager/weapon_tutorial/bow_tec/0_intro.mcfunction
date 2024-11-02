@@ -16,7 +16,7 @@
     execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
         {"text":"【 チュートリアル：弓・天ノ型の特徴 ","color":"#00FFC3","bold": true},{"text":"2/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  チャージステップにより、高速で移動しながら戦うことができます。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  また、仕掛け矢ゲージを用いることで、矢を強化し、大きなダメージを与えられます。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  また、仕掛け矢ゲージを用い、攻撃力を強化できます。\n","color": "#FFFFFF","bold": false},\
         {"text":"  行動のほとんどにスタミナが必要なため、\n","color": "#FFFFFF","bold": false},\
         {"text":"  スタミナが尽きないように注意する必要があります。\n","color": "#FFFFFF","bold": false}\
     ]

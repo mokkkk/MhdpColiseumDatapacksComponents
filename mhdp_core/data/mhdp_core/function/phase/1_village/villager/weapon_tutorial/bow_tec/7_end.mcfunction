@@ -1,6 +1,6 @@
-#> mhdp_core:phase/1_village/villager/weapon_tutorial/bow_normal/4_end
+#> mhdp_core:phase/1_village/villager/weapon_tutorial/bow_tec/4_end
 #
-# 武器チュートリアル 大剣・地ノ型
+# 武器チュートリアル 弓・天ノ型
 #
 # @within function mhdp_core:tick
 
@@ -8,8 +8,9 @@
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
         {"text":"\n【 チュートリアル：おわりに ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  弓・地ノ型の使い方についての説明は以上です。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  的確に弱点を射抜き、華麗に戦いましょう！\n","color": "#FFFFFF","bold": false}\
+        {"text":"  弓・天ノ型の使い方についての説明は以上です。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  スタミナ管理は難しいものの、使いこなせば非常に強力な武器です。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  怒涛の連射で、モンスターの弱点を射抜きましょう！\n","color": "#FFFFFF","bold": false}\
     ]
 
 # 遷移：一定時間後

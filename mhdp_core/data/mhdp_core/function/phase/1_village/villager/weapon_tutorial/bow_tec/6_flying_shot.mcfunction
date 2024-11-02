@@ -1,4 +1,4 @@
-#> mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/3_flying_shot
+#> mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_normal/6_flying_shot
 #
 # 武器チュートリアル 大剣・地ノ型
 #
@@ -24,7 +24,7 @@
     # スコア減算
         execute if score @s Vlg.General.Timer matches 3.. \
             if score $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text matches 0.. \
-            if entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Wpn.Bw.Normal.FlyingShot,scores={Wpn.GeneralTimer=7}] run \
+            if entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Wpn.Bw.Tec.FlyingShot,scores={Wpn.GeneralTimer=7}] run \
             scoreboard players remove $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text 1
     # チュートリアル完了
         execute if score @s Vlg.General.Timer matches 3.. \

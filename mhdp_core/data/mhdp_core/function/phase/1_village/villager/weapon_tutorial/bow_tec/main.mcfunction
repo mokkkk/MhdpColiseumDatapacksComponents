@@ -22,12 +22,18 @@
 # 竜の一矢
     execute if score @s Vlg.General.Counter matches 3 run function mhdp_core:phase/1_village/villager/weapon_tutorial/bow_tec/3_pierce
 
-# # 翔蟲装備：飛翔にらみ撃ち
-#     execute if score @s Vlg.General.Counter matches 3 unless entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Itm.Sp.Wirebug] run scoreboard players add @s Vlg.General.Counter 1
-#     execute if score @s Vlg.General.Counter matches 3 run function mhdp_core:phase/1_village/villager/weapon_tutorial/bow_tec/3_flying_shot
+# ビンゲージ、仕込み矢ゲージ
+    execute if score @s Vlg.General.Counter matches 4 run function mhdp_core:phase/1_village/villager/weapon_tutorial/bow_tec/4_gauge
+
+# ビン装填・導ノ矢
+    execute if score @s Vlg.General.Counter matches 5 run function mhdp_core:phase/1_village/villager/weapon_tutorial/bow_tec/5_use_gauge
+
+# 翔蟲装備：飛翔にらみ撃ち
+    execute if score @s Vlg.General.Counter matches 6 unless entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Itm.Sp.Wirebug] run scoreboard players add @s Vlg.General.Counter 1
+    execute if score @s Vlg.General.Counter matches 6 run function mhdp_core:phase/1_village/villager/weapon_tutorial/bow_tec/6_flying_shot
 
 # おわり
-    execute if score @s Vlg.General.Counter matches 4 run function mhdp_core:phase/1_village/villager/weapon_tutorial/bow_tec/4_end
+    execute if score @s Vlg.General.Counter matches 7 run function mhdp_core:phase/1_village/villager/weapon_tutorial/bow_tec/7_end
 
 # 終了
-    execute if score @s Vlg.General.Counter matches 5.. run function mhdp_core:phase/1_village/villager/weapon_tutorial/end
+    execute if score @s Vlg.General.Counter matches 8.. run function mhdp_core:phase/1_village/villager/weapon_tutorial/end

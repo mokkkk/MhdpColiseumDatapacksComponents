@@ -7,17 +7,27 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：チャージステップ ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"\n【 チュートリアル：チャージステップ ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  溜め中、または射撃後に","color": "#FFFFFF","bold": false},{"text":"ジャンプ","color": "#ff9900","bold": true},{"text":" すると、\n","color": "#FFFFFF","bold": false},\
         {"text":"  ","color": "#FFFFFF","bold": false},{"text":"チャージステップ","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#FFFFFF","bold": false},\
         {"text":"  高速で移動しながら ","color": "#FFFFFF","bold": false},{"text":"溜めレベルを1段階上昇","color": "#ff9900","bold": true},{"text":" させます。\n","color": "#FFFFFF","bold": false},\
         {"text":"  チャージステップの発動には、スタミナが必要なので注意しましょう。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  最大レベルの射撃後にチャージステップを使用することで、\n","color": "#FFFFFF","bold": false},\
-        {"text":"  ","color": "#FFFFFF","bold": false},{"text":"最大レベルの射撃を連続で使用することができます","color": "#ff9900","bold": true},{"text":"。\n","color": "#FFFFFF","bold": false}\
+        {"text":"  ","color": "#FFFFFF","bold": false},{"text":"最大レベルの射撃後にチャージステップを使用する","color": "#ff9900","bold": true},{"text":" ことで、\n","color": "#FFFFFF","bold": false},\
+        {"text":"  隙をキャンセルしつつ ","color": "#FFFFFF","bold": false},{"text":"連続で射撃することができます","color": "#ff9900","bold": true},{"text":" 。\n","color": "#FFFFFF","bold": false}\
     ]
 
     execute if score @s Vlg.General.Timer matches 200 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 200 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"【 チュートリアル：チャージステップ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  チャージステップの開始時には ","color": "#FFFFFF","bold": false},{"text":"無敵時間","color": "#ff9900","bold": true},{"text":" があります。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  無敵時間でモンスターの攻撃を避けると ","color": "#FFFFFF","bold": false},{"text":"ジャスト回避","color": "#ff9900","bold": true},{"text":" となり、\n","color": "#FFFFFF","bold": false},\
+        {"text":"  ","color": "#FFFFFF","bold": false},{"text":"スタミナと仕込み矢ゲージが大きく増加","color": "#ff9900","bold": true},{"text":" します。\n","color": "#FFFFFF","bold": false},\
+        {"text":"  非常に大きなメリットのため、見切りやすい攻撃を見つけ、\n","color": "#FFFFFF","bold": false},\
+        {"text":"  積極的に狙いましょう。\n","color": "#FFFFFF","bold": false}\
+    ]
+
+    execute if score @s Vlg.General.Timer matches 350 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
+    execute if score @s Vlg.General.Timer matches 350 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
         {"text":"【 チュートリアル：溜めレベル ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  ","color": "#FFFFFF","bold": false},{"text":"溜めレベル","color": "#ff9900","bold": true},{"text":" の上げ方は、以下の手段があります。\n","color": "#FFFFFF","bold": false},\
         {"text":"  状況に応じて使い分けましょう。\n","color": "#FFFFFF","bold": false},\
@@ -65,4 +75,5 @@
 
 # 遷移：時間
     execute if score $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text matches ..0 \
+            if score $mhdp_temp_weapon_tutorial_value_2 Vlg.WeaponTutorial.Text matches ..0 \
             if score @s Vlg.General.Timer matches 420.. run function mhdp_core:phase/1_village/villager/weapon_tutorial/change_phase
