@@ -105,6 +105,7 @@
         #declare tag Ply.Temp.Tutorial.DrawAttack 抜刀攻撃チュートリアル
         #declare tag Ply.Temp.Tutorial.Avoid 回避チュートリアル
         #declare tag Ply.Temp.Tutorial.Guard ガードチュートリアル
+        #declare tag Ply.Temp.Tutorial.CritShot クリティカル距離チュートリアル
 # 村人
     # 処理用
         #declare tag Vlg.Root 村人の共通タグ

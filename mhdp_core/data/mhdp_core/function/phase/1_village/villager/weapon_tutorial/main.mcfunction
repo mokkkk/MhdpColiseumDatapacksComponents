@@ -19,6 +19,9 @@
 # 大剣・天ノ型
     execute if entity @s[tag=Vlg.WeaponTutorial.GreatSword.Tec] run function mhdp_core:phase/1_village/villager/weapon_tutorial/great_sword_tec/main
 
+# 弓・地ノ型
+    execute if entity @s[tag=Vlg.WeaponTutorial.Bow.Normal] run function mhdp_core:phase/1_village/villager/weapon_tutorial/bow_normal/main
+
 # 対象プレイヤー更新
     tag @a[tag=Ply.State.IsTraining,team=!Team.WeaponTutorial,tag=Vlg.WeaponTutorial.TargetPlayer] remove Vlg.WeaponTutorial.TargetPlayer
     tag @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=!Vlg.WeaponTutorial.TargetPlayer] add Vlg.WeaponTutorial.TargetPlayer

@@ -15,6 +15,7 @@
     team leave @a[team=Team.WeaponTutorial]
     tag @a remove Vlg.WeaponTutorial.TargetPlayer
     tag @a remove Ply.Temp.Tutorial.Guard
+    tag @a remove Ply.Temp.Tutorial.CritShot
 
 # 終了
     kill @e[tag=Vlg.WeaponTutorial]

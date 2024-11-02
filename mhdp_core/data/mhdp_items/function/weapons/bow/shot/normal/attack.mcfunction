@@ -18,6 +18,7 @@
 # クリティカル距離設定
     scoreboard players set #mhdp_temp_crit_min MhdpCore 3
     scoreboard players set #mhdp_temp_crit_max MhdpCore 9
+    execute if entity @a[tag=Ply.Temp.TargetSub,tag=Ply.Weapon.Bow.IsHorming] run scoreboard players set #mhdp_temp_crit_max MhdpCore 12
     execute if entity @s[tag=Wpn.Bw.Shot.Normal.Flying] run scoreboard players set #mhdp_temp_crit_max MhdpCore 30
     execute if score #mhdp_temp_crit_min MhdpCore <= @s Mns.Shot.Timer if score @s Mns.Shot.Timer <= #mhdp_temp_crit_max MhdpCore run tag @s add Temp.IsCrit
 
@@ -34,6 +35,8 @@
         execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches 1 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Shot.2.Crit
         execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches 2 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Shot.3.Crit
         execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches 3.. run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Shot.4.Crit
+        # チュートリアル用処理
+            execute if entity @s[tag=Temp.IsCrit] run tag @a[tag=Ply.Temp.TargetSub,tag=Ply.Temp.Tutorial.CritShot] remove Ply.Temp.Tutorial.CritShot
     # 導ノ矢補正
         execute if entity @a[tag=Ply.Temp.TargetSub,tag=Ply.Weapon.Bow.IsHorming] if score @a[tag=Ply.Temp.TargetSub,limit=1] Wpn.Bw.HormingTarget = @n[tag=Temp.Victim] Entity.Uuid run function mhdp_items:weapons/bow/shot/normal/attack_horming
     # 強撃ビン補正

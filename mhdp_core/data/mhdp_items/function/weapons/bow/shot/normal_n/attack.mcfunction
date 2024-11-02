@@ -36,6 +36,8 @@
         execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches 2 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.3.Crit
         execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches 3 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.4.Crit
         execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches 4.. run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.5.Crit
+        # チュートリアル用処理
+                execute if entity @s[tag=Temp.IsCrit] run tag @a[tag=Ply.Temp.TargetSub,tag=Ply.Temp.Tutorial.CritShot] remove Ply.Temp.Tutorial.CritShot
     execute as @a[tag=Ply.Temp.TargetSub] if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
 # 終了
