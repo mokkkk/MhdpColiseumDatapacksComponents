@@ -22,6 +22,9 @@
 # 弓・地ノ型
     execute if entity @s[tag=Vlg.WeaponTutorial.Bow.Normal] run function mhdp_core:phase/1_village/villager/weapon_tutorial/bow_normal/main
 
+# 弓・天ノ型
+    execute if entity @s[tag=Vlg.WeaponTutorial.Bow.Tec] run function mhdp_core:phase/1_village/villager/weapon_tutorial/bow_tec/main
+
 # 対象プレイヤー更新
     tag @a[tag=Ply.State.IsTraining,team=!Team.WeaponTutorial,tag=Vlg.WeaponTutorial.TargetPlayer] remove Vlg.WeaponTutorial.TargetPlayer
     tag @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=!Vlg.WeaponTutorial.TargetPlayer] add Vlg.WeaponTutorial.TargetPlayer

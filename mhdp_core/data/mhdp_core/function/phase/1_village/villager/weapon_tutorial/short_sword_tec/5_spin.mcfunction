@@ -9,7 +9,7 @@
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
         {"text":"\n【 チュートリアル：回転斬り・旋刈り ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  ","color": "#00FFC3","bold": false},{"text":"回転斬り","color": "#ff9900","bold": true},{"text":" は、各コンボの1・2段目の後に\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"スニーク+マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":"同時押し","color": "#ff9900","bold": true},{"text":" で発動します。\n","color": "#00FFC3","bold": false},\
+        {"text":"  ","color": "#00FFC3","bold": false},{"keybind":"key.sneak","color": "#ff9900","bold": true},{"text":"キーとマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":"同時押し","color": "#ff9900","bold": true},{"text":" で発動します。\n","color": "#00FFC3","bold": false},\
         {"text":"  高威力の単発攻撃で、使用後、各コンボ1段目に派生できるため、\n","color": "#00FFC3","bold": false},\
         {"text":"  さらにコンボをつなげることができます。\n","color": "#00FFC3","bold": false}\
     ]
