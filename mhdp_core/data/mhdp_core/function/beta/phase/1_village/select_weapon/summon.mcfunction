@@ -28,18 +28,16 @@
     summon item_display 250 65 215 {item:{id:"minecraft:iron_sword",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Training"],billboard:"vertical"}
 
 # からくり飛竜操作用
-# TODO:闘技場完成後、場所を移す
-    summon text_display 145 60 -17 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.KarakuriOpe"],text:'{"bold":true,"color":"white","text":"[からくり飛竜のモード変更]"}',alignment:"center"}
-    summon text_display 145 59.6 -17 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.KarakuriOpe"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
-    summon interaction 145 58 -17 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.KarakuriOpe"],response:1b}
-    summon item_display 145 59 -17 {item:{id:"minecraft:iron_pickaxe",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.KarakuriOpe"],billboard:"vertical"}
+    summon text_display -89 71 801 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.KarakuriOpe"],text:'{"bold":true,"color":"white","text":"[からくり飛竜のモード変更]"}',alignment:"center"}
+    summon text_display -89 70.6 801 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.KarakuriOpe"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
+    summon interaction -89 69 801 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.KarakuriOpe"],response:1b}
+    summon item_display -89 70 801 {item:{id:"minecraft:iron_pickaxe",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.KarakuriOpe"],billboard:"vertical"}
 
 # 武器チュートリアル再生用
-# TODO:闘技場完成後、場所を移す
-    summon text_display 145 60 -2 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.WeaponTutorial"],text:'{"bold":true,"color":"white","text":"[武器の操作説明]"}',alignment:"center"}
-    summon text_display 145 59.6 -2 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.WeaponTutorial"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
-    summon interaction 145 58 -2 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.WeaponTutorial"],response:1b}
-    summon item_display 145 59 -2 {item:{id:"minecraft:book",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.WeaponTutorial"],billboard:"vertical"}
+    summon text_display -101 71 793 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.WeaponTutorial"],text:'{"bold":true,"color":"white","text":"[武器の操作説明]"}',alignment:"center"}
+    summon text_display -101 70.6 793 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.WeaponTutorial"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
+    summon interaction -101 69 793 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.WeaponTutorial"],response:1b}
+    summon item_display -101 70 793 {item:{id:"minecraft:book",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.WeaponTutorial"],billboard:"vertical"}
 
 # Text
     summon text_display 234 65 198.8 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Ss.Normal"],text:'{"bold":true,"color":"#FF8282","text":"[片手剣・地ノ型]"}',alignment:"center"}

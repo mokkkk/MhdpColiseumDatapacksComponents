@@ -19,6 +19,5 @@
     tag @s add Ply.State.IsTraining
 
 # 訓練所に移動
-# TODO:マップの適用が終わったら座標を更新する
-    tp @s 139 58 -10 -90 ~
-    spawnpoint @s 139 58 -10 -90
+    tp @s -88 69 762 -90 ~
+    spawnpoint @s -88 69 762 -90
