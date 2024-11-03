@@ -15,18 +15,20 @@
 # メッセージ
     execute if score @s Mns.General.DummyTimer matches 60 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Mns.General.DummyTimer matches 60 run tellraw @a[tag=Ply.State.PlayingQuest] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：怯み ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  同じ部位に攻撃し続けると、モンスターが ","color": "#00FFC3","bold": false},{"text":"怯み、隙が生じます","color": "#ff9900","bold": true},{"text": " 。\n","color": "#00FFC3","bold": false},\
-        {"text":"  部位によっては ","color": "#00FFC3","bold": false},{"text":"部位破壊","color": "#ff9900","bold": true},{"text": " が発生します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  部位破壊すると、貰える報酬が増えたり、\n  モンスターの攻撃が弱体化することがあります。\n","color": "#00FFC3","bold": false}\
+        {"text":"  同じ部位に攻撃し続けると、モンスターが "},{"text":"怯み、隙が生じます","color": "#ff9900","bold": true},{"text": " 。\n"},\
+        {"text":"  部位によっては "},{"text":"部位破壊","color": "#ff9900","bold": true},{"text": " が発生します。\n"},\
+        {"text":"  部位破壊すると、貰える報酬が増えたり、\n  モンスターの攻撃が弱体化することがあります。\n"}\
     ]
 
     execute if score @s Mns.General.DummyTimer matches 260 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Mns.General.DummyTimer matches 260 run tellraw @a[tag=Ply.State.PlayingQuest] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：怯み ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  怯みの動作は、部位によって異なります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  例えば、足に攻撃し続けると ","color": "#00FFC3","bold": false},{"text":"モンスターが転倒する","color": "#ff9900","bold": true},{"text": " ことがあります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  モンスターによって有効な部位は異なるので、\n  戦う相手によって狙う部位を変えましょう。\n","color": "#00FFC3","bold": false}\
+        {"text":"  怯みの動作は、部位によって異なります。\n"},\
+        {"text":"  例えば、足に攻撃し続けると "},{"text":"モンスターが転倒する","color": "#ff9900","bold": true},{"text": " ことがあります。\n"},\
+        {"text":"  モンスターによって有効な部位は異なるので、\n  戦う相手によって狙う部位を変えましょう。\n"}\
     ]
 
 # スコア表示

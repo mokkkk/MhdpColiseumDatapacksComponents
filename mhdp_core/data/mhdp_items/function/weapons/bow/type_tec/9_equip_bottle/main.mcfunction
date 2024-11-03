@@ -14,6 +14,7 @@
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_iron master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
     execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_iron master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
+    execute if score @s Wpn.AnimationTimer matches 1 run playsound block.iron_door.close master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.6
     execute if score @s Wpn.AnimationTimer matches 14 run playsound block.brewing_stand.brew master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s Wpn.AnimationTimer matches 14 run playsound block.brewing_stand.brew master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/animation_0

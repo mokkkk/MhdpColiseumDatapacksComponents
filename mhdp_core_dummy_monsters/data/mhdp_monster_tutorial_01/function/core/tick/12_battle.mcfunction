@@ -12,9 +12,10 @@
 # メッセージ
     execute if score @s Mns.General.DummyTimer matches 60 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Mns.General.DummyTimer matches 60 run tellraw @a[tag=Ply.State.PlayingQuest] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：狩猟 ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  それでは、これまでの知識を活かして、\n","color": "#00FFC3","bold": false},\
-        {"text":"  実際にモンスターと戦ってみましょう。\n","color": "#00FFC3","bold": false}\
+        {"text":"  それでは、これまでの知識を活かして、\n"},\
+        {"text":"  実際にモンスターと戦ってみましょう。\n"}\
     ]
 
 # 初期スコア表示

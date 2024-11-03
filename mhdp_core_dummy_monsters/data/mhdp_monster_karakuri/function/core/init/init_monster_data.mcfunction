@@ -4,7 +4,7 @@
 #
 # @within function 
 
-## 青鳥竜
+## からくり飛竜
 
 # scoreboard定義
     # 頭部位耐久値

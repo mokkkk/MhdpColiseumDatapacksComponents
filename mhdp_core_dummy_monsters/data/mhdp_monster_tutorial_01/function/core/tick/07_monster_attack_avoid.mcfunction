@@ -13,18 +13,20 @@
 # メッセージ
     execute if score @s Mns.General.DummyTimer matches 60 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Mns.General.DummyTimer matches 60 run tellraw @a[tag=Ply.State.PlayingQuest] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：回避 ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"ダッシュジャンプ","color": "#ff9900","bold": true},{"text": " の出始めには、無敵時間があります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  その間にモンスターの攻撃に当たると ","color": "#00FFC3","bold": false},{"text":"ジャンプ回避","color": "#ff9900","bold": true},{"text": " が発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  武器の攻撃中はジャンプできないため、\n  攻撃の手を止めるか、納刀する必要があります。\n","color": "#00FFC3","bold": false}\
+        {"text":"  "},{"text":"ダッシュジャンプ","color": "#ff9900","bold": true},{"text": " の出始めには、無敵時間があります。\n"},\
+        {"text":"  その間にモンスターの攻撃に当たると "},{"text":"ジャンプ回避","color": "#ff9900","bold": true},{"text": " が発動します。\n"},\
+        {"text":"  武器の攻撃中はジャンプできないため、\n  攻撃の手を止めるか、納刀する必要があります。\n"}\
     ]
 
     execute if score @s Mns.General.DummyTimer matches 260 as @a[tag=Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Mns.General.DummyTimer matches 260 run tellraw @a[tag=Ply.State.PlayingQuest] [\
-        {"text":"\n【 チュートリアル：回避 ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  無敵時間は短いため、成功させるのは難しいですが、\n","color": "#00FFC3","bold": false},\
-        {"text":"  成功すると ","color": "#00FFC3","bold": false},{"text":"ダメージとノックバックを完全に無効化","color": "#ff9900","bold": true},{"text": " できます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  また、攻撃の他にも、咆哮や風圧によるノックバックも無効化できます。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：回避 ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  無敵時間は短いため、成功させるのは難しいですが、\n"},\
+        {"text":"  成功すると "},{"text":"ダメージとノックバックを完全に無効化","color": "#ff9900","bold": true},{"text": " できます。\n"},\
+        {"text":"  また、攻撃の他にも、咆哮や風圧によるノックバックも無効化できます。\n"}\
     ]
 
 # 初期スコア表示
