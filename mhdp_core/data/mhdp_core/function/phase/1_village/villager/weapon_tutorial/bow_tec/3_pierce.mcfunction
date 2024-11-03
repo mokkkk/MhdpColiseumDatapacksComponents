@@ -7,20 +7,22 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：竜の一矢 ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  射撃後、または剛射後に ","color": "#FFFFFF","bold": false},{"text":"スニークしながらマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで、\n","color": "#FFFFFF","bold": false},\
-        {"text":"  ","color": "#FFFFFF","bold": false},{"text":"竜の一矢","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  長時間溜めた後 ","color": "#FFFFFF","bold": false},{"text":"貫通し複数ヒットする矢","color": "#ff9900","bold": true},{"text":" を撃ちます。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  クリティカル距離が長く、遠くからでも大ダメージを与えられるほか、\n","color": "#FFFFFF","bold": false},\
-        {"text":"  ","color": "#FFFFFF","bold": false},{"text":"切断属性","color": "#ff9900","bold": true},{"text":" を持つため、尻尾などへのダメージが上がります。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  竜の一矢は ","color": "#FFFFFF","bold": false},{"text":"直前の射撃の溜めレベル","color": "#ff9900","bold": true},{"text":" に応じて威力が変わります。\n","color": "#FFFFFF","bold": false}\
+        {"text":"  射撃後、または剛射後に "},{"text":"スニークしながらマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで、\n"},\
+        {"text":"  "},{"text":"竜の一矢","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
+        {"text":"  長時間溜めた後 "},{"text":"貫通し複数ヒットする矢","color": "#ff9900","bold": true},{"text":" を撃ちます。\n"},\
+        {"text":"  クリティカル距離が長く、遠くからでも大ダメージを与えられるほか、\n"},\
+        {"text":"  "},{"text":"切断属性","color": "#ff9900","bold": true},{"text":" を持つため、尻尾などへのダメージが上がります。\n"},\
+        {"text":"  竜の一矢は "},{"text":"直前の射撃の溜めレベル","color": "#ff9900","bold": true},{"text":" に応じて威力が変わります。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 240 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 240 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"【 チュートリアル：竜の一矢 ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  竜の一矢は ","color": "#FFFFFF","bold": false},{"text":"スタミナを消費しません","color": "#ff9900","bold": true},{"text":" 。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  スタミナが尽きる直前に、コンボの締めとして使うと良いでしょう。\n","color": "#FFFFFF","bold": false}\
+        {"text":"  竜の一矢は "},{"text":"スタミナを消費しません","color": "#ff9900","bold": true},{"text":" 。\n"},\
+        {"text":"  スタミナが尽きる直前に、コンボの締めとして使うと良いでしょう。\n"}\
     ]
 
 # 初期スコア表示

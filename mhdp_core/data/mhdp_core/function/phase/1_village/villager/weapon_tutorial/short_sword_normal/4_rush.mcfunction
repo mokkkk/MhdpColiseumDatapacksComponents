@@ -7,20 +7,22 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：剣盾ラッシュ ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  溜め後 ","color": "#00FFC3","bold": false},\
-            {"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" を押し続けると、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"剣盾ラッシュ","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  マウス","color": "#00FFC3","bold": false},{"keybind":"key.use","color": "#00FFC3","bold": false},{"text":"を押し続ける限り連続で攻撃し、\n","color": "#00FFC3","bold": false},\
-        {"text":"  最大で8回攻撃し、最後の攻撃は2回ヒットします。\n","color": "#00FFC3","bold": false}\
+        {"text":"  溜め後 "},\
+            {"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" を押し続けると、\n"},\
+        {"text":"  "},{"text":"剣盾ラッシュ","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
+        {"text":"  マウス"},{"keybind":"key.use"},{"text":"を押し続ける限り連続で攻撃し、\n"},\
+        {"text":"  最大で8回攻撃し、最後の攻撃は2回ヒットします。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 260 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 260 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：剣盾ラッシュ ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  剣コンボとは異なり ","color": "#00FFC3","bold": false},{"text":"途中で中断しにくい","color": "#ff9900","bold": true},{"text":" ですが、\n","color": "#00FFC3","bold": false},\
-        {"text":"  片手剣・地ノ型の中では最大の威力を誇ります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  モンスターの隙を見て、積極的に使用しましょう。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：剣盾ラッシュ ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  剣コンボとは異なり "},{"text":"途中で中断しにくい","color": "#ff9900","bold": true},{"text":" ですが、\n"},\
+        {"text":"  片手剣・地ノ型の中では最大の威力を誇ります。\n"},\
+        {"text":"  モンスターの隙を見て、積極的に使用しましょう。\n"}\
     ]
 
 # 初期スコア表示

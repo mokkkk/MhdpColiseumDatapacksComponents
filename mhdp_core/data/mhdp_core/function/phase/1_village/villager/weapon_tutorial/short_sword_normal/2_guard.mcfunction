@@ -7,21 +7,23 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：ガード ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"スニーク","color": "#ff9900","bold": true},{"text":" すると、ガードが発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ガード中にモンスターの攻撃を受けると、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"スタミナを消費","color": "#ff9900","bold": true},{"text":" して受けるダメージを軽減します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"スタミナが足りないと失敗する","color": "#ff9900","bold": true},{"text":" ので、注意してください。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ガードしても斬れ味は消費しません。\n","color": "#00FFC3","bold": false}\
+        {"text":"  "},{"text":"スニーク","color": "#ff9900","bold": true},{"text":" すると、ガードが発動します。\n"},\
+        {"text":"  ガード中にモンスターの攻撃を受けると、\n"},\
+        {"text":"  "},{"text":"スタミナを消費","color": "#ff9900","bold": true},{"text":" して受けるダメージを軽減します。\n"},\
+        {"text":"  "},{"text":"スタミナが足りないと失敗する","color": "#ff9900","bold": true},{"text":" ので、注意してください。\n"},\
+        {"text":"  ガードしても斬れ味は消費しません。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 260 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 260 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：ガード ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  また、片手剣は盾が小さいため、\n","color": "#00FFC3","bold": false},\
-        {"text":"  他の武器に比べて ","color": "#00FFC3","bold": false},{"text":"ダメージを軽減しにくい","color": "#ff9900","bold": true},{"text":" です。\n","color": "#00FFC3","bold": false},\
-        {"text":"  そのため、モンスターの攻撃は基本的に回避し、\n","color": "#00FFC3","bold": false},\
-        {"text":"  避けられないと思った攻撃だけガードするような使い方が良いでしょう。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：ガード ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  また、片手剣は盾が小さいため、\n"},\
+        {"text":"  他の武器に比べて "},{"text":"ダメージを軽減しにくい","color": "#ff9900","bold": true},{"text":" です。\n"},\
+        {"text":"  そのため、モンスターの攻撃は基本的に回避し、\n"},\
+        {"text":"  避けられないと思った攻撃だけガードするような使い方が良いでしょう。\n"}\
     ]
 
 # 初期スコア表示

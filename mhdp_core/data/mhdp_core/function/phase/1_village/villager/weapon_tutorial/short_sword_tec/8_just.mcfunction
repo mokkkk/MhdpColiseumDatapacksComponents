@@ -7,32 +7,35 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：ジャストラッシュ ","color":"#00FFC3","bold": true},{"text":"1/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  バックステップ中に ","color": "#00FFC3","bold": false},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":"を短押し","color": "#ff9900","bold": true},{"text":" すると、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"ジャストラッシュ","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  剣と盾を組み合わせた、最大4段目までつながるコンボ攻撃で、\n","color": "#00FFC3","bold": false},\
-        {"text":"  1段目は突進斬りと同じく、前進しながら攻撃します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  4段目の突きを、モンスターに当てると ","color": "#00FFC3","bold": false},{"text":"駆け上がり斬り","color": "#ff9900","bold": true},{"text":" に派生します。\n","color": "#00FFC3","bold": false}\
+        {"text":"  バックステップ中に "},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":"を短押し","color": "#ff9900","bold": true},{"text":" すると、\n"},\
+        {"text":"  "},{"text":"ジャストラッシュ","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
+        {"text":"  剣と盾を組み合わせた、最大4段目までつながるコンボ攻撃で、\n"},\
+        {"text":"  1段目は突進斬りと同じく、前進しながら攻撃します。\n"},\
+        {"text":"  4段目の突きを、モンスターに当てると "},{"text":"駆け上がり斬り","color": "#ff9900","bold": true},{"text":" に派生します。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 310 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 310 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：ジャストラッシュ ","color":"#00FFC3","bold": true},{"text":"2/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ジャストラッシュには、攻撃が止まるタイミングがあります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  その時に ","color": "#00FFC3","bold": false},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" を押すことで、\n","color": "#00FFC3","bold": false},\
-        {"text":"  次の段の攻撃へ派生することができます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  そのとき、","color": "#00FFC3","bold": false},{"text":"体が光るタイミング","color": "#ff9900","bold": true},{"text":" ぴったりに入力すると、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"ジャスト入力","color": "#ff9900","bold": true},{"text":" となり、攻撃の威力が大きく上昇します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ダメージが大きく変わるので、ジャスト入力を成功させましょう。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：ジャストラッシュ ","color":"#00FFC3","bold": true},{"text":"2/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  ジャストラッシュには、攻撃が止まるタイミングがあります。\n"},\
+        {"text":"  その時に "},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" を押すことで、\n"},\
+        {"text":"  次の段の攻撃へ派生することができます。\n"},\
+        {"text":"  そのとき、"},{"text":"体が光るタイミング","color": "#ff9900","bold": true},{"text":" ぴったりに入力すると、\n"},\
+        {"text":"  "},{"text":"ジャスト入力","color": "#ff9900","bold": true},{"text":" となり、攻撃の威力が大きく上昇します。\n"},\
+        {"text":"  ダメージが大きく変わるので、ジャスト入力を成功させましょう。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 610 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 610 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：ジャストラッシュ ","color":"#00FFC3","bold": true},{"text":"3/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  最後の突きを当てた駆け上がり斬りの後に発動したフォールバッシュは、\n","color": "#00FFC3","bold": false},\
-        {"text":"  通常とは異なり ","color": "#00FFC3","bold": false},{"text":"移動中と着地時で2回ヒット","color": "#ff9900","bold": true},{"text":" します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  フォールバッシュまでも含め、片手剣の中で最大の威力を誇ります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  モンスターの転倒時などの大きな隙を狙って発動しましょう。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：ジャストラッシュ ","color":"#00FFC3","bold": true},{"text":"3/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  最後の突きを当てた駆け上がり斬りの後に発動したフォールバッシュは、\n"},\
+        {"text":"  通常とは異なり "},{"text":"移動中と着地時で2回ヒット","color": "#ff9900","bold": true},{"text":" します。\n"},\
+        {"text":"  フォールバッシュまでも含め、片手剣の中で最大の威力を誇ります。\n"},\
+        {"text":"  モンスターの転倒時などの大きな隙を狙って発動しましょう。\n"}\
     ]
 
 # 初期スコア表示

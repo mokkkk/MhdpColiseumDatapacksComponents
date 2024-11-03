@@ -7,20 +7,22 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：ハンティングエッジ ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  大剣の鉄蟲糸技は ","color": "#00FFC3","bold": false},{"text":"ハンティングエッジ","color": "#ff9900","bold": true},{"text":" です。\n","color": "#00FFC3","bold": false},\
-        {"text":"  翔蟲の移動中に ","color": "#00FFC3","bold": false},{"text":"抜刀攻撃","color": "#ff9900","bold": true},{"text":" をすると発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  モンスターに攻撃が命中すると、そのまま大きく飛び上がります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  モンスターより少し上を狙って翔蟲で移動すると、攻撃が当てやすいです。\n","color": "#00FFC3","bold": false}\
+        {"text":"  大剣の鉄蟲糸技は "},{"text":"ハンティングエッジ","color": "#ff9900","bold": true},{"text":" です。\n"},\
+        {"text":"  翔蟲の移動中に "},{"text":"抜刀攻撃","color": "#ff9900","bold": true},{"text":" をすると発動します。\n"},\
+        {"text":"  モンスターに攻撃が命中すると、そのまま大きく飛び上がります。\n"},\
+        {"text":"  モンスターより少し上を狙って翔蟲で移動すると、攻撃が当てやすいです。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 210 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：ハンティングエッジ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  命中後、空中で ","color": "#00FFC3","bold": false},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで","color": "#00FFC3","bold": false},\
-        {"text":" ","color": "#00FFC3","bold": false},{"text":"空中溜め","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  通常の溜めと異なり、一瞬で溜めが溜まります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  そのまま、最大威力の溜め斬りを放つことができます。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：ハンティングエッジ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  命中後、空中で "},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで"},\
+        {"text":" "},{"text":"空中溜め","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
+        {"text":"  通常の溜めと異なり、一瞬で溜めが溜まります。\n"},\
+        {"text":"  そのまま、最大威力の溜め斬りを放つことができます。\n"}\
     ]
 
 # 初期スコア表示

@@ -7,27 +7,30 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：溜め斬り ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  バックステップ中に ","color": "#00FFC3","bold": false},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":"を長押し","color": "#ff9900","bold": true},{"text":" すると、\n","color": "#00FFC3","bold": false},\
-        {"text":"  その場で停止します。その後、暫く待った後にボタンを離すと、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"溜め斬り","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  突進斬りと同じく、前進しながら攻撃します。\n","color": "#00FFC3","bold": false}\
+        {"text":"  バックステップ中に "},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":"を長押し","color": "#ff9900","bold": true},{"text":" すると、\n"},\
+        {"text":"  その場で停止します。その後、暫く待った後にボタンを離すと、\n"},\
+        {"text":"  "},{"text":"溜め斬り","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
+        {"text":"  突進斬りと同じく、前進しながら攻撃します。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 260 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 260 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：溜め斬り ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  溜め斬りがモンスターに命中すると ","color": "#00FFC3","bold": false},{"text":"駆け上がり斬り","color": "#ff9900","bold": true},{"text":" に遷移し、\n","color": "#00FFC3","bold": false},\
-        {"text":"  その場で高く飛び上がります。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：溜め斬り ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  溜め斬りがモンスターに命中すると "},{"text":"駆け上がり斬り","color": "#ff9900","bold": true},{"text":" に遷移し、\n"},\
+        {"text":"  その場で高く飛び上がります。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 460 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 460 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：フォールバッシュ ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  駆け上がり斬りの後、そのまま空中で ","color": "#00FFC3","bold": false},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" を入力すると、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"フォールバッシュ","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  その場で急降下し、モンスターを盾で攻撃します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  高威力の打撃攻撃で、頭に当たると気絶値を溜められます。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：フォールバッシュ ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  駆け上がり斬りの後、そのまま空中で "},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" を入力すると、\n"},\
+        {"text":"  "},{"text":"フォールバッシュ","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
+        {"text":"  その場で急降下し、モンスターを盾で攻撃します。\n"},\
+        {"text":"  高威力の打撃攻撃で、頭に当たると気絶値を溜められます。\n"}\
     ]
 
 # 初期スコア表示

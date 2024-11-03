@@ -7,31 +7,34 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：溜め斬り ","color":"#00FFC3","bold": true},{"text":"1/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"溜め斬り","color": "#ff9900","bold": true},{"text":" は、","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ボタンを長押しする限り力を溜め、離すと攻撃します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  3段階まで力を溜めることができ、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"溜めるほど高威力","color": "#ff9900","bold": true},{"text":" の攻撃ができます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ただし、溜めすぎると勝手に溜め斬りが発動し、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"逆に威力が下がってしまう","color": "#ff9900","bold": true},{"text":" ので注意してください。\n","color": "#00FFC3","bold": false}\
+        {"text":"  "},{"text":"溜め斬り","color": "#ff9900","bold": true},{"text":" は、"},\
+        {"text":"  "},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで発動します。\n"},\
+        {"text":"  ボタンを長押しする限り力を溜め、離すと攻撃します。\n"},\
+        {"text":"  3段階まで力を溜めることができ、\n"},\
+        {"text":"  "},{"text":"溜めるほど高威力","color": "#ff9900","bold": true},{"text":" の攻撃ができます。\n"},\
+        {"text":"  ただし、溜めすぎると勝手に溜め斬りが発動し、\n"},\
+        {"text":"  "},{"text":"逆に威力が下がってしまう","color": "#ff9900","bold": true},{"text":" ので注意してください。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 210 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：溜め斬り ","color":"#00FFC3","bold": true},{"text":"2/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  溜め中は移動ができず、溜め斬り後は隙が大きいですが、\n","color": "#00FFC3","bold": false},\
-        {"text":"  素早く ","color": "#00FFC3","bold": false},{"text":"納刀して隙をキャンセル","color": "#ff9900","bold": true},{"text":" することで、\n","color": "#00FFC3","bold": false},\
-        {"text":"  すぐにモンスターの攻撃の回避に移ることができます。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：溜め斬り ","color":"#00FFC3","bold": true},{"text":"2/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  溜め中は移動ができず、溜め斬り後は隙が大きいですが、\n"},\
+        {"text":"  素早く "},{"text":"納刀して隙をキャンセル","color": "#ff9900","bold": true},{"text":" することで、\n"},\
+        {"text":"  すぐにモンスターの攻撃の回避に移ることができます。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 410 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 410 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：溜め斬り ","color":"#00FFC3","bold": true},{"text":"3/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  抜刀攻撃でも、溜め斬りが発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  空中で抜刀攻撃をすると、","color": "#00FFC3","bold": false},{"text":"前進しながら","color": "#ff9900","bold": true},{"text":" 溜めに移行します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  モンスターに近づきながら溜め斬りに移行できるので、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ジャンプ抜刀攻撃を覚えておきましょう。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：溜め斬り ","color":"#00FFC3","bold": true},{"text":"3/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  抜刀攻撃でも、溜め斬りが発動します。\n"},\
+        {"text":"  空中で抜刀攻撃をすると、"},{"text":"前進しながら","color": "#ff9900","bold": true},{"text":" 溜めに移行します。\n"},\
+        {"text":"  モンスターに近づきながら溜め斬りに移行できるので、\n"},\
+        {"text":"  ジャンプ抜刀攻撃を覚えておきましょう。\n"}\
     ]
 
 # 初期スコア表示

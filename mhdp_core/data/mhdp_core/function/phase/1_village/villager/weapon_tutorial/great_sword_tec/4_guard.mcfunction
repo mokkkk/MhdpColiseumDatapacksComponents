@@ -7,11 +7,12 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：ガード ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"スニーク","color": "#ff9900","bold": true},{"text":" すると、ガードが発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ガード中にモンスターの攻撃を受けると、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"斬れ味とスタミナを消費","color": "#ff9900","bold": true},{"text":" して受けるダメージを軽減します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"スタミナが足りないと失敗する","color": "#ff9900","bold": true},{"text":" ので、注意してください。\n","color": "#00FFC3","bold": false}\
+        {"text":"  "},{"text":"スニーク","color": "#ff9900","bold": true},{"text":" すると、ガードが発動します。\n"},\
+        {"text":"  ガード中にモンスターの攻撃を受けると、\n"},\
+        {"text":"  "},{"text":"斬れ味とスタミナを消費","color": "#ff9900","bold": true},{"text":" して受けるダメージを軽減します。\n"},\
+        {"text":"  "},{"text":"スタミナが足りないと失敗する","color": "#ff9900","bold": true},{"text":" ので、注意してください。\n"}\
     ]
 
 # 初期スコア表示

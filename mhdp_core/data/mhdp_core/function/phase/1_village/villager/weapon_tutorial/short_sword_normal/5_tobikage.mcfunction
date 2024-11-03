@@ -7,21 +7,23 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：飛影 ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  片手剣の鉄蟲糸技は ","color": "#00FFC3","bold": false},{"text":"飛影","color": "#ff9900","bold": true},{"text":" です。\n","color": "#00FFC3","bold": false},\
-        {"text":"  翔蟲の移動中に ","color": "#00FFC3","bold": false},\
-            {"text":"抜刀攻撃","color": "#ff9900","bold": true},{"text":" をすると発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  モンスターに攻撃が命中すると、そのまま大きく飛び上がります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  モンスターより少し上を狙って翔蟲で移動すると、攻撃が当てやすいです。\n","color": "#00FFC3","bold": false}\
+        {"text":"  片手剣の鉄蟲糸技は "},{"text":"飛影","color": "#ff9900","bold": true},{"text":" です。\n"},\
+        {"text":"  翔蟲の移動中に "},\
+            {"text":"抜刀攻撃","color": "#ff9900","bold": true},{"text":" をすると発動します。\n"},\
+        {"text":"  モンスターに攻撃が命中すると、そのまま大きく飛び上がります。\n"},\
+        {"text":"  モンスターより少し上を狙って翔蟲で移動すると、攻撃が当てやすいです。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 260 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 260 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：フォールバッシュ ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  飛影を当てて飛び上がった後、空中で ","color": "#00FFC3","bold": false},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" を押すと、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"フォールバッシュ","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  高威力の打撃攻撃で、落下中と着地時で、合計2回ヒットします。\n","color": "#00FFC3","bold": false},\
-        {"text":"  モンスターの頭に当てると気絶値を溜めることができるので、\n  可能なら頭を狙って攻撃しましょう。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：フォールバッシュ ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  飛影を当てて飛び上がった後、空中で "},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" を押すと、\n"},\
+        {"text":"  "},{"text":"フォールバッシュ","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
+        {"text":"  高威力の打撃攻撃で、落下中と着地時で、合計2回ヒットします。\n"},\
+        {"text":"  モンスターの頭に当てると気絶値を溜めることができるので、\n  可能なら頭を狙って攻撃しましょう。\n"}\
     ]
 
 # 初期スコア表示

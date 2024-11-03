@@ -7,10 +7,11 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：抜刀攻撃・突進斬り ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  片手剣・天ノ型の抜刀攻撃は ","color": "#00FFC3","bold": false},{"text":"突進斬り","color": "#ff9900","bold": true},{"text":" です。\n","color": "#00FFC3","bold": false},\
-        {"text":"  大きく前進し、距離を詰めながら攻撃します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  突進斬りの後は、後述する3種類のコンボに遷移できます。\n","color": "#00FFC3","bold": false}\
+        {"text":"  片手剣・天ノ型の抜刀攻撃は "},{"text":"突進斬り","color": "#ff9900","bold": true},{"text":" です。\n"},\
+        {"text":"  大きく前進し、距離を詰めながら攻撃します。\n"},\
+        {"text":"  突進斬りの後は、後述する3種類のコンボに遷移できます。\n"}\
     ]
 
 # 初期スコア表示

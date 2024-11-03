@@ -7,19 +7,21 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：片手剣・地ノ型の特徴 ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"片手剣・地ノ型","color": "#ff9900","bold": true},{"text":" は、Minecraft標準に近い戦い方で戦うことができます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  とてもシンプルな操作が特徴の、切断属性の武器です。\n","color": "#00FFC3","bold": false}\
+        {"text":"  "},{"text":"片手剣・地ノ型","color": "#ff9900","bold": true},{"text":" は、Minecraft標準に近い戦い方で戦うことができます。\n"},\
+        {"text":"  とてもシンプルな操作が特徴の、切断属性の武器です。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 210 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：片手剣・地ノ型の特徴 ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  移動しながら発動できる剣コンボや、\n","color": "#00FFC3","bold": false},\
-        {"text":"  高威力の剣盾ラッシュといった技が使用できます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  剣コンボは任意のタイミングで中断でき、\n","color": "#00FFC3","bold": false},\
-        {"text":"  盾によるガードも可能なため、\n","color": "#00FFC3","bold": false},\
-        {"text":"  モンスターの攻撃に対処しやすいです。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：片手剣・地ノ型の特徴 ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  移動しながら発動できる剣コンボや、\n"},\
+        {"text":"  高威力の剣盾ラッシュといった技が使用できます。\n"},\
+        {"text":"  剣コンボは任意のタイミングで中断でき、\n"},\
+        {"text":"  盾によるガードも可能なため、\n"},\
+        {"text":"  モンスターの攻撃に対処しやすいです。\n"}\
     ]
 
 # スコア表示

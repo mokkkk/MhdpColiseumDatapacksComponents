@@ -7,32 +7,35 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：射撃 ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#FFFFFF","bold": false},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで ","color": "#FFFFFF","bold": false},\
-        {"text":"","color": "#FFFFFF","bold": false},{"text":"溜め","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  その後、ボタンを離すと ","color": "#FFFFFF","bold": false},{"text":"射撃","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  弓を完全に引くと ","color": "#FFFFFF","bold": false},\
-        {"text":"","color": "#FFFFFF","bold": false},{"text":"矢の本数が増え","color": "#ff9900","bold": true},{"text":" 高威力の射撃ができます。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  また、抜刀攻撃時も溜めを使用します。\n","color": "#FFFFFF","bold": false}\
+        {"text":"  "},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで "},\
+        {"text":""},{"text":"溜め","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
+        {"text":"  その後、ボタンを離すと "},{"text":"射撃","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
+        {"text":"  弓を完全に引くと "},\
+        {"text":""},{"text":"矢の本数が増え","color": "#ff9900","bold": true},{"text":" 高威力の射撃ができます。\n"},\
+        {"text":"  また、抜刀攻撃時も溜めを使用します。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 150 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 150 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"【 チュートリアル：射撃 ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  弓を引き終えてからさらに溜め、\n","color": "#FFFFFF","bold": false},\
-        {"text":"  ","color": "#FFFFFF","bold": false},{"text":"音が鳴った後に","color": "#ff9900","bold": true},{"text":" 射撃を行うことで、","color": "#FFFFFF","bold": false},\
-        {"text":"より高威力の射撃ができます。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  モンスターが遠くにいるときなど、隙のあるときに狙いましょう。\n","color": "#FFFFFF","bold": false}\
+        {"text":"  弓を引き終えてからさらに溜め、\n"},\
+        {"text":"  "},{"text":"音が鳴った後に","color": "#ff9900","bold": true},{"text":" 射撃を行うことで、"},\
+        {"text":"より高威力の射撃ができます。\n"},\
+        {"text":"  モンスターが遠くにいるときなど、隙のあるときに狙いましょう。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 350 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 350 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"【 チュートリアル：クリティカル距離 ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  矢には ","color": "#FFFFFF","bold": false},{"text":"クリティカル距離","color": "#ff9900","bold": true},{"text":" があります。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  モンスターと適度な距離で射撃をすると、\n","color": "#FFFFFF","bold": false},\
-        {"text":"  矢の命中時に ","color": "#FFFFFF","bold": false},{"text":"音がなります","color": "#ff9900","bold": true},{"text":" 。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  クリティカル距離では ","color": "#FFFFFF","bold": false},{"text":"矢の威力が大幅に上昇","color": "#ff9900","bold": true},{"text":" します。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  距離を保ちながら戦うことを意識しましょう。\n","color": "#FFFFFF","bold": false}\
+        {"text":"  矢には "},{"text":"クリティカル距離","color": "#ff9900","bold": true},{"text":" があります。\n"},\
+        {"text":"  モンスターと適度な距離で射撃をすると、\n"},\
+        {"text":"  矢の命中時に "},{"text":"音がなります","color": "#ff9900","bold": true},{"text":" 。\n"},\
+        {"text":"  クリティカル距離では "},{"text":"矢の威力が大幅に上昇","color": "#ff9900","bold": true},{"text":" します。\n"},\
+        {"text":"  距離を保ちながら戦うことを意識しましょう。\n"}\
     ]
 
 # 初期スコア表示

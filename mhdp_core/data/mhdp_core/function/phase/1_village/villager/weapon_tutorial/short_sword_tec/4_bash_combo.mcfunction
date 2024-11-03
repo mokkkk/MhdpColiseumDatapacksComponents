@@ -7,20 +7,22 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：盾攻撃コンボ ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"盾攻撃コンボ","color": "#ff9900","bold": true},{"text":" は、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"ガード(スニーク)中にマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 、または\n","color": "#00FFC3","bold": false},\
-        {"text":"  他のコンボの後に ","color": "#00FFC3","bold": false},{"text":"スニークしてからマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" で発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  スニークとマウス","color": "#00FFC3","bold": false},{"keybind":"key.use","color": "#00FFC3","bold": false},{"text":"を同時に押すと、\n  後述の回転斬りが発動するので注意してください。\n","color": "#00FFC3","bold": false},\
-        {"text":"  盾による打撃属性攻撃で、最大で3回まで連続で使用できます。\n","color": "#00FFC3","bold": false}\
+        {"text":"  "},{"text":"盾攻撃コンボ","color": "#ff9900","bold": true},{"text":" は、\n"},\
+        {"text":"  "},{"text":"ガード(スニーク)中にマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 、または\n"},\
+        {"text":"  他のコンボの後に "},{"text":"スニークしてからマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" で発動します。\n"},\
+        {"text":"  スニークとマウス"},{"keybind":"key.use"},{"text":"を同時に押すと、\n  後述の回転斬りが発動するので注意してください。\n"},\
+        {"text":"  盾による打撃属性攻撃で、最大で3回まで連続で使用できます。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 260 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 260 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：盾攻撃コンボ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  打撃のため、モンスターの頭に当てることで気絶させることができます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  属性ダメージは与えられませんが、威力が高く、斬れ味を消費しません。\n","color": "#00FFC3","bold": false},\
-        {"text":"  通常コンボ、または水平斬りコンボから、\n  任意のタイミングで派生することができます。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：盾攻撃コンボ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  打撃のため、モンスターの頭に当てることで気絶させることができます。\n"},\
+        {"text":"  属性ダメージは与えられませんが、威力が高く、斬れ味を消費しません。\n"},\
+        {"text":"  通常コンボ、または水平斬りコンボから、\n  任意のタイミングで派生することができます。\n"}\
     ]
 
 # 初期スコア表示

@@ -7,24 +7,26 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：大溜め斬り ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"大溜め斬り","color": "#ff9900","bold": true},{"text":" は、","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"ガード中にマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  ボタンを長押しする限り力を溜め、離すと攻撃します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  3段階まで力を溜めることができ、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"溜めるほど高威力","color": "#ff9900","bold": true},{"text":" の攻撃ができます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  溜め斬りとは異なり、溜め時間に制限がありません。\n","color": "#00FFC3","bold": false},\
-        {"text":"  そのため、","color": "#00FFC3","bold": false},{"text":"好きなタイミングで","color": "#ff9900","bold": true},{"text":" 攻撃ができます。\n","color": "#00FFC3","bold": false}\
+        {"text":"  "},{"text":"大溜め斬り","color": "#ff9900","bold": true},{"text":" は、"},\
+        {"text":"  "},{"text":"ガード中にマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで発動します。\n"},\
+        {"text":"  ボタンを長押しする限り力を溜め、離すと攻撃します。\n"},\
+        {"text":"  3段階まで力を溜めることができ、\n"},\
+        {"text":"  "},{"text":"溜めるほど高威力","color": "#ff9900","bold": true},{"text":" の攻撃ができます。\n"},\
+        {"text":"  溜め斬りとは異なり、溜め時間に制限がありません。\n"},\
+        {"text":"  そのため、"},{"text":"好きなタイミングで","color": "#ff9900","bold": true},{"text":" 攻撃ができます。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 210 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：大溜め斬り ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  大溜めは、通常の溜め斬りより溜めが遅く、時間がかかります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  その代わり、非常に威力が高く、\n","color": "#00FFC3","bold": false},\
-        {"text":"  攻撃の出始めに ","color": "#00FFC3","bold": false},{"text":"アーマーが付与","color": "#ff9900","bold": true},{"text":" されるため、\n","color": "#00FFC3","bold": false},\
-        {"text":"  タックルと同じく、モンスターの攻撃を受けながら攻撃できます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  大剣・地ノ型の最大威力の攻撃のため、\n  転倒時などの隙を狙って積極的に使用しましょう。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：大溜め斬り ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  大溜めは、通常の溜め斬りより溜めが遅く、時間がかかります。\n"},\
+        {"text":"  その代わり、非常に威力が高く、\n"},\
+        {"text":"  攻撃の出始めに "},{"text":"アーマーが付与","color": "#ff9900","bold": true},{"text":" されるため、\n"},\
+        {"text":"  タックルと同じく、モンスターの攻撃を受けながら攻撃できます。\n"},\
+        {"text":"  大剣・地ノ型の最大威力の攻撃のため、\n  転倒時などの隙を狙って積極的に使用しましょう。\n"}\
     ]
 
 # 初期スコア表示

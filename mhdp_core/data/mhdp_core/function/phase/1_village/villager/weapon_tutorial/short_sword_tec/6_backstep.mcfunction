@@ -7,20 +7,22 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：バックステップ ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"バックステップ","color": "#ff9900","bold": true},{"text":" は、各コンボまたは回転斬りの後に\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"スニーク+ジャンプ","color": "#ff9900","bold": true},{"text":" で発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  また、ガード中に ","color": "#00FFC3","bold": false},{"text":"ジャンプ","color": "#ff9900","bold": true},{"text":" でも発動できます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  後ろに素早く移動し、様々な攻撃に遷移します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  出始めに無敵時間があり、モンスターの攻撃を回避できます。\n","color": "#00FFC3","bold": false}\
+        {"text":"  "},{"text":"バックステップ","color": "#ff9900","bold": true},{"text":" は、各コンボまたは回転斬りの後に\n"},\
+        {"text":"  "},{"text":"スニーク+ジャンプ","color": "#ff9900","bold": true},{"text":" で発動します。\n"},\
+        {"text":"  また、ガード中に "},{"text":"ジャンプ","color": "#ff9900","bold": true},{"text":" でも発動できます。\n"},\
+        {"text":"  後ろに素早く移動し、様々な攻撃に遷移します。\n"},\
+        {"text":"  出始めに無敵時間があり、モンスターの攻撃を回避できます。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 260 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 260 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：バックステップ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  バックステップ中に ","color": "#00FFC3","bold": false},{"text":"操作しない","color": "#ff9900","bold": true},{"text":" と、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"突進斬り","color": "#ff9900","bold": true},{"text":" が発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  性能は抜刀攻撃と同じで、前進しながら攻撃します。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：バックステップ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  バックステップ中に "},{"text":"操作しない","color": "#ff9900","bold": true},{"text":" と、\n"},\
+        {"text":"  "},{"text":"突進斬り","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
+        {"text":"  性能は抜刀攻撃と同じで、前進しながら攻撃します。\n"}\
     ]
 
 # 初期スコア表示

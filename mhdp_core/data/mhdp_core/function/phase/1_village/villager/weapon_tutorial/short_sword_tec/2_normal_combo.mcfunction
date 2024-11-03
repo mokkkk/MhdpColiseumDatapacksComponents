@@ -7,11 +7,12 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：通常コンボ ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"通常コンボ","color": "#ff9900","bold": true},{"text":" は、","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":"短押し","color": "#ff9900","bold": true},{"text":" で発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  動作が速い代わりに威力が低く、最大で3回まで連続で使用できます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  3段目の攻撃は剣盾コンボとなり、","color": "#00FFC3","bold": false},{"text":"打撃属性","color": "#ff9900","bold": true},{"text":" の攻撃を行います。\n","color": "#00FFC3","bold": false}\
+        {"text":"  "},{"text":"通常コンボ","color": "#ff9900","bold": true},{"text":" は、"},\
+        {"text":"  "},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":"短押し","color": "#ff9900","bold": true},{"text":" で発動します。\n"},\
+        {"text":"  動作が速い代わりに威力が低く、最大で3回まで連続で使用できます。\n"},\
+        {"text":"  3段目の攻撃は剣盾コンボとなり、"},{"text":"打撃属性","color": "#ff9900","bold": true},{"text":" の攻撃を行います。\n"}\
     ]
 
 # 初期スコア表示

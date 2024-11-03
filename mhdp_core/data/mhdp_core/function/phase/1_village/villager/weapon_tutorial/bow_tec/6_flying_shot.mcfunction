@@ -7,12 +7,13 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：飛翔にらみ撃ち ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  弓の鉄蟲糸技は ","color": "#FFFFFF","bold": false},{"text":"飛翔にらみ撃ち","color": "#ff9900","bold": true},{"text":" です。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  翔蟲の移動中に ","color": "#FFFFFF","bold": false},{"text":"抜刀攻撃","color": "#ff9900","bold": true},{"text":" をすると発動します。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  移動と攻撃を両立することができる便利な技です。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  空中で矢を引き絞り、着地するまでに ","color": "#FFFFFF","bold": false},{"text":"3回射撃","color": "#ff9900","bold": true},{"text":" で攻撃できます。\n","color": "#FFFFFF","bold": false},\
-        {"text":"  クリティカル距離が長く、遠くからでも高威力の射撃ができます。\n","color": "#FFFFFF","bold": false}\
+        {"text":"  弓の鉄蟲糸技は "},{"text":"飛翔にらみ撃ち","color": "#ff9900","bold": true},{"text":" です。\n"},\
+        {"text":"  翔蟲の移動中に "},{"text":"抜刀攻撃","color": "#ff9900","bold": true},{"text":" をすると発動します。\n"},\
+        {"text":"  移動と攻撃を両立することができる便利な技です。\n"},\
+        {"text":"  空中で矢を引き絞り、着地するまでに "},{"text":"3回射撃","color": "#ff9900","bold": true},{"text":" で攻撃できます。\n"},\
+        {"text":"  クリティカル距離が長く、遠くからでも高威力の射撃ができます。\n"}\
     ]
 
 # 初期スコア表示

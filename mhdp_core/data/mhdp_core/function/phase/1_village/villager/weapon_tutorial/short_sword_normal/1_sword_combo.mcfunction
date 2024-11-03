@@ -7,22 +7,24 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：剣コンボ ","color":"#00FFC3","bold": true},{"text":"1/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"剣コンボ","color": "#ff9900","bold": true},{"text":" は、","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで発動する、\n","color": "#00FFC3","bold": false},\
-        {"text":"  地ノ型の片手剣の主力技です。\n","color": "#00FFC3","bold": false},\
-        {"text":"  最大で5回まで連続で使用でき、\n","color": "#00FFC3","bold": false},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"後半の攻撃","color": "#ff9900","bold": true},{"text":" ほど高威力になります。\n","color": "#00FFC3","bold": false},\
-        {"text":"  抜刀攻撃でも、剣コンボが発動します。\n","color": "#00FFC3","bold": false}\
+        {"text":"  "},{"text":"剣コンボ","color": "#ff9900","bold": true},{"text":" は、"},\
+        {"text":"  "},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 長押しで発動する、\n"},\
+        {"text":"  地ノ型の片手剣の主力技です。\n"},\
+        {"text":"  最大で5回まで連続で使用でき、\n"},\
+        {"text":"  "},{"text":"後半の攻撃","color": "#ff9900","bold": true},{"text":" ほど高威力になります。\n"},\
+        {"text":"  抜刀攻撃でも、剣コンボが発動します。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 210 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
-        {"text":"\n【 チュートリアル：剣コンボ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  剣コンボは、任意のタイミングで中断することができます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  剣コンボ3段目までは、攻撃後に隙が発生しません。\n","color": "#00FFC3","bold": false},\
-        {"text":"  そのため、3回攻撃した後にマウス","color": "#00FFC3","bold": false},{"keybind":"key.use","color": "#00FFC3","bold": false},{"text":"を離すことで、\n","color": "#00FFC3","bold": false},\
-        {"text":"  すばやくモンスターの攻撃の回避に移ることができます。\n","color": "#00FFC3","bold": false}\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"【 チュートリアル：剣コンボ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  剣コンボは、任意のタイミングで中断することができます。\n"},\
+        {"text":"  剣コンボ3段目までは、攻撃後に隙が発生しません。\n"},\
+        {"text":"  そのため、3回攻撃した後にマウス"},{"keybind":"key.use"},{"text":"を離すことで、\n"},\
+        {"text":"  すばやくモンスターの攻撃の回避に移ることができます。\n"}\
     ]
 
 # 初期スコア表示

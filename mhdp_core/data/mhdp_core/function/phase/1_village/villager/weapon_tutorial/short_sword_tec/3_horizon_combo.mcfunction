@@ -7,12 +7,13 @@
 # メッセージ
     execute if score @s Vlg.General.Timer matches 60 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 60 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：水平斬りコンボ ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  ","color": "#00FFC3","bold": false},{"text":"水平斬りコンボ","color": "#ff9900","bold": true},{"text":" は、","color": "#00FFC3","bold": false},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":"長押し","color": "#ff9900","bold": true},{"text":" で発動します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  2段目以降は、一度","color": "#00FFC3","bold": false},{"text":"マウス","color": "#00FFC3","bold": false},{"keybind":"key.use","color": "#00FFC3","bold": false},{"text":"を離した後、\n  \
-        再度","color": "#00FFC3","bold": false},{"text":"マウス","color": "#00FFC3","bold": false},{"keybind":"key.use","color": "#00FFC3","bold": false},{"text":"を入力することでコンボが継続します。\n","color": "#00FFC3","bold": false},\
-        {"text":"  動作がやや長い代わりに威力が高く、最大で3回まで連続で使用できます。\n","color": "#00FFC3","bold": false},\
-        {"text":"  水平斬りは、通常コンボから任意のタイミングで派生することができます。\n","color": "#00FFC3","bold": false}\
+        {"text":"  "},{"text":"水平斬りコンボ","color": "#ff9900","bold": true},{"text":" は、"},{"text":"スニークせずマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":"長押し","color": "#ff9900","bold": true},{"text":" で発動します。\n"},\
+        {"text":"  2段目以降は、一度"},{"text":"マウス"},{"keybind":"key.use"},{"text":"を離した後、\n  \
+        再度"},{"text":"マウス"},{"keybind":"key.use"},{"text":"を入力することでコンボが継続します。\n"},\
+        {"text":"  動作がやや長い代わりに威力が高く、最大で3回まで連続で使用できます。\n"},\
+        {"text":"  水平斬りは、通常コンボから任意のタイミングで派生することができます。\n"}\
     ]
 
 # 初期スコア表示
