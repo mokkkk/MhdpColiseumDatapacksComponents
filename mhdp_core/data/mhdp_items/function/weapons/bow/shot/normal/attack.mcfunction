@@ -44,7 +44,7 @@
     execute as @a[tag=Ply.Temp.TargetSub] if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
 # ゲージ上昇
-    execute as @a[tag=Ply.Temp.TargetSub] run scoreboard players add @s Wpn.Bw.Gauge 4
+    execute as @a[tag=Ply.Temp.TargetSub] run scoreboard players add @s Wpn.Bw.Gauge 5
 
 # 終了
     scoreboard players reset #mhdp_temp_crit_min MhdpCore
