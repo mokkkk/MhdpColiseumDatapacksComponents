@@ -21,6 +21,16 @@
     summon interaction 259 63 202 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial"],response:1b}
     summon item_display 259 64 202 {item:{id:"minecraft:bell",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial"],billboard:"vertical"}
 
+    summon text_display 255 65 198 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Essential"],text:'{"bold":true,"color":"red","text":"[！必須設定の確認]"}',alignment:"center"}
+    summon text_display 255 64.6 198 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Essential"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
+    summon interaction 255 63 198 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial.Essential"],response:1b}
+    summon item_display 255 64 198 {item:{id:"minecraft:chain_command_block",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial.Essential"],billboard:"vertical"}
+
+    summon text_display 258 65 198 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Optional"],text:'{"bold":true,"color":"gold","text":"[推奨設定の確認]"}',alignment:"center"}
+    summon text_display 258 64.6 198 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Optional"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
+    summon interaction 258 63 198 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial.Optional"],response:1b}
+    summon item_display 258 64 198 {item:{id:"minecraft:repeating_command_block",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial.Optional"],billboard:"vertical"}
+
 # 訓練所移動用
     summon text_display 250 66 215 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:'{"bold":true,"color":"white","text":"[訓練所に移動]"}',alignment:"center"}
     summon text_display 250 65.6 215 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
@@ -29,12 +39,14 @@
     # summon text_display -93 71 762 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:'{"bold":true,"color":"white","text":"[村に移動]"}',alignment:"center"}
 
 # からくり飛竜操作用
+    # 基本的に読み込み範囲外に出るため、実行しない
     # summon text_display -89 71 801 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.KarakuriOpe"],text:'{"bold":true,"color":"white","text":"[からくり飛竜のモード変更]"}',alignment:"center"}
     # summon text_display -89 70.6 801 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.KarakuriOpe"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
     # summon interaction -89 69 801 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.KarakuriOpe"],response:1b}
     # summon item_display -89 70 801 {item:{id:"minecraft:iron_pickaxe",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.KarakuriOpe"],billboard:"vertical"}
 
 # 武器チュートリアル再生用
+    # 基本的に読み込み範囲外に出るため、実行しない
     # summon text_display -101 71 793 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.WeaponTutorial"],text:'{"bold":true,"color":"white","text":"[武器の操作説明]"}',alignment:"center"}
     # summon text_display -101 70.6 793 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.WeaponTutorial"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
     # summon interaction -101 69 793 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.WeaponTutorial"],response:1b}

@@ -10,7 +10,7 @@
     execute if score @s Vlg.General.Timer matches 10 as @a[tag=!Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 10 run tellraw @a[tag=!Ply.State.PlayingQuest] [\
         {"text":"","color": "#FFFFFF","bold": false},\
-        {"text":"\n【 チュートリアル：クエスト受注 ","color":"#00FFC3","bold": true},{"text":"1/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"\n【 チュートリアル：クエスト受注 ","color":"#00FFC3","bold": true},{"text":"1/4","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  次に、クエストの受注方法を説明します。\n"},\
         {"text":"  上空で点滅する "},{"text":"↓","color": "#ff9900","bold": true},{"text":" マークを見つけて、"},\
         {"text":"  そこまで移動してください。\n"}\

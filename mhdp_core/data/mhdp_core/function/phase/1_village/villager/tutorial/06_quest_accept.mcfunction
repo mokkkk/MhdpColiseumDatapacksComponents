@@ -10,7 +10,7 @@
     execute if score @s Vlg.General.Timer matches 10 as @a[tag=!Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 10 run tellraw @a[tag=!Ply.State.PlayingQuest] [\
         {"text":"","color": "#FFFFFF","bold": false},\
-        {"text":"\n【 チュートリアル：クエスト受注 ","color":"#00FFC3","bold": true},{"text":"2/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"\n【 チュートリアル：クエスト受注 ","color":"#00FFC3","bold": true},{"text":"2/4","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  この本で、 "},{"text":"クエストの受注","color": "#ff9900","bold": true},{"text":" ができます。\n"},\
         {"text":"  クエスト出発のためには、必ずクエストを受注する必要があります。\n"},\
         {"text":"  受注したいクエストのページを開き、"},{"text":"[受注]","color": "#ff9900","bold": true},{"text":" をクリックすると、\n"},\
@@ -22,7 +22,7 @@
     execute if score @s Vlg.General.Timer matches 210 as @a[tag=!Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
     execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=!Ply.State.PlayingQuest] [\
         {"text":"","color": "#FFFFFF","bold": false},\
-        {"text":"\n【 チュートリアル：クエスト受注 ","color":"#00FFC3","bold": true},{"text":"3/3","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"\n【 チュートリアル：クエスト受注 ","color":"#00FFC3","bold": true},{"text":"3/4","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  プレイしたことのないクエストには "},{"text":"(NEW)","color": "#ff9900","bold": true},{"text":" マーク、\n"},\
         {"text":"  クリア済のクエストには "},{"text":"(CLEAR)","color": "#ff9900","bold": true},{"text":" マークが表示されます。\n"},\
         {"text":"  初めはチュートリアルクエストしか受注できませんが、\n"},\
@@ -30,5 +30,15 @@
         {"text":"  ぜひ、すべてのクエストのクリアを目指してみてください。\n"}\
     ]
 
+    execute if score @s Vlg.General.Timer matches 410 as @a[tag=!Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
+    execute if score @s Vlg.General.Timer matches 410 run tellraw @a[tag=!Ply.State.PlayingQuest] [\
+        {"text":"","color": "#FFFFFF","bold": false},\
+        {"text":"\n【 チュートリアル：クエスト受注 ","color":"#00FFC3","bold": true},{"text":"4/4","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+        {"text":"  チュートリアルは "},{"text":"簡易チュートリアル","color": "#ff9900","bold": true},{"text":" と、\n"},\
+        {"text":"  "},{"text":"詳細チュートリアル","color": "#ff9900","bold": true},{"text":" の2つから選択できます。\n"},\
+        {"text":"  すぐに遊びたい方は "},{"text":"簡易チュートリアル","color": "#ff9900","bold": true},{"text":" をプレイしてください。\n"},\
+        {"text":"  詳しい遊び方を学びたい方は"},{"text":"詳細チュートリアル","color": "#ff9900","bold": true},{"text":" をプレイしてください。\n"}\
+    ]
+
 # 遷移：一定時間後
-    execute if score @s Vlg.General.Timer matches 400.. run function mhdp_core:phase/1_village/villager/tutorial/change_phase
+    execute if score @s Vlg.General.Timer matches 600.. run function mhdp_core:phase/1_village/villager/tutorial/change_phase
