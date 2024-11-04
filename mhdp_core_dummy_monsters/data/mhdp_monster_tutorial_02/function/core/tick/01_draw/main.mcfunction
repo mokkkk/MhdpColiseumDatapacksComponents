@@ -10,7 +10,9 @@
         {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：抜刀 ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  ホットバーで空欄のアイテムを選択し、 "},{"keybind":"key.swapOffhand","color": "#ff9900","bold": true},{"text":"キー","color": "#ff9900","bold": true},{"text":" を押すと、\n"},\
-        {"text":"  武器の抜刀ができる。\n"}\
+        {"text":"  武器の抜刀ができる。\n"},\
+        {"text":"  または"},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" を押すと、\n"},\
+        {"text":"  "},{"text":"抜刀攻撃","color": "#ff9900","bold": true},{"text":" ができる。"}\
     ]
 
 # 終了
