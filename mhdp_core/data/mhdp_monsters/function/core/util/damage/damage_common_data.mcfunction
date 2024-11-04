@@ -32,7 +32,7 @@
         execute if entity @s[tag=!Mns.State.Death] if score @s Mns.Hp matches ..0 run function mhdp_monsters:core/switch/death
 
 # 怒り
-    execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.State.IsDisablePartDamage] run scoreboard players operation @s Mns.Anger.Damage -= #mhdp_temp_damage_total MhdpCore
+    execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.State.IsDisablePartDamage,tag=!Mns.State.IsDisableAnger] run scoreboard players operation @s Mns.Anger.Damage -= #mhdp_temp_damage_total MhdpCore
     execute if score @s Mns.Anger.Damage matches ..0 run tag @s add Mns.Temp.Damage.Anger
 
 # 状態異常

@@ -1,4 +1,4 @@
-#> mhdp_monster_tutorial_01:core/death/death
+#> mhdp_monster_tutorial_02:core/death/death
 #
 # 死亡時の処理
 #
@@ -21,4 +21,4 @@
     function mhdp_core:phase/3_quest/call_from_monster/death
 
 # 削除
-    function mhdp_monster_tutorial_01:core/remove/remove
+    function mhdp_monster_tutorial_02:core/remove/remove

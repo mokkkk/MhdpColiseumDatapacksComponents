@@ -60,4 +60,4 @@
     # }
     # function mhdp_monster_tutorial_01:core/init/init_attack_data
 
-say チュートリアル01 init monster data
+# say チュートリアル01 init monster data

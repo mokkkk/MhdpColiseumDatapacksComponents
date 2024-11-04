@@ -1,4 +1,4 @@
-#> mhdp_monster_tutorial_01:core/init/init_monster_data
+#> mhdp_monster_tutorial_02:core/init/init_monster_data
 #
 # モンスターデータの初期化を行う
 #
@@ -10,15 +10,15 @@
 
 
 # メインデータ
-    execute if data storage mhdp_core:monster_data MonsterData[{Uid:9001}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:9001}]
+    execute if data storage mhdp_core:monster_data MonsterData[{Uid:9002}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:9002}]
     data modify storage mhdp_core:monster_data MonsterData append value {\
-        Uid:9001,\
+        Uid:9002,\
         Icon:"NONE",\
-        Name:"tutorial_01",\
-        UpperName:"Tutorial01",\
-        JpName:"チュートリアル01",\
-        ShowName:'{"text":"チュートリアル01"}',\
-        LootTable:"mhdp_items:materials/tutorial_01",\
+        Name:"tutorial_02",\
+        UpperName:"Tutorial02",\
+        JpName:"チュートリアル02",\
+        ShowName:'{"text":"チュートリアル02"}',\
+        LootTable:"mhdp_items:materials/tutorial_02",\
         ShowHp:true,\
         Hp:10000,\
         StunDamage:0,\
@@ -44,20 +44,20 @@
 
 # 肉質データ
 # なし
-    execute if data storage mhdp_core:monster_data DefenceData[{Uid:9001}] run data remove storage mhdp_core:monster_data DefenceData[{Uid:9001}]
+    execute if data storage mhdp_core:monster_data DefenceData[{Uid:9002}] run data remove storage mhdp_core:monster_data DefenceData[{Uid:9002}]
     data modify storage mhdp_core:monster_data DefenceData append value {\
-        Uid:9001,\
+        Uid:9002,\
         Defences:[\
             [0]\
         ]\
     }
 
 # 攻撃力データ
-    # execute if data storage mhdp_core:monster_data AttackData[{Uid:9001}] run data remove storage mhdp_core:monster_data AttackData[{Uid:9001}]
+    # execute if data storage mhdp_core:monster_data AttackData[{Uid:9002}] run data remove storage mhdp_core:monster_data AttackData[{Uid:9002}]
     # data modify storage mhdp_core:monster_data AttackData append value {\
-    #     Uid:9001,\
+    #     Uid:9002,\
     #     Attacks:[]\
     # }
-    # function mhdp_monster_tutorial_01:core/init/init_attack_data
+    # function mhdp_monster_tutorial_02:core/init/init_attack_data
 
-say チュートリアル01 init monster data
+# say チュートリアル02 init monster data

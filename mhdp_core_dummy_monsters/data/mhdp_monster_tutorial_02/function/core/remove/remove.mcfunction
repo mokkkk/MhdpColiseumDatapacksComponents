@@ -1,4 +1,4 @@
-#> mhdp_monster_tutorial_01:core/remove/remove
+#> mhdp_monster_tutorial_02:core/remove/remove
 #
 # 消去処理を行う
 #
@@ -22,4 +22,4 @@
 # モデル消去
     kill @s
 
-say チュートリアル01消去処理
+# say チュートリアル02消去処理
