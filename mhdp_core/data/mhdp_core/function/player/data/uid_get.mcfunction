@@ -14,6 +14,7 @@
 
 # バグ防止
     scoreboard players set @s Ply.Ope.AcceptedQuestId -1
+    scoreboard players set @s Ply.Ope.TutorialTrigger -1
 
 # 状態更新
     tag @s add Ply.State.HasUid

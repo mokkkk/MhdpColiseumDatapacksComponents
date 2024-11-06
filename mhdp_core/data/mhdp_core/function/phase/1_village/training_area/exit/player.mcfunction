@@ -16,5 +16,5 @@
     execute unless entity @a[tag=Ply.State.IsTraining] run function mhdp_core:phase/1_village/villager/weapon_tutorial/end
 
 # 村に移動
-    tp @s 250 64 213 180 ~
-    spawnpoint @s 266 63 204
+    function mhdp_core:utils/tp with storage mhdp_core:game_data PositionList[{ID:"TrainingToVillage"}]
+    function mhdp_core:utils/set_spawnpoint with storage mhdp_core:game_data PositionList[{ID:"InitialSpawnPoint"}]

@@ -38,6 +38,8 @@
             scoreboard objectives add Ply.Ope.EatingTimer.Effect dummy
         # クエスト受注のトリガー
             scoreboard objectives add Ply.Ope.AcceptedQuestId trigger
+        # チュートリアル再生のトリガー
+            scoreboard objectives add Ply.Ope.TutorialTrigger trigger
     # 処理用タイマー
         # 無敵時間
             scoreboard objectives add Ply.Timer.DamageInterval dummy
@@ -133,6 +135,9 @@
 
 ## モンスター用ロード処理
     function mhdp_monsters:load
+
+## 座標ロード処理
+    function mhdp_core:core/init/position
 
 # 以下、デバッグ時に適宜モンスター個別のinit処理を記述
     # function mhdp_monster_tutorial_01:core/init/init_monster_data

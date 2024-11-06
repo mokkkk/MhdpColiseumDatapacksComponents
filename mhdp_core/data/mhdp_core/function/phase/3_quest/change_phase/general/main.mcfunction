@@ -14,8 +14,8 @@
     execute as @a[tag=Ply.State.PlayingQuest] run function mhdp_core:phase/3_quest/change_phase/general/player/reset
 
 # プレイヤーを拠点に戻す
-    tp @a[tag=Ply.State.PlayingQuest] 266 63 204
-    spawnpoint @a[tag=Ply.State.PlayingQuest] 266 63 204
+    execute as @a[tag=Ply.State.PlayingQuest] run function mhdp_core:utils/tp with storage mhdp_core:game_data PositionList[{ID:"InitialSpawnPoint"}]
+    execute as @a[tag=Ply.State.PlayingQuest] run function mhdp_core:utils/set_spawnpoint with storage mhdp_core:game_data PositionList[{ID:"InitialSpawnPoint"}]
     tag @a remove Ply.State.PlayingQuest
 
 # モンスターのリセット処理

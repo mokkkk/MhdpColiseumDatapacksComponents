@@ -19,5 +19,5 @@
     tag @s add Ply.State.IsTraining
 
 # 訓練所に移動
-    tp @s -88 69 762 -90 ~
-    spawnpoint @s -88 69 762 -90
+    function mhdp_core:utils/tp with storage mhdp_core:game_data PositionList[{ID:"TrainingSpawnPoint"}]
+    function mhdp_core:utils/set_spawnpoint with storage mhdp_core:game_data PositionList[{ID:"TrainingSpawnPoint"}]
