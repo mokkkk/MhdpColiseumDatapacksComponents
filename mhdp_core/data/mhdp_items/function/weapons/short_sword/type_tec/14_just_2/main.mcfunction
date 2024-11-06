@@ -56,16 +56,16 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 25..28 at @s run tp @s ~ ~ ~ ~-1 ~0.5
     execute if score @s Wpn.AnimationTimer matches 25 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s Wpn.AnimationTimer matches 28 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    execute if score @s Wpn.GeneralTimer matches 28..37 positioned ~ ~1.65 ~ run particle crit ^ ^ ^1 0 0 0 0.5 1
-    execute if score @s Wpn.GeneralTimer matches 38 run playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
-    execute if score @s Wpn.GeneralTimer matches 38 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
+    execute if score @s Wpn.GeneralTimer matches 28..32 positioned ~ ~1.65 ~ run particle crit ^ ^ ^1 0 0 0 0.5 1
+    execute if score @s Wpn.GeneralTimer matches 33 run playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s Wpn.GeneralTimer matches 33 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
     
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 3 6 true
 
 # 遷移
     # 右クリック：ジャストラッシュ3に移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 32.. run function mhdp_items:weapons/short_sword/type_tec/14_just_2/change_to_just_3
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 30.. run function mhdp_items:weapons/short_sword/type_tec/14_just_2/change_to_just_3
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 50.. run function mhdp_items:weapons/short_sword/type_tec/14_just_2/end

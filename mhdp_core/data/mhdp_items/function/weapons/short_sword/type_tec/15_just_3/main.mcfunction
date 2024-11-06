@@ -31,9 +31,9 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 4..8 at @s run tp @s ~ ~ ~ ~0.5 ~1
     execute if score @s Wpn.AnimationTimer matches 8 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s Wpn.AnimationTimer matches 11 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    execute if score @s Wpn.GeneralTimer matches 11..19 positioned ~ ~1.65 ~ run particle crit ^ ^ ^1 0 0 0 0.5 1
-    execute if score @s Wpn.GeneralTimer matches 20 run playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
-    execute if score @s Wpn.GeneralTimer matches 20 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
+    execute if score @s Wpn.GeneralTimer matches 11..13 positioned ~ ~1.65 ~ run particle crit ^ ^ ^1 0 0 0 0.5 1
+    execute if score @s Wpn.GeneralTimer matches 14 run playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s Wpn.GeneralTimer matches 14 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 6 true
