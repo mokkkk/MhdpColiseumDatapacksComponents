@@ -12,6 +12,6 @@
         {"text":"◇剣コンボ１～５："},{"text":"マウス","color": "#ff9900"},{"keybind":"key.use","color": "#ff9900"},{"text":"長押し\n\n","color": "#ff9900"},\
         {"text":"◇ガード："},{"text":"スニーク\n","color": "#ff9900"},\
         {"text":" ┣ ◇回転斬り："},{"text":"マウス","color": "#ff9900"},{"keybind":"key.use","color": "#ff9900"},{"text":"短押し\n","color": "#ff9900"},\
-        {"text":" ┗ ◇剣盾ラッシュ："},{"text":"マウス","color": "#ff9900"},{"keybind":"key.use","color": "#ff9900"},{"text":"長押し\n","color": "#ff9900"},\
+        {"text":" ┗ ◇剣盾ラッシュ："},{"text":"マウス","color": "#ff9900"},{"keybind":"key.use","color": "#ff9900"},{"text":"長押し\n\n","color": "#ff9900"},\
         {"text":"-------------------------------------\n","color":"#00FFC3","bold": true}\
     ]

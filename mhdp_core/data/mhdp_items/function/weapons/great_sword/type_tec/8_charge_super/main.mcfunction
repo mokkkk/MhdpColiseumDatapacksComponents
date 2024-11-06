@@ -27,6 +27,7 @@
     execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.3 add_value
 
 # 溜め
+    execute if score @s Wpn.GeneralTimer matches 20 run scoreboard players set @s Wpn.Gs.ChargeTimer 100
     execute if score @s Wpn.GeneralTimer matches 14.. if entity @s[tag=!Skill.Stamina.ShortCharge.1,tag=!Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Gs.ChargeTimer 5
     execute if score @s Wpn.GeneralTimer matches 14.. if entity @s[tag=Skill.Stamina.ShortCharge.1] run scoreboard players add @s Wpn.Gs.ChargeTimer 6
     execute if score @s Wpn.GeneralTimer matches 14.. if entity @s[tag=Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Gs.ChargeTimer 7
