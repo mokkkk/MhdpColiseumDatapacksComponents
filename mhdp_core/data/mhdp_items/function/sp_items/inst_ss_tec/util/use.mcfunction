@@ -8,7 +8,7 @@
     playsound ui.button.click master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     tellraw @s [\
         {"text":"","color": "#FFFFFF","bold": false},\
-        {"text":"\n-----【 片手剣・天ノ型 】 -------------------\n\n","color":"#00FFC3","bold": true},\
+        {"text":"\n-----【 片手剣・天ノ型 】------------------\n\n","color":"#00FFC3","bold": true},\
         {"text":"〇通常コンボ１："},{"text":"マウス","color": "#ff9900"},{"keybind":"key.use","color": "#ff9900"},{"text":"短押し\n","color": "#ff9900"},\
         {"text":" ┗ 〇通常コンボ２："},{"text":"マウス","color": "#ff9900"},{"keybind":"key.use","color": "#ff9900"},{"text":"短押し\n","color": "#ff9900"},\
         {"text":"   ┗ △通常コンボ３："},{"text":"マウス","color": "#ff9900"},{"keybind":"key.use","color": "#ff9900"},{"text":"短押し\n\n","color": "#ff9900"},\
