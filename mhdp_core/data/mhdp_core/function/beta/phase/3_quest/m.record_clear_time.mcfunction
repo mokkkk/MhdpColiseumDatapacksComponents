@@ -7,7 +7,6 @@
 # クリアタイムが更新できない場合、リセット
     $execute store result score #mhdp_temp_clear_time MhdpCore run data get storage mhdp_core:game_data QuestList[{ID:$(ID)}].ClearTime
     execute unless score #mhdp_temp_clear_time MhdpCore matches 1.. run scoreboard players set #mhdp_temp_clear_time MhdpCore 99999999
-    $execute if score #mhdp_temp_clear_time MhdpCore matches ..$(Tick) run say タイム更新ならず
     $execute if score #mhdp_temp_clear_time MhdpCore matches ..$(Tick) run return run scoreboard players reset #mhdp_temp_clear_time MhdpCore
 
 # クリアタイムを記録
