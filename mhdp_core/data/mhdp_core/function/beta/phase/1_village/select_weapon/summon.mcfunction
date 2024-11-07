@@ -11,11 +11,10 @@
     summon text_display -79 71 775 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"クエスト受注"}',alignment:"center"}
 
 # モンスターリスト
-# 未修整
-    execute if data storage mhdp_core:game_data QuestList[{ID:1}].State{IsPlayed:true} run summon text_display 235 66 218 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"青鳥竜の情報"}',alignment:"center"}
-    execute if data storage mhdp_core:game_data QuestList[{ID:11}].State{IsPlayed:true} run summon text_display 233 66 218 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"火竜の情報"}',alignment:"center"}
-    execute if data storage mhdp_core:game_data QuestList[{ID:12}].State{IsPlayed:true} run summon text_display 231 66 218 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"斬竜の情報"}',alignment:"center"}
-    execute if data storage mhdp_core:game_data QuestList[{ID:13}].State{IsPlayed:true} run summon text_display 229 66 218 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"天彗龍の情報"}',alignment:"center"}
+    execute if data storage mhdp_core:game_data QuestList[{ID:1}].State{IsPlayed:true} run summon text_display -87 71 777 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"青鳥竜の情報"}',alignment:"center"}
+    execute if data storage mhdp_core:game_data QuestList[{ID:11}].State{IsPlayed:true} run summon text_display -87 71 775 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"火竜の情報"}',alignment:"center"}
+    execute if data storage mhdp_core:game_data QuestList[{ID:12}].State{IsPlayed:true} run summon text_display -87 71 773 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"斬竜の情報"}',alignment:"center"}
+    execute if data storage mhdp_core:game_data QuestList[{ID:13}].State{IsPlayed:true} run summon text_display -87 71 771 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"天彗龍の情報"}',alignment:"center"}
 
 # 村チュートリアル再生用
     summon text_display -80 71 785 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial"],text:'{"bold":true,"color":"white","text":"[チュートリアル再生]"}',alignment:"center"}
@@ -33,12 +32,11 @@
     summon interaction -77 69 791 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial.Optional"],response:1b}
     summon item_display -77 70 791 {item:{id:"minecraft:repeating_command_block",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial.Optional"],billboard:"vertical"}
 
-# 訓練所移動用
-# 未修整
-    summon text_display -86 71 809 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:'{"bold":true,"color":"white","text":"[訓練所の利用開始・終了]"}',alignment:"center"}
-    summon text_display -86 70.6 809 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
-    summon interaction -86 69 809 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Training"],response:1b}
-    summon item_display -86 70 809 {item:{id:"minecraft:iron_sword",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Training"],billboard:"vertical"}
+# 訓練所移動用(訓練開始・停止)
+    summon text_display -95 71 791 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:'{"bold":true,"color":"white","text":"[訓練所の利用開始・終了]"}',alignment:"center"}
+    summon text_display -95 70.6 791 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
+    summon interaction -95 69 791 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Training"],response:1b}
+    summon item_display -95 70 791 {item:{id:"minecraft:iron_sword",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Training"],billboard:"vertical"}
     # summon text_display -93 71 762 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:'{"bold":true,"color":"white","text":"[村に移動]"}',alignment:"center"}
 
 # からくり飛竜操作用
