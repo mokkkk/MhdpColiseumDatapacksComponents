@@ -9,8 +9,8 @@
     execute if entity @s[tag=Beta.Interaction.Tutorial.Essential] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/tutorial/essential_setting
     execute if entity @s[tag=Beta.Interaction.Tutorial.Optional] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/tutorial/optional_setting
 
-# 闘技場
-    execute if entity @s[tag=Beta.Interaction.Training] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:phase/1_village/training_area/enter/check
+# 訓練所
+    execute if entity @s[tag=Beta.Interaction.Training] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:phase/1_village/training_area/enter/check_enter_or_exit
 
 # からくり飛竜モード変更
     execute if entity @s[tag=Beta.Interaction.KarakuriOpe] as @a[tag=Ply.Temp.Target] at @s as @n[tag=Mns.Root.Karakuri] at @s run function mhdp_monster_karakuri:core/util/change_phase

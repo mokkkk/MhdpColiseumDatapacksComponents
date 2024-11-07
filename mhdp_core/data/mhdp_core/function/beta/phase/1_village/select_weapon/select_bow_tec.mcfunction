@@ -4,6 +4,9 @@
 #
 # @within function mhdp_core:phase/1_village/change_phase/check
 
+# 訓練中は利用不可
+    execute if entity @s[tag=Ply.State.IsTraining] run return run tellraw @s {"text": "【訓練中は利用できません】","color": "red"}
+
 # 通知
     tellraw @s {"text":"【弓・天ノ型を選択した】","color": "light_purple"}
     playsound ui.button.click master @s ~ ~ ~ 1 1

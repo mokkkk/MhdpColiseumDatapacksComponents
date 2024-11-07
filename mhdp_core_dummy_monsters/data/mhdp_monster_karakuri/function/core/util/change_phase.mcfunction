@@ -4,6 +4,9 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
+# 訓練中のみ利用可能
+    execute if entity @a[tag=Ply.Temp.Target,tag=!Ply.State.IsTraining] run return run tellraw @a[tag=Ply.Temp.Target,tag=!Ply.State.IsTraining] {"text": "【訓練中のみ利用可能です】","color": "red"}
+
 # 効果音
     execute at @a[tag=Ply.State.IsTraining,tag=!Ply.State.IsSilent] run playsound ui.button.click master @p ~ ~1 ~ 2 1
 

@@ -6,15 +6,14 @@
 
 # 処理用のEntity配置
     # クエスト出発口
-        execute unless entity @e[type=interaction,tag=Other.Interaction.Bell] run summon interaction 223 64 206 {width:1.2f,height:1.2f,response:1b,Tags:["Other.Interaction.UI","Other.Interaction.Bell"]}
-        execute unless entity @e[type=text_display,tag=Other.Text.Bell] run summon text_display 223 65 206 {view_range:0.1f,width:1.5f,height:1.5f,billboard:"vertical",default_background:1b,Tags:["Other.Text.Bell"],text:'{"bold":true,"color":"white","text":"クエスト出発"}',alignment:"center"}
+        function mhdp_core:phase/1_village/start/entity/macro/m.start_bell with storage mhdp_core:game_data PositionList[{ID:"StartBell"}]
     # クエストボード
-        kill @e[tag=Other.Interaction.Board]
-        summon interaction 225 64 200 {width:1.5f,height:2f,Tags:["Other.Interaction.UI","Other.Interaction.Board"],response:1b}
-        summon interaction 226 64 200 {width:1.5f,height:2f,Tags:["Other.Interaction.UI","Other.Interaction.Board"],response:1b}
-        summon interaction 227 64 200 {width:1.5f,height:2f,Tags:["Other.Interaction.UI","Other.Interaction.Board"],response:1b}
-        execute unless entity @e[type=text_display,tag=Other.Text.Board] run summon text_display 226 65 201 {view_range:0.1f,width:1.5f,height:1.5f,billboard:"vertical",default_background:1b,Tags:["Other.Text.Board"],text:'{"bold":true,"color":"white","text":"クエスト参加"}',alignment:"center"}
+        execute rotated 0 0 run function mhdp_core:phase/1_village/start/entity/macro/m.quest_board with storage mhdp_core:game_data PositionList[{ID:"QuestBoard"}]
 
 # クエスト受注書
     # 下位・コハク
         function mhdp_core:phase/1_village/start/entity/macro/m.lectern with storage mhdp_core:game_data PositionList[{ID:"QuestBookKohaku"}]
+
+# チェスト
+    # 落とし物
+        function mhdp_core:phase/1_village/start/entity/macro/m.lost_item_chest with storage mhdp_core:game_data PositionList[{ID:"LostItemChest"}]

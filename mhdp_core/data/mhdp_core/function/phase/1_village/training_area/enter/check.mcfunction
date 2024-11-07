@@ -4,8 +4,11 @@
 #
 # @within function mhdp_core:phase/1_village/bell/click
 
-# チュートリアル中は処理しない
+# チェック：チュートリアル中は処理しない
     execute if entity @n[type=item_display,tag=Vlg.VillageTutorial] run return run tellraw @s {"text": "【現在チュートリアル中です。終了までお待ちください】","color": "red"}
+# チェック：クエスト参加中は利用不可
+    execute if entity @s[tag=Ply.State.QuestHost] run return run tellraw @s {"text":"【クエスト受注中は訓練所を利用できません】","color": "red"}
+    execute if entity @s[tag=Ply.State.QuestMember] run return run tellraw @s {"text":"【クエスト参加中は訓練所を利用できません】","color": "red"}
 
 # 条件確認
     data modify storage mhdp_core:temp IsError set value false

@@ -4,6 +4,9 @@
 #
 # @within function mhdp_core:tick
 
+# 訓練中のみ利用可能
+    execute if entity @s[tag=!Ply.State.IsTraining] run return run tellraw @s {"text": "【訓練中のみ利用可能です】","color": "red"}
+
 # 効果音
     playsound ui.button.click master @s ~ ~ ~ 1 1
 

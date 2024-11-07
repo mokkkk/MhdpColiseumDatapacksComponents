@@ -16,5 +16,5 @@
 #   ・はじめてプレイヤーが入るとき、forceload開始
 #   ・プレイヤーが居る場合、闘技場tick処理
 #   ・プレイヤーが居なくなる場合、forceload解除
-    execute positioned -93 69 762 as @a[tag=Ply.State.IsTraining,distance=..2] run function mhdp_core:phase/1_village/training_area/exit/player
+    # execute positioned -93 69 762 as @a[tag=Ply.State.IsTraining,distance=..2] run function mhdp_core:phase/1_village/training_area/exit/player
     execute if entity @a[tag=Ply.State.IsTraining] run function mhdp_core:phase/1_village/training_area/tick/main
