@@ -23,8 +23,6 @@
     execute if score @s Vlg.General.Timer matches 210 run tellraw @a[tag=!Ply.State.PlayingQuest] [\
         {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：クエスト受注 ","color":"#00FFC3","bold": true},{"text":"3/4","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  プレイしたことのないクエストには "},{"text":"(NEW)","color": "#ff9900","bold": true},{"text":" マーク、\n"},\
-        {"text":"  クリア済のクエストには "},{"text":"(CLEAR)","color": "#ff9900","bold": true},{"text":" マークが表示されます。\n"},\
         {"text":"  初めはチュートリアルクエストしか受注できませんが、\n"},\
         {"text":"  受注できるクエストの数は "},{"text":"クエストをクリアする","color": "#ff9900","bold": true},{"text":" ことで増加します。\n"},\
         {"text":"  ぜひ、すべてのクエストのクリアを目指してみてください。\n"}\
