@@ -49,6 +49,7 @@
         #declare tag Ply.State.MnsTarget モンスターのターゲットになりうる状態、闘技場戦闘フィールドでのみ有効
         #declare tag Ply.State.EnableDamage ダメージを受ける状態、クエスト中のみ有効、クエスト成功/失敗時に剥奪する
         #declare tag Ply.State.IsSilent 演出による無音状態
+        #declare tag Ply.State.IsRetire クエストリタイア済み
         #declare tag Ply.State.IsTraining 訓練所利用中
         #declare tag Ply.State.IsUsedGuts 根性発動済み
     # 操作
@@ -132,6 +133,7 @@
         #declare tag Other.Interaction.UI UI用interactionの共通タグ
         #declare tag Other.Interaction.Bell クエスト出発ベル用のinteraction
         #declare tag Other.Interaction.Board クエスト参加用クエストボードのinteraction
+        #declare tag Other.Interaction.RetireBell クエストリタイアベル用のinteraction
     # text_display
         #declare tag Other.Text.Bell クエスト出発ベルの説明文
         #declare tag Other.Text.Board クエスト参加用クエストボードの説明文

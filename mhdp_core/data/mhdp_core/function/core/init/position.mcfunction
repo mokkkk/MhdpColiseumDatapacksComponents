@@ -43,5 +43,5 @@
     data modify storage mhdp_core:game_data PositionList append value {\
         ID:"QuestBoard",X:-83,Y:70,Z:759,Rotate:0\
     }
-  
+
 say 座標初期化

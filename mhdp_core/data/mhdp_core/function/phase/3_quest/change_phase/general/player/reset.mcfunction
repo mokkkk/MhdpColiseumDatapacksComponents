@@ -27,6 +27,7 @@
         tag @s remove Ply.State.QuestMember
         tag @s remove Ply.State.UsingWeapon
         tag @s remove Ply.State.IsSilent
+        tag @s remove Ply.State.IsRetire
     # 武器関連
         tag @s remove Ply.Weapon.StaminaNotRegen
         tag @s remove Ply.Weapon.StaminaEmpty

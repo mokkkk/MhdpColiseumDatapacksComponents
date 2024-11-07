@@ -13,5 +13,8 @@
 # ベータ版処理
     execute if data storage mhdp_core:game_data {IsBetaVersion:true} run function mhdp_core:beta/phase/1_village/select_weapon/click_ui
 
+# クエストリタイアベル
+    execute if entity @s[tag=Other.Interaction.RetireBell] run function mhdp_core:phase/3_quest/map/general/click_retire
+
 # 終了
     execute if data entity @s interaction run data remove entity @s interaction
