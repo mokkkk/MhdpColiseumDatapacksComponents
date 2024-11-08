@@ -8,6 +8,7 @@
     execute if entity @s[tag=Beta.Interaction.Tutorial] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/tutorial/start
     execute if entity @s[tag=Beta.Interaction.Tutorial.Essential] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/tutorial/essential_setting
     execute if entity @s[tag=Beta.Interaction.Tutorial.Optional] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/tutorial/optional_setting
+    execute if entity @s[tag=Beta.Interaction.Tutorial.Review] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:beta/phase/1_village/tutorial/review/start
 
 # 訓練所
     execute if entity @s[tag=Beta.Interaction.Training] as @a[tag=Ply.Temp.Target] at @s run function mhdp_core:phase/1_village/training_area/enter/check_enter_or_exit

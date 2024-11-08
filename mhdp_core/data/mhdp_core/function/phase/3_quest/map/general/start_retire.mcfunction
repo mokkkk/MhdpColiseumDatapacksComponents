@@ -7,9 +7,7 @@
 # 自身のリタイアタグ更新
     tag @s add Ply.State.IsRetire
 
-# 通知
-    execute at @s run tellraw @a[tag=Ply.State.PlayingQuest,distance=1..] [{"text":"【"},{"selector":"@s"},{"text":" がクエストリタイアに投票しました】"}]
-    tellraw @s [{"text":"【クエストリタイアに投票しました】"}]
+
 
 # プレイヤー数を調べる
     execute store result score #mhdp_temp_player_count MhdpCore if entity @a[tag=Ply.State.PlayingQuest]
@@ -20,6 +18,8 @@
     execute if score #mhdp_temp_player_count MhdpCore matches ..1 run function mhdp_core:phase/3_quest/end/retired
 
 # それ以外の場合、通知
+    execute if score #mhdp_temp_player_count MhdpCore matches 2.. at @s run tellraw @a[tag=Ply.State.PlayingQuest,distance=1..] [{"text":"【"},{"selector":"@s"},{"text":" がクエストリタイアに投票しました】"}]
+    execute if score #mhdp_temp_player_count MhdpCore matches 2.. run tellraw @s [{"text":"【クエストリタイアに投票しました】"}]
     execute if score #mhdp_temp_player_count MhdpCore matches 2.. run tellraw @s [{"text":"【過半数のプレイヤーがリタイアした場合、クエストを中断します】"}]
 
 # 終了

@@ -18,3 +18,7 @@
 #   ・プレイヤーが居なくなる場合、forceload解除
     # execute positioned -93 69 762 as @a[tag=Ply.State.IsTraining,distance=..2] run function mhdp_core:phase/1_village/training_area/exit/player
     execute if entity @a[tag=Ply.State.IsTraining] run function mhdp_core:phase/1_village/training_area/tick/main
+
+# ベータ版処理
+    execute as @a[tag=!Ply.State.PlayingQuest] run scoreboard players enable @s Ply.Ope.TutorialTrigger
+    execute as @a if score @s Ply.Ope.TutorialTrigger matches 0.. run function mhdp_core:beta/phase/1_village/tutorial/review/show

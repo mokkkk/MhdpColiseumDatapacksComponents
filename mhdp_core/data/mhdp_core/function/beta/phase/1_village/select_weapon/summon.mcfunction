@@ -12,12 +12,13 @@
 
 # モンスターリスト
     execute if data storage mhdp_core:game_data QuestList[{ID:1}].State{IsPlayed:true} run summon text_display -87 71 777 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"青鳥竜の情報"}',alignment:"center"}
+    execute if data storage mhdp_core:game_data QuestList[{ID:2}].State{IsPlayed:true} positioned -87 71 777 unless entity @n[type=text_display,tag=Beta.Display.Other,distance=..1] run summon text_display -87 71 777 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"青鳥竜の情報"}',alignment:"center"}
     execute if data storage mhdp_core:game_data QuestList[{ID:11}].State{IsPlayed:true} run summon text_display -87 71 775 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"火竜の情報"}',alignment:"center"}
     execute if data storage mhdp_core:game_data QuestList[{ID:12}].State{IsPlayed:true} run summon text_display -87 71 773 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"斬竜の情報"}',alignment:"center"}
     execute if data storage mhdp_core:game_data QuestList[{ID:13}].State{IsPlayed:true} run summon text_display -87 71 771 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Other"],text:'{"bold":true,"color":"white","text":"天彗龍の情報"}',alignment:"center"}
 
 # 村チュートリアル再生用
-    summon text_display -80 71 785 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial"],text:'{"bold":true,"color":"white","text":"[チュートリアル再生]"}',alignment:"center"}
+    summon text_display -80 71 785 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial"],text:'{"bold":true,"color":"white","text":"[遊び方の確認]"}',alignment:"center"}
     summon text_display -80 70.6 785 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
     summon interaction -80 69 785 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial"],response:1b}
     summon item_display -80 70 785 {item:{id:"minecraft:bell",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial"],billboard:"vertical"}
@@ -31,6 +32,13 @@
     summon text_display -77 70.6 791 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Optional"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
     summon interaction -77 69 791 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial.Optional"],response:1b}
     summon item_display -77 70 791 {item:{id:"minecraft:repeating_command_block",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial.Optional"],billboard:"vertical"}
+
+# チュートリアル一覧確認用
+    execute if data storage mhdp_core:game_data QuestList[{ID:1}].State{IsPlayed:true} run summon text_display -88 71 784 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Review"],text:'{"bold":true,"text":"[チュートリアルの再確認]"}',alignment:"center"}
+    execute if data storage mhdp_core:game_data QuestList[{ID:2}].State{IsPlayed:true} unless entity @n[type=text_display,tag=Beta.Display.Tutorial.Review] run summon text_display -88 71 784 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Review"],text:'{"bold":true,"text":"[チュートリアルの再確認]"}',alignment:"center"}
+    execute if entity @n[type=text_display,tag=Beta.Display.Tutorial.Review] run summon text_display -88 70.6 784 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Review"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
+    execute if entity @n[type=text_display,tag=Beta.Display.Tutorial.Review] run summon interaction -88 69 784 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial.Review"],response:1b}
+    execute if entity @n[type=text_display,tag=Beta.Display.Tutorial.Review] run summon item_display -88 70 784 {item:{id:"minecraft:paper",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial.Review"],billboard:"vertical"}
 
 # 訓練所移動用(訓練開始・停止)
     summon text_display -95 71 791 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:'{"bold":true,"color":"white","text":"[訓練所の利用開始・終了]"}',alignment:"center"}
