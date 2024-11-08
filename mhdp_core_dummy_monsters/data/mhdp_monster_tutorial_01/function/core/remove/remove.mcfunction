@@ -12,6 +12,7 @@
     scoreboard players reset $mhdp_temp_tutorial_value Mns.Tutorial.Text
     scoreboard players reset $mhdp_temp_tutorial_value_2 Mns.Tutorial.Text
     scoreboard players reset $mhdp_temp_tutorial_value_3 Mns.Tutorial.Text
+    fill 202 66 142 202 68 144 air replace oak_fence
 
 # 当たり判定を消去
     # なし
