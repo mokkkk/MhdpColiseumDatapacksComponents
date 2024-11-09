@@ -11,6 +11,7 @@
     execute if data storage mhdp_core:temp PlayerData.SpItems[1] run data modify storage mhdp_core:temp Temp.Prefix set from storage mhdp_core:temp PlayerData.SpItems[1]
     execute if data storage mhdp_core:temp PlayerData.SpItems[1] run function mhdp_items:core/switch/item/macro/m.reset with storage mhdp_core:temp Temp
     data remove storage mhdp_core:temp Temp
+    
 
 # データ消去
     data modify storage mhdp_core:temp PlayerData.SpItems set value []

@@ -10,6 +10,8 @@
 # メイン処理
     # 砥石
         function mhdp_items:sp_items/whetstone/tick
+    # 肉焼きセット
+        function mhdp_items:sp_items/nikuyaki/tick
     # 翔蟲
         execute if entity @s[tag=Itm.Sp.Wirebug] run function mhdp_items:sp_items/wirebug/tick
     # 不動の装衣

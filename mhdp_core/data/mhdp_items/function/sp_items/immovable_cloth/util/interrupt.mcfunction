@@ -14,4 +14,4 @@
     # scoreboard players set @s Itm.ImmovableCloth.GeneralTimer 0
 
 # 使用中の場合、手動仕様解除処理
-    execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] run function mhdp_items:sp_items/immovable_cloth/using/end_by_player
+    # execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] run function mhdp_items:sp_items/immovable_cloth/using/end_by_player

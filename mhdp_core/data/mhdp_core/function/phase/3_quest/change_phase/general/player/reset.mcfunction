@@ -11,6 +11,8 @@
 # TODO: 防具のリセット
 
 # 特殊装具のリセット
+    # 使用中断のため、先に割り込み処理実行
+        function mhdp_items:core/switch/item/interrupt
     function mhdp_items:core/switch/item/reset
 
 # 演出の強制終了
