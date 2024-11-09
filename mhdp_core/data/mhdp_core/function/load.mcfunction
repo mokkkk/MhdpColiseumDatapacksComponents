@@ -12,6 +12,9 @@
     scoreboard objectives add MhdpCore dummy
     scoreboard objectives add QuestSerialId dummy
     scoreboard objectives add Const dummy
+    # タイマー表示用
+        scoreboard objectives add Quest.Timer.Text dummy {"text":"制限時間","color":"gold","bold":true}
+        scoreboard objectives modify Quest.Timer.Text displayname {"text":"制限時間","color":"gold","bold":true,"underlined":true}
 
 # プレイヤー関連
     # UID
@@ -74,7 +77,7 @@
     # その他EntityのUuid
         scoreboard objectives add Entity.Uuid dummy
     # チュートリアル用
-        scoreboard objectives add Mns.Tutorial.Text dummy {"text":"チュートリアル：","color":"gold","bold":true}
+        scoreboard objectives add Mns.Tutorial.Text dummy {"text":"チュートリアル","color":"gold","bold":true}
         scoreboard objectives modify Mns.Tutorial.Text displayname {"text":"チュートリアル","color":"gold","bold":true,"underlined":true}
 
 ## Scoreboard初期値設定

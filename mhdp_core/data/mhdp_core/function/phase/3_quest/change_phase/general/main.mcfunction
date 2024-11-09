@@ -32,6 +32,10 @@
     time set 5000
     # 連番増加
         scoreboard players add #mhdp_core_quest_serial_id QuestSerialId 1
+    # タイマー消去
+        scoreboard objectives setdisplay sidebar.team.gray
+        scoreboard players reset $mhdp_temp_quest_timer_text Quest.Timer.Text
+        scoreboard players reset $mhdp_temp_quest_timer_value Quest.Timer.Text
 
 # forceloadのリセット
     forceload remove all

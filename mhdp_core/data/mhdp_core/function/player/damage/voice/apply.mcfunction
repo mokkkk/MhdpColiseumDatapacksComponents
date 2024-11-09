@@ -1,4 +1,4 @@
-#> mhdp_core:player/damage/fly_anger/apply
+#> mhdp_core:player/damage/voice/apply
 #
 # モンスターからプレイヤーに対してのダメージ処理 ダメージ適用
 #
@@ -14,7 +14,7 @@
     execute if entity @s[tag=Ply.Weapon.Guard] run function mhdp_core:player/damage/voice/guard/main
 
 # ダメージ処理
-    execute if entity @s[tag=!Ply.Weapon.Guard] run function mhdp_items:core/switch/weapon_on_damage
+    # execute if entity @s[tag=!Ply.Weapon.Guard] run function mhdp_items:core/switch/weapon_on_damage
 
 # ノックバック
     function mhdp_core:player/damage/voice/knockback/main
