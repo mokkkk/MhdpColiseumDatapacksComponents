@@ -11,3 +11,6 @@
 
 # 対象の処理実行
     execute as @n[type=item_display,tag=Itm.Root.Nikuyaki.Target] at @s run function mhdp_items:sp_items/nikuyaki/using/tick_on_model
+
+# 紐づけ対象がいない場合、使用中断
+    execute unless entity @n[type=item_display,tag=Itm.Root.Nikuyaki.Target] run function mhdp_items:sp_items/nikuyaki/using/cancel

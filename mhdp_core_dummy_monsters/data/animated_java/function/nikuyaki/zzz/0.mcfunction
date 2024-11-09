@@ -10,6 +10,7 @@ execute at @s on passengers run tp @s ~ ~ ~ ~ ~
 data modify entity @s teleport_duration set value 1
 execute on passengers run data modify entity @s teleport_duration set value 1
 tag @s add Itm.Root
+tag @s add Other.Shot
 tag @s add Itm.Root.Nikuyaki
 tag @s add Itm.Root.Nikuyaki.Start
 function #animated_java:nikuyaki/as_root/on_summon

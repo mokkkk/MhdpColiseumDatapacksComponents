@@ -33,5 +33,11 @@
 # 翔蟲
     give @s carrot_on_a_stick[item_name='{"text":"翔蟲","color":"green","italic":false}',custom_name='{"text":"翔蟲","color":"green","italic":false}',lore=['{"text":"[特殊装具]","color":"dark_purple","italic":false}','{"text":"--------------------","color":"dark_gray"}','{"text":"正面方向に糸を伸ばし、","color":"white","italic":false}','{"text":"高速で移動する。","color":"white","italic":false}','{"text":"移動中は鉄蟲糸技が使用可能。","color":"white","italic":false}','{"text":"--------------------","color":"dark_gray"}'],max_stack_size=1,custom_model_data=1001,custom_data={IsMhdpItem:1b,ItemType:3,ItemId:1001,ItemName:"wirebug",UseTimer:50,IsSpItem:1b}]
 
+# 肉焼きセット
+    item replace entity @s inventory.0 with carrot_on_a_stick[item_name='{"text":"肉焼きセット","color":"green","italic":false}',custom_name='{"text":"肉焼きセット","color":"green","italic":false}',lore=['{"text":"--------------------","color":"dark_gray"}','{"text":"使用すると肉を焼くことができる。","color":"white","italic":false}','{"text":"上手に焼こう。","color":"white","italic":false}','{"text":"","color":"white","italic":false}','{"text":"--------------------","color":"dark_gray"}'],max_stack_size=1,custom_model_data=103,custom_data={IsMhdpItem:1b,ItemType:3,ItemId:103,ItemName:"nikuyaki",UseTimer:50}]
+
+# 生肉
+    item replace entity @s inventory.1 with paper[item_name='{"text":"生肉","color":"green","italic":false}',custom_name='{"text":"生肉","color":"green","italic":false}',lore=['{"text":"--------------------","color":"dark_gray"}','{"text":"肉焼きセットを使えば","color":"white","italic":false}','{"text":"焼いて食べることができる。","color":"white","italic":false}','{"text":"","color":"white","italic":false}','{"text":"--------------------","color":"dark_gray"}'],max_stack_size=2,custom_model_data=57,custom_data={IsMhdpItem:1b,ItemType:1,ItemId:57,ItemName:"RawMeat",UseTimer:99999999}] 2
+
 # クエストクリア後の時間記録用に、forceload
     forceload add -79 770
