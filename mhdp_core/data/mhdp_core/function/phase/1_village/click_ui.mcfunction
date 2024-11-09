@@ -16,5 +16,8 @@
 # クエストリタイアベル
     execute if entity @s[tag=Other.Interaction.RetireBell] run function mhdp_core:phase/3_quest/map/general/click_retire
 
+# 肉焼きセット
+    execute if entity @s[tag=Other.Interaction.Meat] run function mhdp_items:sp_items/nikuyaki/using/click
+
 # 終了
     execute if data entity @s interaction run data remove entity @s interaction
