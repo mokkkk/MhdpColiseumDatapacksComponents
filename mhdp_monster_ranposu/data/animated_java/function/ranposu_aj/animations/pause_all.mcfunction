@@ -24,6 +24,9 @@ tag @s remove aj.ranposu_aj.animation.tackle.playing
 tag @s remove aj.ranposu_aj.animation.step_jump_right.playing
 tag @s remove aj.ranposu_aj.animation.step_jump_left.playing
 tag @s remove aj.ranposu_aj.animation.damage.playing
+tag @s remove aj.ranposu_aj.animation.damage_counter_start.playing
+tag @s remove aj.ranposu_aj.animation.damage_counter.playing
+tag @s remove aj.ranposu_aj.animation.damage_counter_end.playing
 tag @s remove aj.ranposu_aj.animation.damage_down.playing
 tag @s remove aj.ranposu_aj.animation.down.playing
 tag @s remove aj.ranposu_aj.animation.down_end.playing

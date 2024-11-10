@@ -20,7 +20,7 @@
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
 # まばたき
-    execute if score @s aj.damage.frame matches 1 run scoreboard players set @s Mns.General.BlinkTimer 20
+    execute if score @s aj.damage.frame matches 2 run scoreboard players set @s Mns.General.BlinkTimer 20
 
 # 終了
     execute if score @s aj.damage.frame matches 64 run function mhdp_monster_ranposu:core/tick/animation/event/damage/end
