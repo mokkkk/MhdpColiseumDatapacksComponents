@@ -55,5 +55,9 @@
     execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.roundforce.frame matches 80 run function mhdp_monster_dino:core/util/phase/tail_heat
     execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.roundforce.frame matches 81 run function mhdp_monster_dino:core/util/phase/tail_heat
 
+# 状態更新
+    execute if score @s aj.roundforce.frame matches 80 run tag @s add Mns.Dino.State.Attack.Tail.R
+    execute if score @s aj.roundforce.frame matches 100 run tag @s remove Mns.Dino.State.Attack.Tail.R
+
 # 終了
     execute if score @s aj.roundforce.frame matches 159 run function mhdp_monster_dino:core/tick/animation/event/roundforce/end

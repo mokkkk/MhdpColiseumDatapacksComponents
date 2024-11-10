@@ -26,4 +26,4 @@
         function mhdp_monsters:core/util/other/remove_animation_tag
 
 # 終了
-    tag @s add Mns.Temp.IsDamaged
+    function mhdp_monster_dino:core/damage/reaction/general

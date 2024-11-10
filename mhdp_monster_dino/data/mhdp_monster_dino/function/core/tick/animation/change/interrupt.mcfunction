@@ -15,4 +15,4 @@
 # アニメーション変更
     # function mhdp_monster_dino:core/tick/animation/change/main
 
-function animated_java:dino_aj/animations/damage_counter_head_start/tween {duration:1, to_frame: 1}
+function animated_java:dino_aj/animations/damage_counter_tail_left_start/tween {duration:1, to_frame: 1}

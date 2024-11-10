@@ -15,6 +15,9 @@
     #declare tag Mns.Dino.State.HeadHeat 喉赤熱化
     #declare tag Mns.Dino.State.TailHeat 尻尾赤熱化
     #declare tag Mns.Dino.State.TailRust 尻尾錆び
+    #declare tag Mns.Dino.State.Attack.Head 噛みつき攻撃
+    #declare tag Mns.Dino.State.Attack.Tail.R 尻尾攻撃
+    #declare tag Mns.Dino.State.Attack.Tail.L 尻尾攻撃
 # 一時
     #declare tag Mns.Temp.Damage.Head 頭怯み
     #declare tag Mns.Temp.Damage.Body 胴怯み

@@ -17,8 +17,9 @@
         execute if entity @s[tag=Mns.State.IsFlying] if entity @a[tag=Temp.Attacker,distance=..6] at @a[tag=Temp.Attacker] rotated ~ -30 run tp @s ^ ^ ^6 ~180 0
     # アニメーション再生
         # 再生アニメーション決定
-            # execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:reus_aj/animations/land_damage_counter_start/tween {duration:1, to_frame: 0}
-            # execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monster_reus:core/damage/reaction/flying_counter
+            execute if entity @s[tag=Mns.Dino.State.Attack.Tail.R] run function animated_java:dino_aj/animations/damage_counter_tail_right_start/tween {duration:1, to_frame: 0}
+            execute if entity @s[tag=Mns.Dino.State.Attack.Tail.L] run function animated_java:dino_aj/animations/damage_counter_tail_left_start/tween {duration:1, to_frame: 0}
+            execute if entity @s[tag=!Mns.Dino.State.Attack.Tail.R,tag=!Mns.Dino.State.Attack.Tail.L] run function animated_java:dino_aj/animations/damage_counter_head_start/tween {duration:1, to_frame: 0}
     # 演出
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
@@ -26,4 +27,4 @@
         function mhdp_monsters:core/util/other/remove_animation_tag
 
 # 終了
-    tag @s add Mns.Temp.IsDamaged
+    function mhdp_monster_dino:core/damage/reaction/general
