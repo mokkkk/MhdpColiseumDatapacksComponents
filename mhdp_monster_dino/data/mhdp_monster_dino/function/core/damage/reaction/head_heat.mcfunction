@@ -24,3 +24,6 @@
         function mhdp_monsters:core/util/other/remove_animation_tag
     # 状態設定
         tag @s add Mns.State.IsDown
+
+# 終了
+    tag @s add Mns.Temp.IsDamaged

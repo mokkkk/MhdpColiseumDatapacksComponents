@@ -36,3 +36,4 @@
 # 終了
     tag @s remove Mns.Temp.Forward
     tag @s remove Mns.Dino.Temp.Tail.Break
+    tag @s add Mns.Temp.IsDamaged

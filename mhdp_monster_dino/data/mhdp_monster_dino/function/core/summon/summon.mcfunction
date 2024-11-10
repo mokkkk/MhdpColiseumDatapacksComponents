@@ -11,7 +11,7 @@
     function mhdp_monster_dino:core/init/init_monster_data
 
 # モデル召喚
-    function animated_java:dino_aj/summon/default
+    function animated_java:dino_aj/summon {args: {}}
 
 # アニメーション種別を待機に設定
     tag @e[type=item_display,tag=Mns.Root.Dino] add Mns.Temp.IsIdleAnimation

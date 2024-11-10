@@ -20,3 +20,6 @@
         execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:dino_aj/animations/anger/tween {duration:1, to_frame: 0}
     # モデル変更
         function mhdp_monster_dino:core/util/models/anger_start
+
+# 終了
+    tag @s add Mns.Temp.IsDamaged

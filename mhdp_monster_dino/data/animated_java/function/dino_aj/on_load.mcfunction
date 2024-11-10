@@ -17,6 +17,13 @@ scoreboard objectives add aj.down_right.frame dummy
 scoreboard objectives add aj.down_left.frame dummy
 scoreboard objectives add aj.down_end_right.frame dummy
 scoreboard objectives add aj.down_end_left.frame dummy
+scoreboard objectives add aj.damage_counter_head_start.frame dummy
+scoreboard objectives add aj.damage_counter_tail_right_start.frame dummy
+scoreboard objectives add aj.damage_counter_tail_left_start.frame dummy
+scoreboard objectives add aj.damage_counter.frame dummy
+scoreboard objectives add aj.damage_counter_mirror.frame dummy
+scoreboard objectives add aj.damage_counter_end.frame dummy
+scoreboard objectives add aj.damage_counter_end_mirror.frame dummy
 scoreboard objectives add aj.damage_flying.frame dummy
 scoreboard objectives add aj.death.frame dummy
 scoreboard objectives add aj.death_flying.frame dummy
@@ -61,4 +68,3 @@ scoreboard objectives add aj.tail_flame_r.frame dummy
 scoreboard objectives add aj.tail_flame_l.frame dummy
 scoreboard objectives add aj.roundforce.frame dummy
 scoreboard objectives add aj.polish.frame dummy
-execute as @e[type=item_display,tag=aj.dino_aj.root] unless score @s aj.is_rig_loaded matches 1 at @s run function animated_java:dino_aj/root/on_load

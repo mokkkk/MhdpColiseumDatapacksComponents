@@ -32,3 +32,4 @@
     
 # 終了
     execute if score @s Mns.Dino.LegL.Damage.Count matches 2.. run scoreboard players set @s Mns.Dino.LegL.Damage.Count 0
+    tag @s add Mns.Temp.IsDamaged

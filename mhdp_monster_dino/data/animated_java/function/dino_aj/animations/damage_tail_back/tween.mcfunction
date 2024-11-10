@@ -5,7 +5,6 @@ tag @s add aj.dino_aj.animation.damage_tail_back.playing
 $scoreboard players set @s aj.tween_duration $(duration)
 $scoreboard players set @s aj.damage_tail_back.frame $(to_frame)
 scoreboard players operation #this aj.i = @s aj.tween_duration
-scoreboard players add @s aj.tween_duration 1
 tag @s add aj.transforms_only
 execute at @s run function animated_java:dino_aj/animations/damage_tail_back/zzz/apply_frame {frame: 0}
 $execute at @s run function animated_java:dino_aj/animations/damage_tail_back/zzz/apply_frame {frame: $(to_frame)}
