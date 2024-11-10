@@ -59,6 +59,9 @@
         scoreboard players operation #mhdp_temp_condition_value_poison MhdpCore = @s Ply.Stats.ConditionValue.Poison
         scoreboard players operation #mhdp_temp_condition_value_paralysis MhdpCore = @s Ply.Stats.ConditionValue.Paralysis
         scoreboard players operation #mhdp_temp_condition_value_bomb MhdpCore = @s Ply.Stats.ConditionValue.Bomb
+    # 相殺
+        scoreboard players set #mhdp_temp_counter_value MhdpCore 0
+        execute if entity @s[tag=Ply.Temp.IsCounterDamage] run scoreboard players set #mhdp_temp_counter_value MhdpCore 100
 
 # ステータス関連スキル効果適用
     function mhdp_core:player/skill/attack/attack_status
@@ -159,6 +162,7 @@
     scoreboard players reset #mhdp_temp_element_value_ice MhdpCore
     scoreboard players reset #mhdp_temp_element_value_dragon MhdpCore
     scoreboard players reset #mhdp_temp_element_attack_value MhdpCore
+    scoreboard players reset #mhdp_temp_counter_value MhdpCore
     tag @e[tag=Temp.Victim] remove Temp.Victim
     tag @s remove Temp.Attacker
     data remove storage mhdp_core:temp Damage

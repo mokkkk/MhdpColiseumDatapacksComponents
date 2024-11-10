@@ -50,7 +50,8 @@
         HallTrapEnable:false,\
         HallTrapTimer:15,\
         HeadPartDamage:11,\
-        BodyPartDamage:15\
+        BodyPartDamage:15,\
+        CounterDamage:50\
     }
 
 # 肉質データ

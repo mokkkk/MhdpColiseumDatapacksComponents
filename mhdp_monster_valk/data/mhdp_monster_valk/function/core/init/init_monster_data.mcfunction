@@ -101,6 +101,7 @@
         ParalyseTrapTimer:0,\
         HallTrapEnable:false,\
         HallTrapTimer:0,\
+        CounterDamage:75,\
         HeadPartDamage:9,\
         BodyPartDamage:8,\
         TailPartDamage:6,\

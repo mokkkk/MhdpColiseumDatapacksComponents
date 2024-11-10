@@ -9,6 +9,7 @@
     tag @s remove Mns.Temp.Damage.Anger
     tag @s remove Mns.Temp.Damage.Poison
     tag @s remove Mns.Temp.Damage.Paralysis
+    tag @s remove Mns.Temp.Damage.Counter
     tag @s remove Mns.Temp.Damage.Bomb
     tag @s remove Mns.Temp.Damage.Stun
     tag @s remove Mns.Temp.Damage.Tire

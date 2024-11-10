@@ -43,6 +43,10 @@
     execute if entity @s[tag=!Mns.State.IsParalysis] if score @s Mns.Paralysis.Damage matches ..0 run tag @s add Mns.Temp.Damage.Paralysis
     execute if score @s Mns.Bomb.Damage matches ..0 run tag @s add Mns.Temp.Damage.Bomb
 
+# 相殺
+    execute if entity @s[tag=!Mns.State.IsDisablePartDamage] run scoreboard players operation @s Mns.Counter.Damage -= #mhdp_temp_counter_value MhdpCore
+    execute if score @s Mns.Counter.Damage matches ..0 run tag @s add Mns.Temp.Damage.Counter
+
 # スタン
     execute if entity @e[type=slime,tag=Temp.Victim,tag=Mns.HitBox.Head] if entity @s[tag=!Mns.State.IsStun] run scoreboard players operation @s Mns.Stun.Damage -= #mhdp_temp_damage_stun_value MhdpCore
     execute if score @s Mns.Stun.Damage matches ..0 run tag @s add Mns.Temp.Damage.Stun

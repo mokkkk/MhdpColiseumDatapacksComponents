@@ -44,6 +44,8 @@
         execute if entity @s[tag=Mns.Temp.Damage.Stun] run function mhdp_monster_ranposu:core/damage/reaction/stun
     # 減気
         execute if entity @s[tag=Mns.Temp.Damage.Tire]
+    # 相殺
+        execute if entity @s[tag=Mns.Temp.Damage.Counter] run function mhdp_monster_ranposu:core/damage/reaction/counter
     # 大ダウン(独自)
         execute unless entity @s[tag=!Mns.Temp.Damage.Head,tag=!Mns.Temp.Damage.Body] if score @s Mns.Ranposu.DamageCount matches 2.. run function mhdp_monster_ranposu:core/damage/reaction/sp
     # 頭(独自)
