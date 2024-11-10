@@ -45,5 +45,8 @@
     data modify storage mhdp_core:game_data Phase set value 1
     scoreboard players set #mhdp_core_timer MhdpCore 0
 
+# 落ちているアイテムの回収
+    function mhdp_core:phase/2_village_to_quest/start/pickup
+
 # 村の更新処理
     function mhdp_core:phase/1_village/start/main

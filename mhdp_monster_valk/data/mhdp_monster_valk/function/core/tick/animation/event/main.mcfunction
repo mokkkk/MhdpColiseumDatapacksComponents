@@ -41,6 +41,8 @@
         execute if entity @s[tag=aj.valk_aj.animation.lance_down_end_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_down_end_l/main
     # 飛行中ダウン
         execute if entity @s[tag=aj.valk_aj.animation.lance_damage_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_flying/main
+    # ダウン
+        # execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_head_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_head_start/main
 
 # 龍気吸引
     execute if entity @s[tag=aj.valk_aj.animation.lance_charge_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/main

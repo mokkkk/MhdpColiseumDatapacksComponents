@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:core/switch/macro/m.drawing
 
+# 空中の場合、中断
+    execute if entity @s[nbt={OnGround:0b}] run return 0
+
 # 使用中の場合、中断
     execute if entity @s[tag=Itm.Sp.Nikuyaki.Using] run return 0
 
