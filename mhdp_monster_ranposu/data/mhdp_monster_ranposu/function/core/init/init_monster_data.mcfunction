@@ -49,9 +49,9 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:false,\
         HallTrapTimer:15,\
+        CounterDamage:30,\
         HeadPartDamage:11,\
-        BodyPartDamage:15,\
-        CounterDamage:50\
+        BodyPartDamage:15\
     }
 
 # 肉質データ

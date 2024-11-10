@@ -18,3 +18,6 @@
         execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
     # アニメーション再生
         execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:ranposu_aj/animations/anger/tween {duration:1, to_frame: 0}
+
+# 終了
+    tag @s add Mns.Temp.IsDamaged
