@@ -21,7 +21,7 @@
     execute if score @s Vlg.General.Timer matches 200 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
         {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"【 チュートリアル：剛射 ","color":"#00FFC3","bold": true},{"text":"1/1","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  射撃後に "},{"text":"スニークしながらマウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" 短押しで、\n"},\
+        {"text":"  射撃後に "},{"text":"スニークしながらマウス短押し","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" で、\n"},\
         {"text":"  "},{"text":"剛射","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
         {"text":"  直前の射撃より "},{"text":"1段階レベルの高い射撃","color": "#ff9900","bold": true},{"text":" を行います。\n"},\
         {"text":"  剛射を使うことで、 "},{"text":"最大レベルの射撃を連続で使用できます","color": "#ff9900","bold": true},{"text":" 。\n"},\

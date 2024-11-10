@@ -19,7 +19,7 @@
     execute if score @s Vlg.General.Timer matches 260 run tellraw @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] [\
         {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"【 チュートリアル：回転斬り・旋刈り ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  各コンボ3段目の後に同様の操作を行うと "},{"text":"旋刈り","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
+        {"text":"  各コンボ3段目の後に回転斬りと同じ操作を行うと "},{"text":"旋刈り","color": "#ff9900","bold": true},{"text":" が発動します。\n"},\
         {"text":"  非常に威力が高く、2回ヒットします。\n"},\
         {"text":"  ただし、旋刈りは隙が大きく、"},{"text":"各コンボに派生できません","color": "#ff9900","bold": true},{"text":" 。\n"},\
         {"text":"  コンボの途中ではなく、締めの攻撃として使用しましょう。\n"}\

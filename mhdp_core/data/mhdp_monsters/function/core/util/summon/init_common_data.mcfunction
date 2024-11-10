@@ -108,9 +108,9 @@
 # 相殺
     # 基礎値取得
         execute store result score @s Mns.Counter.Damage store result score @s Mns.Counter.Damage.Max run data get storage mhdp_core:temp TargetMonsterData.CounterDamage
-    # 計算
-        scoreboard players operation @s Mns.Counter.Damage *= #mhdp_temp_hp_multiply_playercount MhdpCore
-        execute store result score @s Mns.Counter.Damage.Max run scoreboard players operation @s Mns.Counter.Damage /= #const_100 Const
+    # # 計算
+    #     scoreboard players operation @s Mns.Counter.Damage *= #mhdp_temp_hp_multiply_playercount MhdpCore
+    #     execute store result score @s Mns.Counter.Damage.Max run scoreboard players operation @s Mns.Counter.Damage /= #const_100 Const
     
 # その他
     # ハードコア
