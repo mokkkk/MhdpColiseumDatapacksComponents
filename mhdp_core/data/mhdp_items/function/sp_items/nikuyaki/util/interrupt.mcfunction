@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:core/switch/item/init
 
+# 利用中の場合のみ実行
+    execute if entity @s[tag=!Itm.Sp.Nikuyaki.Using] run return 0
+
 # ride中の場合、中断
     ride @s dismount
 

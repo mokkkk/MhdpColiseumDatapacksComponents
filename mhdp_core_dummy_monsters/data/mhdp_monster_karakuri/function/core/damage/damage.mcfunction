@@ -24,7 +24,8 @@
     execute if entity @s[tag=Mns.State.Tutorial.IsDamage] run tag @s remove Mns.State.Tutorial.IsDamage
 
 # 以下の優先度で怯みを適用
-    # なし
+    # 相殺
+        execute if score #mhdp_temp_counter_value MhdpCore matches 1.. run function mhdp_monster_karakuri:core/damage/reaction/counter
 
 # 状態異常の発動
     # 爆破
