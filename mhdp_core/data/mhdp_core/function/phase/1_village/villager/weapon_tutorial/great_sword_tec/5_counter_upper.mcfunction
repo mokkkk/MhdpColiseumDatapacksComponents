@@ -22,12 +22,11 @@
         {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"【 チュートリアル：相殺斬り上げ ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  相殺斬り上げの "},{"text":"出始めにモンスターの攻撃が当たる","color": "#ff9900","bold": true},{"text":" と、\n"},\
-        {"text":"  "},{"text":"相殺","color": "#ff9900","bold": true},{"text":" が発生します。\n"},\
-        {"text":"  相殺が成功すると、攻撃のダメージを抑えつつ、後ろに大きく移動します。\n"},\
+        {"text":"  "},{"text":"相殺","color": "#ff9900","bold": true},{"text":" が発生し、受けるダメージを大きく軽減できます。\n"},\
+        {"text":"  また "},{"text":"モンスターが大きくのけぞる","color": "#ff9900","bold": true},{"text":" ことがあります。\n"},\
         {"text":"  溜め斬りを当てた後にモンスターが攻撃してきそうな場合、\n"},\
         {"text":"  相殺斬り上げを使用して攻撃をやり過ごすことで、\n"},\
-        {"text":"  さらなる攻撃のチャンスを作ることができます。\n"},\
-        {"text":"  溜めすぎによる強制攻撃には注意しましょう。\n"}\
+        {"text":"  さらなる攻撃のチャンスを作ることができます。\n"}\
     ]
 
     execute if score @s Vlg.General.Timer matches 460 as @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
