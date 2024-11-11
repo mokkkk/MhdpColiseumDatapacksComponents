@@ -50,5 +50,9 @@
 # 2連
     execute if entity @s[tag=Mns.State.IsAnger] if score @s aj.lance_vertical_turn_r.frame matches 65 run function animated_java:valk_aj/animations/lance_vertical_r_to_l/tween {duration:1, to_frame: 1}
 
+# 状態更新
+   execute if score @s aj.lance_vertical_turn_r.frame matches 45 run tag @s add Mns.Valk.State.Attack.Wing.R
+   execute if score @s aj.lance_vertical_turn_r.frame matches 50 run tag @s remove Mns.Valk.State.Attack.Wing.R
+
 # 終了
     execute if score @s aj.lance_vertical_turn_r.frame matches 124 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_turn_r/end

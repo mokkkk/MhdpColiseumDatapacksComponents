@@ -35,5 +35,4 @@
 
 # 終了
     tag @s remove Mns.Valk.Temp.Tail.Break
-# その他
-    kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
+    function mhdp_monster_valk:core/damage/reaction/general

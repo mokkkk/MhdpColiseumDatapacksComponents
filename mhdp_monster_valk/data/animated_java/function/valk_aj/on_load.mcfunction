@@ -16,7 +16,6 @@ scoreboard objectives add aj.lance_damage_counter.frame dummy
 scoreboard objectives add aj.lance_damage_counter_mirror.frame dummy
 scoreboard objectives add aj.lance_damage_counter_end.frame dummy
 scoreboard objectives add aj.lance_damage_counter_end_mirror.frame dummy
-scoreboard objectives add aj.lance_damage_counter_end3.frame dummy
 scoreboard objectives add aj.lance_damage_wing_r.frame dummy
 scoreboard objectives add aj.lance_damage_wing_l.frame dummy
 scoreboard objectives add aj.lance_damage_body_r.frame dummy

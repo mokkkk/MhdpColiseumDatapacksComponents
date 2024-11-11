@@ -55,5 +55,9 @@
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 状態更新
+   execute if score @s aj.shoot_vertical_r.frame matches 48 run tag @s add Mns.Valk.State.Attack.Wing.R
+   execute if score @s aj.shoot_vertical_r.frame matches 53 run tag @s remove Mns.Valk.State.Attack.Wing.R
+
 # 終了
     execute if score @s aj.shoot_vertical_r.frame matches 114 run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_r/end

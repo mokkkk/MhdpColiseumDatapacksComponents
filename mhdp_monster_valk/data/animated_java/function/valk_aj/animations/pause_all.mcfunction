@@ -17,7 +17,6 @@ tag @s remove aj.valk_aj.animation.lance_damage_counter.playing
 tag @s remove aj.valk_aj.animation.lance_damage_counter_mirror.playing
 tag @s remove aj.valk_aj.animation.lance_damage_counter_end.playing
 tag @s remove aj.valk_aj.animation.lance_damage_counter_end_mirror.playing
-tag @s remove aj.valk_aj.animation.lance_damage_counter_end3.playing
 tag @s remove aj.valk_aj.animation.lance_damage_wing_r.playing
 tag @s remove aj.valk_aj.animation.lance_damage_wing_l.playing
 tag @s remove aj.valk_aj.animation.lance_damage_body_r.playing

@@ -61,5 +61,11 @@
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 状態更新
+   execute if score @s aj.lance_spear_r_to_l.frame matches 35 run tag @s add Mns.Valk.State.Attack.Wing.R
+   execute if score @s aj.lance_spear_r_to_l.frame matches 42 run tag @s remove Mns.Valk.State.Attack.Wing.R
+   execute if score @s aj.lance_spear_r_to_l.frame matches 59 run tag @s add Mns.Valk.State.Attack.Wing.L
+   execute if score @s aj.lance_spear_r_to_l.frame matches 66 run tag @s remove Mns.Valk.State.Attack.Wing.L
+
 # 終了
     execute if score @s aj.lance_spear_r_to_l.frame matches 106 run function mhdp_monster_valk:core/tick/animation/event/lance_spear_r_to_l/end

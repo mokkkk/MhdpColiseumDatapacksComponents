@@ -19,7 +19,6 @@ execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter.playing] run 
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_mirror.playing] run function animated_java:valk_aj/animations/lance_damage_counter_mirror/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_end.playing] run function animated_java:valk_aj/animations/lance_damage_counter_end/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_end_mirror.playing] run function animated_java:valk_aj/animations/lance_damage_counter_end_mirror/zzz/on_tick
-execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_end3.playing] run function animated_java:valk_aj/animations/lance_damage_counter_end3/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_wing_r.playing] run function animated_java:valk_aj/animations/lance_damage_wing_r/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_wing_l.playing] run function animated_java:valk_aj/animations/lance_damage_wing_l/zzz/on_tick
 execute if entity @s[tag=aj.valk_aj.animation.lance_damage_body_r.playing] run function animated_java:valk_aj/animations/lance_damage_body_r/zzz/on_tick
