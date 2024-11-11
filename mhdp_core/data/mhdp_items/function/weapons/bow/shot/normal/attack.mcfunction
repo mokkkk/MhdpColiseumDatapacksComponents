@@ -16,9 +16,9 @@
     tag @n[type=slime,tag=Mns.HitBox] add Temp.Victim
 
 # クリティカル距離設定
-    scoreboard players set #mhdp_temp_crit_min MhdpCore 3
-    scoreboard players set #mhdp_temp_crit_max MhdpCore 9
-    execute if entity @a[tag=Ply.Temp.TargetSub,tag=Ply.Weapon.Bow.IsHorming] run scoreboard players set #mhdp_temp_crit_max MhdpCore 12
+    scoreboard players set #mhdp_temp_crit_min MhdpCore 2
+    scoreboard players set #mhdp_temp_crit_max MhdpCore 6
+    execute if entity @a[tag=Ply.Temp.TargetSub,tag=Ply.Weapon.Bow.IsHorming] run scoreboard players set #mhdp_temp_crit_max MhdpCore 9
     execute if entity @s[tag=Wpn.Bw.Shot.Normal.Flying] run scoreboard players set #mhdp_temp_crit_max MhdpCore 30
     execute if score #mhdp_temp_crit_min MhdpCore <= @s Mns.Shot.Timer if score @s Mns.Shot.Timer <= #mhdp_temp_crit_max MhdpCore run tag @s add Temp.IsCrit
 
