@@ -13,6 +13,13 @@
     # 消去
         execute as @n[type=item_display,tag=Itm.Root.Nikuyaki.Target] run function animated_java:nikuyaki/remove/this
 
+# アイテム使用開始前の位置に戻る
+    function mhdp_core:player/data/load_data
+    summon area_effect_cloud ~ ~ ~ {Tags:["Temp.TpPos"]}
+    data modify entity @n[type=area_effect_cloud,tag=Temp.TpPos] Pos set from storage mhdp_core:temp PlayerData.ItemUsedPos
+    execute positioned as @n[type=area_effect_cloud,tag=Temp.TpPos] run tp @s ~ ~ ~ ~ ~
+    kill @e[type=area_effect_cloud,tag=Temp.TpPos]
+
 # タグ消去
     tag @s remove Itm.Sp.Nikuyaki.Using
 

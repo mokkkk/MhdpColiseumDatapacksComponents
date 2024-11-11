@@ -28,6 +28,11 @@
     scoreboard players operation @n[type=interaction,tag=Other.Interaction.Meat,tag=!Other.Interaction.Meat.IsInit] Ply.Uid = @s Ply.Uid
     scoreboard players set @n[type=item_display,tag=Itm.Root,tag=Itm.Root.Nikuyaki,tag=Itm.Root.Nikuyaki.Start] Mns.General.DummyCounter 10
 
+# 使用開始前の位置を保存
+    function mhdp_core:player/data/load_data
+    data modify storage mhdp_core:temp PlayerData.ItemUsedPos set from entity @s Pos
+    function mhdp_core:player/data/save_data
+
 # ride
     ride @s mount @n[type=armor_stand,tag=Itm.Nikuyaki.Chair,tag=!Itm.Nikuyaki.Chair.IsRode]
 
