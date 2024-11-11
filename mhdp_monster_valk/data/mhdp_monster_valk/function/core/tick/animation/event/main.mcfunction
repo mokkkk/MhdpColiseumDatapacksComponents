@@ -41,8 +41,14 @@
         execute if entity @s[tag=aj.valk_aj.animation.lance_down_end_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_down_end_l/main
     # 飛行中ダウン
         execute if entity @s[tag=aj.valk_aj.animation.lance_damage_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_flying/main
-    # ダウン
-        # execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_head_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_head_start/main
+    # 相殺怯み
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_head_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_head_start/main
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_wing_r_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_wing_r_start/main
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_wing_l_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_wing_l_start/main
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter/main
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_mirror.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_mirror/main
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_end.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_end/main
+        execute if entity @s[tag=aj.valk_aj.animation.lance_damage_counter_end_mirror.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_end_mirror/main
 
 # 龍気吸引
     execute if entity @s[tag=aj.valk_aj.animation.lance_charge_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/main
