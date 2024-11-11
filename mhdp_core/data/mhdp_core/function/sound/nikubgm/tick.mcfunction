@@ -1,2 +1,2 @@
 scoreboard players operation @s nbs_nikubgm += speed nbs_nikubgm
-function mhdp_core:sound/nikubgm/tree/0_127
+execute if entity @s[tag=!Ply.State.IsSilent] run function mhdp_core:sound/nikubgm/tree/0_127
