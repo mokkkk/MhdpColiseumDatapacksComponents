@@ -10,6 +10,14 @@ tag @s remove aj.valk_aj.animation.state_paralysis.playing
 tag @s remove aj.valk_aj.animation.lance_idle.playing
 tag @s remove aj.valk_aj.animation.lance_idle_short.playing
 tag @s remove aj.valk_aj.animation.lance_damage_head.playing
+tag @s remove aj.valk_aj.animation.lance_damage_counter_head_start.playing
+tag @s remove aj.valk_aj.animation.lance_damage_counter_wing_r_start.playing
+tag @s remove aj.valk_aj.animation.lance_damage_counter_wing_l_start.playing
+tag @s remove aj.valk_aj.animation.lance_damage_counter.playing
+tag @s remove aj.valk_aj.animation.lance_damage_counter_mirror.playing
+tag @s remove aj.valk_aj.animation.lance_damage_counter_end.playing
+tag @s remove aj.valk_aj.animation.lance_damage_counter_end_mirror.playing
+tag @s remove aj.valk_aj.animation.lance_damage_counter_end3.playing
 tag @s remove aj.valk_aj.animation.lance_damage_wing_r.playing
 tag @s remove aj.valk_aj.animation.lance_damage_wing_l.playing
 tag @s remove aj.valk_aj.animation.lance_damage_body_r.playing

@@ -9,6 +9,14 @@ scoreboard objectives add aj.state_paralysis.frame dummy
 scoreboard objectives add aj.lance_idle.frame dummy
 scoreboard objectives add aj.lance_idle_short.frame dummy
 scoreboard objectives add aj.lance_damage_head.frame dummy
+scoreboard objectives add aj.lance_damage_counter_head_start.frame dummy
+scoreboard objectives add aj.lance_damage_counter_wing_r_start.frame dummy
+scoreboard objectives add aj.lance_damage_counter_wing_l_start.frame dummy
+scoreboard objectives add aj.lance_damage_counter.frame dummy
+scoreboard objectives add aj.lance_damage_counter_mirror.frame dummy
+scoreboard objectives add aj.lance_damage_counter_end.frame dummy
+scoreboard objectives add aj.lance_damage_counter_end_mirror.frame dummy
+scoreboard objectives add aj.lance_damage_counter_end3.frame dummy
 scoreboard objectives add aj.lance_damage_wing_r.frame dummy
 scoreboard objectives add aj.lance_damage_wing_l.frame dummy
 scoreboard objectives add aj.lance_damage_body_r.frame dummy
@@ -81,4 +89,3 @@ scoreboard objectives add aj.comet_phase_4.frame dummy
 scoreboard objectives add aj.comet_phase_5.frame dummy
 scoreboard objectives add aj.lance_biim_1.frame dummy
 scoreboard objectives add aj.lance_biim_2.frame dummy
-execute as @e[type=item_display,tag=aj.valk_aj.root] unless score @s aj.is_rig_loaded matches 1 at @s run function animated_java:valk_aj/root/on_load
