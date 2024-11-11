@@ -13,10 +13,10 @@
     scoreboard players set @s Mns.General.DummyCounter 10
 
 # モデル変更
-    execute if score @s MhdpCore matches 50 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute if score @s MhdpCore matches 50 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data" set value 158
-    execute if score @s MhdpCore matches 220 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data" set value 159
-    execute if score @s MhdpCore matches 235 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data" set value 160
+    execute if score @s MhdpCore matches 80 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.id set value "minecraft:white_dye"
+    execute if score @s MhdpCore matches 80 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data" set value 158
+    execute if score @s MhdpCore matches 170 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data" set value 159
+    execute if score @s MhdpCore matches 180 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data" set value 160
 
 # 演出
     execute if score @s Mns.General.DummyTimer matches 1 run particle smoke ~ ~1 ~ 0.4 0.4 0.4 0 1

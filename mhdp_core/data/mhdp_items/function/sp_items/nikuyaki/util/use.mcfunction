@@ -31,6 +31,9 @@
 # ride
     ride @s mount @n[type=armor_stand,tag=Itm.Nikuyaki.Chair,tag=!Itm.Nikuyaki.Chair.IsRode]
 
+# 音楽再生開始
+    function mhdp_core:sound/nikubgm/play
+
 # 終了
     tag @n[type=armor_stand,tag=Itm.Nikuyaki.Chair,tag=!Itm.Nikuyaki.Chair.IsRode] add Itm.Nikuyaki.Chair.IsRode
     tag @n[type=interaction,tag=Other.Interaction.Meat,tag=!Other.Interaction.Meat.IsInit] add Other.Interaction.UI

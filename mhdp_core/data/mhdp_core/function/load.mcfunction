@@ -132,6 +132,8 @@
         scoreboard players set $100 Const 100
         scoreboard players set $31743 Const 31743
         scoreboard players set $65536 Const 65536
+    # NBS再生用
+        function mhdp_core:sound/nikubgm/load
 
 ## アイテム用ロード処理
     function mhdp_items:load

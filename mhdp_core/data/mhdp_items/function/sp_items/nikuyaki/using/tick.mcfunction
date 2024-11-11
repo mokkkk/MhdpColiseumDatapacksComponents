@@ -15,6 +15,9 @@
     execute unless entity @s[tag=Itm.Sp.Nikuyaki.Using.Ride] run function mhdp_items:sp_items/nikuyaki/using/end
     tag @s remove Itm.Sp.Nikuyaki.Using.Ride
 
+# 音楽再生
+    function mhdp_core:sound/nikubgm/tick
+
 # 終了
     execute if score @s Itm.Nikuyaki.GeneralTimer matches 300.. run function mhdp_items:sp_items/nikuyaki/using/end
     tag @n[type=item_display,tag=Itm.Root.Nikuyaki,tag=Itm.Root.Nikuyaki.Target] remove Itm.Root.Nikuyaki.Target

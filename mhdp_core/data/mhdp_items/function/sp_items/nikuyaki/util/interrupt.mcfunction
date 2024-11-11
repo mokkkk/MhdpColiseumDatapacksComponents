@@ -16,5 +16,8 @@
 # タグ消去
     tag @s remove Itm.Sp.Nikuyaki.Using
 
+# 音楽再生停止
+    function mhdp_core:sound/nikubgm/stop
+
 # スコア削除
     scoreboard players set @s Itm.Nikuyaki.GeneralTimer 0
