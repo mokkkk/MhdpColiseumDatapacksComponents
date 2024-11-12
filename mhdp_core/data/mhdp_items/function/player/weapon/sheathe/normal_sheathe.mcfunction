@@ -17,4 +17,4 @@
     tag @s remove Ply.Weapon.Drawing
     tag @s remove Ply.Weapon.Drawing.Sub
     
-say 通常納刀
+# say 武器共通：通常納刀

@@ -18,6 +18,13 @@ tag @s remove aj.dino_aj.animation.down_right.playing
 tag @s remove aj.dino_aj.animation.down_left.playing
 tag @s remove aj.dino_aj.animation.down_end_right.playing
 tag @s remove aj.dino_aj.animation.down_end_left.playing
+tag @s remove aj.dino_aj.animation.damage_counter_head_start.playing
+tag @s remove aj.dino_aj.animation.damage_counter_tail_right_start.playing
+tag @s remove aj.dino_aj.animation.damage_counter_tail_left_start.playing
+tag @s remove aj.dino_aj.animation.damage_counter.playing
+tag @s remove aj.dino_aj.animation.damage_counter_mirror.playing
+tag @s remove aj.dino_aj.animation.damage_counter_end.playing
+tag @s remove aj.dino_aj.animation.damage_counter_end_mirror.playing
 tag @s remove aj.dino_aj.animation.damage_flying.playing
 tag @s remove aj.dino_aj.animation.death.playing
 tag @s remove aj.dino_aj.animation.death_flying.playing

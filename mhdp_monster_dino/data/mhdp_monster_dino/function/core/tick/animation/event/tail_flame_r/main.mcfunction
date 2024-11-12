@@ -45,5 +45,9 @@
     execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.tail_flame_r.frame matches 37 run function mhdp_monster_dino:core/util/phase/tail_heat
     execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.tail_flame_r.frame matches 41 run function mhdp_monster_dino:core/util/phase/tail_heat
 
+# 状態更新
+    execute if score @s aj.tail_flame_r.frame matches 20 run tag @s add Mns.Dino.State.Attack.Tail.R
+    execute if score @s aj.tail_flame_r.frame matches 50 run tag @s remove Mns.Dino.State.Attack.Tail.R
+
 # 終了
     execute if score @s aj.tail_flame_r.frame matches 96 run function mhdp_monster_dino:core/tick/animation/event/tail_flame_r/end

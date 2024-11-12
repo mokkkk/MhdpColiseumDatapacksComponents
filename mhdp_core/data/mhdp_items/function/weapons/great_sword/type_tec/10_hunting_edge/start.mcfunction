@@ -26,4 +26,4 @@
     tag @s add Itm.Sp.Wirebug.UsedSkill
     scoreboard players set @s Itm.Wirebug.CoolTime 400
 
-say 大剣・ハンティングエッジ
+# say 武器操作：大剣・ハンティングエッジ

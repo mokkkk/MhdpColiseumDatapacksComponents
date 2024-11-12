@@ -37,6 +37,9 @@ tag @s remove aj.reus_aj.animation.land_down_r.playing
 tag @s remove aj.reus_aj.animation.land_down_l.playing
 tag @s remove aj.reus_aj.animation.land_down_end_r.playing
 tag @s remove aj.reus_aj.animation.land_down_end_l.playing
+tag @s remove aj.reus_aj.animation.land_damage_counter_start.playing
+tag @s remove aj.reus_aj.animation.land_damage_counter.playing
+tag @s remove aj.reus_aj.animation.land_damage_counter_end.playing
 tag @s remove aj.reus_aj.animation.land_death.playing
 tag @s remove aj.reus_aj.animation.fly_idle.playing
 tag @s remove aj.reus_aj.animation.fly_anger.playing
@@ -57,5 +60,6 @@ tag @s remove aj.reus_aj.animation.fly_end.playing
 tag @s remove aj.reus_aj.animation.fly_damage.playing
 tag @s remove aj.reus_aj.animation.fly_damage_tail.playing
 tag @s remove aj.reus_aj.animation.fly_damage_down.playing
+tag @s remove aj.reus_aj.animation.fly_damage_counter_start.playing
 tag @s remove aj.reus_aj.animation.death_flying.playing
 tag @s remove aj.reus_aj.animation.fly_state_paralysis.playing

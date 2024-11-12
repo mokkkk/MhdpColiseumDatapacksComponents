@@ -12,6 +12,9 @@
     scoreboard objectives add MhdpCore dummy
     scoreboard objectives add QuestSerialId dummy
     scoreboard objectives add Const dummy
+    # タイマー表示用
+        scoreboard objectives add Quest.Timer.Text dummy {"text":"制限時間","color":"gold","bold":true}
+        scoreboard objectives modify Quest.Timer.Text displayname {"text":"制限時間","color":"gold","bold":true,"underlined":true}
 
 # プレイヤー関連
     # UID
@@ -21,6 +24,8 @@
     # 操作
         # ニンジン棒使用回数
             scoreboard objectives add Ply.Ope.UsedCoas minecraft.used:carrot_on_a_stick
+        # ニンジン棒投げ捨て回数
+            scoreboard objectives add Ply.Ope.DropCoas dropped:carrot_on_a_stick
         # ジャンプ回数
             scoreboard objectives add Ply.Ope.Jump minecraft.custom:minecraft.jump
         # エンダーアイ投げ捨て回数
@@ -36,6 +41,8 @@
             scoreboard objectives add Ply.Ope.EatingTimer.Effect dummy
         # クエスト受注のトリガー
             scoreboard objectives add Ply.Ope.AcceptedQuestId trigger
+        # チュートリアル再生のトリガー
+            scoreboard objectives add Ply.Ope.TutorialTrigger trigger
     # 処理用タイマー
         # 無敵時間
             scoreboard objectives add Ply.Timer.DamageInterval dummy
@@ -51,11 +58,27 @@
         # 参加したクエストの連番ID
             scoreboard objectives add Ply.Other.QuestSerialId dummy
 
+# 村人関連
+    # タイマー
+        scoreboard objectives add Vlg.General.Timer dummy
+        scoreboard objectives add Vlg.General.Timer.Sub dummy
+    # カウンター
+        scoreboard objectives add Vlg.General.Counter dummy
+    # 武器チュートリアル用
+        # ターゲットプレイヤー
+            scoreboard objectives add Vlg.WeaponTutorial.TargetPlayerUid dummy
+        # チュートリアルテキスト用
+            scoreboard objectives add Vlg.WeaponTutorial.Text dummy
+            scoreboard objectives modify Vlg.WeaponTutorial.Text displayname {"text":"訓練","color":"gold","bold":true,"underlined":true}
+    
 # モンスター関連
     # UID
         scoreboard objectives add Mns.Uid dummy
     # その他EntityのUuid
         scoreboard objectives add Entity.Uuid dummy
+    # チュートリアル用
+        scoreboard objectives add Mns.Tutorial.Text dummy {"text":"チュートリアル","color":"gold","bold":true}
+        scoreboard objectives modify Mns.Tutorial.Text displayname {"text":"チュートリアル","color":"gold","bold":true,"underlined":true}
 
 ## Scoreboard初期値設定
 # プレイヤーUID
@@ -84,7 +107,10 @@
     team add Team.QuestHost
     team add Team.QuestMember
     team add Team.QuestPlaying
+    team add Team.WeaponTutorial
     team add Team.NoCollision
+    team modify Team.QuestPlaying color gray
+    team modify Team.WeaponTutorial color gold
     team modify Team.QuestHost prefix [{"text":"a","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.QuestMember prefix [{"text":"b","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
     team modify Team.QuestPlaying prefix [{"text":"c","font":"icons/mhdp_icons"},{"text":" ","font":"default"}]
@@ -106,6 +132,8 @@
         scoreboard players set $100 Const 100
         scoreboard players set $31743 Const 31743
         scoreboard players set $65536 Const 65536
+    # NBS再生用
+        function mhdp_core:sound/nikubgm/load
 
 ## アイテム用ロード処理
     function mhdp_items:load
@@ -113,9 +141,13 @@
 ## モンスター用ロード処理
     function mhdp_monsters:load
 
+## 座標ロード処理
+    function mhdp_core:core/init/position
+
 # 以下、デバッグ時に適宜モンスター個別のinit処理を記述
-    function mhdp_monster_dino:core/init/init_monster_data
-    function mhdp_monster_valk:core/init/init_monster_data
+    # function mhdp_monster_tutorial_01:core/init/init_monster_data
+    # function mhdp_monster_tutorial_02:core/init/init_monster_data
+    # function mhdp_monster_karakuri:core/init/init_monster_data
 
 # 体験版用処理
     data modify storage mhdp_core:game_data IsBetaVersion set value true

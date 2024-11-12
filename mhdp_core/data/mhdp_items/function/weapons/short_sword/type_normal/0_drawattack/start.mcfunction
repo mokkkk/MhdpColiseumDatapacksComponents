@@ -16,3 +16,6 @@
 
 # 翔蟲：飛影に移行
     execute if entity @s[tag=Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/short_sword/type_normal/23_tobikage/start
+
+# チュートリアル用処理
+    tag @s remove Ply.Temp.Tutorial.DrawAttack

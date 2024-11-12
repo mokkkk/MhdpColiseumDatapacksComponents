@@ -20,4 +20,4 @@
     scoreboard players set @s Wpn.Gs.ChargeCount 0
     scoreboard players set @s Wpn.Gs.ChargeSlashCount 0
 
-say 大剣・大溜め
+# say 武器操作：大剣・大溜め

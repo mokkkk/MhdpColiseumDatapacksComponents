@@ -16,8 +16,10 @@
     # フレーム回避
         execute if score @s Ply.Timer.Avoid matches 1.. at @s run return run function mhdp_core:player/damage/entity_to_player/avoid/main
     # ハイパーアーマー
-        execute if entity @s[tag=Ply.Weapon.Armod.Hyper] run return run function mhdp_items:core/switch/weapon_on_damage
-        execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] run return run function mhdp_items:core/switch/weapon_on_damage
+        execute if entity @s[tag=Ply.Weapon.Armod.Hyper] run return 0
+        execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] run return 0
+        # execute if entity @s[tag=Ply.Weapon.Armod.Hyper] run return run function mhdp_items:core/switch/weapon_on_damage
+        # execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] run return run function mhdp_items:core/switch/weapon_on_damage
 
 # ダメージ適用
     # 適用

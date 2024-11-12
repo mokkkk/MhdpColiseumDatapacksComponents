@@ -7,7 +7,7 @@
 # 攻撃対象の取得
     tag @s add this
     execute as @e[type=#lib:living,type=!player,tag=AttackedEntity,distance=..150] if score @s AttackedEntity = @a[tag=this,limit=1] AttackedEntity run tag @s add Temp.Victim
-    execute if entity @e[tag=Temp.Victim] as @e[tag=Temp.Victim] run say 攻撃受けた
+    # execute if entity @e[tag=Temp.Victim] as @e[tag=Temp.Victim] run say 攻撃受けた
 
 # 攻撃対象がいない場合、終了
     execute unless entity @e[type=slime,tag=Temp.Victim] run return run function mhdp_core:player/damage/player_to_entity/direct_attack_end

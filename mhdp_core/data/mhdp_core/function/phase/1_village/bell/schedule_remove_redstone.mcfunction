@@ -5,4 +5,4 @@
 # @within function mhdp_core:phase/1_village/bell/click
 
 # 除去
-    setblock 223 62 206 stone
+    function mhdp_core:phase/1_village/bell/macro/m.remove_redstone with storage mhdp_core:game_data PositionList[{ID:"StartBell"}]

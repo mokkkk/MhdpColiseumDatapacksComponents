@@ -3,36 +3,6 @@ scoreboard objectives add aj.i dummy
 scoreboard objectives add aj.id dummy
 scoreboard objectives add aj.is_rig_loaded dummy
 scoreboard objectives add aj.tween_duration dummy
-scoreboard objectives add aj.idle.frame dummy
-scoreboard objectives add aj.search.frame dummy
-scoreboard objectives add aj.voice.frame dummy
-scoreboard objectives add aj.anger.frame dummy
-scoreboard objectives add aj.state_paralysis_start.frame dummy
-scoreboard objectives add aj.state_paralysis.frame dummy
-scoreboard objectives add aj.state_paralysis_end.frame dummy
-scoreboard objectives add aj.state_stun.frame dummy
-scoreboard objectives add aj.state_stun_end.frame dummy
-scoreboard objectives add aj.turn_right.frame dummy
-scoreboard objectives add aj.turn_left.frame dummy
-scoreboard objectives add aj.step_back.frame dummy
-scoreboard objectives add aj.move.frame dummy
-scoreboard objectives add aj.bite.frame dummy
-scoreboard objectives add aj.bite_strong.frame dummy
-scoreboard objectives add aj.claw.frame dummy
-scoreboard objectives add aj.tail_right.frame dummy
-scoreboard objectives add aj.tail_left.frame dummy
-scoreboard objectives add aj.move_claw.frame dummy
-scoreboard objectives add aj.jump.frame dummy
-scoreboard objectives add aj.tackle.frame dummy
-scoreboard objectives add aj.step_jump_right.frame dummy
-scoreboard objectives add aj.step_jump_left.frame dummy
-scoreboard objectives add aj.damage.frame dummy
-scoreboard objectives add aj.damage_down.frame dummy
-scoreboard objectives add aj.down.frame dummy
-scoreboard objectives add aj.down_end.frame dummy
-scoreboard objectives add aj.damage_flying.frame dummy
-scoreboard objectives add aj.death.frame dummy
-scoreboard objectives add aj.death_flying.frame dummy
 scoreboard players add aj.last_id aj.id 0
 data modify storage aj:temp args set value {}
 scoreboard players reset * aj.is_rig_loaded

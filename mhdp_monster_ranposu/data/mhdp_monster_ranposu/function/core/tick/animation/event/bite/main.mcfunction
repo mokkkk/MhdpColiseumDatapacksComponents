@@ -8,7 +8,7 @@
     execute if score @s aj.bite.frame matches 9..13 unless entity @n[tag=Mns.Target.Ranposu,distance=..5] at @s run tp @s ^ ^ ^0.3
 
 # 効果音
-    execute if score @s aj.bite.frame matches 1 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s aj.bite.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.bite.frame matches 32 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.bite.frame matches 13 run playsound entity.wither.break_block master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.7
 

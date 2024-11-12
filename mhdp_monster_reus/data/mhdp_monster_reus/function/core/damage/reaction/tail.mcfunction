@@ -29,3 +29,4 @@
 
 # 終了
     tag @s remove Mns.Reus.Temp.Tail.Break
+    tag @s add Mns.Temp.IsDamaged

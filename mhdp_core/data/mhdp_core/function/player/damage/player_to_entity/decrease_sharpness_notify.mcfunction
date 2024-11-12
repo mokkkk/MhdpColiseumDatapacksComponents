@@ -5,6 +5,6 @@
 # @within function mhdp_core:player/damage/player_to_entity/decrease_sharpness
 
 # 通知
-    tellraw @s {"text": "【武器の斬れ味が低下した！】"}
+    tellraw @s {"text": "【武器の斬れ味が低下した！】","color": "red"}
     playsound entity.item.break master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     playsound entity.item.break master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1

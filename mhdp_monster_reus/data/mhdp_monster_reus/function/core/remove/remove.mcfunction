@@ -16,4 +16,4 @@
 # モデル消去
     function animated_java:reus_aj/remove/this
 
-say 火竜消去処理
+# say モンスター処理：火竜消去処理

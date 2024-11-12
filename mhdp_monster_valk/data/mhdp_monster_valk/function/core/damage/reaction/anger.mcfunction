@@ -23,5 +23,6 @@
         function mhdp_monster_valk:core/util/models/model_interrupt
     # 状態設定
         tag @s remove Mns.State.IsDisableAngerSpeed
-# その他
-        kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
+
+# 終了
+    function mhdp_monster_valk:core/damage/reaction/general

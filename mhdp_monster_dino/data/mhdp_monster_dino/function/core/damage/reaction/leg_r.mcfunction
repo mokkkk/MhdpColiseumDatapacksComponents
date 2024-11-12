@@ -32,3 +32,4 @@
 
 # 終了
     execute if score @s Mns.Dino.LegR.Damage.Count matches 2.. run scoreboard players set @s Mns.Dino.LegR.Damage.Count 0
+    function mhdp_monster_dino:core/damage/reaction/general

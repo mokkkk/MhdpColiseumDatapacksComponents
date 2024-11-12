@@ -18,3 +18,6 @@
         scoreboard players operation @s Mns.Paralysis.Timer = @s Mns.Paralysis.Timer.Max
     # アニメーションタグ消去
         function mhdp_monsters:core/util/other/remove_animation_tag
+
+# 終了
+    function mhdp_monster_dino:core/damage/reaction/general

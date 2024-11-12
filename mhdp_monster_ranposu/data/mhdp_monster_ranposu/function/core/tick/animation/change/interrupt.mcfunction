@@ -13,4 +13,6 @@
     # scoreboard players set @s Mns.General.TurnCount 2
 
 # アニメーション変更
-    function mhdp_monster_ranposu:core/tick/animation/change/main
+    # function mhdp_monster_ranposu:core/tick/animation/change/main
+
+function animated_java:ranposu_aj/animations/damage_counter_start/tween {duration:1, to_frame: 1}

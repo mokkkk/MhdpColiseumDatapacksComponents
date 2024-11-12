@@ -8,7 +8,7 @@
     tag @s remove Ply.State.IsSilent
 
 # ブロック中で死亡した場合、死亡アニメーションをスキップ
-    execute unless block ~ ~ ~ #mhdp_core:no_collision run say ブロック中で死亡
+    # execute unless block ~ ~ ~ #mhdp_core:no_collision run say ブロック中で死亡
     execute unless block ~ ~ ~ #mhdp_core:no_collision if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} run function mhdp_core:phase/3_quest/call_from_player/death
     execute unless block ~ ~ ~ #mhdp_core:no_collision run function mhdp_core:phase/3_quest/call_from_player/move_to_camp
     execute unless block ~ ~ ~ #mhdp_core:no_collision run return 0

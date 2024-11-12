@@ -12,6 +12,7 @@
         $execute if entity @s[tag=!Ply.Weapon.Guard] run scoreboard players set @s Wpn.DeactivateTimer $(VoiceTime)
     # 操作中断
         execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:core/switch/weapon_interrupt
+        execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:core/switch/item/interrupt
 
 # 演出
     execute at @s run tp @s ~ ~ ~ ~ ~5

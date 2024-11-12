@@ -49,6 +49,7 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:false,\
         HallTrapTimer:15,\
+        CounterDamage:30,\
         HeadPartDamage:11,\
         BodyPartDamage:15\
     }
@@ -73,4 +74,4 @@
     }
     function mhdp_monster_ranposu:core/init/init_attack_data
 
-say 青鳥竜 init monster data
+# say モンスター処理：青鳥竜 init monster data

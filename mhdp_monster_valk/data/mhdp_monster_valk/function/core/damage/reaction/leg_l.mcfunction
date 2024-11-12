@@ -33,5 +33,4 @@
 
 # 終了
     execute if score @s Mns.Valk.LegL.Damage.Count matches 3.. run scoreboard players set @s Mns.Valk.LegL.Damage.Count 0
-# その他
-        kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
+    function mhdp_monster_valk:core/damage/reaction/general

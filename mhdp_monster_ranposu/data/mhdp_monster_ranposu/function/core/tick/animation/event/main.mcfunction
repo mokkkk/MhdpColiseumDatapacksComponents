@@ -33,7 +33,10 @@
     # スタン
         execute if entity @s[tag=aj.ranposu_aj.animation.state_stun.playing] run function mhdp_monster_ranposu:core/tick/animation/event/state_stun/main
         execute if entity @s[tag=aj.ranposu_aj.animation.state_stun_end.playing] run function mhdp_monster_ranposu:core/tick/animation/event/state_stun_end/main
-
+    # 相殺
+        execute if entity @s[tag=aj.ranposu_aj.animation.damage_counter_start.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage_counter_start/main
+        execute if entity @s[tag=aj.ranposu_aj.animation.damage_counter.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage_counter/main
+        execute if entity @s[tag=aj.ranposu_aj.animation.damage_counter_end.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage_counter_end/main
 # 討伐
     # 通常
         execute if entity @s[tag=aj.ranposu_aj.animation.death.playing] run function mhdp_monster_ranposu:core/tick/animation/event/death/main

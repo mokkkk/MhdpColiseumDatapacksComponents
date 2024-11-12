@@ -9,3 +9,4 @@
 
 # アイテム書き換え
     $item modify entity @s weapon.$(Slot) [{"function": "minecraft:set_custom_model_data","value": $(Cmd)},{function:set_custom_data,tag:{IsDrawing:0b}}]
+    $item modify entity @s weapon.$(Slot) [{"function":"minecraft:set_name","target":"custom_name","name":$(Name)}]

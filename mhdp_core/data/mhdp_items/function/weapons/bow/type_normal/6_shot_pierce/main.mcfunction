@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:weapons/bow/type_normal/main
 
+# 操作表示
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"竜の一矢"}
+
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
@@ -50,7 +53,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1001 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1001 run scoreboard players set $strength delta.api.launch 4000
+    execute if score @s Wpn.GeneralTimer matches 1001 run scoreboard players set $strength delta.api.launch 8000
     execute if score @s Wpn.GeneralTimer matches 1001 rotated ~180 0 run function delta:api/launch_looking
 
 # スタミナ消費

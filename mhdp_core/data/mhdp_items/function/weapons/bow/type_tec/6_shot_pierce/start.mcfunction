@@ -14,4 +14,4 @@
 # スタミナ消費
     # scoreboard players remove @s Ply.Stats.Stamina 150
 
-say 弓 竜の一矢
+# say 武器操作：弓 竜の一矢

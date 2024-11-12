@@ -36,5 +36,9 @@
 # 喉赤熱化中はキャンセルしてブレスに移行
     execute if entity @s[tag=Mns.Dino.State.HeadHeat] if score @s aj.tail_back_r.frame matches 52 run function mhdp_monster_dino:core/tick/animation/event/tail_back_r/combo
 
+# 状態更新
+    execute if score @s aj.tail_back_r.frame matches 30 run tag @s add Mns.Dino.State.Attack.Tail.R
+    execute if score @s aj.tail_back_r.frame matches 50 run tag @s remove Mns.Dino.State.Attack.Tail.R
+
 # 終了
     execute if score @s aj.tail_back_r.frame matches 94 run function mhdp_monster_dino:core/tick/animation/event/tail_back_r/end

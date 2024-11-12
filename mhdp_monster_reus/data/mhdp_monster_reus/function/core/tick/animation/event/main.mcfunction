@@ -42,6 +42,11 @@
             execute if entity @s[tag=aj.reus_aj.animation.fly_damage_down.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_damage_down/main
         # 飛行中尻尾ダウン
             execute if entity @s[tag=aj.reus_aj.animation.fly_damage_tail.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_damage_tail/main
+        # 相殺
+            execute if entity @s[tag=aj.reus_aj.animation.land_damage_counter_start.playing] run function mhdp_monster_reus:core/tick/animation/event/land_damage_counter_start/main
+            execute if entity @s[tag=aj.reus_aj.animation.fly_damage_counter_start.playing] run function mhdp_monster_reus:core/tick/animation/event/fly_damage_counter_start/main
+            execute if entity @s[tag=aj.reus_aj.animation.land_damage_counter.playing] run function mhdp_monster_reus:core/tick/animation/event/land_damage_counter/main
+            execute if entity @s[tag=aj.reus_aj.animation.land_damage_counter_end.playing] run function mhdp_monster_reus:core/tick/animation/event/land_damage_counter_end/main
 
 # 状態異常
     # 麻痺

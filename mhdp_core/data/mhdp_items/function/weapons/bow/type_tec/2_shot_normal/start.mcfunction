@@ -14,4 +14,4 @@
 # スタミナ消費
     scoreboard players remove @s Ply.Stats.Stamina 80
 
-say 弓 射撃
+# say 武器操作：弓 射撃

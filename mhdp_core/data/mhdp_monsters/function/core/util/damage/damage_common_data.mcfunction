@@ -22,8 +22,8 @@
     execute if entity @s[tag=Mns.State.IsDisablePartDamage] run scoreboard players set #mhdp_temp_damage_partdamage_value MhdpCore 0
 
 # HP
-    scoreboard players operation @s Mns.Hp -= #mhdp_temp_damage_total MhdpCore
-    scoreboard players operation @s Mns.Hp.Half -= #mhdp_temp_damage_total MhdpCore
+    execute if entity @s[tag=!Mns.State.IsDisableDamage] run scoreboard players operation @s Mns.Hp -= #mhdp_temp_damage_total MhdpCore
+    execute if entity @s[tag=!Mns.State.IsDisableDamage] run scoreboard players operation @s Mns.Hp.Half -= #mhdp_temp_damage_total MhdpCore
     # 討伐無効時、HPを1残す
         execute if entity @s[tag=Mns.State.IsDisableDeath] if score @s Mns.Hp matches ..0 run scoreboard players set @s Mns.Hp 1
     # クエストのHP半減時処理を呼び出す
@@ -32,7 +32,7 @@
         execute if entity @s[tag=!Mns.State.Death] if score @s Mns.Hp matches ..0 run function mhdp_monsters:core/switch/death
 
 # 怒り
-    execute if entity @s[tag=!Mns.State.IsAnger] run scoreboard players operation @s Mns.Anger.Damage -= #mhdp_temp_damage_total MhdpCore
+    execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.State.IsDisablePartDamage,tag=!Mns.State.IsDisableAnger] run scoreboard players operation @s Mns.Anger.Damage -= #mhdp_temp_damage_total MhdpCore
     execute if score @s Mns.Anger.Damage matches ..0 run tag @s add Mns.Temp.Damage.Anger
 
 # 状態異常
@@ -42,6 +42,10 @@
     execute if entity @s[tag=!Mns.State.IsPoison] if score @s Mns.Poison.Damage matches ..0 run tag @s add Mns.Temp.Damage.Poison
     execute if entity @s[tag=!Mns.State.IsParalysis] if score @s Mns.Paralysis.Damage matches ..0 run tag @s add Mns.Temp.Damage.Paralysis
     execute if score @s Mns.Bomb.Damage matches ..0 run tag @s add Mns.Temp.Damage.Bomb
+
+# 相殺
+    execute if entity @s[tag=!Mns.State.IsDisablePartDamage] run scoreboard players operation @s Mns.Counter.Damage -= #mhdp_temp_counter_value MhdpCore
+    execute if score @s Mns.Counter.Damage matches ..0 run tag @s add Mns.Temp.Damage.Counter
 
 # スタン
     execute if entity @e[type=slime,tag=Temp.Victim,tag=Mns.HitBox.Head] if entity @s[tag=!Mns.State.IsStun] run scoreboard players operation @s Mns.Stun.Damage -= #mhdp_temp_damage_stun_value MhdpCore

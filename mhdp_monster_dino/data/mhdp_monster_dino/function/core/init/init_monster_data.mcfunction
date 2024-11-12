@@ -73,6 +73,7 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:true,\
         HallTrapTimer:15,\
+        CounterDamage:75,\
         HeadPartDamage:10,\
         BodyPartDamage:6,\
         TailPartDamage:8,\
@@ -106,4 +107,4 @@
     }
     function mhdp_monster_dino:core/init/init_attack_data
 
-say 斬竜 init monster data
+# say モンスター処理：斬竜 init monster data

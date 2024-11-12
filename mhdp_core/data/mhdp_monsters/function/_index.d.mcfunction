@@ -19,6 +19,7 @@
     #declare tag Mns.Param.IsHallTrapEnable 落とし穴有効共通タグ
 # モンスター関連・共通
     #declare tag Mns.Root モンスターのRootエンティティ共通タグ
+    #declare tag Mns.Root.NotRemove クエスト終了時にRemoveしない
 # モンスター関連・一時
     #declare tag Mns.Temp.IsIdleAnimation 待機アニメーションを再生する
     #declare tag Mns.Temp.IsSummonAnimation 登場アニメーションを再生する
@@ -58,6 +59,11 @@
     #declare tag Mns.State.IsDisableAngerSpeed 怒り状態の高速化無効
     #declare tag Mns.State.IsDisableDeath 討伐無効
     #declare tag Mns.State.IsDisablePartDamage 部位ダメージ無効
+    #declare tag Mns.State.IsNotMove 攻撃しない
+    #declare tag Mns.State.IsDisableDamage ダメージ無効
+# モンスター関連・チュートリアル用
+    #declare tag Mns.State.Tutorial.IsDamage ダメージを受けた
+    #declare tag Mns.State.Tutorial.IsBroken 部位破壊された
 # 当たり判定関連(Slime)
     #declare tag Mns.HitBox モンスターの当たり判定の共通タグ
     #declare tag Mns.HitBox.Init 初期化処理済みの当たり判定

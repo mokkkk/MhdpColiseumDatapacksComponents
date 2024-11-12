@@ -14,5 +14,8 @@
     # 導ノ矢
         execute if entity @s[tag=Wpn.Bw.Shot.Horming] run function mhdp_items:weapons/bow/shot/horming/tick
 
+# 肉焼きセット
+    execute if entity @s[tag=Itm.Root.Nikuyaki] run function mhdp_items:sp_items/nikuyaki/tick_on_root
+
 # 行方不明対策
     execute unless loaded ^ ^ ^2 run kill @s

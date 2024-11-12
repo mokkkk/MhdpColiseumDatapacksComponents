@@ -17,4 +17,4 @@
     tag @s add Itm.Sp.Wirebug.UsedSkill
     scoreboard players set @s Itm.Wirebug.CoolTime 400
 
-say 片手剣 飛影
+# say 武器操作：片手剣 飛影

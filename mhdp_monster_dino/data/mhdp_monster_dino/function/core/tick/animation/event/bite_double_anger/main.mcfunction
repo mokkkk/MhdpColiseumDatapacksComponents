@@ -33,5 +33,9 @@
     execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
     execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
 
+# 状態更新
+    execute if score @s aj.bite_double_anger.frame matches 10 run tag @s add Mns.Dino.State.Attack.Head
+    execute if score @s aj.bite_double_anger.frame matches 35 run tag @s remove Mns.Dino.State.Attack.Head
+
 # 終了
     execute if score @s aj.bite_double_anger.frame matches 64 run function mhdp_monster_dino:core/tick/animation/event/bite_double_anger/end

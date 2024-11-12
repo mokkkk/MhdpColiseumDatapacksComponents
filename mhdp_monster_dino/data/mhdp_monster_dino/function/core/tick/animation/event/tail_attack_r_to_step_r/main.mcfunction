@@ -39,5 +39,9 @@
 # フェーズ
     execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.tail_attack_r_to_step_r.frame matches 26 run function mhdp_monster_dino:core/util/phase/tail_heat
 
+# 状態更新
+    execute if score @s aj.tail_attack_r_to_step_r.frame matches 18 run tag @s add Mns.Dino.State.Attack.Tail.R
+    execute if score @s aj.tail_attack_r_to_step_r.frame matches 30 run tag @s remove Mns.Dino.State.Attack.Tail.R
+
 # 終了
     execute if score @s aj.tail_attack_r_to_step_r.frame matches 61 run function mhdp_monster_dino:core/tick/animation/event/tail_attack_r_to_step_r/end

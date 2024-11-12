@@ -28,6 +28,9 @@
             scoreboard objectives add Mns.General.BlinkTimer dummy
         # 討伐後の消滅時間
             scoreboard objectives add Mns.General.RemoveTimer dummy
+        # メイン処理用(Dummy)
+            scoreboard objectives add Mns.General.DummyTimer dummy
+            scoreboard objectives add Mns.General.DummyCounter dummy
     # パラメータ系
         # 実体力
             scoreboard objectives add Mns.Hp dummy
@@ -72,6 +75,9 @@
         # 龍気耐性値
             scoreboard objectives add Mns.DragonAura.Damage dummy
             scoreboard objectives add Mns.DragonAura.Damage.Max dummy
+        # 相殺耐性値
+            scoreboard objectives add Mns.Counter.Damage dummy
+            scoreboard objectives add Mns.Counter.Damage.Max dummy
         # 痺れ罠効果時間
             scoreboard objectives add Mns.ParalyseTrap.Timer dummy
             scoreboard objectives add Mns.ParalyseTrap.Timer.Max dummy
@@ -121,6 +127,8 @@
             scoreboard players set #const_bomb_damage_multiply Const 140
         # 龍気耐性上昇割合
             scoreboard players set #const_dragonaura_damage_multiply Const 180
+        # 相殺耐性上昇割合
+            scoreboard players set #const_counter_damage_multiply Const 200
         # 痺れ罠効果時間減少割合
             scoreboard players set #const_paralyse_trap_time_multiply Const 70
         # 落とし穴効果時間減少割合

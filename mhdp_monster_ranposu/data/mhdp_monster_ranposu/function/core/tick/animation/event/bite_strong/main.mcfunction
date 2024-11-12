@@ -5,9 +5,9 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.bite_strong.frame matches 1 run function mhdp_monster_ranposu:core/tick/animation/event/bite_strong/turn_start
+    execute if score @s aj.bite_strong.frame matches 2 run function mhdp_monster_ranposu:core/tick/animation/event/bite_strong/turn_start
     execute if score @s aj.bite_strong.frame matches 11 run function mhdp_monster_ranposu:core/tick/animation/event/bite_strong/turn_start
-    execute if score @s aj.bite_strong.frame matches 1..20 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.bite_strong.frame matches 2..21 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.bite_strong.frame matches 1..5 at @s run tp @s ^ ^ ^-0.1
@@ -16,7 +16,7 @@
     execute if score @s aj.bite_strong.frame matches 21..24 unless entity @n[tag=Mns.Target.Ranposu,distance=..5] at @s run tp @s ^ ^ ^0.5
 
 # 効果音
-    execute if score @s aj.bite_strong.frame matches 1 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1 0.1 1 0 10
+    execute if score @s aj.bite_strong.frame matches 2 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1 0.1 1 0 10
     execute if score @s aj.bite_strong.frame matches 2 run playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.5
     execute if score @s aj.bite_strong.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.bite_strong.frame matches 18 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1

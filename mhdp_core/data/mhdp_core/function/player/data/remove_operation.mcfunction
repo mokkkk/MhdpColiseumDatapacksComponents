@@ -27,6 +27,8 @@
 # ニンジン棒
     execute if entity @s[tag=Ply.Ope.StartUsingCoas] run tag @s remove Ply.Ope.StartUsingCoas
     scoreboard players set @s Ply.Ope.UsedCoas 0
+    execute if entity @s[tag=Ply.Ope.DroppedCoas] run tag @s remove Ply.Ope.DroppedCoas
+    scoreboard players set @s Ply.Ope.DropCoas 0
 
 # 食べ物
     execute if entity @s[tag=Ply.Adv.Using.Paper] run tag @s remove Ply.Adv.Using.Paper

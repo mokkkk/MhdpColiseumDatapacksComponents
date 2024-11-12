@@ -12,7 +12,4 @@
     item replace block 0 0 0 container.0 from entity @s contents
 
 # 落とし物チェストに移動
-    execute if items block 260 64 212 container.26 * run tag @s add Other.Temp.Right
-    execute if entity @s[tag=!Other.Temp.Right] run loot insert 260 64 212 mine 0 0 0 debug_stick
-    execute if entity @s[tag=Other.Temp.Right] run loot insert 259 64 212 mine 0 0 0 debug_stick
-    tag @s remove Other.Temp.Right
+    function mhdp_core:phase/2_village_to_quest/start/m.pickup_as_item with storage mhdp_core:game_data PositionList[{ID:"LostItemChest"}]

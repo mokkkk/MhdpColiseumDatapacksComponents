@@ -8,6 +8,7 @@
 
 # データ取得
     data modify storage mhdp_core:temp Args.Cmd set from storage mhdp_core:temp PlayerData.Item.UsingWeapon.components."minecraft:custom_data".ModelOffset
+    data modify storage mhdp_core:temp Args.Name set from storage mhdp_core:temp PlayerData.Item.UsingWeapon.components."minecraft:item_name"
     data modify storage mhdp_core:temp Args.Slot set value "offhand"
 
 # 実行

@@ -36,6 +36,9 @@ scoreboard objectives add aj.land_down_r.frame dummy
 scoreboard objectives add aj.land_down_l.frame dummy
 scoreboard objectives add aj.land_down_end_r.frame dummy
 scoreboard objectives add aj.land_down_end_l.frame dummy
+scoreboard objectives add aj.land_damage_counter_start.frame dummy
+scoreboard objectives add aj.land_damage_counter.frame dummy
+scoreboard objectives add aj.land_damage_counter_end.frame dummy
 scoreboard objectives add aj.land_death.frame dummy
 scoreboard objectives add aj.fly_idle.frame dummy
 scoreboard objectives add aj.fly_anger.frame dummy
@@ -56,6 +59,6 @@ scoreboard objectives add aj.fly_end.frame dummy
 scoreboard objectives add aj.fly_damage.frame dummy
 scoreboard objectives add aj.fly_damage_tail.frame dummy
 scoreboard objectives add aj.fly_damage_down.frame dummy
+scoreboard objectives add aj.fly_damage_counter_start.frame dummy
 scoreboard objectives add aj.death_flying.frame dummy
 scoreboard objectives add aj.fly_state_paralysis.frame dummy
-execute as @e[type=item_display,tag=aj.reus_aj.root] unless score @s aj.is_rig_loaded matches 1 at @s run function animated_java:reus_aj/root/on_load

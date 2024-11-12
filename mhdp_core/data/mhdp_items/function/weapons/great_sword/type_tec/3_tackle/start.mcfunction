@@ -15,4 +15,4 @@
     scoreboard players remove @s Ply.Stats.Stamina 150
     tag @s add Ply.Weapon.StaminaNotRegen
 
-say タックル
+# say 武器操作：大剣・タックル

@@ -22,4 +22,4 @@
 # タイマー初期化
     scoreboard players set @s Wpn.GuardStopTimer 0
 
-say ガード
+# say 武器操作：大剣・ガード

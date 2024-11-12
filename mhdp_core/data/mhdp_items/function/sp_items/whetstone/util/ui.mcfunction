@@ -5,7 +5,7 @@
 # @within function mhdp_items:core/switch/macro/m.drawing
 
 # TODO: 武器の初期化処理
-    say TODO:大剣抜刀処理
+    # say TODO:大剣抜刀処理
 
 # ダミー用サブ武器装備
     # タグ付与

@@ -20,15 +20,16 @@
     execute if score @s aj.lance_biim_1.frame matches 11..20 run playsound entity.player.breath master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 2
     execute if score @s aj.lance_biim_1.frame matches 37 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.lance_biim_1.frame matches 37 run particle block{block_state:"minecraft:sand"} ^ ^ ^3 2 0.1 2 0 30
-    execute if score @s aj.lance_biim_1.frame matches 43..48 run playsound entity.warden.sonic_charge master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.7
-    execute if score @s aj.lance_biim_1.frame matches 49..55 run playsound entity.warden.sonic_charge master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute if score @s aj.lance_biim_1.frame matches 33..48 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound entity.warden.sonic_charge master @s ^ ^1 ^5 0.5 1.7 0.4
+    execute if score @s aj.lance_biim_1.frame matches 49..55 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound entity.warden.sonic_charge master @s ^ ^1 ^5 0.5 2 0.4
 
 # 演出
     execute if score @s aj.lance_biim_1.frame matches 2..63 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/particle_1
     execute if score @s aj.lance_biim_1.frame matches 43..63 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/particle_2
-    execute if score @s aj.lance_biim_1.frame matches 43 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/thunder_start
-    execute if score @s aj.lance_biim_1.frame matches 43..63 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/thunder_tick
-    # 召喚
+    execute if score @s aj.lance_biim_1.frame matches 6 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/thunder_start
+    execute if score @s aj.lance_biim_1.frame matches 6..63 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/thunder_tick
+    execute if score @s aj.lance_biim_2.frame matches 27 as @e[type=text_display,tag=Mns.Shot.Valk,tag=Mns.Shot.Valk.Vfx.Thunder,tag=Mns.Shot.Valk.Vfx.RedFlash.Long] run data modify entity @s transformation.scale set value [3.5f,3.5f,3.5f]
+        # 召喚
         execute if score @s aj.lance_biim_1.frame matches 43 run scoreboard players set #mhdp_temp_valk_flash_scale MhdpCore 200
         execute if score @s aj.lance_biim_1.frame matches 43 positioned ^ ^2 ^8 run summon text_display ~ ~ ~ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.Jet","Mns.Shot.Valk.Vfx.RedFlash.Long"],view_range:1000f,default_background:0b,brightness:{sky:15,block:15},text:'{"text":"0","font":"vfx/valstrax"}',transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2f,2f,2f]},background:16777215,teleport_duration:1,billboard:"center",start_interpolation:-1,interpolation_duration:4,text_opacity:255,alignment:"center"}
         execute if score @s aj.lance_biim_1.frame matches 44..63 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/flash

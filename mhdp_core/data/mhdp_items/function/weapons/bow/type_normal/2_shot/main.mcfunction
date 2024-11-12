@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:weapons/bow/type_normal/main
 
+# 操作表示
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"射撃"}
+
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1

@@ -6,7 +6,7 @@
 # @within function mhdp_items:core/switch/item/init
 
 # TODO: 特殊装具の初期化処理
-    say TODO:不動の装衣初期化処理
+    # say TODO:不動の装衣初期化処理
 
 # タグ付与
     tag @s add Itm.Sp.ImmovableCloth

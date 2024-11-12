@@ -14,5 +14,3 @@
 
 # 共通処理
     function mhdp_items:weapons/great_sword/util/end_attack
-
-say end

@@ -36,3 +36,4 @@
 # 終了
     tag @s remove Mns.Temp.Forward
     tag @s remove Mns.Dino.Temp.Tail.Break
+    function mhdp_monster_dino:core/damage/reaction/general

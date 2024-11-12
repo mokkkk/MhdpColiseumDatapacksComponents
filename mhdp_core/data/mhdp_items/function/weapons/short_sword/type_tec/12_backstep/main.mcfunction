@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
+# 操作表示
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"バックステップ"}
+
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
@@ -41,6 +44,7 @@
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_just
     # 右クリック長押し：溜め斬りに移行
         execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_chargeslash
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 49.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_chargeslash
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 50.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/end

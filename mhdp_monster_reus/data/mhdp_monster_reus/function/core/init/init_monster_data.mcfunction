@@ -62,6 +62,7 @@
         ParalyseTrapTimer:10,\
         HallTrapEnable:false,\
         HallTrapTimer:15,\
+        CounterDamage:75,\
         HeadPartDamage:7,\
         BodyPartDamage:7,\
         TailPartDamage:5,\
@@ -92,4 +93,4 @@
     }
     function mhdp_monster_reus:core/init/init_attack_data
 
-say 火竜 init monster data
+# say モンスター処理：火竜 init monster data

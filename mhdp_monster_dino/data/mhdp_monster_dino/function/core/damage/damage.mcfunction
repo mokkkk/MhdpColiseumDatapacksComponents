@@ -51,25 +51,27 @@
 
 # 以下の優先度で怯みを適用
     # 麻痺
-        execute if entity @s[tag=Mns.Temp.Damage.Paralysis,tag=!Mns.State.IsFlying] run function mhdp_monster_dino:core/damage/reaction/paralysis
+        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Paralysis,tag=!Mns.State.IsFlying] run function mhdp_monster_dino:core/damage/reaction/paralysis
     # スタン
-        execute if entity @s[tag=Mns.Temp.Damage.Stun] run function mhdp_monster_dino:core/damage/reaction/stun
+        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Stun] run function mhdp_monster_dino:core/damage/reaction/stun
     # 減気
         # execute if entity @s[tag=Mns.Temp.Damage.Tire]
+    # 相殺
+        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Counter] run function mhdp_monster_dino:core/damage/reaction/counter
     # 赤熱化頭(独自)
-        execute if entity @s[tag=Mns.Temp.Damage.HeadHead,tag=!Mns.State.IsFlying] run function mhdp_monster_dino:core/damage/reaction/head_heat
+        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.HeadHead,tag=!Mns.State.IsFlying] run function mhdp_monster_dino:core/damage/reaction/head_heat
     # 頭(独自)
-        execute if entity @s[tag=Mns.Temp.Damage.Head] run function mhdp_monster_dino:core/damage/reaction/head
+        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Head] run function mhdp_monster_dino:core/damage/reaction/head
     # 胴(独自)
-        execute if entity @s[tag=Mns.Temp.Damage.Body] run function mhdp_monster_dino:core/damage/reaction/body
+        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Body] run function mhdp_monster_dino:core/damage/reaction/body
     # 尻尾(独自)
-        execute if entity @s[tag=Mns.Temp.Damage.Tail] run function mhdp_monster_dino:core/damage/reaction/tail
+        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Tail] run function mhdp_monster_dino:core/damage/reaction/tail
     # 右足(独自)
-        execute if entity @s[tag=Mns.Temp.Damage.LegR] run function mhdp_monster_dino:core/damage/reaction/leg_r
+        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.LegR] run function mhdp_monster_dino:core/damage/reaction/leg_r
     # 左足(独自)
-        execute if entity @s[tag=Mns.Temp.Damage.LegL] run function mhdp_monster_dino:core/damage/reaction/leg_l
+        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.LegL] run function mhdp_monster_dino:core/damage/reaction/leg_l
     # 怒り
-        execute if entity @s[tag=Mns.Temp.Damage.Anger,tag=!Mns.State.IsFlying] run function mhdp_monster_dino:core/damage/reaction/anger
+        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Anger,tag=!Mns.State.IsFlying] run function mhdp_monster_dino:core/damage/reaction/anger
 
 # 状態異常の発動
     # 毒
@@ -91,4 +93,4 @@
     tag @s remove Mns.Temp.Damage.LegR
     tag @s remove Mns.Temp.Damage.LegL
 
-say 斬竜被ダメージ
+# say モンスター処理：斬竜被ダメージ

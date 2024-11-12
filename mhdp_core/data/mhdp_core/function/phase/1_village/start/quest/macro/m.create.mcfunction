@@ -5,7 +5,7 @@
 # @within function mhdp_core:phase/1_village/start/main
 
 # 場所
-    execute if data storage mhdp_core:temp TargetQuest{Pos:0} run data modify storage mhdp_core:temp Data.Pos set value "241 64 215"
+    execute if data storage mhdp_core:temp TargetQuest{Pos:0} run function mhdp_core:phase/1_village/start/quest/macro/util/m.create_set_pos_value with storage mhdp_core:game_data PositionList[{ID:"QuestBookKohaku"}]
 
 # ID
     data modify storage mhdp_core:temp Data.ID set from storage mhdp_core:temp TargetQuest.ID

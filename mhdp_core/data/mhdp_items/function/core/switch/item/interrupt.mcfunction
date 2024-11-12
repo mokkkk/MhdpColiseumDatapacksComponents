@@ -15,7 +15,10 @@
     execute if data storage mhdp_core:temp PlayerData.SpItems[1] run function mhdp_items:core/switch/item/macro/m.interrupt with storage mhdp_core:temp Temp
     data remove storage mhdp_core:temp Temp
     # 砥石
-        function mhdp_items:sp_items/whetstone/util/interrupt
+    # 今のところダメージを受けても研げる方がストレスがないため、割り込みを実行しない
+        # function mhdp_items:sp_items/whetstone/util/interrupt
+    # 肉焼きセット
+        function mhdp_items:sp_items/nikuyaki/util/interrupt
 
 # 反映
     function mhdp_core:player/data/save_data

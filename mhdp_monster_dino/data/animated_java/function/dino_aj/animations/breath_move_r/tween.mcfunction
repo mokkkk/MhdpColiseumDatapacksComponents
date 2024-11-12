@@ -5,7 +5,6 @@ tag @s add aj.dino_aj.animation.breath_move_r.playing
 $scoreboard players set @s aj.tween_duration $(duration)
 $scoreboard players set @s aj.breath_move_r.frame $(to_frame)
 scoreboard players operation #this aj.i = @s aj.tween_duration
-scoreboard players add @s aj.tween_duration 1
 tag @s add aj.transforms_only
 execute at @s run function animated_java:dino_aj/animations/breath_move_r/zzz/apply_frame {frame: 0}
 $execute at @s run function animated_java:dino_aj/animations/breath_move_r/zzz/apply_frame {frame: $(to_frame)}

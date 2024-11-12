@@ -38,6 +38,7 @@
 
 # ニンジン棒
     execute if score @s Ply.Ope.UsedCoas matches 1.. run tag @s add Ply.Ope.StartUsingCoas
+    execute if score @s Ply.Ope.DropCoas matches 1.. run tag @s add Ply.Ope.DroppedCoas
 
 # 食べ物・時間管理
     execute if entity @s[tag=!Ply.Adv.Using.Paper] run scoreboard players set @s Ply.Ope.EatingTimer 0

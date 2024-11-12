@@ -49,6 +49,8 @@
         #declare tag Ply.State.MnsTarget モンスターのターゲットになりうる状態、闘技場戦闘フィールドでのみ有効
         #declare tag Ply.State.EnableDamage ダメージを受ける状態、クエスト中のみ有効、クエスト成功/失敗時に剥奪する
         #declare tag Ply.State.IsSilent 演出による無音状態
+        #declare tag Ply.State.IsRetire クエストリタイア済み
+        #declare tag Ply.State.IsTraining 訓練所利用中
         #declare tag Ply.State.IsUsedGuts 根性発動済み
     # 操作
         # スニーク
@@ -66,6 +68,7 @@
             #declare tag Ply.Ope.DroppedEnderEye エンダーアイ投げ捨て
         # ニンジン棒
             #declare tag Ply.Ope.StartUsingCoas ニンジン棒使用
+            #declare tag Ply.Ope.DroppedCoas ニンジン棒投げ捨て
         # ジャンプ
             #declare tag Ply.Ope.StartJump ジャンプ開始
         # ダッシュ
@@ -88,6 +91,7 @@
         #declare tag Ply.Temp.Target 特定のプレイヤーを一時的に特定したいときに使用、必ず同function内でリセットする
         #declare tag Ply.Temp.TargetSub 上記では足りないときに利用、注意事項は同じ
         #declare tag Ply.Temp.IsGetData 現tickデータ取得済み
+        #declare tag Ply.Temp.IsCounterDamage 相殺判定ダメージ
         #declare tag Ply.Temp.IsCrit 会心発生時
         #declare tag Ply.Temp.IsCritInverse 逆会心発生時
         #declare tag Ply.Temp.IsDisableConditionDamage 状態異常無効時
@@ -99,6 +103,26 @@
             #declare tag Ply.Temp.Error.HasNotWeaponOffhand オフハンドに武器を持っていないエラー
             #declare tag Ply.Temp.Error.HasManySpItems 特殊装具を3つ以上持っているエラー
             #declare tag Ply.Temp.Error.DuplicateSpItems 同じ種類の特殊装具を2つ以上持っているエラー
+    # チュートリアル
+        #declare tag Ply.Temp.Tutorial.DrawAttack 抜刀攻撃チュートリアル
+        #declare tag Ply.Temp.Tutorial.Avoid 回避チュートリアル
+        #declare tag Ply.Temp.Tutorial.Guard ガードチュートリアル
+        #declare tag Ply.Temp.Tutorial.CritShot クリティカル距離チュートリアル
+# 村人
+    # 処理用
+        #declare tag Vlg.Root 村人の共通タグ
+    # 村人
+        # 村チュートリアル
+            #declare tag Vlg.VillageTutorial 村チュートリアル再生用
+        # 武器チュートリアル
+            #declare tag Vlg.WeaponTutorial 武器チュートリアル再生用
+            #declare tag Vlg.WeaponTutorial.TargetPlayer 武器チュートリアルの対象プレイヤー
+            #declare tag Vlg.WeaponTutorial.ShortSword.Normal 片手剣・地ノ型
+            #declare tag Vlg.WeaponTutorial.ShortSword.Tec 片手剣・天ノ型
+            #declare tag Vlg.WeaponTutorial.GreatSword.Normal 大剣・地ノ型
+            #declare tag Vlg.WeaponTutorial.GreatSword.Tec 大剣・天ノ型
+            #declare tag Vlg.WeaponTutorial.Bow.Normal 弓・地ノ型
+            #declare tag Vlg.WeaponTutorial.Bow.Tec 弓・天ノ型
 # マーカー
     # 処理用
         #declare tag Mk.Field.Center フィールドの中心に設置されるマーカー
@@ -110,6 +134,7 @@
         #declare tag Other.Interaction.UI UI用interactionの共通タグ
         #declare tag Other.Interaction.Bell クエスト出発ベル用のinteraction
         #declare tag Other.Interaction.Board クエスト参加用クエストボードのinteraction
+        #declare tag Other.Interaction.RetireBell クエストリタイアベル用のinteraction
     # text_display
         #declare tag Other.Text.Bell クエスト出発ベルの説明文
         #declare tag Other.Text.Board クエスト参加用クエストボードの説明文
@@ -117,6 +142,7 @@
         #declare tag Other.Text.Vfx エフェクト表示用共通のテキストディスプレイ
         #declare tag Other.Text.Vfx.Strong エフェクト表示・強撃
         #declare tag Other.Text.Vfx.Slash 斬撃エフェクト
+        #declare tag Other.Text.Tutorial チュートリアル再生用のテキスト
     # 一時
         #declare tag Other.Temp.Right 左右確認に一時的に使用、必ず同function内でリセットする
     # 射撃

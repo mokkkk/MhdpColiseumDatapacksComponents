@@ -5,11 +5,11 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.step_jump_left.frame matches 1..27 at @s run tag @n[tag=Mns.Target.Ranposu] add Temp.Rotate.Target
-    execute if score @s aj.step_jump_left.frame matches 1..27 at @s run function mhdp_monsters:core/util/other/turn_to_target_accurate
+    execute if score @s aj.step_jump_left.frame matches 2..27 at @s run tag @n[tag=Mns.Target.Ranposu] add Temp.Rotate.Target
+    execute if score @s aj.step_jump_left.frame matches 2..27 at @s run function mhdp_monsters:core/util/other/turn_to_target_accurate
 
 # 移動
-    execute if score @s aj.step_jump_left.frame matches 1..18 at @s run tp @s ^1 ^ ^
+    execute if score @s aj.step_jump_left.frame matches 2..18 at @s run tp @s ^1 ^ ^
     execute if score @s aj.step_jump_left.frame matches 28 at @s run function mhdp_monster_ranposu:core/tick/animation/event/step_jump_left/move_start
     execute if score @s aj.step_jump_left.frame matches 30..44 at @s run function mhdp_monsters:core/util/other/move_to_target_move
 

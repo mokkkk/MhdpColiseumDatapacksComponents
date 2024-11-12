@@ -8,21 +8,22 @@
     data modify storage mhdp_core:temp TempQuestList set from storage mhdp_core:game_data QuestList
 
 # 書見台をリセット
-    # 下位 241 64 215
+    # 下位
         scoreboard players set #mhdp_temp_page_normal MhdpCore 0
-        data modify block 241 64 215 Book.components."minecraft:written_book_content" set value {"title": "クエスト一覧書","author": "受付嬢コハク","resolved":false,"pages": [{raw:'[{"text":""}]'}]}
+        function mhdp_core:phase/1_village/start/quest/macro/util/m.reset_book_normal with storage mhdp_core:game_data PositionList[{ID:"QuestBookKohaku"}]
     # 上位
         scoreboard players set #mhdp_temp_page_hard MhdpCore 0
+        # function mhdp_core:phase/1_village/start/quest/macro/util/m.reset_book_hard with storage mhdp_core:game_data PositionList[{ID:"QuestBookKohaku"}]
     # 特殊
         scoreboard players set #mhdp_temp_page_extra MhdpCore 0
+        # function mhdp_core:phase/1_village/start/quest/macro/util/m.reset_book_extra with storage mhdp_core:game_data PositionList[{ID:"QuestBookKohaku"}]
 
 # クエスト受注書を作成する
     execute if data storage mhdp_core:temp TempQuestList[0] run function mhdp_core:phase/1_village/start/quest/put_to_book
 
 # 適用
-    data remove block 241 64 215 Book.components."minecraft:written_book_content".pages[0]
-    data modify block 241 64 215 Book.components."minecraft:written_book_content".resolved set value 0b
-
+    function mhdp_core:phase/1_village/start/quest/macro/util/m.apply_book_content with storage mhdp_core:game_data PositionList[{ID:"QuestBookKohaku"}]
+    
 # 終了
     scoreboard players reset #mhdp_temp_page_normal MhdpCore
     scoreboard players reset #mhdp_temp_page_hard MhdpCore

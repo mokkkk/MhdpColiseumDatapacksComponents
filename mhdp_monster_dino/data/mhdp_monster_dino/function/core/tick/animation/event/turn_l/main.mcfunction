@@ -5,7 +5,7 @@
 # @within function mhdp_monster_dino:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.turn_l.frame matches 1 run function mhdp_monster_dino:core/tick/animation/event/turn_l/turn_start
+    execute if score @s aj.turn_l.frame matches 2 run function mhdp_monster_dino:core/tick/animation/event/turn_l/turn_start
     execute if score @s aj.turn_l.frame matches 2..20 run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動

@@ -14,73 +14,93 @@
 # 初期化
     data modify storage mhdp_core:game_data QuestList set value []
 
-# テスト用
+# チュートリアル用
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:0,Name:"初級：青鳥竜の狩猟",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
+        ID:1,Name:"チュートリアル",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        Content:{HpMultiply:12,AttackMultiply:35,Field:"Coliseum",Time:"day",TimeLimit:60,DeathCount:99,RewardMoney:6,RewardId:-1,Monsters:[\
+            {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1},\
+            {MonsterId:9002,Timing:"Initial",TargetMonsterId:-1}\
+        ]}\
+    }
+
+# チュートリアル用
+    data modify storage mhdp_core:game_data QuestList append value {\
+        ID:2,Name:"詳細チュートリアル",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
+        Content:{HpMultiply:16,AttackMultiply:20,Field:"Coliseum",Time:"day",TimeLimit:60,DeathCount:99,RewardMoney:6,RewardId:-1,Monsters:[\
+            {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1},\
+            {MonsterId:9001,Timing:"Initial",TargetMonsterId:-1}\
+        ]}\
+    }
+
+# 初級：青鳥竜の狩猟
+    data modify storage mhdp_core:game_data QuestList append value {\
+        ID:10,Name:"初級：青鳥竜の狩猟",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:12,AttackMultiply:50,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
 
-# テスト用
+# 中級：火竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:1,Name:"中級：火竜の狩猟",Level:2,Pos:0,IsEmergency:false,HideMonsters:false,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:10,AttackMultiply:50,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+        ID:11,Name:"中級：火竜の狩猟",Level:2,Pos:0,IsEmergency:false,HideMonsters:false,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
+        Content:{HpMultiply:18,AttackMultiply:50,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1002,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
 
-# テスト用
+# 上級：斬竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:2,Name:"上級：斬竜の狩猟",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
-        Content:{HpMultiply:11,AttackMultiply:50,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+        ID:12,Name:"上級：斬竜の狩猟",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
+        Content:{HpMultiply:18,AttackMultiply:50,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1003,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
 
-# テスト用
+# 超上級：天彗龍の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:3,Name:"超上級：???の狩猟",Level:4,Pos:0,IsEmergency:false,HideMonsters:true,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        ID:13,Name:"超上級：???の狩猟",Level:4,Pos:0,IsEmergency:false,HideMonsters:true,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:14,AttackMultiply:50,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1004,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
 
-# テスト用
+# 初級：青鳥竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:4,Name:"初級：青鳥竜の狩猟(ハード)",Level:4,Pos:0,IsEmergency:false,HideMonsters:false,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        ID:14,Name:"初級：青鳥竜の狩猟(高難度)",Level:4,Pos:0,IsEmergency:false,HideMonsters:false,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:18,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
 
-# テスト用
+# 中級：火竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:5,Name:"中級：火竜の狩猟(ハード)",Level:5,Pos:0,IsEmergency:false,HideMonsters:false,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        ID:15,Name:"中級：火竜の狩猟(高難度)",Level:5,Pos:0,IsEmergency:false,HideMonsters:false,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:21,AttackMultiply:110,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1002,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
 
-# テスト用
+# 上級：斬竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:6,Name:"上級：斬竜の狩猟(ハード)",Level:6,Pos:0,IsEmergency:false,HideMonsters:false,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        ID:16,Name:"上級：斬竜の狩猟(高難度)",Level:6,Pos:0,IsEmergency:false,HideMonsters:false,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:24,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1003,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
     }
 
-# テスト用
+# 超上級：天彗龍の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:7,Name:"超上級：???の狩猟(ハード)",Level:7,Pos:0,IsEmergency:false,HideMonsters:true,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        ID:17,Name:"超上級：???の狩猟(高難度)",Level:7,Pos:0,IsEmergency:false,HideMonsters:true,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:25,AttackMultiply:105,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1004,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
@@ -88,8 +108,8 @@
 
 # テスト用
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:14,Name:"DEBUG:さんどばっぐくん",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        ID:18,Name:"DEBUG:さんどばっぐくん",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:9000,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:999,DeathCount:99999,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
@@ -97,8 +117,8 @@
 
 # テスト用
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:15,Name:"DEBUG：???の狩猟",Level:7,Pos:0,IsEmergency:false,HideMonsters:true,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        ID:19,Name:"DEBUG：???の狩猟",Level:7,Pos:0,IsEmergency:false,HideMonsters:true,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:100,AttackMultiply:100,Field:"Coliseum",Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1004,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
@@ -106,8 +126,8 @@
 
 # テスト用
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:17,Name:"DEBUG:テスト用クエスト2",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        ID:20,Name:"DEBUG:テスト用クエスト2",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:30,AttackMultiply:200,Field:"Coliseum",Time:"day",TimeLimit:5454,DeathCount:999,RewardMoney:15,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1},\
             {MonsterId:1,Timing:"Death",TargetMonsterId:1001}\
@@ -116,8 +136,8 @@
 
 # テスト用
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:18,Name:"DEBUG:とってもながいクエスト名てすと",Level:7,Pos:0,IsEmergency:false,HideMonsters:false,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        ID:21,Name:"DEBUG:とってもながいクエスト名てすと",Level:7,Pos:0,IsEmergency:false,HideMonsters:false,\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:200,AttackMultiply:200,Field:"Coliseum",Time:"day",TimeLimit:999,DeathCount:999,RewardMoney:999,RewardId:-1,Monsters:[\
             {MonsterId:3,Timing:"Initial",TargetMonsterId:-1}\
         ]}\
@@ -126,7 +146,7 @@
 # テスト用
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:22,Name:"DEBUG:非表示クエスト",Level:7,Pos:0,IsEmergency:false,HideMonsters:true,\
-        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:true},\
+        State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:200,AttackMultiply:200,Field:"Test",Time:"day",TimeLimit:999,DeathCount:999,RewardMoney:999,RewardId:-1,Monsters:[\
             {MonsterId:0,Timing:"Initial",TargetMonsterId:-1},\
             {MonsterId:1,Timing:"Initial",TargetMonsterId:-1}\

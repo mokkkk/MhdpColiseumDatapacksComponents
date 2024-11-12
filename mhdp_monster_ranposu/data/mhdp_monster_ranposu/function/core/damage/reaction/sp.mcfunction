@@ -30,3 +30,6 @@
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     # 状態設定
         tag @s add Mns.State.IsDown
+
+# 終了
+    tag @s add Mns.Temp.IsDamaged

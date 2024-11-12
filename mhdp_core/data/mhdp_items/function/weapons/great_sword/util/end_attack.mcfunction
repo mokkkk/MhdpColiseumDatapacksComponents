@@ -13,6 +13,7 @@
             scoreboard players set #mhdp_arg_cmd_offset MhdpCore 1
             data modify storage mhdp_core:temp Args.Slot set value "mainhand"
             execute if entity @s[tag=Ply.Weapon.NoOpe] run function mhdp_items:core/util/item_modify_animation
+            execute if entity @s[tag=Ply.Weapon.NoOpe] run function mhdp_items:core/util/item_modify_clear_name
     # 終了
         tag @s remove Ply.Weapon.NoOpe
         tag @s remove Ply.Flag.Counter

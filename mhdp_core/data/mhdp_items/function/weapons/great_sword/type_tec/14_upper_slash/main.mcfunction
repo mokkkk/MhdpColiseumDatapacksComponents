@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
+# 操作表示
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"相殺斬り上げ"}
+
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
@@ -47,13 +50,13 @@
     execute if score @s Wpn.AnimationTimer matches 3 rotated ~ 0 run function delta:api/launch_looking
     execute if score @s Wpn.AnimationTimer matches 6 run tp @s @s
     execute if entity @s[tag=!Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength delta.api.launch 4000
-    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength delta.api.launch 17000
+    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength delta.api.launch 9000
     execute if entity @s[tag=!Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 rotated ~ -60 run function delta:api/launch_looking
-    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 rotated ~180 -20 run function delta:api/launch_looking
+    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 rotated ~180 -10 run function delta:api/launch_looking
 
 # 遷移
     # カウンター成功後、右クリック長押し：十字斬り・移動に移行
-        execute if entity @s[tag=Ply.Flag.Counter,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 30.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/change_to_cross
+        execute if entity @s[tag=Ply.Flag.Counter,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/change_to_cross
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/end

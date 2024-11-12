@@ -5,10 +5,10 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
 # 軸合わせ・弱め
-    execute if score @s aj.move_claw.frame matches 1 run function mhdp_monster_ranposu:core/tick/animation/event/move_claw/turn_start
+    execute if score @s aj.move_claw.frame matches 2 run function mhdp_monster_ranposu:core/tick/animation/event/move_claw/turn_start
     execute if score @s aj.move_claw.frame matches 6 run function mhdp_monster_ranposu:core/tick/animation/event/move_claw/turn_start
     execute if score @s aj.move_claw.frame matches 11 run function mhdp_monster_ranposu:core/tick/animation/event/move_claw/turn_start
-    execute if score @s aj.move_claw.frame matches 1..15 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.move_claw.frame matches 2..16 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動
     execute if score @s aj.move_claw.frame matches 1..5 at @s run tp @s ^ ^ ^-0.1

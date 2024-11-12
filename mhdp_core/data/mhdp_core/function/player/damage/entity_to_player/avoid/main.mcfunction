@@ -13,3 +13,6 @@
 # 無敵時間設定
     scoreboard players set @s Ply.Timer.Avoid 0
     scoreboard players set @s Ply.Timer.DamageInterval 10
+
+# チュートリアル用処理
+    tag @s remove Ply.Temp.Tutorial.Avoid

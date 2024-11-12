@@ -15,3 +15,6 @@
 
 # 翔蟲：ハンティングエッジに移行
     execute if entity @s[tag=Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/great_sword/type_tec/10_hunting_edge/start
+
+# チュートリアル用処理
+    tag @s remove Ply.Temp.Tutorial.DrawAttack

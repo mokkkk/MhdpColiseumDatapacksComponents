@@ -16,3 +16,6 @@
         function animated_java:ranposu_aj/animations/state_paralysis_start/tween {duration:1, to_frame: 0}
     # 効果時間設定
         scoreboard players operation @s Mns.Paralysis.Timer = @s Mns.Paralysis.Timer.Max
+
+# 終了
+    tag @s add Mns.Temp.IsDamaged

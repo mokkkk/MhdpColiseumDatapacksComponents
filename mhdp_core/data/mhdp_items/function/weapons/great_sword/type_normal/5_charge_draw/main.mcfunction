@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:weapons/great_sword/type_normal/main
 
+# 操作表示
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"溜め"}
+
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
     scoreboard players add @s Wpn.AnimationTimer 1
@@ -15,7 +18,7 @@
     execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/great_sword/type_normal/1_charge/animation_2
 
 # 移動制限
-    effect give @s slowness 1 3 true
+    effect give @s slowness 1 5 true
     execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
     execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.3 add_value
 
@@ -35,4 +38,4 @@
         execute if score @s Wpn.Gs.ChargeTimer matches 450.. run scoreboard players set @s Wpn.Gs.ChargeCount 2
         execute if score @s Wpn.Gs.ChargeTimer matches 450.. run function mhdp_items:weapons/great_sword/type_normal/5_charge_draw/change_to_chargeattack
     # ジャンプした場合、タックルに移行
-        execute if entity @s[tag=Ply.Ope.StartJump,tag=!Wpn.Gs.Normal.ChargeSlash] if score @s Wpn.GeneralTimer matches 15.. if score @s Ply.Stats.Stamina matches 150.. run function mhdp_items:weapons/great_sword/type_normal/5_charge_draw/change_to_tackle
+        # execute if entity @s[tag=Ply.Ope.StartJump,tag=!Wpn.Gs.Normal.ChargeSlash] if score @s Wpn.GeneralTimer matches 15.. if score @s Ply.Stats.Stamina matches 150.. run function mhdp_items:weapons/great_sword/type_normal/5_charge_draw/change_to_tackle

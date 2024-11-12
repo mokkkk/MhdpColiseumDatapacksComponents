@@ -15,4 +15,4 @@
     tag @s add Ply.Weapon.StaminaNotRegen
     scoreboard players remove @s Ply.Stats.Stamina 100
 
-say 弓 チャージステップ
+# say 武器操作：弓 チャージステップ

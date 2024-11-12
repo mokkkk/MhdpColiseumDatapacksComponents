@@ -54,6 +54,9 @@
 # スタミナ消費適用
     scoreboard players operation @s Ply.Stats.Stamina -= #mhdp_temp_guard_stamina MhdpCore
 
+# チュートリアル用処理
+    tag @s[tag=Ply.Weapon.Guard] remove Ply.Temp.Tutorial.Guard
+
 # 終了
     execute if score @s Ply.Stats.Stamina matches ..0 run scoreboard players set @s Ply.Stats.Stamina 0
     scoreboard players reset #mhdp_temp_guard_value MhdpCore

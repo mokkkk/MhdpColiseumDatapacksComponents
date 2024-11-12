@@ -16,4 +16,4 @@
 # タグ付与
     tag @s add Ply.Weapon.Drawing
 
-say 通常抜刀
+# say 武器共通：通常抜刀

@@ -6,7 +6,7 @@
 
 # ジャストラッシュ成功判定
     tag @s remove Ply.Flag.Just.Success
-    execute if score @s Wpn.GeneralTimer matches 19..22 run tag @s add Ply.Flag.Just.Success
+    execute if score @s Wpn.GeneralTimer matches 13..17 run tag @s add Ply.Flag.Just.Success
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0

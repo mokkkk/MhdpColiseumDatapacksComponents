@@ -59,6 +59,9 @@
         scoreboard players operation #mhdp_temp_condition_value_poison MhdpCore = @s Ply.Stats.ConditionValue.Poison
         scoreboard players operation #mhdp_temp_condition_value_paralysis MhdpCore = @s Ply.Stats.ConditionValue.Paralysis
         scoreboard players operation #mhdp_temp_condition_value_bomb MhdpCore = @s Ply.Stats.ConditionValue.Bomb
+    # 相殺
+        scoreboard players set #mhdp_temp_counter_value MhdpCore 0
+        execute if entity @s[tag=Ply.Temp.IsCounterDamage] run scoreboard players set #mhdp_temp_counter_value MhdpCore 100
 
 # ステータス関連スキル効果適用
     function mhdp_core:player/skill/attack/attack_status
@@ -135,9 +138,9 @@
     # 総ダメージ
         scoreboard players operation #mhdp_temp_damage_total MhdpCore += #mhdp_temp_damage_element_value MhdpCore
 
-    tellraw @a [{"text":"物理ダメージ:"},{"score":{"name":"#mhdp_temp_damage_phys_value","objective":"MhdpCore"}}]
-    tellraw @a [{"text":"属性ダメージ:"},{"score":{"name":"#mhdp_temp_damage_element_value","objective":"MhdpCore"}}]
-    tellraw @a [{"text":"ダメージ合計:"},{"score":{"name":"#mhdp_temp_damage_total","objective":"MhdpCore"}}]
+    # tellraw @a [{"text":"DEBUG:物理ダメージ:"},{"score":{"name":"#mhdp_temp_damage_phys_value","objective":"MhdpCore"}}]
+    # tellraw @a [{"text":"DEBUG:属性ダメージ:"},{"score":{"name":"#mhdp_temp_damage_element_value","objective":"MhdpCore"}}]
+    # tellraw @a [{"text":"DEBUG:ダメージ合計:"},{"score":{"name":"#mhdp_temp_damage_total","objective":"MhdpCore"}}]
 
 # 演出
     execute positioned as @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim,limit=1] run function mhdp_core:player/damage/player_to_entity/vfx
@@ -159,6 +162,7 @@
     scoreboard players reset #mhdp_temp_element_value_ice MhdpCore
     scoreboard players reset #mhdp_temp_element_value_dragon MhdpCore
     scoreboard players reset #mhdp_temp_element_attack_value MhdpCore
+    scoreboard players reset #mhdp_temp_counter_value MhdpCore
     tag @e[tag=Temp.Victim] remove Temp.Victim
     tag @s remove Temp.Attacker
     data remove storage mhdp_core:temp Damage
