@@ -16,6 +16,7 @@
 # プレイヤーを無敵化
     execute if score #mhdp_core_timer MhdpCore matches 1 as @a[tag=Ply.State.PlayingQuest] run tag @s remove Ply.State.EnableDamage
     execute if score #mhdp_core_timer MhdpCore matches 1 as @a[tag=Ply.State.PlayingQuest] run effect give @s resistance 30 10 true
+    # execute as @a[tag=Ply.State.PlayingQuest] run effect give @s instant_health 1 1 true
 
 # 帰還
     execute if score #mhdp_core_timer MhdpCore matches 600.. run function mhdp_core:phase/3_quest/change_phase/succeed/change

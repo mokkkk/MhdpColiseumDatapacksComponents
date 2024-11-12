@@ -11,5 +11,5 @@
     tellraw @a[tag=Ply.State.PlayingQuest] [{"text":"【"},{"selector":"@s"},{"text":"が力尽きた （残り回数 "},{"score":{"name":"#mhdp_quest_deathcount","objective":"MhdpCore"}},{"text":"/"},{"score":{"name":"#mhdp_quest_deathcount_max","objective":"MhdpCore"}},{"text":"）】"}]
 
 # クエスト失敗
-    execute if score #mhdp_quest_deathcount MhdpCore matches ..0 run tellraw @a[tag=Ply.State.PlayingQuest] [{"text":"【もう復活できません】"}]
-    execute if score #mhdp_quest_deathcount MhdpCore matches ..0 run function mhdp_core:phase/3_quest/end/failed
+    execute if score #mhdp_quest_deathcount MhdpCore matches ..0 if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} run tellraw @a[tag=Ply.State.PlayingQuest] [{"text":"【もう復活できません】"}]
+    execute if score #mhdp_quest_deathcount MhdpCore matches ..0 if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} run function mhdp_core:phase/3_quest/end/failed

@@ -29,5 +29,5 @@
     scoreboard players set @s Ply.Timer.Avoid 3
 
 # 終了
-    kill @n[type=marker,tag=Mk.Temp.PlayerPos.0]
+    kill @e[type=marker,tag=Mk.Temp.PlayerPos.0]
     data remove storage mhdp_core:temp Temp
