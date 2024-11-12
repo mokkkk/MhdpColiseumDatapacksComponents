@@ -32,11 +32,21 @@
     execute if score @s Vlg.General.Timer matches 410 run tellraw @a[tag=!Ply.State.PlayingQuest] [\
         {"text":"","color": "#FFFFFF","bold": false},\
         {"text":"\n【 チュートリアル：クエスト受注 ","color":"#00FFC3","bold": true},{"text":"4/4","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
-        {"text":"  チュートリアルは "},{"text":"簡易チュートリアル","color": "#ff9900","bold": true},{"text":" と、\n"},\
-        {"text":"  "},{"text":"詳細チュートリアル","color": "#ff9900","bold": true},{"text":" の2つから選択できます。\n"},\
-        {"text":"  すぐに遊びたい方は "},{"text":"簡易チュートリアル","color": "#ff9900","bold": true},{"text":" をプレイしてください。\n"},\
-        {"text":"  詳しい遊び方を学びたい方は"},{"text":"詳細チュートリアル","color": "#ff9900","bold": true},{"text":" をプレイしてください。\n"}\
+        {"text":"  試しにチュートリアルクエストを受注してください。\n"},\
+        {"text":"  受注が確認出来たら、説明を続行します。\n"}\
     ]
 
+    # execute if score @s Vlg.General.Timer matches 410 as @a[tag=!Ply.State.PlayingQuest] at @s run playsound ui.button.click master @s ~ ~ ~ 2 1
+    # execute if score @s Vlg.General.Timer matches 410 run tellraw @a[tag=!Ply.State.PlayingQuest] [\
+    #     {"text":"","color": "#FFFFFF","bold": false},\
+    #     {"text":"\n【 チュートリアル：クエスト受注 ","color":"#00FFC3","bold": true},{"text":"4/4","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
+    #     {"text":"  チュートリアルは "},{"text":"簡易チュートリアル","color": "#ff9900","bold": true},{"text":" と、\n"},\
+    #     {"text":"  "},{"text":"詳細チュートリアル","color": "#ff9900","bold": true},{"text":" の2つから選択できます。\n"},\
+    #     {"text":"  すぐに遊びたい方は "},{"text":"簡易チュートリアル","color": "#ff9900","bold": true},{"text":" を受注してください。\n"},\
+    #     {"text":"  詳しい遊び方を知りたい方は "},{"text":"詳細チュートリアル","color": "#ff9900","bold": true},{"text":" を受注してください。\n"}\
+    # ]
+
 # 遷移：一定時間後
-    execute if score @s Vlg.General.Timer matches 600.. run function mhdp_core:phase/1_village/villager/tutorial/change_phase
+    execute if score @s Vlg.General.Timer matches 600.. \
+            if score #mhdp_core_loading_quest_id MhdpCore matches 1.. \
+            run function mhdp_core:phase/1_village/villager/tutorial/change_phase

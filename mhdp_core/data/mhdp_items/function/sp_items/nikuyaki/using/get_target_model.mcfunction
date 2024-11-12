@@ -16,4 +16,3 @@
 
 # 紐づけ対象がいない場合、使用中断
     execute unless entity @n[type=item_display,tag=Itm.Root.Nikuyaki.Target] run function mhdp_items:sp_items/nikuyaki/using/cancel
-

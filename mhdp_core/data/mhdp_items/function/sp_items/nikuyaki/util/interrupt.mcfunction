@@ -14,6 +14,7 @@
     # 念のため紐づけ
         function mhdp_items:sp_items/nikuyaki/using/get_target_model
     # 消去
+        execute as @n[type=item_display,tag=Itm.Root.Nikuyaki.Target] run tp @s 0.0 0.0 0.0
         execute as @n[type=item_display,tag=Itm.Root.Nikuyaki.Target] run function animated_java:nikuyaki/remove/this
 
 # アイテム使用開始前の位置に戻る

@@ -34,13 +34,14 @@
     function mhdp_core:player/data/save_data
 
 # ride
-    ride @s mount @n[type=armor_stand,tag=Itm.Nikuyaki.Chair,tag=!Itm.Nikuyaki.Chair.IsRode]
+    ride @s mount @n[type=area_effect_cloud,tag=Itm.Nikuyaki.Chair,tag=!Itm.Nikuyaki.Chair.IsRode]
 
 # 音楽再生開始
+    function mhdp_core:sound/nikubgm/stop
     function mhdp_core:sound/nikubgm/play
 
 # 終了
-    tag @n[type=armor_stand,tag=Itm.Nikuyaki.Chair,tag=!Itm.Nikuyaki.Chair.IsRode] add Itm.Nikuyaki.Chair.IsRode
+    tag @n[type=area_effect_cloud,tag=Itm.Nikuyaki.Chair,tag=!Itm.Nikuyaki.Chair.IsRode] add Itm.Nikuyaki.Chair.IsRode
     tag @n[type=interaction,tag=Other.Interaction.Meat,tag=!Other.Interaction.Meat.IsInit] add Other.Interaction.UI
     tag @n[type=interaction,tag=Other.Interaction.Meat,tag=!Other.Interaction.Meat.IsInit] add Other.Interaction.Meat.IsInit
     tag @n[type=item_display,tag=Itm.Root,tag=Itm.Root.Nikuyaki,tag=Itm.Root.Nikuyaki.Start] remove Itm.Root.Nikuyaki.Start

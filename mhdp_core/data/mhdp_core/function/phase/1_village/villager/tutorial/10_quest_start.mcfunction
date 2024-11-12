@@ -13,10 +13,8 @@
         {"text":"\n【 チュートリアル：クエスト出発 ","color":"#00FFC3","bold": true},{"text":"2/2","color":"#00FFC3","bold": false},{"text":" 】\n\n","color":"#00FFC3","bold": true},\
         {"text":"  このベルを鳴らすと、 "},{"text":"クエストに出発","color": "#ff9900","bold": true},{"text":" します。\n"},\
         {"text":"  "},{"text":"クエスト受注者と参加者全員が","color": "#ff9900","bold": true},{"text":" フィールドに移動します。\n"},\
-        {"text":"  クエスト出発条件を満たしていない場合、警告が表示されるので、\n"},\
-        {"text":"  その警告に従ってください。\n"},\
-        {"text":"  本マップの基本的な遊び方についての説明は以上です。\n"}\
+        {"text":"  早速チュートリアルクエストをプレイしてみましょう。\n"}\
     ]
 
 # 遷移：一定時間後
-    execute if score @s Vlg.General.Timer matches 200.. run function mhdp_core:phase/1_village/villager/tutorial/change_phase
+    execute if score @s Vlg.General.Timer matches 40.. run function mhdp_core:phase/1_village/villager/tutorial/change_phase

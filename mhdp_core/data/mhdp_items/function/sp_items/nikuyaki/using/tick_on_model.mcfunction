@@ -4,6 +4,10 @@
 #
 # @within function mhdp_items:sp_items/wirebug/tick
 
+# remove予約されている場合、削除
+    execute if entity @s[tag=Itm.Root.Nikuyaki.Remove] as @p[tag=Ply.Temp.Target] run ride @s dismount
+    execute if entity @s[tag=Itm.Root.Nikuyaki.Remove] run function animated_java:nikuyaki/remove/this
+
 # アニメーション処理実行
     function animated_java:nikuyaki/root/on_tick
 

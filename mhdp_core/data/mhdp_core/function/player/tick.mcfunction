@@ -15,12 +15,12 @@
 
 # リスポーン時処理
 
+# 武器・アイテム処理
+    function mhdp_items:player/tick
+
 # クエスト関連処理
     execute if entity @s[tag=Ply.State.QuestMember,tag=!Ply.State.QuestHost,tag=!Ply.State.PlayingQuest] run function mhdp_core:player/phase_village/tick
     execute if entity @s[tag=Ply.State.PlayingQuest] run function mhdp_core:player/phase_quest/tick
-
-# 武器・アイテム処理
-    function mhdp_items:player/tick
 
 # 終了
     # 操作の初期化

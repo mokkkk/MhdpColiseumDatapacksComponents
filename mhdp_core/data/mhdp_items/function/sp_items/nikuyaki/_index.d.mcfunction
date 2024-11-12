@@ -10,3 +10,4 @@
     #declare tag Itm.Sp.Nikuyaki.Using.Ride ride中
 # モデル
     #declare tag Itm.Root.Nikuyaki.Target 対象の肉焼きセットモデル
+    #declare tag Itm.Root.Nikuyaki.Remove 肉焼きセットモデルを消去する

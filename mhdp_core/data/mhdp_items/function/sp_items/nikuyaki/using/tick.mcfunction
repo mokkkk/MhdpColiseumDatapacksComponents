@@ -11,7 +11,7 @@
     function mhdp_items:sp_items/nikuyaki/using/get_target_model
 
 # rideしていない場合、使用中断
-    execute on vehicle if entity @s[type=armor_stand,tag=Itm.Nikuyaki.Chair,tag=Itm.Nikuyaki.Chair.IsRode] on passengers run tag @s add Itm.Sp.Nikuyaki.Using.Ride
+    execute on vehicle if entity @s[type=area_effect_cloud,tag=Itm.Nikuyaki.Chair,tag=Itm.Nikuyaki.Chair.IsRode] on passengers run tag @s add Itm.Sp.Nikuyaki.Using.Ride
     execute unless entity @s[tag=Itm.Sp.Nikuyaki.Using.Ride] run function mhdp_items:sp_items/nikuyaki/using/end
     tag @s remove Itm.Sp.Nikuyaki.Using.Ride
 
