@@ -33,12 +33,16 @@
     summon interaction -77 69 791 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial.Optional"],response:1b}
     summon item_display -77 70 791 {item:{id:"minecraft:repeating_command_block",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial.Optional"],billboard:"vertical"}
 
+    summon text_display -77 71 771 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.ResetClearTime"],text:'{"bold":true,"color":"gold","text":"[クリアタイム消去]"}',alignment:"center"}
+    summon text_display -77 70.6 771 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.ResetClearTime"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
+    summon interaction -77 69 771 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.ResetClearTime"],response:1b}
+    summon item_display -77 70 771 {item:{id:"minecraft:barrier",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.ResetClearTime"],billboard:"vertical"}
+
 # チュートリアル一覧確認用
-    execute if data storage mhdp_core:game_data QuestList[{ID:1}].State{IsPlayed:true} run summon text_display -88 71 784 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Review"],text:'{"bold":true,"text":"[チュートリアルの再確認]"}',alignment:"center"}
-    execute if data storage mhdp_core:game_data QuestList[{ID:2}].State{IsPlayed:true} unless entity @n[type=text_display,tag=Beta.Display.Tutorial.Review] run summon text_display -88 71 784 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Review"],text:'{"bold":true,"text":"[チュートリアルの再確認]"}',alignment:"center"}
-    execute if entity @n[type=text_display,tag=Beta.Display.Tutorial.Review] run summon text_display -88 70.6 784 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Review"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
-    execute if entity @n[type=text_display,tag=Beta.Display.Tutorial.Review] run summon interaction -88 69 784 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial.Review"],response:1b}
-    execute if entity @n[type=text_display,tag=Beta.Display.Tutorial.Review] run summon item_display -88 70 784 {item:{id:"minecraft:paper",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial.Review"],billboard:"vertical"}
+    summon text_display -88 71 784 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Review"],text:'{"bold":true,"text":"[チュートリアルの再確認]"}',alignment:"center"}
+    summon text_display -88 70.6 784 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Review"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
+    summon interaction -88 69 784 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial.Review"],response:1b}
+    summon item_display -88 70 784 {item:{id:"minecraft:paper",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial.Review"],billboard:"vertical"}
 
 # 訓練所移動用(訓練開始・停止)
     summon text_display -95 71 791 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:'{"bold":true,"color":"white","text":"[訓練所の利用開始・終了]"}',alignment:"center"}

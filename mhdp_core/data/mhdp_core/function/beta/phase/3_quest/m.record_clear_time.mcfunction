@@ -11,8 +11,8 @@
 
 # クリアタイムを記録
     $setblock $(X) $(Y) $(Z) air
-    $execute if score #mhdp_quest_timer_clear MhdpCore matches 10.. run setblock $(X) $(Y) $(Z) oak_wall_sign[facing=west]{back_text:{messages:['"$(Tick)"','{"text":""}','{"text":""}','{"text":""}']},front_text:{has_glowing_text:1b,messages:['{"text":"$(Name1)","color":"black"}','{"text":"$(Name2)","color":"black"}','{"text":"クリアタイム - $(Min):$(Sec)","color":"black"}','{"text":""}']},is_waxed:1b} replace
-    $execute unless score #mhdp_quest_timer_clear MhdpCore matches 10.. run setblock $(X) $(Y) $(Z) oak_wall_sign[facing=west]{back_text:{messages:['"$(Tick)"','{"text":""}','{"text":""}','{"text":""}']},front_text:{has_glowing_text:1b,messages:['{"text":"$(Name1)","color":"black"}','{"text":"$(Name2)","color":"black"}','{"text":"クリアタイム - $(Min):0$(Sec)","color":"black"}','{"text":""}']},is_waxed:1b} replace
+    $execute if score #mhdp_quest_timer_clear MhdpCore matches 10.. run setblock $(X) $(Y) $(Z) oak_wall_sign[facing=west]{back_text:{messages:['"$(Tick)"','{"text":""}','{"text":""}','{"text":""}']},front_text:{has_glowing_text:1b,messages:['{"text":"$(Name1)","color":"black"}','{"text":"$(Name2)","color":"black"}','{"text":"$(Min):$(Sec)","color":"black"}','{"text":""}']},is_waxed:1b} replace
+    $execute unless score #mhdp_quest_timer_clear MhdpCore matches 10.. run setblock $(X) $(Y) $(Z) oak_wall_sign[facing=west]{back_text:{messages:['"$(Tick)"','{"text":""}','{"text":""}','{"text":""}']},front_text:{has_glowing_text:1b,messages:['{"text":"$(Name1)","color":"black"}','{"text":"$(Name2)","color":"black"}','{"text":"$(Min):0$(Sec)","color":"black"}','{"text":""}']},is_waxed:1b} replace
     $data modify storage mhdp_core:game_data QuestList[{ID:$(ID)}].ClearTime set value $(Tick)
 
 # 終了
