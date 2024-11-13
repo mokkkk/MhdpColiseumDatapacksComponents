@@ -18,8 +18,10 @@ Minecraftでハンティングアクションを体験できる配布マップ�
 # ライセンス
 
 本データパックのうち、delta_datapackには 「LICENSE_delta」、その他には「LICENSE_mhdp_core」が適用されます。
+モンスターのアニメーション（mhdp_monster_xxx） には 「Animated Java」 を使用しています。
 
 - Delta（ https://github.com/BigPapi13/Delta ）
+- Animated Java （ https://animated-java.dev/ ）
 
 **本マップで使用しているリソースパックは、本マップ以外では使用しないでください。改変、再配布などは禁止します。**
 
