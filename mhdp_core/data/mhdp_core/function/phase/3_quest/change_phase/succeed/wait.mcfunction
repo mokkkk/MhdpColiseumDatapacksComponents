@@ -16,6 +16,11 @@
 # プレイヤーを無敵化
     execute if score #mhdp_core_timer MhdpCore matches 1 as @a[tag=Ply.State.PlayingQuest] run tag @s remove Ply.State.EnableDamage
     execute if score #mhdp_core_timer MhdpCore matches 1 as @a[tag=Ply.State.PlayingQuest] run effect give @s resistance 30 10 true
+    execute if score #mhdp_core_timer MhdpCore matches 540 as @a[tag=Ply.State.PlayingQuest] at @s run playsound entity.chicken.egg master @s ~ ~ ~ 6 0.5
+    execute if score #mhdp_core_timer MhdpCore matches 540 as @a[tag=Ply.State.PlayingQuest] at @s run playsound entity.chicken.egg master @s ~ ~ ~ 6 0.6
+    execute if score #mhdp_core_timer MhdpCore matches 540 as @a[tag=Ply.State.PlayingQuest] at @s run playsound entity.chicken.egg master @s ~ ~ ~ 6 0.7
+    execute if score #mhdp_core_timer MhdpCore matches 540 run title @a[tag=Ply.State.PlayingQuest] times 3 60 0
+    execute if score #mhdp_core_timer MhdpCore matches 540 run title @a[tag=Ply.State.PlayingQuest] title [{"text": "\uF997\uF802\uF802","font": "space"},{"text":"#","font":"icons/mhdp_icons"}]
 
 # 帰還
     execute if score #mhdp_core_timer MhdpCore matches 600.. run function mhdp_core:phase/3_quest/change_phase/succeed/change

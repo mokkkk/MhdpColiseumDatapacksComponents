@@ -7,7 +7,8 @@
 # チュートリアルクリア
     execute if data storage mhdp_core:save_data Flag{BetaTutorial:false} if data storage mhdp_core:game_data QuestList[{ID:1}].State{IsCleared:true} run function mhdp_core:beta/phase/1_village/update_flag/1_tutorial_clear
     execute if data storage mhdp_core:save_data Flag{BetaTutorial:false} if data storage mhdp_core:game_data QuestList[{ID:2}].State{IsCleared:true} run function mhdp_core:beta/phase/1_village/update_flag/1_tutorial_clear
-
+    execute if data storage mhdp_core:game_data QuestList[{ID:1}].State{IsCleared:true} if data storage mhdp_core:game_data QuestList[{ID:2}].State{Visible:false} run data modify storage mhdp_core:game_data QuestList[{ID:2}].State.Visible set value true
+    
 # モンスター情報更新
     setblock -87 69 777 air replace
     setblock -87 69 775 air replace

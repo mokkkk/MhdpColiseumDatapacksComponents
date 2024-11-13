@@ -18,7 +18,7 @@
         data remove storage mhdp_core:temp Temp
 
 # ActiveQuest.TargetMonstersが空になったとき、クエストをクリアにする
-    execute unless data storage mhdp_core:game_data ActiveQuest.TargetMonsters[0] run function mhdp_core:phase/3_quest/end/succeed
+    execute unless data storage mhdp_core:game_data ActiveQuest.TargetMonsters[0] if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} run function mhdp_core:phase/3_quest/end/succeed
 
 # 終了
     data remove storage mhdp_core:temp Arg

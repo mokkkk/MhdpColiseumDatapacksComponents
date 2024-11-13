@@ -18,6 +18,7 @@
     execute if score #mhdp_core_timer MhdpCore matches 1 as @a[tag=Ply.State.PlayingQuest] run attribute @s generic.movement_speed modifier add mhdp_core:quest_movement_speed -1.0 add_value
     execute if score #mhdp_core_timer MhdpCore matches 1 as @a[tag=Ply.State.PlayingQuest] run attribute @s generic.jump_strength modifier add mhdp_core:quest_jump_strength -10 add_value
     execute if score #mhdp_core_timer MhdpCore matches ..299 as @a[tag=Ply.State.PlayingQuest] run scoreboard players set @s Wpn.DeactivateTimer 2
+    # execute as @a[tag=Ply.State.PlayingQuest] run effect give @s instant_health 1 1 true
 
 # 帰還
     execute if score #mhdp_core_timer MhdpCore matches 300.. run function mhdp_core:phase/3_quest/change_phase/failed/change

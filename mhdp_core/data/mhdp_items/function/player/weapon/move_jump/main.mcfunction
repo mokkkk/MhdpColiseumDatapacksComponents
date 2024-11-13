@@ -21,5 +21,5 @@
     execute if score @n[type=marker,tag=Mk.Temp.PlayerPos.0] MhdpCore matches 1.. rotated as @n[type=marker,tag=Mk.Temp.PlayerPos.0] run function delta:api/launch_looking
 
 # 終了
-    kill @n[type=marker,tag=Mk.Temp.PlayerPos.0]
+    kill @e[type=marker,tag=Mk.Temp.PlayerPos.0]
     data remove storage mhdp_core:temp Temp

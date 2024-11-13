@@ -42,6 +42,10 @@
     execute if entity @s[tag=!Mns.Tutorial02.Anger] if entity @n[tag=Mns.Root.Ranposu,tag=Mns.State.IsAnger] unless score @s Mns.General.DummyCounter matches 0.. run function mhdp_monster_tutorial_02:core/tick/06_anger/start
     execute if score @s Mns.General.DummyCounter matches 7 run function mhdp_monster_tutorial_02:core/tick/06_anger/main
 
+# フレーム回避
+# 怒り状態になった後
+    execute if score @s Mns.General.DummyCounter matches 10 run function mhdp_monster_tutorial_02:core/tick/09_avoid/main
+
 # 怯み
 # モンスターが怯んだ後
     execute if entity @s[tag=Mns.Tutorial02.Draw,tag=!Mns.Tutorial02.Damage] if entity @n[tag=Mns.Root.Ranposu,tag=!Mns.State.Tutorial.IsBroken] unless score @s Mns.General.DummyCounter matches 0.. run function mhdp_monster_tutorial_02:core/tick/07_damage/start

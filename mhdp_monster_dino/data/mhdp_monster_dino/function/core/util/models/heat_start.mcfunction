@@ -1,4 +1,4 @@
-#> mhdp_monster_dino:core/util/models/anger_start
+#> mhdp_monster_dino:core/util/models/heat_start
 #
 # 尻尾赤熱化開始時のモデル変更
 #

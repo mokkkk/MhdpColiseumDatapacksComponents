@@ -9,6 +9,7 @@
 
 # データ初期化
     function mhdp_monster_reus:core/init/init_monster_data
+    data modify storage mhdp_core:temp TargetMonsterData set from storage mhdp_core:monster_data MonsterData[{Uid:1002}]
 
 # モデル召喚
     function animated_java:reus_aj/summon {args:{}}
