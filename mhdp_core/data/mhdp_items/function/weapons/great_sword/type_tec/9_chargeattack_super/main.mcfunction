@@ -38,7 +38,7 @@
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/attack_0
     execute if score @s Wpn.GeneralTimer matches 19 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/attack_1
-
+        
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 3 5 true
 
@@ -63,6 +63,10 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 10..15 run tp @s ~ ~ ~ ~ ~-0.8
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 18..20 run tp @s ~ ~ ~ ~ ~2
+    execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 19 at @s run tp @s ~ ~ ~ ~-1 ~
+    execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 20 at @s run tp @s ~ ~ ~ ~2 ~
+    execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 21 at @s run tp @s ~ ~ ~ ~-1 ~
+    execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 22 at @s run tp @s ~ ~ ~ ~1 ~
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 60.. run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/end

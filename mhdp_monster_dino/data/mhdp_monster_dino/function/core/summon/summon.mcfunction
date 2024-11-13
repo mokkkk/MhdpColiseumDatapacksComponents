@@ -9,6 +9,7 @@
 
 # データ初期化
     function mhdp_monster_dino:core/init/init_monster_data
+    data modify storage mhdp_core:temp TargetMonsterData set from storage mhdp_core:monster_data MonsterData[{Uid:1003}]
 
 # モデル召喚
     function animated_java:dino_aj/summon {args: {}}

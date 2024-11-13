@@ -14,4 +14,5 @@
     ]
 
 # 終了
-    execute if score @s Mns.General.DummyTimer matches 260.. run scoreboard players set @s Mns.General.DummyCounter -1
+    # execute if score @s Mns.General.DummyTimer matches 260.. run scoreboard players set @s Mns.General.DummyCounter -1
+    execute if score @s Mns.General.DummyTimer matches 200.. run function mhdp_monster_tutorial_02:core/tick/09_avoid/start
