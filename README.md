@@ -13,6 +13,8 @@ Minecraftでハンティングアクションを体験できる配布マップ�
 
 - Minecraft JavaEdition 1.20　～　1.20.1
 
+上記バージョン以外、および BedrockEdition には対応していません。
+
 # ライセンス
 
 本データパックのうち、delta_datapackには 「LICENSE_delta」、その他には「LICENSE_mhdp_core」が適用されます。
