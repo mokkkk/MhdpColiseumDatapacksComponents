@@ -1,1 +1,37 @@
-# TODO
+# MH_DP 大闘技場
+
+![2024-11-13_21 11 25](https://github.com/user-attachments/assets/5113d250-eb5d-4631-90b9-1fea7ec165b9)
+
+# 概要
+
+Minecraftでハンティングアクションを体験できる配布マップです。
+現在制作中。
+
+ベータ版配布中です。詳細は Releases をご覧ください。
+
+対応バージョン
+
+- Minecraft JavaEdition 1.20　～　1.20.1
+
+# ライセンス
+
+本データパックのうち、delta_datapackには 「LICENSE_delta」、その他には「LICENSE_mhdp_core」が適用されます。
+
+- Delta（ https://github.com/BigPapi13/Delta ）
+
+**本マップで使用しているリソースパックは、本マップ以外では使用しないでください。改変、再配布などは禁止します。**
+
+# クレジット
+
+**製作者**
+- ぬく（ https://x.com/nukknu99 ）
+    - データパック製作・アニメーション制作・一部モンスターモデリング
+- しゃもじ（ https://x.com/mojisha_moji ）
+    - VFX/テクスチャ製作・一部モンスターモデリング
+- Homihito（ https://x.com/homihito ）
+    - 地形製作
+
+**Special Thanks**
+- みんと（ https://x.com/ShunjuMint ）：作曲
+- 冴月ハル（ https://x.com/tyaatya_Rei ）：デバッグ
+- および もやん村のデバッグに参加してくれた方々
