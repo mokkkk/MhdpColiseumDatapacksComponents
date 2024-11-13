@@ -12,7 +12,7 @@
         {"text":"  ホットバーで空欄のアイテムを選択し、 "},{"keybind":"key.swapOffhand","color": "#ff9900","bold": true},{"text":"キー","color": "#ff9900","bold": true},{"text":" を押すと、\n"},\
         {"text":"  武器の抜刀ができる。\n"},\
         {"text":"  または"},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.use","color": "#ff9900","bold": true},{"text":" を押すと、\n"},\
-        {"text":"  "},{"text":"抜刀攻撃","color": "#ff9900","bold": true},{"text":" ができる。"}\
+        {"text":"  "},{"text":"抜刀攻撃","color": "#ff9900","bold": true},{"text":" ができる。\n"}\
     ]
 
 # 終了
