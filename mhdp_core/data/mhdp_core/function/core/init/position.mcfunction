@@ -44,4 +44,4 @@
         ID:"QuestBoard",X:-83,Y:70,Z:759,Rotate:0\
     }
 
-say 座標初期化
+# say 座標初期化

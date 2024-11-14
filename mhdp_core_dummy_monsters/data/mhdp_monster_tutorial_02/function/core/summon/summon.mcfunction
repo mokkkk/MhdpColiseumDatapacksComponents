@@ -19,4 +19,4 @@
 # Rootエンティティ対象に初期化処理を実行
     execute as @e[type=item_display,tag=Mns.Root.Tutorial02] at @s run function mhdp_monster_tutorial_02:core/summon/summon_init
 
-say チュートリアル02召喚処理
+# say チュートリアル02召喚処理

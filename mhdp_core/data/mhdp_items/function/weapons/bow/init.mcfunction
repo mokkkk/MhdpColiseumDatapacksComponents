@@ -44,4 +44,4 @@
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Pierce.4.Crit set value {AttackType:Cut,DamageMult:27,PartDamageMult:50,ElementDamageMult:50,StunValue:0,TireValue:2,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:false,VfxRotation:0.0,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Horming.Burst set value {AttackType:Blow,DamageMult:45,PartDamageMult:100,ElementDamageMult:0,StunValue:30,TireValue:8,DragonAuraValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.0,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
 
-say -- 弓データ初期化
+# say -- 弓データ初期化

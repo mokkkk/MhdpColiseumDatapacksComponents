@@ -19,4 +19,4 @@
 # Rootエンティティ対象に初期化処理を実行
     execute as @e[type=item_display,tag=Mns.Root.Karakuri] at @s run function mhdp_monster_karakuri:core/summon/summon_init
 
-say モンスター処理：からくり飛竜召喚処理
+# say モンスター処理：からくり飛竜召喚処理

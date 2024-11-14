@@ -18,3 +18,6 @@
 
 # 状態更新
     tag @s add Ply.State.HasUid
+
+# 初期スポーン地点に移動
+    function mhdp_core:utils/tp with storage mhdp_core:game_data PositionList[{ID:"InitialSpawnPoint"}]

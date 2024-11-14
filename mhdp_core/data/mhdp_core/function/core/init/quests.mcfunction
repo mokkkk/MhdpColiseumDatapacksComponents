@@ -172,4 +172,4 @@
 # 反映
     function mhdp_core:phase/1_village/start/quest/main
 
-say クエストデータ初期化
+# say クエストデータ初期化

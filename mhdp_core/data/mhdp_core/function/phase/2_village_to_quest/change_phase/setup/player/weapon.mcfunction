@@ -25,7 +25,7 @@
 # プレイヤーに渡す
     # オフハンドが空でない場合、オフハンドのアイテムを退避
         execute if items entity @s weapon.offhand * run tag @s add Ply.Temp.NoItemsInOffhand
-        execute if entity @s[tag=Ply.Temp.NoItemsInOffhand] run say オフハンド空じゃない
+        # execute if entity @s[tag=Ply.Temp.NoItemsInOffhand] run say オフハンド空じゃない
         execute if entity @s[tag=Ply.Temp.NoItemsInOffhand] run item replace block 0 0 0 container.1 from entity @s weapon.offhand
     # 武器装備
         item replace entity @s weapon.offhand from block 0 0 0 container.0
