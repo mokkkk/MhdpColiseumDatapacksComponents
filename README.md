@@ -11,7 +11,7 @@ Minecraftでハンティングアクションを体験できる配布マップ�
 
 対応バージョン
 
-- Minecraft JavaEdition 1.20　～　1.20.1
+- Minecraft JavaEdition 1.21　～　1.21.1
 
 上記バージョン以外、および BedrockEdition には対応していません。
 
