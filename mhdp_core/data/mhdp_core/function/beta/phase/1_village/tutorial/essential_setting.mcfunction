@@ -13,6 +13,7 @@
         {"text":"  ・ビデオ設定 > 演算距離は 12チャンク以上 にすること\n","color": "#ff9900","bold": true},\
         {"text":"    マルチプレイの場合、server.propertiesに以下の設定を書く\n","color": "#ff9900","bold": true},\
         {"text":"       - simulation-distance=12\n","color": "#ff9900","bold": true},\
+        {"text":"  ・ビデオ設定 > 視野の変化は オフ にすること\n","color": "#ff9900","bold": true},\
         {"text":"  ・言語設定 > フォント設定から、\n","color": "#ff9900","bold": true},\
         {"text":"    Unicodeフォントを強制する を オフ に設定すること\n","color": "#ff9900","bold": true},\
         {"text":"  ・専用リソースパックを適用すること\n","color": "#ff9900","bold": true}\

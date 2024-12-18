@@ -21,3 +21,4 @@
 
 # 初期スポーン地点に移動
     function mhdp_core:utils/tp with storage mhdp_core:game_data PositionList[{ID:"InitialSpawnPoint"}]
+    function mhdp_core:utils/set_spawnpoint with storage mhdp_core:game_data PositionList[{ID:"InitialSpawnPoint"}]

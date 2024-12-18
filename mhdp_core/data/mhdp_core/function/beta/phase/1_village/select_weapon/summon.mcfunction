@@ -39,7 +39,7 @@
     summon item_display -77 70 771 {item:{id:"minecraft:barrier",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.ResetClearTime"],billboard:"vertical"}
 
 # チュートリアル一覧確認用
-    summon text_display -88 71 784 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Review"],text:'{"bold":true,"text":"[チュートリアルの再確認]"}',alignment:"center"}
+    summon text_display -88 71 784 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Review"],text:'{"bold":true,"text":"[チュートリアルを読む]"}',alignment:"center"}
     summon text_display -88 70.6 784 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Tutorial.Review"],text:'{"bold":true,"color":"white","text":"右クリック"}',alignment:"center"}
     summon interaction -88 69 784 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Tutorial.Review"],response:1b}
     summon item_display -88 70 784 {item:{id:"minecraft:paper",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Tutorial.Review"],billboard:"vertical"}
