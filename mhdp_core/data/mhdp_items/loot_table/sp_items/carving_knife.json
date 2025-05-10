@@ -1,0 +1,65 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "components": {
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:102,ItemName:\"carving_knife\",UseTimer:50}",
+                                "minecraft:item_model": "sp_items/carving_knife",
+                                "minecraft:item_name": {
+                                    "color": "green",
+                                    "italic": false,
+                                    "text": "剥ぎ取りナイフ"
+                                },
+                                "minecraft:lore": [
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "狩猟生活の必需品。"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "倒したモンスターに使用すると、"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "素材を剥ぎ取ることができる。"
+                                    },
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    }
+                                ],
+                                "minecraft:max_stack_size": 1
+                            },
+                            "conditions": [],
+                            "function": "minecraft:set_components"
+                        },
+                        {
+                            "count": {
+                                "path": "Arg.Count",
+                                "storage": "api:",
+                                "type": "minecraft:storage"
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "carrot_on_a_stick",
+                    "type": "minecraft:item"
+                }
+            ],
+            "rolls": 1
+        }
+    ],
+    "type": "minecraft:empty"
+}
