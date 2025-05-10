@@ -16,17 +16,17 @@
                                         "sound_id": ""
                                     }
                                 },
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:1,ItemName:\"Potion\",UseTimer:40}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:4,ItemName:\"Armorskin\",UseTimer:40}",
                                 "minecraft:food": {
                                     "can_always_eat": true,
                                     "nutrition": 0,
                                     "saturation": 0
                                 },
-                                "minecraft:item_model": "consume_items/potion",
+                                "minecraft:item_model": "consume_items/armorskin",
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "text": "回復薬"
+                                    "text": "硬化薬"
                                 },
                                 "minecraft:lore": [
                                     {
@@ -37,7 +37,7 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "体力を少量回復する薬。"
+                                        "text": "防御力が上昇する薬。"
                                     },
                                     {
                                         "color": "white",
@@ -55,7 +55,7 @@
                                         "text": "--------------------"
                                     }
                                 ],
-                                "minecraft:max_stack_size": 10
+                                "minecraft:max_stack_size": 5
                             },
                             "conditions": [],
                             "function": "minecraft:set_components"

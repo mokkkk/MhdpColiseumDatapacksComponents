@@ -6,27 +6,12 @@
                     "functions": [
                         {
                             "components": {
-                                "minecraft:consumable": {
-                                    "animation": "drink",
-                                    "consume_seconds": 2147483647,
-                                    "has_consume_particles": false,
-                                    "on_consume_effects": [],
-                                    "sound": {
-                                        "range": 1,
-                                        "sound_id": ""
-                                    }
-                                },
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:1,ItemName:\"Potion\",UseTimer:40}",
-                                "minecraft:food": {
-                                    "can_always_eat": true,
-                                    "nutrition": 0,
-                                    "saturation": 0
-                                },
-                                "minecraft:item_model": "consume_items/potion",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:100,ItemName:\"whetstone\",UseTimer:50}",
+                                "minecraft:item_model": "sp_items/whetstone",
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "text": "回復薬"
+                                    "text": "砥石"
                                 },
                                 "minecraft:lore": [
                                     {
@@ -37,17 +22,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "体力を少量回復する薬。"
+                                        "text": "武器を研磨し，"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": ""
+                                        "text": "斬れ味を回復させる。"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": ""
+                                        "text": "何度でも使用できる。"
                                     },
                                     {
                                         "color": "dark_gray",
@@ -55,7 +40,7 @@
                                         "text": "--------------------"
                                     }
                                 ],
-                                "minecraft:max_stack_size": 10
+                                "minecraft:max_stack_size": 1
                             },
                             "conditions": [],
                             "function": "minecraft:set_components"
@@ -69,7 +54,7 @@
                             "function": "minecraft:set_count"
                         }
                     ],
-                    "name": "paper",
+                    "name": "carrot_on_a_stick",
                     "type": "minecraft:item"
                 }
             ],
