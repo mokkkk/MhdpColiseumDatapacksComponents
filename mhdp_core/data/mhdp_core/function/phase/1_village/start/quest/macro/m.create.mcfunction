@@ -13,7 +13,7 @@
 # クエスト名
     data modify storage mhdp_core:temp Data.Name set from storage mhdp_core:temp TargetQuest.Name
     data modify storage mhdp_core:temp Data.StrLength set string storage mhdp_core:temp Data.Name 12
-    data modify storage mhdp_core:temp Data.Newline set value {"text":"\\n"}
+    data modify storage mhdp_core:temp Data.Newline set value {"text":"\n"}
     execute if data storage mhdp_core:temp Data.StrLength run data modify storage mhdp_core:temp Data.Newline set value {"text":""}
 
 # 難易度

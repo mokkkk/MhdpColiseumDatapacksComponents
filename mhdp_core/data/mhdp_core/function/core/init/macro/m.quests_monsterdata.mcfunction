@@ -5,4 +5,4 @@
 # @within function mhdp_core:core/init/quests_monsterdata
 
 # データを追加
-    $data modify storage mhdp_core:game_data QuestBookData.Monsters append value {ID:$(Uid),ShowName:{"text":"\\$(Icon)","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"$(JpName)"}]}}}
+    $data modify storage mhdp_core:game_data QuestBookData.Monsters append value {ID:$(Uid),ShowName:{"text":"\$(Icon)","color":"white","font":"icons/mhdp_icons","hover_event":{"action":"show_text","value":[{"text":"$(JpName)"}]}}}

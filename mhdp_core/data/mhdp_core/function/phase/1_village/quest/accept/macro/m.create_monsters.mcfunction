@@ -7,7 +7,7 @@
 #       function mhdp_core:phase/1_village/quest/accept/macro/m.create_monsters
 
 # データ非表示の場合、[?]のみを表示する
-    execute if data storage mhdp_core:temp TargetQuest{HideMonsters:true} run data modify storage mhdp_core:temp Data.Monster1 set value {"text":"\\uE000","color":white,"font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"???"}]}}
+    execute if data storage mhdp_core:temp TargetQuest{HideMonsters:true} run data modify storage mhdp_core:temp Data.Monster1 set value {"text":"\\uE000","color":white,"font":"icons/mhdp_icons","hover_event":{"action":"show_text","value":[{"text":"???"}]}}
     execute if data storage mhdp_core:temp TargetQuest{HideMonsters:true} run return 0
 
 # データの取り出し
