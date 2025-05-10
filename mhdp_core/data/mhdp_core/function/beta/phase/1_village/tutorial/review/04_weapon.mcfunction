@@ -12,8 +12,8 @@
         {"text":"  ホットバーで、空欄のアイテムを選択した状態で "},{"keybind":"key.swapOffhand","color": "#ff9900","bold": true},{"text":"キー","color": "#ff9900","bold": true},{"text":" を押すと、\n"},\
         {"text":"  武器の抜刀ができます。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 31"},"color": "#ff7300","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 31"},"color": "#ff7300","font":"icons/book"},\
         {"text":"\n"}\
     ]
 
@@ -25,8 +25,8 @@
         {"text":"  "},{"text":"マウスホイール","color": "#ff9900","bold": true},{"text":" などで別のアイテムを選択することで、\n"},\
         {"text":"  武器を納刀します。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 30"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 32"},"color": "#ff7300","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 30"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 32"},"color": "#ff7300","font":"icons/book"},\
         {"text":"\n"}\
     ]
 
@@ -38,8 +38,8 @@
         {"text":"  "},{"text":"抜刀攻撃","color": "#ff9900","bold": true},{"text":" ができます。\n"},\
         {"text":"  抜刀しながら、即座に攻撃することができます。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 31"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 33"},"color": "#ff7300","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 31"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 33"},"color": "#ff7300","font":"icons/book"},\
         {"text":"\n"}\
     ]
 
@@ -51,7 +51,7 @@
         {"text":"  モンスターに近づいて "},{"text":"マウス","color": "#ff9900","bold": true},{"keybind":"key.attack","color": "#ff9900","bold": true},{"text":" で攻撃ができます。\n"},\
         {"text":"  武器の詳しい操作方法は、訓練で確かめてください。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 32"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 32"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
         {"text":"\n"}\
     ]

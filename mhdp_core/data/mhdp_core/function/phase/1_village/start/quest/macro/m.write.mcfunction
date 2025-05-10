@@ -30,7 +30,7 @@
         {"text":"制限時間：$(TimeLimit)分\n","bold":false,"color":black},\
         {"text":"失敗条件：$(DeathCount)回力尽きる\n\n","bold":false,"color":black},\
         {"text":"$(Indent)","bold":false},\
-        {"text":"$(Button)","bold":true,"color":red,"clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.AcceptedQuestId set $(ID)"}}\
+        {"text":"$(Button)","bold":true,"color":red,"click_event":{"action":"run_command","command":"/trigger Ply.Ope.AcceptedQuestId set $(ID)"}}\
     ]}
 
 # 直前に受けたクエストIDと出力中のクエストIDが一致する場合、開いているページを設定する
