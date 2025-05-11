@@ -13,10 +13,10 @@
     data modify storage mhdp_core:temp Args.Slot set value "mainhand"
 
 # attribute設定
-    attribute @s generic.attack_speed modifier remove mhdp_core:weapon_attack_speed
-    attribute @s generic.attack_speed modifier add mhdp_core:weapon_attack_speed -4.0 add_value
-    attribute @s generic.attack_damage modifier remove mhdp_core:weapon_attack_damage
-    attribute @s generic.attack_damage modifier add mhdp_core:weapon_attack_damage -1.0 add_value
+    attribute @s attack_speed modifier remove mhdp_core:weapon_attack_speed
+    attribute @s attack_speed modifier add mhdp_core:weapon_attack_speed -4.0 add_value
+    attribute @s attack_damage modifier remove mhdp_core:weapon_attack_damage
+    attribute @s attack_damage modifier add mhdp_core:weapon_attack_damage -1.0 add_value
 
 # 実行
     function mhdp_items:core/util/macro/m.item_modify_draw with storage mhdp_core:temp Args

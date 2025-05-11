@@ -5,11 +5,11 @@
 # @within function mhdp_items:core/switch/macro/m.interrupt
 
 # ステータス削除
-    attribute @s generic.attack_speed modifier remove mhdp_core:weapon_attack_speed
-    attribute @s generic.movement_speed modifier remove mhdp_core:weapon_movement_speed
-    attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s generic.attack_damage modifier remove mhdp_core:weapon_attack_damage
-    attribute @s generic.attack_damage modifier add mhdp_core:weapon_attack_damage -0.5 add_value
+    attribute @s attack_speed modifier remove mhdp_core:weapon_attack_speed
+    attribute @s movement_speed modifier remove mhdp_core:weapon_movement_speed
+    attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
+    attribute @s attack_damage modifier remove mhdp_core:weapon_attack_damage
+    attribute @s attack_damage modifier add mhdp_core:weapon_attack_damage -0.5 add_value
     effect clear @s slowness
 
 # タイマー初期化

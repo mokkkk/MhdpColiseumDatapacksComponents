@@ -8,5 +8,5 @@
     tag @s remove Ply.Weapon.StaminaEmpty
 
 # 移動制限解除
-    attribute @s generic.jump_strength modifier remove mhdp_core:stamina_jump_strength
-    attribute @s generic.movement_speed modifier remove mhdp_core:stamina_movement_speed
+    attribute @s jump_strength modifier remove mhdp_core:stamina_jump_strength
+    attribute @s movement_speed modifier remove mhdp_core:stamina_movement_speed

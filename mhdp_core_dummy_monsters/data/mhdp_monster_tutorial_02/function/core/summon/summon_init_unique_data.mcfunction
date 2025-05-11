@@ -16,7 +16,7 @@
     scoreboard players set @s Mns.General.DummyCounter -1
 
 # 教官召喚
-    # summon villager 207 66 141 {Silent:1b,Invulnerable:1b,Tags:["Mns.Shot.Tutorial02","Mns.Shot.Tutorial02.Villager"],CustomName:'"キョーカン"',attributes:[{id:"minecraft:generic.movement_speed",base:0}],VillagerData:{profession:"minecraft:armorer",type:"minecraft:desert"}}
+    # summon villager 207 66 141 {Silent:1b,Invulnerable:1b,Tags:["Mns.Shot.Tutorial02","Mns.Shot.Tutorial02.Villager"],CustomName:'"キョーカン"',attributes:[{id:"minecraft:movement_speed",base:0}],VillagerData:{profession:"minecraft:armorer",type:"minecraft:desert"}}
 
 # 終了
     scoreboard players reset #mhdp_temp_monster_uid Mns.Uid

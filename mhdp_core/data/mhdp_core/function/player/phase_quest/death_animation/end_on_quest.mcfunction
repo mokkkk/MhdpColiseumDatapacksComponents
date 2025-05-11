@@ -12,7 +12,7 @@
 
 # 移動禁止解除
     effect clear @s slowness
-    attribute @s generic.jump_strength modifier remove mhdp_core:death_animation
+    attribute @s jump_strength modifier remove mhdp_core:death_animation
 
 # チームを戻す
     team join Team.QuestPlaying @s

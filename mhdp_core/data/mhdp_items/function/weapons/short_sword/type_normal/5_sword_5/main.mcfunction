@@ -30,8 +30,8 @@
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
-    execute if score @s Wpn.GeneralTimer matches 9 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 9 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
+    execute if score @s Wpn.GeneralTimer matches 9 run attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
+    execute if score @s Wpn.GeneralTimer matches 9 run attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/short_sword/type_normal/5_sword_5/end

@@ -13,7 +13,7 @@
 # 移動を禁止
     effect give @s resistance 10 10 true
     effect give @s slowness 10 10 true
-    attribute @s generic.jump_strength modifier add mhdp_core:quest_jump_strength -10 add_value
+    attribute @s jump_strength modifier add mhdp_core:quest_jump_strength -10 add_value
 
 # データ操作準備
     function mhdp_core:player/data/load_data

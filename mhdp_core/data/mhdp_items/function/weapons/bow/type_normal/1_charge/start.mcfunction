@@ -13,7 +13,7 @@
     tag @s remove Ply.Weapon.NoOpe
 
 # attribute設定
-    attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
+    attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
 
 # スタミナ消費
     tag @s add Ply.Weapon.StaminaNotRegen

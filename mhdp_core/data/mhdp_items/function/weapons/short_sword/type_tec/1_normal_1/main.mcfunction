@@ -29,8 +29,8 @@
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
-    execute if score @s Wpn.GeneralTimer matches 6 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 6 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
+    execute if score @s Wpn.GeneralTimer matches 6 run attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
+    execute if score @s Wpn.GeneralTimer matches 6 run attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short,tag=!Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..11 run function mhdp_items:core/buffering/a

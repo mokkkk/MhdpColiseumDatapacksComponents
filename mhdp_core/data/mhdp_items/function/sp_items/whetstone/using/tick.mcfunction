@@ -12,7 +12,7 @@
 
 # 移動停止
     effect give @s slowness 10 10 true
-    execute if score @s Itm.Whetstone.GeneralTimer matches 1 run attribute @s generic.jump_strength modifier add mhdp_core:sp_item_jump_strength -0.35 add_value
+    execute if score @s Itm.Whetstone.GeneralTimer matches 1 run attribute @s jump_strength modifier add mhdp_core:sp_item_jump_strength -0.35 add_value
 
 # 使用中断
     execute if score @s Itm.Whetstone.GeneralTimer matches 1.. unless items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{IsMhdpItem:1b,ItemId:100}] run function mhdp_items:sp_items/whetstone/util/interrupt

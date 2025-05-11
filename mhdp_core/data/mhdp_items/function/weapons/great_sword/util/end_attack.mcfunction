@@ -19,9 +19,9 @@
         tag @s remove Ply.Flag.Counter
 
 # attributeリセット
-    attribute @s generic.attack_speed modifier remove mhdp_core:weapon_attack_speed
-    attribute @s generic.attack_speed modifier add mhdp_core:weapon_attack_speed -3.0 add_value
-    attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s generic.attack_damage modifier remove mhdp_core:weapon_attack_damage
-    attribute @s generic.attack_damage modifier add mhdp_core:weapon_attack_damage 5.0 add_value
+    attribute @s attack_speed modifier remove mhdp_core:weapon_attack_speed
+    attribute @s attack_speed modifier add mhdp_core:weapon_attack_speed -3.0 add_value
+    attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
+    attribute @s attack_damage modifier remove mhdp_core:weapon_attack_damage
+    attribute @s attack_damage modifier add mhdp_core:weapon_attack_damage 5.0 add_value
     effect clear @s slowness

@@ -6,7 +6,7 @@
                     "functions": [
                         {
                             "components": {
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:1000,ItemName:\"immovable_cloth\",UseTimer:50}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:1000,ItemName:\"immovable_cloth\",UseTimer:50,IsSpItem:1b}",
                                 "minecraft:item_model": "sp_items/immovable_cloth",
                                 "minecraft:item_name": {
                                     "color": "green",

@@ -11,7 +11,7 @@
 
 # 移動禁止
     effect give @s slowness 30 10 true
-    attribute @s generic.jump_strength modifier add mhdp_core:death_animation -10 add_value
+    attribute @s jump_strength modifier add mhdp_core:death_animation -10 add_value
 
 # 一時的に武器使用禁止・無敵化
     tag @s remove Ply.State.UsingWeapon

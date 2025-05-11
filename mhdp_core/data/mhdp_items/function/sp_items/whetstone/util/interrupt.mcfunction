@@ -16,4 +16,4 @@
 
 # 移動速度リセット
     effect clear @s slowness
-    attribute @s generic.jump_strength modifier remove mhdp_core:sp_item_jump_strength
+    attribute @s jump_strength modifier remove mhdp_core:sp_item_jump_strength

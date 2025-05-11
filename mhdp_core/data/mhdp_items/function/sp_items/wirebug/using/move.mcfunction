@@ -13,7 +13,7 @@
     tag @s add Ply.Ope.IsAir
 
 # 一時的に無重力化
-    attribute @s generic.gravity modifier add mhdp_core:sp_item_gravity -0.08 add_value
+    attribute @s gravity modifier add mhdp_core:sp_items_gravity -0.08 add_value
 
 # 終了
     kill @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target]

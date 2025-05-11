@@ -28,8 +28,8 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..4 run tp @s ~ ~ ~ ~-0.8 ~1
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 9 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 9 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
+    execute if score @s Wpn.GeneralTimer matches 9 run attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
+    execute if score @s Wpn.GeneralTimer matches 9 run attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..13 run function mhdp_items:core/buffering/a

@@ -23,7 +23,7 @@
         item modify entity @s weapon.offhand [{"function": "minecraft:set_name","entity": "this","target": "custom_name","name": ""},{function:set_custom_data,tag:{IsDrawing:1b,IsMhdpWeapon:1b,IsSubWeapon:1b,IsUsing:1b}},{function: set_components, components:{custom_model_data:1,hide_tooltip:{}}}]
 
 # ステータス設定
-    attribute @s generic.attack_speed modifier add mhdp_core:weapon_attack_speed -3.0 add_value
-    attribute @s generic.movement_speed modifier add mhdp_core:weapon_movement_speed -0.00 add_value
-    attribute @s generic.attack_damage modifier remove mhdp_core:weapon_attack_damage
-    attribute @s generic.attack_damage modifier add mhdp_core:weapon_attack_damage 5.0 add_value
+    attribute @s attack_speed modifier add mhdp_core:weapon_attack_speed -3.0 add_value
+    attribute @s movement_speed modifier add mhdp_core:weapon_movement_speed -0.00 add_value
+    attribute @s attack_damage modifier remove mhdp_core:weapon_attack_damage
+    attribute @s attack_damage modifier add mhdp_core:weapon_attack_damage 5.0 add_value
