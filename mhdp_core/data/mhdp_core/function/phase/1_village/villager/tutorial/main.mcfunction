@@ -33,8 +33,8 @@
 
 # サブタイマー
     scoreboard players add @s Vlg.General.Timer.Sub 1
-    execute if score @s Vlg.General.Timer.Sub matches 10.. as @e[type=text_display,tag=Other.Text.Tutorial] run data modify entity @s text set value '{"text":"↓","color":"white"}'
-    execute if score @s Vlg.General.Timer.Sub matches 20.. as @e[type=text_display,tag=Other.Text.Tutorial] run data modify entity @s text set value '{"text":"↓","color":"red"}'
+    execute if score @s Vlg.General.Timer.Sub matches 10.. as @e[type=text_display,tag=Other.Text.Tutorial] run data modify entity @s text set value {"text":"↓","color":"white"}
+    execute if score @s Vlg.General.Timer.Sub matches 20.. as @e[type=text_display,tag=Other.Text.Tutorial] run data modify entity @s text set value {"text":"↓","color":"red"}
     execute if score @s Vlg.General.Timer.Sub matches 20.. run scoreboard players set @s Vlg.General.Timer.Sub 0
 
 # 終了
