@@ -1,0 +1,365 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "components": {
+                                "minecraft:custom_data": "{IsMhdpWeapon:1b,Id:101,WeaponType:2,AttackDamage:100,Element:0,ElementDamage:0,Critical:0,Sharpness:[10,10,40,40,0,0,0],SharpnessMax:70,SharpnessMaxCraft:100,ModelOffset:200}",
+                                "minecraft:item_model": "minecraft:weapons/great_sword/iron",
+                                "minecraft:item_name": {
+                                    "color": "aqua",
+                                    "italic": false,
+                                    "text": "アイアンソード"
+                                },
+                                "minecraft:lore": [
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "武器種：大剣"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "攻撃力：100"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "会心率：0%"
+                                    },
+                                    [
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "斬れ味：["
+                                        },
+                                        {
+                                            "color": "#FF0000",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FF0000",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFA200",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFA200",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF802"
+                                        },
+                                        {
+                                            "color": "white",
+                                            "font": "default",
+                                            "text": "|"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "]"
+                                        }
+                                    ],
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "初心者にも扱いやすい大剣．"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "力を溜めることで，強力な"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "一撃を放つことができる．"
+                                    },
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    }
+                                ],
+                                "minecraft:max_stack_size": 1,
+                                "minecraft:tooltip_display": {
+                                    "hidden_components": [
+                                        "minecraft:unbreakable"
+                                    ]
+                                },
+                                "minecraft:unbreakable": {}
+                            },
+                            "conditions": [],
+                            "function": "minecraft:set_components"
+                        }
+                    ],
+                    "name": "ender_eye",
+                    "type": "minecraft:item"
+                }
+            ],
+            "rolls": 1
+        }
+    ],
+    "type": "minecraft:empty"
+}

@@ -1,0 +1,78 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "components": {
+                                "minecraft:custom_data": "{IsMhdpWeapon:1b,Id:1,WeaponType:1,AttackDamage:100,Element:0,ElementDamage:0,Critical:0,Sharpness:[0,0,100,0,0,0,0],SharpnessMax:100,SharpnessMaxCraft:100,ModelOffset:100,BowBottleType:0}",
+                                "minecraft:item_model": "minecraft:weapons/bow/iron",
+                                "minecraft:item_name": {
+                                    "color": "aqua",
+                                    "italic": false,
+                                    "text": "鉄弓"
+                                },
+                                "minecraft:lore": [
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "武器種：弓"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "攻撃力：100"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "会心率：0%"
+                                    },
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "金属製の弓．その大きさゆえ"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "扱いは難しいが，威力が高く"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "モンスターの体を貫く矢を放つ．"
+                                    },
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    }
+                                ],
+                                "minecraft:max_stack_size": 1,
+                                "minecraft:tooltip_display": {
+                                    "hidden_components": [
+                                        "minecraft:unbreakable"
+                                    ]
+                                },
+                                "minecraft:unbreakable": {}
+                            },
+                            "conditions": [],
+                            "function": "minecraft:set_components"
+                        }
+                    ],
+                    "name": "ender_eye",
+                    "type": "minecraft:item"
+                }
+            ],
+            "rolls": 1
+        }
+    ],
+    "type": "minecraft:empty"
+}
