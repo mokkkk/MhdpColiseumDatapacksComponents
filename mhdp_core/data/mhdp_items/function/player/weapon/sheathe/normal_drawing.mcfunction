@@ -9,7 +9,7 @@
     # scoreboard players set #mhdp_arg_cmd_offset MhdpCore 1
     # data modify storage mhdp_core:temp Args.Slot set value "mainhand"
     # function mhdp_items:core/util/item_modify_draw
-    function api:weapon/draw {Slot:"mainhand", Cmd:"drawing"}
+    function api:weapon/draw.m {Slot:"mainhand", Cmd:"drawing"}
 
 # 各武器の通常抜刀処理実行
     function mhdp_items:core/switch/weapon_normal_drawing

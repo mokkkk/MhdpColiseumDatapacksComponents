@@ -11,8 +11,10 @@
         # メイン
             data modify storage mhdp_core:temp Args.IsDrawing set value true
             scoreboard players set #mhdp_arg_cmd_offset MhdpCore 1
-            execute if entity @s[tag=Ply.Weapon.NoOpe] run function mhdp_items:core/util/item_modify_animation
-            execute if entity @s[tag=Ply.Weapon.NoOpe] run function mhdp_items:core/util/item_modify_clear_name
+            # execute if entity @s[tag=Ply.Weapon.NoOpe] run function mhdp_items:core/util/item_modify_animation
+            # execute if entity @s[tag=Ply.Weapon.NoOpe] run function mhdp_items:core/util/item_modify_clear_name
+            execute if entity @s[tag=Ply.Weapon.NoOpe] run function api:weapon/animation.m {Slot:"mainhand", Cmd:"drawing"}
+            execute if entity @s[tag=Ply.Weapon.NoOpe] run function api:weapon/reset_name.m {Slot:"mainhand"}
     # 終了
         tag @s remove Ply.Weapon.NoOpe
 

@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/bow/type_normal/main
 #
-# 弓のメイン処理 天の型
+# 弓のメイン処理 地の型
 #
 # @within function mhdp_items:weapons/bow/main
 
