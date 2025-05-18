@@ -52,4 +52,4 @@
     function mhdp_core:player/data/save_data
     data remove storage mhdp_core:temp TempPlayerData
 
-# say 武器共通：強制納刀
+say 武器共通：強制納刀
