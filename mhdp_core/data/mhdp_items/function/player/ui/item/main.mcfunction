@@ -5,8 +5,8 @@
 
 # 初期化
     data modify storage mhdp_core:temp UI.ItemTemp set value []
-    data modify storage mhdp_core:temp UI.Item0 set value '[{"text":"\\uF889\\uF802","font":"space"}]'
-    data modify storage mhdp_core:temp UI.Item1 set value '[{"text":"\\uF889\\uF802","font":"space"}]'
+    data modify storage mhdp_core:temp UI.Item0 set value '[{"text":"\uF889\uF802","font":"space"}]'
+    data modify storage mhdp_core:temp UI.Item1 set value '[{"text":"\uF889\uF802","font":"space"}]'
 
 # 特殊装具への処理分岐
     function mhdp_items:core/switch/item/ui
