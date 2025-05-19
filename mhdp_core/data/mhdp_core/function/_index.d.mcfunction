@@ -75,6 +75,21 @@
             #declare tag Ply.Ope.IsSprinting ダッシュ中
         # 空中
             #declare tag Ply.Ope.IsAir 飛行中
+        # キー入力
+            #declare tag Ply.Ope.StartKeyForward
+            #declare tag Ply.Ope.IsKeyForward
+            #declare tag Ply.Ope.StartKeyLeft
+            #declare tag Ply.Ope.IsKeyLeft
+            #declare tag Ply.Ope.StartKeyBack
+            #declare tag Ply.Ope.IsKeyBack
+            #declare tag Ply.Ope.StartKeyRight
+            #declare tag Ply.Ope.IsKeyRight
+            #declare tag Ply.Ope.StartKeyJump
+            #declare tag Ply.Ope.IsKeyJump
+            #declare tag Ply.Ope.StartKeySprint
+            #declare tag Ply.Ope.IsKeySprint
+            #declare tag Ply.Ope.StartKeySneak
+            #declare tag Ply.Ope.IsKeySneak
         # 先行入力
             #declare tag Ply.Ope.Buffering.A 先行入力A
             #declare tag Ply.Ope.Buffering.B 先行入力B

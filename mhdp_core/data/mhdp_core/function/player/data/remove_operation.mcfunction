@@ -34,7 +34,16 @@
     execute if entity @s[tag=Ply.Adv.Using.Paper] run tag @s remove Ply.Adv.Using.Paper
 
 # ジャンプ
-    execute if entity @s[tag=Ply.Ope.StartJump] run tag @s remove Ply.Ope.StartJump
+    # execute if entity @s[tag=Ply.Ope.StartJump] run tag @s remove Ply.Ope.StartJump
 
 # ダッシュ
     execute if entity @s[tag=Ply.Ope.IsSprinting] run tag @s remove Ply.Ope.IsSprinting
+
+# キー入力
+    execute if entity @s[tag=Ply.Ope.StartKeyForward] run tag @s remove Ply.Ope.StartKeyForward
+    execute if entity @s[tag=Ply.Ope.StartKeyLeft] run tag @s remove Ply.Ope.StartKeyLeft
+    execute if entity @s[tag=Ply.Ope.StartKeyBack] run tag @s remove Ply.Ope.StartKeyBack
+    execute if entity @s[tag=Ply.Ope.StartKeyRight] run tag @s remove Ply.Ope.StartKeyRight
+    execute if entity @s[tag=Ply.Ope.StartKeyJump] run tag @s remove Ply.Ope.StartKeyJump
+    execute if entity @s[tag=Ply.Ope.StartKeySprint] run tag @s remove Ply.Ope.StartKeySprint
+    execute if entity @s[tag=Ply.Ope.StartKeySneak] run tag @s remove Ply.Ope.StartKeySneak
