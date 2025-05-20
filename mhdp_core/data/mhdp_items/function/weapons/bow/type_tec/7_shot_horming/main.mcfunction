@@ -54,7 +54,7 @@
     execute if score @s Wpn.GeneralTimer matches 15 run scoreboard players remove @s Ply.Stats.Stamina 100
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 1..29 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 1..29 run function mhdp_items:core/buffering/a
     
 # 遷移
     # 右クリック長押し：溜めに移行

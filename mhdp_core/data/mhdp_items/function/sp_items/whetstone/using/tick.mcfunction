@@ -16,7 +16,7 @@
 
 # 使用中断
     execute if score @s Itm.Whetstone.GeneralTimer matches 1.. unless items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{IsMhdpItem:1b,ItemId:100}] run function mhdp_items:sp_items/whetstone/util/interrupt
-    execute if score @s Itm.Whetstone.GeneralTimer matches 1.. if entity @s[tag=Ply.Ope.StartJump] run function mhdp_items:sp_items/whetstone/util/interrupt
+    execute if score @s Itm.Whetstone.GeneralTimer matches 1.. if entity @s[tag=Ply.Ope.StartKeyJump] run function mhdp_items:sp_items/whetstone/util/interrupt
 
 # 演出
     execute if score @s Itm.Whetstone.GeneralTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1

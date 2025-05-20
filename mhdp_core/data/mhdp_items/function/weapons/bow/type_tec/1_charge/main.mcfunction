@@ -39,4 +39,4 @@
         execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_shot
         execute if score @s Ply.Stats.Stamina matches ..0 run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_shot
     # ジャンプした場合、チャージステップに移行
-        execute if entity @s[tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 12.. if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_chargestep
+        execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 12.. if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_chargestep

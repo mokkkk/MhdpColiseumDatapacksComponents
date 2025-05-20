@@ -2,8 +2,9 @@
 scoreboard players remove @s aj.tween_duration 1
 execute if score @s aj.tween_duration matches 1.. run return 1
 execute if score @s aj.tween_duration matches 0 on passengers run data modify entity @s interpolation_duration set value 1
-execute if score @s aj.baking.frame matches -1 run function animated_java:nikuyaki/animations/baking/zzz/zzz/0
-execute store result storage aj:temp frame int 1 run scoreboard players get @s aj.baking.frame
-function animated_java:nikuyaki/animations/baking/zzz/apply_frame with storage aj:temp
-execute if score @s aj.baking.frame matches 46.. run return run function animated_java:nikuyaki/animations/baking/zzz/zzz/1
+execute if score @s aj.baking.frame matches -1 run function animated_java:nikuyaki/animations/baking/zzz/commands_keyframe_loop_patch
+data remove storage aj:temp args
+execute store result storage aj:temp args.frame int 1 run scoreboard players get @s aj.baking.frame
+function animated_java:nikuyaki/animations/baking/zzz/apply_frame with storage aj:temp args
+execute if score @s aj.baking.frame matches 46.. run return run scoreboard players set @s aj.baking.frame -1
 scoreboard players add @s aj.baking.frame 1

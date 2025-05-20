@@ -44,10 +44,6 @@
     execute if entity @s[tag=!Ply.Adv.Using.Paper] run scoreboard players set @s Ply.Ope.EatingTimer 0
     execute if entity @s[tag=Ply.Adv.Using.Paper] run scoreboard players add @s Ply.Ope.EatingTimer 1
 
-# ジャンプ
-    # execute if score @s Ply.Ope.Jump matches 1.. run tag @s add Ply.Ope.StartJump
-    # execute if entity @s[tag=Ply.Ope.StartJump] run scoreboard players set @s Ply.Ope.Jump 0
-
 # ダッシュ
     execute if predicate {condition:entity_properties,entity:this,predicate:{flags:{is_sprinting:true}}} run tag @s add Ply.Ope.IsSprinting
 
@@ -95,7 +91,7 @@
 #     # ニンジン棒
 #         execute if entity @s[tag=Ply.Ope.StartUsingCoas] run say ニンジン棒使用    
 #     # ジャンプ
-#         execute if entity @s[tag=Ply.Ope.StartJump] run say ジャンプ
+#         execute if entity @s[tag=Ply.Ope.StartKeyJump] run say ジャンプ
 #     # キー入力
 #         execute if entity @s[tag=Ply.Ope.StartKeyForward] run say 前移動
 #         execute if entity @s[tag=Ply.Ope.StartKeyLeft] run say 左移動

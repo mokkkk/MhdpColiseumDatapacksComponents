@@ -46,7 +46,7 @@
     scoreboard players remove @s Ply.Stats.Stamina 2
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 10..21 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 10..21 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.UsedEnderEye.Long] if score @s Wpn.GeneralTimer matches 1.. run function mhdp_items:core/buffering/b
 
 # 遷移

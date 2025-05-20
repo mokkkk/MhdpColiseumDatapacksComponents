@@ -16,15 +16,15 @@
 
 # ジャンプ時の消費
     # 立ち
-        execute if entity @s[tag=!Skill.Stamina.Constitution.1,tag=!Skill.Stamina.Constitution.2,tag=!Skill.Stamina.Constitution.3,tag=Ply.Ope.StartJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 30
-        execute if entity @s[tag=Skill.Stamina.Constitution.1,tag=Ply.Ope.StartJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 25
-        execute if entity @s[tag=Skill.Stamina.Constitution.2,tag=Ply.Ope.StartJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 20
-        execute if entity @s[tag=Skill.Stamina.Constitution.3,tag=Ply.Ope.StartJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 15
+        execute if entity @s[tag=!Skill.Stamina.Constitution.1,tag=!Skill.Stamina.Constitution.2,tag=!Skill.Stamina.Constitution.3,tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 30
+        execute if entity @s[tag=Skill.Stamina.Constitution.1,tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 25
+        execute if entity @s[tag=Skill.Stamina.Constitution.2,tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 20
+        execute if entity @s[tag=Skill.Stamina.Constitution.3,tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 15
     # ダッシュ中
-        execute if entity @s[tag=!Skill.Stamina.Constitution.1,tag=!Skill.Stamina.Constitution.2,tag=!Skill.Stamina.Constitution.3,tag=Ply.Ope.StartJump,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 50
-        execute if entity @s[tag=Skill.Stamina.Constitution.1,tag=Ply.Ope.StartJump,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 42
-        execute if entity @s[tag=Skill.Stamina.Constitution.2,tag=Ply.Ope.StartJump,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 35
-        execute if entity @s[tag=Skill.Stamina.Constitution.3,tag=Ply.Ope.StartJump,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 28
+        execute if entity @s[tag=!Skill.Stamina.Constitution.1,tag=!Skill.Stamina.Constitution.2,tag=!Skill.Stamina.Constitution.3,tag=Ply.Ope.StartKeyJump,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 50
+        execute if entity @s[tag=Skill.Stamina.Constitution.1,tag=Ply.Ope.StartKeyJump,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 42
+        execute if entity @s[tag=Skill.Stamina.Constitution.2,tag=Ply.Ope.StartKeyJump,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 35
+        execute if entity @s[tag=Skill.Stamina.Constitution.3,tag=Ply.Ope.StartKeyJump,tag=Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 28
 
 # ペナルティ開始
     execute if entity @s[tag=!Ply.Weapon.StaminaEmpty] if score @s Ply.Stats.Stamina matches ..-1 run function mhdp_items:player/weapon/stamina/penalry_start

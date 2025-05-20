@@ -1,0 +1,47 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "components": {
+                                "minecraft:custom_data": {
+                                    "Immovable": true,
+                                    "NoPickup": true
+                                },
+                                "minecraft:enchantment_glint_override": false,
+                                "minecraft:enchantments": {
+                                    "minecraft:binding_curse": 1
+                                },
+                                "minecraft:item_model": "sp_items/immovable_cloth_head",
+                                "minecraft:item_name": {
+                                    "text": "不動の装衣",
+                                    "type": "text"
+                                },
+                                "minecraft:tooltip_display": {
+                                    "hide_tooltip": true
+                                },
+                                "minecraft:trim": {
+                                    "material": {
+                                        "asset_name": "none",
+                                        "description": ""
+                                    },
+                                    "pattern": {
+                                        "asset_id": "rocksteady",
+                                        "description": ""
+                                    }
+                                }
+                            },
+                            "function": "minecraft:set_components"
+                        }
+                    ],
+                    "name": "minecraft:chainmail_chestplate",
+                    "type": "minecraft:item"
+                }
+            ],
+            "rolls": 1
+        }
+    ],
+    "type": "minecraft:empty"
+}

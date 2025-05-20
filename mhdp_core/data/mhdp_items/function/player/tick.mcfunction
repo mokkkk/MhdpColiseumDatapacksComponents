@@ -17,9 +17,9 @@
 
 # ジャンプ関連処理
     # ベクトルジャンプ
-        # execute if entity @s[tag=Ply.Ope.StartJump,tag=Ply.Weapon.Drawing,tag=!Ply.Ope.IsSprinting] run function mhdp_items:player/weapon/move_jump/main
+        # execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=Ply.Weapon.Drawing,tag=!Ply.Ope.IsSprinting] run function mhdp_items:player/weapon/move_jump/main
     # ダッシュジャンプ時、ジャンプ回避
-        execute if entity @s[tag=Ply.Ope.IsSprinting,tag=Ply.Ope.StartJump] run function mhdp_items:player/jump_avoid/main
+        execute if entity @s[tag=Ply.Ope.IsSprinting,tag=Ply.Ope.StartKeyJump] run function mhdp_items:player/jump_avoid/main
 
 # ヒットストップ処理
     execute if entity @s[tag=!Ply.Weapon.HisStop] if score @s Wpn.HitStopTimer matches 1.. run tag @s add Ply.Weapon.HisStop
