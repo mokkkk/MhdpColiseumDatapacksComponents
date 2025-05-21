@@ -50,7 +50,7 @@
         Name:"dino",\
         UpperName:"Dino",\
         JpName:"斬竜",\
-        ShowName:'{"text":"斬竜"}',\
+        ShowName:{"text":"斬竜"},\
         LootTable:"mhdp_items:materials/dino",\
         ShowHp:true,\
         Hp:11000,\

@@ -49,7 +49,7 @@
     summon text_display -95 70.6 791 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:{"bold":true,"color":"white","text":"右クリック"},alignment:"center"}
     summon interaction -95 69 791 {width:1.5f,height:1.7f,Tags:["Other.Interaction.UI","Beta.Ui","Beta.Interaction.Training"],response:1b}
     summon item_display -95 70 791 {item:{id:"minecraft:iron_sword",count:1},Tags:["Other.Interaction.UI","Beta.Ui","Beta.Display.Training"],billboard:"vertical"}
-    # summon text_display -93 71 762 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:'{"bold":true,"color":"white","text":"[村に移動]"}',alignment:"center"}
+    # summon text_display -93 71 762 {view_range:0.1f,width:0.4f,height:0.4f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.Training"],text:{"bold":true,"color":"white","text":"[村に移動]"},alignment:"center"}
 
 # からくり飛竜操作用
     summon text_display -112 71 800 {view_range:0.1f,width:0.9f,height:0.9f,billboard:"vertical",default_background:1b,Tags:["Beta.Ui","Beta.Display.KarakuriOpe"],text:{"bold":true,"color":"white","text":"[からくり飛竜のモード変更]"},alignment:"center"}

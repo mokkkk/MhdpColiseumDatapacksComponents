@@ -31,7 +31,7 @@
     execute if score @s aj.lance_flytackle_start.frame matches 43 run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_start/particle_launch
 
 # 演出
-    execute if score @s aj.lance_flytackle_start.frame matches 45 positioned ^ ^3 ^ run summon text_display ^-1 ^ ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.RedFlash","Mns.Shot.Valk.Vfx.RedFlash.Long"],default_background:0b,brightness:{sky:15,block:15},text:'{"text":"0","font":"vfx/valstrax"}',transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[12f,12f,12f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
+    execute if score @s aj.lance_flytackle_start.frame matches 45 positioned ^ ^3 ^ run summon text_display ^-1 ^ ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.RedFlash","Mns.Shot.Valk.Vfx.RedFlash.Long"],default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[12f,12f,12f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
     execute if score @s aj.lance_flytackle_start.frame matches 45.. run tp @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash,tag=Mns.Shot.Valk.Vfx.RedFlash.Long] ^ ^3 ^
 
 # 移動位置決定

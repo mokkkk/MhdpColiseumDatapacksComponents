@@ -78,7 +78,7 @@
         Name:"valk",\
         UpperName:"Valk",\
         JpName:"天彗龍",\
-        ShowName:'{"text":"天彗龍"}',\
+        ShowName:{"text":"天彗龍"},\
         LootTable:"mhdp_items:materials/valk",\
         ShowHp:true,\
         Hp:13000,\

@@ -7,6 +7,7 @@
 # クエストデータにクリア済みを設定
     $data modify storage mhdp_core:temp Temp.ActiveQuestId set value $(Id)
     function mhdp_core:phase/3_quest/change_phase/succeed/macro/m.update_data with storage mhdp_core:temp Temp
+    function mhdp_core:phase/3_quest/change_phase/succeed/macro/m.update_data with storage mhdp_core:temp Temp
     data remove storage mhdp_core:temp Temp
 
 # 村状態更新

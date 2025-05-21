@@ -6,7 +6,7 @@
 
 # リタイア用ベルのinteraction召喚
     execute positioned 216 67 147 unless entity @n[type=interaction,tag=Other.Interaction.RetireBell,distance=..2] run summon interaction 216 67 147 {width:1.2f,height:1.2f,response:1b,Tags:["Other.Interaction.UI","Other.Interaction.RetireBell"]}
-    execute positioned 216 68 147 unless entity @n[type=text_display,tag=Other.Text.RetireBell,distance=..2] run summon text_display 216 68 147 {view_range:0.1f,width:1.5f,height:1.5f,billboard:"vertical",default_background:1b,Tags:["Other.Text.RetireBell"],text:'{"bold":true,"color":"white","text":"クエストリタイア"}',alignment:"center"}
+    execute positioned 216 68 147 unless entity @n[type=text_display,tag=Other.Text.RetireBell,distance=..2] run summon text_display 216 68 147 {view_range:0.1f,width:1.5f,height:1.5f,billboard:"vertical",default_background:1b,Tags:["Other.Text.RetireBell"],text:{"bold":true,"color":"white","text":"クエストリタイア"},alignment:"center"}
 
 # 中心点設置
 # モンスター召喚位置の決定などに使用
