@@ -2,5 +2,5 @@
 tag @s remove aj.new
 function animated_java:global/internal/gu/convert_uuid_array_to_string
 tp @s ^0 ^0.265625 ^-1.4375 ~0 ~0
-data merge entity @s {Duration:310}
+data merge entity @s {Particle:{type:"block",block_state:"minecraft:air"},Duration:310}
 tag @s add Itm.Nikuyaki.Chair
