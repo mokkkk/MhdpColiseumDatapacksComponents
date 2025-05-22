@@ -1,6 +1,6 @@
 {
-    "pack": {
-        "pack_format": 48,
-        "description": "青鳥竜処理用のデータパック"
-    }
+	"pack": {
+		"pack_format": 71,
+		"description": "青鳥竜処理用のデータパック"
+	}
 }
