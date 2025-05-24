@@ -5,7 +5,7 @@
 # @within function mhdp_core:player/damage/voice/apply
 
 # 移動停止
-    $summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,potion_contents:{custom_effects:[{id:"minecraft:slowness",amplifier:5,duration:$(VoiceTime),show_particles:0b}]}}
+    $summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,WaitTime:4,potion_contents:{custom_effects:[{id:"minecraft:slowness",amplifier:5,duration:$(VoiceTime),show_particles:0b}]}}
 
 # 武器操作中断
     # 操作無効化
