@@ -15,3 +15,6 @@
     execute if entity @s[tag=Itm.Sp.ImmovableCloth] run function mhdp_items:sp_items/immovable_cloth/util/drop
 # 翔蟲
     execute if entity @s[tag=Itm.Sp.Wirebug] run function mhdp_items:sp_items/wirebug/util/drop
+
+# デバッグ用メッセージ
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} run say 特殊装具投げ捨て

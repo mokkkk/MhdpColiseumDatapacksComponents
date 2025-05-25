@@ -44,4 +44,5 @@
         ID:"QuestBoard",X:-83,Y:70,Z:759,Rotate:0\
     }
 
-# say 座標初期化
+# デバッグ用
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} run say 座標初期化

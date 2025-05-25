@@ -5,4 +5,4 @@
 # @within function mhdp_items:core/switch/weapon_ui
 
 # 武器の初期化処理を実行
-    $function mhdp_items:weapons/$(Prefix)/util/ui
+    $function mhdp_items:sp_items/$(Prefix)/util/ui

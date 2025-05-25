@@ -25,4 +25,5 @@
 # こんがり肉
     data modify storage mhdp_core:game_data ItemList append value {Id:"CookedMeat",Prefix:"cooked_meat"}
 
-# say アイテムデータ初期化
+# デバッグ用
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} run say アイテムデータ初期化

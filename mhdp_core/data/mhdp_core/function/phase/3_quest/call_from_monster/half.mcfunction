@@ -18,4 +18,5 @@
 # 終了
     data remove storage mhdp_core:temp Arg
 
-# say モンスターHP半減
+# デバッグ用
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} run say モンスターHP半減

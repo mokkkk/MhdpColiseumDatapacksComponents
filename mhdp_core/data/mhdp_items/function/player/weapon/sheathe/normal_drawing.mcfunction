@@ -17,4 +17,5 @@
 # タグ付与
     tag @s add Ply.Weapon.Drawing
 
-say 武器共通：通常抜刀
+# デバッグ用
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} run say 武器共通：通常抜刀

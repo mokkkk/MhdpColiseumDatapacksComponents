@@ -1,6 +1,6 @@
 #> mhdp_items:core/switch/item/interrupt
 # 
-# 分岐処理 特殊装具の初期化処理
+# 分岐処理 特殊装具の割り込み処理
 #
 # @within function mhdp_core:
 
