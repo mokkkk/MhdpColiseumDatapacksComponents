@@ -31,4 +31,3 @@
 # 武器モデルのリセット
     # メインハンド
         execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function api:weapon/draw.m {Slot:"mainhand", Cmd:"drawing"}
-        # execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function api:weapon/reset_name.m {Slot:"mainhand"}
