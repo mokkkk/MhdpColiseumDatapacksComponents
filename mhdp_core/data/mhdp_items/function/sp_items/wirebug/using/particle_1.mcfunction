@@ -8,12 +8,12 @@
     tp @s @s
 
 # 糸
-    particle dust{color:[1.000,100000000.000,100000000.000],scale:2} ^ ^ ^1 0 0 0 1 0 normal
-    particle dust{color:[1.000,100000000.000,100000000.000],scale:2} ^ ^ ^2 0 0 0 1 0 normal
-    particle dust{color:[1.000,100000000.000,100000000.000],scale:2} ^ ^ ^3 0 0 0 1 0 normal
-    particle dust{color:[1.000,100000000.000,100000000.000],scale:2} ^ ^ ^4 0 0 0 1 0 normal
-    particle dust{color:[1.000,100000000.000,100000000.000],scale:2} ^ ^ ^5 0 0 0 1 0 normal
-    particle dust{color:[1.000,100000000.000,100000000.000],scale:2} ^ ^ ^6 0 0 0 1 0 normal
-    particle dust{color:[1.000,100000000.000,100000000.000],scale:2} ^ ^ ^7 0 0 0 1 0 normal
-    particle dust{color:[1.000,100000000.000,100000000.000],scale:2} ^ ^ ^8 0 0 0 1 0 normal
-    particle dust{color:[1.000,100000000.000,100000000.000],scale:2} ^ ^ ^9 0 0 0 1 0 normal
+    particle dust{color:[0.300,1.0,1.0],scale:2} ^ ^ ^1 0 0 0 1 0 normal
+    particle dust{color:[0.300,1.0,1.0],scale:2} ^ ^ ^2 0 0 0 1 0 normal
+    particle dust{color:[0.300,1.0,1.0],scale:2} ^ ^ ^3 0 0 0 1 0 normal
+    particle dust{color:[0.300,1.0,1.0],scale:2} ^ ^ ^4 0 0 0 1 0 normal
+    particle dust{color:[0.300,1.0,1.0],scale:2} ^ ^ ^5 0 0 0 1 0 normal
+    particle dust{color:[0.300,1.0,1.0],scale:2} ^ ^ ^6 0 0 0 1 0 normal
+    particle dust{color:[0.300,1.0,1.0],scale:2} ^ ^ ^7 0 0 0 1 0 normal
+    particle dust{color:[0.300,1.0,1.0],scale:2} ^ ^ ^8 0 0 0 1 0 normal
+    particle dust{color:[0.300,1.0,1.0],scale:2} ^ ^ ^9 0 0 0 1 0 normal
