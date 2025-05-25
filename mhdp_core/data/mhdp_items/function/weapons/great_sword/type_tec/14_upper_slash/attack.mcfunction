@@ -36,8 +36,8 @@
     execute if entity @s[tag=Ply.Flag.Counter] if entity @n[tag=Temp.Victim] anchored eyes run particle crit ^ ^ ^1 0 0 0 1 50
 
     # execute if entity @s[tag=Ply.Flag.Counter] run tp @s @s
-    # execute if entity @s[tag=Ply.Flag.Counter] run scoreboard players set $strength delta.api.launch 8000
-    # execute if entity @s[tag=Ply.Flag.Counter] rotated ~180 -30 run function delta:api/launch_looking
+    # execute if entity @s[tag=Ply.Flag.Counter] run scoreboard players set $strength player_motion.api.launch 8000
+    # execute if entity @s[tag=Ply.Flag.Counter] rotated ~180 -30 run function player_motion:api/launch_looking
 
 # 攻撃
     execute if score @s Wpn.Gs.ChargeCount matches ..1 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.1

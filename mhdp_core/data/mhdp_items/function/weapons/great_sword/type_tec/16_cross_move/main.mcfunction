@@ -23,10 +23,10 @@
     execute if score @s Wpn.GeneralTimer matches 1 run attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -0.3 add_value
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1..2 run scoreboard players set $strength delta.api.launch 7000
-    execute if score @s Wpn.GeneralTimer matches 1..2 rotated ~ 0 run function delta:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 3..30 run scoreboard players set $strength delta.api.launch 2000
-    execute if score @s Wpn.GeneralTimer matches 3..30 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1..2 run scoreboard players set $strength player_motion.api.launch 7000
+    execute if score @s Wpn.GeneralTimer matches 1..2 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 3..30 run scoreboard players set $strength player_motion.api.launch 2000
+    execute if score @s Wpn.GeneralTimer matches 3..30 rotated ~ 0 run function player_motion:api/launch_looking
 
 # 遷移
     # 右クリック離す：十字斬りに移行

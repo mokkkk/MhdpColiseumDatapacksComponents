@@ -36,8 +36,8 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 7 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 7 run scoreboard players set $strength delta.api.launch 2000
-    execute if score @s Wpn.GeneralTimer matches 7 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 7 run scoreboard players set $strength player_motion.api.launch 2000
+    execute if score @s Wpn.GeneralTimer matches 7 rotated ~ 0 run function player_motion:api/launch_looking
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..21 run function mhdp_items:core/buffering/a

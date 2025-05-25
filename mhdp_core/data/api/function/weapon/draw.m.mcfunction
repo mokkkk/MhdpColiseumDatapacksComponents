@@ -9,7 +9,7 @@
     $execute unless items entity @s weapon.$(Slot) ender_eye[] run return run function api:weapon/error {Message:"ERROR: 対象のスロットが武器ではありません"}
 
 # アイテム書き換え
-    $item modify entity @s weapon.$(Slot) [{function: set_custom_model_data, strings:{values :["$(Cmd)"], mode: replace_all}} ,{function: set_custom_data,tag:{IsDrawing:1b}}]
+    $item modify entity @s weapon.$(Slot) [{function: set_custom_model_data, strings:{values :["$(Cmd)"], mode: replace_all}} ,{function: set_custom_data,tag:{IsDrawing:1b}},{"function":"minecraft:set_name","entity":"this","name":{"text":" ","type":"text"},"target":"custom_name"}]
 
 # 終了
     data remove storage mhdp_core:temp Args

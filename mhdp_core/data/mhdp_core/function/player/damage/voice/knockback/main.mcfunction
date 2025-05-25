@@ -11,10 +11,10 @@
     execute if entity @s[tag=Ply.Weapon.Armod.Hyper] run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
 
 # 発射威力取得
-    execute if score #mhdp_temp_knockback_strength MhdpCore matches ..0 run scoreboard players set $strength delta.api.launch 0
-    execute if score #mhdp_temp_knockback_strength MhdpCore matches 1 run scoreboard players set $strength delta.api.launch 8000
-    execute if score #mhdp_temp_knockback_strength MhdpCore matches 2 run scoreboard players set $strength delta.api.launch 10000
+    execute if score #mhdp_temp_knockback_strength MhdpCore matches ..0 run scoreboard players set $strength player_motion.api.launch 0
+    execute if score #mhdp_temp_knockback_strength MhdpCore matches 1 run scoreboard players set $strength player_motion.api.launch 8000
+    execute if score #mhdp_temp_knockback_strength MhdpCore matches 2 run scoreboard players set $strength player_motion.api.launch 10000
 
 # ノックバック適用
     execute if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run tp @s @s
-    execute if score #mhdp_temp_knockback_strength MhdpCore matches 1.. rotated ~ -30 positioned as @s run function delta:api/launch_looking
+    execute if score #mhdp_temp_knockback_strength MhdpCore matches 1.. rotated ~ -30 positioned as @s run function player_motion:api/launch_looking

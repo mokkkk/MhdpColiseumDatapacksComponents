@@ -31,8 +31,8 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 3 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set $strength delta.api.launch 1200
-    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set $strength player_motion.api.launch 1200
+    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function player_motion:api/launch_looking
     
 # 遷移
     # 自動：バックナックルに移行

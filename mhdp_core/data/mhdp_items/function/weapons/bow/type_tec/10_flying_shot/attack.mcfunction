@@ -22,8 +22,8 @@
 
 # 移動
     tp @s @s
-    scoreboard players set $strength delta.api.launch 4000
-    execute rotated ~180 -60 run function delta:api/launch_looking
+    scoreboard players set $strength player_motion.api.launch 4000
+    execute rotated ~180 -60 run function player_motion:api/launch_looking
 
 # 終了
     tag @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Normal,tag=Start] remove Start

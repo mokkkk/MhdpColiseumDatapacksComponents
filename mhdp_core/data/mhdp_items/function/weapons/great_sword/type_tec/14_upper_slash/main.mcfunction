@@ -47,16 +47,16 @@
 
 # 移動
     execute if score @s Wpn.AnimationTimer matches 1 run tp @s @s
-    execute if score @s Wpn.AnimationTimer matches 1 run scoreboard players set $strength delta.api.launch 12000
-    execute if score @s Wpn.AnimationTimer matches 1 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.AnimationTimer matches 1 run scoreboard players set $strength player_motion.api.launch 12000
+    execute if score @s Wpn.AnimationTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.AnimationTimer matches 3 run tp @s @s
-    execute if score @s Wpn.AnimationTimer matches 3 run scoreboard players set $strength delta.api.launch 8000
-    execute if score @s Wpn.AnimationTimer matches 3 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.AnimationTimer matches 3 run scoreboard players set $strength player_motion.api.launch 8000
+    execute if score @s Wpn.AnimationTimer matches 3 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.AnimationTimer matches 6 run tp @s @s
-    execute if entity @s[tag=!Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength delta.api.launch 4000
-    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength delta.api.launch 9000
-    execute if entity @s[tag=!Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 rotated ~ -60 run function delta:api/launch_looking
-    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 rotated ~180 -10 run function delta:api/launch_looking
+    execute if entity @s[tag=!Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength player_motion.api.launch 4000
+    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength player_motion.api.launch 9000
+    execute if entity @s[tag=!Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 rotated ~ -60 run function player_motion:api/launch_looking
+    execute if entity @s[tag=Ply.Flag.Counter] if score @s Wpn.AnimationTimer matches 6 rotated ~180 -10 run function player_motion:api/launch_looking
 
 # 遷移
     # カウンター成功後、右クリック長押し：十字斬り・移動に移行

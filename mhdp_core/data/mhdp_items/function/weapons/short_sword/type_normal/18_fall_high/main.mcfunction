@@ -27,11 +27,11 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 5000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -90 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 5000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -90 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 5 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 5 run scoreboard players set $strength delta.api.launch 8000
-    execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 90 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 5 run scoreboard players set $strength player_motion.api.launch 8000
+    execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 90 run function player_motion:api/launch_looking
 
 # 着地
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches ..59 run scoreboard players set @s Wpn.GeneralTimer 60

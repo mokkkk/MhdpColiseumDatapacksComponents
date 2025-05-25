@@ -34,8 +34,8 @@
 
 # 移動
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 10000
-    execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 1 rotated ~ -15 run function delta:api/launch_looking
+    execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 10000
+    execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 1 rotated ~ -15 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Ope.IsAir
 
 # 先行入力

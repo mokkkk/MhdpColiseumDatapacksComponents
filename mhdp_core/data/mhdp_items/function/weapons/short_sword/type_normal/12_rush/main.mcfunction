@@ -67,14 +67,14 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 4000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 4000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 26 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 26 run scoreboard players set $strength delta.api.launch 6000
-    execute if score @s Wpn.GeneralTimer matches 26 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 26 run scoreboard players set $strength player_motion.api.launch 6000
+    execute if score @s Wpn.GeneralTimer matches 26 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 30 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 30 run scoreboard players set $strength delta.api.launch 4000
-    execute if score @s Wpn.GeneralTimer matches 30 rotated ~180 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 30 run scoreboard players set $strength player_motion.api.launch 4000
+    execute if score @s Wpn.GeneralTimer matches 30 rotated ~180 0 run function player_motion:api/launch_looking
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/short_sword/type_normal/12_rush/end

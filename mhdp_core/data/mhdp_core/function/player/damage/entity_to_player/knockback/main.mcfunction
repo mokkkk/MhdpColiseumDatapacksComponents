@@ -16,18 +16,18 @@
         execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] if score #mhdp_temp_damage_reduction MhdpCore matches 100.. run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 50
 
 # 発射威力取得
-    execute if score #mhdp_temp_knockback_strength MhdpCore matches ..0 run scoreboard players set $strength delta.api.launch 0
-    execute if score #mhdp_temp_knockback_strength MhdpCore matches 1 run scoreboard players set $strength delta.api.launch 8000
-    execute if score #mhdp_temp_knockback_strength MhdpCore matches 2 run scoreboard players set $strength delta.api.launch 12000
-    execute if score #mhdp_temp_knockback_strength MhdpCore matches 3.. run scoreboard players set $strength delta.api.launch 24000
+    execute if score #mhdp_temp_knockback_strength MhdpCore matches ..0 run scoreboard players set $strength player_motion.api.launch 0
+    execute if score #mhdp_temp_knockback_strength MhdpCore matches 1 run scoreboard players set $strength player_motion.api.launch 8000
+    execute if score #mhdp_temp_knockback_strength MhdpCore matches 2 run scoreboard players set $strength player_motion.api.launch 12000
+    execute if score #mhdp_temp_knockback_strength MhdpCore matches 3.. run scoreboard players set $strength player_motion.api.launch 24000
 
 # ノックバック適用
     execute if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run tp @s @s
     execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_knockback_strength MhdpCore matches 1.. at @s run tp @s ~ ~0.1 ~
-    execute if entity @s[tag=!Ply.Weapon.Guard] if score #mhdp_temp_knockback_strength MhdpCore matches 1.. if data storage mhdp_core:temp Damage{IsLaunch:false} facing entity @s feet rotated ~ -18 positioned as @s run function delta:api/launch_looking
-    execute if entity @s[tag=!Ply.Weapon.Guard] if score #mhdp_temp_knockback_strength MhdpCore matches 1.. if data storage mhdp_core:temp Damage{IsLaunch:true,LaunchType:1} facing entity @s feet rotated ~ -60 positioned as @s run function delta:api/launch_looking
-    execute if entity @s[tag=!Ply.Weapon.Guard] if score #mhdp_temp_knockback_strength MhdpCore matches 1.. if data storage mhdp_core:temp Damage{IsLaunch:true,LaunchType:2} facing entity @s feet rotated ~ -35 positioned as @s run function delta:api/launch_looking
-    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_knockback_strength MhdpCore matches 1.. facing entity @s feet rotated ~ -10 positioned as @s run function delta:api/launch_looking
+    execute if entity @s[tag=!Ply.Weapon.Guard] if score #mhdp_temp_knockback_strength MhdpCore matches 1.. if data storage mhdp_core:temp Damage{IsLaunch:false} facing entity @s feet rotated ~ -18 positioned as @s run function player_motion:api/launch_looking
+    execute if entity @s[tag=!Ply.Weapon.Guard] if score #mhdp_temp_knockback_strength MhdpCore matches 1.. if data storage mhdp_core:temp Damage{IsLaunch:true,LaunchType:1} facing entity @s feet rotated ~ -60 positioned as @s run function player_motion:api/launch_looking
+    execute if entity @s[tag=!Ply.Weapon.Guard] if score #mhdp_temp_knockback_strength MhdpCore matches 1.. if data storage mhdp_core:temp Damage{IsLaunch:true,LaunchType:2} facing entity @s feet rotated ~ -35 positioned as @s run function player_motion:api/launch_looking
+    execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_knockback_strength MhdpCore matches 1.. facing entity @s feet rotated ~ -10 positioned as @s run function player_motion:api/launch_looking
 
 # 武器操作中断
     # 操作無効化

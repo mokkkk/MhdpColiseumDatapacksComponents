@@ -55,18 +55,18 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 10000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 10000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 10 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 10 run scoreboard players set $strength delta.api.launch 6000
-    execute if score @s Wpn.GeneralTimer matches 10 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 10 run scoreboard players set $strength player_motion.api.launch 6000
+    execute if score @s Wpn.GeneralTimer matches 10 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 11 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 11 run scoreboard players set $strength delta.api.launch 3000
-    execute if score @s Wpn.GeneralTimer matches 11 rotated ~ -60 run function delta:api/launch_looking
-    # execute if score @s Wpn.GeneralTimer matches 3 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] run scoreboard players set $strength delta.api.launch 16000
-    # execute if score @s Wpn.GeneralTimer matches 3 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] rotated ~ 0 run function delta:api/launch_looking
-    # execute if score @s Wpn.GeneralTimer matches 5 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] run scoreboard players set $strength delta.api.launch 16000
-    # execute if score @s Wpn.GeneralTimer matches 5 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 11 run scoreboard players set $strength player_motion.api.launch 3000
+    execute if score @s Wpn.GeneralTimer matches 11 rotated ~ -60 run function player_motion:api/launch_looking
+    # execute if score @s Wpn.GeneralTimer matches 3 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] run scoreboard players set $strength player_motion.api.launch 16000
+    # execute if score @s Wpn.GeneralTimer matches 3 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] rotated ~ 0 run function player_motion:api/launch_looking
+    # execute if score @s Wpn.GeneralTimer matches 5 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] run scoreboard players set $strength player_motion.api.launch 16000
+    # execute if score @s Wpn.GeneralTimer matches 5 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] rotated ~ 0 run function player_motion:api/launch_looking
 
 # 遷移
     # 右クリック長押し：強溜めに移行

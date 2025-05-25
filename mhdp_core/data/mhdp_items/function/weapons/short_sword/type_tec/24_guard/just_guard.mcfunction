@@ -19,8 +19,8 @@
 
 # 後ずさる
     tp @s @s
-    scoreboard players set $strength delta.api.launch 10000
-    execute at @s rotated ~180 0 run function delta:api/launch_looking
+    scoreboard players set $strength player_motion.api.launch 10000
+    execute at @s rotated ~180 0 run function player_motion:api/launch_looking
 
 # ジャストガードに移行
     # タグ付与

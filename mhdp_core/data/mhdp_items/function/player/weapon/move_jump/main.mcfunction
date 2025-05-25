@@ -17,8 +17,8 @@
     execute as @n[type=marker,tag=Mk.Temp.PlayerPos.0] store success score @s MhdpCore run data modify storage mhdp_core:temp Temp.Pos1 set from storage mhdp_core:temp Temp.Pos2
 
 # 移動
-    scoreboard players set $strength delta.api.launch 1500
-    execute if score @n[type=marker,tag=Mk.Temp.PlayerPos.0] MhdpCore matches 1.. rotated as @n[type=marker,tag=Mk.Temp.PlayerPos.0] run function delta:api/launch_looking
+    scoreboard players set $strength player_motion.api.launch 1500
+    execute if score @n[type=marker,tag=Mk.Temp.PlayerPos.0] MhdpCore matches 1.. rotated as @n[type=marker,tag=Mk.Temp.PlayerPos.0] run function player_motion:api/launch_looking
 
 # 終了
     kill @e[type=marker,tag=Mk.Temp.PlayerPos.0]

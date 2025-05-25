@@ -121,14 +121,14 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 4000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function delta:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 28 run scoreboard players set $strength delta.api.launch 4000
-    execute if score @s Wpn.GeneralTimer matches 28 rotated ~ 0 run function delta:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 50 run scoreboard players set $strength delta.api.launch 4000
-    execute if score @s Wpn.GeneralTimer matches 50 rotated ~ 0 run function delta:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 64 run scoreboard players set $strength delta.api.launch 4000
-    execute if score @s Wpn.GeneralTimer matches 64 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 4000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 28 run scoreboard players set $strength player_motion.api.launch 4000
+    execute if score @s Wpn.GeneralTimer matches 28 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 50 run scoreboard players set $strength player_motion.api.launch 4000
+    execute if score @s Wpn.GeneralTimer matches 50 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 64 run scoreboard players set $strength player_motion.api.launch 4000
+    execute if score @s Wpn.GeneralTimer matches 64 rotated ~ 0 run function player_motion:api/launch_looking
 
 # 終了
     execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 13 run scoreboard players set @s Wpn.GeneralTimer 1000

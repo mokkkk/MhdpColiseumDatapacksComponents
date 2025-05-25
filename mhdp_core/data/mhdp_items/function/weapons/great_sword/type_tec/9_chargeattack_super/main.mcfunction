@@ -47,17 +47,17 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s ~ ~0.05 ~
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 12000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 12000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 12 run tp @s ~ ~0.05 ~
-    execute if score @s Wpn.GeneralTimer matches 12 run scoreboard players set $strength delta.api.launch 6000
-    execute if score @s Wpn.GeneralTimer matches 12 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 12 run scoreboard players set $strength player_motion.api.launch 6000
+    execute if score @s Wpn.GeneralTimer matches 12 rotated ~ 0 run function player_motion:api/launch_looking
     execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 run tp @s ~ ~0.05 ~
-    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 run scoreboard players set $strength delta.api.launch 6000
-    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 rotated ~ 0 run function delta:api/launch_looking
+    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 run scoreboard players set $strength player_motion.api.launch 6000
+    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.AnimationTimer matches 20 run tp @s @s
-    execute if score @s Wpn.AnimationTimer matches 20 run scoreboard players set $strength delta.api.launch 3000
-    execute if score @s Wpn.AnimationTimer matches 20 rotated ~ -60 run function delta:api/launch_looking
+    execute if score @s Wpn.AnimationTimer matches 20 run scoreboard players set $strength player_motion.api.launch 3000
+    execute if score @s Wpn.AnimationTimer matches 20 rotated ~ -60 run function player_motion:api/launch_looking
 
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2

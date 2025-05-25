@@ -53,8 +53,8 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1001 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1001 run scoreboard players set $strength delta.api.launch 8000
-    execute if score @s Wpn.GeneralTimer matches 1001 rotated ~180 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1001 run scoreboard players set $strength player_motion.api.launch 8000
+    execute if score @s Wpn.GeneralTimer matches 1001 rotated ~180 0 run function player_motion:api/launch_looking
 
 # スタミナ消費
     execute if score @s Wpn.GeneralTimer matches 1001 run scoreboard players remove @s Ply.Stats.Stamina 100

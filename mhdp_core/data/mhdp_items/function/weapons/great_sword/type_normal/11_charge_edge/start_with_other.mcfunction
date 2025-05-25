@@ -21,7 +21,7 @@
 
 # 移動
     tp @s @s
-    scoreboard players set $strength delta.api.launch 12000
-    execute rotated ~ -90 run function delta:api/launch_looking
+    scoreboard players set $strength player_motion.api.launch 12000
+    execute rotated ~ -90 run function player_motion:api/launch_looking
 
 # say 武器操作：大剣・空中溜め
