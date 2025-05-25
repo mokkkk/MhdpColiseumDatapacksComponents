@@ -35,6 +35,7 @@
         tag @s remove Ply.Weapon.StaminaEmpty
         tag @s remove Ply.Weapon.Drawing
         tag @s remove Ply.Weapon.Drawing.Sub
+        tag @s remove Ply.Weapon.NoAvoid
     # スキル関連
         tag @s remove Ply.State.IsUsedGuts
     # チュートリアル関連

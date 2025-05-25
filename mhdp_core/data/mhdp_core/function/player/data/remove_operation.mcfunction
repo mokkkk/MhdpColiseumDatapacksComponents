@@ -42,5 +42,6 @@
     execute if entity @s[tag=Ply.Ope.StartKeyBack] run tag @s remove Ply.Ope.StartKeyBack
     execute if entity @s[tag=Ply.Ope.StartKeyRight] run tag @s remove Ply.Ope.StartKeyRight
     execute if entity @s[tag=Ply.Ope.StartKeyJump] run tag @s remove Ply.Ope.StartKeyJump
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] run tag @s remove Ply.Ope.StartDoubleJump
     execute if entity @s[tag=Ply.Ope.StartKeySprint] run tag @s remove Ply.Ope.StartKeySprint
     execute if entity @s[tag=Ply.Ope.StartKeySneak] run tag @s remove Ply.Ope.StartKeySneak

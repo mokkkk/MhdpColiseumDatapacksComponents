@@ -17,7 +17,7 @@
 
 # ジャンプ関連処理
     # ベクトルジャンプ
-        # execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=Ply.Weapon.Drawing,tag=!Ply.Ope.IsSprinting] run function mhdp_items:player/weapon/move_jump/main
+        execute if entity @s[tag=Ply.Ope.StartDoubleJump,tag=!Ply.Weapon.NoAvoid,tag=!Ply.Ope.IsAir,tag=!Ply.Weapon.StaminaEmpty] run function mhdp_items:player/weapon/move_jump/main
     # ダッシュジャンプ時、ジャンプ回避
         execute if entity @s[tag=Ply.Ope.IsSprinting,tag=Ply.Ope.StartKeyJump] run function mhdp_items:player/jump_avoid/main
 

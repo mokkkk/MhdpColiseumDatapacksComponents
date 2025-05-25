@@ -71,6 +71,7 @@
             #declare tag Ply.Ope.DroppedCoas ニンジン棒投げ捨て
         # ジャンプ
             #declare tag Ply.Ope.StartKeyJump ジャンプ開始
+            #declare tag Ply.Ope.StartDoubleJump 連続ジャンプ
         # ダッシュ
             #declare tag Ply.Ope.IsSprinting ダッシュ中
         # 空中

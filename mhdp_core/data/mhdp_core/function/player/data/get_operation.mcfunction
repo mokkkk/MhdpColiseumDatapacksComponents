@@ -7,7 +7,8 @@
 # スニーク・開始
     execute as @s if predicate {condition:entity_properties,entity:this,predicate:{flags:{is_sneaking:true}}} run tag @s add Ply.Ope.IsSneaking
     execute if entity @s[tag=Ply.Ope.IsSneaking] unless score @s Ply.Ope.SneakTimer matches 1.. run tag @s add Ply.Ope.StartSneak
-    execute if entity @s[tag=Ply.Ope.StartSneak] if score @s Ply.Ope.SneakInterval matches ..3 run tag @s add Ply.Ope.StartDoubleSneak
+    # 連続スニーク
+        execute if entity @s[tag=Ply.Ope.StartSneak] if score @s Ply.Ope.SneakInterval matches ..3 run tag @s add Ply.Ope.StartDoubleSneak
 
 # エンダーアイ
     # 使用開始・終了
@@ -29,12 +30,6 @@
         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] run tag @s add Ply.Ope.StartUsingEnderEye.NotSneak
     # 投げ捨て
         execute if score @s Ply.Ope.DropEnderEye matches 1.. run tag @s add Ply.Ope.DroppedEnderEye
-
-# スニーク・時間管理
-    execute if entity @s[tag=Ply.Ope.IsSneaking] run scoreboard players add @s Ply.Ope.SneakTimer 1
-    execute if entity @s[tag=Ply.Ope.IsSneaking] run scoreboard players set @s Ply.Ope.SneakInterval 0
-    execute if entity @s[tag=!Ply.Ope.IsSneaking] run scoreboard players add @s Ply.Ope.SneakInterval 1
-    execute if entity @s[tag=!Ply.Ope.IsSneaking] run scoreboard players set @s Ply.Ope.SneakTimer 0
 
 # ニンジン棒
     execute if score @s Ply.Ope.UsedCoas matches 1.. run tag @s add Ply.Ope.StartUsingCoas
@@ -68,10 +63,22 @@
         execute if entity @s[tag=!Ply.Ope.IsKeyJump] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"jump":true}}}} run tag @s add Ply.Ope.StartKeyJump
         execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeyJump] run tag @s add Ply.Ope.IsKeyJump
         execute if entity @s[tag=Ply.Ope.IsKeyJump] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"jump":false}}}} run tag @s remove Ply.Ope.IsKeyJump
+        # 連続ジャンプ
+            execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Ply.Ope.JumpInterval matches ..2 run tag @s add Ply.Ope.StartDoubleJump
     # スプリント
         execute if entity @s[tag=!Ply.Ope.IsKeySprint] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"sprint":true}}}} run tag @s add Ply.Ope.StartKeySprint
         execute if entity @s[tag=Ply.Ope.StartKeySprint,tag=!Ply.Ope.IsKeySprint] run tag @s add Ply.Ope.IsKeySprint
         execute if entity @s[tag=Ply.Ope.IsKeySprint] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"sprint":false}}}} run tag @s remove Ply.Ope.IsKeySprint
+
+# スニーク・時間管理
+    execute if entity @s[tag=Ply.Ope.IsSneaking] run scoreboard players add @s Ply.Ope.SneakTimer 1
+    execute if entity @s[tag=Ply.Ope.IsSneaking] run scoreboard players set @s Ply.Ope.SneakInterval 0
+    execute if entity @s[tag=!Ply.Ope.IsSneaking] run scoreboard players add @s Ply.Ope.SneakInterval 1
+    execute if entity @s[tag=!Ply.Ope.IsSneaking] run scoreboard players set @s Ply.Ope.SneakTimer 0
+
+# ジャンプ・時間管理
+    execute if entity @s[tag=Ply.Ope.StartKeyJump] run scoreboard players set @s Ply.Ope.JumpInterval 0
+    execute if entity @s[tag=!Ply.Ope.StartKeyJump] if score @s Ply.Ope.JumpInterval matches ..5 run scoreboard players add @s Ply.Ope.JumpInterval 1
 
 # 着地するまで有効
     execute if entity @s[tag=Ply.Ope.IsAir,nbt={OnGround:1b}] run tag @s remove Ply.Ope.IsAir
@@ -92,6 +99,7 @@
 #         execute if entity @s[tag=Ply.Ope.StartUsingCoas] run say ニンジン棒使用    
 #     # ジャンプ
 #         execute if entity @s[tag=Ply.Ope.StartKeyJump] run say ジャンプ
+#         execute if entity @s[tag=Ply.Ope.StartDoubleJump] run say 連続ジャンプ
 #     # キー入力
 #         execute if entity @s[tag=Ply.Ope.StartKeyForward] run say 前移動
 #         execute if entity @s[tag=Ply.Ope.StartKeyLeft] run say 左移動

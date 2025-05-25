@@ -28,6 +28,7 @@
             scoreboard objectives add Ply.Ope.DropCoas dropped:carrot_on_a_stick
         # ジャンプ回数
             scoreboard objectives add Ply.Ope.Jump minecraft.custom:minecraft.jump
+            scoreboard objectives add Ply.Ope.JumpInterval dummy
         # エンダーアイ投げ捨て回数
             scoreboard objectives add Ply.Ope.DropEnderEye dropped:ender_eye
         # スニークタイマー
