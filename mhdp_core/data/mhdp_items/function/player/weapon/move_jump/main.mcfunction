@@ -20,8 +20,11 @@
 # 空中フラグ有効
     tag @s add Ply.Ope.IsAir
 
+# クールタイム設定
+    scoreboard players set @s Ply.Timer.VectorJumpCoolTime 20
+
 # 無敵時間設定
     scoreboard players set @s Ply.Timer.Avoid 3
-    
+
 # 終了
     data remove storage mhdp_core:temp Temp

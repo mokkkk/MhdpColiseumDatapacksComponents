@@ -45,6 +45,8 @@
         # チュートリアル再生のトリガー
             scoreboard objectives add Ply.Ope.TutorialTrigger trigger
     # 処理用タイマー
+        # ベクトルジャンプクールタイム
+            scoreboard objectives add Ply.Timer.VectorJumpCoolTime dummy
         # 無敵時間
             scoreboard objectives add Ply.Timer.DamageInterval dummy
         # 回避時間

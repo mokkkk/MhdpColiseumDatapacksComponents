@@ -15,11 +15,8 @@
     # 先行入力
         execute if score @s Ply.Timer.Buffering matches 1.. run function mhdp_items:core/buffering/tick
 
-# ジャンプ関連処理
-    # ベクトルジャンプ
-        execute if entity @s[tag=Ply.Ope.StartDoubleJump,tag=!Ply.Weapon.NoAvoid,tag=!Ply.Ope.IsAir,tag=!Ply.Weapon.StaminaEmpty] run function mhdp_items:player/weapon/move_jump/main
-    # ダッシュジャンプ時、ジャンプ回避
-        execute if entity @s[tag=Ply.Ope.IsSprinting,tag=Ply.Ope.StartKeyJump] run function mhdp_items:player/jump_avoid/main
+# ノックバック処理
+    execute if data storage mhdp_core:temp PlayerData{IsDoKnockback:true} run function mhdp_items:player/knockback/main
 
 # ヒットストップ処理
     execute if entity @s[tag=!Ply.Weapon.HisStop] if score @s Wpn.HitStopTimer matches 1.. run tag @s add Ply.Weapon.HisStop
