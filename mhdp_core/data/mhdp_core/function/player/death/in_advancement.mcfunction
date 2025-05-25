@@ -6,6 +6,7 @@
 
 # 一部演出無効
     tag @s remove Ply.State.IsSilent
+    tag @s remove Ply.Temp.DoKnockback
 
 # ブロック中で死亡した場合、死亡アニメーションをスキップ
     # execute unless block ~ ~ ~ #mhdp_core:no_collision run say ブロック中で死亡

@@ -111,6 +111,7 @@
         #declare tag Ply.Temp.IsCrit 会心発生時
         #declare tag Ply.Temp.IsCritInverse 逆会心発生時
         #declare tag Ply.Temp.IsDisableConditionDamage 状態異常無効時
+        #declare tag Ply.Temp.DoKnockback ノックバックを適用する
         # クエスト出発時エラー関連
             #declare tag Ply.Temp.Error.Gamemode ゲームモードに関するエラー
             #declare tag Ply.Temp.Error.HasCursorItem カーソルにアイテムを保持しているエラー

@@ -1,6 +1,7 @@
 #> mhdp_core:player/damage/entity_to_player/knockback/main
 #
 # モンスターからプレイヤーに対してのダメージ処理 ノックバック
+# ダメージと同tickに実行すると打ち消されるため、データを保持して1tick後に実行する
 #
 # @within function mhdp_core:player/damage/entity_to_player/apply
 # @input
@@ -20,12 +21,16 @@
 
 # 保持
     function mhdp_core:player/data/load_data
-    data modify storage mhdp_core:temp PlayerData.IsDoKnockback set value true
+    execute if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run tag @s add Ply.Temp.DoKnockback
     # 強さ
         execute if score #mhdp_temp_knockback_strength MhdpCore matches ..0 store result storage mhdp_core:temp PlayerData.KnockbackStrength int 1 run scoreboard players set $strength player_motion.api.launch 0
         execute if score #mhdp_temp_knockback_strength MhdpCore matches 1 store result storage mhdp_core:temp PlayerData.KnockbackStrength int 1 run scoreboard players set $strength player_motion.api.launch 8000
         execute if score #mhdp_temp_knockback_strength MhdpCore matches 2 store result storage mhdp_core:temp PlayerData.KnockbackStrength int 1 run scoreboard players set $strength player_motion.api.launch 12000
         execute if score #mhdp_temp_knockback_strength MhdpCore matches 3.. store result storage mhdp_core:temp PlayerData.KnockbackStrength int 1 run scoreboard players set $strength player_motion.api.launch 24000
+        # ガード成功時
+            execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches ..2 if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run scoreboard players set $strength player_motion.api.launch 8000
+            execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 3..4 if score #mhdp_temp_knockback_strength MhdpCore matches 2.. run scoreboard players set $strength player_motion.api.launch 12000
+
     # 角度
         execute at @s run summon area_effect_cloud ~ ~ ~ {Tags:["Other.Temp.KnockbackVector"]}
         execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsLaunch:false} facing entity @s feet rotated ~ -18 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] ~ ~ ~ ~ ~

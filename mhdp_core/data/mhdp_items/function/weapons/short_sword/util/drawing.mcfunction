@@ -14,14 +14,10 @@
 # サブ武器装備
     # タグ付与
         tag @s add Ply.Weapon.Drawing.Sub
-    # アイテムの用意
-        item replace block 0 0 0 container.0 with ender_eye
     # サブ武器装備
-        item replace entity @s weapon.offhand from block 0 0 0 container.0
-        item replace block 0 0 0 container.0 with air
+        execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b}] unless items entity @s weapon.offhand * run item replace entity @s weapon.offhand from entity @s weapon.mainhand
     # 武器のデータ書き換え
-        scoreboard players set #mhdp_arg_cmd_offset MhdpCore 3
-        function mhdp_items:core/util/item_modify_draw_sub
+        function api:weapon/draw_sub.m {Slot:"offhand", Cmd:"drawing"}
 
 # ステータス設定
     function mhdp_items:weapons/short_sword/util/set_status

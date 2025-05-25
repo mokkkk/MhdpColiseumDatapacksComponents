@@ -26,6 +26,9 @@
 # 被ダメージ時処理
     execute if entity @s[tag=!Ply.Weapon.Guard] run function mhdp_items:core/switch/weapon_on_damage
 
+# ノックバック
+    function mhdp_core:player/damage/entity_to_player/knockback/main
+
 # ダメージ
     # ダメージ軽減率適用
         scoreboard players operation #mhdp_temp_damage_total MhdpCore *= #mhdp_temp_damage_reduction MhdpCore
@@ -36,9 +39,6 @@
         execute store result storage mhdp_core:temp Arg.TotalDamage float 0.01 run scoreboard players get #mhdp_temp_damage_total MhdpCore
     # ダメージを与える
         function mhdp_core:player/damage/entity_to_player/macro/m.damage with storage mhdp_core:temp Arg
-
-# ノックバック
-    function mhdp_core:player/damage/entity_to_player/knockback/main
 
 # スキル効果適用
     function mhdp_core:player/skill/damage/damage

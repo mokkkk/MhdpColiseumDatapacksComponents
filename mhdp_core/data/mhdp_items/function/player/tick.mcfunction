@@ -16,7 +16,7 @@
         execute if score @s Ply.Timer.Buffering matches 1.. run function mhdp_items:core/buffering/tick
 
 # ノックバック処理
-    execute if data storage mhdp_core:temp PlayerData{IsDoKnockback:true} run function mhdp_items:player/knockback/main
+    execute if entity @s[tag=Ply.Temp.DoKnockback] run function mhdp_items:player/knockback/main
 
 # ヒットストップ処理
     execute if entity @s[tag=!Ply.Weapon.HisStop] if score @s Wpn.HitStopTimer matches 1.. run tag @s add Ply.Weapon.HisStop
