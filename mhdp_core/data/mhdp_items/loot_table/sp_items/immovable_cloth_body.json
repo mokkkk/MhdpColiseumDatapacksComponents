@@ -14,7 +14,7 @@
                                 "minecraft:enchantments": {
                                     "minecraft:binding_curse": 1
                                 },
-                                "minecraft:item_model": "sp_items/immovable_cloth_head",
+                                "minecraft:item_model": "sp_items/immovable_cloth",
                                 "minecraft:item_name": {
                                     "text": "不動の装衣",
                                     "type": "text"
@@ -22,15 +22,9 @@
                                 "minecraft:tooltip_display": {
                                     "hide_tooltip": true
                                 },
-                                "minecraft:trim": {
-                                    "material": {
-                                        "asset_name": "none",
-                                        "description": ""
-                                    },
-                                    "pattern": {
-                                        "asset_id": "rocksteady",
-                                        "description": ""
-                                    }
+                                "minecraft:equippable": {
+                                    "slot": "chest",
+                                    "asset_id": "rocksteady"
                                 }
                             },
                             "function": "minecraft:set_components"
