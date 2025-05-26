@@ -11,6 +11,10 @@
     scoreboard players add @s Wpn.GeneralTimer 1
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
 
+# キー入力時、移動
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function api:weapon_operation/vector_move_before.m {Strength:6000}
+    execute if score @s Wpn.GeneralTimer matches 9 rotated ~ 0 run function api:weapon_operation/vector_move_before.m {Strength:6000}
+
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 10 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
@@ -34,18 +38,16 @@
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~-1 ~
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 4..7 run tp @s ~ ~ ~ ~0.8 ~-0.5
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 8..13 run tp @s ~ ~ ~ ~-0.3 ~0.8
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 10..13 run tp @s ~ ~ ~ ~-0.3 ~0.8
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
-    execute if score @s Wpn.GeneralTimer matches 16 run attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 16 run attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 16 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 3 run tp @s @s
     execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set $strength player_motion.api.launch 1000
     execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 10 run tp @s @s
     execute if score @s Wpn.GeneralTimer matches 10 run scoreboard players set $strength player_motion.api.launch 1500
     execute if score @s Wpn.GeneralTimer matches 10 rotated ~ 0 run function player_motion:api/launch_looking
 
@@ -53,6 +55,7 @@
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/b
     execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long,tag=!Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/c
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/jump
 
 # 遷移
     # 右クリック長押し：水平斬り1に移行
@@ -63,6 +66,8 @@
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/3_normal_3/change_to_bash
     # 同時押し：旋刈りに移行
         execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/3_normal_3/change_to_tsumuji
-
+    # ジャンプ回避
+        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/util/move_jump
+   
 # 終了
     execute if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/short_sword/type_tec/3_normal_3/end

@@ -18,7 +18,6 @@
 # 現tickのオフハンド
     execute unless items entity @s weapon.offhand * run data remove storage mhdp_core:temp PlayerData.Item.Offhand
     execute if items entity @s weapon.offhand * run data modify storage mhdp_core:temp PlayerData.Item.Offhand set from storage mhdp_core:temp TempPlayerData.equipment.offhand
-    # Inventory[{Slot:-106b}]
 
 # 前tickのPos
     data modify storage mhdp_core:temp PlayerData.PrePos set from storage mhdp_core:temp PlayerData.PrePosTemp

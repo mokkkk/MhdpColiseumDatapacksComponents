@@ -1,18 +1,21 @@
-#> mhdp_items:core/buffering/a
+#> mhdp_items:core/buffering/jump
 #
 # 先行入力の受け付け
 #
 # @within function mhdp_items:**
 
+# スタミナが無い場合中断
+    execute if entity @s[tag=Ply.Weapon.StaminaEmpty] run return 0
+
 # 既に入力中の場合中断
-    execute if entity @s[tag=Ply.Ope.Buffering.A] run return 0
+    execute if entity @s[tag=Ply.Ope.Buffering.Jump] run return 0
 
 # 入力更新
-    tag @s add Ply.Ope.Buffering.A
+    tag @s remove Ply.Ope.Buffering.A
     tag @s remove Ply.Ope.Buffering.B
     tag @s remove Ply.Ope.Buffering.C
     tag @s remove Ply.Ope.Buffering.D
     tag @s remove Ply.Ope.Buffering.E
     tag @s remove Ply.Ope.Buffering.F
-    tag @s remove Ply.Ope.Buffering.Jump
+    tag @s add Ply.Ope.Buffering.Jump
     scoreboard players set @s Ply.Timer.Buffering 10

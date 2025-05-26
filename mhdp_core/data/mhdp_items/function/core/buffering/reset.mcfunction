@@ -9,4 +9,7 @@
     tag @s remove Ply.Ope.Buffering.B
     tag @s remove Ply.Ope.Buffering.C
     tag @s remove Ply.Ope.Buffering.D
+    tag @s remove Ply.Ope.Buffering.E
+    tag @s remove Ply.Ope.Buffering.F
+    tag @s remove Ply.Ope.Buffering.Jump
     scoreboard players reset @s Ply.Timer.Buffering

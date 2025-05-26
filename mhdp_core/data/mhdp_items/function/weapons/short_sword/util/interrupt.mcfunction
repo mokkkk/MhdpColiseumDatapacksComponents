@@ -25,16 +25,13 @@
     tag @s remove Ply.Flag.Hit
     tag @s remove Ply.Flag.Just.Success
     tag @s remove Ply.Flag.Counter
+    tag @s remove Ply.Weapon.NoMoveJump
 
 # アニメーション停止
     function mhdp_items:weapons/short_sword/util/stop_all_animations
 
 # 武器モデルのリセット
     # メインハンド
-        scoreboard players set #mhdp_arg_cmd_offset MhdpCore 1
-        data modify storage mhdp_core:temp Args.Slot set value "mainhand"
-        execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function mhdp_items:core/util/item_modify_draw
+        execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function api:weapon/draw.m {Slot:"mainhand", Cmd:"drawing"}
     # オフハンド
-        data modify storage mhdp_core:temp Args.IsDrawing set value true
-        scoreboard players set #mhdp_arg_cmd_offset MhdpCore 3
-        execute if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b,IsDrawing:1b}] run function mhdp_items:core/util/item_modify_offhand
+        execute if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b,IsDrawing:1b}] run function api:weapon/draw_sub.m {Slot:"offhand", Cmd:"drawing_sub"}

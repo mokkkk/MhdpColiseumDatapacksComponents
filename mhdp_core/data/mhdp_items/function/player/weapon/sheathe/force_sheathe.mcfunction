@@ -24,9 +24,6 @@
         item replace block 0 0 0 container.0 with air
 
 # 武器のデータ書き換え
-    # scoreboard players set #mhdp_arg_cmd_offset MhdpCore 0
-    # data modify storage mhdp_core:temp Args.Slot set value "offhand"
-    # function mhdp_items:core/util/item_modify_sheathe
     function api:weapon/sheathe.m {Slot:"offhand"}
 
 # オフハンドのアイテムを戻す

@@ -26,6 +26,7 @@
     tag @s remove Ply.Flag.DrawAttack
     tag @s remove Ply.Flag.Hit
     tag @s remove Ply.Flag.Counter
+    tag @s remove Ply.Weapon.NoMoveJump
 
 # アニメーション停止
     function mhdp_items:weapons/great_sword/util/stop_all_animations

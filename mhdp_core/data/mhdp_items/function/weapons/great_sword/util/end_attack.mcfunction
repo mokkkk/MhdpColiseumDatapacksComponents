@@ -17,6 +17,7 @@
     # 終了
         tag @s remove Ply.Weapon.NoOpe
         tag @s remove Ply.Flag.Counter
+        tag @s remove Ply.Weapon.NoMoveJump
 
 # attributeリセット
     attribute @s attack_speed modifier remove mhdp_core:weapon_attack_speed

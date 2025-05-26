@@ -14,6 +14,7 @@
             execute if entity @s[tag=Ply.Weapon.NoOpe] run function api:weapon/reset_name.m {Slot:"mainhand"}
     # 終了
         tag @s remove Ply.Weapon.NoOpe
+        tag @s remove Ply.Weapon.NoMoveJump
 
 # attributeリセット
     function mhdp_items:weapons/bow/util/set_status

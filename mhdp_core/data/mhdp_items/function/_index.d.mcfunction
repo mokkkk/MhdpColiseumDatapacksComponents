@@ -24,6 +24,7 @@
         #declare tag Ply.Weapon.Drawing.Sub サブ武器抜刀中
         #declare tag Ply.Weapon.NoOpe 立ち状態（非操作中）
         #declare tag Ply.Weapon.NoAvoid 回避不能
+        #declare tag Ply.Weapon.NoMoveJump 移動ジャンプ不能
         #declare tag Ply.Weapon.Guard ガード中
         #declare tag Ply.Weapon.Armod.Super スーパーアーマー中
         #declare tag Ply.Weapon.Armod.Hyper ハイパーアーマー中
