@@ -18,8 +18,8 @@
     effect give @s slowness 1 5 true
 
 # 遷移
-    # 右クリック：盾攻撃に移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] unless score @s Wpn.GuardStopTimer matches 3.. run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_bash
+    # 前移動+右クリック：盾攻撃に移行
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsKeyForward] unless score @s Wpn.GuardStopTimer matches 3.. run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_bash
     # ジャンプ：バックステップに移行
         execute if entity @s[tag=Ply.Ope.StartKeyJump] unless score @s Wpn.GuardStopTimer matches 3.. run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_backstep
 
