@@ -12,16 +12,13 @@
 # 距離
     $scoreboard players set $strength player_motion.api.launch $(Strength)
 
-# カメラ回転
-    execute if entity @s[tag=Ply.Ope.IsKeyLeft] at @s run tp @s ~ ~ ~ ~5 ~
-    execute if entity @s[tag=Ply.Ope.IsKeyRight] at @s run tp @s ~ ~ ~ ~5 ~
-
 # 移動
+# 後ろには移動しない
     execute if entity @s[tag=Ply.Ope.IsKeyForward,tag=Ply.Ope.IsKeyLeft] rotated ~-45 -10 run return run function player_motion:api/launch_looking
     execute if entity @s[tag=Ply.Ope.IsKeyForward,tag=Ply.Ope.IsKeyRight] rotated ~45 -10 run return run function player_motion:api/launch_looking
-    execute if entity @s[tag=Ply.Ope.IsKeyBack,tag=Ply.Ope.IsKeyLeft] rotated ~-135 -10 run return run function player_motion:api/launch_looking
-    execute if entity @s[tag=Ply.Ope.IsKeyBack,tag=Ply.Ope.IsKeyRight] rotated ~135 -10 run return run function player_motion:api/launch_looking
+    # execute if entity @s[tag=Ply.Ope.IsKeyBack,tag=Ply.Ope.IsKeyLeft] rotated ~-135 -10 run return run function player_motion:api/launch_looking
+    # execute if entity @s[tag=Ply.Ope.IsKeyBack,tag=Ply.Ope.IsKeyRight] rotated ~135 -10 run return run function player_motion:api/launch_looking
     execute if entity @s[tag=Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsKeyLeft,tag=!Ply.Ope.IsKeyRight] rotated ~ -10 run return run function player_motion:api/launch_looking
-    execute if entity @s[tag=Ply.Ope.IsKeyBack,tag=!Ply.Ope.IsKeyLeft,tag=!Ply.Ope.IsKeyRight] rotated ~180 -10 run return run function player_motion:api/launch_looking
-    execute if entity @s[tag=Ply.Ope.IsKeyLeft,tag=!Ply.Ope.IsKeyRight] rotated ~-90 -10 run return run function player_motion:api/launch_looking
-    execute if entity @s[tag=Ply.Ope.IsKeyRight,tag=!Ply.Ope.IsKeyLeft] rotated ~90 -10 run return run function player_motion:api/launch_looking
+    # execute if entity @s[tag=Ply.Ope.IsKeyBack,tag=!Ply.Ope.IsKeyLeft,tag=!Ply.Ope.IsKeyRight] rotated ~180 -10 run return run function player_motion:api/launch_looking
+    execute if entity @s[tag=Ply.Ope.IsKeyLeft,tag=!Ply.Ope.IsKeyRight,tag=!Ply.Ope.IsKeyBack] rotated ~-90 -10 run return run function player_motion:api/launch_looking
+    execute if entity @s[tag=Ply.Ope.IsKeyRight,tag=!Ply.Ope.IsKeyLeft,tag=!Ply.Ope.IsKeyBack] rotated ~90 -10 run return run function player_motion:api/launch_looking

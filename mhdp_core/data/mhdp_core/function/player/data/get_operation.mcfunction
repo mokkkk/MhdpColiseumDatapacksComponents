@@ -82,6 +82,7 @@
 
 # 着地するまで有効
     execute if entity @s[tag=Ply.Ope.IsAir,nbt={OnGround:1b}] run tag @s remove Ply.Ope.IsAir
+    execute if entity @s[tag=Ply.Flag.SpJumpAttack,tag=!Ply.Ope.IsAir] run tag @s remove Ply.Flag.SpJumpAttack
 
 # # デバッグ用操作表示
 #     # スニーク

@@ -42,6 +42,7 @@
         #declare tag Ply.Flag.DrawAttack 抜刀攻撃フラグ
         #declare tag Ply.Flag.Hit 武器攻撃命中フラグ
         #declare tag Ply.Flag.Counter カウンター成功フラグ
+        #declare tag Ply.Flag.SpJumpAttack 特殊空中攻撃フラグ
     # オプション
         #declare tag Ply.Option.DisableCameraEffect オプション：画面効果無効化
 # 一時

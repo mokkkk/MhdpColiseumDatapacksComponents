@@ -35,8 +35,8 @@
 
 # 水平斬りコンボ
     # 1段目
-        # 開始：右クリック短押し
-            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/start
+        # 開始：移動せず右クリック長押し
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/start
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.Horizon.1] run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/main
     # 2段目
@@ -48,7 +48,9 @@
 
 # 盾攻撃コンボ
     # 盾攻撃
-       # 処理
+       # 開始：前移動+右クリック長押し
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_tec/7_bash_1/start
+        # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.Bash.1] run function mhdp_items:weapons/short_sword/type_tec/7_bash_1/main
     # バックナックル
         # 処理

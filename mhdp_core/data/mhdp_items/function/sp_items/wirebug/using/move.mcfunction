@@ -9,6 +9,9 @@
     scoreboard players set $strength player_motion.api.launch 14000
     execute rotated as @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target] run function player_motion:api/launch_looking
 
+# 特殊空中攻撃フラグ有効
+    tag @s add Ply.Flag.SpJumpAttack
+
 # 空中フラグ有効
     tag @s add Ply.Ope.IsAir
 
