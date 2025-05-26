@@ -17,7 +17,7 @@
     # サブ武器装備
         execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b}] unless items entity @s weapon.offhand * run item replace entity @s weapon.offhand from entity @s weapon.mainhand
     # 武器のデータ書き換え
-        function api:weapon/draw_sub.m {Slot:"offhand", Cmd:"drawing"}
+        function api:weapon/draw_sub.m {Slot:"offhand", Cmd:"drawing_sub"}
 
 # ステータス設定
     function mhdp_items:weapons/short_sword/util/set_status

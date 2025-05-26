@@ -5,8 +5,9 @@
 # @within function mhdp_items:core/switch/item/init
 
 # 武器のモデルを変更
-    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 0
-    execute if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:0b}] run function mhdp_items:core/util/item_modify_offhand
+    # scoreboard players set #mhdp_arg_cmd_offset MhdpCore 0
+    # execute if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:0b}] run function mhdp_items:core/util/item_modify_offhand
+    execute if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:0b}] run function api:weapon/sheathe.m {Slot:"offhand"}
 
 # タグ消去
     tag @s remove Itm.Sp.Whetstone.Using
