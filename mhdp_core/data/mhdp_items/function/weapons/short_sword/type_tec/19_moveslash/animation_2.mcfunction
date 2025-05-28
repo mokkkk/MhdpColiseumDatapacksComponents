@@ -4,10 +4,14 @@
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/1_normal_1/main
 
-# データ設定
-    data modify storage mhdp_core:temp Args.IsDrawing set value true
-    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 6
-    data modify storage mhdp_core:temp Args.Slot set value "mainhand"
+# # データ設定
+#     data modify storage mhdp_core:temp Args.IsDrawing set value true
+#     scoreboard players set #mhdp_arg_cmd_offset MhdpCore 6
+#     data modify storage mhdp_core:temp Args.Slot set value "mainhand"
+
+# # アニメーション
+#     function mhdp_items:core/util/item_modify_animation
 
 # アニメーション
-    function mhdp_items:core/util/item_modify_animation
+    function api:weapon/animation.m {Slot:"mainhand", Cmd:"horizon_2_3"}
+    function api:weapon/animation.m {Slot:"offhand", Cmd:"normal_1_sub_2"}

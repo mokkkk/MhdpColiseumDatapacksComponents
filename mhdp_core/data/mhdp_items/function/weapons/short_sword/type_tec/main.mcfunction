@@ -11,6 +11,12 @@
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/short_sword/type_tec/0_drawattack/start
     execute if entity @s[tag=Ply.Ope.StartSneak,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/short_sword/type_tec/0_drawattack/start_guard
 
+# 特殊空中攻撃：飛影
+    # 開始
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/start
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Tec.Tobikage] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/main
+
 # ガード
     # 開始：右クリック短押し
             execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_tec/24_guard/start
@@ -105,9 +111,5 @@
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.Fall] run function mhdp_items:weapons/short_sword/type_tec/22_fall/main
 
-# 鉄蟲糸技：飛影
-    # 処理
-        execute if entity @s[tag=Wpn.Ss.Tec.Tobikage] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/main
-    
 # 終了
     tag @s remove Ply.Weapon.NoOpe
