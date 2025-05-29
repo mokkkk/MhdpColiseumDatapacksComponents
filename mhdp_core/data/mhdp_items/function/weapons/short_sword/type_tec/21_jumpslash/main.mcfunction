@@ -17,7 +17,7 @@
     execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/animation_2
     execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/animation_3
     execute if score @s Wpn.AnimationTimer matches 9 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/animation_4
-    execute if score @s Wpn.AnimationTimer matches 12 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/animation_5
+    execute if score @s Wpn.AnimationTimer matches 18 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/animation_5
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 8 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/attack
@@ -31,7 +31,9 @@
     execute if score @s Wpn.AnimationTimer matches 7 positioned ~ ~1.65 ~ positioned ^ ^ ^1.5 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/particle
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 6 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 60 run function api:weapon_operation/attribute_reset
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/move

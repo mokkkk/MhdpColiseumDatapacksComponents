@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/great_sword/type_tec/4_guard/start
+#> mhdp_items:weapons/short_sword/type_tec/24_guard/start
 #
 # ガード 開始
 #
@@ -20,6 +20,6 @@
     playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # タイマー初期化
-    scoreboard players set @s Wpn.GuardStopTimer 0
+    scoreboard players set @s Wpn.GuardStopTimer 2
 
 # say 武器操作：片手剣・ガード

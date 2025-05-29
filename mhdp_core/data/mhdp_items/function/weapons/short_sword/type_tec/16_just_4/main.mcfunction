@@ -32,11 +32,17 @@
     execute if score @s Wpn.AnimationTimer matches 26 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 6 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
+
+# 先行入力
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 2..30 run function mhdp_items:core/buffering/jump
 
 # 遷移
     # ヒット時
         execute if entity @s[tag=Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/short_sword/type_tec/16_just_4/change_to_jumpslash
+    # ジャンプ回避
+        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/short_sword/util/move_jump
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 31.. run function mhdp_items:weapons/short_sword/type_tec/16_just_4/end

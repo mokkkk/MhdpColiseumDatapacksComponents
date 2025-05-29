@@ -14,10 +14,9 @@
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 7 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/animation_0
-    execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/animation_1
-    execute if score @s Wpn.AnimationTimer matches 9 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/animation_2
-    execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/animation_3
-    execute if score @s Wpn.AnimationTimer matches 11 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/animation_4
+    execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/animation_1
+    execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/animation_2
+    execute if score @s Wpn.AnimationTimer matches 9 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/animation_3
     execute if score @s Wpn.AnimationTimer matches 8 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/particle
     execute if score @s Wpn.AnimationTimer matches 8 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/particle
     execute if score @s Wpn.AnimationTimer matches 8 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/particle
@@ -41,10 +40,8 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 1 run tp @s @s
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 10000
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 4 run tp @s @s
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 10000
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Ope.IsAir

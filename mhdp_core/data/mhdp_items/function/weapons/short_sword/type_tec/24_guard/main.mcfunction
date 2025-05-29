@@ -12,10 +12,12 @@
     execute if score @s Wpn.GuardStopTimer matches 1.. run scoreboard players remove @s Wpn.GuardStopTimer 1
 
 # アニメーション演出
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/short_sword/type_tec/24_guard/animation_0
+    execute if score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/short_sword/type_tec/24_guard/animation_0
+    execute if score @s Wpn.GuardStopTimer matches 0 run function mhdp_items:weapons/short_sword/type_tec/24_guard/animation_1
 
 # 移動制限
-    effect give @s slowness 1 5 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 遷移
     # 前移動+右クリック：盾攻撃に移行

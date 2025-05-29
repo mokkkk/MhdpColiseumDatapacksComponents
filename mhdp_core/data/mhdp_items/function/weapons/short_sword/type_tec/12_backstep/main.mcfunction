@@ -24,7 +24,8 @@
     execute if score @s Wpn.GeneralTimer matches 22 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 無敵時間
     execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set @s Ply.Timer.Avoid 5

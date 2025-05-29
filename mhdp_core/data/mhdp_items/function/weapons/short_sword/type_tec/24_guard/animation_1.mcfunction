@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/short_sword/type_tec/24_guard/animation_0
+#> mhdp_items:weapons/short_sword/type_tec/24_guard/animation_1
 #
 # ガード アニメーション処理
 #
@@ -6,4 +6,4 @@
 
 # アニメーション
     function api:weapon/animation.m {Slot:"mainhand", Cmd:"drawing"}
-    function api:weapon/animation.m {Slot:"offhand", Cmd:"guard_1"}
+    function api:weapon/animation.m {Slot:"offhand", Cmd:"guard_2"}
