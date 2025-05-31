@@ -36,6 +36,7 @@
             scoreboard objectives add Ply.Ope.SneakInterval dummy
         # エンダーアイ使用タイマー
             scoreboard objectives add Ply.Ope.EnderEyeTimer dummy
+            scoreboard objectives add Ply.Ope.SneakingEnderEyeTimer dummy
         # アイテム使用タイマー
             scoreboard objectives add Ply.Ope.EatingTimer dummy
             scoreboard objectives add Ply.Ope.EatingTimerMax dummy

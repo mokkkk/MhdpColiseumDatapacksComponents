@@ -95,10 +95,9 @@
     # 駆け上がり斬り
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.JumpSlash.High] run function mhdp_items:weapons/short_sword/type_tec/17_jumpslash_high/main
-    # フォールバッシュ
-        # 強
-            # 処理
-                execute if entity @s[tag=Wpn.Ss.Tec.Fall.High] run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/main
+    # 強フォールバッシュ
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.Fall.High] run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/main
 
 # 突進斬り
     # 処理
@@ -114,6 +113,14 @@
     # フォールバッシュ
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.Fall] run function mhdp_items:weapons/short_sword/type_tec/22_fall/main
+
+# 溜め斬り落とし
+    # 溜め斬り落とし
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.ChargeSpear] run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/main
+    # ヒット時
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Tec.ChargeSpear.Hit] run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

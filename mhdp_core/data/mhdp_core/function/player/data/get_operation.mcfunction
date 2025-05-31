@@ -25,9 +25,15 @@
     # スニーク同時押し
         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking] if score @s Ply.Ope.SneakTimer matches ..1 run tag @s add Ply.Ope.StartUsingEnderEye.WithSneak
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Ope.StartSneak] if score @s Ply.Ope.EnderEyeTimer matches ..1 run tag @s add Ply.Ope.StartUsingEnderEye.WithSneak
-        # 同時押し判定の場合、長押し判定をスキップする
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run scoreboard players set @s Ply.Ope.EnderEyeTimer 5
         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] run tag @s add Ply.Ope.StartUsingEnderEye.NotSneak
+        # 同時押し判定の場合、長押し判定をスキップする
+            execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run scoreboard players set @s Ply.Ope.EnderEyeTimer 5
+    # スニーク同時押し短押し・長押し
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run scoreboard players set @s Ply.Ope.SneakingEnderEyeTimer 1
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,scores={Ply.Ope.SneakingEnderEyeTimer=1..}] run scoreboard players add @s Ply.Ope.SneakingEnderEyeTimer 1
+        execute if entity @s[tag=Ply.Ope.EndUsingEnderEye] if score @s Ply.Ope.SneakingEnderEyeTimer matches 1..4 run tag @s add Ply.Ope.UsedSneakingEnderEye.Short
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Ope.SneakingEnderEyeTimer matches 5 run tag @s add Ply.Ope.UsedSneakingEnderEye.Long
+        execute if entity @s[tag=Ply.Ope.EndUsingEnderEye] run scoreboard players set @s Ply.Ope.SneakingEnderEyeTimer 0
     # 投げ捨て
         execute if score @s Ply.Ope.DropEnderEye matches 1.. run tag @s add Ply.Ope.DroppedEnderEye
 
@@ -96,6 +102,8 @@
 #         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run say エンダーアイ使用開始・スニーク同時押し
 #         execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] run say エンダーアイ使用・短押し
 #         execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long] run say エンダーアイ使用・長押し
+#         execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Short] run say エンダーアイ使用・スニーク同時押し・短押し
+#         execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Long] run say エンダーアイ使用・スニーク同時押し・長押し
 #     # ニンジン棒
 #         execute if entity @s[tag=Ply.Ope.StartUsingCoas] run say ニンジン棒使用    
 #     # ジャンプ

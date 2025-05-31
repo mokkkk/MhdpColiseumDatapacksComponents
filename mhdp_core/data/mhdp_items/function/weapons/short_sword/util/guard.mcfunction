@@ -8,4 +8,4 @@
 
 # 天の型時、ジャストガード判定
     execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Ss.Tec.Guard] if score @s Wpn.GeneralTimer matches ..4 run function mhdp_items:weapons/short_sword/type_tec/24_guard/just_guard
-    execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Ss.Tec.GuardSlash] if score @s Wpn.GeneralTimer matches ..4 run function mhdp_items:weapons/short_sword/type_tec/24_guard/just_guard
+    execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Ss.Tec.GuardSlash] if score @s Wpn.GeneralTimer matches ..3 run function mhdp_items:weapons/short_sword/type_tec/24_guard/just_guard
