@@ -46,7 +46,7 @@
 
 # 遷移
     # 右クリック：フォールバッシュに移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/type_tec/17_jumpslash_high/change_to_fall
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/start
 
 # 終了
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/short_sword/type_tec/17_jumpslash_high/end

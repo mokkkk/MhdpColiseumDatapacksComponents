@@ -37,16 +37,19 @@
 # 移動
     execute if score @s Wpn.GeneralTimer matches 7 run tp @s @s
     execute if score @s Wpn.GeneralTimer matches 7 run scoreboard players set $strength player_motion.api.launch 2000
-    execute if score @s Wpn.GeneralTimer matches 7 rotated ~ -50 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 7 rotated ~ -10 run function player_motion:api/launch_looking
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..21 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 2..21 run function mhdp_items:core/buffering/jump
 
 # 遷移
-     # スニーク+ジャンプ時：バックステップに移行
-        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/short_sword/type_tec/9_bash_3/change_to_backstep
+    # ジャンプ回避
+        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/short_sword/util/move_jump
+    # スニーク+ジャンプ時：バックステップに移行
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/start
     # 同時押し：旋刈りに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/short_sword/type_tec/9_bash_3/change_to_tsumuji
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/short_sword/type_tec/11_tsumuji/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/type_tec/9_bash_3/end

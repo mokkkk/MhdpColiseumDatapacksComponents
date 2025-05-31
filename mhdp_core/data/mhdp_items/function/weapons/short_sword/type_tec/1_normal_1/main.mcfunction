@@ -32,7 +32,7 @@
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
-    execute if score @s Wpn.GeneralTimer matches 8 run function api:weapon_operation/attribute_reset
+    execute if score @s Wpn.GeneralTimer matches 5 run function api:weapon_operation/attribute_reset
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 先行入力

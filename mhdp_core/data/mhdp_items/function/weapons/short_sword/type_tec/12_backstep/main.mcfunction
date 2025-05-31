@@ -32,7 +32,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 7500
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 6500
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~-180 -30 run function player_motion:api/launch_looking
 
 # 先行入力
@@ -40,12 +40,12 @@
 
 # 遷移
     # 右クリック短押し：飛び込み斬りに移行
-        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16..21 run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_moveslash
+        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16..21 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/start
     # 右クリック短押し：飛び込み斬りに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_just
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/13_just_1/start
     # 右クリック長押し：溜め斬りに移行
-        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_chargeslash
-        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 49.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/change_to_chargeslash
+        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/type_tec/20_chargeslash/start
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 49.. run function mhdp_items:weapons/short_sword/type_tec/20_chargeslash/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 50.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/end

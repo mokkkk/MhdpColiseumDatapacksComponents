@@ -6,5 +6,4 @@
 
 # アニメーション
     function api:weapon/animation.m {Slot:"mainhand", Cmd:"drawing"}
-    execute unless entity @s[tag=Ply.Ope.IsKeyRight] run function api:weapon/animation.m {Slot:"offhand", Cmd:"normal_3_1_sub"}
-    execute if entity @s[tag=Ply.Ope.IsKeyRight] run function api:weapon/animation.m {Slot:"offhand", Cmd:"just_3_1"}
+    function api:weapon/animation.m {Slot:"offhand", Cmd:"normal_3_1_sub"}

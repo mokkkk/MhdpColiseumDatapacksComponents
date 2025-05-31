@@ -7,4 +7,4 @@
 # アニメーション
     execute unless entity @s[tag=Ply.Ope.IsKeyRight] run function api:weapon/animation.m {Slot:"mainhand", Cmd:"normal_1_3"}
     execute if entity @s[tag=Ply.Ope.IsKeyRight] run function api:weapon/animation.m {Slot:"mainhand", Cmd:"just_2_4"}
-    execute unless entity @s[tag=Ply.Ope.IsKeyRight] run function api:weapon/animation.m {Slot:"offhand", Cmd:"normal_1_sub_2"}
+    function api:weapon/animation.m {Slot:"offhand", Cmd:"normal_1_sub_2"}
