@@ -23,8 +23,9 @@
     execute at @s rotated ~180 0 run function player_motion:api/launch_looking
 
 # ジャストガードに移行
+    # 前処理
+        function mhdp_items:weapons/short_sword/util/before_attack
     # タグ付与
-        tag @s remove Wpn.Ss.Tec.Guard
         tag @s add Wpn.Ss.Tec.Guard.Just
     # タイマー初期化
         scoreboard players set @s Wpn.GeneralTimer 0

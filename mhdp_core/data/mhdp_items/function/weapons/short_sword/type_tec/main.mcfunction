@@ -28,7 +28,7 @@
 
 # ガード斬り
     # 処理
-        execute if entity @s[tag=Wpn.Ss.Tec.GuardSlash] run function mhdp_items:weapons/short_sword/type_tec/24_guard/main
+        execute if entity @s[tag=Wpn.Ss.Tec.GuardSlash] run function mhdp_items:weapons/short_sword/type_tec/26_guard_slash/main
 
 # 通常コンボ
     # 1段目

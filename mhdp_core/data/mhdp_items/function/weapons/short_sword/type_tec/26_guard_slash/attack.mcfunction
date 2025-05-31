@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/short_sword/type_tec/1_normal_1/attack
+#> mhdp_items:weapons/short_sword/type_tec/26_guard_slash/attack
 #
-# 溜め斬り 攻撃判定
+# ガード斬り 攻撃判定
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
 
@@ -17,7 +17,7 @@
     execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
 
 # 攻撃
-    data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Normal.1
+    data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.GuardSlash
     execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
 # 終了

@@ -8,7 +8,7 @@
     function mhdp_items:weapons/short_sword/util/before_attack
 
 # タグ付与
-    tag @s add Wpn.Ss.Tec.Normal.1
+    tag @s add Wpn.Ss.Tec.GuardSlash
     tag @s remove Ply.Weapon.NoOpe
 
-# say 武器操作：片手剣 通常コンボ1
+# say 武器操作：片手剣 ガード斬り

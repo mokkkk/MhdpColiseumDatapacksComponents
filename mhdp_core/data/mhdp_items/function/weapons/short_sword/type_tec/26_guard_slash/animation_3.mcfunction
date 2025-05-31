@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_tec/1_normal_1/animation_3
+#> mhdp_items:weapons/short_sword/type_tec/26_guard_slash/animation_3
 #
-# 溜め アニメーション処理
+# ガード斬り アニメーション処理
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/1_normal_1/main
+# @within function mhdp_items:weapons/short_sword/type_tec/26_guard_slash/main
 
 # アニメーション
-    function api:weapon/animation.m {Slot:"mainhand", Cmd:"normal_1_4"}
+    function api:weapon/animation.m {Slot:"mainhand", Cmd:"horizon_1_4"}

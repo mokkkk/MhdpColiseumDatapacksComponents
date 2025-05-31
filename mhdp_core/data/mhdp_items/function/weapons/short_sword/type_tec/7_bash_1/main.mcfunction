@@ -37,7 +37,7 @@
     execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function player_motion:api/launch_looking
     
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 3..12 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsKeyForward] if score @s Wpn.GeneralTimer matches 3..12 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 3..12 run function mhdp_items:core/buffering/jump
 
 # 遷移
