@@ -35,7 +35,7 @@
 
 # 遷移
      # ヒット時：駆け上がり斬りに移行
-        execute if entity @s[tag=Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 4.. run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/change_to_backstep
+        execute if entity @s[tag=Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 4..9 run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/change_to_backstep
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/end
+    execute if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/end

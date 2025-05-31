@@ -6,3 +6,4 @@
 
 # アニメーション
     function api:weapon/animation.m {Slot:"mainhand", Cmd:"horizon_1_4"}
+    function api:weapon/animation.m {Slot:"offhand", Cmd:"normal_1_sub_1"}

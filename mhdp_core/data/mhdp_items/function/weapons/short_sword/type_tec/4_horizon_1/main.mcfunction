@@ -34,6 +34,7 @@
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
     execute if score @s Wpn.GeneralTimer matches 13 run function api:weapon_operation/attribute_reset
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
+    execute if score @s Wpn.GeneralTimer matches 13 run tag @s remove Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 2000
@@ -45,7 +46,7 @@
     execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Short] if score @s Wpn.GeneralTimer matches 2..22 run function mhdp_items:core/buffering/c
     execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Long] if score @s Wpn.GeneralTimer matches 2..22 run function mhdp_items:core/buffering/f
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..22 run function mhdp_items:core/buffering/e
-    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 2..22 run function mhdp_items:core/buffering/jump
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 2..13 run function mhdp_items:core/buffering/jump
 
 # 遷移
     # スニーク+ジャンプ時：バックステップに移行

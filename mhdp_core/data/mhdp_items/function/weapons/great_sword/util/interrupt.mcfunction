@@ -6,12 +6,10 @@
 
 # ステータス削除
     attribute @s attack_speed modifier remove mhdp_core:weapon_attack_speed
-    execute if entity @s[tag=Ply.Weapon.Drawing] run attribute @s attack_speed modifier add mhdp_core:weapon_attack_speed -3.0 add_value
     attribute @s movement_speed modifier remove mhdp_core:weapon_movement_speed
-    execute if entity @s[tag=Ply.Weapon.Drawing] run attribute @s movement_speed modifier add mhdp_core:weapon_movement_speed -0.0 add_value
     attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
     attribute @s attack_damage modifier remove mhdp_core:weapon_attack_damage
-    execute if entity @s[tag=Ply.Weapon.Drawing] run attribute @s attack_damage modifier add mhdp_core:weapon_attack_damage 5.0 add_value
+    attribute @s attack_damage modifier add mhdp_core:weapon_attack_damage 5.0 add_value
     effect clear @s slowness
 
 # タイマー初期化
@@ -33,8 +31,4 @@
 
 # 武器モデルのリセット
     # メインハンド
-        scoreboard players set #mhdp_arg_cmd_offset MhdpCore 1
-        data modify storage mhdp_core:temp Args.Slot set value "mainhand"
-        execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function mhdp_items:core/util/item_modify_draw
-        data modify storage mhdp_core:temp Args.Slot set value "mainhand"
-        execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function mhdp_items:core/util/item_modify_draw
+        execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function api:weapon/draw.m {Slot:"mainhand", Cmd:"drawing"}

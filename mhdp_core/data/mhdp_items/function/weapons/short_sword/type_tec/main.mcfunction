@@ -13,13 +13,13 @@
 
 # 特殊空中攻撃：飛影
     # 開始
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Flag.SpJumpAttack,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/start
     # 処理
         execute if entity @s[tag=Wpn.Ss.Tec.Tobikage] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/main
 
 # ガード
     # 開始：右クリック短押し
-            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe,tag=!Wpn.Ss.Tec.GuardSlash] run function mhdp_items:weapons/short_sword/type_tec/24_guard/start
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_tec/24_guard/start
     # 処理
         execute if entity @s[tag=Wpn.Ss.Tec.Guard] run function mhdp_items:weapons/short_sword/type_tec/24_guard/main
         execute if entity @s[tag=Wpn.Ss.Tec.Guard.Just] run function mhdp_items:weapons/short_sword/type_tec/24_guard/main_just
@@ -123,6 +123,10 @@
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.ChargeSpear.Hit] run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/main
             execute if entity @s[tag=Wpn.Ss.Tec.ChargeSpear.Hit.Finish] run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/main_finish
+
+# 斬り上げ
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Tec.UpperSlash] run function mhdp_items:weapons/short_sword/type_tec/29_upper_slash/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe
