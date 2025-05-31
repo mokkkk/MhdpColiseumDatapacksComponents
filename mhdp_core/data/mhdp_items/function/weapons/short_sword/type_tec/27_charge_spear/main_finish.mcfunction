@@ -28,6 +28,7 @@
     execute if score @s Wpn.AnimationTimer matches 31 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/particle
     execute if score @s Wpn.AnimationTimer matches 31 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/particle
     execute if score @s Wpn.AnimationTimer matches 31 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/particle
+    execute if score @s Wpn.AnimationTimer matches 34 unless block ~ ~-1 ~ #mhdp_core:no_collision rotated ~ 0 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/effect_on_ground
 
 # 演出
     execute if score @s Wpn.GeneralTimer matches 1 run playsound block.enchantment_table.use master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
