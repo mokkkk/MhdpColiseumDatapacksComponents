@@ -118,9 +118,11 @@
     # 溜め斬り落とし
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.ChargeSpear] run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/main
+            execute if entity @s[tag=Wpn.Ss.Tec.ChargeSpear.Finish] run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/main_finish
     # ヒット時
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.ChargeSpear.Hit] run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/main
+            execute if entity @s[tag=Wpn.Ss.Tec.ChargeSpear.Hit.Finish] run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/main_finish
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

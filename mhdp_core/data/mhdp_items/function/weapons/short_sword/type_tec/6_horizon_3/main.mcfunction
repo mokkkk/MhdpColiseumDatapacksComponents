@@ -47,7 +47,8 @@
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeyForward,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..19 run function mhdp_items:core/buffering/a
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..19 run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Short] if score @s Wpn.GeneralTimer matches 2..19 run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Long] if score @s Wpn.GeneralTimer matches 2..19 run function mhdp_items:core/buffering/f
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..19 run function mhdp_items:core/buffering/e
     execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 2..19 run function mhdp_items:core/buffering/jump
 
@@ -58,9 +59,11 @@
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/7_bash_1/start
     # 同時押し：旋刈りに移行
         execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/11_tsumuji/start
+    # 同時押し長押し：溜め斬り落としに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.F] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/start_finish
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/util/move_jump
-   # スニーク+右クリック：ガード斬りに移行
+    # スニーク+右クリック：ガード斬りに移行
         execute if entity @s[tag=Ply.Ope.Buffering.E] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/26_guard_slash/start
 
 # 終了

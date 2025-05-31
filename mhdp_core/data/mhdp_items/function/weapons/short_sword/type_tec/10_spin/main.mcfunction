@@ -46,19 +46,22 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 3..25 run function mhdp_items:core/buffering/a
-    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 3..25 run function mhdp_items:core/buffering/jump
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/jump
+    execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Long] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/f
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..25 run function mhdp_items:core/buffering/e
 
 # 遷移
     # スニーク+ジャンプ時：バックステップに移行
-        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/change_to_backstep
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/change_to_backstep
     # 右クリック短押し：通常コンボ1に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/change_to_normal_1
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/change_to_normal_1
+    # 同時押し長押し：溜め斬り落としに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.F] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/util/move_jump
     # スニーク+右クリック：ガード斬りに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.E] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/26_guard_slash/start
+        execute if entity @s[tag=Ply.Ope.Buffering.E] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/type_tec/26_guard_slash/start
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 26.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/end
+    execute if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/short_sword/type_tec/10_spin/end

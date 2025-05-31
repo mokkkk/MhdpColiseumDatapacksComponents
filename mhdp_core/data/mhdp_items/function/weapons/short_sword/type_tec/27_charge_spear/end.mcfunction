@@ -6,6 +6,7 @@
 
 # タグ消去
     tag @s remove Wpn.Ss.Tec.ChargeSpear
+    tag @s remove Wpn.Ss.Tec.ChargeSpear.Finish
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0

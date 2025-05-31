@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/short_sword/type_tec/27_charge_spear/attack_move
+#> mhdp_items:weapons/short_sword/type_tec/27_charge_spear/attack_move_finish
 #
 # 溜め斬り落とし 攻撃判定
 #
@@ -15,7 +15,7 @@
     execute if entity @n[tag=Temp.Victim] run tag @s add Ply.Flag.Hit
 
 # 攻撃
-    data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.ChargeSpear.Move
+    data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.ChargeSpear.Move.Finish
     execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
 
 # 終了

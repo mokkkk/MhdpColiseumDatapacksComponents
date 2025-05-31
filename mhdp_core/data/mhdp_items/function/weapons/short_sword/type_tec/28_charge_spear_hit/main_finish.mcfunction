@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/main
+#> mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/main_finish
 #
 # 溜め斬り落とし メイン処理
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"溜め斬り落とし"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"溜め斬り落とし(フィニッシュ)"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -25,14 +25,15 @@
     execute if score @s Wpn.AnimationTimer matches 4 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/particle
 
 # 演出
+    execute if score @s Wpn.GeneralTimer matches 1.. run particle crimson_spore ~ ~0.1 ~ 0.4 0.1 0.4 0 3
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 at @s run tp @s ~ ~ ~ ~ ~-2
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 8..10 at @s run tp @s ~ ~ ~ ~ ~2
 
 # 攻撃
-    execute if score @s Wpn.GeneralTimer matches 8 run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/attack
-    execute if score @s Wpn.GeneralTimer matches 10 run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/attack
-    execute if score @s Wpn.GeneralTimer matches 12 run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/attack
-    execute if score @s Wpn.GeneralTimer matches 14 run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/attack
+    execute if score @s Wpn.GeneralTimer matches 8 run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/attack_finish
+    execute if score @s Wpn.GeneralTimer matches 10 run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/attack_finish
+    execute if score @s Wpn.GeneralTimer matches 12 run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/attack_finish
+    execute if score @s Wpn.GeneralTimer matches 14 run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/attack_finish
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
