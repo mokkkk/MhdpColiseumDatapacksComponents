@@ -4,12 +4,11 @@
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/1_charge/change_to_chargeattack
 
+# 前処理
+    function mhdp_items:weapons/short_sword/util/before_attack
+
 # タグ付与
     tag @s add Wpn.Ss.Tec.Bash.1
     tag @s remove Ply.Weapon.NoOpe
-
-# attribute設定
-    attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -1 add_value
 
 # say 武器操作：片手剣 盾攻撃

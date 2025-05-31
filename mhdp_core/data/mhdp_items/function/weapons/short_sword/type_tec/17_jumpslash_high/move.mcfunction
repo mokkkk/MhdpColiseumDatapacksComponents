@@ -6,7 +6,7 @@
 
 # 移動
     tp @s @s
-    scoreboard players set $strength player_motion.api.launch 6000
+    scoreboard players set $strength player_motion.api.launch 3000
     scoreboard players operation #mhdo_temp_uuid MhdpCore = @s Ply.Other.AttackTargetUuid
     execute as @e[tag=Mns.HitBox,distance=..10] if score @s Entity.Uuid = #mhdo_temp_uuid MhdpCore run tag @s add Temp.Move.Target
     execute facing entity @n[tag=Temp.Move.Target] eyes run function player_motion:api/launch_looking

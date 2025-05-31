@@ -26,6 +26,10 @@
     # カウンター斬り
         execute if entity @s[tag=Wpn.Ss.Tec.Counter] run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/main
 
+# ガード斬り
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Tec.GuardSlash] run function mhdp_items:weapons/short_sword/type_tec/24_guard/main
+
 # 通常コンボ
     # 1段目
         # 開始：右クリック短押し

@@ -4,15 +4,15 @@
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/23_tobikage/change_to_chargeattack
 
+# 前処理
+    function mhdp_items:weapons/short_sword/util/before_attack
+
 # タグ付与
     tag @s add Wpn.Ss.Tec.Tobikage
     tag @s remove Ply.Weapon.NoOpe
 
-# attribute設定
-    attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -1 add_value
-
 # 演出
+    particle flash ~ ~1.65 ~ 0 0 0 0 1
     playsound entity.player.levelup master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 2
 
 # 翔蟲使用中の場合、クールタイムを伸ばす
