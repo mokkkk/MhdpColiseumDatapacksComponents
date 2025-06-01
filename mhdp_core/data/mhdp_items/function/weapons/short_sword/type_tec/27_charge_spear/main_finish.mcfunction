@@ -42,7 +42,7 @@
     execute if score @s Wpn.AnimationTimer matches 25 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 0.4 0.1 0.4 0 10
 
 # 攻撃
-    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 25..30 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/attack_move_finish
+    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 27..30 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/attack_move_finish
     execute if entity @s[tag=Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 31 run tag @s remove Ply.Flag.Hit
     execute if score @s Wpn.GeneralTimer matches 32 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/attack_finish
 

@@ -2,7 +2,6 @@
 #
 # プレイヤーからモンスターに対してのダメージ処理
 #
-# @within function 
 # @input
 #        storage mhdp_core:temp Damage.AttackType 物理攻撃種別
 #        storage mhdp_core:temp Damage.DamageMult 物理ダメージ倍率（物理モーション値）

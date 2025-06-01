@@ -59,5 +59,3 @@
    
 # 終了
     execute if score @s Wpn.GeneralTimer matches 32.. run function mhdp_items:weapons/short_sword/type_tec/28_charge_spear_hit/end
-
-

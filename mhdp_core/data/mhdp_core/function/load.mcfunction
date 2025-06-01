@@ -104,6 +104,7 @@
     scoreboard players set #const_crit_multiply_lv2 Const 135
     scoreboard players set #const_crit_multiply_lv3 Const 140
     scoreboard players set #const_crit_multiply_element Const 115
+    scoreboard players set #const_crit_minus_multiply_normal Const 75
     # スライムのサイズ
         scoreboard players set #const_slime_size Const 5205
 
