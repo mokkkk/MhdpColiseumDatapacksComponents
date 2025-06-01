@@ -2,14 +2,14 @@
 execute unless entity @s[type=minecraft:item_display,tag=aj.karakuri_aj.root] run return run function animated_java:global/errors/function_not_executed_as_root_entity {'export_namespace': 'karakuri_aj', 'function_path': 'animated_java:karakuri_aj/apply_default_pose'}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.head_lower] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.6667f,0f,0f,-1f,1.2519f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.head_upper] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.8281f,0f,0f,-1f,1.141f,0f,0f,0f,1f], start_interpolation: 0}
-execute on passengers if entity @s[tag=aj.karakuri_aj.bone.neck_3] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.8461f,0f,0f,-1f,1.0058f,0f,0f,0f,1f], start_interpolation: 0}
+execute on passengers if entity @s[tag=aj.karakuri_aj.bone.neck_0] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.8461f,0f,0f,-1f,1.0058f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.neck_1] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.8441f,0f,0f,-1f,0.837f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.neck_2] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.84f,0f,0f,-1f,0.6752f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.wing_close_right_1] run data merge entity @s {transformation: [-1f,0f,0f,-0.5856f,0f,1f,0f,0.8219f,0f,0f,-1f,0.5007f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.wing_close_right_0] run data merge entity @s {transformation: [-1f,0f,0f,-0.1227f,0f,1f,0f,0.8425f,0f,0f,-1f,0.499f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.wing_close_left_1] run data merge entity @s {transformation: [-1f,0f,0f,0.5856f,0f,1f,0f,0.8219f,0f,0f,-1f,0.5007f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.wing_close_left_0] run data merge entity @s {transformation: [-1f,0f,0f,0.1227f,0f,1f,0f,0.8425f,0f,0f,-1f,0.499f,0f,0f,0f,1f], start_interpolation: 0}
-execute on passengers if entity @s[tag=aj.karakuri_aj.bone.body_3] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.8651f,0f,0f,-1f,0.334f,0f,0f,0f,1f], start_interpolation: 0}
+execute on passengers if entity @s[tag=aj.karakuri_aj.bone.body_0] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.8651f,0f,0f,-1f,0.334f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.leg_right_4] run data merge entity @s {transformation: [-1f,0f,0f,-0.1862f,0f,1f,0f,0.6072f,0f,0f,-1f,-0.1263f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.leg_right_3] run data merge entity @s {transformation: [-1f,0f,0f,-0.1891f,0f,1f,0f,0.621f,0f,0f,-1f,0.1803f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.leg_right_2] run data merge entity @s {transformation: [-1f,0f,0f,-0.1672f,0f,1f,0f,0.9286f,0f,0f,-1f,0.1231f,0f,0f,0f,1f], start_interpolation: 0}
@@ -20,5 +20,5 @@ execute on passengers if entity @s[tag=aj.karakuri_aj.bone.tail_6] run data merg
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.tail_5] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.8436f,0f,0f,-1f,-0.7432f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.tail_4] run data merge entity @s {transformation: [-1f,0f,0f,-0.0002f,0f,1f,0f,0.8554f,0f,0f,-1f,-0.4375f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.tail_3] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.865f,0f,0f,-1f,-0.0897f,0f,0f,0f,1f], start_interpolation: 0}
-execute on passengers if entity @s[tag=aj.karakuri_aj.bone.body_2] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.8574f,0f,0f,-1f,0.0703f,0f,0f,0f,1f], start_interpolation: 0}
+execute on passengers if entity @s[tag=aj.karakuri_aj.bone.body_1] run data merge entity @s {transformation: [-1f,0f,0f,0f,0f,1f,0f,0.8574f,0f,0f,-1f,0.0703f,0f,0f,0f,1f], start_interpolation: 0}
 execute on passengers if entity @s[tag=aj.karakuri_aj.bone.root] run data merge entity @s {transformation: [-1.1667f,0f,0f,0f,0f,1.1667f,0f,-0.1047f,0f,0f,-1.1667f,0.1375f,0f,0f,0f,1f], start_interpolation: 0}

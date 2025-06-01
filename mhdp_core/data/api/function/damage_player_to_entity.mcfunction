@@ -38,5 +38,7 @@
 # モンスター側の被ダメージ処理に移行
     function mhdp_monsters:core/switch/damage
 
+# プレイヤー側の与ダメージ処理に移行
+
 # データのリセット
     function api:damage_player_to_entity/reset
