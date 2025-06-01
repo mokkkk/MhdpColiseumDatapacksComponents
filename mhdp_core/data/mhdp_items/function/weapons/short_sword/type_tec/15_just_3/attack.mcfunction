@@ -17,9 +17,9 @@
     execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
 
 # 攻撃
-    execute if entity @s[tag=!Ply.Flag.Just.Success] run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.3
-    execute if entity @s[tag=Ply.Flag.Just.Success] run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.3.S
-    execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
+    execute if entity @s[tag=!Ply.Flag.Just.Success] run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.3
+    execute if entity @s[tag=Ply.Flag.Just.Success] run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.Just.3.S
+    execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了
-    tag @e[tag=Temp.Hit] remove Temp.Hit
+    tag @e[type=slime,tag=Temp.Hit] remove Temp.Hit

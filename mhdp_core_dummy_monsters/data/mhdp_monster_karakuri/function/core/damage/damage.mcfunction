@@ -17,8 +17,6 @@
 #        score #mhdp_temp_damage_tire_value MhdpCore 減気量
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
 
-say からくりダメージ
-
 # 相殺判定
     execute if entity @s[tag=Mns.Karakuri.Attack.Head] if entity @p[tag=Temp.Attacker,tag=Ply.Flag.Counter] if score #mhdp_temp_target_part_id MhdpCore matches 1 run data modify storage api: Return.Counter set value true
 

@@ -15,8 +15,8 @@
     execute if entity @n[tag=Temp.Victim] run tag @s add Ply.Flag.Hit
 
 # 攻撃
-    data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.ChargeSpear.Move.Finish
-    execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
+    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.ChargeSpear.Move.Finish
+    execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了
-    tag @e[tag=Temp.Hit] remove Temp.Hit
+    tag @e[type=slime,tag=Temp.Hit] remove Temp.Hit

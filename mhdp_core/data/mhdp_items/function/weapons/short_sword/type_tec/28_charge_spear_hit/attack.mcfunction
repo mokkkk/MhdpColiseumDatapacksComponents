@@ -9,9 +9,9 @@
     execute as @e[tag=Mns.HitBox,distance=..10] if score @s Entity.Uuid = #mhdo_temp_uuid MhdpCore run tag @s add Temp.Victim
 
 # 攻撃
-    data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.ChargeSpear.Hit
-    execute if entity @n[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
+    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.ChargeSpear.Hit
+    execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了
-    tag @e[tag=Temp.Hit] remove Temp.Hit
+    tag @e[type=slime,tag=Temp.Hit] remove Temp.Hit
     scoreboard players reset #mhdo_temp_uuid MhdpCore

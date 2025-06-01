@@ -12,8 +12,8 @@
     
 # データ設定
     $data modify entity @e[type=text_display,tag=Other.Text.Vfx.Slash,tag=Start,limit=1] transformation.left_rotation set value {axis:[0f,0f,1f],angle:$(VfxRotation)f}
-    execute if entity @s[tag=!Ply.Temp.IsCounterDamage] if data storage mhdp_core:temp Damage.VfxScale run data modify entity @e[type=text_display,tag=Other.Text.Vfx.Slash,tag=Start,limit=1] transformation.scale set from storage mhdp_core:temp Damage.VfxScale
-    execute if data storage mhdp_core:temp Damage{IsVfxStrong:true} run tag @e[type=text_display,tag=Other.Text.Vfx.Slash,tag=Start,limit=1] add Other.Text.Vfx.Strong
+    execute if entity @s[tag=!Ply.Temp.IsCounterDamage] if data storage api: Arg.VfxScale run data modify entity @e[type=text_display,tag=Other.Text.Vfx.Slash,tag=Start,limit=1] transformation.scale set from storage api: Arg.VfxScale
+    execute if data storage api: Arg{IsVfxStrong:true} run tag @e[type=text_display,tag=Other.Text.Vfx.Slash,tag=Start,limit=1] add Other.Text.Vfx.Strong
     execute facing entity @s eyes as @e[type=text_display,tag=Other.Text.Vfx.Slash,tag=Start,limit=1] positioned as @s run tp @s ~ ~ ~ ~ ~
 
 # 終了
