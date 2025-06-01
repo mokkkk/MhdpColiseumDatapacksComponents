@@ -21,4 +21,4 @@
     execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了
-    tag @e[tag=Temp.Hit] remove Temp.Hit
+    tag @e[type=slime,tag=Temp.Hit] remove Temp.Hit

@@ -17,6 +17,11 @@
 #        score #mhdp_temp_damage_tire_value MhdpCore 減気量
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
 
+say からくりダメージ
+
+# 相殺判定
+    execute if entity @s[tag=Mns.Karakuri.Attack.Head] if entity @p[tag=Temp.Attacker,tag=Ply.Flag.Counter] if score #mhdp_temp_target_part_id MhdpCore matches 1 run data modify storage api: Return.Counter set value true
+
 # 無敵時間のみ設定
     execute if score #mhdp_temp_damage_interval MhdpCore matches 1.. run scoreboard players operation @s Mns.General.DamageInterval = #mhdp_temp_damage_interval MhdpCore
 
@@ -25,7 +30,7 @@
 
 # 以下の優先度で怯みを適用
     # 相殺
-        execute if score #mhdp_temp_counter_value MhdpCore matches 1.. run function mhdp_monster_karakuri:core/damage/reaction/counter
+        execute if data storage api: Return{Counter:true} run function mhdp_monster_karakuri:core/damage/reaction/counter
 
 # 状態異常の発動
     # 爆破

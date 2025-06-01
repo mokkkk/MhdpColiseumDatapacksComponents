@@ -23,9 +23,6 @@
     # 実ダメージ量計算
         function api:damage_player_to_entity/calc_actual_damage
 
-# 演出
-    execute positioned as @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] run function api:damage_player_to_entity/vfx
-
 # 斬れ味消費
     # デフォルト減少量
         scoreboard players set #mhdp_temp_sharpness_dec_value MhdpCore 1
@@ -35,10 +32,22 @@
         execute store result storage api: Arg.Value int 1 run scoreboard players get #mhdp_temp_sharpness_dec_value MhdpCore
         execute if data storage api: Arg{IsDecreseSharpness:true} run function api:weapon_operation/decrease_sharpness.m with storage api: Arg
 
+# 返り値用意
+    # モーション値
+        data modify storage api: Return.DamageMult set from storage api: Arg.DamageMult
+    # 相殺成功
+        data modify storage api: Return.Counter set value false
+    # 相殺大成功
+        data modify storage api: Return.CounterSuccess set value false
+
 # モンスター側の被ダメージ処理に移行
     function mhdp_monsters:core/switch/damage
 
+# 演出
+    execute positioned as @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] run function api:damage_player_to_entity/vfx
+
 # プレイヤー側の与ダメージ処理に移行
+    function mhdp_items:core/switch/weapon_on_attack
 
 # データのリセット
     function api:damage_player_to_entity/reset

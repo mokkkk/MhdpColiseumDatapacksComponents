@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:/**
 
 # Uid取得
-    data modify storage mhdp_core:temp Temp.MonsterUid set from storage mhdp_core:temp Damage.TargetMonsterUid
+    data modify storage mhdp_core:temp Temp.MonsterUid set from storage mhdp_core:temp Arg.TargetMonsterUid
 
 # 分岐処理
     function mhdp_monsters:core/switch/macro/m.get_upper_name with storage mhdp_core:temp Temp

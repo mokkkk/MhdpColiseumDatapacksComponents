@@ -53,6 +53,3 @@
 
 # ダメージ数値表示
     function api:damage_player_to_entity/vfx/show_damage
-
-# 終了
-    data remove storage mhdp_core:temp Arg

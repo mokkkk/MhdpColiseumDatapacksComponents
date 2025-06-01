@@ -9,6 +9,20 @@
     tag @s remove Ply.Temp.IsCritInverse
 
 # スコアリセット
+    scoreboard players reset #mhdp_temp_target_part_id MhdpCore
+    scoreboard players reset #mhdp_temp_damage_total MhdpCore
+    scoreboard players reset #mhdp_temp_damage_phys_type MhdpCore
+    scoreboard players reset #mhdp_temp_damage_phys_value MhdpCore
+    scoreboard players reset #mhdp_temp_damage_element_value MhdpCore
+    scoreboard players reset #mhdp_temp_damage_partdamage_value MhdpCore
+    scoreboard players reset #mhdp_temp_condition_value_poison MhdpCore
+    scoreboard players reset #mhdp_temp_condition_value_paralysis MhdpCore
+    scoreboard players reset #mhdp_temp_condition_value_bomb MhdpCore
+    scoreboard players reset #mhdp_temp_damage_stun_value MhdpCore
+    scoreboard players reset #mhdp_temp_damage_tire_value MhdpCore
+    scoreboard players reset #mhdp_temp_damage_dragonaura_value MhdpCore
+    scoreboard players reset #mhdp_temp_damage_interval MhdpCore
+
     scoreboard players reset #mhdp_temp_attack_value MhdpCore
     scoreboard players reset #mhdp_temp_defence_phys
     scoreboard players reset #mhdp_temp_damage_sharpness_multiply MhdpCore
