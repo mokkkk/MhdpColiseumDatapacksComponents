@@ -4,12 +4,12 @@
 #
 # @within mhdp_items:weapons/short_sword/type_normal/main
 
+# 前処理
+    function mhdp_items:weapons/short_sword/util/before_attack
+
 # タグ付与
     tag @s add Wpn.Ss.Normal.Charge
-
-# attribute設定
-    attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -1 add_value
+    tag @s remove Ply.Weapon.NoOpe
 
 # その他初期化
     scoreboard players set @s Wpn.Ss.ChargeTimer 0

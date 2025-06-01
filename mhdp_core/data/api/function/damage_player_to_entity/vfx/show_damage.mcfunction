@@ -12,9 +12,9 @@
 
 # 表示位置をずらす
     execute store result storage mhdp_core:temp Arg.Damage int 1 run scoreboard players get #mhdp_temp_damage_total MhdpCore
-    execute store result storage mhdp_core:temp Arg.RotX int 1 run random value 0..150
+    execute store result storage mhdp_core:temp Arg.RotX int 1 run random value 0..90
     execute store result storage mhdp_core:temp Arg.RotY int 1 run random value 0..359
-    execute store result storage mhdp_core:temp Arg.Dist int 1 run random value 0..29
+    execute store result storage mhdp_core:temp Arg.Dist float 0.01 run random value 0..150
 
 # スライムのサイズ計算
     execute store result score #mhdp_temp_slime_size MhdpCore run data get entity @e[tag=Temp.Victim,limit=1] Size

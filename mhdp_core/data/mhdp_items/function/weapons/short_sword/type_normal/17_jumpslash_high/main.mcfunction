@@ -31,8 +31,7 @@
     execute if score @s Wpn.AnimationTimer matches 7 positioned ~ ~1.65 ~ positioned ^ ^ ^1.5 run function mhdp_items:weapons/short_sword/type_normal/17_jumpslash_high/particle
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 6 true
-
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/short_sword/type_normal/17_jumpslash_high/move
     execute if score @s Wpn.GeneralTimer matches 8 run tp @s @s
