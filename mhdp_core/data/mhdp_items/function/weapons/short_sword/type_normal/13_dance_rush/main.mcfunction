@@ -122,7 +122,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 8000
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 4000
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 8 run scoreboard players set $strength player_motion.api.launch 4000
     execute if score @s Wpn.GeneralTimer matches 8 rotated ~ 0 run function player_motion:api/launch_looking

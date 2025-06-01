@@ -165,3 +165,5 @@
     tag @e[tag=Temp.Victim] remove Temp.Victim
     tag @s remove Temp.Attacker
     data remove storage mhdp_core:temp Damage
+
+tellraw @a {"text":"【旧バージョンのAPIを使用しています。処理を変更してください】"}

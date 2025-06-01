@@ -21,7 +21,8 @@
     execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/animation_3
     execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/animation_4
     execute if score @s Wpn.AnimationTimer matches 13 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/animation_5
-    execute if score @s Wpn.AnimationTimer matches 25 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/animation_6
+    execute if score @s Wpn.AnimationTimer matches 25 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/animation_7
+    execute if score @s Wpn.AnimationTimer matches 26 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/animation_6
     execute if score @s Wpn.AnimationTimer matches 30 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/animation_7
     execute if score @s Wpn.AnimationTimer matches 32 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/animation_8
     execute if score @s Wpn.AnimationTimer matches 34 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/animation_9
