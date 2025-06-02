@@ -29,7 +29,7 @@
 
 # 遷移
     # ヒットした場合、空中溜めに移行
-        execute if entity @s[tag=Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 5 run function mhdp_items:weapons/great_sword/type_tec/10_hunting_edge/change_to_charge
+        execute if entity @s[tag=Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 5 run function mhdp_items:weapons/great_sword/type_tec/11_charge_edge/start_with_other
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/great_sword/type_tec/10_hunting_edge/end
