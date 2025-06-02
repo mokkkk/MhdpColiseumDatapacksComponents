@@ -15,12 +15,12 @@
     execute as @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] run tag @s add Temp.Victim
 
 # ヒットストップ
-    execute if entity @e[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 3
-    execute if entity @e[tag=Temp.Victim] run tag @s add Ply.Flag.Hit
+    execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 3
+    execute if entity @n[tag=Temp.Victim] run tag @s add Ply.Flag.Hit
 
 # 攻撃
-    data modify storage mhdp_core:temp Damage set value {AttackType:Cut,DamageMult:20,PartDamageMult:10,ElementDamageMult:60,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.02,IsVfxStrong:false,VfxScale:[3f,4f,3f]}
-    execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
+    data modify storage api: Arg set value {AttackType:Cut,DamageMult:20,PartDamageMult:10,ElementDamageMult:60,StunValue:0,TireValue:10,DragonAuraValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxRotation:-0.02,IsVfxStrong:false,VfxScale:[3f,4f,3f]}
+    execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit

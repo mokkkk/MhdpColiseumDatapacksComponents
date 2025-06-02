@@ -40,11 +40,11 @@
     # execute if entity @s[tag=Ply.Flag.Counter] rotated ~180 -30 run function player_motion:api/launch_looking
 
 # 攻撃
-    execute if score @s Wpn.Gs.ChargeCount matches ..1 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.1
-    execute if score @s Wpn.Gs.ChargeCount matches 2 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.2
-    execute if score @s Wpn.Gs.ChargeCount matches 3.. run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.3
+    execute if score @s Wpn.Gs.ChargeCount matches ..1 run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.1
+    execute if score @s Wpn.Gs.ChargeCount matches 2 run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.2
+    execute if score @s Wpn.Gs.ChargeCount matches 3.. run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Upper.3
     execute if entity @s[tag=Ply.Flag.Counter] run tag @s add Ply.Temp.IsCounterDamage
-    execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
+    execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
     tag @s remove Ply.Temp.IsCounterDamage
 
 # 終了
