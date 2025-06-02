@@ -4,14 +4,13 @@
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
+# 前処理
+    function mhdp_items:weapons/great_sword/util/before_attack
+
 # タグ付与
     tag @s add Wpn.Gs.Tec.Guard
     tag @s add Ply.Weapon.Guard
     tag @s remove Ply.Weapon.NoOpe
-
-# attribute設定
-    attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -1 add_value
 
 # スタミナ回復停止
     tag @s add Ply.Weapon.StaminaNotRegen

@@ -20,3 +20,5 @@
     scoreboard players set @s Wpn.Gs.ChargeSlashCount 0
 
 # say 武器操作：大剣・溜め
+
+say 未使用処理

@@ -10,19 +10,16 @@
     # 無操作の場合、アニメーションをリセット
         data modify storage mhdp_core:temp Args.IsDrawing set value true
         # メイン
-            scoreboard players set #mhdp_arg_cmd_offset MhdpCore 1
-            data modify storage mhdp_core:temp Args.Slot set value "mainhand"
-            execute if entity @s[tag=Ply.Weapon.NoOpe] run function mhdp_items:core/util/item_modify_animation
-            execute if entity @s[tag=Ply.Weapon.NoOpe] run function mhdp_items:core/util/item_modify_clear_name
+            data modify storage mhdp_core:temp Args.IsDrawing set value true
+            execute if entity @s[tag=Ply.Weapon.NoOpe] run function api:weapon/animation.m {Slot:"mainhand", Cmd:"drawing"}
+            execute if entity @s[tag=Ply.Weapon.NoOpe] run function api:weapon/reset_name.m {Slot:"mainhand"}
     # 終了
         tag @s remove Ply.Weapon.NoOpe
         tag @s remove Ply.Flag.Counter
         tag @s remove Ply.Weapon.NoMoveJump
 
 # attributeリセット
-    attribute @s attack_speed modifier remove mhdp_core:weapon_attack_speed
-    attribute @s attack_speed modifier add mhdp_core:weapon_attack_speed -3.0 add_value
-    attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s attack_damage modifier remove mhdp_core:weapon_attack_damage
-    attribute @s attack_damage modifier add mhdp_core:weapon_attack_damage 5.0 add_value
-    effect clear @s slowness
+    function mhdp_items:weapons/great_sword/util/set_status
+
+# 先行入力解除
+    function mhdp_items:core/buffering/reset

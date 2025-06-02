@@ -21,7 +21,8 @@
     execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 1..4 run function mhdp_items:weapons/great_sword/type_tec/3_tackle/attack
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1..20 run effect give @s slowness 1 5 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
@@ -42,7 +43,7 @@
 
 # 遷移
     # 右クリック中の場合、溜めに移行
-        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/great_sword/type_tec/3_tackle/change_to_charge
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/great_sword/type_tec/1_charge/start_with_other
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/type_tec/3_tackle/end
