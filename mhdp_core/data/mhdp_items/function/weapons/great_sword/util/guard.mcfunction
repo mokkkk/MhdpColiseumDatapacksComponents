@@ -5,6 +5,4 @@
 # @within function mhdp_items:core/switch/macro/m.guard
 
 # 斬れ味消費
-    scoreboard players set #mhdp_temp_sharpness_dec_value MhdpCore 2
-    function mhdp_core:player/damage/player_to_entity/decrease_sharpness
-    scoreboard players reset #mhdp_temp_sharpness_dec_value MhdpCore
+    function api:weapon_operation/decrease_sharpness.m {Value:2}

@@ -32,6 +32,10 @@
         execute store result storage api: Arg.Value int 1 run scoreboard players get #mhdp_temp_sharpness_dec_value MhdpCore
         execute if data storage api: Arg{IsDecreseSharpness:true} run function api:weapon_operation/decrease_sharpness.m with storage api: Arg
 
+# 相殺フラグ
+    execute store result score #mhdp_temp_counter_value MhdpCore run data get storage api: Arg.CounterValue
+    execute if score #mhdp_temp_counter_value MhdpCore matches 1.. run data modify storage api: Arg.IsCounterAttack set value true
+
 # 返り値用意
     # モーション値
         data modify storage api: Return.DamageMult set from storage api: Arg.DamageMult

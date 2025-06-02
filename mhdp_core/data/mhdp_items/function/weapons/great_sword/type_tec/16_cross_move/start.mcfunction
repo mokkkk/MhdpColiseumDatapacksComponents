@@ -10,5 +10,6 @@
 # タグ付与
     tag @s add Wpn.Gs.Tec.CrossMove
     tag @s remove Ply.Weapon.NoOpe
+    tag @s remove Ply.Flag.CounterSuccess
 
 # say 武器操作：大剣・十字斬り・移動

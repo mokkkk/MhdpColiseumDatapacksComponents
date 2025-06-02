@@ -23,7 +23,8 @@
     tag @s remove Ply.Weapon.Armod.Hyper
     tag @s remove Ply.Flag.DrawAttack
     tag @s remove Ply.Flag.Hit
-    tag @s remove Ply.Flag.Counter
+    tag @s remove Ply.Flag.Just.Success
+    tag @s remove Ply.Flag.CounterSuccess
     tag @s remove Ply.Weapon.NoMoveJump
 
 # アニメーション停止

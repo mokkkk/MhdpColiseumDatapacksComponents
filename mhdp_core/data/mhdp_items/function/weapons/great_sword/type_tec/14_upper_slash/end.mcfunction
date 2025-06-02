@@ -6,7 +6,7 @@
 
 # タグ消去
     tag @s remove Wpn.Gs.Tec.Upper
-    tag @s remove Ply.Flag.Counter
+    tag @s remove Ply.Flag.CounterSuccess
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0

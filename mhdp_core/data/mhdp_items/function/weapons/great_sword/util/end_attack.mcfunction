@@ -15,7 +15,7 @@
             execute if entity @s[tag=Ply.Weapon.NoOpe] run function api:weapon/reset_name.m {Slot:"mainhand"}
     # 終了
         tag @s remove Ply.Weapon.NoOpe
-        tag @s remove Ply.Flag.Counter
+        tag @s remove Ply.Flag.CounterSuccess
         tag @s remove Ply.Weapon.NoMoveJump
 
 # attributeリセット
