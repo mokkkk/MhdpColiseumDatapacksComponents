@@ -55,6 +55,7 @@
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/great_sword/type_tec/4_guard/start
     # 処理
         execute if entity @s[tag=Wpn.Gs.Tec.Guard] run function mhdp_items:weapons/great_sword/type_tec/4_guard/main
+        execute if entity @s[tag=Wpn.Gs.Tec.Guard.Just] run function mhdp_items:weapons/great_sword/type_tec/4_guard/main_just
 
 # 十字斬り
     # 移動

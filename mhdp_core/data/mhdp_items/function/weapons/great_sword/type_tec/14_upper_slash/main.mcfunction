@@ -29,7 +29,7 @@
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/attack
-    execute if entity @s[tag=Ply.Flag.CounterSuccess] if score @s Wpn.GeneralTimer matches 7 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/attack_pursuit
+    execute if entity @s[tag=Ply.Flag.CounterSuccess] if score @s Wpn.GeneralTimer matches 5 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/attack_pursuit
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
