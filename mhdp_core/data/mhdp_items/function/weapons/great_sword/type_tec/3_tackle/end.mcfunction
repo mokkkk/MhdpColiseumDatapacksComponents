@@ -6,6 +6,7 @@
 
 # タグ消去
     tag @s remove Wpn.Gs.Tec.Tackle
+    tag @s remove Ply.Flag.Gs.JustTackle
     tag @s remove Ply.Weapon.StaminaNotRegen
 
 # タイマー初期化

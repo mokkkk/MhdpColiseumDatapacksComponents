@@ -40,6 +40,8 @@
         execute if entity @s[tag=Ply.Flag.CounterSuccess] run playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.3
         execute if entity @s[tag=Ply.Flag.CounterSuccess] run playsound item.shield.block master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.2
         execute if entity @s[tag=Ply.Flag.CounterSuccess] run playsound item.shield.block master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.2
+        execute if entity @s[tag=Ply.Flag.CounterSuccess] run playsound entity.iron_golem.death master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.2
+        execute if entity @s[tag=Ply.Flag.CounterSuccess] run playsound entity.iron_golem.death master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1
         execute if entity @s[tag=Ply.Flag.CounterSuccess] anchored eyes run particle firework ^ ^ ^1 0 0 0 0.4 20
         execute if entity @s[tag=Ply.Flag.CounterSuccess] anchored eyes run particle flash ^ ^ ^1 0.2 0.2 0.2 0.4 5
         execute if entity @s[tag=Ply.Flag.CounterSuccess] anchored eyes run particle crit ^ ^ ^1 0 0 0 1 50

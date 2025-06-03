@@ -16,6 +16,7 @@
     # 終了
         tag @s remove Ply.Weapon.NoOpe
         tag @s remove Ply.Flag.CounterSuccess
+        tag @s remove Ply.Flag.Gs.JustTackle
         tag @s remove Ply.Weapon.NoMoveJump
 
 # attributeリセット

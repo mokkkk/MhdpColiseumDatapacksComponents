@@ -17,15 +17,9 @@
     scoreboard players set @s Wpn.AnimationTimer 0
 
 # 状態タグ削除
-    tag @s remove Ply.Weapon.StaminaNotRegen
-    tag @s remove Ply.Weapon.Guard
-    tag @s remove Ply.Weapon.Armod.Super
-    tag @s remove Ply.Weapon.Armod.Hyper
-    tag @s remove Ply.Flag.DrawAttack
-    tag @s remove Ply.Flag.Hit
-    tag @s remove Ply.Flag.Just.Success
-    tag @s remove Ply.Flag.CounterSuccess
-    tag @s remove Ply.Weapon.NoMoveJump
+    function api:weapon_operation/remove_state_tags
+    # 大剣独自
+        tag @s remove Ply.Flag.Gs.JustTackle
 
 # アニメーション停止
     function mhdp_items:weapons/great_sword/util/stop_all_animations

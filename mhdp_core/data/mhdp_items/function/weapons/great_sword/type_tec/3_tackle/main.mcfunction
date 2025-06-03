@@ -43,7 +43,8 @@
 
 # 遷移
     # 右クリック中の場合、溜めに移行
-        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/great_sword/type_tec/1_charge/start_with_other
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=!Ply.Flag.Gs.JustTackle] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/great_sword/type_tec/1_charge/start_with_other
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Flag.Gs.JustTackle] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/great_sword/type_tec/1_charge/start_with_justtackle
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/type_tec/3_tackle/end

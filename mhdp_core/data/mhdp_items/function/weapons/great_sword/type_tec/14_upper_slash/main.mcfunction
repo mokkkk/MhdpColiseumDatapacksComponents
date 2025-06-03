@@ -42,6 +42,8 @@
     execute if entity @s[tag=Ply.Weapon.HisStop,tag=Ply.Flag.CounterSuccess,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 7 at @s run tp @s ~ ~ ~ ~1 ~
 
 # アーマー
+    execute if score @s Wpn.GeneralTimer matches 3 run tag @s add Ply.Weapon.Armod.Hyper
+    execute if entity @s[tag=!Ply.Flag.CounterSuccess] if score @s Wpn.GeneralTimer matches 4 run tag @s remove Ply.Weapon.Armod.Hyper
     execute if score @s Wpn.GeneralTimer matches 15 run tag @s remove Ply.Weapon.Armod.Hyper
 
 # 移動
