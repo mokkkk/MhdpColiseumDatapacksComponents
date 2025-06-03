@@ -16,7 +16,8 @@
             execute if entity @s[tag=Ply.Weapon.NoOpe] run function api:weapon/animation.m {Slot:"offhand", Cmd:"drawing_sub"}
     # 終了
         tag @s remove Ply.Weapon.NoOpe
-        tag @s remove Ply.Weapon.NoMoveJump
+        # tag @s remove Ply.Weapon.NoMoveJump
+        function api:weapon_operation/remove_state_tags
 
 # attributeリセット
     function mhdp_items:weapons/short_sword/util/set_status

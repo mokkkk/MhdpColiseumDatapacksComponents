@@ -15,9 +15,11 @@
             execute if entity @s[tag=Ply.Weapon.NoOpe] run function api:weapon/reset_name.m {Slot:"mainhand"}
     # 終了
         tag @s remove Ply.Weapon.NoOpe
-        tag @s remove Ply.Flag.CounterSuccess
+        # tag @s remove Ply.Flag.CounterSuccess
+        # tag @s remove Ply.Flag.Gs.JustTackle
+        # tag @s remove Ply.Weapon.NoMoveJump
+        function api:weapon_operation/remove_state_tags
         tag @s remove Ply.Flag.Gs.JustTackle
-        tag @s remove Ply.Weapon.NoMoveJump
 
 # attributeリセット
     function mhdp_items:weapons/great_sword/util/set_status
