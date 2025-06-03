@@ -32,7 +32,9 @@
     execute if entity @s[tag=Ply.Flag.CounterSuccess] if score @s Wpn.GeneralTimer matches 5 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/attack_pursuit
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 8 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..7 run tp @s ~ ~ ~ ~-0.2 ~-1
@@ -59,9 +61,14 @@
     execute if entity @s[tag=!Ply.Flag.CounterSuccess] if score @s Wpn.AnimationTimer matches 6 rotated ~ -60 run function player_motion:api/launch_looking
     execute if entity @s[tag=Ply.Flag.CounterSuccess] if score @s Wpn.AnimationTimer matches 6 rotated ~180 -10 run function player_motion:api/launch_looking
 
+# 先行入力
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 1..39 run function mhdp_items:core/buffering/jump
+
 # 遷移
     # カウンター成功後、右クリック長押し：十字斬り・移動に移行
         execute if entity @s[tag=Ply.Flag.CounterSuccess,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/great_sword/type_tec/16_cross_move/start
+    # ジャンプ回避
+        execute if entity @s[tag=Ply.Ope.Buffering.Jump,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/util/move_jump
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/end

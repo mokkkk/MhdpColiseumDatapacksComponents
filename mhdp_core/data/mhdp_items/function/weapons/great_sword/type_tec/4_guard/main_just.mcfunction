@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/great_sword/type_tec/4_guard/main
+#> mhdp_items:weapons/great_sword/type_tec/4_guard/end_just
 #
 # ガード メイン処理
 #
@@ -31,4 +31,5 @@
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] run function mhdp_items:weapons/short_sword/util/move_jump
 
 # 終了
-    execute if entity @s[tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 10.. if score @s Wpn.GuardStopTimer matches 0 run function mhdp_items:weapons/great_sword/type_tec/4_guard/end
+    execute if entity @s[tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 10.. if score @s Wpn.GuardStopTimer matches 0 run function mhdp_items:weapons/great_sword/type_tec/4_guard/end_just
+

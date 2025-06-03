@@ -45,6 +45,9 @@
         execute if entity @s[tag=Ply.Flag.CounterSuccess] anchored eyes run particle firework ^ ^ ^1 0 0 0 0.4 20
         execute if entity @s[tag=Ply.Flag.CounterSuccess] anchored eyes run particle flash ^ ^ ^1 0.2 0.2 0.2 0.4 5
         execute if entity @s[tag=Ply.Flag.CounterSuccess] anchored eyes run particle crit ^ ^ ^1 0 0 0 1 50
-
+        execute if entity @s[tag=Ply.Flag.CounterSuccess] run playsound minecraft:block.trial_spawner.spawn_mob master @a ~ ~ ~ 2 0.7
+        execute if entity @s[tag=Ply.Flag.CounterSuccess] run playsound minecraft:block.trial_spawner.spawn_mob master @a ~ ~ ~ 2 0.6
+        execute if entity @s[tag=Ply.Flag.CounterSuccess] run playsound minecraft:block.trial_spawner.spawn_mob master @a ~ ~ ~ 2 0.5
+    
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit

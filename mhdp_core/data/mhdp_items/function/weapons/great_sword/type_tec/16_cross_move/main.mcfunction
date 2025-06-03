@@ -18,9 +18,8 @@
     particle block{block_state:"minecraft:sand"} ^ ^0.1 ^ 0.2 0.2 0.2 0 2
 
 # 移動制限
-    effect give @s slowness 1 3 true
-    execute if score @s Wpn.GeneralTimer matches 1 run attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 1 run attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -0.3 add_value
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1..2 run scoreboard players set $strength player_motion.api.launch 7000
