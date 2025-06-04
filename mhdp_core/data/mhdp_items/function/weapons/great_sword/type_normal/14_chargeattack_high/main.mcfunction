@@ -25,8 +25,9 @@
     execute if score @s Wpn.AnimationTimer matches 5 positioned ^ ^ ^1.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/particle
     
 # 攻撃
-    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches ..2 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack
-    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches 3.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack_pursuit
+    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches ..1 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack
+    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches 2.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack_pursuit
+    execute if score @s Wpn.GeneralTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 2 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack
     execute if score @s Wpn.GeneralTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 3.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack_pursuit
     execute if score @s Wpn.GeneralTimer matches 10 if score @s Wpn.Gs.ChargeCount matches 3.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack
 

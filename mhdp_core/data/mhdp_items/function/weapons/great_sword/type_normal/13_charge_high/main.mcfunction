@@ -13,6 +13,7 @@
 
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
+    execute if score @s Wpn.AnimationTimer matches 12 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
     execute if score @s Wpn.AnimationTimer matches ..2 run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/animation_2
     execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/animation_1
     execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/animation_0
@@ -29,7 +30,7 @@
     execute if score @s Wpn.Gs.ChargeTimer matches 170.. if score @s Wpn.Gs.ChargeCount matches ..0 run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/up_charge_count
     execute if score @s Wpn.Gs.ChargeTimer matches 340.. if score @s Wpn.Gs.ChargeCount matches ..1 run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/up_charge_count
     execute if score @s Wpn.Gs.ChargeTimer matches 510.. if score @s Wpn.Gs.ChargeCount matches ..2 run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/up_charge_count
-    execute if score @s Wpn.Gs.ChargeCount matches ..2 run particle electric_spark ~ ~1.2 ~ 0.2 0.3 0.2 0.8 1
+    execute if score @s Wpn.Gs.ChargeCount matches ..2 run particle trial_spawner_detection_ominous ~ ~1.2 ~ 0.4 0.3 0.4 0.0 1
     execute if score @s Wpn.Gs.ChargeCount matches 3.. run particle firework ~ ~1.2 ~ 0.2 0.3 0.2 0.3 1
 
 # 移動

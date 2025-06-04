@@ -15,15 +15,15 @@
     execute as @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] run tag @s add Temp.Victim
 
 # ヒットストップ    
-    execute if score @s Wpn.Gs.ChargeCount matches ..1 if entity @e[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 3
-    execute if score @s Wpn.Gs.ChargeCount matches 2.. if entity @e[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 5
-    execute if entity @e[tag=Temp.Victim] run tp @s @s
+    execute if score @s Wpn.Gs.ChargeCount matches ..1 if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 3
+    execute if score @s Wpn.Gs.ChargeCount matches 2.. if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 5
+    execute if entity @n[tag=Temp.Victim] run tp @s @s
 
 # 攻撃
-    execute if score @s Wpn.Gs.ChargeCount matches ..1 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Normal.ChargeSlash.1
-    execute if score @s Wpn.Gs.ChargeCount matches 2 run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Normal.ChargeSlash.2
-    execute if score @s Wpn.Gs.ChargeCount matches 3.. run data modify storage mhdp_core:temp Damage set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Normal.ChargeSlash.3
-    execute if entity @e[tag=Temp.Victim] run function mhdp_core:player/damage/player_to_entity/main
+    execute if score @s Wpn.Gs.ChargeCount matches ..1 run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Normal.ChargeSlash.1
+    execute if score @s Wpn.Gs.ChargeCount matches 2 run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Normal.ChargeSlash.2
+    execute if score @s Wpn.Gs.ChargeCount matches 3.. run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Normal.ChargeSlash.3
+    execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit
