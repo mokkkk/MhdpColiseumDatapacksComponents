@@ -19,9 +19,8 @@
     execute if score @s Wpn.AnimationTimer matches 12 run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/animation_3
 
 # 移動制限
-    effect give @s slowness 1 5 true
-    execute if score @s Wpn.GeneralTimer matches 15 run attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 15 run attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -0.3 add_value
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 溜め
     execute if entity @s[tag=!Skill.Stamina.ShortCharge.1,tag=!Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Gs.ChargeTimer 5
@@ -44,4 +43,4 @@
 
 # 遷移
     # 右クリックを離した場合、大溜め斬りに移行
-        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/change_to_cross
+        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/start

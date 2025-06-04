@@ -21,7 +21,8 @@
     execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 1..4 run function mhdp_items:weapons/great_sword/type_normal/3_tackle/attack
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1..20 run effect give @s slowness 1 5 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s

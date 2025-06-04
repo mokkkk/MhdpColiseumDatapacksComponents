@@ -28,7 +28,7 @@
     execute if score @s Wpn.AnimationTimer matches 4 positioned ^ ^ ^0.3 rotated ~ ~-80 positioned ^ ^ ^1.3 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/particle
 
 # 攻撃
-    execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/attack
+    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 3..4 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/attack
     execute if entity @s[tag=Ply.Flag.CounterSuccess] if score @s Wpn.GeneralTimer matches 5 run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/attack_pursuit
 
 # 移動制限
@@ -49,12 +49,12 @@
     execute if score @s Wpn.GeneralTimer matches 15 run tag @s remove Ply.Weapon.Armod.Hyper
 
 # 移動
-    execute if score @s Wpn.AnimationTimer matches 1 run tp @s @s
-    execute if score @s Wpn.AnimationTimer matches 1 run scoreboard players set $strength player_motion.api.launch 12000
-    execute if score @s Wpn.AnimationTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.AnimationTimer matches 3 run tp @s @s
-    execute if score @s Wpn.AnimationTimer matches 3 run scoreboard players set $strength player_motion.api.launch 8000
-    execute if score @s Wpn.AnimationTimer matches 3 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 12000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 3 run tp @s @s
+    execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set $strength player_motion.api.launch 8000
+    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.AnimationTimer matches 6 run tp @s @s
     execute if entity @s[tag=!Ply.Flag.CounterSuccess] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength player_motion.api.launch 4000
     execute if entity @s[tag=Ply.Flag.CounterSuccess] if score @s Wpn.AnimationTimer matches 6 run scoreboard players set $strength player_motion.api.launch 9000

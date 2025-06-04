@@ -29,9 +29,11 @@
     execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches 3.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack_pursuit
     execute if score @s Wpn.GeneralTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 3.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack_pursuit
     execute if score @s Wpn.GeneralTimer matches 10 if score @s Wpn.Gs.ChargeCount matches 3.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack
-    
+
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 3 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 20 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s ~ ~0.05 ~

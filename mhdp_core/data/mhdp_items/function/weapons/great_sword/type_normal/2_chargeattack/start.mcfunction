@@ -4,11 +4,11 @@
 #
 # @within function mhdp_items:weapons/great_sword/type_normal/1_charge/change_to_chargeattack
 
+# 前処理
+    function mhdp_items:weapons/great_sword/util/before_attack
+
 # タグ付与
     tag @s add Wpn.Gs.Normal.ChargeSlash
+    tag @s remove Ply.Weapon.NoOpe
 
-# attribute設定
-    attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -1 add_value
-
-# say 武器操作：大剣・溜め斬り
+# say 大剣・溜め斬り
