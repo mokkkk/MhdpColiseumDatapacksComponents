@@ -30,8 +30,9 @@
     execute if score @s Wpn.Gs.ChargeTimer matches 170.. if score @s Wpn.Gs.ChargeCount matches ..0 run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/up_charge_count
     execute if score @s Wpn.Gs.ChargeTimer matches 340.. if score @s Wpn.Gs.ChargeCount matches ..1 run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/up_charge_count
     execute if score @s Wpn.Gs.ChargeTimer matches 510.. if score @s Wpn.Gs.ChargeCount matches ..2 run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/up_charge_count
-    execute if score @s Wpn.Gs.ChargeCount matches ..2 run particle trial_spawner_detection_ominous ~ ~1.2 ~ 0.4 0.3 0.4 0.0 1
-    execute if score @s Wpn.Gs.ChargeCount matches 3.. run particle firework ~ ~1.2 ~ 0.2 0.3 0.2 0.3 1
+    execute if score @s Wpn.Gs.ChargeCount matches ..2 run particle trial_spawner_detection ~ ~1.2 ~ 0.4 0.3 0.4 0.0 1
+    execute if score @s Wpn.Gs.ChargeCount matches 3.. run particle trial_spawner_detection ~ ~1.2 ~ 0.4 0.3 0.4 0.0 1
+    execute if score @s Wpn.Gs.ChargeCount matches 3.. run particle trial_spawner_detection_ominous ~ ~1.2 ~ 0.4 0.3 0.4 0.0 1
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
