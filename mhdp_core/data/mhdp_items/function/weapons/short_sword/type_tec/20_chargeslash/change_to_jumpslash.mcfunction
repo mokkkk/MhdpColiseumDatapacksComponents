@@ -4,6 +4,7 @@
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/16_just_4/main
 
+# タグ消去
     tag @s remove Ply.Flag.Hit
     
 # 対象の処理を実行

@@ -2,7 +2,7 @@
 #
 # 駆け上がり斬り メイン処理
 #
-# @within function mhdp_items:weapons/great_sword/type_tec/main
+# @within function mhdp_items:weapons/short_sword/type_tec/main
 
 # 操作表示
     execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"駆け上がり斬り"}
