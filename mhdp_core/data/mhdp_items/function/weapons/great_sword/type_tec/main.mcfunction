@@ -11,6 +11,16 @@
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/great_sword/type_tec/0_drawattack/start
     execute if entity @s[tag=Ply.Ope.StartSneak,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/great_sword/type_tec/0_drawattack/start_guard
 
+# 特殊空中攻撃：ハンティングエッジ
+    # 開始
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Flag.SpJumpAttack,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/great_sword/type_tec/10_hunting_edge/start
+    # 攻撃
+        execute if entity @s[tag=Wpn.Gs.Tec.HuntingEdge] run function mhdp_items:weapons/great_sword/type_tec/10_hunting_edge/main
+    # 空中溜め
+        execute if entity @s[tag=Wpn.Gs.Tec.Charge.Edge] run function mhdp_items:weapons/great_sword/type_tec/11_charge_edge/main
+    # 空中溜め斬り
+        execute if entity @s[tag=Wpn.Gs.Tec.ChargeSlash.Edge] run function mhdp_items:weapons/great_sword/type_tec/12_chargeattack_edge/main
+
 # 溜め
     # 通常
         # 開始：右クリック長押し
@@ -64,14 +74,6 @@
     # 攻撃
         # 処理
             execute if entity @s[tag=Wpn.Gs.Tec.Cross] run function mhdp_items:weapons/great_sword/type_tec/15_cross/main
-
-# 鉄蟲糸技：ハンティングエッジ
-    # 攻撃
-        execute if entity @s[tag=Wpn.Gs.Tec.HuntingEdge] run function mhdp_items:weapons/great_sword/type_tec/10_hunting_edge/main
-    # 空中溜め
-        execute if entity @s[tag=Wpn.Gs.Tec.Charge.Edge] run function mhdp_items:weapons/great_sword/type_tec/11_charge_edge/main
-    # 空中溜め斬り
-        execute if entity @s[tag=Wpn.Gs.Tec.ChargeSlash.Edge] run function mhdp_items:weapons/great_sword/type_tec/12_chargeattack_edge/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

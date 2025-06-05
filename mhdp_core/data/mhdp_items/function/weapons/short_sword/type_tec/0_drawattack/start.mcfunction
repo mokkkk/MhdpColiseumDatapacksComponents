@@ -12,7 +12,7 @@
     tag @s add Ply.Flag.DrawAttack
 
 # 通常：突進斬りに移行
-    execute if entity @s[tag=!Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/start
+    execute if entity @s[tag=!Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/start
 
 # 翔蟲：飛影に移行
     execute if entity @s[tag=Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/start

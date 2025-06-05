@@ -11,10 +11,10 @@
     function mhdp_items:player/weapon/sheathe/force_drawing
 
 # 通常：抜刀溜めに移行
-    execute if entity @s[tag=!Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/great_sword/type_normal/5_charge_draw/start
+    execute if entity @s[tag=!Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/great_sword/type_normal/5_charge_draw/start
 
 # 翔蟲：ハンティングエッジに移行
-    execute if entity @s[tag=Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/great_sword/type_normal/10_hunting_edge/start
+    execute if entity @s[tag=Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/great_sword/type_normal/10_hunting_edge/start
 
 # チュートリアル用処理
     tag @s remove Ply.Temp.Tutorial.DrawAttack

@@ -4,15 +4,12 @@
 #
 # @within function mhdp_items:weapons/bow/type_tec/1_charge/change_to_chargeattack
 
-# タイマー初期化
-    scoreboard players set @s Wpn.GeneralTimer 0
-    scoreboard players set @s Wpn.AnimationTimer 0
+# 前処理
+    function mhdp_items:weapons/bow/util/before_attack
 
 # タグ付与
     tag @s add Wpn.Bw.Tec.Equip
-
-# attribute設定
-    attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
+    tag @s remove Ply.Weapon.NoOpe
     
 # その他初期化
     scoreboard players set @s Wpn.Bw.ChargeTimer 0
