@@ -40,10 +40,9 @@
     execute if score @s Wpn.GeneralTimer matches 1..14 anchored eyes run particle enchanted_hit ^ ^ ^0.5 0.1 0.1 0.1 0.5 1
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1..14 run effect give @s slowness 1 3 true
-    execute if score @s Wpn.GeneralTimer matches 15 run effect clear @s slowness
-    execute if score @s Wpn.GeneralTimer matches 1 run attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 1 run attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 15 run function api:weapon_operation/attribute_reset
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 15 run tp @s @s
@@ -58,9 +57,9 @@
     
 # 遷移
     # 右クリック長押し：溜めに移行
-        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 15..29 run function mhdp_items:weapons/bow/type_tec/7_shot_horming/change_to_charge
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 15..29 run function mhdp_items:weapons/bow/type_tec/1_charge/start_from_shot
     # ジャンプ：チャージステップに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 15..29 if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/change_to_chargestep
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 15..29 if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/4_charge_step/start
 
 # 終了
     execute if entity @s[tag=Wpn.Bw.Tec.Shot.Horming] if score @s Wpn.GeneralTimer matches 30.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/end
