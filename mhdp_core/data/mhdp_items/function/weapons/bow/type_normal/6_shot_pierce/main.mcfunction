@@ -46,10 +46,9 @@
     execute if score @s Wpn.GeneralTimer matches 11..999 anchored eyes run particle crit ^ ^ ^0.5 0.1 0.1 0.1 0.5 1
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1..999 run effect give @s slowness 1 5 true
-    execute if score @s Wpn.GeneralTimer matches 1001 run effect clear @s slowness
-    execute if score @s Wpn.GeneralTimer matches 1 run attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 1 run attribute @s jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 1001 run function api:weapon_operation/attribute_reset
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1001 run tp @s @s
@@ -61,7 +60,7 @@
 
 # 遷移
     # 右クリック押し続け：竜の千々矢に移行
-        execute if score @s Wpn.GeneralTimer matches 56 run function mhdp_items:weapons/bow/type_normal/6_shot_pierce/change_to_shower
+        execute if score @s Wpn.GeneralTimer matches 56 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/start
 
 # 終了
     execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..30 run function mhdp_items:weapons/bow/type_normal/6_shot_pierce/end
