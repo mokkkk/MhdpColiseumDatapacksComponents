@@ -40,8 +40,7 @@
     execute if score @s Wpn.GeneralTimer matches 1..14 anchored eyes run particle enchanted_hit ^ ^ ^0.5 0.1 0.1 0.1 0.5 1
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
-    execute if score @s Wpn.GeneralTimer matches 15 run function api:weapon_operation/attribute_reset
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
