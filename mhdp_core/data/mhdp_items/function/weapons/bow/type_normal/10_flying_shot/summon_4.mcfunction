@@ -25,10 +25,3 @@
     data modify storage api: Arg.Override.IsFlyingShot set value true
     data modify storage api: Arg.Override.Speed set value "C"
     execute positioned ^-0.05 ^0.15 ^ rotated ~0.2 ~-0.6 run function api:object/summon.m {ObjectId:1}
-# 召喚
-    execute store result storage api: Arg.Override.PlyUid int 1 run scoreboard players get @s Ply.Uid
-    data modify storage api: Arg.Override.ChargeCount set value 4
-    data modify storage api: Arg.Override.IsTec set value false
-    data modify storage api: Arg.Override.IsFlyingShot set value true
-    data modify storage api: Arg.Override.Speed set value "D"
-    execute positioned ^ ^0.25 ^-0.4 rotated ~0.2 ~-0.7 run function api:object/summon.m {ObjectId:1}

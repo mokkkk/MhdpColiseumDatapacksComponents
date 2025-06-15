@@ -1,8 +1,8 @@
-#> assets:object/0001.normal_arrow/tick/move
+#> assets:object/0002.pierce_arrow/tick/move
 #
 # 矢の召喚処理
 #
-# @within function assets:object/0001.normal_arrow/tick/
+# @within function assets:object/0002.pierce_arrow/tick/
 
 # 移動
     tp @s ^ ^ ^1
