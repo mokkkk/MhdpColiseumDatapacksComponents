@@ -84,6 +84,10 @@
         scoreboard objectives add Mns.Tutorial.Text dummy {"text":"チュートリアル","color":"gold","bold":true}
         scoreboard objectives modify Mns.Tutorial.Text displayname {"text":"チュートリアル","color":"gold","bold":true,"underlined":true}
 
+# asset関連
+    # ID
+        scoreboard objectives add ObjectId dummy
+
 ## Scoreboard初期値設定
 # プレイヤーUID
     execute unless score #mhdp_player_uid_grobal Ply.Uid matches -2147483648.. run scoreboard players set #mhdp_player_uid_grobal Ply.Uid 1
