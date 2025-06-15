@@ -19,7 +19,7 @@
     execute if data storage api: Arg.Override{Speed:"B"} run tag @s add 1.Speed.B
     execute if data storage api: Arg.Override{Speed:"C"} run tag @s add 1.Speed.C
 
-# 飛翔睨み撃ちかどうか
+# 飛翔睨み撃ち
     execute if data storage api: Arg.Override{IsFlyingShot:true} run tag @s add 1.IsFlyingShot
 
 # ビン

@@ -14,6 +14,7 @@
 
 # 型ごとの処理実行
     execute unless entity @s[tag=2.IsTec] run function assets:object/0002.pierce_arrow/tick/attack_normal
+    execute if entity @s[tag=2.IsTec] run function assets:object/0002.pierce_arrow/tick/attack_tec
 
 # 終了
     tag @a remove 2.TargetPlayer

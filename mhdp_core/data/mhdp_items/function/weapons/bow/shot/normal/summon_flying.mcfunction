@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/bow/shot/normal/summon_2
+#> mhdp_items:weapons/bow/shot/normal/summon_flying
 #
 # 矢の召喚処理
 #
@@ -8,7 +8,7 @@
     execute store result storage api: Arg.Override.PlyUid int 1 run scoreboard players get @s Ply.Uid
     execute store result storage api: Arg.Override.ChargeCount int 1 run scoreboard players get @s Wpn.Bw.ChargeCount
     data modify storage api: Arg.Override.IsTec set value true
-    data modify storage api: Arg.Override.IsFlyingShot set value false
+    data modify storage api: Arg.Override.IsFlyingShot set value true
     data modify storage api: Arg.Override.Speed set value "A"
     execute if score @s Wpn.Bw.Bottle.Count matches 1.. run function mhdp_items:weapons/bow/shot/apply_bottle_effect
     execute positioned ^ ^ ^ rotated ~ ~-0.5 run function api:object/summon.m {ObjectId:1}
@@ -16,7 +16,7 @@
     execute store result storage api: Arg.Override.PlyUid int 1 run scoreboard players get @s Ply.Uid
     execute store result storage api: Arg.Override.ChargeCount int 1 run scoreboard players get @s Wpn.Bw.ChargeCount
     data modify storage api: Arg.Override.IsTec set value true
-    data modify storage api: Arg.Override.IsFlyingShot set value false
+    data modify storage api: Arg.Override.IsFlyingShot set value true
     data modify storage api: Arg.Override.Speed set value "B"
     execute if score @s Wpn.Bw.Bottle.Count matches 1.. run function mhdp_items:weapons/bow/shot/apply_bottle_effect
     execute positioned ^0.06 ^0.1 ^ rotated ~-0.3 ~-0.55 run function api:object/summon.m {ObjectId:1}
@@ -24,7 +24,7 @@
     execute store result storage api: Arg.Override.PlyUid int 1 run scoreboard players get @s Ply.Uid
     execute store result storage api: Arg.Override.ChargeCount int 1 run scoreboard players get @s Wpn.Bw.ChargeCount
     data modify storage api: Arg.Override.IsTec set value true
-    data modify storage api: Arg.Override.IsFlyingShot set value false
+    data modify storage api: Arg.Override.IsFlyingShot set value true
     data modify storage api: Arg.Override.Speed set value "C"
     execute if score @s Wpn.Bw.Bottle.Count matches 1.. run function mhdp_items:weapons/bow/shot/apply_bottle_effect
     execute positioned ^-0.05 ^0.15 ^ rotated ~0.2 ~-0.6 run function api:object/summon.m {ObjectId:1}

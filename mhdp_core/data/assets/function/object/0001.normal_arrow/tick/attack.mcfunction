@@ -14,6 +14,7 @@
 
 # 型ごとの処理実行
     execute unless entity @s[tag=1.IsTec] run function assets:object/0001.normal_arrow/tick/attack_normal
+    execute if entity @s[tag=1.IsTec] run function assets:object/0001.normal_arrow/tick/attack_tec
 
 # 終了
     tag @s add 1.Death
