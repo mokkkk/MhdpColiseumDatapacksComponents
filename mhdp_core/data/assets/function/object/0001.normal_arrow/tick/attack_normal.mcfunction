@@ -34,5 +34,3 @@
 # 終了
     scoreboard players reset #mhdp_temp_crit_min MhdpCore
     scoreboard players reset #mhdp_temp_crit_max MhdpCore
-
-say attack

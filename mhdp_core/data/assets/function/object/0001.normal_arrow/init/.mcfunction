@@ -24,5 +24,3 @@
 
 # ビン
     execute if data storage api: Arg.Override{Bin:"Strong"} run tag @s add 1.Bin.Strong
-
-say 矢 init
