@@ -1,4 +1,4 @@
-#> assets:core/execute.m
+#> assets:core/object/execute.m
 #
 # オブジェクトtick共通処理
 #

@@ -19,6 +19,9 @@
 # モンスターの個別処理
     execute as @e[type=item_display,tag=Mns.Root] at @s run function mhdp_monsters:core/switch/tick
 
+# オブジェクトの処理
+    execute as @e[tag=Asset.Object] at @s run function assets:core/object/tick
+
 # 射撃Entityの処理
 # モンスターの射撃は各モンスターの処理に移譲する
     execute as @e[type=item_display,tag=Other.Shot] at @s run function mhdp_core:other_entity/shot/tick

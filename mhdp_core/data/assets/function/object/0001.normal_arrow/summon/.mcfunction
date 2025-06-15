@@ -1,9 +1,8 @@
-#> mhdp_items:weapons/bow/shot/normal/summon_0
+#> assets:object/0001.normal_arrow/summon/
 #
-# 矢の召喚処理
-#
-# @within function mhdp_items:/**
+# オブジェクト召喚処理
 
 # 召喚
-    summon item_display ^ ^ ^ {teleport_duration:0,Tags:["Other.Shot","Wpn.Bw.Shot.Normal","Start"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.2f,1.2f,1.2f]},item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"shot/player/arrow"}}}
-    tp @n[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Normal] ~ ~ ~ ~ ~-0.5
+    summon item_display ^ ^ ^ {teleport_duration:0,Tags:["Asset.Object","Asset.Object.Init"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.2f,1.2f,1.2f]},item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"shot/player/arrow"}}}
+
+say 矢 summon

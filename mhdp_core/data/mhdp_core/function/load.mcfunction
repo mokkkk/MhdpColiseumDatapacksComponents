@@ -87,6 +87,8 @@
 # asset関連
     # ID
         scoreboard objectives add ObjectId dummy
+    # 処理用
+        scoreboard objectives add ObjectTick dummy
 
 ## Scoreboard初期値設定
 # プレイヤーUID
