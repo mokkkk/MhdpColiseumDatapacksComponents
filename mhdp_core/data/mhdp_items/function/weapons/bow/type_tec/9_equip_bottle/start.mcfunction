@@ -16,6 +16,6 @@
     scoreboard players set @s Wpn.Bw.ChargeCount 0
 
 # ゲージ消費
-    scoreboard players remove @s Wpn.Bw.Gauge 100
+    # scoreboard players remove @s Wpn.Bw.Gauge 100
 
 # say 武器操作：弓 ビン装填

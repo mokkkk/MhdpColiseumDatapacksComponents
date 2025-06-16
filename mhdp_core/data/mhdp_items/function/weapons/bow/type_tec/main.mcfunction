@@ -48,7 +48,7 @@
 
 # ビン装填
     # 開始：スニーク+右クリック短押し
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Wpn.Bw.Gauge matches 100.. run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Wpn.Bw.Gauge matches 13.. if score @s Wpn.Bw.Bottle.Count matches ..7 run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.Equip] run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/main
 
