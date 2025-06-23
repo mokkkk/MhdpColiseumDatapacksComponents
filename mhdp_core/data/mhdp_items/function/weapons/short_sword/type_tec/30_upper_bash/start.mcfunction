@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/short_sword/type_tec/14_just_2/start
+#> mhdp_items:weapons/short_sword/type_tec/30_upper_bash/start
 #
 # 滅・昇竜撃 開始
 #
@@ -12,8 +12,8 @@
     tag @s remove Ply.Weapon.NoOpe
 
 # ゲージ消費
-    # scoreboard players set @s Ply.Stats.Arts.1 0
-    # scoreboard players set @s Ply.Stats.Arts.1.Percent 0
+    scoreboard players set @s Ply.Stats.Arts.1 0
+    scoreboard players set @s Ply.Stats.Arts.1.Percent 0
 
 # 演出
     playsound entity.player.levelup master @s ~ ~ ~ 1 1.5

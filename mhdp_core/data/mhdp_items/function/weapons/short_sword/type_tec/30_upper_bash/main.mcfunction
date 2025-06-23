@@ -24,6 +24,11 @@
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 9 run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/attack
+    execute if entity @s[tag=Ply.Flag.Hit,tag=Ply.Flag.Ss.UpperBashCounter] if score @s Wpn.GeneralTimer matches 18 run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/attack_pursuit
+    execute if entity @s[tag=Ply.Flag.Hit,tag=Ply.Flag.Ss.UpperBashCounter] if score @s Wpn.GeneralTimer matches 21 run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/attack_pursuit
+    execute if entity @s[tag=Ply.Flag.Hit,tag=Ply.Flag.Ss.UpperBashCounter] if score @s Wpn.GeneralTimer matches 24 run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/attack_pursuit
+    execute if score @s Wpn.GeneralTimer matches 25 run tag @s remove Ply.Flag.Hit
+    execute if score @s Wpn.GeneralTimer matches 25 run tag @s remove Ply.Flag.Ss.UpperBashCounter
 
 # 効果音・パーティクル
     execute if score @s Wpn.GeneralTimer matches 6 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
@@ -34,6 +39,7 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 at @s run tp @s ~ ~ ~ ~0.5 ~-1
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 8..11 at @s run tp @s ~ ~ ~ ~0.5 ~1
     execute if score @s Wpn.GeneralTimer matches 8 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s Wpn.GeneralTimer matches 8 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
@@ -48,12 +54,12 @@
 # ガード判定
     execute if score @s Wpn.GeneralTimer matches 7 run tag @s add Ply.Weapon.Guard
     execute if score @s Wpn.GeneralTimer matches 7 run tag @s add Ply.Weapon.Armor.Hyper
-    execute if score @s Wpn.GeneralTimer matches 12 run tag @s remove Ply.Weapon.Guard
-    execute if score @s Wpn.GeneralTimer matches 12 run tag @s remove Ply.Weapon.Armor.Hyper
+    execute if score @s Wpn.GeneralTimer matches 11 run tag @s remove Ply.Weapon.Guard
+    execute if score @s Wpn.GeneralTimer matches 11 run tag @s remove Ply.Weapon.Armor.Hyper
 
 # 遷移
     # 右クリック：強フォールバッシュに移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 21..34 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/start
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 25..34 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 35.. run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/end

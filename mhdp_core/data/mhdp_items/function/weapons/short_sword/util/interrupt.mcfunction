@@ -18,6 +18,8 @@
 
 # 状態タグ削除
     function api:weapon_operation/remove_state_tags
+    # 片手剣独自
+        tag @s remove Ply.Flag.Ss.UpperBashCounter
 
 # アニメーション停止
     function mhdp_items:weapons/short_sword/util/stop_all_animations
