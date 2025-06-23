@@ -4,7 +4,7 @@
 #
 # @within function mhdp_items:core/switch/macro/m.on_attack
 
-# モーション値取得
+# 狩技ゲージ上昇
     function api:weapon_operation/charge_arts.m with storage api: Return
 
 # 終了

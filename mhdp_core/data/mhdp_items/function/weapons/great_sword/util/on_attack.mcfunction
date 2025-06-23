@@ -4,8 +4,8 @@
 #
 # @within function mhdp_items:core/switch/macro/m.on_attack
 
-# モーション値取得
-    # api: Return.DamageMult
+# 狩技ゲージ上昇
+    function api:weapon_operation/charge_arts.m with storage api: Return
 
 # 相殺成功判定
     execute if entity @s[tag=Wpn.Gs.Tec.Upper] if data storage api: Return{Counter:true} run tag @s add Ply.Flag.CounterSuccess
