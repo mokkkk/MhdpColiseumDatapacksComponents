@@ -1,4 +1,4 @@
-#> mhdp_items:player/ui/arts_2/append_using_1
+#> mhdp_items:player/ui/arts_2/append_using_2
 #
 # UI表示処理等 スタミナ関連 再起処理
 #

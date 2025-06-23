@@ -10,7 +10,7 @@
     scoreboard players operation @s Ply.Stats.Arts.1.Percent *= #const_6 Const
 
 # ゲージ満タンの場合の処理
-    execute if score @s Ply.Stats.Arts.1.Percent matches 600.. run return run function mhdp_items:player/ui/arts/full_1
+    execute if entity @s[tag=!Ply.Weapon.UsingArts.2] if score @s Ply.Stats.Arts.1.Percent matches 600.. run return run function mhdp_items:player/ui/arts/full_1
 
 # UI設定
     scoreboard players operation #mhdp_temp_arts MhdpCore = @s Ply.Stats.Arts.1.Percent
