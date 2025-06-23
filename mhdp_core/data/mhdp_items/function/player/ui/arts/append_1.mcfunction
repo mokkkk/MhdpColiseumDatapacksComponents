@@ -3,6 +3,9 @@
 # UI表示処理等 スタミナ関連 再起処理
 #
 
+# 満タンの場合
+    execute if score @s Ply.Stats.Arts.1.Percent matches 600..
+
 # 値を入れる
     execute if score #mhdp_temp_arts MhdpCore matches ..9 run data modify storage mhdp_core:temp UI.ArtsArray1 append value [{"text":"0","font":"ui/arts_1"},{"text": "\uF801","font": "space"}]
     execute if score #mhdp_temp_arts MhdpCore matches 10..19 run data modify storage mhdp_core:temp UI.ArtsArray1 append value [{"text":"1","font":"ui/arts_1"},{"text": "\uF801","font": "space"}]

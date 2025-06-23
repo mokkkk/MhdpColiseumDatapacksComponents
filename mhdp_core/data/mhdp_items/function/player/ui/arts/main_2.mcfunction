@@ -3,13 +3,11 @@
 # UI表示処理等 スタミナ関連
 #
 
-# 最大値から、割合を算出
-    scoreboard players operation #mhdp_temp_arts MhdpCore = @s Ply.Stats.Arts.2
-    scoreboard players operation #mhdp_temp_arts MhdpCore *= #const_100 Const
-    scoreboard players operation #mhdp_temp_arts MhdpCore /= @s Ply.Stats.Arts.2.Max
-    scoreboard players operation #mhdp_temp_arts MhdpCore *= #const_6 Const
+# ゲージ満タンの場合の処理
+    execute if score @s Ply.Stats.Arts.2.Percent matches 600.. run return run function mhdp_items:player/ui/arts/full_2
 
 # UI設定
+    scoreboard players operation #mhdp_temp_arts MhdpCore = @s Ply.Stats.Arts.2.Percent
     function mhdp_items:player/ui/arts/append_2
     scoreboard players operation #mhdp_temp_arts MhdpCore -= #const_100 Const
     function mhdp_items:player/ui/arts/append_2

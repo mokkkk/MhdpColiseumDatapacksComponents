@@ -15,3 +15,5 @@
     scoreboard players set @s Ply.Stats.Arts.2 0
     scoreboard players set @s Ply.Stats.Arts.1.Max 600
     scoreboard players set @s Ply.Stats.Arts.2.Max 1200
+    scoreboard players set @s Ply.Stats.Arts.1.Percent 0
+    scoreboard players set @s Ply.Stats.Arts.2.Percent 0
