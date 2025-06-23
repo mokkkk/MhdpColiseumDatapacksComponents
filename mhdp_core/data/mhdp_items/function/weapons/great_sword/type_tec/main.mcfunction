@@ -28,6 +28,12 @@
     # 処理
         execute if entity @s[tag=Wpn.Gs.Tec.PowerSheathe] run function mhdp_items:weapons/great_sword/type_tec/17_power_sheathe/main
 
+# 威姿呵成の構え
+    # 構え
+        execute if entity @s[tag=Wpn.Gs.Tec.CounterStance] run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/main
+    # 成功
+        execute if entity @s[tag=Wpn.Gs.Tec.CounterStance.Success] run function mhdp_items:weapons/great_sword/type_tec/20_counter_stance_success/main
+
 # 溜め
     # 通常
         # 開始：右クリック長押し
