@@ -71,11 +71,14 @@
     execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 22 at @s run tp @s ~ ~ ~ ~1 ~
 
 # 先行入力
+    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max if score @s Wpn.GeneralTimer matches 20..59 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 20..59 run function mhdp_items:core/buffering/jump
 
 # 遷移
+    # スニーク+ジャンプ：狩技・強化納刀に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 34.. run function mhdp_items:weapons/great_sword/type_tec/17_power_sheathe/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/util/move_jump
-    
+
 # 終了
     execute if score @s Wpn.GeneralTimer matches 60.. run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/end

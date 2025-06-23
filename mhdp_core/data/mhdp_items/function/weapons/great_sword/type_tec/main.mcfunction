@@ -21,6 +21,10 @@
     # 空中溜め斬り
         execute if entity @s[tag=Wpn.Gs.Tec.ChargeSlash.Edge] run function mhdp_items:weapons/great_sword/type_tec/12_chargeattack_edge/main
 
+# 狩技：強化納刀
+    # 処理
+        execute if entity @s[tag=Wpn.Gs.Tec.PowerSheathe] run function mhdp_items:weapons/great_sword/type_tec/17_power_sheathe/main
+
 # 溜め
     # 通常
         # 開始：右クリック長押し

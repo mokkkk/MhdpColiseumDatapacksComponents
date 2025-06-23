@@ -63,10 +63,13 @@
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 1..39 run function mhdp_items:core/buffering/jump
+    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max if score @s Wpn.GeneralTimer matches 1..39 run function mhdp_items:core/buffering/a
 
 # 遷移
     # カウンター成功後、右クリック長押し：十字斬り・移動に移行
         execute if entity @s[tag=Ply.Flag.CounterSuccess,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 25.. run function mhdp_items:weapons/great_sword/type_tec/16_cross_move/start
+    # スニーク+ジャンプ：狩技・強化納刀に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A,tag=!Ply.Flag.CounterSuccess] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/type_tec/17_power_sheathe/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/util/move_jump
 
