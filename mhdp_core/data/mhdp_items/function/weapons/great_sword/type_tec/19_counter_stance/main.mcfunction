@@ -23,8 +23,8 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # アーマー
-    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.Armod.Hyper
-    execute if score @s Wpn.GeneralTimer matches 39 run tag @s remove Ply.Weapon.Armod.Hyper
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.Armor.Hyper
+    execute if score @s Wpn.GeneralTimer matches 39 run tag @s remove Ply.Weapon.Armor.Hyper
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/end

@@ -17,6 +17,12 @@
     # 処理
         execute if entity @s[tag=Wpn.Ss.Tec.Tobikage] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/main
 
+# 狩技：滅昇竜撃
+    # 開始
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeyBack,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/start
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Tec.UpperBash] run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/main
+
 # ガード
     # 開始：右クリック短押し
             execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_tec/24_guard/start

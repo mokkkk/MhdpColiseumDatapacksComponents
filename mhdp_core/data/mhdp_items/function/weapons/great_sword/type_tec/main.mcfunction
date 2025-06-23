@@ -28,7 +28,7 @@
     # 処理
         execute if entity @s[tag=Wpn.Gs.Tec.PowerSheathe] run function mhdp_items:weapons/great_sword/type_tec/17_power_sheathe/main
 
-# 威姿呵成の構え
+# 狩技：威姿呵成の構え
     # 構え
         execute if entity @s[tag=Wpn.Gs.Tec.CounterStance] run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/main
     # 成功

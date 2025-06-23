@@ -47,8 +47,8 @@
     execute if score @s Wpn.AnimationTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 3.. rotated ~ -60 run function player_motion:api/launch_looking
 
 # アーマー
-    execute if score @s Wpn.GeneralTimer matches 1 if score @s Wpn.Gs.ChargeCount matches 3.. run tag @s add Ply.Weapon.Armod.Hyper
-    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches 3.. run tag @s remove Ply.Weapon.Armod.Hyper
+    execute if score @s Wpn.GeneralTimer matches 1 if score @s Wpn.Gs.ChargeCount matches 3.. run tag @s add Ply.Weapon.Armor.Hyper
+    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches 3.. run tag @s remove Ply.Weapon.Armor.Hyper
 
 # 演出
    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2

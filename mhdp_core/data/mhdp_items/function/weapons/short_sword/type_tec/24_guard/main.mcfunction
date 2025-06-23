@@ -21,11 +21,13 @@
 
 # 遷移  
     # 移動せず右クリック：ガード斬りに移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.IsKeyForward] if score @s Wpn.GeneralTimer matches 3.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_guardslash
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsKeyBack] if score @s Wpn.GeneralTimer matches 3.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_guardslash
     # 前移動+右クリック：盾攻撃に移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsKeyForward] if score @s Wpn.GeneralTimer matches 3.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_bash
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsKeyBack] if score @s Wpn.GeneralTimer matches 3.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_bash
     # ジャンプ：バックステップに移行
         execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 3.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_backstep
-
+    # 後移動+右クリック：昇竜に移行
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeyBack] if score @s Wpn.GeneralTimer matches 3.. unless score @s Wpn.GuardStopTimer matches 1.. if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/start
+    
 # 終了
     execute if entity @s[tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 10.. if score @s Wpn.GuardStopTimer matches 0 run function mhdp_items:weapons/short_sword/type_tec/24_guard/end

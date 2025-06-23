@@ -29,7 +29,7 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # アーマー終了
-    execute if score @s Wpn.GeneralTimer matches 5 run tag @s remove Ply.Weapon.Armod.Hyper
+    execute if score @s Wpn.GeneralTimer matches 5 run tag @s remove Ply.Weapon.Armor.Hyper
 
 # 右クリック長押し：真溜めに移行
     execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/start_with_stance

@@ -33,7 +33,7 @@
 
 # 相殺成功時
     # アーマー開始
-        execute if entity @s[tag=Ply.Flag.CounterSuccess] run tag @s add Ply.Weapon.Armod.Hyper
+        execute if entity @s[tag=Ply.Flag.CounterSuccess] run tag @s add Ply.Weapon.Armor.Hyper
     # 攻撃対象取得
         execute if entity @s[tag=Ply.Flag.CounterSuccess] run scoreboard players operation @s Ply.Other.AttackTargetUuid = @n[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] Entity.Uuid
     # ヒットストップ
