@@ -3,6 +3,11 @@
 # UI表示処理等 スタミナ関連 再起処理
 #
 
+# 点滅
+    execute if score #mhdp_core_tick MhdpCore matches ..3 run return run function mhdp_items:player/ui/arts/append_using_white_2
+    execute if score #mhdp_core_tick MhdpCore matches 8..12 run return run function mhdp_items:player/ui/arts/append_using_white_2
+    execute if score #mhdp_core_tick MhdpCore matches 17.. run return run function mhdp_items:player/ui/arts/append_using_white_2
+
 # 値を入れる
     execute if score #mhdp_temp_arts MhdpCore matches ..9 run data modify storage mhdp_core:temp UI.ArtsArray2 append value [{"text":"f","font":"ui/arts_2"},{"text": "\uF801","font": "space"}]
     execute if score #mhdp_temp_arts MhdpCore matches 10..19 run data modify storage mhdp_core:temp UI.ArtsArray2 append value [{"text":"g","font":"ui/arts_2"},{"text": "\uF801","font": "space"}]
