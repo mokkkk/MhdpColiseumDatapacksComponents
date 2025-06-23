@@ -14,8 +14,8 @@
         {"text":"  モンスター毎に有効な部位は異なり、\n"},\
         {"text":"  有効部位への攻撃はダメージが "},{"text":"オレンジ色","color": "#ff9900","bold": true},{"text": " で表示されます。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 91"},"color": "#ff7300","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 91"},"color": "#ff7300","font":"icons/book"},\
         {"text":"\n"}\
     ]
 
@@ -27,8 +27,8 @@
         {"text":"  部位によっては "},{"text":"部位破壊","color": "#ff9900","bold": true},{"text": " が発生します。\n"},\
         {"text":"  部位破壊すると、貰える報酬が増えたり、\n  モンスターの攻撃が弱体化することがあります。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 90"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 92"},"color": "#ff7300","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 90"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 92"},"color": "#ff7300","font":"icons/book"},\
         {"text":"\n"}\
     ]
 
@@ -40,7 +40,7 @@
         {"text":"  例えば、足に攻撃し続けると "},{"text":"モンスターが転倒する","color": "#ff9900","bold": true},{"text": " ことがあります。\n"},\
         {"text":"  モンスターによって有効な部位は異なるので、\n  戦う相手によって狙う部位を変えましょう。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 91"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 91"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
         {"text":"\n"}\
     ]

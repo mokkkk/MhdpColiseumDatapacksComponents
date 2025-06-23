@@ -1,17 +1,16 @@
-#> mhdp_items:weapons/great_sword/type_tec/4_guard/start
+#> mhdp_items:weapons/short_sword/type_tec/24_guard/start
 #
 # ガード 開始
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
+# 前処理
+    function mhdp_items:weapons/short_sword/util/before_attack
+
 # タグ付与
     tag @s add Wpn.Ss.Tec.Guard
     tag @s add Ply.Weapon.Guard
     tag @s remove Ply.Weapon.NoOpe
-
-# attribute設定
-    attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
 
 # スタミナ回復停止
     tag @s add Ply.Weapon.StaminaNotRegen
@@ -20,6 +19,6 @@
     playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # タイマー初期化
-    scoreboard players set @s Wpn.GuardStopTimer 0
+    scoreboard players set @s Wpn.GuardStopTimer 2
 
 # say 武器操作：片手剣・ガード

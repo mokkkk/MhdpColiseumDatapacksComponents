@@ -8,6 +8,7 @@
     # 効果音
         playsound entity.player.burp master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
     # HPを5回復
-        summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,potion_contents:{custom_effects:[{id:"minecraft:regeneration",amplifier:5,duration:10,show_particles:0b}]}}
+        summon area_effect_cloud ~ ~ ~ {Particle:{type:"block",block_state:"minecraft:air"},Radius:1f,Duration:6,Age:4,WaitTime:4,potion_contents:{custom_effects:[{id:"minecraft:regeneration",amplifier:5,duration:10,show_particles:0b,show_icon:0b}]}}
+        # summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,potion_contents:{custom_effects:[{id:"minecraft:regeneration",amplifier:5,duration:10,show_particles:0b}]}}
     # スタミナを減らす
         scoreboard players remove @s Ply.Stats.Stamina 250

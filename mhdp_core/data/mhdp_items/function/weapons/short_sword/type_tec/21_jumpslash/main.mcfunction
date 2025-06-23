@@ -2,7 +2,7 @@
 #
 # 駆け上がり斬り メイン処理
 #
-# @within function mhdp_items:weapons/great_sword/type_tec/main
+# @within function mhdp_items:weapons/short_sword/type_tec/main
 
 # 操作表示
     execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"駆け上がり斬り"}
@@ -17,7 +17,7 @@
     execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/animation_2
     execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/animation_3
     execute if score @s Wpn.AnimationTimer matches 9 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/animation_4
-    execute if score @s Wpn.AnimationTimer matches 12 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/animation_5
+    execute if score @s Wpn.AnimationTimer matches 18 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/animation_5
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 8 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/attack
@@ -31,20 +31,22 @@
     execute if score @s Wpn.AnimationTimer matches 7 positioned ~ ~1.65 ~ positioned ^ ^ ^1.5 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/particle
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 6 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 60 run function api:weapon_operation/attribute_reset
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/move
     execute if score @s Wpn.GeneralTimer matches 8 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 8 run scoreboard players set $strength delta.api.launch 10000
-    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ -90 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 8 run scoreboard players set $strength player_motion.api.launch 10000
+    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ -90 run function player_motion:api/launch_looking
 
 # 状態更新
     execute if score @s Wpn.GeneralTimer matches 8 run tag @s add Ply.Ope.IsAir
 
 # 遷移
     # 右クリック：フォールバッシュに移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/change_to_fall
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/short_sword/type_tec/22_fall/start
 
 # 終了
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/short_sword/type_tec/21_jumpslash/end

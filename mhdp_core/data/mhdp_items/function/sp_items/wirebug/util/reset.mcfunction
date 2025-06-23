@@ -14,7 +14,7 @@
     scoreboard players reset @s Itm.Wirebug.CoolTime
 
 # attribute初期化
-    attribute @s generic.gravity modifier remove mhdp_core:sp_item_gravity
+    attribute @s gravity modifier remove mhdp_core:sp_items_gravity
 
 # 念のため処理用Entityを削除
     kill @e[type=marker,tag=Mk.Sp.Wirebug.Rotation]

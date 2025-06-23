@@ -9,7 +9,7 @@
     kill @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target]
 
 # attribute初期化
-    attribute @s generic.gravity modifier remove mhdp_core:sp_item_gravity
+    attribute @s gravity modifier remove mhdp_core:sp_items_gravity
 
 # タグ消去
     tag @s remove Itm.Sp.Wirebug.Using

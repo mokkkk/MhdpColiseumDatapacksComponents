@@ -11,6 +11,7 @@
 # Content.Time
 #   day:日中 night：夜
 
+
 # 初期化
     data modify storage mhdp_core:game_data QuestList set value []
 
@@ -158,10 +159,10 @@
         Level:["","★","★★","★★★","★★★★","★★★★★","★★★★★★","★★★★★★★","★★★★★★★★"],\
         Field:[{ID:"Coliseum",Name:"闘技場"},{ID:"Test",Name:"その辺"}],\
         Monsters:[\
-            {ID:0,ShowName:{"text":"\\uE001","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"火竜てすと"}]}}},\
-            {ID:1,ShowName:{"text":"\\uE002","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"雌火竜てすと"}]}}},\
-            {ID:2,ShowName:{"text":"\\uE003","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"斬竜てすと"}]}}},\
-            {ID:3,ShowName:{"text":"\\uE004","color":"white","font":"icons/mhdp_icons","hoverEvent":{"action":"show_text","value":[{"text":"雷狼竜てすと"}]}}}\
+            {ID:0,ShowName:{"text":"\uE001","color":"white","font":"icons/mhdp_icons","hover_event":{"action":"show_text","value":[{"text":"火竜てすと"}]}}},\
+            {ID:1,ShowName:{"text":"\uE002","color":"white","font":"icons/mhdp_icons","hover_event":{"action":"show_text","value":[{"text":"雌火竜てすと"}]}}},\
+            {ID:2,ShowName:{"text":"\uE003","color":"white","font":"icons/mhdp_icons","hover_event":{"action":"show_text","value":[{"text":"斬竜てすと"}]}}},\
+            {ID:3,ShowName:{"text":"\uE004","color":"white","font":"icons/mhdp_icons","hover_event":{"action":"show_text","value":[{"text":"雷狼竜てすと"}]}}}\
         ]\
     }
 
@@ -172,4 +173,5 @@
 # 反映
     function mhdp_core:phase/1_village/start/quest/main
 
-# say クエストデータ初期化
+# デバッグ用
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} run say クエストデータ初期化

@@ -17,7 +17,7 @@
         Name:"tutorial_02",\
         UpperName:"Tutorial02",\
         JpName:"チュートリアル02",\
-        ShowName:'{"text":"チュートリアル02"}',\
+        ShowName:{"text":"チュートリアル02"},\
         LootTable:"mhdp_items:materials/tutorial_02",\
         ShowHp:true,\
         Hp:10000,\

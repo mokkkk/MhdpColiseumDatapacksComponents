@@ -22,10 +22,10 @@
     execute if score @s Wpn.AnimationTimer matches 12 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_7
     execute if score @s Wpn.AnimationTimer matches 14 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_8
     execute if score @s Wpn.AnimationTimer matches 16 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_9
-    execute if score @s Wpn.AnimationTimer matches 18 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_10
-    execute if score @s Wpn.AnimationTimer matches 19 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_11
-    execute if score @s Wpn.AnimationTimer matches 20 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_12
-    execute if score @s Wpn.AnimationTimer matches 22 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_13
+    execute if score @s Wpn.AnimationTimer matches 17 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_10
+    execute if score @s Wpn.AnimationTimer matches 18 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_11
+    execute if score @s Wpn.AnimationTimer matches 19 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_12
+    execute if score @s Wpn.AnimationTimer matches 20 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_13
     execute if score @s Wpn.AnimationTimer matches 28 run function mhdp_items:weapons/short_sword/type_tec/14_just_2/animation_14
 
 # 攻撃
@@ -59,13 +59,19 @@
     execute if score @s Wpn.GeneralTimer matches 28..32 positioned ~ ~1.65 ~ run particle crit ^ ^ ^1 0 0 0 0.5 1
     execute if score @s Wpn.GeneralTimer matches 33 run playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
     execute if score @s Wpn.GeneralTimer matches 33 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
-    
+
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 3 6 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
+
+# 先行入力
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 2..49 run function mhdp_items:core/buffering/jump
 
 # 遷移
     # 右クリック：ジャストラッシュ3に移行
         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 30.. run function mhdp_items:weapons/short_sword/type_tec/14_just_2/change_to_just_3
+    # ジャンプ回避
+        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 30.. run function mhdp_items:weapons/short_sword/util/move_jump
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 50.. run function mhdp_items:weapons/short_sword/type_tec/14_just_2/end

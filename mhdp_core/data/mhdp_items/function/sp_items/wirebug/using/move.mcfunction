@@ -6,14 +6,17 @@
 
 # 移動
     tp @s @s
-    scoreboard players set $strength delta.api.launch 14000
-    execute rotated as @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target] run function delta:api/launch_looking
+    scoreboard players set $strength player_motion.api.launch 14000
+    execute rotated as @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target] run function player_motion:api/launch_looking
+
+# 特殊空中攻撃フラグ有効
+    tag @s add Ply.Flag.SpJumpAttack
 
 # 空中フラグ有効
     tag @s add Ply.Ope.IsAir
 
 # 一時的に無重力化
-    attribute @s generic.gravity modifier add mhdp_core:sp_item_gravity -0.08 add_value
+    attribute @s gravity modifier add mhdp_core:sp_items_gravity -0.08 add_value
 
 # 終了
     kill @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target]

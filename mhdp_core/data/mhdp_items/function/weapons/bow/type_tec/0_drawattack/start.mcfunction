@@ -11,10 +11,10 @@
     function mhdp_items:player/weapon/sheathe/force_drawing
 
 # 通常：溜めに移行
-    execute if entity @s[tag=!Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/bow/type_tec/1_charge/start
+    execute if entity @s[tag=!Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/bow/type_tec/1_charge/start
 
 # 翔蟲：飛翔睨み撃ちに移行
-    execute if entity @s[tag=Itm.Sp.Wirebug.Using] run function mhdp_items:weapons/bow/type_tec/10_flying_shot/start
+    execute if entity @s[tag=Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/bow/type_tec/10_flying_shot/start
 
 # チュートリアル用処理
     tag @s remove Ply.Temp.Tutorial.DrawAttack

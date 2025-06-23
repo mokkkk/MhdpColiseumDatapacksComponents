@@ -2,7 +2,8 @@
 scoreboard players remove @s aj.tween_duration 1
 execute if score @s aj.tween_duration matches 1.. run return 1
 execute if score @s aj.tween_duration matches 0 on passengers run data modify entity @s interpolation_duration set value 1
-execute store result storage aj:temp frame int 1 run scoreboard players get @s aj.state_paralysis_start.frame
-function animated_java:ranposu_aj/animations/state_paralysis_start/zzz/apply_frame with storage aj:temp
+data remove storage aj:temp args
+execute store result storage aj:temp args.frame int 1 run scoreboard players get @s aj.state_paralysis_start.frame
+function animated_java:ranposu_aj/animations/state_paralysis_start/zzz/apply_frame with storage aj:temp args
 execute if score @s aj.state_paralysis_start.frame matches 10.. run return run function animated_java:ranposu_aj/animations/state_paralysis_start/pause
 scoreboard players add @s aj.state_paralysis_start.frame 1

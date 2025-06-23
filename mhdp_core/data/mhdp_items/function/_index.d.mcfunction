@@ -23,6 +23,8 @@
         #declare tag Ply.Weapon.Drawing 抜刀中
         #declare tag Ply.Weapon.Drawing.Sub サブ武器抜刀中
         #declare tag Ply.Weapon.NoOpe 立ち状態（非操作中）
+        #declare tag Ply.Weapon.NoAvoid 回避不能
+        #declare tag Ply.Weapon.NoMoveJump 移動ジャンプ不能
         #declare tag Ply.Weapon.Guard ガード中
         #declare tag Ply.Weapon.Armod.Super スーパーアーマー中
         #declare tag Ply.Weapon.Armod.Hyper ハイパーアーマー中
@@ -39,7 +41,8 @@
         #declare tag Ply.Flag.NormalSheathe 通常納刀フラグ
         #declare tag Ply.Flag.DrawAttack 抜刀攻撃フラグ
         #declare tag Ply.Flag.Hit 武器攻撃命中フラグ
-        #declare tag Ply.Flag.Counter カウンター成功フラグ
+        #declare tag Ply.Flag.Counter 相殺成功フラグ
+        #declare tag Ply.Flag.SpJumpAttack 特殊空中攻撃フラグ
     # オプション
         #declare tag Ply.Option.DisableCameraEffect オプション：画面効果無効化
 # 一時

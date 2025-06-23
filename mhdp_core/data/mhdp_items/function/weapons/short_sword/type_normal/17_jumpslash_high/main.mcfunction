@@ -31,13 +31,12 @@
     execute if score @s Wpn.AnimationTimer matches 7 positioned ~ ~1.65 ~ positioned ^ ^ ^1.5 run function mhdp_items:weapons/short_sword/type_normal/17_jumpslash_high/particle
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 6 true
-
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/short_sword/type_normal/17_jumpslash_high/move
     execute if score @s Wpn.GeneralTimer matches 8 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 8 run scoreboard players set $strength delta.api.launch 14000
-    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ -90 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 8 run scoreboard players set $strength player_motion.api.launch 14000
+    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ -90 run function player_motion:api/launch_looking
 
 # 状態更新
     execute if score @s Wpn.GeneralTimer matches 8 run tag @s add Ply.Ope.IsAir

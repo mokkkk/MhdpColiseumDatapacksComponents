@@ -14,8 +14,8 @@
         {"text":"  時間が経過しません","color": "#ff9900","bold": true},{"text":"。\n"},\
         {"text":"  アイテムを整理し、狩りの準備を整えましょう。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 2"},"color": "#ff7300","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 2"},"color": "#ff7300","font":"icons/book"},\
         {"text":"\n"}\
     ]
 
@@ -28,7 +28,7 @@
         {"text":"  武器を使うためには、ホットバーに空きスロットが必要です。\n"},\
         {"text":"  1つ以上の空きスロットを作ってから移動することをおすすめします","color": "#ff9900","bold": true},{"text":"。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 1"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 1"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
         {"text":"\n"}\
     ]

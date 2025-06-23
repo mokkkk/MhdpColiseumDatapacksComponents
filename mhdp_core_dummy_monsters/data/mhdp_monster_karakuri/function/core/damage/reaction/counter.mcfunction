@@ -5,10 +5,13 @@
 # @within function mhdp_monster_ranposu:core/damage/damage
 
 # 共通処理
-    # なし
+    # 相殺大成功
+        data modify storage api: Return.CounterSuccess set value true
 
 # アニメーション再生処理
     # アニメーション再生
         function animated_java:karakuri_aj/animations/damage_counter/tween {duration:1, to_frame: 0}
     # 遷移タイマー初期化
         scoreboard players set @s Mns.General.DummyTimer 0
+    # タグ消去
+        tag @s remove Mns.Karakuri.Attack.Head

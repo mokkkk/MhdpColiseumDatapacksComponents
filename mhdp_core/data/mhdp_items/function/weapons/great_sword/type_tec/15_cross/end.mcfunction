@@ -1,12 +1,12 @@
 #> mhdp_items:weapons/great_sword/type_tec/15_cross/end
 #
-# 相殺斬り上げ 終了処理
+# 追撃十字斬 終了処理
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/15_cross/main
 
 # タグ消去
     tag @s remove Wpn.Gs.Tec.Cross
-    tag @s remove Ply.Flag.Counter
+    tag @s remove Ply.Flag.CounterSuccess
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0

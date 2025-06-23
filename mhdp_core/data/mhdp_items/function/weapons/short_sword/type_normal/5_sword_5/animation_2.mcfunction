@@ -1,13 +1,9 @@
-#> mhdp_items:weapons/short_sword/type_tec/6_horizon_3/animation_2
+#> mhdp_items:weapons/short_sword/type_normal/5_sword_5/animation_2
 #
-# 水平斬りコンボ3 アニメーション処理
+# 剣コンボ5 アニメーション処理
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/main
-
-# データ設定
-    data modify storage mhdp_core:temp Args.IsDrawing set value true
-    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 27
-    data modify storage mhdp_core:temp Args.Slot set value "mainhand"
+# @within function mhdp_items:weapons/short_sword/type_normal/5_sword_5/main
 
 # アニメーション
-    function mhdp_items:core/util/item_modify_animation
+    function api:weapon/animation.m {Slot:"mainhand", Cmd:"empty"}
+    function api:weapon/animation.m {Slot:"offhand", Cmd:"empty"}

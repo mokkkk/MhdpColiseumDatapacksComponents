@@ -1,0 +1,80 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "components": {
+                                "minecraft:consumable": {
+                                    "animation": "drink",
+                                    "consume_seconds": 2147483647,
+                                    "has_consume_particles": false,
+                                    "on_consume_effects": [],
+                                    "sound": {
+                                        "range": 1,
+                                        "sound_id": ""
+                                    }
+                                },
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:56,ItemName:\"CookedMeat\",UseTimer:100}",
+                                "minecraft:food": {
+                                    "can_always_eat": true,
+                                    "nutrition": 0,
+                                    "saturation": 0
+                                },
+                                "minecraft:item_model": "consume_items/cooked_meat",
+                                "minecraft:item_name": {
+                                    "color": "green",
+                                    "italic": false,
+                                    "text": "こんがり肉"
+                                },
+                                "minecraft:lore": [
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "おいしく焼けた肉。"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "体力の最大値が上昇し、"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "さらに体力を完全に回復する。"
+                                    },
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    }
+                                ],
+                                "minecraft:max_stack_size": 2
+                            },
+                            "conditions": [],
+                            "function": "minecraft:set_components"
+                        },
+                        {
+                            "count": {
+                                "path": "Arg.Count",
+                                "storage": "api:",
+                                "type": "minecraft:storage"
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "paper",
+                    "type": "minecraft:item"
+                }
+            ],
+            "rolls": 1
+        }
+    ],
+    "type": "minecraft:empty"
+}

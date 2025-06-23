@@ -12,11 +12,11 @@
     execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] run scoreboard players set #mhdp_temp_wind_value MhdpCore 0
 
 # 発射威力取得
-    execute if score #mhdp_temp_wind_value MhdpCore matches ..0 run scoreboard players set $strength delta.api.launch 0
-    execute if score #mhdp_temp_wind_value MhdpCore matches 1 run scoreboard players set $strength delta.api.launch 8000
-    execute if score #mhdp_temp_wind_value MhdpCore matches 2 run scoreboard players set $strength delta.api.launch 12000
-    execute if score #mhdp_temp_wind_value MhdpCore matches 3.. run scoreboard players set $strength delta.api.launch 18000
+    execute if score #mhdp_temp_wind_value MhdpCore matches ..0 run scoreboard players set $strength player_motion.api.launch 0
+    execute if score #mhdp_temp_wind_value MhdpCore matches 1 run scoreboard players set $strength player_motion.api.launch 8000
+    execute if score #mhdp_temp_wind_value MhdpCore matches 2 run scoreboard players set $strength player_motion.api.launch 12000
+    execute if score #mhdp_temp_wind_value MhdpCore matches 3.. run scoreboard players set $strength player_motion.api.launch 18000
 
 # ノックバック適用
     execute if score #mhdp_temp_wind_value MhdpCore matches 1.. run tp @s @s
-    execute if score #mhdp_temp_wind_value MhdpCore matches 1.. rotated ~ -10 positioned as @s run function delta:api/launch_looking
+    execute if score #mhdp_temp_wind_value MhdpCore matches 1.. rotated ~ -10 positioned as @s run function player_motion:api/launch_looking

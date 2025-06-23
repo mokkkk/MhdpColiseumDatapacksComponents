@@ -4,22 +4,30 @@
 #
 # @within function mhdp_items:player/weapon/tick
 
-# 移動ベクトル取得
-    summon marker ~ ~ ~ {Tags:["Mk.Temp.PlayerPos.0"]}
-    data modify entity @n[type=marker,tag=Mk.Temp.PlayerPos.0] Pos set from storage mhdp_core:temp PlayerData.PrePos
-    execute at @n[type=marker,tag=Mk.Temp.PlayerPos.0] facing entity @s feet as @n[type=marker,tag=Mk.Temp.PlayerPos.0] run tp @s ~ ~ ~ ~ 10
-
-# プレイヤー移動有無検知
-    data modify storage mhdp_core:temp Temp.Pos1 set from entity @n[type=marker,tag=Mk.Temp.PlayerPos.0] Pos
-    data modify storage mhdp_core:temp Temp.Pos2 set from storage mhdp_core:temp PlayerData.Pos
-    data modify storage mhdp_core:temp Temp.Pos1[1] set value 0.0
-    data modify storage mhdp_core:temp Temp.Pos2[1] set value 0.0
-    execute as @n[type=marker,tag=Mk.Temp.PlayerPos.0] store success score @s MhdpCore run data modify storage mhdp_core:temp Temp.Pos1 set from storage mhdp_core:temp Temp.Pos2
+# スタミナ消費
+    execute if entity @s[tag=!Skill.Stamina.Constitution.1,tag=!Skill.Stamina.Constitution.2,tag=!Skill.Stamina.Constitution.3,tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 120
+    execute if entity @s[tag=Skill.Stamina.Constitution.1,tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 110
+    execute if entity @s[tag=Skill.Stamina.Constitution.2,tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 100
+    execute if entity @s[tag=Skill.Stamina.Constitution.3,tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 90
 
 # 移動
-    scoreboard players set $strength delta.api.launch 1500
-    execute if score @n[type=marker,tag=Mk.Temp.PlayerPos.0] MhdpCore matches 1.. rotated as @n[type=marker,tag=Mk.Temp.PlayerPos.0] run function delta:api/launch_looking
+    execute rotated ~ 20 run function api:weapon_operation/vector_move.m {Strength:3500}
+
+# 演出
+    particle cloud ~ ~0.3 ~ 0.3 0.3 0.3 0.1 3
+    playsound block.grass.step player @s ~ ~ ~ 2 1
+
+# 空中フラグ有効
+    tag @s add Ply.Ope.IsAir
+
+# クールタイム設定
+    scoreboard players set @s Ply.Timer.VectorJumpCoolTime 20
+
+# 無敵時間設定
+    scoreboard players set @s Ply.Timer.Avoid 3
+
+# 武器操作停止
+    scoreboard players set @s Wpn.DeactivateTimer 8
 
 # 終了
-    kill @e[type=marker,tag=Mk.Temp.PlayerPos.0]
     data remove storage mhdp_core:temp Temp

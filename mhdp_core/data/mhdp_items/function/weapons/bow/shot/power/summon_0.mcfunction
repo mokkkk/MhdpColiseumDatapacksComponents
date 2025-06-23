@@ -5,5 +5,13 @@
 # @within function mhdp_items:/**
 
 # 召喚
-    summon item_display ^ ^ ^ {teleport_duration:0,Tags:["Other.Shot","Wpn.Bw.Shot.Normal","Start"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.2f,1.2f,1.2f]},item:{id:"minecraft:paper",count:1,components:{custom_model_data:10000}}}
-    tp @n[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Normal] ~ ~ ~ ~ ~-0.5
+    execute store result storage api: Arg.Override.PlyUid int 1 run scoreboard players get @s Ply.Uid
+    execute store result storage api: Arg.Override.ChargeCount int 1 run scoreboard players get @s Wpn.Bw.ChargeCount
+    data modify storage api: Arg.Override.IsTec set value true
+    data modify storage api: Arg.Override.IsFlyingShot set value false
+    data modify storage api: Arg.Override.Speed set value "A"
+    execute if score @s Wpn.Bw.Bottle.Count matches 1.. run function mhdp_items:weapons/bow/shot/apply_bottle_effect
+    execute positioned ^ ^ ^ rotated ~ ~-0.5 run function api:object/summon.m {ObjectId:1}
+
+# 終了
+    execute if score @s Wpn.Bw.Bottle.Count matches 1.. run scoreboard players remove @s Wpn.Bw.Bottle.Count 1

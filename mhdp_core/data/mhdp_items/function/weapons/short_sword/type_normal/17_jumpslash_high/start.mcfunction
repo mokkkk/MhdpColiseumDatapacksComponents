@@ -4,11 +4,11 @@
 #
 # @within function mhdp_items:weapons/short_sword/type_normal/1_charge/change_to_chargeattack
 
+# 前処理
+    function mhdp_items:weapons/short_sword/util/before_attack
+
 # タグ付与
     tag @s add Wpn.Ss.Normal.JumpSlash.High
-
-# attribute設定
-    attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -1 add_value
+    tag @s remove Ply.Weapon.NoOpe
 
 # say 武器操作：片手剣 駆け上がり斬り

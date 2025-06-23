@@ -31,7 +31,7 @@
     execute if score @s aj.lance_biim_2.frame matches 27 as @e[type=text_display,tag=Mns.Shot.Valk,tag=Mns.Shot.Valk.Vfx.Thunder,tag=Mns.Shot.Valk.Vfx.RedFlash.Long] run data modify entity @s transformation.scale set value [3.5f,3.5f,3.5f]
         # 召喚
         execute if score @s aj.lance_biim_1.frame matches 43 run scoreboard players set #mhdp_temp_valk_flash_scale MhdpCore 200
-        execute if score @s aj.lance_biim_1.frame matches 43 positioned ^ ^2 ^8 run summon text_display ~ ~ ~ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.Jet","Mns.Shot.Valk.Vfx.RedFlash.Long"],view_range:1000f,default_background:0b,brightness:{sky:15,block:15},text:'{"text":"0","font":"vfx/valstrax"}',transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2f,2f,2f]},background:16777215,teleport_duration:1,billboard:"center",start_interpolation:-1,interpolation_duration:4,text_opacity:255,alignment:"center"}
+        execute if score @s aj.lance_biim_1.frame matches 43 positioned ^ ^2 ^8 run summon text_display ~ ~ ~ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.Jet","Mns.Shot.Valk.Vfx.RedFlash.Long"],view_range:1000f,default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2f,2f,2f]},background:16777215,teleport_duration:1,billboard:"center",start_interpolation:-1,interpolation_duration:4,text_opacity:255,alignment:"center"}
         execute if score @s aj.lance_biim_1.frame matches 44..63 run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/flash
 
 # モデル演出

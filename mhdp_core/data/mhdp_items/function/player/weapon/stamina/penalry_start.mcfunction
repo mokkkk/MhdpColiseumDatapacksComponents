@@ -9,4 +9,4 @@
     scoreboard players set @s Ply.Stats.StaminaPenaltyTimer 100
 
 # ジャンプ不可
-    attribute @s generic.jump_strength modifier add mhdp_core:stamina_jump_strength -10 add_value
+    attribute @s jump_strength modifier add mhdp_core:stamina_jump_strength -10 add_value

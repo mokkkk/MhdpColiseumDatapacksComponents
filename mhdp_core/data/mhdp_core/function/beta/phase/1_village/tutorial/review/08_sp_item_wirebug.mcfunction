@@ -13,8 +13,8 @@
         {"text":"  クールタイムは、スタミナの上部に表示されています。\n"},\
         {"text":"  アイテムのアイコンが灰色の間は使用できません。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 71"},"color": "#ff7300","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 71"},"color": "#ff7300","font":"icons/book"},\
         {"text":"\n"}\
     ]
 
@@ -27,8 +27,8 @@
         {"text":"  使用中は、アイテムアイコンが黄色く光ります。\n"},\
         {"text":"  モンスターの攻撃を無視できるため、強力な攻撃を当てやすくなります。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 70"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 72"},"color": "#ff7300","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 70"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 72"},"color": "#ff7300","font":"icons/book"},\
         {"text":"\n"}\
     ]
 
@@ -42,7 +42,7 @@
         {"text":"  "},{"text":"鉄蟲糸技","color": "#ff9900","bold": true},{"text":" という特殊な攻撃を行うことができます。\n"},\
         {"text":"  抜刀攻撃を行いやすくするために、\n  翔蟲の隣のアイテム欄は空にしておくのがおすすめです。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 71"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 71"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
         {"text":"\n"}\
     ]

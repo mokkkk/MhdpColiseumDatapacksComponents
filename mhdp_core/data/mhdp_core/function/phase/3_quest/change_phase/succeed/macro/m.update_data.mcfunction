@@ -4,6 +4,9 @@
 #
 # @within function mhdp_core:phase/2_village_to_quest/start/quest/main
 
+# 対象クエストをプレイ済みにする
+    $data modify storage mhdp_core:game_data QuestList[{ID:$(ActiveQuestId)}].State.IsPlayed set value true
+
 # 対象クエストをクリア済みにする
     $data modify storage mhdp_core:game_data QuestList[{ID:$(ActiveQuestId)}].State.IsCleared set value true
 

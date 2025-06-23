@@ -23,15 +23,16 @@
     execute if score @s Wpn.AnimationTimer matches 4 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 6 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 5000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -90 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 5000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -90 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 5 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 5 run scoreboard players set $strength delta.api.launch 8000
-    execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 90 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 5 run scoreboard players set $strength player_motion.api.launch 8000
+    execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 90 run function player_motion:api/launch_looking
 
 # 着地
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches ..59 run scoreboard players set @s Wpn.GeneralTimer 60

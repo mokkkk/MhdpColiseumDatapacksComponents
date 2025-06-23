@@ -13,8 +13,8 @@
         {"text":"  その間にモンスターの攻撃に当たると "},{"text":"ジャンプ回避","color": "#ff9900","bold": true},{"text": " が発動します。\n"},\
         {"text":"  武器の攻撃中はジャンプできないため、\n  攻撃の手を止めるか、納刀する必要があります。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 51"},"color": "#ff7300","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 51"},"color": "#ff7300","font":"icons/book"},\
         {"text":"\n"}\
     ]
 
@@ -26,7 +26,7 @@
         {"text":"  成功すると "},{"text":"ダメージとノックバックを完全に無効化","color": "#ff9900","bold": true},{"text": " できます。\n"},\
         {"text":"  また、攻撃の他にも、咆哮や風圧によるノックバックも無効化できます。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/trigger Ply.Ope.TutorialTrigger set 50"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/trigger Ply.Ope.TutorialTrigger set 50"},"color": "#ff7300","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
         {"text":"\n"}\
     ]

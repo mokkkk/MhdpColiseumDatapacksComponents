@@ -7,4 +7,4 @@
 #        storage mhdp_core:temp Arg.TotalDamage ダメージ量
 
 # ダメージ
-    $damage @s $(TotalDamage) minecraft:generic
+    $damage @s $(TotalDamage) minecraft:generic by @n[type=slime]

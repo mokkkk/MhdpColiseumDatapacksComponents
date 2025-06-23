@@ -35,6 +35,7 @@
         tag @s remove Ply.Weapon.StaminaEmpty
         tag @s remove Ply.Weapon.Drawing
         tag @s remove Ply.Weapon.Drawing.Sub
+        tag @s remove Ply.Weapon.NoAvoid
     # スキル関連
         tag @s remove Ply.State.IsUsedGuts
     # チュートリアル関連
@@ -51,11 +52,11 @@
     effect give @s instant_health 1 10
     effect clear @s resistance
     effect clear @s slowness
-    attribute @s generic.jump_strength modifier remove mhdp_core:death_animation
-    attribute @s generic.max_health modifier remove mhdp_core:quest_max_health
-    attribute @s generic.jump_strength modifier remove mhdp_core:quest_jump_strength
-    attribute @s generic.jump_strength modifier remove mhdp_core:sp_item_jump_strength
-    attribute @s generic.movement_speed modifier remove mhdp_core:quest_movement_speed
+    attribute @s jump_strength modifier remove mhdp_core:death_animation
+    attribute @s max_health modifier remove mhdp_core:quest_max_health
+    attribute @s jump_strength modifier remove mhdp_core:quest_jump_strength
+    attribute @s jump_strength modifier remove mhdp_core:sp_item_jump_strength
+    attribute @s movement_speed modifier remove mhdp_core:quest_movement_speed
 
 # UIの消去
     title @s actionbar {"text":""}

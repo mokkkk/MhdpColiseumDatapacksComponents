@@ -11,6 +11,19 @@
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/short_sword/type_normal/0_drawattack/start
     execute if entity @s[tag=Ply.Ope.StartSneak,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/short_sword/type_normal/0_drawattack/start_guard
 
+# 特殊空中攻撃：飛影
+    # 開始
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Flag.SpJumpAttack,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_normal/23_tobikage/start
+    # 飛影
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Normal.Tobikage] run function mhdp_items:weapons/short_sword/type_normal/23_tobikage/main
+    # 駆け上がり斬り
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Normal.JumpSlash.High] run function mhdp_items:weapons/short_sword/type_normal/17_jumpslash_high/main
+    # フォールバッシュ
+        # 処理
+            execute if entity @s[tag=Wpn.Ss.Normal.Fall.High] run function mhdp_items:weapons/short_sword/type_normal/18_fall_high/main
+
 # ガード
     # 開始：スニーク
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/24_guard/start
@@ -39,40 +52,14 @@
 # 溜め
     # 処理
         execute if entity @s[tag=Wpn.Ss.Normal.Charge] run function mhdp_items:weapons/short_sword/type_normal/10_charge/main
-    
+
 # 回転斬り
     # 処理
         execute if entity @s[tag=Wpn.Ss.Normal.Spin] run function mhdp_items:weapons/short_sword/type_normal/11_spin/main
 
-# 盾攻撃コンボ(旧)
-    # 盾攻撃
-       # 処理
-            # execute if entity @s[tag=Wpn.Ss.Normal.Bash.1] run function mhdp_items:weapons/short_sword/type_normal/7_bash_1/main
-    # バックナックル
-        # 処理
-            # execute if entity @s[tag=Wpn.Ss.Normal.Bash.2] run function mhdp_items:weapons/short_sword/type_normal/8_bash_2/main
-    # ハードバッシュ
-        # 処理
-            # execute if entity @s[tag=Wpn.Ss.Normal.Bash.3] run function mhdp_items:weapons/short_sword/type_normal/9_bash_3/main
-
-# 剣盾ラッシュ(旧)
-    # 処理
-        # execute if entity @s[tag=Wpn.Ss.Normal.Rush] run function mhdp_items:weapons/short_sword/type_normal/12_rush/main
-
 # 剣盾ラッシュ
     # 処理
         execute if entity @s[tag=Wpn.Ss.Normal.DanceRush] run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/main
-
-# 鉄蟲糸技：飛影
-    # 飛影
-        # 処理
-            execute if entity @s[tag=Wpn.Ss.Normal.Tobikage] run function mhdp_items:weapons/short_sword/type_normal/23_tobikage/main
-    # 駆け上がり斬り
-        # 処理
-            execute if entity @s[tag=Wpn.Ss.Normal.JumpSlash.High] run function mhdp_items:weapons/short_sword/type_normal/17_jumpslash_high/main
-    # フォールバッシュ
-        # 処理
-            execute if entity @s[tag=Wpn.Ss.Normal.Fall.High] run function mhdp_items:weapons/short_sword/type_normal/18_fall_high/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

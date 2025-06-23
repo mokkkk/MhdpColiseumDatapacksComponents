@@ -38,26 +38,28 @@
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/attack_0
     execute if score @s Wpn.GeneralTimer matches 19 run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/attack_1
-        
+
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 3 5 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 13 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 抜刀攻撃終了
     execute if score @s Wpn.GeneralTimer matches 5 run tag @s remove Ply.Flag.DrawAttack
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s ~ ~0.05 ~
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 12000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 12000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 12 run tp @s ~ ~0.05 ~
-    execute if score @s Wpn.GeneralTimer matches 12 run scoreboard players set $strength delta.api.launch 6000
-    execute if score @s Wpn.GeneralTimer matches 12 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 12 run scoreboard players set $strength player_motion.api.launch 6000
+    execute if score @s Wpn.GeneralTimer matches 12 rotated ~ 0 run function player_motion:api/launch_looking
     execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 run tp @s ~ ~0.05 ~
-    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 run scoreboard players set $strength delta.api.launch 6000
-    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 rotated ~ 0 run function delta:api/launch_looking
+    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 run scoreboard players set $strength player_motion.api.launch 6000
+    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.AnimationTimer matches 20 run tp @s @s
-    execute if score @s Wpn.AnimationTimer matches 20 run scoreboard players set $strength delta.api.launch 3000
-    execute if score @s Wpn.AnimationTimer matches 20 rotated ~ -60 run function delta:api/launch_looking
+    execute if score @s Wpn.AnimationTimer matches 20 run scoreboard players set $strength player_motion.api.launch 3000
+    execute if score @s Wpn.AnimationTimer matches 20 rotated ~ -60 run function player_motion:api/launch_looking
 
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2
@@ -67,6 +69,16 @@
     execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 20 at @s run tp @s ~ ~ ~ ~2 ~
     execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 21 at @s run tp @s ~ ~ ~ ~-1 ~
     execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 22 at @s run tp @s ~ ~ ~ ~1 ~
+
+# 先行入力
+    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max if score @s Wpn.GeneralTimer matches 20..59 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 20..59 run function mhdp_items:core/buffering/jump
+
+# 遷移
+    # スニーク+ジャンプ：狩技・強化納刀に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 34.. run function mhdp_items:weapons/great_sword/type_tec/17_power_sheathe/start
+    # ジャンプ回避
+        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/util/move_jump
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 60.. run function mhdp_items:weapons/great_sword/type_tec/9_chargeattack_super/end

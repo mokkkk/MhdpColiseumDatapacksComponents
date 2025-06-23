@@ -26,7 +26,8 @@
     execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/great_sword/type_normal/2_chargeattack/attack
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 抜刀攻撃終了
     execute if score @s Wpn.GeneralTimer matches 5 run tag @s remove Ply.Flag.DrawAttack

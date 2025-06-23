@@ -29,12 +29,13 @@
     execute if score @s Wpn.AnimationTimer matches 1 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 0.4 0.1 0.4 0 10
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 10000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -15 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 10000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -15 run function player_motion:api/launch_looking
 
 # 遷移
     # ヒット時：駆け上がり斬りに移行

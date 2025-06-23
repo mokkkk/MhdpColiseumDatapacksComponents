@@ -50,8 +50,8 @@
         Name:"dino",\
         UpperName:"Dino",\
         JpName:"斬竜",\
-        ShowName:'{"text":"斬竜"}',\
-        LootTable:"mhdp_items:materials/dino",\
+        ShowName:{"text":"斬竜"},\
+        LootTable:"mhdp_items:materials/dino/random_all",\
         ShowHp:true,\
         Hp:11000,\
         StunDamage:200,\

@@ -5,7 +5,7 @@
 # @within function mhdp_items:player/tick
 
 # attributeを取得し、正常値でない場合は処理を行わない
-    execute store result score #mhdp_temp_jump_strength MhdpCore run attribute @s generic.jump_strength get 100
+    execute store result score #mhdp_temp_jump_strength MhdpCore run attribute @s jump_strength get 100
     execute if score #mhdp_temp_jump_strength MhdpCore matches ..35 run return run scoreboard players reset #mhdp_temp_jump_strength MhdpCore
 
 # 無敵時間設定

@@ -14,8 +14,8 @@
 # effect・attribute設定
     effect clear @s resistance
     effect clear @s slowness
-    attribute @s generic.jump_strength modifier remove mhdp_core:quest_jump_strength
-    attribute @s generic.knockback_resistance base set 1.0
+    attribute @s jump_strength modifier remove mhdp_core:quest_jump_strength
+    attribute @s knockback_resistance base set 1.0
     effect give @s instant_health 3 10 true
 
 # データ初期化

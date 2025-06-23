@@ -28,6 +28,7 @@
             scoreboard objectives add Ply.Ope.DropCoas dropped:carrot_on_a_stick
         # ジャンプ回数
             scoreboard objectives add Ply.Ope.Jump minecraft.custom:minecraft.jump
+            scoreboard objectives add Ply.Ope.JumpInterval dummy
         # エンダーアイ投げ捨て回数
             scoreboard objectives add Ply.Ope.DropEnderEye dropped:ender_eye
         # スニークタイマー
@@ -35,6 +36,7 @@
             scoreboard objectives add Ply.Ope.SneakInterval dummy
         # エンダーアイ使用タイマー
             scoreboard objectives add Ply.Ope.EnderEyeTimer dummy
+            scoreboard objectives add Ply.Ope.SneakingEnderEyeTimer dummy
         # アイテム使用タイマー
             scoreboard objectives add Ply.Ope.EatingTimer dummy
             scoreboard objectives add Ply.Ope.EatingTimerMax dummy
@@ -44,6 +46,8 @@
         # チュートリアル再生のトリガー
             scoreboard objectives add Ply.Ope.TutorialTrigger trigger
     # 処理用タイマー
+        # ベクトルジャンプクールタイム
+            scoreboard objectives add Ply.Timer.VectorJumpCoolTime dummy
         # 無敵時間
             scoreboard objectives add Ply.Timer.DamageInterval dummy
         # 回避時間
@@ -80,6 +84,12 @@
         scoreboard objectives add Mns.Tutorial.Text dummy {"text":"チュートリアル","color":"gold","bold":true}
         scoreboard objectives modify Mns.Tutorial.Text displayname {"text":"チュートリアル","color":"gold","bold":true,"underlined":true}
 
+# asset関連
+    # ID
+        scoreboard objectives add ObjectId dummy
+    # 処理用
+        scoreboard objectives add ObjectTick dummy
+
 ## Scoreboard初期値設定
 # プレイヤーUID
     execute unless score #mhdp_player_uid_grobal Ply.Uid matches -2147483648.. run scoreboard players set #mhdp_player_uid_grobal Ply.Uid 1
@@ -89,6 +99,7 @@
 ## 定数定義
     scoreboard players set #const_2 Const 2
     scoreboard players set #const_3 Const 3
+    scoreboard players set #const_6 Const 6
     scoreboard players set #const_20 Const 20
     scoreboard players set #const_30 Const 30
     scoreboard players set #const_60 Const 60
@@ -100,6 +111,7 @@
     scoreboard players set #const_crit_multiply_lv2 Const 135
     scoreboard players set #const_crit_multiply_lv3 Const 140
     scoreboard players set #const_crit_multiply_element Const 115
+    scoreboard players set #const_crit_minus_multiply_normal Const 75
     # スライムのサイズ
         scoreboard players set #const_slime_size Const 5205
 

@@ -5,8 +5,8 @@
 # @within function mhdp_items:weapons/bow/type_normal/10_flying_shot/main
 
 # 矢を召喚
-    execute if score @s Wpn.Bw.ChargeCount matches ..2 run function mhdp_items:weapons/bow/shot/normal_n/summon_2
-    execute if score @s Wpn.Bw.ChargeCount matches 3.. run function mhdp_items:weapons/bow/shot/normal_n/summon_3
+    execute if score @s Wpn.Bw.ChargeCount matches ..2 run function mhdp_items:weapons/bow/type_normal/10_flying_shot/summon_3
+    execute if score @s Wpn.Bw.ChargeCount matches 3.. run function mhdp_items:weapons/bow/type_normal/10_flying_shot/summon_4
 
 # データ設定
     scoreboard players operation @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Normal,tag=Start] Ply.Uid = @s Ply.Uid
@@ -22,8 +22,8 @@
 
 # 移動
     tp @s @s
-    scoreboard players set $strength delta.api.launch 4000
-    execute rotated ~180 -60 run function delta:api/launch_looking
+    scoreboard players set $strength player_motion.api.launch 4000
+    execute rotated ~180 -60 run function player_motion:api/launch_looking
 
 # 終了
     tag @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Normal,tag=Start] remove Start

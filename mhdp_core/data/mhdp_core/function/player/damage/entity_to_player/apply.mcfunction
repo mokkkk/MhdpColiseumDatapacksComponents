@@ -8,6 +8,9 @@
 
 # ダメージ軽減率初期値
     scoreboard players set #mhdp_temp_damage_reduction MhdpCore 100
+    # ハイパーアーマー時、ダメージを軽減
+        execute if entity @s[tag=Ply.Weapon.Armod.Hyper] if score #mhdp_temp_damage_reduction MhdpCore matches 100.. run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 50
+        execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] if score #mhdp_temp_damage_reduction MhdpCore matches 100.. run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 50
 
 # タイマー更新
     # 無敵時間
@@ -26,9 +29,6 @@
 # ノックバック
     function mhdp_core:player/damage/entity_to_player/knockback/main
 
-# スキル効果適用
-    function mhdp_core:player/skill/damage/damage
-
 # ダメージ
     # ダメージ軽減率適用
         scoreboard players operation #mhdp_temp_damage_total MhdpCore *= #mhdp_temp_damage_reduction MhdpCore
@@ -39,6 +39,9 @@
         execute store result storage mhdp_core:temp Arg.TotalDamage float 0.01 run scoreboard players get #mhdp_temp_damage_total MhdpCore
     # ダメージを与える
         function mhdp_core:player/damage/entity_to_player/macro/m.damage with storage mhdp_core:temp Arg
+
+# スキル効果適用
+    function mhdp_core:player/skill/damage/damage
 
 # 演出
     execute if entity @s[tag=Ply.Weapon.Guard] at @s run playsound item.shield.block master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1

@@ -16,12 +16,12 @@
     function mhdp_items:weapons/bow/util/ui/append
 
 # 表示
-    data modify storage mhdp_core:temp UI.Weapon set value '[\
+    data modify storage mhdp_core:temp UI.Weapon set value [\
         {"interpret":true,"nbt":"UI.ExArray[0]","storage":"mhdp_core:temp"},\
         {"interpret":true,"nbt":"UI.ExArray[1]","storage":"mhdp_core:temp"},\
         {"interpret":true,"nbt":"UI.ExArray[2]","storage":"mhdp_core:temp"},\
-        {"text":"\\uF814","font":"space"},{"text":"#","font":"ui/weapon/bow/gauge"},{"text":"\\uF801","font":"space"}\
-    ]'
+        {"text":"\uF814","font":"space"},{"text":"\uF801","font":"space"},{"text":"#","font":"ui/weapon/bow/gauge"}\
+    ]
 
 # 終了
     scoreboard players reset #mhdp_temp_gauge

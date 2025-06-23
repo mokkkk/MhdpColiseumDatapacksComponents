@@ -4,10 +4,5 @@
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/10_spin/main
 
-# メイン
-    # データ設定
-        data modify storage mhdp_core:temp Args.IsDrawing set value true
-        scoreboard players set #mhdp_arg_cmd_offset MhdpCore 1
-        data modify storage mhdp_core:temp Args.Slot set value "mainhand"
-    # アニメーション
-        function mhdp_items:core/util/item_modify_const
+# アニメーション
+    function api:weapon/animation.m {Slot:"mainhand", Cmd:"just_2_5"}

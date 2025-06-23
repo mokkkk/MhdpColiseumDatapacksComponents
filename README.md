@@ -11,16 +11,24 @@ Minecraftでハンティングアクションを体験できる配布マップ�
 
 対応バージョン
 
-- Minecraft JavaEdition 1.21　～　1.21.1
+- Minecraft JavaEdition 1.21.5
 
 上記バージョン以外、および BedrockEdition には対応していません。
 
 # ライセンス
 
-本データパックのうち、delta_datapackには 「LICENSE_delta」、その他には「LICENSE_mhdp_core」が適用されます。
-モンスターのアニメーション（mhdp_monster_xxx） には 「Animated Java」 を使用しています。
+以下のデータパックには「LICENSE_mhdp_core」が適用されます。
 
-- Delta（ https://github.com/BigPapi13/Delta ）
+- mhdp_core
+- mhdp_core_dummy_monsters
+- mhdp_monster_xxx
+
+本データパックは、以下のライブラリを使用しています。ライセンスについては、リンク先を参照してください。
+
+- player_motion：MITライセンス、作者 @BigPapi13（ https://modrinth.com/datapack/player_motion ）
+
+モンスターのアニメーション（mhdp_monster_xxx） は 「Animated Java」 を使用し、一から作成しています。
+
 - Animated Java （ https://animated-java.dev/ ）
 
 **本マップで使用しているリソースパックは、本マップ以外では絶対に使用しないでください。改変、再配布などは禁止します。**
@@ -28,8 +36,10 @@ Minecraftでハンティングアクションを体験できる配布マップ�
 # 動画作成について
 
 本マップは二次創作です。
-本マップを使用した動画等に関しては、収益化はご遠慮ください。
-また、原作の世界観を壊すような内容にしない等、気を使うようお願いいたします。
+動作作成や配信は可能ですが、以下の点にご留意ください。
+
+- 原作の画像やBGM、効果音等を無断で使用しない。
+- 原作の世界観を大きく壊す、原作のイメージを損なうような編集をしない。
 
 # クレジット
 

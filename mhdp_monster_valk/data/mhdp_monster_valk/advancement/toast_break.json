@@ -11,9 +11,9 @@
     "hidden": true,
     "icon": {
       "components": {
-        "minecraft:custom_model_data": 1004
+        "minecraft:item_model": "icons/dino"
       },
-      "id": "minecraft:red_dye"
+      "id": "minecraft:stick"
     },
     "show_toast": true,
     "title": "部位破壊"

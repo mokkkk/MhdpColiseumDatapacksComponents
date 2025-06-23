@@ -21,6 +21,8 @@
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run tag @s remove Ply.Ope.StartUsingEnderEye.WithSneak
     execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] run tag @s remove Ply.Ope.UsedEnderEye.Short
     execute if entity @s[tag=Ply.Ope.UsedEnderEye.Long] run tag @s remove Ply.Ope.UsedEnderEye.Long
+    execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Short] run tag @s remove Ply.Ope.UsedSneakingEnderEye.Short
+    execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Long] run tag @s remove Ply.Ope.UsedSneakingEnderEye.Long
     scoreboard players set @s Ply.Ope.DropEnderEye 0
     execute if entity @s[tag=Ply.Ope.DroppedEnderEye] run tag @s remove Ply.Ope.DroppedEnderEye
 
@@ -33,8 +35,15 @@
 # 食べ物
     execute if entity @s[tag=Ply.Adv.Using.Paper] run tag @s remove Ply.Adv.Using.Paper
 
-# ジャンプ
-    execute if entity @s[tag=Ply.Ope.StartJump] run tag @s remove Ply.Ope.StartJump
-
 # ダッシュ
     execute if entity @s[tag=Ply.Ope.IsSprinting] run tag @s remove Ply.Ope.IsSprinting
+
+# キー入力
+    execute if entity @s[tag=Ply.Ope.StartKeyForward] run tag @s remove Ply.Ope.StartKeyForward
+    execute if entity @s[tag=Ply.Ope.StartKeyLeft] run tag @s remove Ply.Ope.StartKeyLeft
+    execute if entity @s[tag=Ply.Ope.StartKeyBack] run tag @s remove Ply.Ope.StartKeyBack
+    execute if entity @s[tag=Ply.Ope.StartKeyRight] run tag @s remove Ply.Ope.StartKeyRight
+    execute if entity @s[tag=Ply.Ope.StartKeyJump] run tag @s remove Ply.Ope.StartKeyJump
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] run tag @s remove Ply.Ope.StartDoubleJump
+    execute if entity @s[tag=Ply.Ope.StartKeySprint] run tag @s remove Ply.Ope.StartKeySprint
+    execute if entity @s[tag=Ply.Ope.StartKeySneak] run tag @s remove Ply.Ope.StartKeySneak

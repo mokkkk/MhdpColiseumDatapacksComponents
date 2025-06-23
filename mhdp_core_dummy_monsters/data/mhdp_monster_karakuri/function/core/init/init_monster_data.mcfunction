@@ -26,7 +26,7 @@
         Name:"karakuri",\
         UpperName:"Karakuri",\
         JpName:"からくり飛竜",\
-        ShowName:'{"text":"からくり飛竜"}',\
+        ShowName:{"text":"からくり飛竜"},\
         LootTable:"mhdp_items:materials/karakuri",\
         ShowHp:true,\
         Hp:99999,\

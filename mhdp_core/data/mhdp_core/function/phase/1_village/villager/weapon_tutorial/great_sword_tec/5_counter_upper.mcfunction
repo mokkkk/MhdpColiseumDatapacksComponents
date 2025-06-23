@@ -56,7 +56,7 @@
         execute if score @s Vlg.General.Timer matches 3 run tag @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial] add Ply.Temp.Tutorial.Guard
         execute if score @s Vlg.General.Timer matches 3.. \
             if score $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text matches 0.. \
-            if entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Wpn.Gs.Tec.Upper,tag=Ply.Flag.Counter,scores={Wpn.GeneralTimer=6}] run \
+            if entity @a[tag=Ply.State.IsTraining,team=Team.WeaponTutorial,tag=Wpn.Gs.Tec.Upper,tag=Ply.Flag.CounterSuccess,scores={Wpn.GeneralTimer=6}] run \
             scoreboard players remove $mhdp_temp_weapon_tutorial_value Vlg.WeaponTutorial.Text 1
         execute if score @s Vlg.General.Timer matches 3.. \
             if score $mhdp_temp_weapon_tutorial_value_2 Vlg.WeaponTutorial.Text matches 0.. \

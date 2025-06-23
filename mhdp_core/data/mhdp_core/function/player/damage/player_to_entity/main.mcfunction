@@ -2,7 +2,6 @@
 #
 # プレイヤーからモンスターに対してのダメージ処理
 #
-# @within function 
 # @input
 #        storage mhdp_core:temp Damage.AttackType 物理攻撃種別
 #        storage mhdp_core:temp Damage.DamageMult 物理ダメージ倍率（物理モーション値）
@@ -166,3 +165,5 @@
     tag @e[tag=Temp.Victim] remove Temp.Victim
     tag @s remove Temp.Attacker
     data remove storage mhdp_core:temp Damage
+
+tellraw @a {"text":"【旧バージョンのAPIを使用しています。処理を変更してください】"}

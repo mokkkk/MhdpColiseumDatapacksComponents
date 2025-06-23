@@ -4,11 +4,12 @@
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
 
+# 前処理
+    function mhdp_items:weapons/great_sword/util/before_attack
+
 # タグ付与
     tag @s add Wpn.Gs.Tec.CrossMove
-
-# attribute設定
-    attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -1 add_value
+    tag @s remove Ply.Weapon.NoOpe
+    tag @s remove Ply.Flag.CounterSuccess
 
 # say 武器操作：大剣・十字斬り・移動

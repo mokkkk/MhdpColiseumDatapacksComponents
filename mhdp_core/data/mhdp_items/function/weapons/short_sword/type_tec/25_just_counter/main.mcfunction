@@ -36,20 +36,20 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 12..13 run tp @s ~ ~ ~ ~0.3 ~
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 1 3 true
-    execute if score @s Wpn.GeneralTimer matches 8 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 8 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.35 add_value
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 10 run function api:weapon_operation/attribute_reset
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 5000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 5000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 2 run tp @s @s
     execute if score @s Wpn.GeneralTimer matches 2 run tp @s ~ ~0.05 ~
-    execute if score @s Wpn.GeneralTimer matches 2 run scoreboard players set $strength delta.api.launch 12000
-    execute if score @s Wpn.GeneralTimer matches 2 rotated ~ 0 run function delta:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength delta.api.launch 10000
-    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 2 run scoreboard players set $strength player_motion.api.launch 12000
+    execute if score @s Wpn.GeneralTimer matches 2 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 10000
+    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 4..8 if entity @n[type=slime,tag=Mns.HitBox,distance=..4] run tp @s @s
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..19 run function mhdp_items:core/buffering/a
@@ -57,11 +57,11 @@
 
 # 遷移
     # スニーク+ジャンプ：バックステップに移行
-        execute if entity @s[tag=Wpn.Ss.Tec.Counter,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartJump] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/change_to_backstep
+        execute if entity @s[tag=Wpn.Ss.Tec.Counter,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/start
     # 右クリック：通常コンボ1に移行
-        execute if entity @s[tag=Wpn.Ss.Tec.Counter,tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/change_to_normal_1
+        execute if entity @s[tag=Wpn.Ss.Tec.Counter,tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/start
     # スニーク+右クリック：旋刈りに移行
-        execute if entity @s[tag=Wpn.Ss.Tec.Counter,tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/change_to_tsumuji
+        execute if entity @s[tag=Wpn.Ss.Tec.Counter,tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/11_tsumuji/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/end

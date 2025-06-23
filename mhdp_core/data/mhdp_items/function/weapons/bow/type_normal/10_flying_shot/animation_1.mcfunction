@@ -4,10 +4,5 @@
 #
 # @within function mhdp_items:weapons/bow/type_tec/1_charge/main
 
-# データ設定
-    data modify storage mhdp_core:temp Args.IsDrawing set value true
-    scoreboard players set #mhdp_arg_cmd_offset MhdpCore 4
-    data modify storage mhdp_core:temp Args.Slot set value "mainhand"
-
 # アニメーション
-    function mhdp_items:core/util/item_modify_animation
+    function api:weapon/animation.m {Slot:"mainhand", Cmd:"pulling_2"}

@@ -14,6 +14,14 @@
     # 抜刀中・サブ武器あり・メインハンドがサブ武器・オフハンドが武器(ダミーのサブ武器使用のため常に有効)
         execute if entity @s[tag=Ply.Weapon.Drawing] if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b,IsDrawing:1b}] run tag @s add Ply.Flag.NormalSheathe
 
+# デバッグ用
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} if entity @s[tag=Ply.Ope.DroppedEnderEye] run say 武器投げ捨て
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} if entity @s[tag=!Ply.Weapon.Drawing,tag=!Ply.Flag.NormalSheathe] unless items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:0b}] run say 納刀中、オフハンドが武器じゃない
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} if entity @s[tag=!Ply.Flag.NormalSheathe] if items entity @s player.cursor ender_eye[custom_data~{IsMhdpWeapon:1b}] run say メイン武器をカーソルに保持
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} if entity @s[tag=!Ply.Flag.NormalSheathe] if items entity @s player.cursor ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b}] run say サブ武器をカーソルに保持
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Flag.NormalSheathe] unless items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b}] run say メイン武器がメインハンドにない
+    execute if data storage mhdp_core:game_data {ShowDebugMessage:true} if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Flag.NormalSheathe] unless items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b}] run say サブ武器がオフハンドにない
+
 # 強制納刀
     # 武器を投げ捨てた
         execute if entity @s[tag=Ply.Ope.DroppedEnderEye] run function mhdp_items:player/weapon/sheathe/force_sheathe
@@ -34,3 +42,5 @@
     # 一時的に武器無操作
         execute if entity @s[tag=Ply.Flag.NormalSheathe] run scoreboard players add @s Wpn.DeactivateTimer 5
         execute if entity @s[tag=!Ply.Weapon.Deactivated] if score @s Wpn.DeactivateTimer matches 1.. run tag @s add Ply.Weapon.Deactivated
+
+

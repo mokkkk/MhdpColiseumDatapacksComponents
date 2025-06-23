@@ -45,7 +45,8 @@
         function mhdp_core:player/skill/attack/init_status
 
 # 武器データを保存
-    data modify storage mhdp_core:temp PlayerData.Item.UsingWeapon set from entity @s Inventory[{Slot:-106b}]
+    data modify storage mhdp_core:temp PlayerData.Item.UsingWeapon set from entity @s equipment.offhand
+    # Inventory[{Slot:-106b}]
     function mhdp_core:player/data/save_data
 
 # 武器ごとの初期化処理

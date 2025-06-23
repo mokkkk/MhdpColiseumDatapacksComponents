@@ -65,16 +65,34 @@
             #declare tag Ply.Ope.UsedEnderEye.Long エンダーアイ長クリック
             #declare tag Ply.Ope.StartUsingEnderEye.NotSneak エンダーアイ・非スニーク同時押し
             #declare tag Ply.Ope.StartUsingEnderEye.WithSneak エンダーアイ・スニーク同時押し
+            #declare tag Ply.Ope.UsedSneakingEnderEye.Short エンダーアイ・スニーク同時押し・短クリック
+            #declare tag Ply.Ope.UsedSneakingEnderEye.Long エンダーアイ・スニーク同時押し・長クリック
             #declare tag Ply.Ope.DroppedEnderEye エンダーアイ投げ捨て
         # ニンジン棒
             #declare tag Ply.Ope.StartUsingCoas ニンジン棒使用
             #declare tag Ply.Ope.DroppedCoas ニンジン棒投げ捨て
         # ジャンプ
-            #declare tag Ply.Ope.StartJump ジャンプ開始
+            #declare tag Ply.Ope.StartKeyJump ジャンプ開始
+            #declare tag Ply.Ope.StartDoubleJump 連続ジャンプ
         # ダッシュ
             #declare tag Ply.Ope.IsSprinting ダッシュ中
         # 空中
             #declare tag Ply.Ope.IsAir 飛行中
+        # キー入力
+            #declare tag Ply.Ope.StartKeyForward
+            #declare tag Ply.Ope.IsKeyForward
+            #declare tag Ply.Ope.StartKeyLeft
+            #declare tag Ply.Ope.IsKeyLeft
+            #declare tag Ply.Ope.StartKeyBack
+            #declare tag Ply.Ope.IsKeyBack
+            #declare tag Ply.Ope.StartKeyRight
+            #declare tag Ply.Ope.IsKeyRight
+            #declare tag Ply.Ope.StartKeyJump
+            #declare tag Ply.Ope.IsKeyJump
+            #declare tag Ply.Ope.StartKeySprint
+            #declare tag Ply.Ope.IsKeySprint
+            #declare tag Ply.Ope.StartKeySneak
+            #declare tag Ply.Ope.IsKeySneak
         # 先行入力
             #declare tag Ply.Ope.Buffering.A 先行入力A
             #declare tag Ply.Ope.Buffering.B 先行入力B
@@ -95,6 +113,7 @@
         #declare tag Ply.Temp.IsCrit 会心発生時
         #declare tag Ply.Temp.IsCritInverse 逆会心発生時
         #declare tag Ply.Temp.IsDisableConditionDamage 状態異常無効時
+        #declare tag Ply.Temp.DoKnockback ノックバックを適用する
         # クエスト出発時エラー関連
             #declare tag Ply.Temp.Error.Gamemode ゲームモードに関するエラー
             #declare tag Ply.Temp.Error.HasCursorItem カーソルにアイテムを保持しているエラー

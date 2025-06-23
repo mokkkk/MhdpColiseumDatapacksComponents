@@ -25,23 +25,26 @@
     execute if score @s Wpn.AnimationTimer matches 5 positioned ^ ^ ^1.3 rotated ~ ~ run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/particle
     
 # 攻撃
-    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches ..2 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack
-    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches 3.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack_pursuit
+    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches ..1 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack
+    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches 2.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack_pursuit
+    execute if score @s Wpn.GeneralTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 2 run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack
     execute if score @s Wpn.GeneralTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 3.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack_pursuit
     execute if score @s Wpn.GeneralTimer matches 10 if score @s Wpn.Gs.ChargeCount matches 3.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/attack
-    
+
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 3 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 20 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s ~ ~0.05 ~
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 10000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -10 run function delta:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set $strength delta.api.launch 8000
-    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 5 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 10000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -10 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set $strength player_motion.api.launch 8000
+    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 5 run function player_motion:api/launch_looking
     execute if score @s Wpn.AnimationTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 3.. run tp @s ~ ~0.05 ~
-    execute if score @s Wpn.AnimationTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 3.. run scoreboard players set $strength delta.api.launch 3000
-    execute if score @s Wpn.AnimationTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 3.. rotated ~ -60 run function delta:api/launch_looking
+    execute if score @s Wpn.AnimationTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 3.. run scoreboard players set $strength player_motion.api.launch 3000
+    execute if score @s Wpn.AnimationTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 3.. rotated ~ -60 run function player_motion:api/launch_looking
 
 # アーマー
     execute if score @s Wpn.GeneralTimer matches 1 if score @s Wpn.Gs.ChargeCount matches 3.. run tag @s add Ply.Weapon.Armod.Hyper

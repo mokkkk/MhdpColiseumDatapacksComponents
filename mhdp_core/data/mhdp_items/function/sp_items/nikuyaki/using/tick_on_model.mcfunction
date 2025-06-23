@@ -17,10 +17,10 @@
     scoreboard players set @s Mns.General.DummyCounter 10
 
 # モデル変更
-    execute if score @s MhdpCore matches 80 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute if score @s MhdpCore matches 80 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data" set value 158
-    execute if score @s MhdpCore matches 170 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data" set value 159
-    execute if score @s MhdpCore matches 180 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data" set value 160
+    execute if score @s MhdpCore matches 80 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/nikuyaki/meat"
+    execute if score @s MhdpCore matches 80 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data".strings set value ["half_cooked"]
+    execute if score @s MhdpCore matches 170 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data".strings set value ["cooked"]
+    execute if score @s MhdpCore matches 180 on passengers if entity @s[tag=aj.nikuyaki.bone.meat] run data modify entity @s item.components."minecraft:custom_model_data".strings set value ["burnt"]
 
 # 演出
     execute if score @s Mns.General.DummyTimer matches 1 run particle smoke ~ ~1 ~ 0.4 0.4 0.4 0 1

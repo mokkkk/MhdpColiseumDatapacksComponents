@@ -16,4 +16,4 @@
     # data modify storage mhdp_core:game_data Phase set value 1
     # execute as @a run effect clear @s resistance
     # execute as @a run effect clear @s slowness
-    # execute as @a run attribute @s generic.jump_strength modifier remove mhdp_core:quest_jump_strength
+    # execute as @a run attribute @s jump_strength modifier remove mhdp_core:quest_jump_strength

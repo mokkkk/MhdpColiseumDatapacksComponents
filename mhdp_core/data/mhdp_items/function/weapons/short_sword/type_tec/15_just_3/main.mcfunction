@@ -36,11 +36,20 @@
     execute if score @s Wpn.GeneralTimer matches 14 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run effect give @s slowness 2 6 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
+
+# 先行入力
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 2..39 run function mhdp_items:core/buffering/jump
+    execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Long] if score @s Wpn.GeneralTimer matches 2..39 run function mhdp_items:core/buffering/f
 
 # 遷移
+    # 同時押し長押し：溜め斬り落としに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.F] if score @s Wpn.GeneralTimer matches 2..39 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/start_finish
     # 右クリック短押し：通常コンボ2に移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/type_tec/15_just_3/change_to_just_4
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.NotSneak] if score @s Wpn.GeneralTimer matches 12..39 run function mhdp_items:weapons/short_sword/type_tec/15_just_3/change_to_just_4
+    # ジャンプ回避
+        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 12..39 run function mhdp_items:weapons/short_sword/util/move_jump
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/short_sword/type_tec/15_just_3/end

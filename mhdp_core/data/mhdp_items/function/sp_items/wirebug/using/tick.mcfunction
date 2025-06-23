@@ -25,8 +25,8 @@
 
 # 移動
     execute if score @s Itm.Wirebug.GeneralTimer matches 9 run function mhdp_items:sp_items/wirebug/using/move
-    execute if score @s Itm.Wirebug.GeneralTimer matches 13..18 if block ~ ~-1 ~ #mhdp_core:no_collision run attribute @s generic.gravity modifier remove mhdp_core:sp_item_gravity
-    execute if score @s Itm.Wirebug.GeneralTimer matches 19 run attribute @s generic.gravity modifier remove mhdp_core:sp_item_gravity
+    execute if score @s Itm.Wirebug.GeneralTimer matches 13..18 if block ~ ~-1 ~ #mhdp_core:no_collision run attribute @s gravity modifier remove mhdp_core:sp_items_gravity
+    execute if score @s Itm.Wirebug.GeneralTimer matches 19 run attribute @s gravity modifier remove mhdp_core:sp_items_gravity
 
 # 終了
     execute if score @s Itm.Wirebug.GeneralTimer matches 1..9 run tag @e[type=marker,tag=Mk.Sp.Wirebug.Rotation,tag=Mk.Sp.Wirebug.Rotation.Target] remove Mk.Sp.Wirebug.Rotation.Target

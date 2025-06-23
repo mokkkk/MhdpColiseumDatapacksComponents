@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/bow/type_normal/main
 #
-# 弓のメイン処理 天の型
+# 弓のメイン処理 地の型
 #
 # @within function mhdp_items:weapons/bow/main
 
@@ -12,6 +12,12 @@
 
 # 抜刀攻撃
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_normal/0_drawattack/start
+
+# 特殊空中攻撃：飛翔睨み撃ち
+    # 開始
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Flag.SpJumpAttack,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/bow/type_normal/10_flying_shot/start
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Tec.FlyingShot] run function mhdp_items:weapons/bow/type_normal/10_flying_shot/main
 
 # 溜め
     # 通常

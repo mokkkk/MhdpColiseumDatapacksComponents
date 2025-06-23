@@ -8,4 +8,4 @@
     tag @s remove Itm.Sp.Wirebug.Using
 
 # attribute消去
-    attribute @s generic.gravity modifier remove mhdp_core:sp_item_gravity
+    attribute @s gravity modifier remove mhdp_core:sp_items_gravity

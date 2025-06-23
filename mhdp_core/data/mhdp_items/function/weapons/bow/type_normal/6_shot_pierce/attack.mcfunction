@@ -4,12 +4,11 @@
 #
 # @within function mhdp_items:weapons/bow/type_normal/6_shot_pierce/main
 
-# 矢を召喚
-    function mhdp_items:weapons/bow/shot/pierce/summon_n
-
-# データ設定
-    scoreboard players operation @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Pierce,tag=Start] Ply.Uid = @s Ply.Uid
-    scoreboard players set @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Pierce,tag=Start] Wpn.Bw.ChargeCount 3
+# 召喚
+    execute store result storage api: Arg.Override.PlyUid int 1 run scoreboard players get @s Ply.Uid
+    data modify storage api: Arg.Override.ChargeCount set value 3
+    data modify storage api: Arg.Override.IsTec set value false
+    execute positioned ^ ^ ^ rotated ~ ~-0.5 run function api:object/summon.m {ObjectId:2}
 
 # 演出
     execute positioned ^ ^ ^1 run function mhdp_items:weapons/bow/type_tec/6_shot_pierce/particle

@@ -13,15 +13,22 @@
 
 # アニメーション演出
     execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/short_sword/type_tec/24_guard/animation_0
+    execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/short_sword/type_tec/24_guard/animation_1
 
 # 移動制限
-    effect give @s slowness 1 5 true
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
+
+# 先行入力
+    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:core/buffering/jump
 
 # 遷移
     # 右クリック：盾攻撃に移行
         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_counter
     # スニーク：ガードに移行
         execute if entity @s[tag=Ply.Ope.StartSneak] run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_guard
+    # ジャンプ回避
+        execute if entity @s[tag=Ply.Ope.Buffering.Jump] run function mhdp_items:weapons/short_sword/util/move_jump
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/short_sword/type_tec/24_guard/end_just

@@ -14,7 +14,7 @@
         {"text":"  回復薬などの消費アイテムは使用すると無くなるので、\n"},\
         {"text":"  クエスト中に使える回数には限りがあります。\n"},\
         {"text":"\n  "},\
-        {"text":"l","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
-        {"text":"r","clickEvent":{"action":"run_command","value":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
+        {"text":"l","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},{"text":"                                                            "},\
+        {"text":"r","click_event":{"action":"run_command","command":"/return 0"},"color": "#7a7a7a","font":"icons/book"},\
         {"text":"\n"}\
     ]

@@ -1,0 +1,70 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "components": {
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:1000,ItemName:\"immovable_cloth\",UseTimer:50,IsSpItem:1b}",
+                                "minecraft:item_model": "sp_items/immovable_cloth",
+                                "minecraft:item_name": {
+                                    "color": "green",
+                                    "italic": false,
+                                    "text": "不動の装衣"
+                                },
+                                "minecraft:lore": [
+                                    {
+                                        "color": "dark_purple",
+                                        "italic": false,
+                                        "text": "[特殊装具]"
+                                    },
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "一定時間の間、"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "ノックバックを無効化する。"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "受けるダメージも軽減する。"
+                                    },
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    }
+                                ],
+                                "minecraft:max_stack_size": 1
+                            },
+                            "conditions": [],
+                            "function": "minecraft:set_components"
+                        },
+                        {
+                            "count": {
+                                "path": "Arg.Count",
+                                "storage": "api:",
+                                "type": "minecraft:storage"
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "carrot_on_a_stick",
+                    "type": "minecraft:item"
+                }
+            ],
+            "rolls": 1
+        }
+    ],
+    "type": "minecraft:empty"
+}

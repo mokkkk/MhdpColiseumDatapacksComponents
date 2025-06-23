@@ -20,11 +20,11 @@
     execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/great_sword/type_tec/8_charge_super/animation_3
     execute if score @s Wpn.AnimationTimer matches 12 run function mhdp_items:weapons/great_sword/type_tec/8_charge_super/animation_4
     execute if score @s Wpn.AnimationTimer matches 18 run function mhdp_items:weapons/great_sword/type_tec/8_charge_super/animation_5
+    execute if score @s Wpn.AnimationTimer matches 21 run function mhdp_items:weapons/great_sword/type_tec/8_charge_super/animation_6
 
 # 移動制限
-    effect give @s slowness 1 5 true
-    execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier remove mhdp_core:weapon_jump_strength
-    execute if score @s Wpn.GeneralTimer matches 15 run attribute @s generic.jump_strength modifier add mhdp_core:weapon_jump_strength -0.3 add_value
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 溜め
     execute if score @s Wpn.GeneralTimer matches 20 run scoreboard players set @s Wpn.Gs.ChargeTimer 100
@@ -41,20 +41,20 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength delta.api.launch 12000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 12000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 4 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength delta.api.launch 7000
-    execute if score @s Wpn.GeneralTimer matches 4 rotated ~180 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 7000
+    execute if score @s Wpn.GeneralTimer matches 4 rotated ~180 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 7 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 7 run scoreboard players set $strength delta.api.launch 3000
-    execute if score @s Wpn.GeneralTimer matches 7 rotated ~180 0 run function delta:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 7 run scoreboard players set $strength player_motion.api.launch 3000
+    execute if score @s Wpn.GeneralTimer matches 7 rotated ~180 0 run function player_motion:api/launch_looking
 
 # 遷移
     # 右クリックを離した場合、溜め斬りに移行
-        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/great_sword/type_tec/8_charge_super/change_to_chargeattack
+        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/great_sword/type_tec/2_chargeattack/start
     # 溜めすぎた場合、自動的に溜め斬りに移行
         execute if score @s Wpn.Gs.ChargeTimer matches 450.. run scoreboard players set @s Wpn.Gs.ChargeCount 2
-        execute if score @s Wpn.Gs.ChargeTimer matches 450.. run function mhdp_items:weapons/great_sword/type_tec/8_charge_super/change_to_chargeattack
+        execute if score @s Wpn.Gs.ChargeTimer matches 450.. run function mhdp_items:weapons/great_sword/type_tec/2_chargeattack/start
     # ジャンプした場合、タックルに移行
-        execute if entity @s[tag=Ply.Ope.StartJump,tag=!Wpn.Gs.Normal.ChargeSlash] if score @s Wpn.GeneralTimer matches 22.. if score @s Ply.Stats.Stamina matches 150.. run function mhdp_items:weapons/great_sword/type_tec/8_charge_super/change_to_tackle
+        execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Wpn.Gs.Normal.ChargeSlash] if score @s Wpn.GeneralTimer matches 22.. if score @s Ply.Stats.Stamina matches 150.. run function mhdp_items:weapons/great_sword/type_tec/3_tackle/start
