@@ -3,10 +3,13 @@
 # UI表示処理等 スタミナ関連
 #
 
+# 最大値から、割合を算出
+    scoreboard players operation #mhdp_temp_arts MhdpCore = @s Ply.Stats.Arts.2
+    scoreboard players operation #mhdp_temp_arts MhdpCore *= #const_100 Const
+    scoreboard players operation #mhdp_temp_arts MhdpCore /= @s Ply.Stats.Arts.2.Max
+    scoreboard players operation #mhdp_temp_arts MhdpCore *= #const_6 Const
+
 # UI設定
-    # scoreboard players set #mhdp_const_125 MhdpCore 125
-    # scoreboard players operation #mhdp_temp_arts MhdpCore = @s Ply.Stats.Arts
-    scoreboard players set #mhdp_temp_arts MhdpCore 315
     function mhdp_items:player/ui/arts/append_2
     scoreboard players operation #mhdp_temp_arts MhdpCore -= #const_100 Const
     function mhdp_items:player/ui/arts/append_2

@@ -33,6 +33,11 @@
         scoreboard objectives add Ply.Stats.DefenceValue.Dragon dummy
     # 斬れ味
         scoreboard objectives add Ply.Stats.CurrentSharpnessColor dummy
+    # 狩技ゲージ
+        scoreboard objectives add Ply.Stats.Arts.1 dummy
+        scoreboard objectives add Ply.Stats.Arts.1.Max dummy
+        scoreboard objectives add Ply.Stats.Arts.2 dummy
+        scoreboard objectives add Ply.Stats.Arts.2.Max dummy
 # 武器共通処理
     # 武器の操作処理用
         scoreboard objectives add Wpn.GeneralTimer dummy
