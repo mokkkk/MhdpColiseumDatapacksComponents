@@ -8,6 +8,7 @@
     execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Gs.Tec.Tackle] if score @s Wpn.GeneralTimer matches ..3 run function mhdp_items:weapons/great_sword/type_tec/3_tackle/just_tackle
 
 # 威姿呵成の構え
+    execute if entity @s[tag=Wpn.Gs.Normal.CounterStance,tag=!Ply.Weapon.Type.Tech] if score @s Wpn.GeneralTimer matches ..39 run function mhdp_items:weapons/great_sword/type_normal/20_counter_stance_success/start
     execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Gs.Tec.CounterStance] if score @s Wpn.GeneralTimer matches ..39 run function mhdp_items:weapons/great_sword/type_tec/20_counter_stance_success/start
 
 # 相殺成功時、ダメージ軽減

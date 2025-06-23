@@ -13,7 +13,7 @@
     effect clear @s slowness
 
 # タイマー初期化
-    scoreboard players set @s Wpn.GeneralTimer 0
+    scoreboard players set @s Wpn.GeneralTimer -1
     scoreboard players set @s Wpn.AnimationTimer 0
 
 # 状態タグ削除

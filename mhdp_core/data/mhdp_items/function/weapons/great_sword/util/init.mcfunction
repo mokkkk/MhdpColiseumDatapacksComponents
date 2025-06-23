@@ -13,7 +13,9 @@
 # 狩技ゲージ上限決定
     scoreboard players set @s Ply.Stats.Arts.1 0
     scoreboard players set @s Ply.Stats.Arts.2 0
-    scoreboard players set @s Ply.Stats.Arts.1.Max 1200
-    scoreboard players set @s Ply.Stats.Arts.2.Max 1800
+    execute if entity @s[tag=!Ply.Weapon.Type.Tech] run scoreboard players set @s Ply.Stats.Arts.1.Max 900
+    execute if entity @s[tag=!Ply.Weapon.Type.Tech] run scoreboard players set @s Ply.Stats.Arts.2.Max 2200
+    execute if entity @s[tag=Ply.Weapon.Type.Tech] run scoreboard players set @s Ply.Stats.Arts.1.Max 1200
+    execute if entity @s[tag=Ply.Weapon.Type.Tech] run scoreboard players set @s Ply.Stats.Arts.2.Max 1800
     scoreboard players set @s Ply.Stats.Arts.1.Percent 0
     scoreboard players set @s Ply.Stats.Arts.2.Percent 0
