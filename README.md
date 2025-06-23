@@ -54,4 +54,10 @@ Minecraftでハンティングアクションを体験できる配布マップ�
 **Special Thanks**
 - みんと（ https://x.com/ShunjuMint ）：作曲
 - 冴月ハル（ https://x.com/tyaatya_Rei ）：デバッグ
-- および もやん村デバッグ参加者
+- および もやん村のデバッグに参加してくれた方々
+
+# その他
+
+有志の方が、以下のページで翻訳版を配布してくださっています。よろしければ、そちらをご利用ください。
+
+- （中文翻譯）https://forum.gamer.com.tw/Co.php?bsn=18673&sn=1092337
