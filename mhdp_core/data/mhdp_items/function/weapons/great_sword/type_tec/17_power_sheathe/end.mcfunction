@@ -11,6 +11,9 @@
     scoreboard players set @s Wpn.GeneralTimer 0
     scoreboard players set @s Wpn.AnimationTimer 0
 
+# 狩技1の効果発動開始
+    tag @s add Ply.Weapon.UsingArts.1
+
 # 共通処理
     function mhdp_items:weapons/great_sword/util/end_attack
 

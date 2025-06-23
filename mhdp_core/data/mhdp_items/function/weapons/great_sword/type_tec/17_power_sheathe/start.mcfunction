@@ -11,12 +11,12 @@
     tag @s add Wpn.Gs.Tec.PowerSheathe
     tag @s remove Ply.Weapon.NoOpe
 
-# ゲージ諸費
+# ゲージ消費
     # scoreboard players set @s Ply.Stats.Arts.1 0
     # scoreboard players set @s Ply.Stats.Arts.1.Percent 0
 
 # 演出
-    playsound entity.player.levelup master @s ~ ~ ~ 2 1.5
+    playsound entity.player.levelup master @s ~ ~ ~ 1 1.5
     playsound minecraft:block.trial_spawner.ominous_activate master @s ~ ~ ~ 3 0.5
     playsound minecraft:block.trial_spawner.ominous_activate master @s ~ ~ ~ 3 0.7
     playsound minecraft:block.trial_spawner.ominous_activate master @s ~ ~ ~ 3 0.9

@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:weapons/great_sword/main
 
+# 共通処理
+    function mhdp_items:weapons/great_sword/type_tec/general
+
 # 無操作確認
     function mhdp_items:weapons/great_sword/util/get_no_ope
 
@@ -35,6 +38,9 @@
     # 強溜め
         # 処理
             execute if entity @s[tag=Wpn.Gs.Tec.Charge] if score @s Wpn.Gs.ChargeSlashCount matches 1 run function mhdp_items:weapons/great_sword/type_tec/6_charge_high/main
+    # 高速強溜め
+        # 処理
+            execute if entity @s[tag=Wpn.Gs.Tec.Charge.Quick] run function mhdp_items:weapons/great_sword/type_tec/18_charge_high_quick/main
     # 真溜め
         # 処理
             execute if entity @s[tag=Wpn.Gs.Tec.Charge] if score @s Wpn.Gs.ChargeSlashCount matches 2.. run function mhdp_items:weapons/great_sword/type_tec/8_charge_super/main
