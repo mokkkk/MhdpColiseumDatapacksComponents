@@ -17,7 +17,7 @@
     # execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
 
 # 攻撃
-    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.BladeDance.1
+    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.BladeDance.2
     execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 演出
@@ -25,9 +25,9 @@
     playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.5
     playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.5
     playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.5
-    execute positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/particle
-    execute positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/particle
-    execute positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/particle
+    execute positioned ~ ~1.65 ~ positioned ^ ^0.5 ^1.2 run function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/particle
+    execute positioned ~ ~1.65 ~ positioned ^ ^0.5 ^1.7 run function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/particle
+    execute positioned ~ ~1.65 ~ positioned ^ ^0.5 ^2.2 run function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/particle
 
 # 終了
     tag @e[type=slime,tag=Temp.Hit] remove Temp.Hit

@@ -25,7 +25,7 @@
 
 # 狩技：ブレイドダンス
     # 開始
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/start
+        # execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/start
     # 処理
         execute if entity @s[tag=Wpn.Ss.Tec.BladeDance] run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/main
 

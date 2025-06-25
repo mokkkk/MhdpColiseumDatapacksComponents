@@ -12,8 +12,8 @@
     tag @s remove Ply.Weapon.NoOpe
 
 # ゲージ消費
-    # scoreboard players set @s Ply.Stats.Arts.2 0
-    # scoreboard players set @s Ply.Stats.Arts.2.Percent 0
+    scoreboard players set @s Ply.Stats.Arts.2 0
+    scoreboard players set @s Ply.Stats.Arts.2.Percent 0
 
 # 演出
     playsound entity.player.levelup master @s ~ ~ ~ 1 1.5
