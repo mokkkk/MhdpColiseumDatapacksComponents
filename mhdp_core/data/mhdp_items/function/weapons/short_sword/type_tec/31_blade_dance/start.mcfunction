@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/short_sword/type_tec/30_upper_bash/start
+#> mhdp_items:weapons/short_sword/type_tec/31_blade_dance/start
 #
-# 滅・昇竜撃 開始
+# ブレイドダンス 開始
 #
 # @within function mhdp_items:weapons/short_sword/type_tec/1_charge/change_to_chargeattack
 
@@ -8,12 +8,12 @@
     function mhdp_items:weapons/short_sword/util/before_attack
 
 # タグ付与
-    tag @s add Wpn.Ss.Tec.UpperBash
+    tag @s add Wpn.Ss.Tec.BladeDance
     tag @s remove Ply.Weapon.NoOpe
 
 # ゲージ消費
-    scoreboard players set @s Ply.Stats.Arts.1 0
-    scoreboard players set @s Ply.Stats.Arts.1.Percent 0
+    # scoreboard players set @s Ply.Stats.Arts.2 0
+    # scoreboard players set @s Ply.Stats.Arts.2.Percent 0
 
 # 演出
     playsound entity.player.levelup master @s ~ ~ ~ 1 1.5
@@ -23,4 +23,4 @@
     execute anchored eyes positioned ~ ~ ~ run particle flash ^ ^ ^1 0.5 0.5 0.5 0 3
     particle end_rod ~ ~1.6 ~ 0.5 0.5 0.5 0.1 10
 
-# say 武器操作：片手剣 滅・昇竜撃
+# say 武器操作：片手剣 ブレイドダンス

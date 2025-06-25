@@ -59,7 +59,8 @@
 
 # 遷移
     # 右クリック：強フォールバッシュに移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 25..34 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/start
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Flag.Ss.UpperBashCounter] if score @s Wpn.GeneralTimer matches 20..34 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/start
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Flag.Ss.UpperBashCounter] if score @s Wpn.GeneralTimer matches 25..34 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 35.. run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/end
