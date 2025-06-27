@@ -17,7 +17,7 @@
     # execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
 
 # 攻撃
-    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.BladeDance.2
+    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Normal.BladeDance.2
     execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 演出
