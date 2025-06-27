@@ -7,6 +7,7 @@
 # 斬れ味消費なし
 
 # 滅昇竜
+    execute if entity @s[tag=Wpn.Ss.Normal.UpperBash] if score @s Wpn.GeneralTimer matches 7..11 run function mhdp_items:weapons/short_sword/type_normal/30_upper_bash/counter_success
     execute if entity @s[tag=Wpn.Ss.Tec.UpperBash] if score @s Wpn.GeneralTimer matches 7..11 run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/counter_success
 
 # 天の型時、ジャストガード判定

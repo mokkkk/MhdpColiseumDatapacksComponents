@@ -29,7 +29,9 @@
     # 右クリック解除：回転斬りに移行
         execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/short_sword/type_normal/11_spin/start
     # 溜め：剣の舞に移行
-        execute if entity @s[tag=Wpn.Ss.Normal.Charge,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 30.. run function mhdp_items:weapons/short_sword/type_normal/10_charge/change_to_dance_rush
+        execute if entity @s[tag=Wpn.Ss.Normal.Charge,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 30.. unless score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:weapons/short_sword/type_normal/10_charge/change_to_dance_rush
+    # ゲージがある場合：ブレイドダンスに移行
+        execute if entity @s[tag=Wpn.Ss.Normal.Charge,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 30.. if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:weapons/short_sword/type_normal/31_blade_dance/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 1000.. run function mhdp_items:weapons/short_sword/type_normal/10_charge/end

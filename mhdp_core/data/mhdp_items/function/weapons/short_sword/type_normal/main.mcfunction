@@ -24,6 +24,16 @@
         # 処理
             execute if entity @s[tag=Wpn.Ss.Normal.Fall.High] run function mhdp_items:weapons/short_sword/type_normal/18_fall_high/main
 
+# 狩技：滅昇竜撃
+    # 開始
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeyBack,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/30_upper_bash/start
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Normal.UpperBash] run function mhdp_items:weapons/short_sword/type_normal/30_upper_bash/main
+
+# 狩技：ブレイドダンス
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Normal.BladeDance] run function mhdp_items:weapons/short_sword/type_normal/31_blade_dance/main
+
 # ガード
     # 開始：スニーク
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/24_guard/start

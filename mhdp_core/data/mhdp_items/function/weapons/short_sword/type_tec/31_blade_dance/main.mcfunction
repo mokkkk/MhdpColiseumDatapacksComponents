@@ -98,15 +98,10 @@
     execute if score @s Wpn.GeneralTimer matches 27 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 33 run scoreboard players set $strength player_motion.api.launch 1000
     execute if score @s Wpn.GeneralTimer matches 33 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 42 run scoreboard players set $strength player_motion.api.launch 6000
+    execute if score @s Wpn.GeneralTimer matches 42 run scoreboard players set $strength player_motion.api.launch 5000
     execute if score @s Wpn.GeneralTimer matches 42 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 55 run scoreboard players set $strength player_motion.api.launch 4000
     execute if score @s Wpn.GeneralTimer matches 55 rotated ~170 0 run function player_motion:api/launch_looking
-
-# 遷移
-    # 右クリック：強フォールバッシュに移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Flag.Ss.UpperBashCounter] if score @s Wpn.GeneralTimer matches 20..34 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/start
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Flag.Ss.UpperBashCounter] if score @s Wpn.GeneralTimer matches 25..34 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 75.. run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/end
