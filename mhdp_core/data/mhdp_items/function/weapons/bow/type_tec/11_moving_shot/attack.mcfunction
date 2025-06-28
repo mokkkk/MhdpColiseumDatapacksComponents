@@ -20,6 +20,11 @@
     playsound entity.arrow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
     playsound entity.arrow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
 
+# 移動
+    tp @s @s
+    scoreboard players set $strength player_motion.api.launch 4000
+    execute rotated ~180 -60 run function player_motion:api/launch_looking
+
 # 終了
     tag @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Normal,tag=Start] remove Start
     scoreboard players add @s Wpn.Bw.FlyingShot.Count 1

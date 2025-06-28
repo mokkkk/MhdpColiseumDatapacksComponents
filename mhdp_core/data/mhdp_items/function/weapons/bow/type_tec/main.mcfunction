@@ -19,6 +19,10 @@
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.FlyingShot] run function mhdp_items:weapons/bow/type_tec/10_flying_shot/main
 
+# 狩技：身躱し射法
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Tec.MovingShot] run function mhdp_items:weapons/bow/type_tec/11_moving_shot/main
+    
 # 溜め
     # 通常
         # 開始：立ち+右クリック

@@ -27,8 +27,8 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/bow/type_tec/4_charge_step/move
-    execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/bow/type_tec/4_charge_step/move
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function mhdp_items:weapons/bow/type_tec/4_charge_step/move
+    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function mhdp_items:weapons/bow/type_tec/4_charge_step/move
 
 # 遷移
     # 右クリック押し続け：溜めに移行

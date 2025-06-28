@@ -22,6 +22,8 @@
     execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/bow/type_tec/1_charge/animation_3
 
 # 移動制限
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_nojump
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 溜め
     execute if entity @s[tag=!Skill.Stamina.ShortCharge.1,tag=!Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Bw.ChargeTimer 5
@@ -38,5 +40,7 @@
     # 右クリックを離した場合、射撃に移行
         execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_shot
         execute if score @s Ply.Stats.Stamina matches ..0 run function mhdp_items:weapons/bow/type_tec/1_charge/change_to_shot
-    # ジャンプした場合、チャージステップに移行
-        execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 12.. if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/4_charge_step/start
+    # ジャンプ：チャージステップ
+        execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 12.. if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/4_charge_step/start
+    # スニーク+ジャンプ：身躱し射法
+        execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 12.. if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max run function mhdp_items:weapons/bow/type_tec/11_moving_shot/start

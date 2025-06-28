@@ -54,7 +54,9 @@
 
 # 遷移
     # ジャンプ：チャージステップに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 12..21 if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/4_charge_step/start
+        execute if entity @s[tag=Ply.Ope.Buffering.A,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 12..21 if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/4_charge_step/start
+    # ジャンプ：身躱し射法
+        execute if entity @s[tag=Ply.Ope.Buffering.A,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 12..21 if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max run function mhdp_items:weapons/bow/type_tec/11_moving_shot/start
     # スニーク+右クリック：剛射に移行
         execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 8..21 if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/5_shot_power/start
         execute if entity @s[tag=Ply.Ope.Buffering.C,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 8..21 if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/5_shot_power/start
