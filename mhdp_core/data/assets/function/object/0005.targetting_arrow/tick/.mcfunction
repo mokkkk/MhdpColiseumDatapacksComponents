@@ -13,7 +13,7 @@
 # ターゲット取得
     function assets:object/0005.targetting_arrow/tick/get_target
     # ターゲットに向かって移動
-        execute if score @s ObjectTick matches 4..7 rotated ~ 0 positioned ^ ^ ^-1 facing entity @n[type=slime,tag=Mns.HitBox,tag=5.TargetEntity] eyes rotated ~ ~ positioned ^ ^ ^-1 facing entity @s eyes positioned as @s positioned ^ ^ ^-1 rotated as @s rotated ~ ~ positioned ^ ^ ^-1 facing entity @s eyes positioned as @s run tp @s ^ ^ ^ ~ ~
+        execute if score @s ObjectTick matches 6..7 rotated ~ 0 positioned ^ ^ ^-1 facing entity @n[type=slime,tag=Mns.HitBox,tag=5.TargetEntity] eyes rotated ~ ~ positioned ^ ^ ^-1 facing entity @s eyes positioned as @s positioned ^ ^ ^-1 rotated as @s rotated ~ ~ positioned ^ ^ ^-1 facing entity @s eyes positioned as @s run tp @s ^ ^ ^ ~ ~
         execute if score @s ObjectTick matches 8.. facing entity @n[type=slime,tag=Mns.HitBox,tag=5.TargetEntity] eyes run tp @s ~ ~ ~ ~ ~
 
 # メイン処理実行

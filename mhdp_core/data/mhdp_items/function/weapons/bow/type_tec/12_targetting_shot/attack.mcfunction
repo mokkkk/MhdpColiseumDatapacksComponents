@@ -17,11 +17,6 @@
  
 # 演出
     execute positioned ^ ^ ^1 run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/particle
-    playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
-    playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.1
-    playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    playsound entity.arrow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
-    playsound entity.arrow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
 
 # ゲージ消費
     tag @s remove Ply.Weapon.UsingArts.2

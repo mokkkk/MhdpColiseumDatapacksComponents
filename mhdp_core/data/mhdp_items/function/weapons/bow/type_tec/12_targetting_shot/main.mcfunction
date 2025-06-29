@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/bow/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"昇天煌弓・箭射"}
+    # execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"昇天煌弓・箭射"}
 
 # タイマー増加
     execute if score @s Wpn.GeneralTimer matches ..22 run scoreboard players add @s Wpn.GeneralTimer 1
@@ -32,6 +32,12 @@
         execute if score @s Wpn.GeneralTimer matches 5 run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/animation_1
         execute if score @s Wpn.GeneralTimer matches 7 run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/animation_2
         execute if score @s Wpn.GeneralTimer matches 9 run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/animation_3
+        
+        execute if score @s Wpn.GeneralTimer matches 22 if score @s Wpn.Bw.Bottle.Targetting matches 3 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
+        execute if score @s Wpn.GeneralTimer matches 22 if score @s Wpn.Bw.Bottle.Targetting matches 3 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
+    
+        execute if score @s Wpn.GeneralTimer matches 21 if score @s Wpn.Bw.Bottle.Targetting matches 3 run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/animation_8
+        execute if score @s Wpn.GeneralTimer matches 23 if score @s Wpn.Bw.Bottle.Targetting matches 3 run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/animation_9
     # アニメーション・射撃
         execute if score @s Wpn.GeneralTimer matches 25 run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/animation_4
         execute if score @s Wpn.GeneralTimer matches 26 run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/animation_5
@@ -39,7 +45,7 @@
         execute if score @s Wpn.GeneralTimer matches 28 run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/animation_7
 
 # ロックオン
-    execute if score @s Wpn.AnimationTimer matches 10.. run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/target
+    execute if score @s Wpn.AnimationTimer matches 10.. if score @s Wpn.GeneralTimer matches ..24 run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/target
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 25 positioned ~ ~1.65 ~ run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/attack
@@ -50,11 +56,10 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 25..26 run tp @s ~ ~ ~ ~1 ~-0.7
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 27..28 run tp @s ~ ~ ~ ~1 ~0.5
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 29..30 run tp @s ~ ~ ~ ~-0.3 ~
-    execute if score @s Wpn.GeneralTimer matches 1..23 anchored eyes run particle crit ^ ^ ^0.5 0.1 0.1 0.1 0.5 1
+    execute if score @s Wpn.GeneralTimer matches 1..23 anchored eyes run particle firework ^ ^ ^0.5 0.1 0.1 0.1 0.5 1
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
-    execute if score @s Wpn.GeneralTimer matches 25 run function api:weapon_operation/attribute_reset
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
@@ -62,5 +67,8 @@
     execute if score @s Wpn.GeneralTimer matches 25 run scoreboard players set $strength player_motion.api.launch 8000
     execute if score @s Wpn.GeneralTimer matches 25 rotated ~180 0 run function player_motion:api/launch_looking
 
+# 昇天煌弓に遷移
+    execute if score @s Wpn.GeneralTimer matches 36 run function mhdp_items:weapons/bow/type_tec/13_jump_shot/start
+
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 36.. run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/end
+    execute if score @s Wpn.GeneralTimer matches 37.. run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/end
