@@ -24,8 +24,8 @@
     execute if score @s Wpn.AnimationTimer matches 13 run function mhdp_items:weapons/bow/type_tec/11_moving_shot/animation_7
 
 # 攻撃
-    execute if score @s Wpn.GeneralTimer matches 3 positioned ~ ~1.65 ~ run function mhdp_items:weapons/bow/type_tec/10_flying_shot/attack
-    execute if score @s Wpn.GeneralTimer matches 11 positioned ~ ~1.65 ~ run function mhdp_items:weapons/bow/type_tec/10_flying_shot/attack
+    execute if score @s Wpn.GeneralTimer matches 3 positioned ~ ~1.65 ~ run function mhdp_items:weapons/bow/type_tec/11_moving_shot/attack
+    execute if score @s Wpn.GeneralTimer matches 11 positioned ~ ~1.65 ~ run function mhdp_items:weapons/bow/type_tec/11_moving_shot/attack
 
 # 演出
     execute if entity @s[tag=Ply.Ope.IsKeyRight,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 3..7 run tp @s ~ ~ ~ ~-1.5 ~
