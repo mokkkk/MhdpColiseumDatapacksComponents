@@ -16,7 +16,8 @@
     execute unless entity @s[tag=5.IsTec] run function assets:object/0005.targetting_arrow/tick/attack_normal
     execute if entity @s[tag=5.IsTec] run function assets:object/0005.targetting_arrow/tick/attack_tec
 
-# 終了
-    tag @s add 5.Death
+# 2ヒット後、削除
     tag @a remove 5.TargetPlayer
-    kill @s
+    scoreboard players add @s MhdpCore 1
+    execute if score @s MhdpCore matches 2.. run tag @s add 5.Death
+    execute if entity @s[tag=5.Death] run kill @s

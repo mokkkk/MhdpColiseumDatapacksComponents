@@ -25,6 +25,7 @@
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shower.Crit set value {AttackType:Shot,DamageMult:10,PartDamageMult:100,ElementDamageMult:30,StunValue:0,TireValue:1,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.0,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Jump set value {AttackType:Shot,DamageMult:30,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:4,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.0,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Jump.Up set value {AttackType:Shot,DamageMult:120,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:4,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.0,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
+    data modify storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Targetting set value {AttackType:Shot,DamageMult:28,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:4,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.0,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
 
 # 天の型
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Tec.DirectAttack set value {AttackType:Shot,DamageMult:0,PartDamageMult:0,ElementDamageMult:0,StunValue:0,TireValue:0,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.0,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
@@ -47,5 +48,4 @@
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Horming.Burst set value {AttackType:Blow,DamageMult:45,PartDamageMult:100,ElementDamageMult:0,StunValue:30,TireValue:8,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.0,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Jump set value {AttackType:Shot,DamageMult:30,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:4,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.0,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
     data modify storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Jump.Up set value {AttackType:Shot,DamageMult:120,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:4,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.0,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
-
-# say -- 弓データ初期化
+    data modify storage mhdp_core:game_data WeaponAttackData.Bow.Tec.Targetting set value {AttackType:Shot,DamageMult:28,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:4,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxRotation:0.0,IsVfxStrong:false,VfxScale:[3f,3f,3f]}
