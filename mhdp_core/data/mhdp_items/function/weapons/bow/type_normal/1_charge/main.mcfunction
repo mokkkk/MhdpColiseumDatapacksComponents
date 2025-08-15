@@ -24,8 +24,8 @@
     execute if score @s Wpn.AnimationTimer matches 12 run function mhdp_items:weapons/bow/type_normal/1_charge/animation_3
 
 # 溜め
-    execute if score @s Wpn.AnimationTimer matches 8 run scoreboard players set @s Wpn.Bw.ChargeCount 1
-    execute if score @s Wpn.AnimationTimer matches 15 run scoreboard players set @s Wpn.Bw.ChargeCount 2
+    execute if score @s Wpn.AnimationTimer matches 8 if score @s Wpn.Bw.ChargeCount matches ..1 run scoreboard players set @s Wpn.Bw.ChargeCount 1
+    execute if score @s Wpn.AnimationTimer matches 15 if score @s Wpn.Bw.ChargeCount matches ..2 run scoreboard players set @s Wpn.Bw.ChargeCount 2
     execute if score @s Wpn.AnimationTimer matches 40 run function mhdp_items:weapons/bow/type_normal/1_charge/up_charge_count
     execute if entity @s[tag=Skill.Extra.BowChargeUp] if score @s Wpn.AnimationTimer matches 55 run function mhdp_items:weapons/bow/type_normal/1_charge/up_charge_count
 
@@ -33,6 +33,8 @@
     scoreboard players remove @s Ply.Stats.Stamina 2
 
 # 遷移
+    # ジャンプ：身躱し射法
+        execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 12.. if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max run function mhdp_items:weapons/bow/type_normal/11_moving_shot/start
     # 右クリックを離した場合、射撃に移行
         execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 6.. run function mhdp_items:weapons/bow/type_normal/1_charge/change_to_shot
         execute if score @s Ply.Stats.Stamina matches ..0 run function mhdp_items:weapons/bow/type_normal/1_charge/change_to_shot

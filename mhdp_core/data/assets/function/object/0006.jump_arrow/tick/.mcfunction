@@ -12,6 +12,7 @@
 
 # メイン処理実行
     execute if entity @s[tag=!6.IsJump] if score @s ObjectTick matches 8.. run particle flash ~ ~ ~ 0 0 0 0 1
+    execute if entity @s[tag=!6.IsJump] if score @s ObjectTick matches 8.. run playsound entity.breeze.jump master @a ~ ~ ~ 2 1
     execute if entity @s[tag=!6.IsJump] if score @s ObjectTick matches 8.. run tag @s add 6.IsJump
     execute if entity @s[tag=6.IsJump] run tp @s ~ ~ ~ ~ -90
     execute at @s run function assets:object/0006.jump_arrow/tick/move

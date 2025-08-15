@@ -59,8 +59,9 @@
     execute if score @s Wpn.GeneralTimer matches 1001 run scoreboard players remove @s Ply.Stats.Stamina 100
 
 # 遷移
-    # 右クリック押し続け：竜の千々矢に移行
-        execute if score @s Wpn.GeneralTimer matches 56 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/start
+    # 右クリック押し続け：竜の千々矢、または昇天煌弓に移行
+        execute if score @s Wpn.GeneralTimer matches 56 if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/start
+        execute if score @s Wpn.GeneralTimer matches 56 unless entity @s[tag=Wpn.Bw.Tec.TargettingShot] run function mhdp_items:weapons/bow/type_normal/7_shot_shower/start
 
 # 終了
     execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..30 run function mhdp_items:weapons/bow/type_normal/6_shot_pierce/end

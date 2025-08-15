@@ -17,7 +17,16 @@
     # 開始
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Flag.SpJumpAttack,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/bow/type_normal/10_flying_shot/start
     # 処理
-        execute if entity @s[tag=Wpn.Bw.Tec.FlyingShot] run function mhdp_items:weapons/bow/type_normal/10_flying_shot/main
+        execute if entity @s[tag=Wpn.Bw.Normal.FlyingShot] run function mhdp_items:weapons/bow/type_normal/10_flying_shot/main
+
+# 狩技：身躱し射法
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Normal.MovingShot] run function mhdp_items:weapons/bow/type_normal/11_moving_shot/main
+
+# 狩技：昇天煌弓・箭射
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Normal.TargettingShot] run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/main
+        execute if entity @s[tag=Wpn.Bw.Normal.JumpShot] run function mhdp_items:weapons/bow/type_normal/13_jump_shot/main
 
 # 溜め
     # 通常
@@ -30,10 +39,6 @@
     # 通常
         # 処理
             execute if entity @s[tag=Wpn.Bw.Normal.Shot] run function mhdp_items:weapons/bow/type_normal/2_shot/main
-
-# 剛射
-    # 処理
-        # execute if entity @s[tag=Wpn.Bw.Normal.Shot.Power] run function mhdp_items:weapons/bow/type_normal/5_shot_power/main
 
 # 竜の一矢
     # 開始：スニーク+右クリック
