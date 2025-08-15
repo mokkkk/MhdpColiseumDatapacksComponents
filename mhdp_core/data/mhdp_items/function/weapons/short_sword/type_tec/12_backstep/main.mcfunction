@@ -37,7 +37,7 @@
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 2..20 run function mhdp_items:core/buffering/a
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..20 if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 2..20 if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:core/buffering/b
 
 # 遷移
     # 無操作：突進斬りに移行
