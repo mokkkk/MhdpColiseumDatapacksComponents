@@ -52,8 +52,8 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 15..20 run tp @s ~ ~ ~ ~ ~0.8
 
 # アーマー
-    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.Armod.Hyper
-    execute if score @s Wpn.GeneralTimer matches 17 run tag @s remove Ply.Weapon.Armod.Hyper
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.Armor.Hyper
+    execute if score @s Wpn.GeneralTimer matches 17 run tag @s remove Ply.Weapon.Armor.Hyper
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s

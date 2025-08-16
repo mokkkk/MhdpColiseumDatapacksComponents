@@ -19,6 +19,17 @@
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.FlyingShot] run function mhdp_items:weapons/bow/type_tec/10_flying_shot/main
 
+# 狩技：身躱し射法
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Tec.MovingShot] run function mhdp_items:weapons/bow/type_tec/11_moving_shot/main
+
+# 狩技：昇天煌弓・箭射
+    # 開始：スニーク+後ろ+右クリック長押し
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeyBack] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/start
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Tec.TargettingShot] run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/main
+        execute if entity @s[tag=Wpn.Bw.Tec.JumpShot] run function mhdp_items:weapons/bow/type_tec/13_jump_shot/main
+
 # 溜め
     # 通常
         # 開始：立ち+右クリック
@@ -54,7 +65,7 @@
 
 # 導ノ矢
     # 開始：スニーク+右クリック長押し
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Wpn.Bw.Gauge matches 100.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking,tag=!Ply.Ope.IsKeyBack] if score @s Wpn.Bw.Gauge matches 100.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.Shot.Horming] run function mhdp_items:weapons/bow/type_tec/7_shot_horming/main
 

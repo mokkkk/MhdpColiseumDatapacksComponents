@@ -10,20 +10,14 @@
 # UI設定
     data modify storage mhdp_core:temp UI.BowBottleArray set value []
     scoreboard players operation #mhdp_temp_bottle MhdpCore = @s Wpn.Bw.Bottle.Count
+    scoreboard players operation #mhdp_temp_bottle_targetting MhdpCore = @s Wpn.Bw.Bottle.Targetting
     function mhdp_items:weapons/bow/util/ui_bottle/append
-    scoreboard players remove #mhdp_temp_bottle MhdpCore 1
     function mhdp_items:weapons/bow/util/ui_bottle/append
-    scoreboard players remove #mhdp_temp_bottle MhdpCore 1
     function mhdp_items:weapons/bow/util/ui_bottle/append
-    scoreboard players remove #mhdp_temp_bottle MhdpCore 1
     function mhdp_items:weapons/bow/util/ui_bottle/append
-    scoreboard players remove #mhdp_temp_bottle MhdpCore 1
     function mhdp_items:weapons/bow/util/ui_bottle/append
-    scoreboard players remove #mhdp_temp_bottle MhdpCore 1
     function mhdp_items:weapons/bow/util/ui_bottle/append
-    scoreboard players remove #mhdp_temp_bottle MhdpCore 1
     function mhdp_items:weapons/bow/util/ui_bottle/append
-    scoreboard players remove #mhdp_temp_bottle MhdpCore 1
     function mhdp_items:weapons/bow/util/ui_bottle/append
 
 # 表示

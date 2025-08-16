@@ -13,11 +13,13 @@
     effect clear @s slowness
 
 # タイマー初期化
-    scoreboard players set @s Wpn.GeneralTimer 0
+    scoreboard players set @s Wpn.GeneralTimer -1
     scoreboard players set @s Wpn.AnimationTimer 0
 
 # 状態タグ削除
     function api:weapon_operation/remove_state_tags
+    # 片手剣独自
+        tag @s remove Ply.Flag.Ss.UpperBashCounter
 
 # アニメーション停止
     function mhdp_items:weapons/short_sword/util/stop_all_animations

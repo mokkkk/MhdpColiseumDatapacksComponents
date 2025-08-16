@@ -37,3 +37,6 @@
         execute if score @s Wpn.Gs.ChargeTimer matches 450.. run function mhdp_items:weapons/great_sword/type_tec/2_chargeattack/start
     # ジャンプした場合、タックルに移行
         execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Wpn.Gs.Normal.ChargeSlash] if score @s Wpn.GeneralTimer matches 15.. if score @s Ply.Stats.Stamina matches 150.. run function mhdp_items:weapons/great_sword/type_tec/3_tackle/start
+    # S + スニーク、威姿呵成の構えに移行
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyBack,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start
+        execute if entity @s[tag=Ply.Ope.StartSneak,tag=Ply.Ope.IsKeyBack,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start

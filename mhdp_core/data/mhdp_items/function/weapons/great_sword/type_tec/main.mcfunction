@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:weapons/great_sword/main
 
+# 共通処理
+    function mhdp_items:weapons/great_sword/type_tec/general
+
 # 無操作確認
     function mhdp_items:weapons/great_sword/util/get_no_ope
 
@@ -25,6 +28,12 @@
     # 処理
         execute if entity @s[tag=Wpn.Gs.Tec.PowerSheathe] run function mhdp_items:weapons/great_sword/type_tec/17_power_sheathe/main
 
+# 狩技：威姿呵成の構え
+    # 構え
+        execute if entity @s[tag=Wpn.Gs.Tec.CounterStance] run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/main
+    # 成功
+        execute if entity @s[tag=Wpn.Gs.Tec.CounterStance.Success] run function mhdp_items:weapons/great_sword/type_tec/20_counter_stance_success/main
+
 # 溜め
     # 通常
         # 開始：右クリック長押し
@@ -35,6 +44,9 @@
     # 強溜め
         # 処理
             execute if entity @s[tag=Wpn.Gs.Tec.Charge] if score @s Wpn.Gs.ChargeSlashCount matches 1 run function mhdp_items:weapons/great_sword/type_tec/6_charge_high/main
+    # 高速強溜め
+        # 処理
+            execute if entity @s[tag=Wpn.Gs.Tec.Charge.Quick] run function mhdp_items:weapons/great_sword/type_tec/18_charge_high_quick/main
     # 真溜め
         # 処理
             execute if entity @s[tag=Wpn.Gs.Tec.Charge] if score @s Wpn.Gs.ChargeSlashCount matches 2.. run function mhdp_items:weapons/great_sword/type_tec/8_charge_super/main

@@ -26,8 +26,8 @@
         #declare tag Ply.Weapon.NoAvoid 回避不能
         #declare tag Ply.Weapon.NoMoveJump 移動ジャンプ不能
         #declare tag Ply.Weapon.Guard ガード中
-        #declare tag Ply.Weapon.Armod.Super スーパーアーマー中
-        #declare tag Ply.Weapon.Armod.Hyper ハイパーアーマー中
+        #declare tag Ply.Weapon.Armor.Super スーパーアーマー中
+        #declare tag Ply.Weapon.Armor.Hyper ハイパーアーマー中
         #declare tag Ply.Weapon.HisStop ヒットストップ中
     # 操作モード
         #declare tag Ply.Weapon.Type.Tech 天の型

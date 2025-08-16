@@ -9,8 +9,8 @@
 #        storage mhdp_core:temp Damage.LaunchType 打ち上げ方向、1:上、2：斜め上
 
 # アーマー計算
-    execute if entity @s[tag=Ply.Weapon.Armod.Super] run scoreboard players remove #mhdp_temp_knockback_strength MhdpCore 1
-    execute if entity @s[tag=Ply.Weapon.Armod.Hyper] run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
+    execute if entity @s[tag=Ply.Weapon.Armor.Super] run scoreboard players remove #mhdp_temp_knockback_strength MhdpCore 1
+    execute if entity @s[tag=Ply.Weapon.Armor.Hyper] run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
     execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
 
 # 発射威力取得
