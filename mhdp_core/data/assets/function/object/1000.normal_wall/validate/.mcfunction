@@ -6,6 +6,7 @@
     data modify storage api: Arg.Valid set value false
 
 # 使用者のゲージ確認
+    # execute if score @s Ply.Stats.BuildGauge matches ..2 run return 0
 
 # 設置範囲のブロック確認
     execute align xyz positioned ~0.5 ~0.5 ~0.5 \
