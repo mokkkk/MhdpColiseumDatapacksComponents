@@ -4,8 +4,8 @@
 #
 
 # ペナルティ中
-    execute if entity @s[tag=Ply.Weapon.StaminaEmpty] if score #mhdp_temp_stamina MhdpCore matches ..0 if score #mhdp_core_tick MhdpCore matches ..9 run return run data modify storage mhdp_core:temp UI.StaminaArray append value [{"text":"0","font":"ui/stamina"},{"text": "\uF801","font": "space"}]
-    execute if entity @s[tag=Ply.Weapon.StaminaEmpty] if score #mhdp_temp_stamina MhdpCore matches ..0 if score #mhdp_core_tick MhdpCore matches 10.. run return run data modify storage mhdp_core:temp UI.StaminaArray append value [{"text":"=","font":"ui/stamina"},{"text": "\uF801","font": "space"}]
+    execute if entity @s[tag=Ply.Weapon.StaminaEmpty] if score #mhdp_temp_stamina MhdpCore matches ..0 if score #mhdp_core_tick MhdpCore matches ..9 run return run data modify storage mhdp_core:temp UI.StaminaArray append value [{"text":"0","font":"ui/new_player_ui/stamina","shadow_color":[0,0,0,0]},{"text": "\uF801","font": "space"}]
+    execute if entity @s[tag=Ply.Weapon.StaminaEmpty] if score #mhdp_temp_stamina MhdpCore matches ..0 if score #mhdp_core_tick MhdpCore matches 10.. run return run data modify storage mhdp_core:temp UI.StaminaArray append value [{"text":"=","font":"ui/new_player_ui/stamina","shadow_color":[0,0,0,0]},{"text": "\uF801","font": "space"}]
 
 # 値を入れる
     execute if score #mhdp_temp_stamina MhdpCore matches ..0 run data modify storage mhdp_core:temp UI.StaminaArray append value [{"text":"0","font":"ui/new_player_ui/stamina","shadow_color":[0,0,0,0]},{"text": "\uF801","font": "space"}]
