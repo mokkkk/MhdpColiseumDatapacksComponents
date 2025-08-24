@@ -6,7 +6,7 @@
 # UI設定
     scoreboard players set #mhdp_const_125 MhdpCore 125
     scoreboard players operation #mhdp_temp_stamina MhdpCore = @s Ply.Stats.Stamina
-    function mhdp_items:player/ui/stamina/append
+    function mhdp_items:player/ui/stamina/append_left
     scoreboard players operation #mhdp_temp_stamina MhdpCore -= #mhdp_const_125 MhdpCore
     function mhdp_items:player/ui/stamina/append
     scoreboard players operation #mhdp_temp_stamina MhdpCore -= #mhdp_const_125 MhdpCore
@@ -20,7 +20,7 @@
     scoreboard players operation #mhdp_temp_stamina MhdpCore -= #mhdp_const_125 MhdpCore
     function mhdp_items:player/ui/stamina/append
     scoreboard players operation #mhdp_temp_stamina MhdpCore -= #mhdp_const_125 MhdpCore
-    function mhdp_items:player/ui/stamina/append
+    function mhdp_items:player/ui/stamina/append_right
     scoreboard players operation #mhdp_temp_stamina MhdpCore -= #mhdp_const_125 MhdpCore
 
 # 表示
