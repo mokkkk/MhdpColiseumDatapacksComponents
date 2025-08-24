@@ -11,6 +11,7 @@
     function mhdp_items:weapons/bow/util/interrupt
 
 # タグ消去
+    function api:weapon_operation/reset_state_tags
     tag @s remove Ply.Weapon.Equip.Bow
     tag @s remove Ply.Weapon.Bow.IsHorming
 

@@ -30,7 +30,7 @@
     execute if entity @s[tag=Itm.Sp.Wirebug.Using] run scoreboard players set @s Itm.Wirebug.CoolTime 400
 
 # 跳ねる
-    function mhdp_items:weapons/bow/type_tec/10_flying_shot/start_move
+    function mhdp_items:weapons/bow/type_normal/10_flying_shot/start_move
 
 # 終了
     tag @s remove Ply.Flag.SpJumpAttack

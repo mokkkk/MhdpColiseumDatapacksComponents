@@ -14,3 +14,8 @@
 
 # 導ノ矢ターゲット取得
     execute if entity @s[tag=Ply.Weapon.Bow.IsHorming] run function mhdp_items:weapons/bow/type_tec/8_horming/get_horming_target
+
+# 狩技キャンセル
+    execute if entity @s[tag=Ply.Weapon.UsingArts.2,tag=!Wpn.Bw.Tec.TargettingShot] run scoreboard players set @s Ply.Stats.Arts.2 0
+    execute if entity @s[tag=Ply.Weapon.UsingArts.2,tag=!Wpn.Bw.Tec.TargettingShot] run scoreboard players set @s Ply.Stats.Arts.2.Percent 0
+    execute if entity @s[tag=Ply.Weapon.UsingArts.2,tag=!Wpn.Bw.Tec.TargettingShot] run tag @s remove Ply.Weapon.UsingArts.2

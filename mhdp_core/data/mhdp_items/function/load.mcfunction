@@ -85,6 +85,8 @@
             scoreboard objectives add Wpn.Bw.Bottle.Count dummy
         # 飛翔睨み撃ち回数
             scoreboard objectives add Wpn.Bw.FlyingShot.Count dummy
+        # 昇天煌弓・箭射のロックオン済みビン
+            scoreboard objectives add Wpn.Bw.Bottle.Targetting dummy
 # 特殊装具ごとの特殊スコア
     # 砥石
         # 処理タイマー

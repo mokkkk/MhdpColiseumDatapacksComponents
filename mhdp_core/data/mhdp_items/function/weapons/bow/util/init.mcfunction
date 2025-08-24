@@ -15,6 +15,7 @@
     scoreboard players set @s Wpn.Bw.Bottle.Count 0
     # ビン種別
         scoreboard players set @s Wpn.Bw.Bottle.Type 0
+        scoreboard players set @s Wpn.Bw.Bottle.Targetting 0
         execute store result score @s Wpn.Bw.Bottle.Type run data get storage mhdp_core:temp PlayerData.Item.MainWeapon.components."minecraft:custom_data".BowBottleType
 
 # 狩技ゲージ上限決定

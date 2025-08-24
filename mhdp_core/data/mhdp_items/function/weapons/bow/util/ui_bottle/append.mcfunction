@@ -5,5 +5,10 @@
 # @within function mhdp_items:core/switch/macro/m.ui
 
 # 値を入れる
-    execute if score #mhdp_temp_bottle MhdpCore matches ..0 run data modify storage mhdp_core:temp UI.BowBottleArray append value [{"text":"0","font":"ui/weapon/bow/bottle"}]
-    execute if score #mhdp_temp_bottle MhdpCore matches 1.. run data modify storage mhdp_core:temp UI.BowBottleArray append value [{"text":"1","font":"ui/weapon/bow/bottle"}]
+    execute if score #mhdp_temp_bottle_targetting MhdpCore matches ..0 if score #mhdp_temp_bottle MhdpCore matches ..0 run data modify storage mhdp_core:temp UI.BowBottleArray append value [{"text":"0","font":"ui/weapon/bow/bottle"}]
+    execute if score #mhdp_temp_bottle_targetting MhdpCore matches ..0 if score #mhdp_temp_bottle MhdpCore matches 1.. run data modify storage mhdp_core:temp UI.BowBottleArray append value [{"text":"1","font":"ui/weapon/bow/bottle"}]
+    execute if score #mhdp_temp_bottle_targetting MhdpCore matches 1.. run data modify storage mhdp_core:temp UI.BowBottleArray append value [{"text":"#","font":"ui/weapon/bow/bottle"}]
+
+# 終了
+    scoreboard players remove #mhdp_temp_bottle MhdpCore 1
+    scoreboard players remove #mhdp_temp_bottle_targetting MhdpCore 1

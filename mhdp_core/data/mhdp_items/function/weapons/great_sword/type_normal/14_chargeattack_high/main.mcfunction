@@ -47,12 +47,16 @@
     execute if score @s Wpn.AnimationTimer matches 8 if score @s Wpn.Gs.ChargeCount matches 3.. rotated ~ -60 run function player_motion:api/launch_looking
 
 # アーマー
-    execute if score @s Wpn.GeneralTimer matches 1 if score @s Wpn.Gs.ChargeCount matches 3.. run tag @s add Ply.Weapon.Armod.Hyper
-    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches 3.. run tag @s remove Ply.Weapon.Armod.Hyper
+    execute if score @s Wpn.GeneralTimer matches 1 if score @s Wpn.Gs.ChargeCount matches 3.. run tag @s add Ply.Weapon.Armor.Hyper
+    execute if score @s Wpn.GeneralTimer matches 6 if score @s Wpn.Gs.ChargeCount matches 3.. run tag @s remove Ply.Weapon.Armor.Hyper
 
 # 演出
    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2
     execute if score @s Wpn.AnimationTimer matches 1 run particle block{block_state:"minecraft:sand"} ^ ^0.1 ^ 0.2 0.2 0.2 0 10
+
+# スニーク+ジャンプ：狩技・強化納刀に移行
+    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/type_normal/17_power_sheathe/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 45.. run function mhdp_items:weapons/great_sword/type_normal/14_chargeattack_high/end

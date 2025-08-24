@@ -7,8 +7,8 @@
 #        storage mhdp_core:temp Damage.IsLaunch 打ち上げ有無
 
 # アーマー計算
-    execute if entity @s[tag=Ply.Weapon.Armod.Super] run scoreboard players remove #mhdp_temp_knockback_strength MhdpCore 1
-    execute if entity @s[tag=Ply.Weapon.Armod.Hyper] run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
+    execute if entity @s[tag=Ply.Weapon.Armor.Super] run scoreboard players remove #mhdp_temp_knockback_strength MhdpCore 1
+    execute if entity @s[tag=Ply.Weapon.Armor.Hyper] run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
 
 # 発射威力取得
     execute if score #mhdp_temp_knockback_strength MhdpCore matches ..0 run scoreboard players set $strength player_motion.api.launch 0
