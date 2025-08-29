@@ -13,8 +13,8 @@
 # # 武器ごとの特殊ゲージ
 #     function mhdp_items:player/ui/weapon/main
 
-# # 特殊装具
-#     function mhdp_items:player/ui/item/main
+# 特殊装具
+    function mhdp_items:player/ui/item/main
 
 # # 狩技
 #     function mhdp_items:player/ui/arts/main_1
@@ -37,9 +37,9 @@
         {"text":"\uF804","font":"space"},\
         {"text":"#","font":"ui/new_player_ui/weapon",shadow_color:[0,0,0,0]},\
         {"text":"\uF888\uF888\uF888\uF888\uF888\uF888\uF802\uF802\uF802\uF801","font":"space"},\
-        {"text":"1","font":"ui/new_player_ui/item",shadow_color:[0,0,0,0]},\
+        {"interpret":true,"nbt":"UI.Item0","storage":"mhdp_core:temp"},\
         {"text":"\uF804","font":"space"},\
-        {"text":"2","font":"ui/new_player_ui/item",shadow_color:[0,0,0,0]},\
+        {"interpret":true,"nbt":"UI.Item1","storage":"mhdp_core:temp"},\
         {"text":"\uF801","font":"space"},\
         \
         {"text":"\uF999\uF999\uF801\uF801","font":"space"},\
