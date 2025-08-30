@@ -28,6 +28,9 @@
 # スタミナ
     function mhdp_items:player/ui/stamina/main
 
+# 建材ゲージ
+    function mhdp_items:player/ui/buildgauge/main
+
 # UI表示
 # 1近接：-6px 切れ味(44px) +4px 武器(40px) 空欄(53px) アイテム1(16px) +4px アイテム2(16px) : 計178px
 # 2：-22px -200px 型表示(20) +180px +22px : 計0px
@@ -64,7 +67,7 @@
         {"text":"\uF813\uF998\uF998\uF998\uF801\uF801\uF801","font":"space"},\
         {"text":"#","font":"ui/new_player_ui/block",shadow_color:[0,0,0,0]},\
         {"text":"\uF998","font":"space"},\
-        {"text":"$","font":"ui/new_player_ui/block",shadow_color:[0,0,0,0]},\
+        {"interpret":true,"nbt":"UI.BuildGauge","storage":"mhdp_core:temp"},\
     ]
 
 # # UI表示
