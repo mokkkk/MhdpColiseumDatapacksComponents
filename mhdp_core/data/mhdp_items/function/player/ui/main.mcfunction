@@ -4,6 +4,9 @@
 #
 # @within function mhdp_core:player/tick
 
+# 仮
+    execute if score @s Ply.Stats.BuildGauge matches ..999 run scoreboard players add @s Ply.Stats.BuildGauge 1
+
 # 初期化
     data modify storage mhdp_core:temp UI set value {Sharpness:{},Stamina:{},StaminaArray:[],ExArray:[]}
 
@@ -27,6 +30,9 @@
 
 # スタミナ
     function mhdp_items:player/ui/stamina/main
+
+# ブロック
+    function mhdp_items:player/ui/block
 
 # 建材ゲージ
     function mhdp_items:player/ui/buildgauge/main
@@ -65,7 +71,7 @@
         {"interpret":true,"nbt":"UI.Arts2","storage":"mhdp_core:temp"},\
         \
         {"text":"\uF813\uF998\uF998\uF998\uF801\uF801\uF801","font":"space"},\
-        {"text":"#","font":"ui/new_player_ui/block",shadow_color:[0,0,0,0]},\
+        {"interpret":true,"nbt":"UI.Block","storage":"mhdp_core:temp"},\
         {"text":"\uF998","font":"space"},\
         {"interpret":true,"nbt":"UI.BuildGauge","storage":"mhdp_core:temp"},\
     ]
