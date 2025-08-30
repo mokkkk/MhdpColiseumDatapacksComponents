@@ -16,9 +16,9 @@
 # 特殊装具
     function mhdp_items:player/ui/item/main
 
-# # 狩技
-#     function mhdp_items:player/ui/arts/main_1
-#     function mhdp_items:player/ui/arts/main_2
+# 狩技
+    function mhdp_items:player/ui/arts/main_1
+    function mhdp_items:player/ui/arts/main_2
 
 # # スキル関連
 
@@ -54,9 +54,9 @@
         {"text":"\uF821\uF822","font":"space"},\
         \
         {"text":"\uF813\uF801","font":"space"},\
-        {"text":"1","font":"ui/new_player_ui/arts",shadow_color:[0,0,0,0]},\
+        {"interpret":true,"nbt":"UI.Arts1","storage":"mhdp_core:temp"},\
         {"text":"\uF998","font":"space"},\
-        {"text":"2","font":"ui/new_player_ui/arts",shadow_color:[0,0,0,0]},\
+        {"interpret":true,"nbt":"UI.Arts2","storage":"mhdp_core:temp"},\
         \
         {"text":"\uF813\uF998\uF998\uF998\uF801\uF801\uF801","font":"space"},\
         {"text":"#","font":"ui/new_player_ui/block",shadow_color:[0,0,0,0]},\
