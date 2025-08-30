@@ -22,11 +22,14 @@
 
 # # スキル関連
 
+# 型
+    function mhdp_items:player/ui/type
+
 # スタミナ
     function mhdp_items:player/ui/stamina/main
 
 # UI表示
-# 1：-6px 切れ味(44px) +4px 武器(40px) 空欄(53px) アイテム1(16px) +4px アイテム2(16px) : 計178px
+# 1近接：-6px 切れ味(44px) +4px 武器(40px) 空欄(53px) アイテム1(16px) +4px アイテム2(16px) : 計178px
 # 2：-22px -200px 型表示(20) +180px +22px : 計0px
 # 3：-204px タイマー(20px) -1px スタミナ(82px) +100px : 計-1px
 # 4：-9px 狩技ゲージ1(41px) -2px 狩技ゲージ2(41px) : 計-1px
@@ -44,7 +47,7 @@
         \
         {"text":"\uF999\uF999\uF801\uF801","font":"space"},\
         {"text":"\uF815","font":"space"},\
-        {"text":"#","font":"ui/new_player_ui/type",shadow_color:[0,0,0,0]},\
+        {"interpret":true,"nbt":"UI.Type","storage":"mhdp_core:temp"},\
         {"text":"\uF900\uF822","font":"space"},\
         {"text":"\uF888\uF888\uF802\uF802","font":"space"},\
         \
