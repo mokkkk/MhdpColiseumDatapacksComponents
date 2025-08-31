@@ -16,7 +16,8 @@
     function mhdp_items:player/ui/arts/gauge_2
     scoreboard players operation #mhdp_temp_arts MhdpCore = @s Ply.Stats.Arts.2.Percent
     execute if score #mhdp_temp_arts MhdpCore matches ..0 run data modify storage mhdp_core:temp UI.ArtsArray2 append value [{"text":"0","font":"ui/new_player_ui/arts/gauge","shadow_color":[0,0,0,0]},{"text": "\uF801","font": "space"}]
-    execute if score #mhdp_temp_arts MhdpCore matches 1.. run data modify storage mhdp_core:temp UI.ArtsArray2 append value [{"text":"1","font":"ui/new_player_ui/arts/gauge","shadow_color":[0,0,0,0]},{"text": "\uF801","font": "space"}]
+    execute if entity @s[tag=!Ply.Weapon.UsingArts.2] if score #mhdp_temp_arts MhdpCore matches 1.. run data modify storage mhdp_core:temp UI.ArtsArray2 append value [{"text":"1","font":"ui/new_player_ui/arts/gauge","shadow_color":[0,0,0,0]},{"text": "\uF801","font": "space"}]
+    execute if entity @s[tag=Ply.Weapon.UsingArts.2] if score #mhdp_temp_arts MhdpCore matches 1.. run data modify storage mhdp_core:temp UI.ArtsArray2 append value [{"text":"3","font":"ui/new_player_ui/arts/gauge","shadow_color":[0,0,0,0]},{"text": "\uF801","font": "space"}]
     execute if entity @s[tag=!Ply.Weapon.UsingArts.2] run function mhdp_items:player/ui/arts/append_2
     execute if entity @s[tag=Ply.Weapon.UsingArts.2] run function mhdp_items:player/ui/arts/append_using_2
     scoreboard players operation #mhdp_temp_arts MhdpCore -= #const_100 Const
@@ -38,7 +39,8 @@
     execute if entity @s[tag=!Ply.Weapon.UsingArts.2] run function mhdp_items:player/ui/arts/append_2
     execute if entity @s[tag=Ply.Weapon.UsingArts.2] run function mhdp_items:player/ui/arts/append_using_2
     execute if score #mhdp_temp_arts MhdpCore matches ..99 run data modify storage mhdp_core:temp UI.ArtsArray2 append value [{"text":"0","font":"ui/new_player_ui/arts/gauge","shadow_color":[0,0,0,0]},{"text": "\uF801","font": "space"}]
-    execute if score #mhdp_temp_arts MhdpCore matches 100.. run data modify storage mhdp_core:temp UI.ArtsArray2 append value [{"text":"1","font":"ui/new_player_ui/arts/gauge","shadow_color":[0,0,0,0]},{"text": "\uF801","font": "space"}]
+    execute if entity @s[tag=!Ply.Weapon.UsingArts.2] if score #mhdp_temp_arts MhdpCore matches 100.. run data modify storage mhdp_core:temp UI.ArtsArray2 append value [{"text":"1","font":"ui/new_player_ui/arts/gauge","shadow_color":[0,0,0,0]},{"text": "\uF801","font": "space"}]
+    execute if entity @s[tag=Ply.Weapon.UsingArts.2] if score #mhdp_temp_arts MhdpCore matches 100.. run data modify storage mhdp_core:temp UI.ArtsArray2 append value [{"text":"3","font":"ui/new_player_ui/arts/gauge","shadow_color":[0,0,0,0]},{"text": "\uF801","font": "space"}]
     scoreboard players operation #mhdp_temp_arts MhdpCore -= #const_100 Const
 
 # 表示

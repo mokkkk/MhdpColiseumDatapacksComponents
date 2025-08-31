@@ -39,7 +39,7 @@
 # 2：-22px -200px 型表示(20) +180px +22px : 計0px
 # 3：-204px タイマー(20px) -1px スタミナ(82px) +100px : 計-1px
 # 4：-9px 狩技ゲージ1(41px) -2px 狩技ゲージ2(41px) : 計-1px
-# 5：-89px 建築マーク(7px) -3px 建築ゲージ(82px) : 計-1px
+# 5：-89px 建築マーク(7px) -1px 建築ゲージ(82px) -1px : 計-1px
     title @s actionbar [\
         {"text":"\uF998\uF998\uF998\uF801","font":"space"},\
         {"interpret":true,"nbt":"UI.Sharpness","storage":"mhdp_core:temp"},\
@@ -69,8 +69,9 @@
         \
         {"text":"\uF813\uF998\uF998\uF998\uF801\uF801\uF801","font":"space"},\
         {"interpret":true,"nbt":"UI.Block","storage":"mhdp_core:temp"},\
-        {"text":"\uF998","font":"space"},\
+        {"text":"\uF801","font":"space"},\
         {"interpret":true,"nbt":"UI.BuildGauge","storage":"mhdp_core:temp"},\
+        {"text":"\uF801","font":"space"},\
     ]
 
 # # UI表示
