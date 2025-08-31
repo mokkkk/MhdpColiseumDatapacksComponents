@@ -6,10 +6,11 @@
     data modify storage api: Arg.Valid set value false
 
 # 使用者のゲージ確認
-    # execute if score @s Ply.Stats.BuildGauge matches ..2 run return 0
+    execute if score @s Ply.Stats.BuildGauge matches ..2 run return 0
 
 # 設置範囲のブロック確認
     execute align xyz positioned ~0.5 ~0.5 ~0.5 \
+        unless block ~ ~-1 ~ #mhdp_core:no_collision \
         if block ~-1 ~ ~-1 #mhdp_core:no_collision if block ~-1 ~ ~ #mhdp_core:no_collision if block ~-1 ~ ~1 #mhdp_core:no_collision \
         if block ~ ~ ~-1 #mhdp_core:no_collision if block ~ ~ ~ #mhdp_core:no_collision if block ~ ~ ~1 #mhdp_core:no_collision \
         if block ~1 ~ ~-1 #mhdp_core:no_collision if block ~1 ~ ~ #mhdp_core:no_collision if block ~1 ~ ~1 #mhdp_core:no_collision \
@@ -30,5 +31,3 @@
     
 # 終了
     data remove storage api: Arg
-
-say validate

@@ -3,11 +3,14 @@
 
 #> tag
 # @within function **
-
+# - 汎用
 #declare tag This tick等処理実行中
-
+# - 共通
 #declare tag Asset.Object オブジェクト用タグ
 #declare tag Asset.Object.Init 初期化が必要なオブジェクト
-
-#declare tag Asset.Object.HitBox 当たり判定
-#declare tag Asset.Object.Display 見た目
+# - 建築
+#declare tag Asset.Build.Root 建造物ルート
+#declare tag Asset.Build.HitBox 当たり判定
+#declare tag Asset.Build.Display 見た目
+# - 建築種別
+#declare tag Asset.Build.Type.Wall 壁系建造物

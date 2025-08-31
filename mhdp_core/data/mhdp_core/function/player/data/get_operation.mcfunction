@@ -86,6 +86,10 @@
     execute if entity @s[tag=Ply.Ope.StartKeyJump] run scoreboard players set @s Ply.Ope.JumpInterval 0
     execute if entity @s[tag=!Ply.Ope.StartKeyJump] if score @s Ply.Ope.JumpInterval matches ..5 run scoreboard players add @s Ply.Ope.JumpInterval 1
 
+# 空中
+    execute unless entity @s[nbt={OnGround:1b}] run tag @s add Ply.Ope.IsFlying
+    execute if entity @s[tag=Ply.Ope.IsFlying,nbt={OnGround:1b}] run tag @s remove Ply.Ope.IsFlying
+
 # 着地するまで有効
     execute if entity @s[tag=Ply.Ope.IsAir,nbt={OnGround:1b}] run tag @s remove Ply.Ope.IsAir
     execute if entity @s[tag=Ply.Flag.SpJumpAttack,tag=!Ply.Ope.IsAir] run tag @s remove Ply.Flag.SpJumpAttack
