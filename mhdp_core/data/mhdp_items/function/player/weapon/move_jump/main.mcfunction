@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:player/weapon/tick
 
+# 前ジャンプの場合、スキップ
+    execute if entity @s[tag=Ply.Ope.IsKeyForward] run return 0
+
 # スタミナ消費
     execute if entity @s[tag=!Skill.Stamina.Constitution.1,tag=!Skill.Stamina.Constitution.2,tag=!Skill.Stamina.Constitution.3,tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 120
     execute if entity @s[tag=Skill.Stamina.Constitution.1,tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 110
@@ -11,7 +14,7 @@
     execute if entity @s[tag=Skill.Stamina.Constitution.3,tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting] run scoreboard players remove @s Ply.Stats.Stamina 90
 
 # 移動
-    execute rotated ~ 20 run function api:weapon_operation/vector_move.m {Strength:3500}
+    execute rotated ~ 0 run function api:weapon_operation/vector_move.m {Strength:3500}
 
 # 演出
     particle cloud ~ ~0.3 ~ 0.3 0.3 0.3 0.1 3

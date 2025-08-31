@@ -8,4 +8,4 @@
 
 # 演出
     playsound entity.item.pickup master @s ~ ~ ~ 1 1.5
-    scoreboard players add @s Ply.Timer.BuildGaugeAnimation 4
+    scoreboard players set @s Ply.Timer.BuildGaugeAnimation 3

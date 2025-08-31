@@ -51,11 +51,11 @@
         {"interpret":true,"nbt":"UI.Item1","storage":"mhdp_core:temp"},\
         {"text":"\uF801","font":"space"},\
         \
-        {"text":"\uF999\uF999\uF801\uF801","font":"space"},\
+        {"text":"\uF999\uF999\uF801\uF801\uF801","font":"space"},\
         {"text":"\uF815","font":"space"},\
         {"interpret":true,"nbt":"UI.Type","storage":"mhdp_core:temp"},\
         {"text":"\uF900\uF822","font":"space"},\
-        {"text":"\uF888\uF888\uF802\uF802","font":"space"},\
+        {"text":"\uF888\uF888\uF802\uF802\uF802","font":"space"},\
         \
         {"text":"\uF815\uF998\uF998","font":"space"},\
         {"text":"#","font":"ui/new_player_ui/timer",shadow_color:[0,0,0,0]},\
