@@ -9,3 +9,6 @@
 
 # 演出
     playsound block.shulker_box.open master @a ~ ~ ~ 1 1.6
+
+# 上にいるプレイヤーを飛ばす
+    execute positioned ~-1.25 ~ ~-1.25 as @a[dx=2.5,dy=0.5,dz=2.5] at @s run function assets:core/object/build/expand_jump
