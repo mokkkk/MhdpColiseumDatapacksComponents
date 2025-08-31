@@ -58,6 +58,8 @@
             scoreboard objectives add Ply.Timer.Buffering dummy
         # 建材ゲージのアニメーション用
             scoreboard objectives add Ply.Timer.BuildGaugeAnimation dummy
+        # 建造物よじ登り用
+            scoreboard objectives add Ply.Timer.ClimbBuild dummy
     # その他処理用
         # 攻撃対象の保持
             scoreboard objectives add Ply.Other.AttackTargetUuid dummy

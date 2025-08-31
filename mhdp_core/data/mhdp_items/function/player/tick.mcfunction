@@ -32,4 +32,7 @@
 # アイテム関連処理
     function mhdp_items:player/item/tick
 
+# 建造物関連処理
+    function mhdp_items:player/build/tick
+
 # 終了

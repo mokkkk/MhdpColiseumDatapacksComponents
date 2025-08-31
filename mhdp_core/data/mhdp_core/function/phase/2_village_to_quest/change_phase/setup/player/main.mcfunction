@@ -33,6 +33,7 @@
     scoreboard players set @s Ply.Stats.BuildGauge 0
     scoreboard players set @s Ply.Stats.BuildGauge.Count 0
     scoreboard players set @s Ply.Timer.BuildGaugeAnimation 0
+    scoreboard players set @s Ply.Timer.ClimbBuild 0
 
 # 武器セット
     function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/weapon

@@ -9,6 +9,7 @@
     function assets:core/object/build/get_link_target.m with storage api: Arg
     tp @e[type=shulker,tag=Asset.Build.Target] ~ ~-100 ~
     kill @e[type=shulker,tag=Asset.Build.Target]
+    tag @e[type=shulker,tag=Asset.Build.Target] remove Asset.Build.Target
 
 # 自身を消去
     kill @s

@@ -13,4 +13,4 @@
     execute if score @s ObjectTick matches 13 run function assets:object/1000.normal_wall/tick/summon_hitbox
 
 # 消去
-    execute if score @s ObjectTick matches 200.. run function assets:object/1000.normal_wall/remove/
+    execute if score @s ObjectTick matches 600.. run function assets:object/1000.normal_wall/remove/
