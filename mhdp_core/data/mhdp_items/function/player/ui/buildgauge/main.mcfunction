@@ -3,6 +3,16 @@
 # UI表示処理等 建材ゲージ関連
 #
 
+# メモリ計算
+    execute if score @s Ply.Stats.BuildGauge.Count matches ..0 if score @s Ply.Stats.BuildGauge matches 125.. run function mhdp_items:player/ui/buildgauge/up_count
+    execute if score @s Ply.Stats.BuildGauge.Count matches ..1 if score @s Ply.Stats.BuildGauge matches 250.. run function mhdp_items:player/ui/buildgauge/up_count
+    execute if score @s Ply.Stats.BuildGauge.Count matches ..2 if score @s Ply.Stats.BuildGauge matches 375.. run function mhdp_items:player/ui/buildgauge/up_count
+    execute if score @s Ply.Stats.BuildGauge.Count matches ..3 if score @s Ply.Stats.BuildGauge matches 500.. run function mhdp_items:player/ui/buildgauge/up_count
+    execute if score @s Ply.Stats.BuildGauge.Count matches ..4 if score @s Ply.Stats.BuildGauge matches 625.. run function mhdp_items:player/ui/buildgauge/up_count
+    execute if score @s Ply.Stats.BuildGauge.Count matches ..5 if score @s Ply.Stats.BuildGauge matches 750.. run function mhdp_items:player/ui/buildgauge/up_count
+    execute if score @s Ply.Stats.BuildGauge.Count matches ..6 if score @s Ply.Stats.BuildGauge matches 875.. run function mhdp_items:player/ui/buildgauge/up_count
+    execute if score @s Ply.Stats.BuildGauge.Count matches ..7 if score @s Ply.Stats.BuildGauge matches 1000.. run function mhdp_items:player/ui/buildgauge/up_count
+
 # UI設定
     scoreboard players set #mhdp_const_125 MhdpCore 125
     scoreboard players operation #mhdp_temp_buildgauge MhdpCore = @s Ply.Stats.BuildGauge

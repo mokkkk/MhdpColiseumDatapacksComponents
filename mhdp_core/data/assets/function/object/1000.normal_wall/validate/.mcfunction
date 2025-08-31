@@ -30,3 +30,5 @@
     
 # 終了
     data remove storage api: Arg
+
+say validate

@@ -8,3 +8,6 @@
     # execute if entity @s[tag=Itm.Sp.Wirebug,tag=Itm.Sp.Wirebug.Using] if score @s Itm.Wirebug.GeneralTimer matches 15.. run scoreboard players set @s Itm.Wirebug.CoolTime 0
     # execute if entity @s[tag=Itm.Sp.Wirebug,tag=!Itm.Sp.Wirebug.Using] if score @s Itm.Wirebug.CoolTime matches 2.. run scoreboard players set @s Itm.Wirebug.CoolTime 0
     # execute if entity @s[tag=Itm.Sp.ImmovableCloth] if score @s Itm.ImmovableCloth.CoolTime matches 2.. run scoreboard players set @s Itm.ImmovableCloth.CoolTime 0
+
+# 建材ゲージ増加
+    execute if score @s Ply.Stats.BuildGauge matches ..999 run scoreboard players add @s Ply.Stats.BuildGauge 5

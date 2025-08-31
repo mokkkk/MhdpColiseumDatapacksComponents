@@ -4,9 +4,6 @@
 #
 # @within function mhdp_core:player/tick
 
-# 仮
-    execute if score @s Ply.Stats.BuildGauge matches ..999 run scoreboard players add @s Ply.Stats.BuildGauge 1
-
 # 初期化
     data modify storage mhdp_core:temp UI set value {Sharpness:{},Stamina:{},StaminaArray:[],ExArray:[]}
 
@@ -23,7 +20,7 @@
     function mhdp_items:player/ui/arts/main_1
     function mhdp_items:player/ui/arts/main_2
 
-# # スキル関連
+# スキル関連
 
 # 型
     function mhdp_items:player/ui/type

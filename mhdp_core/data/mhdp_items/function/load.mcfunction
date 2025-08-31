@@ -42,6 +42,7 @@
         scoreboard objectives add Ply.Stats.Arts.2.Percent dummy
     # 建築ゲージ
         scoreboard objectives add Ply.Stats.BuildGauge dummy
+        scoreboard objectives add Ply.Stats.BuildGauge.Count dummy
 # 武器共通処理
     # 武器の操作処理用
         scoreboard objectives add Wpn.GeneralTimer dummy
