@@ -74,6 +74,7 @@
         # ジャンプ
             #declare tag Ply.Ope.StartKeyJump ジャンプ開始
             #declare tag Ply.Ope.StartDoubleJump 連続ジャンプ
+            #declare tag Ply.Ope.IsKeyJump.Short ショートジャンプ
         # ダッシュ
             #declare tag Ply.Ope.IsSprinting ダッシュ中
         # 空中

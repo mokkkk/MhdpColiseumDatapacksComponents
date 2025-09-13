@@ -29,6 +29,9 @@
     execute if score @s Wpn.AnimationTimer matches 40 run function mhdp_items:weapons/bow/type_normal/1_charge/up_charge_count
     execute if entity @s[tag=Skill.Extra.BowChargeUp] if score @s Wpn.AnimationTimer matches 55 run function mhdp_items:weapons/bow/type_normal/1_charge/up_charge_count
 
+# 移動制限
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
+
 # スタミナ消費
     scoreboard players remove @s Ply.Stats.Stamina 2
 

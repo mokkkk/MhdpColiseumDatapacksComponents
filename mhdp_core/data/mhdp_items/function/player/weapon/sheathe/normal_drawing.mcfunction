@@ -17,5 +17,8 @@
 # タグ付与
     tag @s add Ply.Weapon.Drawing
 
+# 空中で抜刀した場合
+    execute if entity @s[tag=Ply.Ope.IsFlying] run tag @s add Ply.Ope.IsAir
+
 # デバッグ用
     execute if data storage mhdp_core:game_data {ShowDebugMessage:true} run say 武器共通：通常抜刀

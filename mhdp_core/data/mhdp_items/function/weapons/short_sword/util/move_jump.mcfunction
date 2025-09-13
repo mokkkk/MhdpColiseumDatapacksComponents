@@ -9,3 +9,5 @@
 
 # 武器操作中断
     function mhdp_items:weapons/short_sword/util/interrupt
+
+say movejump

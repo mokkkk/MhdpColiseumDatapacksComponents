@@ -20,5 +20,3 @@
     execute if entity @s[tag=Ply.Ope.IsKeyLeft,tag=!Ply.Ope.IsKeyRight] rotated ~-90 ~ run return run function player_motion:api/launch_looking
     execute if entity @s[tag=Ply.Ope.IsKeyRight,tag=!Ply.Ope.IsKeyLeft] rotated ~90 ~ run return run function player_motion:api/launch_looking
     execute rotated ~ ~ run function player_motion:api/launch_looking
-
-

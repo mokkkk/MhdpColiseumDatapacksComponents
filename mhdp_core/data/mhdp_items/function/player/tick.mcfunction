@@ -23,6 +23,9 @@
     execute if score @s Wpn.HitStopTimer matches 1.. run scoreboard players remove @s Wpn.HitStopTimer 1
     execute if entity @s[tag=Ply.Weapon.HisStop] if score @s Wpn.HitStopTimer matches ..0 run tag @s remove Ply.Weapon.HisStop
 
+# 建造物関連処理
+    function mhdp_items:player/build/tick
+
 # 武器関連処理
     execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:player/weapon/tick
 
@@ -32,7 +35,5 @@
 # アイテム関連処理
     function mhdp_items:player/item/tick
 
-# 建造物関連処理
-    function mhdp_items:player/build/tick
 
 # 終了

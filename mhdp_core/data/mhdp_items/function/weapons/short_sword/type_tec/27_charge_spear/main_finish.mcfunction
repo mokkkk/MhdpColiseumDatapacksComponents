@@ -63,7 +63,7 @@
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 3..44 run function mhdp_items:core/buffering/a
-    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 3..44 run function mhdp_items:core/buffering/jump
+    execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 3..44 run function mhdp_items:core/buffering/jump
 
 # 遷移
     # 右クリック：斬り上げに移行
