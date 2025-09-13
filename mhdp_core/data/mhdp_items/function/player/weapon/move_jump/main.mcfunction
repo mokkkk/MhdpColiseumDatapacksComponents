@@ -8,7 +8,6 @@
     # execute if entity @s[tag=Ply.Ope.IsKeyForward] run return 0
 
 # スタミナ消費
-    tag @s add Ply.Weapon.StaminaNotRegen
     execute if entity @s[tag=!Skill.Stamina.Constitution.1,tag=!Skill.Stamina.Constitution.2,tag=!Skill.Stamina.Constitution.3] run scoreboard players remove @s Ply.Stats.Stamina 150
     execute if entity @s[tag=Skill.Stamina.Constitution.1] run scoreboard players remove @s Ply.Stats.Stamina 140
     execute if entity @s[tag=Skill.Stamina.Constitution.2] run scoreboard players remove @s Ply.Stats.Stamina 130
