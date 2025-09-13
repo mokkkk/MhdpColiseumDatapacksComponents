@@ -4,6 +4,14 @@
 #
 # @within function mhdp_core:player/tick
 
+# 空中フラグをONにする
+    tag @s add Ply.Ope.IsAir
+
+# 移動ジャンプ終了
+    scoreboard players set @s Ply.Timer.VectorJumpCoolTime 0
+    attribute @s movement_speed modifier remove mhdp_core:movejump_movement_speed
+    attribute @s jump_strength modifier remove mhdp_core:movejump_jump_strength
+
 # 演出
     playsound block.ladder.step master @s ~ ~ ~ 0.5 1
 
