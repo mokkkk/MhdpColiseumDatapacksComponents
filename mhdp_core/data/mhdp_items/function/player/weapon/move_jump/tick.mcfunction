@@ -10,4 +10,6 @@
     execute if score @s Ply.Timer.VectorJumpCoolTime matches 6 at @s run function mhdp_items:player/weapon/move_jump/inverse.m with storage mhdp_core:temp PlayerData.VectorMove
     execute if score @s Ply.Timer.VectorJumpCoolTime matches 1 run attribute @s movement_speed modifier remove mhdp_core:movejump_movement_speed
     execute if score @s Ply.Timer.VectorJumpCoolTime matches 1 run attribute @s jump_strength modifier remove mhdp_core:movejump_jump_strength
-    execute if block ~ ~-1 ~ #mhdp_core:no_collision positioned ~ ~-1 ~ unless entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.1,dy=0.1,dz=0.1] run function mhdp_items:player/weapon/move_jump/jump_off with storage mhdp_core:temp PlayerData.VectorMove
+
+# 段差飛び降り判定
+    execute rotated ~ 0 positioned ^ ^ ^0.3 if block ~ ~-1 ~ #mhdp_core:no_collision positioned ^ ^-0.5 ^ unless entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.01,dy=0.01,dz=0.01] run function mhdp_items:player/weapon/move_jump/jump_off with storage mhdp_core:temp PlayerData.VectorMove

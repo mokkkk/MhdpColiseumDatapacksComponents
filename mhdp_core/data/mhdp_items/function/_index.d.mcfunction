@@ -44,7 +44,8 @@
         #declare tag Ply.Flag.Counter 相殺成功フラグ
         #declare tag Ply.Flag.SpJumpAttack 特殊空中攻撃フラグ
     # オプション
-        #declare tag Ply.Option.DisableCameraEffect オプション：画面効果無効化
+        #declare tag Ply.Option.DisableCameraEffect オプション：武器攻撃時のカメラ効果無効化
+        #declare tag Ply.Option.DisableMoveJump オプション：抜刀時の移動ジャンプ無効化
 # 一時
     #declare tag Temp.Hit ヒット判定用
     #declare tag Temp.Victim 攻撃対象判定用
