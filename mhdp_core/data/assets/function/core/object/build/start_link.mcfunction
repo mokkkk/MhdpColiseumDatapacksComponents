@@ -7,3 +7,4 @@
 
 # タグ消去
     tag @s remove Asset.Build.HitBox.Init
+    tag @s remove Asset.Build.Display.Init

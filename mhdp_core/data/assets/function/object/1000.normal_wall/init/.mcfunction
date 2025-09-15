@@ -9,6 +9,11 @@
 # 念のため、位置を正確に移動
     execute align xyz positioned ~0.5 ~ ~0.5 run tp @s ~ ~ ~ 0 0
 
+# 見た目召喚
+    execute positioned as @s run summon item_display ~ ~ ~ {interpolation_duration:3,teleport_duration:0,Tags:["Asset.Build.Display","Asset.Build.Display.Init"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0f,0f,0f]},item:{id:"minecraft:stone",count:1,components:{"minecraft:item_model":"builds/wall_normal"}}}
+# 紐づけ開始
+    execute as @n[type=item_display,tag=Asset.Build.Display,tag=Asset.Build.Display.Init] run function assets:core/object/build/start_link
+
 # スコア初期化
     scoreboard players set @s Build.Stats.Height 2500
 
