@@ -56,6 +56,8 @@
         scoreboard objectives add Wpn.DeactivateTimer dummy
     # 武器の無操作取得用
         scoreboard objectives add Wpn.NoOpeTimer dummy
+    # 連続ヒット攻撃制御用
+        scoreboard objectives add Wpn.HitCount dummy
 # 武器ごとの特殊スコア
     # 大剣
         # 溜め時間

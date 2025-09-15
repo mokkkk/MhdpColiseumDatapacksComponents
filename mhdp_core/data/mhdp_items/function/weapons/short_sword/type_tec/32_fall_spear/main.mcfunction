@@ -25,8 +25,8 @@
     execute if score @s Wpn.GeneralTimer matches 7 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
 
 # 攻撃
-    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 7..99 run function mhdp_items:weapons/short_sword/type_tec/32_fall_spear/attack
-    execute if entity @s[tag=Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 100 run tag @s remove Ply.Flag.Hit
+    execute if score @s Wpn.GeneralTimer matches 7..99 unless score @s Wpn.HitCount matches 5.. run function mhdp_items:weapons/short_sword/type_tec/32_fall_spear/attack
+    execute if score @s Wpn.GeneralTimer matches 100 run scoreboard players reset @s Wpn.HitCount
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop

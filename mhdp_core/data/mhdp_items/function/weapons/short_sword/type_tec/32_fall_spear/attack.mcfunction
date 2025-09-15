@@ -12,7 +12,7 @@
     execute as @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] run tag @s add Temp.Victim
 
 # ヒット判定
-    execute if entity @n[tag=Temp.Victim] run tag @s add Ply.Flag.Hit
+    execute if entity @n[tag=Temp.Victim] run scoreboard players add @s Wpn.HitCount 1
 
 # 攻撃
     data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.ShortSword.Tec.FallSpear
