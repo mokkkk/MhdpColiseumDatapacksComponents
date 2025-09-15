@@ -10,7 +10,7 @@
     scoreboard players reset #temp_look_distance MhdpCore
 
 # ブロックを見ていない場合、水平方向で実行
-    execute unless entity @s[tag=Itm.Pick.Executed] rotated ~ 0 positioned ^ ^ ^5 align xyz positioned ~0.5 ~0.5 ~0.5 run function mhdp_items:pickaxes/util/execute_command
+    execute unless entity @s[tag=Itm.Pick.Executed] rotated ~ 0 positioned ^ ^ ^5 align xyz positioned ~0.5 ~0.5 ~0.5 run function mhdp_items:pickaxes/util/execute_command.m with storage api: Arg
 
 # 終了
     tag @s remove Itm.Pick.Executed
