@@ -32,3 +32,4 @@
     #declare tag Wpn.Ss.Tec.JumpSlash.High 駆け上がり斬り・高
     #declare tag Wpn.Ss.Tec.JumpSlash 駆け上がり斬り
     #declare tag Wpn.Ss.Tec.Tobikage 飛影
+    #declare tag Wpn.Ss.Tec.FallSpear 落下突き

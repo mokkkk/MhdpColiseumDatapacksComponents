@@ -12,4 +12,4 @@
     execute if score @s Ply.Timer.VectorJumpCoolTime matches 1 run attribute @s jump_strength modifier remove mhdp_core:movejump_jump_strength
 
 # 段差飛び降り判定
-    execute rotated ~ 0 positioned ^ ^ ^0.3 if block ~ ~-1 ~ #mhdp_core:no_collision positioned ^ ^-0.5 ^ unless entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.01,dy=0.01,dz=0.01] run function mhdp_items:player/weapon/move_jump/jump_off with storage mhdp_core:temp PlayerData.VectorMove
+    function mhdp_items:player/weapon/move_jump/check_jump_off.m with storage mhdp_core:temp PlayerData.VectorMove
