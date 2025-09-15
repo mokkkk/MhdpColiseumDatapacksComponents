@@ -32,6 +32,10 @@
 # 特殊装具関連処理
     execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:sp_items/tick
 
+# ツルハシ関連処理
+# メインハンドにツルハシを持っている場合のみ実行
+    execute if entity @s[tag=Ply.State.UsingWeapon] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{IsMhdpPickaxe:1b}] run function mhdp_items:pickaxes/tick
+
 # アイテム関連処理
     function mhdp_items:player/item/tick
 

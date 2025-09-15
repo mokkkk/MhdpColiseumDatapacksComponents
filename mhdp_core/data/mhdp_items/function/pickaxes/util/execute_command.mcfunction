@@ -7,6 +7,10 @@
 # 実行フラグ
     tag @s add Itm.Pick.Executed
 
+# バリデート実行
+    function assets:core/object/validate.m with storage mhdp_core:temp Arg
+    data remove storage mhdp_core:temp Arg
+
 # test
     # particle flash ~ ~ ~ 0 0 0 0 1
-    function assets:object/1000.normal_wall/validate/
+    # function assets:object/1000.normal_wall/validate/

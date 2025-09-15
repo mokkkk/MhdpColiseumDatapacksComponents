@@ -6,7 +6,7 @@
                     "functions": [
                         {
                             "components": {
-                                "minecraft:custom_data": "{IsMhdpItem:1b,IsMhdpPickaxe:1b,PickaxeId:2,ItemName:\"Test\",Build1:1000,Build2:1001}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,IsMhdpPickaxe:1b,PickaxeId:1,ItemName:\"Test\",Build1:1000,Build2:1001,Build3:1002}",
                                 "minecraft:item_model": "minecraft:iron_pickaxe",
                                 "minecraft:item_name": {
                                     "color": "green",
@@ -83,6 +83,9 @@
                                             "text": ")"
                                         }
                                     ],
+                                    {
+                                        "text": ""
+                                    },
                                     [
                                         {
                                             "color": "white",
@@ -147,6 +150,9 @@
                                             "text": ")"
                                         }
                                     ],
+                                    {
+                                        "text": ""
+                                    },
                                     [
                                         {
                                             "color": "white",
