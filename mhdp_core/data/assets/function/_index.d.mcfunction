@@ -14,5 +14,8 @@
 #declare tag Asset.Build.HitBox 当たり判定
 #declare tag Asset.Build.HitBox.Init 当たり判定初期化用
 #declare tag Asset.Build.Display 見た目
+#declare tag Asset.Build.Display.A 見た目・複数用
+#declare tag Asset.Build.Display.B 見た目・複数用
+#declare tag Asset.Build.Display.C 見た目・複数用
 # - 建築種別
 #declare tag Asset.Build.Type.Wall 壁系建造物
