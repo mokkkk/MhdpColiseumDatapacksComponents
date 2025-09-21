@@ -24,6 +24,14 @@
     # 空中溜め斬り
         execute if entity @s[tag=Wpn.Gs.Normal.ChargeSlash.Edge] run function mhdp_items:weapons/great_sword/type_normal/12_chargeattack_edge/main
 
+# 空中攻撃：空中溜め
+    # 開始
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsFlying] align y if block ~ ~-0.5 ~ #mhdp_core:no_collision if block ~ ~-1.5 ~ #mhdp_core:no_collision if block ~ ~-2.5 ~ #mhdp_core:no_collision run function mhdp_items:weapons/great_sword/type_normal/21_charge_air/start_with_other
+    # 空中溜め
+        execute if entity @s[tag=Wpn.Gs.Normal.Charge.Air] run function mhdp_items:weapons/great_sword/type_normal/21_charge_air/main
+    # 空中溜め斬り
+        execute if entity @s[tag=Wpn.Gs.Normal.ChargeSlash.Air] run function mhdp_items:weapons/great_sword/type_normal/22_chargeattack_air/main
+
 # 狩技：強化納刀
     # 処理
         execute if entity @s[tag=Wpn.Gs.Normal.PowerSheathe] run function mhdp_items:weapons/great_sword/type_normal/17_power_sheathe/main

@@ -14,10 +14,6 @@
 # ターゲット決定
     execute as @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] run tag @s add Temp.Victim
 
-# ヒットストップ    
-    execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 3
-    execute if entity @n[tag=Temp.Victim] run tp @s @s
-
 # 攻撃
     execute if score @s Wpn.Gs.ChargeCount matches ..1 run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.Air.1
     execute if score @s Wpn.Gs.ChargeCount matches 2 run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.Air.2

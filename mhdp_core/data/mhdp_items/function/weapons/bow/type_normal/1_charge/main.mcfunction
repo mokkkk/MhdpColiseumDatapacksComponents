@@ -13,11 +13,8 @@
 
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1..2 run playsound item.crossbow.loading_start master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
-    execute if score @s Wpn.AnimationTimer matches 1..2 run playsound item.crossbow.loading_start master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
     execute if score @s Wpn.AnimationTimer matches 3..11 run playsound item.crossbow.loading_middle master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
-    execute if score @s Wpn.AnimationTimer matches 3..11 run playsound item.crossbow.loading_middle master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
     execute if score @s Wpn.AnimationTimer matches 12 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
-    execute if score @s Wpn.AnimationTimer matches 12 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
     execute if score @s Wpn.AnimationTimer matches ..2 run function mhdp_items:weapons/bow/type_normal/1_charge/animation_0
     execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/bow/type_normal/1_charge/animation_1
     execute if score @s Wpn.AnimationTimer matches 9 run function mhdp_items:weapons/bow/type_normal/1_charge/animation_2

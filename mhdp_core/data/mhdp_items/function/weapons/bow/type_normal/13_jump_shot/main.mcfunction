@@ -16,14 +16,10 @@
 # アニメーション演出
     # 効果音・引き絞り
         execute if score @s Wpn.GeneralTimer matches 1..2 run playsound item.crossbow.loading_start master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
-        execute if score @s Wpn.GeneralTimer matches 1..2 run playsound item.crossbow.loading_start master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
         execute if score @s Wpn.GeneralTimer matches 3..15 run playsound item.crossbow.loading_middle master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
-        execute if score @s Wpn.GeneralTimer matches 3..15 run playsound item.crossbow.loading_middle master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
     # 効果音・射撃
         execute if score @s Wpn.GeneralTimer matches 35 run playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
         execute if score @s Wpn.GeneralTimer matches 35 run playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.1
-        execute if score @s Wpn.GeneralTimer matches 35 run playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-        execute if score @s Wpn.GeneralTimer matches 35 run playsound entity.arrow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
         execute if score @s Wpn.GeneralTimer matches 35 run playsound entity.arrow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
         execute if score @s Wpn.GeneralTimer matches 35 run playsound entity.firework_rocket.launch master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
         execute if score @s Wpn.GeneralTimer matches 35 run playsound entity.firework_rocket.launch master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
