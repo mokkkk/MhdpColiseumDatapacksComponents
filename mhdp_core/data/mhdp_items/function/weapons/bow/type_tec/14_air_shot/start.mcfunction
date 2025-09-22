@@ -18,4 +18,5 @@
     execute if entity @s[tag=!Skill.Extra.BowChargeUp] run scoreboard players set @s Wpn.Bw.ChargeCount 2
     execute if entity @s[tag=Skill.Extra.BowChargeUp] run scoreboard players set @s Wpn.Bw.ChargeCount 1
 
+
 # say 武器操作：弓 射撃(最大溜め)

@@ -30,21 +30,21 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 3..4 run tp @s ~ ~ ~ ~ ~0.5
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 5..7 run tp @s ~ ~ ~ ~-0.3 ~
 
+# 移動
+    execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/bow/type_tec/14_air_shot/move
+
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
-# 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/bow/type_tec/14_air_shot/move
-
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.UsedEnderEye.Short] if score @s Wpn.GeneralTimer matches 1..21 run function mhdp_items:core/buffering/b
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 1..21 run function mhdp_items:core/buffering/c
-    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.UsedEnderEye.Long] if score @s Wpn.GeneralTimer matches 1.. run function mhdp_items:core/buffering/d
+    execute if entity @s[tag=!Ply.Ope.IsAir,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.UsedEnderEye.Short] if score @s Wpn.GeneralTimer matches 5..21 run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=!Ply.Ope.IsAir,tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 5..21 run function mhdp_items:core/buffering/c
+    execute if entity @s[tag=!Ply.Ope.IsAir,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.UsedEnderEye.Long] if score @s Wpn.GeneralTimer matches 5.. run function mhdp_items:core/buffering/d
 
 # 遷移
     # 右クリック押し続け：溜めに移行
-        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.B,tag=!Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 12..21 if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/1_charge/start_from_shot
+        execute if entity @s[tag=!Ply.Ope.IsAir,tag=Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.B,tag=!Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 12..21 if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/1_charge/start_from_shot
     # ジャンプ：身躱し射法
         execute if entity @s[tag=Ply.Ope.Buffering.A,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 12..21 if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max run function mhdp_items:weapons/bow/type_tec/11_moving_shot/start
     # スニーク+右クリック：剛射に移行
@@ -56,3 +56,4 @@
 # 終了
     execute if entity @s[tag=Wpn.Bw.Tec.Shot.Air,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 22..35 run function mhdp_items:weapons/bow/type_tec/14_air_shot/end
     execute if entity @s[tag=Wpn.Bw.Tec.Shot.Air] if score @s Wpn.GeneralTimer matches 36.. run function mhdp_items:weapons/bow/type_tec/14_air_shot/end
+    execute if entity @s[tag=Wpn.Bw.Tec.Shot.Air,tag=Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 8.. run function mhdp_items:weapons/bow/type_tec/14_air_shot/end

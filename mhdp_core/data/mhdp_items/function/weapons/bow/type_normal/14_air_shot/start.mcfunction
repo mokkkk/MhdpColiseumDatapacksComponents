@@ -15,7 +15,6 @@
     scoreboard players remove @s Ply.Stats.Stamina 80
 
 # 溜め段階設定
-    execute if entity @s[tag=!Skill.Extra.BowChargeUp] run scoreboard players set @s Wpn.Bw.ChargeCount 2
-    execute if entity @s[tag=Skill.Extra.BowChargeUp] run scoreboard players set @s Wpn.Bw.ChargeCount 1
+    scoreboard players set @s Wpn.Bw.ChargeCount 0
 
 # say 武器操作：弓 射撃(最大溜め)
