@@ -17,7 +17,7 @@
     execute as @e[type=item_display,tag=Asset.Build.Display,tag=Asset.Build.Display.Init] run function assets:core/object/build/start_link
 
 # スコア初期化
-    scoreboard players set @s Build.Stats.Height 4000
+    scoreboard players set @s Build.Stats.Height 3800
 
 # 演出
     playsound block.smithing_table.use master @a ~ ~ ~ 1 0.7
