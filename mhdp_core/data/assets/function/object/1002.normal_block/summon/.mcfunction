@@ -2,8 +2,6 @@
 #
 # オブジェクト召喚処理
 
-say normal block
-
 # 召喚
     summon item_display ^ ^ ^ {interpolation_duration:3,teleport_duration:0,Tags:["Asset.Object","Asset.Object.Init","Asset.Build.Root"]}
 
