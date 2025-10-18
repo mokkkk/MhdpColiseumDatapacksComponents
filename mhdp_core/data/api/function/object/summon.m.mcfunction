@@ -12,4 +12,4 @@
     $execute as @n[tag=Asset.Object.Init] run function assets:core/object/init.m {ObjectId:$(ObjectId)}
 
 # 終了
-    data remove storage api: Arg
+    data remove storage api: Arg.Override
