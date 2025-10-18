@@ -1,18 +1,9 @@
 #> mhdp_core:other_entity/shot/tick
 #
 # 毎tick実行される処理 shot処理
+# TODO: ここの処理は全部消してObjectに移行する
 #
 # @within function minecraft:tick
-
-# 弓
-    # 通常矢
-        execute if entity @s[tag=Wpn.Bw.Shot.Normal] run function mhdp_items:weapons/bow/shot/normal/tick
-    # 竜の一矢
-        execute if entity @s[tag=Wpn.Bw.Shot.Pierce] run function mhdp_items:weapons/bow/shot/pierce/tick
-    # 竜の千々矢
-        execute if entity @s[tag=Wpn.Bw.Shot.Shower] run function mhdp_items:weapons/bow/shot/shower/tick
-    # 導ノ矢
-        execute if entity @s[tag=Wpn.Bw.Shot.Horming] run function mhdp_items:weapons/bow/shot/horming/tick
 
 # 肉焼きセット
     execute if entity @s[tag=Itm.Root.Nikuyaki] run function mhdp_items:sp_items/nikuyaki/tick_on_root

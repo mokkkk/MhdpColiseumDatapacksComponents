@@ -35,9 +35,6 @@
         execute if score #mhdp_temp_condition_value_bomb MhdpCore matches 1.. run particle dust{color:[0.220,0.820,0.000],scale:1.5} ~ ~ ~ 0.5 0.5 0.5 0.15 10
 
 # ヒットエフェクト表示
-    # X軸方向のずれを修正
-        # scoreboard players set #mhdp_temp_vfx_offset MhdpCore 4
-        # execute if data storage api: Arg.VfxScale store result score #mhdp_temp_vfx_offset MhdpCore run data get storage api: Arg.VfxScale[0]
     # 打撃の場合、角度をランダムに設定
         data modify storage mhdp_core:temp Arg.VfxRotation set from storage api: Arg.VfxRotation
         execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 store result storage mhdp_core:temp Arg.VfxRotation int 1 run random value 0..360
