@@ -4,8 +4,11 @@
 #
 # @within function mhdp_monsters:/**
 
-# 分岐処理
+# 召喚対象のUidとデータ取得
     data modify storage mhdp_core:temp Temp.MonsterUid set from storage mhdp_core:temp Arg.SummonMonsterUid
+    data modify storage mhdp_core:temp Temp.Arg.Override set from storage mhdp_core:temp Temp.IntrusionMonsterData.Override
+
+# 分岐処理
     function mhdp_monsters:core/switch/macro/m.summon_get_data with storage mhdp_core:temp Temp
     function mhdp_monsters:core/switch/macro/m.intrusion with storage mhdp_core:temp Temp
     data remove storage mhdp_core:temp Temp

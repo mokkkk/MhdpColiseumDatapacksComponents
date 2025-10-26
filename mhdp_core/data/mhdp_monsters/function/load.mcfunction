@@ -36,6 +36,8 @@
             scoreboard objectives add Mns.Hp dummy
         # 実体力半分
             scoreboard objectives add Mns.Hp.Half dummy
+        # 攻撃力倍率
+            scoreboard objectives add Mns.QuestAttackMultiply dummy
         # 怒り耐性値
             scoreboard objectives add Mns.Anger.Damage dummy
             scoreboard objectives add Mns.Anger.Damage.Max dummy
