@@ -4,4 +4,5 @@
 #
 # @input storage api: Arg.
 
-# ダメージ軽減率
+# ダメージ
+    $damage @s $(TotalDamage) minecraft:generic by @n[type=slime]

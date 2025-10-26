@@ -82,3 +82,6 @@
     scoreboard players reset #temp_element_defence_effective MhdpCore
     scoreboard players reset #mhdp_temp_element_dagame_multiply MhdpCore
     scoreboard players reset #mhdp_temp_element_damage MhdpCore
+
+# エラー表示
+    tellraw @a [{"text":"【ERROR: 古いAPI mhdp_core:player/damage/entity_to_player/main が利用されています。APIを更新してください】","color":"red"}]

@@ -40,7 +40,7 @@
         ID:10,Name:"初級：青鳥竜の狩猟",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:12,AttackMultiply:50,Field:"Coliseum",Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
-            {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1,Override:{HpMultiply:12,AttackMultiply:50}}\
+            {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1,Override:{HpMultiply:200,AttackMultiply:200}}\
         ]}\
     }
 
