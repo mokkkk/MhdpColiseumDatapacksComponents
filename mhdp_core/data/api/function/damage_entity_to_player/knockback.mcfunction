@@ -22,7 +22,7 @@
             execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 3..4 if score #mhdp_temp_knockback_strength MhdpCore matches 2.. run scoreboard players set $strength player_motion.api.launch 12000
     # 角度
         execute at @s run summon area_effect_cloud ~ ~ ~ {Tags:["Other.Temp.KnockbackVector"]}
-        execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Arg{IsLaunch:false} facing entity @s feet rotated ~ -18 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] ~ ~ ~ ~ ~
+        execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Arg{IsLaunch:false} facing entity @s feet rotated ~ -25 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] ~ ~ ~ ~ ~
         execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Arg{IsLaunch:true,LaunchType:1} facing entity @s feet rotated ~ -60 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] ~ ~ ~ ~ ~
         execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Arg{IsLaunch:true,LaunchType:2} facing entity @s feet rotated ~ -35 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] ~ ~ ~ ~ ~
         execute if entity @s[tag=Ply.Weapon.Guard] facing entity @s feet rotated ~ -10 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] ~ ~ ~ ~ ~

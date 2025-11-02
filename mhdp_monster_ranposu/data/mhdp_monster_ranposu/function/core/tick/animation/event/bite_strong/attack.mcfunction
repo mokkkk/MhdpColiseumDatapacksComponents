@@ -6,9 +6,6 @@
 
 # データ読み込み
     function mhdp_monsters:core/util/tick/get_attack_data.m {Name:"BiteStrong"}
-    # data modify storage mhdp_core:temp Damage set from storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks[{Name:"BiteStrong"}]
-    # execute if entity @s[tag=!Mns.State.IsAnger] run scoreboard players set #mhdp_temp_attack_multiply_anger MhdpCore 100
-    # execute if entity @s[tag=Mns.State.IsAnger] run scoreboard players operation #mhdp_temp_attack_multiply_anger MhdpCore = @s Mns.Anger.AttackMutiply
 
 # ヒット確認
     # 対プレイヤー

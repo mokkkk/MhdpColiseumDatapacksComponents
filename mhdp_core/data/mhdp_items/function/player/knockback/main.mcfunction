@@ -19,4 +19,4 @@
     data remove storage mhdp_core:temp PlayerData.KnockbackVector
     function mhdp_core:player/data/save_data
 
-say ノックバック適用
+# say ノックバック適用

@@ -8,6 +8,7 @@
     function animated_java:ranposu_aj/root/on_tick
 
 # 共通処理
+    function mhdp_monsters:core/util/tick/pre_tick
     function mhdp_monsters:core/util/tick/tick
 
 # アニメーションイベントハンドラ
@@ -16,3 +17,6 @@
 # その他演出
     # 怒り中・頭部の演出
         execute if entity @s[tag=Mns.State.IsAnger] on passengers if entity @s[tag=aj.data] run function mhdp_monster_ranposu:core/tick/effect_anger with entity @s data.locators.pos_head
+
+# 共通処理
+    function mhdp_monsters:core/util/tick/post_tick

@@ -33,9 +33,11 @@
 
     # 角度
         execute at @s run summon area_effect_cloud ~ ~ ~ {Tags:["Other.Temp.KnockbackVector"]}
-        execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsLaunch:false} facing entity @s feet rotated ~ -18 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] ~ ~ ~ ~ ~
-        execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsLaunch:true,LaunchType:1} facing entity @s feet rotated ~ -60 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] ~ ~ ~ ~ ~
-        execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsLaunch:true,LaunchType:2} facing entity @s feet rotated ~ -35 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] ~ ~ ~ ~ ~
+        say のくば
+        execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsLaunch:false} run say のくばNoLaunch
+        execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsLaunch:false} facing entity @s feet rotated ~ -18 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10] ~ ~ ~ ~ ~
+        execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsLaunch:true,LaunchType:1} facing entity @s feet rotated ~ -60 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10] ~ ~ ~ ~ ~
+        execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Damage{IsLaunch:true,LaunchType:2} facing entity @s feet rotated ~ -35 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10] ~ ~ ~ ~ ~
         execute if entity @s[tag=Ply.Weapon.Guard] facing entity @s feet rotated ~ -10 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] ~ ~ ~ ~ ~
         data modify storage mhdp_core:temp PlayerData.KnockbackVector set from entity @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] Rotation
         kill @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1]
