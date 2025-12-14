@@ -35,21 +35,13 @@
         execute if score #mhdp_temp_condition_value_bomb MhdpCore matches 1.. run particle dust{color:[0.220,0.820,0.000],scale:1.5} ~ ~ ~ 0.5 0.5 0.5 0.15 10
 
 # ヒットエフェクト表示
-    # X軸方向のずれを修正
-        scoreboard players set #mhdp_temp_vfx_offset MhdpCore 4
-        execute if data storage api: Arg.VfxScale store result score #mhdp_temp_vfx_offset MhdpCore run data get storage api: Arg.VfxScale[0]
-    # Z軸回転取得
+    # 打撃の場合、角度をランダムに設定
         data modify storage mhdp_core:temp Arg.VfxRotation set from storage api: Arg.VfxRotation
         execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 store result storage mhdp_core:temp Arg.VfxRotation int 1 run random value 0..360
     # 位置オフセット取得
         function api:damage_player_to_entity/vfx/calc_offset
     # 表示
-        # 斬撃
-            execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 if data storage api: Arg{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function api:damage_player_to_entity/vfx/summon_slash_effect.m with storage mhdp_core:temp Arg
-        # 打撃
-            execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 if data storage api: Arg{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function api:damage_player_to_entity/vfx/summon_blow_effect.m with storage mhdp_core:temp Arg
-        # 射撃
-            execute if score #mhdp_temp_damage_phys_type MhdpCore matches 2 if data storage api: Arg{IsShowVfx:true} run particle enchanted_hit ~ ~0.5 ~ 0 0 0 0.3 10
+        execute if data storage api: Arg{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function api:damage_player_to_entity/vfx/summon_vfx.m with storage mhdp_core:temp Arg
 
 # ダメージ数値表示
     function api:damage_player_to_entity/vfx/show_damage

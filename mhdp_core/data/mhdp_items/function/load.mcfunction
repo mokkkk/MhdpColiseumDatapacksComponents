@@ -42,6 +42,7 @@
         scoreboard objectives add Ply.Stats.Arts.2.Percent dummy
     # 建築ゲージ
         scoreboard objectives add Ply.Stats.BuildGauge dummy
+        scoreboard objectives add Ply.Stats.BuildGauge.Count dummy
 # 武器共通処理
     # 武器の操作処理用
         scoreboard objectives add Wpn.GeneralTimer dummy
@@ -55,6 +56,8 @@
         scoreboard objectives add Wpn.DeactivateTimer dummy
     # 武器の無操作取得用
         scoreboard objectives add Wpn.NoOpeTimer dummy
+    # 連続ヒット攻撃制御用
+        scoreboard objectives add Wpn.HitCount dummy
 # 武器ごとの特殊スコア
     # 大剣
         # 溜め時間

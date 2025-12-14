@@ -50,7 +50,7 @@
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -25 run function player_motion:api/launch_looking
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.StartDoubleJump] if score @s Wpn.GeneralTimer matches 2..59 run function mhdp_items:core/buffering/jump
+    execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 2..59 run function mhdp_items:core/buffering/jump
 
 # 遷移
     # 右クリック：2段目に移行

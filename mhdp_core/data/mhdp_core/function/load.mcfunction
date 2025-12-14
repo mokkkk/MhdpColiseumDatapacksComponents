@@ -28,6 +28,7 @@
             scoreboard objectives add Ply.Ope.DropCoas dropped:carrot_on_a_stick
         # ジャンプ回数
             scoreboard objectives add Ply.Ope.Jump minecraft.custom:minecraft.jump
+        # ジャンプタイマー
             scoreboard objectives add Ply.Ope.JumpInterval dummy
         # エンダーアイ投げ捨て回数
             scoreboard objectives add Ply.Ope.DropEnderEye dropped:ender_eye
@@ -56,6 +57,10 @@
             scoreboard objectives add Ply.Timer.DeathAnimation dummy
         # 先行入力
             scoreboard objectives add Ply.Timer.Buffering dummy
+        # 建材ゲージのアニメーション用
+            scoreboard objectives add Ply.Timer.BuildGaugeAnimation dummy
+        # 建造物よじ登り用
+            scoreboard objectives add Ply.Timer.ClimbBuild dummy
     # その他処理用
         # 攻撃対象の保持
             scoreboard objectives add Ply.Other.AttackTargetUuid dummy
@@ -87,19 +92,26 @@
 # asset関連
     # ID
         scoreboard objectives add ObjectId dummy
+    # 建造物固有ID
+        scoreboard objectives add Build.Uid dummy
     # 処理用
         scoreboard objectives add ObjectTick dummy
+    # 建造物ステータス
+        scoreboard objectives add Build.Stats.Height dummy
 
 ## Scoreboard初期値設定
 # プレイヤーUID
     execute unless score #mhdp_player_uid_grobal Ply.Uid matches -2147483648.. run scoreboard players set #mhdp_player_uid_grobal Ply.Uid 1
 # モンスターUID
     execute unless score #mhdp_monster_uid_grobal Mns.Uid matches -2147483648.. run scoreboard players set #mhdp_monster_uid_grobal Mns.Uid 1
+# 建造物UID
+    execute unless score #mhdp_build_uid_grobal Build.Uid matches -2147483648.. run scoreboard players set #mhdp_build_uid_grobal Build.Uid 1
 
 ## 定数定義
     scoreboard players set #const_2 Const 2
     scoreboard players set #const_3 Const 3
     scoreboard players set #const_6 Const 6
+    scoreboard players set #const_7 Const 7
     scoreboard players set #const_20 Const 20
     scoreboard players set #const_30 Const 30
     scoreboard players set #const_60 Const 60

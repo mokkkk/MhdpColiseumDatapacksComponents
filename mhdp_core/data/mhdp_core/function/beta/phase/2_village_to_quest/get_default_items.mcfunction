@@ -29,6 +29,11 @@
     data modify storage api: Arg.Count set value 1
     function api:give_item.m with storage api: Arg
 
+# ツルハシ
+    data modify storage api: Arg.Path set value "mhdp_items:pickaxes/test"
+    data modify storage api: Arg.Count set value 1
+    function api:give_item.m with storage api: Arg
+
 # 武器操作指南書
     execute if entity @s[tag=Ply.Weapon.Equip.ShortSword,tag=!Ply.Weapon.Type.Tech] run data modify storage api: Arg.Path set value "mhdp_items:sp_items/inst_ss_normal"
     execute if entity @s[tag=Ply.Weapon.Equip.ShortSword,tag=Ply.Weapon.Type.Tech] run data modify storage api: Arg.Path set value "mhdp_items:sp_items/inst_ss_tec"
@@ -39,13 +44,13 @@
     data modify storage api: Arg.Count set value 1
     function api:give_item.m with storage api: Arg
 
-# 不動の装衣
-    data modify storage api: Arg.Path set value "mhdp_items:sp_items/immovable_cloth"
+# 翔蟲
+    data modify storage api: Arg.Path set value "mhdp_items:sp_items/wirebug"
     data modify storage api: Arg.Count set value 1
     function api:give_item.m with storage api: Arg
 
-# 翔蟲
-    data modify storage api: Arg.Path set value "mhdp_items:sp_items/wirebug"
+# 不動の装衣
+    data modify storage api: Arg.Path set value "mhdp_items:sp_items/immovable_cloth"
     data modify storage api: Arg.Count set value 1
     function api:give_item.m with storage api: Arg
 

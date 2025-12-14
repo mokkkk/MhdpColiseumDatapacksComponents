@@ -74,10 +74,12 @@
         # ジャンプ
             #declare tag Ply.Ope.StartKeyJump ジャンプ開始
             #declare tag Ply.Ope.StartDoubleJump 連続ジャンプ
+            #declare tag Ply.Ope.IsKeyJump.Short ショートジャンプ
         # ダッシュ
             #declare tag Ply.Ope.IsSprinting ダッシュ中
         # 空中
-            #declare tag Ply.Ope.IsAir 飛行中
+            #declare tag Ply.Ope.IsFlying 空中
+            #declare tag Ply.Ope.IsAir 飛行中、武器の空中操作誤爆防止用
         # キー入力
             #declare tag Ply.Ope.StartKeyForward
             #declare tag Ply.Ope.IsKeyForward

@@ -1,6 +1,6 @@
 #> mhdp_items:player/knockback/main
 #
-# アイテム処理 player別に毎tick実行される処理 ノックバック
+# アイテム処理 player別に毎tick実行される処理 ノックバック適用
 #
 # @within function mhdp_items:player/tick
 
@@ -18,3 +18,5 @@
     data remove storage mhdp_core:temp PlayerData.KnockbackStrength
     data remove storage mhdp_core:temp PlayerData.KnockbackVector
     function mhdp_core:player/data/save_data
+
+# say ノックバック適用

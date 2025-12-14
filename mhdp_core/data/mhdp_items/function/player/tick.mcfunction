@@ -23,13 +23,21 @@
     execute if score @s Wpn.HitStopTimer matches 1.. run scoreboard players remove @s Wpn.HitStopTimer 1
     execute if entity @s[tag=Ply.Weapon.HisStop] if score @s Wpn.HitStopTimer matches ..0 run tag @s remove Ply.Weapon.HisStop
 
+# 建造物関連処理
+    function mhdp_items:player/build/tick
+
 # 武器関連処理
     execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:player/weapon/tick
 
 # 特殊装具関連処理
     execute if entity @s[tag=Ply.State.UsingWeapon] run function mhdp_items:sp_items/tick
 
+# ツルハシ関連処理
+# メインハンドにツルハシを持っている場合のみ実行
+    execute if entity @s[tag=Ply.State.UsingWeapon] if items entity @s weapon.mainhand carrot_on_a_stick[custom_data~{IsMhdpPickaxe:1b}] run function mhdp_items:pickaxes/tick
+
 # アイテム関連処理
     function mhdp_items:player/item/tick
+
 
 # 終了

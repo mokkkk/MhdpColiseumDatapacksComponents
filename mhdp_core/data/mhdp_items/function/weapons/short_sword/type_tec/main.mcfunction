@@ -17,6 +17,12 @@
     # 処理
         execute if entity @s[tag=Wpn.Ss.Tec.Tobikage] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/main
 
+# 空中攻撃：落下突き
+    # 開始
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsFlying] align y if block ~ ~-0.5 ~ #mhdp_core:no_collision if block ~ ~-1.5 ~ #mhdp_core:no_collision if block ~ ~-2.5 ~ #mhdp_core:no_collision run function mhdp_items:weapons/short_sword/type_tec/32_fall_spear/start
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Tec.FallSpear] run function mhdp_items:weapons/short_sword/type_tec/32_fall_spear/main
+
 # 狩技：滅昇竜撃
     # 開始
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeyBack,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/start

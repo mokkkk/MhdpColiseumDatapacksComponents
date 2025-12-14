@@ -1,0 +1,248 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "components": {
+                                "minecraft:custom_data": "{IsMhdpItem:1b,IsMhdpPickaxe:1b,PickaxeId:1,ItemName:\"Test\",Build1:1000,Build2:1001,Build3:1002}",
+                                "minecraft:item_model": "minecraft:iron_pickaxe",
+                                "minecraft:item_name": {
+                                    "color": "green",
+                                    "italic": false,
+                                    "text": "テスト=ツル=ハーシ"
+                                },
+                                "minecraft:lore": [
+                                    {
+                                        "color": "dark_purple",
+                                        "italic": false,
+                                        "text": "[建築用ツルハシ]"
+                                    },
+                                    [
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "１："
+                                        },
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "壁 "
+                                        },
+                                        {
+                                            "font": "ui/new_player_ui/buildgauge",
+                                            "shadow_color": [
+                                                0,
+                                                0,
+                                                0,
+                                                0
+                                            ],
+                                            "text": "a"
+                                        },
+                                        {
+                                            "font": "ui/new_player_ui/buildgauge",
+                                            "shadow_color": [
+                                                0,
+                                                0,
+                                                0,
+                                                0
+                                            ],
+                                            "text": "a"
+                                        },
+                                        {
+                                            "font": "ui/new_player_ui/buildgauge",
+                                            "shadow_color": [
+                                                0,
+                                                0,
+                                                0,
+                                                0
+                                            ],
+                                            "text": "a"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "color": "gray",
+                                            "italic": false,
+                                            "text": "モンスターの突進を防ぐ。"
+                                        },
+                                        {
+                                            "color": "gold",
+                                            "italic": false,
+                                            "text": " (マウス"
+                                        },
+                                        {
+                                            "color": "gold",
+                                            "italic": false,
+                                            "keybind": "key.use"
+                                        },
+                                        {
+                                            "color": "gold",
+                                            "italic": false,
+                                            "text": ")"
+                                        }
+                                    ],
+                                    {
+                                        "text": ""
+                                    },
+                                    [
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "２："
+                                        },
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "塔 "
+                                        },
+                                        {
+                                            "font": "ui/new_player_ui/buildgauge",
+                                            "shadow_color": [
+                                                0,
+                                                0,
+                                                0,
+                                                0
+                                            ],
+                                            "text": "a"
+                                        },
+                                        {
+                                            "font": "ui/new_player_ui/buildgauge",
+                                            "shadow_color": [
+                                                0,
+                                                0,
+                                                0,
+                                                0
+                                            ],
+                                            "text": "a"
+                                        },
+                                        {
+                                            "font": "ui/new_player_ui/buildgauge",
+                                            "shadow_color": [
+                                                0,
+                                                0,
+                                                0,
+                                                0
+                                            ],
+                                            "text": "a"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "color": "gray",
+                                            "italic": false,
+                                            "text": "飛行中のモンスターを怯ませる。"
+                                        },
+                                        {
+                                            "color": "gold",
+                                            "italic": false,
+                                            "text": " (スニーク+マウス"
+                                        },
+                                        {
+                                            "color": "gold",
+                                            "italic": false,
+                                            "keybind": "key.use"
+                                        },
+                                        {
+                                            "color": "gold",
+                                            "italic": false,
+                                            "text": ")"
+                                        }
+                                    ],
+                                    {
+                                        "text": ""
+                                    },
+                                    [
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "３："
+                                        },
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "足場 "
+                                        },
+                                        {
+                                            "font": "ui/new_player_ui/buildgauge",
+                                            "shadow_color": [
+                                                0,
+                                                0,
+                                                0,
+                                                0
+                                            ],
+                                            "text": "a"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "color": "gray",
+                                            "italic": false,
+                                            "text": "空中で生成できる一時的な足場。"
+                                        },
+                                        {
+                                            "color": "gold",
+                                            "italic": false,
+                                            "text": " (空中でマウス"
+                                        },
+                                        {
+                                            "color": "gold",
+                                            "italic": false,
+                                            "keybind": "key.use"
+                                        },
+                                        {
+                                            "color": "gold",
+                                            "italic": false,
+                                            "text": ")"
+                                        }
+                                    ],
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "とりあえず"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "うごかしてみる"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "つるはしを"
+                                    },
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    }
+                                ],
+                                "minecraft:max_stack_size": 1
+                            },
+                            "conditions": [],
+                            "function": "minecraft:set_components"
+                        },
+                        {
+                            "count": {
+                                "path": "Arg.Count",
+                                "storage": "api:",
+                                "type": "minecraft:storage"
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "carrot_on_a_stick",
+                    "type": "minecraft:item"
+                }
+            ],
+            "rolls": 1
+        }
+    ],
+    "type": "minecraft:empty"
+}

@@ -29,5 +29,7 @@
     execute if score @s Wpn.Gs.ChargeTimer matches 300.. if score @s Wpn.Gs.ChargeCount matches ..2 run function mhdp_items:weapons/great_sword/type_tec/1_charge/up_charge_count
 
 # 遷移
+    # 着地時、溜め斬りに移行
+        execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/great_sword/type_tec/11_charge_edge/change_to_chargeattack
     # 右クリックを離した場合、溜め斬りに移行
         execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/great_sword/type_tec/11_charge_edge/change_to_chargeattack

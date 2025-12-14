@@ -4,10 +4,5 @@
 #
 # @within function api:damage_player_to_entity/vfx
 
-# ダメージ表示用text_display召喚
-    # 通常時
-        $execute if entity @s[tag=!Ply.Temp.IsCrit,tag=!Ply.Temp.IsCritInverse] positioned ~ ~$(OffsetY) ~ positioned ^ ^1 ^1 rotated ~$(RotY) ~$(RotX) run summon text_display ^ ^ ^$(Dist) {width:2f,height:2f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[$(Scale)f,$(Scale)f,$(Scale)f]},billboard:"center",Tags:["Other.Text.Vfx","Other.Text.Damage"],teleport_duration:10,brightness:{sky:15,block:15},text:{"text":"$(Damage)","color":"$(Color)","font":"ui/damage"},background:0,alignment:"center"}
-    # 会心時
-        $execute if entity @s[tag=Ply.Temp.IsCrit] positioned ~ ~$(OffsetY) ~ positioned ^ ^1 ^1 rotated ~$(RotY) ~$(RotX) run summon text_display ^ ^ ^$(Dist) {width:2f,height:2f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[$(Scale)f,$(Scale)f,$(Scale)f]},billboard:"center",Tags:["Other.Text.Vfx","Other.Text.Damage"],teleport_duration:10,brightness:{sky:15,block:15},text:[{"text":"+","color":"white","font":"ui/damage"},{"text":"$(Damage)","color":"$(Color)","font":"ui/damage"}],background:0,alignment:"center"}
-    # マイナス会心時
-        $execute if entity @s[tag=Ply.Temp.IsCritInverse] positioned ~ ~$(OffsetY) ~ positioned ^ ^1 ^1 rotated ~$(RotY) ~$(RotX) run summon text_display ^ ^ ^$(Dist) {width:2f,height:2f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[$(Scale)f,$(Scale)f,$(Scale)f]},billboard:"center",Tags:["Other.Text.Vfx","Other.Text.Damage"],teleport_duration:10,brightness:{sky:15,block:15},text:[{"text":"-","color":"white","font":"ui/damage"},{"text":"$(Damage)","color":"$(Color)","font":"ui/damage"}],background:0,alignment:"center"}
+# 位置をずらして召喚処理実行
+    $execute rotated as @s positioned ^ ^ ^2000 facing entity @s eyes positioned ^ ^ ^2000 facing entity @s eyes positioned ^ ^ ^$(OffsetZ) rotated ~$(RotY) ~$(RotX) positioned ^ ^ ^$(Dist) run function api:object/summon.m {ObjectId:8}

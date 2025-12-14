@@ -15,6 +15,7 @@
         execute store result score @s Mns.Hp run data get storage mhdp_core:temp TargetMonsterData.Hp
     # クエストによるHP倍率
         execute store result score #mhdp_temp_hp_multiply_quest MhdpCore run data get storage mhdp_core:game_data ActiveQuest.HpMultiply
+        execute if data storage mhdp_core:temp Arg.Override.HpMultiply store result score #mhdp_temp_hp_multiply_quest MhdpCore run data get storage mhdp_core:temp Arg.Override.HpMultiply
     # プレイヤー数によるHP倍率
         scoreboard players remove #mhdp_temp_player_count MhdpCore 1
         scoreboard players operation #mhdp_temp_hp_multiply_playercount MhdpCore = #const_hp_playercount_multiply Const
@@ -26,6 +27,10 @@
         scoreboard players operation @s Mns.Hp *= #mhdp_temp_hp_multiply_playercount MhdpCore
         execute store result score @s Mns.Hp.Half store result score @s Mns.Stun.Damage store result score @s Mns.Tire.Damage store result score @s Mns.Anger.Damage run scoreboard players operation @s Mns.Hp /= #const_100 Const
         scoreboard players operation @s Mns.Hp.Half /= #const_2 Const
+
+# クエストによる攻撃力倍率
+    execute store result score @s Mns.QuestAttackMultiply run data get storage mhdp_core:game_data ActiveQuest.AttackMultiply
+    execute if data storage mhdp_core:temp Arg.Override.AttackMultiply store result score @s Mns.QuestAttackMultiply run data get storage mhdp_core:temp Arg.Override.AttackMultiply
 
 # スタン耐性値
     # 倍率取得

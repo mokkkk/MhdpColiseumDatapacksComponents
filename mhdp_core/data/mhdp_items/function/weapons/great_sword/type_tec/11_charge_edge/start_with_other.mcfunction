@@ -10,6 +10,7 @@
 # タグ付与
     tag @s add Wpn.Gs.Tec.Charge.Edge
     tag @s remove Ply.Weapon.NoOpe
+    tag @s add Ply.Ope.IsAir
 
 # その他初期化
     scoreboard players set @s Wpn.Gs.ChargeTimer 0

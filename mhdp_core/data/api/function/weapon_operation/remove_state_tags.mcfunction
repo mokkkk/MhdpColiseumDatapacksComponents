@@ -12,3 +12,6 @@
     tag @s remove Ply.Flag.Just.Success
     tag @s remove Ply.Flag.CounterSuccess
     tag @s remove Ply.Weapon.NoMoveJump
+
+# ヒット数リセット
+    scoreboard players reset @s Wpn.HitCount
