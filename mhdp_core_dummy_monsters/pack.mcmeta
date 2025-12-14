@@ -1,6 +1,8 @@
 {
 	"pack": {
-		"pack_format": 71,
-		"description": "For Mhdp Coliseum"
+		"pack_format": 94.1,
+		"description": "For Mhdp Coliseum",
+		"min_format": 88,
+		"max_format": 9999999
 	}
 }

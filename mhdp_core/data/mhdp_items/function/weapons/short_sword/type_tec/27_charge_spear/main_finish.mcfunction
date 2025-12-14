@@ -38,7 +38,7 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 4..10 at @s run tp @s ~ ~ ~ ~0.6 ~0.8
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 25..26 at @s run tp @s ~ ~ ~ ~-2 ~-2
     execute if score @s Wpn.GeneralTimer matches 20 run playsound entity.experience_orb.pickup master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
-    execute if score @s Wpn.GeneralTimer matches 20 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
+    execute if score @s Wpn.GeneralTimer matches 20 positioned ~ ~1.65 ~ run particle flash{color:[1.000,1.000,1.000,1.00]} ^ ^ ^0.5 0 0 0 0 1
     execute if score @s Wpn.AnimationTimer matches 25..27 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s Wpn.AnimationTimer matches 25 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 0.4 0.1 0.4 0 10
 

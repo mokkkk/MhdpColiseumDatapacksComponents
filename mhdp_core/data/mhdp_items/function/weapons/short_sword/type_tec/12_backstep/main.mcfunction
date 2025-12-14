@@ -21,7 +21,7 @@
 
 # 演出
     execute if score @s Wpn.GeneralTimer matches 22 run playsound entity.experience_orb.pickup master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
-    execute if score @s Wpn.GeneralTimer matches 22 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
+    execute if score @s Wpn.GeneralTimer matches 22 positioned ~ ~1.65 ~ run particle flash{color:[1.000,1.000,1.000,1.00]} ^ ^ ^0.5 0 0 0 0 1
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
