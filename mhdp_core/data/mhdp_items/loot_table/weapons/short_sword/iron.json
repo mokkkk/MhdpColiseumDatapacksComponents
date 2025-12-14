@@ -7,6 +7,9 @@
                         {
                             "components": {
                                 "minecraft:custom_data": "{IsMhdpWeapon:1b,Id:201,WeaponType:3,AttackDamage:100,Element:0,ElementDamage:0,Critical:0,Sharpness:[10,10,40,90,0,0,0],SharpnessMax:120,SharpnessMaxCraft:150,ModelOffset:300}",
+                                "minecraft:enchantments": {
+                                    "mhdp_core:item/weapon_leftclick": 1
+                                },
                                 "minecraft:item_model": "minecraft:weapons/short_sword/iron",
                                 "minecraft:item_name": {
                                     "color": "aqua",
@@ -171,6 +174,96 @@
                                             "text": "\uF801"
                                         },
                                         {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
                                             "font": "items/mhdp_sharpness",
                                             "text": "\uF802"
                                         },
@@ -253,12 +346,23 @@
                                     }
                                 ],
                                 "minecraft:max_stack_size": 1,
+                                "minecraft:piercing_weapon": {
+                                    "deals_knockback": false,
+                                    "dismounts": false
+                                },
+                                "minecraft:swing_animation": {
+                                    "type": "none"
+                                },
                                 "minecraft:tooltip_display": {
                                     "hidden_components": [
                                         "minecraft:unbreakable"
                                     ]
                                 },
-                                "minecraft:unbreakable": {}
+                                "minecraft:unbreakable": {},
+                                "minecraft:use_effects": {
+                                    "can_sprint": false,
+                                    "speed_multiplier": 1
+                                }
                             },
                             "conditions": [],
                             "function": "minecraft:set_components"

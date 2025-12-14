@@ -1,0 +1,28 @@
+{
+  "description": "",
+  "supported_items": "minecraft:ender_eye",
+  "weight": 1,
+  "max_level": 100,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "hand"
+  ],
+  "effects": {
+    "minecraft:post_piercing_attack": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "mhdp_core:player/data/get_operation_lclick"
+        }
+      }
+    ]
+  }
+}
