@@ -6,3 +6,6 @@
 
 # データ初期化
     function mhdp_monsters:core/util/tick/data/init_data
+
+# 現在位置を保持
+    function mhdp_monsters:core/util/tick/move/save_position

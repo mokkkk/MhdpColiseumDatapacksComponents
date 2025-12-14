@@ -3,3 +3,6 @@
 # 汎用処理 前Posに移動する
 #
 # @within function mhdp_monsters:core/util/tick/tick
+
+# TODO: 平行移動処理
+    say 移動
