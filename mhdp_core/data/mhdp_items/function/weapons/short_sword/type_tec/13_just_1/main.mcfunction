@@ -53,8 +53,8 @@
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 2..59 run function mhdp_items:core/buffering/jump
 
 # 遷移
-    # 右クリック：2段目に移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/type_tec/13_just_1/change_to_just_2
+    # クリック：2段目に移行
+        execute if entity @s[tag=Ply.Ope.StartUsingWeapon] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/type_tec/13_just_1/change_to_just_2
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/util/move_jump
 

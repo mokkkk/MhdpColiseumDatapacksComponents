@@ -95,6 +95,9 @@
             #declare tag Ply.Ope.IsKeySprint
             #declare tag Ply.Ope.StartKeySneak
             #declare tag Ply.Ope.IsKeySneak
+        # その他
+            #declare tag Ply.Ope.StartLeftClick
+            #declare tag Ply.Ope.StartUsingWeapon
         # 先行入力
             #declare tag Ply.Ope.Buffering.A 先行入力A
             #declare tag Ply.Ope.Buffering.B 先行入力B

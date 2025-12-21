@@ -1,6 +1,9 @@
 {
   "description": "",
-  "supported_items": "minecraft:ender_eye",
+  "supported_items": [
+    "minecraft:ender_eye",
+    "minecraft:stick"
+  ],
   "weight": 1,
   "max_level": 100,
   "min_cost": {

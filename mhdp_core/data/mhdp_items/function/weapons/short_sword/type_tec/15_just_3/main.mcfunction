@@ -46,8 +46,8 @@
 # 遷移
     # 同時押し長押し：溜め斬り落としに移行
         execute if entity @s[tag=Ply.Ope.Buffering.F] if score @s Wpn.GeneralTimer matches 2..39 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/start_finish
-    # 右クリック短押し：通常コンボ2に移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.NotSneak] if score @s Wpn.GeneralTimer matches 12..39 run function mhdp_items:weapons/short_sword/type_tec/15_just_3/change_to_just_4
+    # 右クリック短押し：ジャストラッシュ4に移行
+        execute if entity @s[tag=Ply.Ope.StartUsingWeapon,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 12..39 run function mhdp_items:weapons/short_sword/type_tec/15_just_3/change_to_just_4
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 12..39 run function mhdp_items:weapons/short_sword/util/move_jump
 

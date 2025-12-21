@@ -6,4 +6,4 @@
 
 # タグ付与
     tag @s add Ply.Ope.StartLeftClick
-    say 左クリック
+    # say 左クリック

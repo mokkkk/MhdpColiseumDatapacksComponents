@@ -9,5 +9,6 @@
 
 # タグ付与
     tag @s add Wpn.Ss.Tec.Counter
+    tag @s remove Ply.Weapon.NoOpe
 
 # say 武器操作：片手剣 カウンター斬り

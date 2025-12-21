@@ -52,16 +52,19 @@
     execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 4..8 if entity @n[type=slime,tag=Mns.HitBox,distance=..4] run tp @s @s
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..19 run function mhdp_items:core/buffering/a
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..19 run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 3..19 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.NotSneak] if score @s Wpn.GeneralTimer matches 3..19 run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..19 run function mhdp_items:core/buffering/c
 
 # 遷移
     # スニーク+ジャンプ：バックステップに移行
-        execute if entity @s[tag=Wpn.Ss.Tec.Counter,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/start
-    # 右クリック：通常コンボ1に移行
-        execute if entity @s[tag=Wpn.Ss.Tec.Counter,tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/start
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/start
+    # 左クリック：通常コンボ1に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/start
+    # 右クリック：水平斬りコンボ1に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/start
     # スニーク+右クリック：旋刈りに移行
-        execute if entity @s[tag=Wpn.Ss.Tec.Counter,tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/11_tsumuji/start
+        execute if entity @s[tag=Ply.Ope.Buffering.C] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_tec/11_tsumuji/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/end

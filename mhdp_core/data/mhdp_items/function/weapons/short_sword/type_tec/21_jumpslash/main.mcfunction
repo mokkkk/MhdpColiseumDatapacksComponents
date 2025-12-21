@@ -45,6 +45,8 @@
     execute if score @s Wpn.GeneralTimer matches 8 run tag @s add Ply.Ope.IsAir
 
 # 遷移
+    # 左クリック：落下突きに移行
+        execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/short_sword/type_tec/32_fall_spear/start
     # 右クリック：フォールバッシュに移行
         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/short_sword/type_tec/22_fall/start
 

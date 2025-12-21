@@ -62,11 +62,11 @@
     execute if score @s Wpn.GeneralTimer matches 31 rotated ~ 60 run function player_motion:api/launch_looking
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 3..44 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartUsingWeapon] if score @s Wpn.GeneralTimer matches 3..44 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 3..44 run function mhdp_items:core/buffering/jump
 
 # 遷移
-    # 右クリック：斬り上げに移行
+    # クリック：斬り上げに移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 38..44 run function mhdp_items:weapons/short_sword/type_tec/29_upper_slash/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 38..44 run function mhdp_items:weapons/short_sword/util/move_jump
