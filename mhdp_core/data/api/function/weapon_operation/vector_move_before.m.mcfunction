@@ -8,6 +8,8 @@
 
 # 空中では移動しない
     execute if entity @s[nbt={OnGround:0b}] run return 0
+# 建築の上では移動しない
+    execute positioned ~ ~-0.5 ~ if entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.01,dy=0.01,dz=0.01] run return 0
 
 # 距離
     $scoreboard players set $strength player_motion.api.launch $(Strength)

@@ -34,7 +34,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set $strength player_motion.api.launch 3000
-    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function api:weapon_operation/looking_move
     
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.NotSneak] if score @s Wpn.GeneralTimer matches 3..12 run function mhdp_items:core/buffering/a

@@ -33,16 +33,19 @@
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
     execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 7500
+    # 建築の上では移動控え目
+        execute if score @s Wpn.GeneralTimer matches 1 positioned ~ ~-0.5 ~ if entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.01,dy=0.01,dz=0.01] run scoreboard players set $strength player_motion.api.launch 1000
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~-180 -30 run function player_motion:api/launch_looking
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 2..20 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] if score @s Wpn.GeneralTimer matches 2..20 run function mhdp_items:core/buffering/a
     # execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 2..20 if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:core/buffering/b
 
 # 遷移
     # 無操作：突進斬りに移行
         execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A,tag=!Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 16..21 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/start
-    # 左クリック：飛び込み斬りに移行
+    # 左クリックまたは右クリック短押し：飛び込み斬りに移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/13_just_1/start
     # # スニーク+右クリック同時押し：ブレイドダンスに移行
     #     execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/start

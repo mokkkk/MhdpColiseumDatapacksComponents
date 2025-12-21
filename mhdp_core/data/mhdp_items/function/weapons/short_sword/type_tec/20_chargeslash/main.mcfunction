@@ -35,6 +35,8 @@
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
     execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 10000
+    # 建築の上では移動控え目
+        execute if score @s Wpn.GeneralTimer matches 1 positioned ~ ~-0.5 ~ if entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.01,dy=0.01,dz=0.01] run scoreboard players set $strength player_motion.api.launch 1000
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -15 run function player_motion:api/launch_looking
 
 # 遷移

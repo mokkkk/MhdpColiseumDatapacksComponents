@@ -51,9 +51,9 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 2 run scoreboard players set $strength player_motion.api.launch 6000
-    execute if score @s Wpn.GeneralTimer matches 2 rotated ~180 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 2 rotated ~180 0 run function api:weapon_operation/looking_move
     execute if score @s Wpn.GeneralTimer matches 5 run scoreboard players set $strength player_motion.api.launch 4000
-    execute if score @s Wpn.GeneralTimer matches 5 rotated ~180 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 5 rotated ~180 0 run function api:weapon_operation/looking_move
     execute if score @s Wpn.GeneralTimer matches 25 run scoreboard players set $strength player_motion.api.launch 10000
     execute if score @s Wpn.GeneralTimer matches 25 rotated ~ -30 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 31 run scoreboard players set $strength player_motion.api.launch 8000

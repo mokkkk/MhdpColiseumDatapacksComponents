@@ -49,7 +49,6 @@
 # 通常コンボ
     # 1段目
         # 開始：右クリック短押し
-            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run say NoOpe通常コンボ1
             execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/start
         # 処理
             execute if entity @s[tag=Wpn.Ss.Tec.Normal.1] run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/main

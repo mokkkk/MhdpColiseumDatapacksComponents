@@ -49,7 +49,7 @@
 # 移動
     execute if score @s Wpn.GeneralTimer matches 5 run tp @s @s
     execute if score @s Wpn.GeneralTimer matches 5 run scoreboard players set $strength player_motion.api.launch 2000
-    execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 0 run function api:weapon_operation/looking_move
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/jump
