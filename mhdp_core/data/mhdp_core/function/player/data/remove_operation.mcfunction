@@ -49,3 +49,4 @@
     execute if entity @s[tag=Ply.Ope.StartDoubleJump] run tag @s remove Ply.Ope.StartDoubleJump
     execute if entity @s[tag=Ply.Ope.StartKeySprint] run tag @s remove Ply.Ope.StartKeySprint
     execute if entity @s[tag=Ply.Ope.StartKeySneak] run tag @s remove Ply.Ope.StartKeySneak
+    execute if entity @s[tag=Ply.Ope.StartLeftClick] run tag @s remove Ply.Ope.StartLeftClick

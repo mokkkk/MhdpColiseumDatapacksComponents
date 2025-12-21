@@ -4,4 +4,6 @@
 #
 # @within function mhdp_core:player/tick
 
-say 左クリック
+# タグ付与
+    tag @s add Ply.Ope.StartLeftClick
+    say 左クリック
