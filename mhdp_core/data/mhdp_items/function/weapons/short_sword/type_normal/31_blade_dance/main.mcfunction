@@ -98,7 +98,6 @@
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -5 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 27 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
-    execute if score @s Wpn.GeneralTimer matches 33 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 42 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:5000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 48 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 50 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}

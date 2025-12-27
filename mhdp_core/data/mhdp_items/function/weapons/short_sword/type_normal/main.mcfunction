@@ -31,8 +31,6 @@
         execute if entity @s[tag=Wpn.Ss.Normal.FallSpear] run function mhdp_items:weapons/short_sword/type_normal/32_fall_spear/main
 
 # 狩技：滅昇竜撃
-    # 開始
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeyBack,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/30_upper_bash/start
     # 処理
         execute if entity @s[tag=Wpn.Ss.Normal.UpperBash] run function mhdp_items:weapons/short_sword/type_normal/30_upper_bash/main
 
@@ -45,6 +43,14 @@
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/24_guard/start
     # 処理
         execute if entity @s[tag=Wpn.Ss.Normal.Guard] run function mhdp_items:weapons/short_sword/type_normal/24_guard/main
+
+# 通常攻撃
+    # 開始：左クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/short_sword/type_normal/40_normal_attack_0/start
+    # 処理
+        execute if entity @s[tag=Wpn.Ss.Normal.Attack.1] run function mhdp_items:weapons/short_sword/type_normal/40_normal_attack_0/main
+        execute if entity @s[tag=Wpn.Ss.Normal.Attack.2] run function mhdp_items:weapons/short_sword/type_normal/41_normal_attack_1/main
+        execute if entity @s[tag=Wpn.Ss.Normal.Attack.3] run function mhdp_items:weapons/short_sword/type_normal/42_normal_attack_2/main
 
 # 剣攻撃コンボ
     # 1段目
