@@ -9,5 +9,7 @@
 
 # タグ付与
     tag @s add Wpn.Ss.Tec.Fall.High
+    tag @s remove Ply.Weapon.NoOpe
+    tag @s remove Ply.Flag.Hit
 
 # say 武器操作：片手剣 フォールバッシュ

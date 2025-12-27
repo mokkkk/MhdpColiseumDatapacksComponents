@@ -43,6 +43,7 @@
     execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Long] if score @s Wpn.GeneralTimer matches 3..19 run function mhdp_items:core/buffering/f
     execute if entity @s[tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..19 run function mhdp_items:core/buffering/e
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 3..19 run function mhdp_items:core/buffering/jump
+    execute if score @s Wpn.GeneralTimer matches 3..19 run function mhdp_items:core/buffering/arts_main
 
 # 遷移
      # スニーク+ジャンプ時：バックステップに移行
@@ -61,6 +62,10 @@
         execute if entity @s[tag=Ply.Ope.Buffering.F] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/util/move_jump
+
+# 狩技遷移
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/short_sword/type_tec/2_normal_2/end
