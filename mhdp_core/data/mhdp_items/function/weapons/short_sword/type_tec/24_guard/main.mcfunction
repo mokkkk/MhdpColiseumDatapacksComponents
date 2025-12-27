@@ -21,8 +21,8 @@
 
 # 狩技遷移
     execute if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:core/buffering/arts_main
-    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/start
-    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/start
 
 # 遷移  
     # 左クリック：ガード斬りに移行
