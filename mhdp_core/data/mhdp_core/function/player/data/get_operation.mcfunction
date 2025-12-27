@@ -105,7 +105,7 @@
 #         execute if entity @s[tag=Ply.Ope.StartDoubleSneak] run say 連続スニーク
 #     # エンダーアイ
         # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] run say エンダーアイ使用開始
-#         # execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] run say エンダーアイ使用中
+        # execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] run say エンダーアイ使用中
         # execute if entity @s[tag=Ply.Ope.EndUsingEnderEye] run say エンダーアイ使用終了
 #         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.NotSneak] run say エンダーアイ使用開始・スニークなし
 #         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run say エンダーアイ使用開始・スニーク同時押し
@@ -114,7 +114,7 @@
 #         execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Short] run say エンダーアイ使用・スニーク同時押し・短押し
 #         execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Long] run say エンダーアイ使用・スニーク同時押し・長押し
 #     # ニンジン棒
-#         execute if entity @s[tag=Ply.Ope.StartUsingCoas] run say ニンジン棒使用    
+        # execute if entity @s[tag=Ply.Ope.StartUsingCoas] run say ニンジン棒使用
 #     # ジャンプ
 #         execute if entity @s[tag=Ply.Ope.StartKeyJump] run say ジャンプ
 #         execute if entity @s[tag=Ply.Ope.StartDoubleJump] run say 連続ジャンプ

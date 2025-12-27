@@ -42,8 +42,8 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 1000
-    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/looking_move
+    # execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 1000
+    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:true}
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..19 run function mhdp_items:core/buffering/a

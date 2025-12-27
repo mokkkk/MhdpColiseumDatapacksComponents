@@ -2,6 +2,7 @@
   "description": "",
   "supported_items": [
     "minecraft:ender_eye",
+    "minecraft:carrot_on_a_stick",
     "minecraft:stick"
   ],
   "weight": 1,

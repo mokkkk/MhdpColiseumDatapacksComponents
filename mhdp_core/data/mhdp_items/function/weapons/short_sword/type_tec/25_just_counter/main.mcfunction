@@ -42,14 +42,14 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 5000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/looking_move
+    # execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 5000
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:5000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 2 run tp @s @s
     execute if score @s Wpn.GeneralTimer matches 2 run tp @s ~ ~0.05 ~
-    execute if score @s Wpn.GeneralTimer matches 2 run scoreboard players set $strength player_motion.api.launch 12000
-    execute if score @s Wpn.GeneralTimer matches 2 rotated ~ 0 run function api:weapon_operation/looking_move
-    execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 10000
-    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/looking_move
+    # execute if score @s Wpn.GeneralTimer matches 2 run scoreboard players set $strength player_motion.api.launch 12000
+    execute if score @s Wpn.GeneralTimer matches 2 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:12000, IsForce:false, IsAdjust:false}
+    # execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 10000
+    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:10000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 4..8 if entity @n[type=slime,tag=Mns.HitBox,distance=..4] run tp @s @s
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 3..19 run function mhdp_items:core/buffering/a
