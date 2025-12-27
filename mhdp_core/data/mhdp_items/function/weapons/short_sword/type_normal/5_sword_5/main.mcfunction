@@ -40,5 +40,10 @@
     execute if score @s Wpn.GeneralTimer matches 9 run function api:weapon_operation/attribute_reset
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
+# 狩技遷移
+    execute if score @s Wpn.GeneralTimer matches 1..14 run function mhdp_items:core/buffering/arts_main
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_normal/31_blade_dance/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_normal/30_upper_bash/start
+
 # 終了
     execute if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/short_sword/type_normal/5_sword_5/end

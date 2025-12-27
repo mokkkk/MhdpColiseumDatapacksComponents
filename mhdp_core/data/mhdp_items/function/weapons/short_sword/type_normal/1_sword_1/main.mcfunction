@@ -36,11 +36,17 @@
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..9 run function mhdp_items:core/buffering/c
+    execute if score @s Wpn.GeneralTimer matches 1..9 run function mhdp_items:core/buffering/arts_main
+
+# 狩技遷移
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_normal/31_blade_dance/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_normal/30_upper_bash/start
 
 # 遷移
     # 右クリック：剣コンボ2に移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_normal/2_sword_2/start
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_normal/2_sword_2/start
+
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/short_sword/type_normal/1_sword_1/end
