@@ -17,6 +17,7 @@
     tag @s remove Ply.Ope.Buffering.D
     tag @s remove Ply.Ope.Buffering.E
     tag @s remove Ply.Ope.Buffering.F
+    tag @s remove Ply.Ope.Buffering.G
     tag @s add Ply.Ope.Buffering.Jump
     tag @s remove Ply.Ope.Buffering.Arts1
     tag @s remove Ply.Ope.Buffering.Arts2

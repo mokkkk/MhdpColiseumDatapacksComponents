@@ -53,13 +53,13 @@
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/jump
-    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Long] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/f
+    execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=Ply.Ope.IsKeyBack,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/g
     execute if score @s Wpn.GeneralTimer matches 3..24 run function mhdp_items:core/buffering/arts_main
 
 # 遷移
     # スニーク+ジャンプ時：バックステップに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 18..24 run function mhdp_items:weapons/short_sword/type_tec/12_backstep/start
+        execute if entity @s[tag=Ply.Ope.Buffering.G] if score @s Wpn.GeneralTimer matches 18..24 run function mhdp_items:weapons/short_sword/type_tec/12_backstep/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 20..24 run function mhdp_items:weapons/short_sword/util/move_jump
     # 同時押し長押し：溜め斬り落としに移行

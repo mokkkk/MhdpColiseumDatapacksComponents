@@ -41,11 +41,12 @@
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 3..12 run function mhdp_items:core/buffering/jump
     execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Short] if score @s Wpn.GeneralTimer matches 3..12 run function mhdp_items:core/buffering/d
     execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Long] if score @s Wpn.GeneralTimer matches 3..12 run function mhdp_items:core/buffering/f
+    execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=Ply.Ope.IsKeyBack,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 3..12 run function mhdp_items:core/buffering/g
     execute if score @s Wpn.GeneralTimer matches 3..12 run function mhdp_items:core/buffering/arts_main
 
 # 遷移
      # スニーク+ジャンプ時：バックステップに移行
-        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/start
+        execute if entity @s[tag=Ply.Ope.Buffering.G] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/start
     # 右クリック：バックナックルに移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 9.. run function mhdp_items:weapons/short_sword/type_tec/8_bash_2/start
     # 同時押し：回転斬りに移行

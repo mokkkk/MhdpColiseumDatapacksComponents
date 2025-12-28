@@ -28,7 +28,7 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 無敵時間
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set @s Ply.Timer.Avoid 5
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set @s Ply.Timer.Avoid 4
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
@@ -44,7 +44,7 @@
 
 # 遷移
     # 無操作：突進斬りに移行
-        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A,tag=!Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 16..21 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/start
+        # execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A,tag=!Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 16..21 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/start
     # 左クリックまたは右クリック短押し：飛び込み斬りに移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/13_just_1/start
     # # スニーク+右クリック同時押し：ブレイドダンスに移行
@@ -54,4 +54,4 @@
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 49.. run function mhdp_items:weapons/short_sword/type_tec/20_chargeslash/start
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 50.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/end
+    execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 17.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/end
