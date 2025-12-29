@@ -41,10 +41,8 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 3000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -90 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 8 run scoreboard players set $strength player_motion.api.launch 9000
-    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ 90 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -90 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:true, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ 90 run function api:weapon_operation/use_player_motion.m {Strength:9000, IsForce:true, IsAdjust:false}
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingWeapon] if score @s Wpn.GeneralTimer matches 3..31 run function mhdp_items:core/buffering/a

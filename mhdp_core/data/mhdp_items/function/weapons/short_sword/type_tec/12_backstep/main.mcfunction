@@ -32,15 +32,13 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 7500
     # 建築の上では移動控え目
-        execute if score @s Wpn.GeneralTimer matches 1 positioned ~ ~-0.5 ~ if entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.01,dy=0.01,dz=0.01] run scoreboard players set $strength player_motion.api.launch 1000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~-180 -30 run function player_motion:api/launch_looking
+        execute if score @s Wpn.GeneralTimer matches 1 positioned ~ ~-1.5 ~ unless entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.01,dy=0.01,dz=0.01] rotated ~-180 -30 run function api:weapon_operation/use_player_motion.m {Strength:7500, IsForce:true, IsAdjust:false}
+        execute if score @s Wpn.GeneralTimer matches 1 positioned ~ ~-1.5 ~ if entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.01,dy=0.01,dz=0.01] rotated ~-180 -60 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:true, IsAdjust:false}
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 2..20 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] if score @s Wpn.GeneralTimer matches 2..20 run function mhdp_items:core/buffering/a
-    # execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 2..20 if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:core/buffering/b
 
 # 遷移
     # 無操作：突進斬りに移行

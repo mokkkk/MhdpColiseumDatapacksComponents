@@ -35,8 +35,7 @@
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/short_sword/type_normal/17_jumpslash_high/move
     execute if score @s Wpn.GeneralTimer matches 8 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 8 run scoreboard players set $strength player_motion.api.launch 14000
-    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ -90 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ -90 run function api:weapon_operation/use_player_motion.m {Strength:14000, IsForce:true, IsAdjust:false}
 
 # 状態更新
     execute if score @s Wpn.GeneralTimer matches 8 run tag @s add Ply.Ope.IsAir

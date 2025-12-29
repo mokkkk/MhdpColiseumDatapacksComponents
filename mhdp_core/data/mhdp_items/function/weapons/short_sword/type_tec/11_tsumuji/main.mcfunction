@@ -48,7 +48,6 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 5 run tp @s @s
-    # execute if score @s Wpn.GeneralTimer matches 5 run scoreboard players set $strength player_motion.api.launch 2000
     execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:2000, IsForce:false, IsAdjust:false}
 
 # 先行入力
