@@ -32,6 +32,10 @@
     execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 2..16 run function mhdp_items:core/buffering/a
 
 # 遷移
+    # 右クリック：溜めに移行
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 17.. run function mhdp_items:weapons/great_sword/type_tec/1_charge/start
+    # スニーク+右クリック：溜めに移行
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 17.. run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/start
     # 左クリック：通常攻撃3に移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/great_sword/type_tec/32_normal_attack_3/start
 

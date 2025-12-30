@@ -25,15 +25,11 @@
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/great_sword/type_tec/32_normal_attack_3/attack
 
-# # 先行入力
-#     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 1..39 run function mhdp_items:core/buffering/jump
-#     execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max if score @s Wpn.GeneralTimer matches 1..39 run function mhdp_items:core/buffering/a
-
 # 遷移
-    # # スニーク+ジャンプ：狩技・強化納刀に移行
-    #     execute if entity @s[tag=Ply.Ope.Buffering.A,tag=!Ply.Flag.CounterSuccess] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/type_tec/17_power_sheathe/start
-    # # ジャンプ回避
-    #     execute if entity @s[tag=Ply.Ope.Buffering.Jump,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/great_sword/util/move_jump
+    # 右クリック：強溜めに移行
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 17.. run function mhdp_items:weapons/great_sword/type_tec/6_charge_high/start_with_other
+    # スニーク+右クリック：溜めに移行
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 17.. run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 18.. run function mhdp_items:weapons/great_sword/type_tec/32_normal_attack_3/end
