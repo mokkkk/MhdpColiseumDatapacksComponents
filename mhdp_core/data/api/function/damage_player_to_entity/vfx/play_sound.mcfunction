@@ -9,11 +9,12 @@
 
 # 共通
     playsound minecraft:entity.generic.hurt master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score #mhdp_temp_defence_phys MhdpCore matches 31.. run playsound minecraft:entity.player.attack.strong master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
+    execute if score #mhdp_temp_defence_phys MhdpCore matches 31.. run playsound minecraft:entity.player.attack.strong master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.3
 
 # 斬撃
-    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run playsound minecraft:entity.player.attack.knockback master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run playsound minecraft:entity.player.hurt_sweet_berry_bush master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.8
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run playsound minecraft:entity.player.attack.knockback master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 1
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run playsound minecraft:entity.player.hurt_sweet_berry_bush master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 0.8
+    execute if score #mhdp_temp_damage_phys_type MhdpCore matches 0 run playsound minecraft:custom.slash master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 0.3 1.3
 
 # 打撃
     execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 run playsound minecraft:entity.player.attack.knockback master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2

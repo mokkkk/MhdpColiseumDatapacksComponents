@@ -21,13 +21,14 @@
     execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_2
     execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_3
     execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_4
+    execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_10
     execute if score @s Wpn.GeneralTimer matches 9 run scoreboard players set @s Wpn.AnimationTimer 9
     
     execute if score @s Wpn.AnimationTimer matches 15 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_9
-    execute if score @s Wpn.AnimationTimer matches 17 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_5
-    execute if score @s Wpn.AnimationTimer matches 18 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_6
-    execute if score @s Wpn.AnimationTimer matches 19 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_7
-    execute if score @s Wpn.AnimationTimer matches 21 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_8
+    execute if score @s Wpn.AnimationTimer matches 16 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_5
+    execute if score @s Wpn.AnimationTimer matches 17 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_6
+    execute if score @s Wpn.AnimationTimer matches 18 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_7
+    execute if score @s Wpn.AnimationTimer matches 20 run function mhdp_items:weapons/great_sword/type_tec/15_cross/animation_8
 
     execute if score @s Wpn.AnimationTimer matches 3 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/great_sword/type_tec/15_cross/particle_horizon
     execute if score @s Wpn.AnimationTimer matches 3 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/great_sword/type_tec/15_cross/particle_horizon
@@ -39,7 +40,7 @@
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/great_sword/type_tec/15_cross/attack_0
-    execute if score @s Wpn.GeneralTimer matches 18 run function mhdp_items:weapons/great_sword/type_tec/15_cross/attack_1
+    execute if score @s Wpn.GeneralTimer matches 17 run function mhdp_items:weapons/great_sword/type_tec/15_cross/attack_1
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
@@ -65,14 +66,10 @@
     execute if score @s Wpn.GeneralTimer matches 11 run tp @s @s
     execute if score @s Wpn.GeneralTimer matches 11 run scoreboard players set $strength player_motion.api.launch 3000
     execute if score @s Wpn.GeneralTimer matches 11 rotated ~ -60 run function player_motion:api/launch_looking
-    # execute if score @s Wpn.GeneralTimer matches 3 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] run scoreboard players set $strength player_motion.api.launch 16000
-    # execute if score @s Wpn.GeneralTimer matches 3 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] rotated ~ 0 run function player_motion:api/launch_looking
-    # execute if score @s Wpn.GeneralTimer matches 5 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] run scoreboard players set $strength player_motion.api.launch 16000
-    # execute if score @s Wpn.GeneralTimer matches 5 unless entity @n[type=slime,tag=Mns.HitBox,distance=..4] rotated ~ 0 run function player_motion:api/launch_looking
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max if score @s Wpn.GeneralTimer matches 1..39 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 1..39 run function mhdp_items:core/buffering/jump
+    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyJump] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max if score @s Wpn.GeneralTimer matches 1..39 run function mhdp_items:core/buffering/a
 
 # 遷移
     # 右クリック長押し：強溜めに移行
