@@ -42,6 +42,14 @@
     # 成功
         execute if entity @s[tag=Wpn.Gs.Tec.CounterStance.Success] run function mhdp_items:weapons/great_sword/type_tec/20_counter_stance_success/main
 
+# 通常攻撃
+    # 開始：左クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/great_sword/type_tec/30_normal_attack_1/start
+    # 処理
+        execute if entity @s[tag=Wpn.Gs.Tec.Attack.1] run function mhdp_items:weapons/great_sword/type_tec/30_normal_attack_1/main
+        execute if entity @s[tag=Wpn.Gs.Tec.Attack.2] run function mhdp_items:weapons/great_sword/type_tec/31_normal_attack_2/main
+        execute if entity @s[tag=Wpn.Gs.Tec.Attack.3] run function mhdp_items:weapons/great_sword/type_tec/32_normal_attack_3/main
+
 # 溜め
     # 通常
         # 開始：右クリック長押し
