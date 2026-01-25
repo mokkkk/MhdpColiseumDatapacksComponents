@@ -48,18 +48,6 @@
     execute if score @s Wpn.GeneralTimer matches 5 run tag @s remove Ply.Flag.DrawAttack
 
 # 移動
-    # execute if score @s Wpn.GeneralTimer matches 1 run tp @s ~ ~0.05 ~
-    # execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 12000
-    # execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
-    # execute if score @s Wpn.GeneralTimer matches 12 run tp @s ~ ~0.05 ~
-    # execute if score @s Wpn.GeneralTimer matches 12 run scoreboard players set $strength player_motion.api.launch 6000
-    # execute if score @s Wpn.GeneralTimer matches 12 rotated ~ 0 run function player_motion:api/launch_looking
-    # execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 run tp @s ~ ~0.05 ~
-    # execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 run scoreboard players set $strength player_motion.api.launch 6000
-    # execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 rotated ~ 0 run function player_motion:api/launch_looking
-    # execute if score @s Wpn.AnimationTimer matches 20 run tp @s @s
-    # execute if score @s Wpn.AnimationTimer matches 20 run scoreboard players set $strength player_motion.api.launch 3000
-    # execute if score @s Wpn.AnimationTimer matches 20 rotated ~ -60 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:12000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 12 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:false, IsAdjust:false}
     execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 16 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:false, IsAdjust:false}

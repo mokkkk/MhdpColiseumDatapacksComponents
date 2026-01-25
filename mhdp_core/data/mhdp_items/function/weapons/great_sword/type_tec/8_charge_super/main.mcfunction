@@ -40,15 +40,6 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..10 run tp @s ~ ~ ~ ~ ~-0.5
 
 # 移動
-    # execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    # execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 12000
-    # execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function player_motion:api/launch_looking
-    # execute if score @s Wpn.GeneralTimer matches 4 run tp @s @s
-    # execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 7000
-    # execute if score @s Wpn.GeneralTimer matches 4 rotated ~180 0 run function player_motion:api/launch_looking
-    # execute if score @s Wpn.GeneralTimer matches 7 run tp @s @s
-    # execute if score @s Wpn.GeneralTimer matches 7 run scoreboard players set $strength player_motion.api.launch 3000
-    # execute if score @s Wpn.GeneralTimer matches 7 rotated ~180 0 run function player_motion:api/launch_looking
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:12000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 4 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:7000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 7 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:false, IsAdjust:false}

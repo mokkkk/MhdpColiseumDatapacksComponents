@@ -8,8 +8,7 @@
     function mhdp_items:weapons/great_sword/util/before_attack
 
 # 剣を回すアニメーションをスキップ
-    scoreboard players set $strength player_motion.api.launch 6000
-    execute rotated ~180 0 run function player_motion:api/launch_looking
+    execute at @s rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:false, IsAdjust:false}
     scoreboard players set @s Wpn.GeneralTimer 6
     scoreboard players set @s Wpn.AnimationTimer 6
     function api:weapon_operation/attribute_movestop

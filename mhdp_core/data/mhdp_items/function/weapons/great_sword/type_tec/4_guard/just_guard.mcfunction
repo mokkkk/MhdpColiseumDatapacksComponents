@@ -19,8 +19,7 @@
 
 # 後ずさる
     tp @s @s
-    scoreboard players set $strength player_motion.api.launch 10000
-    execute at @s rotated ~180 0 run function player_motion:api/launch_looking
+    execute at @s rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:10000, IsForce:false, IsAdjust:false}
 
 # ジャストガードに移行
     # 前処理
