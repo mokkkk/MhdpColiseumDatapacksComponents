@@ -12,8 +12,8 @@
     execute if score @s Wpn.GuardStopTimer matches 1.. run scoreboard players remove @s Wpn.GuardStopTimer 1
 
 # アニメーション演出
-    execute if score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/great_sword/type_tec/4_guard/animation_0
-    execute if score @s Wpn.GuardStopTimer matches 0 run function mhdp_items:weapons/great_sword/type_tec/4_guard/animation_1
+    execute if score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/great_sword/type_normal/4_guard/animation_0
+    execute if score @s Wpn.GuardStopTimer matches 0 run function mhdp_items:weapons/great_sword/type_normal/4_guard/animation_1
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
@@ -21,7 +21,11 @@
 
 # 遷移
     # 右クリック長押し時、大溜めに移行
-        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 5.. if score @s Wpn.GuardStopTimer matches 0 run function mhdp_items:weapons/great_sword/type_normal/13_charge_high/start
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 5.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/great_sword/type_normal/4_guard/change_to_cross_charge
+    # Ctrl+左クリック時、威姿呵成の構えに移行
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 5.. unless score @s Wpn.GuardStopTimer matches 1.. if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max run function mhdp_items:weapons/great_sword/type_normal/4_guard/change_to_stance
+    # Ctrl+右クリック長押し時、震怒竜怨斬に移行
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 5.. unless score @s Wpn.GuardStopTimer matches 1.. if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:weapons/great_sword/type_normal/4_guard/change_to_rage
 
 # 終了
     execute if entity @s[tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 5.. if score @s Wpn.GuardStopTimer matches 0 run function mhdp_items:weapons/great_sword/type_normal/4_guard/end

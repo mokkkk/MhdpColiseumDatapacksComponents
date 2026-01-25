@@ -40,15 +40,20 @@
     # 空中溜め斬り
         execute if entity @s[tag=Wpn.Gs.Normal.ChargeSlash.Air] run function mhdp_items:weapons/great_sword/type_normal/22_chargeattack_air/main
 
-# 狩技：強化納刀
-    # 処理
-        execute if entity @s[tag=Wpn.Gs.Normal.PowerSheathe] run function mhdp_items:weapons/great_sword/type_normal/17_power_sheathe/main
+# # 狩技：強化納刀
+#     # 処理
+#         execute if entity @s[tag=Wpn.Gs.Normal.PowerSheathe] run function mhdp_items:weapons/great_sword/type_normal/17_power_sheathe/main
 
 # 狩技：威姿呵成の構え
     # 構え
         execute if entity @s[tag=Wpn.Gs.Normal.CounterStance] run function mhdp_items:weapons/great_sword/type_normal/19_counter_stance/main
     # 成功
         execute if entity @s[tag=Wpn.Gs.Normal.CounterStance.Success] run function mhdp_items:weapons/great_sword/type_normal/20_counter_stance_success/main
+
+# 狩技：震怒竜怨斬
+    # 処理
+        execute if entity @s[tag=Wpn.Gs.Normal.RageCharge] run function mhdp_items:weapons/great_sword/type_normal/33_rage_charge/main
+        execute if entity @s[tag=Wpn.Gs.Normal.RageSlash] run function mhdp_items:weapons/great_sword/type_normal/34_rage_attack/main
 
 # 溜め
     # 開始：右クリック長押し

@@ -36,6 +36,8 @@
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 17.. run function mhdp_items:weapons/great_sword/type_normal/1_charge/start
     # 左クリック：通常攻撃3に移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/great_sword/type_normal/32_normal_attack_3/start
+    # Ctrl+右クリック長押し時、震怒竜怨斬に移行
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 17.. if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:weapons/great_sword/type_normal/4_guard/change_to_rage
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 18.. run function mhdp_items:weapons/great_sword/type_normal/31_normal_attack_2/end
