@@ -57,15 +57,18 @@
     execute if score @s Wpn.GeneralTimer matches 17 run tag @s remove Ply.Weapon.Armor.Hyper
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 10000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 10 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 10 run scoreboard players set $strength player_motion.api.launch 6000
-    execute if score @s Wpn.GeneralTimer matches 10 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 11 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 11 run scoreboard players set $strength player_motion.api.launch 3000
-    execute if score @s Wpn.GeneralTimer matches 11 rotated ~ -60 run function player_motion:api/launch_looking
+    # execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
+    # execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 10000
+    # execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function player_motion:api/launch_looking
+    # execute if score @s Wpn.GeneralTimer matches 10 run tp @s @s
+    # execute if score @s Wpn.GeneralTimer matches 10 run scoreboard players set $strength player_motion.api.launch 6000
+    # execute if score @s Wpn.GeneralTimer matches 10 rotated ~ 0 run function player_motion:api/launch_looking
+    # execute if score @s Wpn.GeneralTimer matches 11 run tp @s @s
+    # execute if score @s Wpn.GeneralTimer matches 11 run scoreboard players set $strength player_motion.api.launch 3000
+    # execute if score @s Wpn.GeneralTimer matches 11 rotated ~ -60 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:10000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 10 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 11 rotated ~ -60 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:false, IsAdjust:false}
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 1..39 run function mhdp_items:core/buffering/jump

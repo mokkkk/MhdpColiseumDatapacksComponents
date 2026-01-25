@@ -32,12 +32,9 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 15000
-    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 6 run scoreboard players set $strength player_motion.api.launch 15000
-    execute if score @s Wpn.GeneralTimer matches 6 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 8 run scoreboard players set $strength player_motion.api.launch 15000
-    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:15000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 6 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:15000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:15000, IsForce:false, IsAdjust:false}
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/great_sword/type_normal/17_power_sheathe/end

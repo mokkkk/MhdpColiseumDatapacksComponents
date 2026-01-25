@@ -31,8 +31,9 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 4000
-    execute if score @s Wpn.GeneralTimer matches 1 if entity @s[nbt={OnGround:1b}] rotated ~ 0 run function player_motion:api/launch_looking
+    # execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 4000
+    # execute if score @s Wpn.GeneralTimer matches 1 if entity @s[nbt={OnGround:1b}] rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 if entity @s[nbt={OnGround:1b}] rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
 
 # 演出
    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2

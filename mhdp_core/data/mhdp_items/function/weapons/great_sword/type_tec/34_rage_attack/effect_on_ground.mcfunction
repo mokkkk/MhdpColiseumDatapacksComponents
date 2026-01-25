@@ -18,5 +18,4 @@
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.3 ^3.5 0.2 0.1 0.2 0.9 10 normal
 
 # 移動
-    scoreboard players set $strength player_motion.api.launch 3000
-    execute rotated ~0 -90 run function player_motion:api/launch_looking
+    execute rotated ~ -60 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:false, IsAdjust:false}

@@ -22,10 +22,12 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1..2 run scoreboard players set $strength player_motion.api.launch 7000
-    execute if score @s Wpn.GeneralTimer matches 1..2 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 3..30 run scoreboard players set $strength player_motion.api.launch 2000
-    execute if score @s Wpn.GeneralTimer matches 3..30 rotated ~ 0 run function player_motion:api/launch_looking
+    # execute if score @s Wpn.GeneralTimer matches 1..2 run scoreboard players set $strength player_motion.api.launch 7000
+    # execute if score @s Wpn.GeneralTimer matches 1..2 rotated ~ 0 run function player_motion:api/launch_looking
+    # execute if score @s Wpn.GeneralTimer matches 3..30 run scoreboard players set $strength player_motion.api.launch 2000
+    # execute if score @s Wpn.GeneralTimer matches 3..30 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1..2 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:7000, IsForce:true, IsAdjust:true}
+    execute if score @s Wpn.GeneralTimer matches 3..30 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:2000, IsForce:true, IsAdjust:true}
 
 # 遷移
     # 右クリック離す：十字斬りに移行
