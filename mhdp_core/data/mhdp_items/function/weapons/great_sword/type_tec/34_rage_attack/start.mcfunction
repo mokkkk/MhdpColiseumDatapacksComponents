@@ -10,6 +10,7 @@
 # タグ付与
     tag @s add Wpn.Gs.Tec.RageSlash
     tag @s remove Ply.Weapon.NoOpe
+    tag @s remove Ply.Weapon.Armor.Hyper
 
 # attribute設定
     attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength

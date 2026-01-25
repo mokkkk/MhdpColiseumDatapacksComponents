@@ -53,6 +53,9 @@
     execute if score @s Wpn.GeneralTimer matches 7 run scoreboard players set $strength player_motion.api.launch 3000
     execute if score @s Wpn.GeneralTimer matches 7 rotated ~180 0 run function player_motion:api/launch_looking
 
+# アーマー
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.Armor.Hyper
+
 # 遷移
     # 右クリックを離した場合、溜め斬りに移行
         execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 40.. run function mhdp_items:weapons/great_sword/type_tec/34_rage_attack/start

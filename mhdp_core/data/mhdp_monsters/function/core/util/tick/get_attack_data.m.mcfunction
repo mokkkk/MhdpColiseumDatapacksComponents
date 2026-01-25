@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:/**
 
 # 攻撃データ
-    $data modify storage mhdp_core:temp Arg set from storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks[{Name:"$(Name)"}]
+    $data modify storage mhdp_core:temp Arg set from storage mhdp_core:monster_data AttackData[{Uid:$(Uid)}].Attacks[{Name:"$(Name)"}]
 
 # 攻撃力倍率
     scoreboard players operation #mhdp_temp_attack_multiply_quest MhdpCore = @s Mns.QuestAttackMultiply

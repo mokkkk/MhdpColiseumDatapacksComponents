@@ -5,7 +5,7 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/step_jump_right/main
 
 # データ読み込み
-    function mhdp_monsters:core/util/tick/get_attack_data.m {Name:"Jump"}
+    function mhdp_monsters:core/util/tick/get_attack_data.m {Uid:1001, Name:"Jump"}
     # data modify storage mhdp_core:temp Damage set from storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks[{Name:"Jump"}]
     # execute if entity @s[tag=!Mns.State.IsAnger] run scoreboard players set #mhdp_temp_attack_multiply_anger MhdpCore 100
     # execute if entity @s[tag=Mns.State.IsAnger] run scoreboard players operation #mhdp_temp_attack_multiply_anger MhdpCore = @s Mns.Anger.AttackMutiply
