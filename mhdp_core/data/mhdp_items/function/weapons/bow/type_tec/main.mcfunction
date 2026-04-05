@@ -26,12 +26,14 @@
         execute if entity @s[tag=Wpn.Bw.Tec.Shot.Air] run function mhdp_items:weapons/bow/type_tec/14_air_shot/main
 
 # 狩技：身躱し射法
+    # 開始：スニーク+Ctrl+左クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max run function mhdp_items:weapons/bow/type_tec/11_moving_shot/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.MovingShot] run function mhdp_items:weapons/bow/type_tec/11_moving_shot/main
 
 # 狩技：昇天煌弓・箭射
-    # 開始：スニーク+後ろ+右クリック長押し
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeyBack] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/start
+    # 開始：スニーク+Ctrl+右クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.TargettingShot] run function mhdp_items:weapons/bow/type_tec/12_targetting_shot/main
         execute if entity @s[tag=Wpn.Bw.Tec.JumpShot] run function mhdp_items:weapons/bow/type_tec/13_jump_shot/main
@@ -64,14 +66,14 @@
         execute if entity @s[tag=Wpn.Bw.Tec.Shot.Pierce] run function mhdp_items:weapons/bow/type_tec/6_shot_pierce/main
 
 # ビン装填
-    # 開始：スニーク+右クリック短押し
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Wpn.Bw.Gauge matches 13.. if score @s Wpn.Bw.Bottle.Count matches ..7 run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/start
+    # 開始：スニーク+左クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Wpn.Bw.Gauge matches 13.. if score @s Wpn.Bw.Bottle.Count matches ..7 run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.Equip] run function mhdp_items:weapons/bow/type_tec/9_equip_bottle/main
 
 # 導ノ矢
-    # 開始：スニーク+右クリック長押し
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.UsedEnderEye.Long,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking,tag=!Ply.Ope.IsKeyBack] if score @s Wpn.Bw.Gauge matches 100.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/start
+    # 開始：スニーク+右クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.Bw.Gauge matches 100.. run function mhdp_items:weapons/bow/type_tec/7_shot_horming/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.Shot.Horming] run function mhdp_items:weapons/bow/type_tec/7_shot_horming/main
 
