@@ -44,7 +44,7 @@
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 1..21 run function mhdp_items:core/buffering/a
-    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.UsedEnderEye.Long] if score @s Wpn.GeneralTimer matches 1.. run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 1.. run function mhdp_items:core/buffering/b
     execute if score @s Wpn.GeneralTimer matches 1..21 run function mhdp_items:core/buffering/arts_main
 
 # 遷移

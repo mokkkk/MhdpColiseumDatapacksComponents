@@ -7,10 +7,12 @@
 # 前処理
     function mhdp_items:weapons/bow/util/before_attack
 
-# タイマー初期化
 # 既に引き絞った状態にするため、Timerは9に設定(10で引き絞り完了)
     scoreboard players set @s Wpn.GeneralTimer 9
     scoreboard players set @s Wpn.AnimationTimer 9
+    function mhdp_items:core/util/item_modify_custom_name {Name:"溜め"}
+    function api:weapon_operation/attribute_nojump
+    tag @s add Ply.Weapon.NoMoveJump
 
 # タグ付与
     tag @s add Wpn.Bw.Tec.Charge

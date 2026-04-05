@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/bow/type_tec/2_shot_normal/main
+#> mhdp_items:weapons/bow/type_tec/15_quick_shot/main
 #
-# 射撃 メイン処理
+# クイックショット メイン処理
 #
 # @within function mhdp_items:weapons/bow/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"射撃"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"クイックショット"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -15,13 +15,13 @@
     execute if score @s Wpn.AnimationTimer matches 1 run playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
     execute if score @s Wpn.AnimationTimer matches 1 run playsound entity.arrow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
     
-    execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/bow/type_tec/2_shot_normal/animation_1
-    execute if score @s Wpn.AnimationTimer matches 2 run function mhdp_items:weapons/bow/type_tec/2_shot_normal/animation_2
-    execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/bow/type_tec/2_shot_normal/animation_3
-    execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/bow/type_tec/2_shot_normal/animation_0
+    execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/bow/type_tec/15_quick_shot/animation_0
+    execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/bow/type_tec/15_quick_shot/animation_1
+    execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/bow/type_tec/15_quick_shot/animation_2
+    execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/bow/type_tec/15_quick_shot/animation_3
 
 # 攻撃
-    execute if score @s Wpn.GeneralTimer matches 3 positioned ~ ~1.65 ~ run function mhdp_items:weapons/bow/type_tec/2_shot_normal/attack
+    execute if score @s Wpn.GeneralTimer matches 4 positioned ~ ~1.65 ~ run function mhdp_items:weapons/bow/type_tec/15_quick_shot/attack
 
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1 run tp @s ~ ~ ~ ~ ~-0.5
@@ -37,12 +37,12 @@
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function player_motion:api/launch_looking
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/a
-    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/b
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/c
-    execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/c
-    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/d
-    execute if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/arts_main
+    execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 2..15 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 2..15 run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..15 run function mhdp_items:core/buffering/c
+    execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 2..15 run function mhdp_items:core/buffering/c
+    execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.UsedEnderEye.Long] if score @s Wpn.GeneralTimer matches 2..15 run function mhdp_items:core/buffering/d
+    execute if score @s Wpn.GeneralTimer matches 2..15 run function mhdp_items:core/buffering/arts_main
 
 # 遷移
     # 右クリック押し続け：溜めに移行
@@ -55,7 +55,7 @@
         execute if entity @s[tag=Ply.Ope.Buffering.A,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 8..15 if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max run function mhdp_items:weapons/bow/type_tec/11_moving_shot/start
         execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 8..15 if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max run function mhdp_items:weapons/bow/type_tec/11_moving_shot/start
     # スニーク+右クリック長押し：竜の一矢に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 12..15 run function mhdp_items:weapons/bow/type_tec/6_shot_pierce/start
+        execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 8..15 run function mhdp_items:weapons/bow/type_tec/6_shot_pierce/start
 
 # 終了
-    execute if entity @s[tag=Wpn.Bw.Tec.Shot] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/bow/type_tec/2_shot_normal/end
+    execute if entity @s[tag=Wpn.Bw.Tec.QuickShot] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/bow/type_tec/15_quick_shot/end

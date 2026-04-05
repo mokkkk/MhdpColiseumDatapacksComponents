@@ -45,6 +45,13 @@
         # 処理
             execute if entity @s[tag=Wpn.Bw.Tec.Charge] run function mhdp_items:weapons/bow/type_tec/1_charge/main
 
+# クイックショット
+    # 通常
+        # 開始：立ち+左クリック
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_tec/15_quick_shot/start
+        # 処理
+            execute if entity @s[tag=Wpn.Bw.Tec.QuickShot] run function mhdp_items:weapons/bow/type_tec/15_quick_shot/main
+
 # 射撃
     # 通常
         # 処理
