@@ -45,9 +45,12 @@
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 1..21 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 1.. run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/c
     execute if score @s Wpn.GeneralTimer matches 1..21 run function mhdp_items:core/buffering/arts_main
 
 # 遷移
+    # 左クリック：剛連射に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.C,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 8..15 run function mhdp_items:weapons/bow/type_tec/16_shot_power_volley/start
     # ジャンプ：チャージステップに移行
         execute if entity @s[tag=Ply.Ope.Buffering.A,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 16..21 if score @s Ply.Stats.Stamina matches 100.. run function mhdp_items:weapons/bow/type_tec/4_charge_step/start
     # ジャンプ：身躱し射法

@@ -68,6 +68,10 @@
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.Shot.Power] run function mhdp_items:weapons/bow/type_tec/5_shot_power/main
 
+# 剛連射
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Tec.Shot.PowerVolley] run function mhdp_items:weapons/bow/type_tec/16_shot_power_volley/main
+
 # 竜の一矢
     # 処理
         execute if entity @s[tag=Wpn.Bw.Tec.Shot.Pierce] run function mhdp_items:weapons/bow/type_tec/6_shot_pierce/main
