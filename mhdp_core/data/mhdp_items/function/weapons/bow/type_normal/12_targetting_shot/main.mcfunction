@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/bow/type_normal/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"昇天煌弓・箭雨"}
+    # execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"昇天煌弓・箭雨"}
 
 # タイマー増加
     execute if score @s Wpn.GeneralTimer matches ..22 run scoreboard players add @s Wpn.GeneralTimer 1
@@ -15,8 +15,8 @@
 
 # アニメーション演出
     # 効果音・引き絞り
-        execute if score @s Wpn.AnimationTimer matches 1..2 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
-        execute if score @s Wpn.AnimationTimer matches 1..2 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
+        execute if score @s Wpn.GeneralTimer matches 1..2 run playsound item.crossbow.loading_start master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
+        execute if score @s Wpn.GeneralTimer matches 3..15 run playsound item.crossbow.loading_middle master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
     # 効果音・射撃
         execute if score @s Wpn.GeneralTimer matches 25 run playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
         execute if score @s Wpn.GeneralTimer matches 25 run playsound item.crossbow.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.1
@@ -24,13 +24,24 @@
         execute if score @s Wpn.GeneralTimer matches 25 run playsound entity.firework_rocket.launch master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
         execute if score @s Wpn.GeneralTimer matches 25 run playsound entity.firework_rocket.launch master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     # アニメーション・引き絞り
-        execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/animation_0
-        execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/animation_1
+        execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/animation_0
+        execute if score @s Wpn.GeneralTimer matches 5 run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/animation_1
+        execute if score @s Wpn.GeneralTimer matches 7 run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/animation_2
+        execute if score @s Wpn.GeneralTimer matches 9 run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/animation_3
+        
+        execute if score @s Wpn.GeneralTimer matches 22 if score @s Wpn.Bw.Bottle.Targetting matches 3 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
+        execute if score @s Wpn.GeneralTimer matches 22 if score @s Wpn.Bw.Bottle.Targetting matches 3 run playsound item.crossbow.loading_end master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.2
+    
+        execute if score @s Wpn.GeneralTimer matches 21 if score @s Wpn.Bw.Bottle.Targetting matches 3 run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/animation_8
+        execute if score @s Wpn.GeneralTimer matches 23 if score @s Wpn.Bw.Bottle.Targetting matches 3 run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/animation_9
     # アニメーション・射撃
-        execute if score @s Wpn.GeneralTimer matches 25 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/animation_4
-        execute if score @s Wpn.GeneralTimer matches 26 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/animation_5
-        execute if score @s Wpn.GeneralTimer matches 27 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/animation_6
-        execute if score @s Wpn.GeneralTimer matches 29 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/animation_7
+        execute if score @s Wpn.GeneralTimer matches 25 run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/animation_4
+        execute if score @s Wpn.GeneralTimer matches 26 run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/animation_5
+        execute if score @s Wpn.GeneralTimer matches 27 run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/animation_6
+        execute if score @s Wpn.GeneralTimer matches 28 run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/animation_7
+
+# ロックオン
+    execute if score @s Wpn.AnimationTimer matches 10.. if score @s Wpn.GeneralTimer matches ..24 run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/target
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 25 positioned ~ ~1.65 ~ run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/attack

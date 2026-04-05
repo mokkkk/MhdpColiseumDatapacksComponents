@@ -30,6 +30,8 @@
         execute if entity @s[tag=Wpn.Bw.Normal.MovingShot] run function mhdp_items:weapons/bow/type_normal/11_moving_shot/main
 
 # 狩技：昇天煌弓・箭雨
+    # 開始：スニーク+Ctrl+右クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Normal.TargettingShot] run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/main
         execute if entity @s[tag=Wpn.Bw.Normal.JumpShot] run function mhdp_items:weapons/bow/type_normal/13_jump_shot/main

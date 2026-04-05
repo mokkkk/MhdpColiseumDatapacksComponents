@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/bow/type_normal/13_jump_shot/main
 
 # タグ消去
-    tag @s remove Wpn.Bw.Tec.JumpShot
+    tag @s remove Wpn.Bw.Normal.JumpShot
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0
