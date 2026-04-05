@@ -26,6 +26,8 @@
         execute if entity @s[tag=Wpn.Bw.Normal.Shot.Air] run function mhdp_items:weapons/bow/type_normal/14_air_shot/main
 
 # 狩技：身躱し射法
+    # 開始：スニーク+Ctrl+左クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max run function mhdp_items:weapons/bow/type_normal/11_moving_shot/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Normal.MovingShot] run function mhdp_items:weapons/bow/type_normal/11_moving_shot/main
 
