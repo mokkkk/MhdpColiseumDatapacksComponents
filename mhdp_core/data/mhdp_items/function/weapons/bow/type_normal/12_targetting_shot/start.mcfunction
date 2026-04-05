@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/bow/type_normal/12_targetting_shot/start
 #
-# 昇天煌弓・箭射 開始
+# 昇天煌弓・箭雨 開始
 #
 # @within function mhdp_items:weapons/bow/type_normal/1_charge/change_to_chargeattack
 
@@ -23,7 +23,7 @@
     particle end_rod ~ ~1.6 ~ 0.5 0.5 0.5 0.1 10
 
 # 操作表示
-    function mhdp_items:core/util/item_modify_custom_name {Name:"昇天煌弓・箭射"}
+    function mhdp_items:core/util/item_modify_custom_name {Name:"昇天煌弓・箭雨"}
 
 # ビンが無い場合、直接昇天煌弓に移行
     execute if score @s Wpn.Bw.Bottle.Count matches ..0 run tag @s add Wpn.Bw.Tec.JumpShot

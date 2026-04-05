@@ -1,11 +1,11 @@
 #> mhdp_items:weapons/bow/type_normal/12_targetting_shot/main
 #
-# 昇天煌弓・箭射 メイン処理
+# 昇天煌弓・箭雨 メイン処理
 #
 # @within function mhdp_items:weapons/bow/type_normal/main
 
 # 操作表示
-    # execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"昇天煌弓・箭射"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"昇天煌弓・箭雨"}
 
 # タイマー増加
     execute if score @s Wpn.GeneralTimer matches ..22 run scoreboard players add @s Wpn.GeneralTimer 1

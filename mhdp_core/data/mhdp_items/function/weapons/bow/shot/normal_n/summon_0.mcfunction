@@ -14,4 +14,8 @@
     data modify storage api: Arg.Override.IsTec set value false
     data modify storage api: Arg.Override.IsFlyingShot set value false
     data modify storage api: Arg.Override.Speed set value "A"
+    execute if score @s Wpn.Bw.Bottle.Count matches 1.. run function mhdp_items:weapons/bow/shot/apply_bottle_effect
     execute positioned ^ ^ ^ rotated ~ ~-0.5 run function api:object/summon.m {ObjectId:1}
+
+# 終了
+    execute if score @s Wpn.Bw.Bottle.Count matches 1.. run scoreboard players remove @s Wpn.Bw.Bottle.Count 1

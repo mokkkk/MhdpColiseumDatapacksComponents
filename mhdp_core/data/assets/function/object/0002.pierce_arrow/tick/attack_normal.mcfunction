@@ -26,6 +26,9 @@
 # 攻撃実行
     execute as @a[tag=2.TargetPlayer] if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
+# ゲージ上昇
+    execute as @a[tag=2.TargetPlayer] run scoreboard players add @s Wpn.Bw.Gauge 2
+
 # 終了
     scoreboard players reset #mhdp_temp_crit_min MhdpCore
     scoreboard players reset #mhdp_temp_crit_max MhdpCore

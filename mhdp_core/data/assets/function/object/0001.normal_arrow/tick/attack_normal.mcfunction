@@ -27,9 +27,15 @@
         execute if entity @s[tag=Temp.IsCrit] if score @s Wpn.Bw.ChargeCount matches 4.. run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.Bow.Normal.Shot.5.Crit
         # チュートリアル用処理
             execute if entity @s[tag=Temp.IsCrit] run tag @a[tag=1.TargetPlayer,tag=Ply.Temp.Tutorial.CritShot] remove Ply.Temp.Tutorial.CritShot
-    
+    # ビン補正
+        # 強撃ビン
+            execute if entity @s[tag=1.Bin.Strong] run function assets:object/0001.normal_arrow/tick/attack_bottle_strong
+
 # 攻撃実行
     execute as @a[tag=1.TargetPlayer] if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
+
+# ゲージ上昇
+    execute as @a[tag=1.TargetPlayer] run scoreboard players add @s Wpn.Bw.Gauge 4
 
 # 終了
     scoreboard players reset #mhdp_temp_crit_min MhdpCore

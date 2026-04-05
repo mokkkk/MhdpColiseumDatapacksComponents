@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/bow/type_tec/13_jump_shot/end
+#> mhdp_items:weapons/bow/type_normal/9_equip_bottle/end
 #
-# 昇天煌弓・箭雨 終了処理
+# 導ノ矢 終了処理
 #
-# @within function mhdp_items:weapons/bow/type_tec/13_jump_shot/main
+# @within function mhdp_items:weapons/bow/type_normal/9_equip_bottle/main
 
 # タグ消去
-    tag @s remove Wpn.Bw.Tec.JumpShot
+    tag @s remove Wpn.Bw.Normal.Equip
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0

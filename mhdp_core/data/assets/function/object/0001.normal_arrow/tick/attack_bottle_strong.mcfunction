@@ -1,4 +1,4 @@
-#> assets:object/0001.normal_arrow/tick/attack_tec_bottle_strong
+#> assets:object/0001.normal_arrow/tick/attack_bottle_strong
 #
 # 矢の処理
 #
