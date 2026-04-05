@@ -14,3 +14,9 @@
 
 # 1文字目表示
     $data modify entity @s text set value {"text":"0","font":"vfx/$(Tag)"}
+
+# 射撃VFXの場合、角度ランダム化
+    execute if entity @s[tag=shot] store result storage mhdp_core:temp Temp.Vfx.Rotation float 0.01 run random value 0..360
+    execute if entity @s[tag=shot] store result storage mhdp_core:temp Temp.Vfx.ScaleRandom double 0.01 run random value 80..150
+    execute if entity @s[tag=shot] run function assets:object/0007.attack_vfx/init/apply_random.m with storage mhdp_core:temp Temp.Vfx
+    data remove storage mhdp_core:temp Temp.Vfx
