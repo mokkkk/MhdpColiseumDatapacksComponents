@@ -7,10 +7,10 @@
 # 斬れ味(44px)
     function mhdp_items:player/ui/sharpness/main
 
-# 残り空欄(105px)
+# 残り空欄(104px)
     data modify storage mhdp_core:temp UI.Dummy set value {"text":"\uF900","font":"ui/weapon/space"}
 
-# UI作成(149px)
+# UI作成(148px)
     data modify storage mhdp_core:temp UI.Weapon set value [\
         {"interpret":true,"nbt":"UI.Sharpness","storage":"mhdp_core:temp"},\
         {"interpret":true,"nbt":"UI.Dummy","storage":"mhdp_core:temp"}\
