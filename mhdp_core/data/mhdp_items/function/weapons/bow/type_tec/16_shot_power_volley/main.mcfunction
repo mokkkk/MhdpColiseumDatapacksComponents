@@ -38,8 +38,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 8 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 8 run scoreboard players set $strength player_motion.api.launch 1000
-    execute if score @s Wpn.GeneralTimer matches 8 rotated ~180 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 8 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:false, IsAdjust:false}
 
 # スタミナ消費
     scoreboard players remove @s Ply.Stats.Stamina 2

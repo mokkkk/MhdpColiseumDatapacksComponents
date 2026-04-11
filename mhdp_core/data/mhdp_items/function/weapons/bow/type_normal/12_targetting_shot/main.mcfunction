@@ -60,8 +60,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 25 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 25 run scoreboard players set $strength player_motion.api.launch 8000
-    execute if score @s Wpn.GeneralTimer matches 25 rotated ~180 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 25 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:8000, IsForce:false, IsAdjust:false}
 
 # 昇天煌弓に遷移
     execute if score @s Wpn.GeneralTimer matches 36 run function mhdp_items:weapons/bow/type_normal/13_jump_shot/start

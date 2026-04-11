@@ -30,9 +30,8 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 1000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 6 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 6 run tp @s @s
 
 # 終了
     execute if entity @s[tag=Wpn.Bw.Normal.QuickShot] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/bow/type_normal/15_quick_shot/end

@@ -22,9 +22,6 @@
     execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/bow/type_tec/3_shot_max/animation_0
     execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/bow/type_tec/3_shot_max/animation_3
     execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/bow/type_tec/3_shot_max/animation_2
-    # execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/bow/type_tec/3_shot_max/particle
-    # execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/bow/type_tec/3_shot_max/particle
-    # execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/bow/type_tec/3_shot_max/particle
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 3 positioned ~ ~1.65 ~ run function mhdp_items:weapons/bow/type_tec/3_shot_max/attack
@@ -40,8 +37,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 1500
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:1500, IsForce:false, IsAdjust:false}
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 1..21 run function mhdp_items:core/buffering/a

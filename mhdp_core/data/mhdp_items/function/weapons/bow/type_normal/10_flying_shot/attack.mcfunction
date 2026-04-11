@@ -19,8 +19,7 @@
 
 # 移動
     tp @s @s
-    scoreboard players set $strength player_motion.api.launch 4000
-    execute rotated ~180 -60 run function player_motion:api/launch_looking
+    execute rotated ~180 -60 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:true, IsAdjust:false}
 
 # 終了
     tag @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Normal,tag=Start] remove Start
