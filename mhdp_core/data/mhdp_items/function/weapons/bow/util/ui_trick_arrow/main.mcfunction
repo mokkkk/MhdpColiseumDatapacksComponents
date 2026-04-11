@@ -13,11 +13,12 @@
     function mhdp_items:weapons/bow/util/ui_trick_arrow/append
 
 # UI作成
+# 20px + 20px + 20px - 70px
     data modify storage mhdp_core:temp UI.TrickArrow set value [\
         {"interpret":true,"nbt":"UI.TrickArrowArray[0]","storage":"mhdp_core:temp"},\
         {"interpret":true,"nbt":"UI.TrickArrowArray[1]","storage":"mhdp_core:temp"},\
         {"interpret":true,"nbt":"UI.TrickArrowArray[2]","storage":"mhdp_core:temp"},\
-        {"text":"\uF814","font":"space"},\
+        {"text":"\uF803","font":"ui/weapon/space"},\
         {"text":"#","font":"ui/weapon/bow/gauge"},\
         {"text":"\uF801","font":"space"}\
     ]

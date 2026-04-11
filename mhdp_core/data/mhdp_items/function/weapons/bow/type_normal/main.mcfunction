@@ -38,6 +38,13 @@
         execute if entity @s[tag=Wpn.Bw.Normal.TargettingShot] run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/main
         execute if entity @s[tag=Wpn.Bw.Normal.JumpShot] run function mhdp_items:weapons/bow/type_normal/13_jump_shot/main
 
+# クイックショット
+    # 通常
+        # 開始：立ち+左クリック
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_normal/15_quick_shot/start
+        # 処理
+            execute if entity @s[tag=Wpn.Bw.Normal.QuickShot] run function mhdp_items:weapons/bow/type_normal/15_quick_shot/main
+
 # 溜め
     # 通常
         # 開始：立ち+右クリック
