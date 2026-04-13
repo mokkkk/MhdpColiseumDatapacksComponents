@@ -1,0 +1,290 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "components": {
+                                "enchantment_glint_override": false,
+                                "minecraft:custom_data": "{IsMhdpWeapon:1b,Id:601,WeaponType:7,AttackDamage:100,Element:0,ElementDamage:0,Critical:0,Sharpness:[10,10,40,40,0,0,0],SharpnessMax:70,SharpnessMaxCraft:100,ModelOffset:0,SharpnessFont:uE003}",
+                                "minecraft:enchantments": {
+                                    "mhdp_core:item/weapon_leftclick": 1
+                                },
+                                "minecraft:item_model": "minecraft:weapons/lance/iron",
+                                "minecraft:item_name": {
+                                    "color": "aqua",
+                                    "italic": false,
+                                    "text": "パラディンランス"
+                                },
+                                "minecraft:lore": [
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "武器種：ランス"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "攻撃力：100"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "会心率：0%"
+                                    },
+                                    [
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "斬れ味：["
+                                        },
+                                        {
+                                            "color": "#FF0000",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FF0000",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFA200",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFA200",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#FFF700",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF802"
+                                        },
+                                        {
+                                            "color": "white",
+                                            "font": "default",
+                                            "text": "|"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "\uF801"
+                                        },
+                                        {
+                                            "color": "#11FF00",
+                                            "font": "items/mhdp_sharpness",
+                                            "text": "#"
+                                        },
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "]"
+                                        }
+                                    ],
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "扱いが難しい鉄製のランス。"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "ガード性能の高さと、突進時"
+                                    },
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "text": "のフィニッシュ技が特徴。"
+                                    },
+                                    {
+                                        "color": "dark_gray",
+                                        "italic": false,
+                                        "text": "--------------------"
+                                    }
+                                ],
+                                "minecraft:max_stack_size": 1,
+                                "minecraft:piercing_weapon": {
+                                    "deals_knockback": false,
+                                    "dismounts": false
+                                },
+                                "minecraft:swing_animation": {
+                                    "type": "none"
+                                },
+                                "minecraft:tooltip_display": {
+                                    "hidden_components": [
+                                        "minecraft:unbreakable"
+                                    ]
+                                },
+                                "minecraft:unbreakable": {},
+                                "minecraft:use_effects": {
+                                    "can_sprint": false,
+                                    "speed_multiplier": 1
+                                }
+                            },
+                            "conditions": [],
+                            "function": "minecraft:set_components"
+                        }
+                    ],
+                    "name": "ender_eye",
+                    "type": "minecraft:item"
+                }
+            ],
+            "rolls": 1
+        }
+    ],
+    "type": "minecraft:empty"
+}

@@ -37,7 +37,6 @@
     execute if score @s Wpn.GeneralTimer matches 13 run tag @s remove Ply.Weapon.NoMoveJump
 
 # 移動
-    # execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 1000
     execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
 
 # 先行入力

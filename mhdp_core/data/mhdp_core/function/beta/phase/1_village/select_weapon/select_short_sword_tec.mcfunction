@@ -16,10 +16,9 @@
     playsound ui.button.click master @s ~ ~ ~ 1 1
 
 # タグ付与
+    function mhdp_core:beta/phase/1_village/select_weapon/remove_tag
     tag @s add Beta.Ply.SelectedWeapon
     tag @s add Beta.Ply.Weapon.ShortSword
-    tag @s remove Beta.Ply.Weapon.GreatSword
-    tag @s remove Beta.Ply.Weapon.Bow
     tag @s add Ply.Weapon.Type.Tech
 
 # 訓練中の場合、訓練再開

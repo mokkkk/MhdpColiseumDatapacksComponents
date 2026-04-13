@@ -1,6 +1,6 @@
-#> mhdp_core:beta/phase/1_village/select_weapon/select_great_sword_normal
+#> mhdp_core:beta/phase/1_village/select_weapon/select_lance_tec
 #
-# 武器選択 大剣 地の型
+# 武器選択 ランス 天の型
 #
 # @within function mhdp_core:phase/1_village/change_phase/check
 
@@ -12,13 +12,14 @@
     execute if entity @s[tag=Ply.Temp.IsTraining.Keep] run function mhdp_core:phase/1_village/training_area/exit/player
 
 # 通知
-    tellraw @s {"text":"【大剣・地ノ型を選択した】","color": "light_purple"}
+    tellraw @s {"text":"【ランス・天ノ型を選択した】","color": "light_purple"}
     playsound ui.button.click master @s ~ ~ ~ 1 1
 
 # タグ付与
     function mhdp_core:beta/phase/1_village/select_weapon/remove_tag
     tag @s add Beta.Ply.SelectedWeapon
-    tag @s add Beta.Ply.Weapon.GreatSword
+    tag @s add Beta.Ply.Weapon.Lance
+    tag @s add Ply.Weapon.Type.Tech
 
 # 訓練中の場合、訓練再開
     execute if entity @s[tag=Ply.Temp.IsTraining.Keep] run function mhdp_core:phase/1_village/training_area/enter/check
