@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/short_sword/type_tec/3_spear_3/attack
+#> mhdp_items:weapons/short_sword/type_tec/5_sweep/attack_charge
 #
-# 突き3 攻撃判定
+# 薙ぎ払い 攻撃判定
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
 
@@ -18,7 +18,7 @@
     execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
 
 # 攻撃
-    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.Lance.Tec.Spear.2
+    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.Lance.Tec.Sweep.Charge.0
     execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了

@@ -39,5 +39,13 @@
         # 処理
             execute if entity @s[tag=Wpn.Lc.Tec.Spear.3] run function mhdp_items:weapons/lance/type_tec/3_spear_3/main
 
+# 溜め薙ぎ払い
+    # 開始：右クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/lance/type_tec/4_charge/start
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.Charge] run function mhdp_items:weapons/lance/type_tec/4_charge/main
+        execute if entity @s[tag=Wpn.Lc.Tec.Sweep] run function mhdp_items:weapons/lance/type_tec/5_sweep/main
+        execute if entity @s[tag=Wpn.Lc.Tec.Sweep.Charge] run function mhdp_items:weapons/lance/type_tec/5_sweep/main_charge
+
 # 終了
     tag @s remove Ply.Weapon.NoOpe
