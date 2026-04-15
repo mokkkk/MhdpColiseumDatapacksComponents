@@ -32,6 +32,10 @@
         # 処理
             execute if entity @s[tag=Wpn.Lc.Tec.Spear.3] run function mhdp_items:weapons/lance/type_tec/3_spear_3/main
 
+# 飛び込み突き
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.DashSpear] run function mhdp_items:weapons/lance/type_tec/8_dash_spear/main
+
 # 溜め薙ぎ払い
     # 開始：右クリック
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/lance/type_tec/4_charge/start
