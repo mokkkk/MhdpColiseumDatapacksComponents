@@ -41,12 +41,18 @@
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartLeftClick,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..21 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..21 run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..21 run function mhdp_items:core/buffering/c
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..21 run function mhdp_items:core/buffering/jump
     execute if score @s Wpn.GeneralTimer matches 3..21 run function mhdp_items:core/buffering/arts_main
 
 # 遷移
      # 左クリック：突き3に移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/3_spear_3/start
+     # 右クリック：溜めに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/4_charge/start
+     # スニーク+ジャンプ：ガードダッシュに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.C] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/util/move_jump
 

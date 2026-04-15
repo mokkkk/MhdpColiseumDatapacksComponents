@@ -19,13 +19,6 @@
 
 # 狩技：
 
-# ガード
-    # # 開始：右クリック短押し
-    #         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/lance/type_tec/24_guard/start
-    # # 処理
-    #     execute if entity @s[tag=Wpn.Ss.Tec.Guard] run function mhdp_items:weapons/lance/type_tec/24_guard/main
-    #     execute if entity @s[tag=Wpn.Ss.Tec.Guard.Just] run function mhdp_items:weapons/lance/type_tec/24_guard/main_just
-
 # 突き
     # 1段目
         # 開始：右クリック短押し
@@ -46,6 +39,17 @@
         execute if entity @s[tag=Wpn.Lc.Tec.Charge] run function mhdp_items:weapons/lance/type_tec/4_charge/main
         execute if entity @s[tag=Wpn.Lc.Tec.Sweep] run function mhdp_items:weapons/lance/type_tec/5_sweep/main
         execute if entity @s[tag=Wpn.Lc.Tec.Sweep.Charge] run function mhdp_items:weapons/lance/type_tec/5_sweep/main_charge
+
+# ガード
+    # 開始：スニーク
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/lance/type_tec/6_guard/start
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.Guard] run function mhdp_items:weapons/lance/type_tec/6_guard/main
+        execute if entity @s[tag=Wpn.Lc.Tec.Guard.Just] run function mhdp_items:weapons/lance/type_tec/6_guard/main_just
+
+# ガードダッシュ
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.GuardDash] run function mhdp_items:weapons/lance/type_tec/7_guard_dash/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

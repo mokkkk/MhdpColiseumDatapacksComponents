@@ -15,7 +15,7 @@
     tag @s remove Ply.Weapon.Equip.Lance
 
 # 専用スコア消去
-    # scoreboard players reset @s Wpn.Gs.ChargeTimer
+    scoreboard players reset @s Wpn.Lc.SpearCount
 
 # ステータス削除
     attribute @s attack_speed modifier remove mhdp_core:weapon_attack

@@ -10,3 +10,6 @@
 # タグ付与
     tag @s add Wpn.Lc.Tec.Spear.1
     tag @s remove Ply.Weapon.NoOpe
+
+# 突き段階設定
+    scoreboard players set @s Wpn.Lc.SpearCount 0

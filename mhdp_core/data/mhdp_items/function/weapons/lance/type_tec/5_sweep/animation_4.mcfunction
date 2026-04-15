@@ -6,4 +6,4 @@
 
 # アニメーション
     function api:weapon/animation.m {Slot:"mainhand", Cmd:"sweep_attack_1"}
-    function api:weapon/animation.m {Slot:"offhand", Cmd:"empty"}
+    function api:weapon/animation.m {Slot:"offhand", Cmd:"spear_sub_2"}

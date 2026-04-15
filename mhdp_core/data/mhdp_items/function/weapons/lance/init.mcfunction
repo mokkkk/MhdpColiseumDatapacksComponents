@@ -8,5 +8,12 @@
     data modify storage mhdp_core:game_data WeaponAttackData.Lance set value {}
 
 # 天の型
+    data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.DirectAttack set value {AttackType:Cut,DamageMult:20,PartDamageMult:100,ElementDamageMult:60,StunValue:0,TireValue:10,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxType:slash,VfxRotation:-0.02,IsVfxStrong:false,VfxScale:[3f,4f,3f],VfxRandom:0}
+    data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.Spear.1 set value {AttackType:Cut,DamageMult:10,PartDamageMult:100,ElementDamageMult:100,StunValue:0,TireValue:100,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxType:shot,VfxRotation:-0.05,IsVfxStrong:false,VfxScale:[3f,7f,3f],VfxRandom:0}
+    data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.Spear.2 set value {AttackType:Cut,DamageMult:12,PartDamageMult:100,ElementDamageMult:130,StunValue:0,TireValue:120,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxType:shot,VfxRotation:-0.05,IsVfxStrong:false,VfxScale:[3f,7f,3f],VfxRandom:0}
+    data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.Spear.3 set value {AttackType:Cut,DamageMult:15,PartDamageMult:100,ElementDamageMult:150,StunValue:0,TireValue:150,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxType:shot,VfxRotation:-0.05,IsVfxStrong:false,VfxScale:[3f,7f,3f],VfxRandom:0}
+    data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.Sweep set value {AttackType:Cut,DamageMult:15,PartDamageMult:100,ElementDamageMult:150,StunValue:0,TireValue:150,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxType:slash,VfxRotation:2.03,IsVfxStrong:false,VfxScale:[6f,8f,6f],VfxRandom:0}
+    data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.Sweep.Charge.0 set value {AttackType:Cut,DamageMult:15,PartDamageMult:100,ElementDamageMult:150,StunValue:0,TireValue:150,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxType:slash_strong,VfxRotation:2.03,IsVfxStrong:false,VfxScale:[6f,8f,6f],VfxRandom:0}
+    data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.Sweep.Charge.1 set value {AttackType:Cut,DamageMult:15,PartDamageMult:100,ElementDamageMult:150,StunValue:0,TireValue:150,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:true,IsShowVfx:false,VfxType:slash,VfxRotation:-0.05,IsVfxStrong:false,VfxScale:[5f,5f,5f],VfxRandom:0}
 
 # 地の型

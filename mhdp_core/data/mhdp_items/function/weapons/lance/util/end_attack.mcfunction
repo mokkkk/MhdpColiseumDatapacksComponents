@@ -21,7 +21,9 @@
 
 # attributeリセット
     function mhdp_items:weapons/lance/util/set_status
-    # effect clear @s slowness
+
+# スコアリセット
+    scoreboard players reset @s Wpn.Lc.SpearCount
 
 # 先行入力解除
     function mhdp_items:core/buffering/reset
