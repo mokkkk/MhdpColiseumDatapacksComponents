@@ -16,12 +16,11 @@
     execute if score @s Wpn.AnimationTimer matches 1 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 0.4 0.1 0.4 0 10
     execute if score @s Wpn.AnimationTimer matches 9 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/lance/type_tec/8_dash_spear/animation_0
-    execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/lance/type_tec/8_dash_spear/animation_1
+    execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/lance/type_tec/8_dash_spear/animation_1
     execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/lance/type_tec/8_dash_spear/animation_2
     execute if score @s Wpn.AnimationTimer matches 9 run function mhdp_items:weapons/lance/type_tec/8_dash_spear/animation_3
     execute if score @s Wpn.AnimationTimer matches 11 run function mhdp_items:weapons/lance/type_tec/8_dash_spear/animation_4
     execute if score @s Wpn.AnimationTimer matches 13 run function mhdp_items:weapons/lance/type_tec/8_dash_spear/animation_5
-    execute if score @s Wpn.AnimationTimer matches 15 run function mhdp_items:weapons/lance/type_tec/8_dash_spear/animation_6
     # execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/lance/type_tec/8_dash_spear/particle
     # execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/lance/type_tec/8_dash_spear/particle
     # execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/lance/type_tec/8_dash_spear/particle

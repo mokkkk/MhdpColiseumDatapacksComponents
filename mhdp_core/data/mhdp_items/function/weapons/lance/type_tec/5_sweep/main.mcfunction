@@ -45,11 +45,11 @@
 
 # 遷移
      # 左クリック：突きに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/5_sweep/change_to_spear
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/lance/type_tec/5_sweep/change_to_spear
      # スニーク+ジャンプ：ガードダッシュに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/start
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/start
     # ジャンプ回避
-        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/util/move_jump
+        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/lance/util/move_jump
 
 # 狩技遷移
     # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/lance/type_tec/31_blade_dance/start

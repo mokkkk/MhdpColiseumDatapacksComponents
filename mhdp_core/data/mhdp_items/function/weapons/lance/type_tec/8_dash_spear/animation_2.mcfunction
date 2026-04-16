@@ -6,5 +6,5 @@
 
 # アニメーション
     function api:weapon/animation.m {Slot:"mainhand", Cmd:"spear_0"}
-    function api:weapon/animation.m {Slot:"offhand", Cmd:"guard_dash_sub_0"}
+    function api:weapon/animation.m {Slot:"offhand", Cmd:"spear_sub_0"}
 

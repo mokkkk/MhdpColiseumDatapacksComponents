@@ -32,6 +32,10 @@
         # 処理
             execute if entity @s[tag=Wpn.Lc.Tec.Spear.3] run function mhdp_items:weapons/lance/type_tec/3_spear_3/main
 
+# 3連突き
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.TripleSpear] run function mhdp_items:weapons/lance/type_tec/9_triple_spear/main
+
 # 飛び込み突き
     # 処理
         execute if entity @s[tag=Wpn.Lc.Tec.DashSpear] run function mhdp_items:weapons/lance/type_tec/8_dash_spear/main
