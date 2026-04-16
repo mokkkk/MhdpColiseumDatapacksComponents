@@ -4,4 +4,5 @@
 #
 # @within function mhdp_items:core/switch/macro/m.on_damage
 
-# 処理なし
+# ステータスリセット
+    function mhdp_items:weapons/lance/util/set_status

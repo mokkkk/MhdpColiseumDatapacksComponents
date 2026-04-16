@@ -29,3 +29,6 @@
         execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function api:weapon/draw.m {Slot:"mainhand", Cmd:"drawing"}
     # オフハンド
         execute if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b,IsDrawing:1b}] run function api:weapon/draw_sub.m {Slot:"offhand", Cmd:"drawing_sub"}
+
+# 抜刀中はステータスをリセットする
+    execute if entity @s[tag=Ply.Weapon.Drawing] run function mhdp_items:weapons/short_sword/util/set_status

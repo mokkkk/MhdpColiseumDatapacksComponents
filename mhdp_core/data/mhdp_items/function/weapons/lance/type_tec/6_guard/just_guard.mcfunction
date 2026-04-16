@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/short_sword/type_tec/24_guard/just_guard
+#> mhdp_items:weapons/lance/type_tec/6_guard/just_guard
 #
 # ガード ジャストガード成功
 #
@@ -18,13 +18,13 @@
     scoreboard players operation #mhdp_temp_damage_reduction MhdpCore /= #const_2 Const
 
 # 後ずさる
-    execute rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:10000, IsForce:false, IsAdjust:false}
+    execute at @s rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:10000, IsForce:false, IsAdjust:false}
 
 # ジャストガードに移行
     # 前処理
         function mhdp_items:weapons/short_sword/util/before_attack
     # タグ付与
-        tag @s remove Wpn.Ss.Tec.Guard
-        tag @s add Wpn.Ss.Tec.Guard.Just
+        tag @s remove Wpn.Lc.Tec.Guard
+        tag @s add Wpn.Lc.Tec.Guard.Just
     # タイマー初期化
         scoreboard players set @s Wpn.GeneralTimer 0

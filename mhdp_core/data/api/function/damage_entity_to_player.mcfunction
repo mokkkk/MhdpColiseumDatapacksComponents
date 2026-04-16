@@ -30,11 +30,11 @@
 # ガード判定
     execute if entity @s[tag=Ply.Weapon.Guard] run function api:damage_entity_to_player/guard
 
-# 武器の被ダメージ時処理呼び出し
-    execute if entity @s[tag=!Ply.Weapon.Guard] run function mhdp_items:core/switch/weapon_on_damage
-
 # ノックバック
     function api:damage_entity_to_player/knockback
+
+# 武器の被ダメージ時処理呼び出し
+    execute if entity @s[tag=!Ply.Weapon.Guard] run function mhdp_items:core/switch/weapon_on_damage
 
 # ダメージ軽減率適用
     scoreboard players operation #mhdp_temp_damage_total MhdpCore *= #mhdp_temp_damage_reduction MhdpCore

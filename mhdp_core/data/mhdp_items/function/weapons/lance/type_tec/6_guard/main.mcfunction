@@ -25,7 +25,7 @@
     # execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/30_upper_bash/start
 
 # 遷移  
-    # ジャンプ：バックステップに移行
+    # ジャンプ：ガードダッシュに移行
         execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 3.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/6_guard/change_to_guard_dash
     # 右クリック：溜めカウンターに移行
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 3.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/6_guard/change_to_charge_counter

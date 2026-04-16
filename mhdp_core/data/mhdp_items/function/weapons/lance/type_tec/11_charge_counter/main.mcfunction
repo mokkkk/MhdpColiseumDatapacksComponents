@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/lance/type_tec/11_charge_counter/main
 #
-# 薙ぎ払い メイン処理
+# 溜めカウンター メイン処理
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 

@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/short_sword/type_tec/24_guard/end_just
+#> mhdp_items:weapons/lance/type_tec/6_guard/end_just
 #
 # ガード 終了処理
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/24_guard/main
 
 # タグ消去
-    tag @s remove Wpn.Ss.Tec.Guard.Just
+    tag @s remove Wpn.Lc.Tec.Guard.Just
     tag @s remove Ply.Weapon.StaminaNotRegen
     tag @s remove Ply.Weapon.Guard
 
@@ -17,4 +17,4 @@
     playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 共通処理
-    function mhdp_items:weapons/short_sword/util/end_attack
+    function mhdp_items:weapons/lance/util/end_attack

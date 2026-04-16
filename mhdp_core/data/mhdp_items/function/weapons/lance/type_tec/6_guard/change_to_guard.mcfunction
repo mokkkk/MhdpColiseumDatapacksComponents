@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_backstep
+#> mhdp_items:weapons/lance/type_tec/6_guard/change_to_backstep
 #
 # ジャストガード → ガード
 #
@@ -8,4 +8,4 @@
     tag @s remove Wpn.Ss.Tec.Guard.Just
     
 # 対象の処理を実行
-    function mhdp_items:weapons/short_sword/type_tec/24_guard/start
+    function mhdp_items:weapons/lance/type_tec/6_guard/start_from_guard_dash

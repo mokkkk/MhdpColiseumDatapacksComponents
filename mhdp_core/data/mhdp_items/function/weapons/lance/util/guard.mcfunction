@@ -6,6 +6,8 @@
 
 # 斬れ味消費なし
 
-# 天の型時、ジャストガード判定
-    # execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Lc.Tec.Guard] if score @s Wpn.GeneralTimer matches ..4 run function mhdp_items:weapons/lance/type_tec/24_guard/just_guard
-    # execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Lc.Tec.GuardSlash] if score @s Wpn.GeneralTimer matches ..3 run function mhdp_items:weapons/lance/type_tec/24_guard/just_guard
+# ジャストガード判定
+    execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Lc.Tec.Guard] if score @s Wpn.GeneralTimer matches ..4 run function mhdp_items:weapons/lance/type_tec/6_guard/just_guard
+
+# 溜めカウンター
+    execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Lc.Tec.ChargeCounter] run function mhdp_items:weapons/lance/type_tec/11_charge_counter/guard

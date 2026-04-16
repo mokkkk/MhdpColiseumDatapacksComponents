@@ -53,6 +53,8 @@
         execute if entity @s[tag=Wpn.Lc.Tec.ChargeCounter] run function mhdp_items:weapons/lance/type_tec/11_charge_counter/main
     # カウンター突き
         execute if entity @s[tag=Wpn.Lc.Tec.CounterSpear] run function mhdp_items:weapons/lance/type_tec/12_counter_spear/main
+    # 自動カウンター
+        execute if entity @s[tag=Wpn.Lc.Tec.AutoCounter] run function mhdp_items:weapons/lance/type_tec/13_auto_counter/main
 
 # ガード
     # 開始：スニーク

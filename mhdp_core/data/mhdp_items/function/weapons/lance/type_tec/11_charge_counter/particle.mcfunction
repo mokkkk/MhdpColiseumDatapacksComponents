@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/lance/type_tec/5_sweep/particle
 #
-# 薙ぎ払い 演出
+# 溜めカウンター 演出
 #
 # @within function mhdp_items:weapons/lance/type_tec/5_sweep/main
 
