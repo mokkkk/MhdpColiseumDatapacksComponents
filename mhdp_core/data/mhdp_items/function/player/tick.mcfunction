@@ -39,5 +39,4 @@
 # アイテム関連処理
     function mhdp_items:player/item/tick
 
-
 # 終了

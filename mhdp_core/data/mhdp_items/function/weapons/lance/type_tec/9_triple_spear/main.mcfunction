@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"3連突き"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"３連突き"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -36,9 +36,9 @@
     # execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/lance/type_tec/9_triple_spear/particle
 
 # 攻撃
-    execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/lance/type_tec/9_triple_spear/attack
-    execute if score @s Wpn.GeneralTimer matches 12 run function mhdp_items:weapons/lance/type_tec/9_triple_spear/attack
-    execute if score @s Wpn.GeneralTimer matches 22 run function mhdp_items:weapons/lance/type_tec/9_triple_spear/attack
+    execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/lance/type_tec/9_triple_spear/attack_0
+    execute if score @s Wpn.GeneralTimer matches 12 run function mhdp_items:weapons/lance/type_tec/9_triple_spear/attack_1
+    execute if score @s Wpn.GeneralTimer matches 22 run function mhdp_items:weapons/lance/type_tec/9_triple_spear/attack_2
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
@@ -62,8 +62,8 @@
 # 遷移
     # スニーク+ジャンプ：ガードダッシュに移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 36.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/start
-    # ジャンプ回避
-        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 36.. run function mhdp_items:weapons/lance/util/move_jump
+    # ジャンプ：ステップに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 36.. run function mhdp_items:weapons/lance/type_tec/10_step/start
 
 # 狩技遷移
     # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 7.. run function mhdp_items:weapons/lance/type_tec/31_blade_dance/start

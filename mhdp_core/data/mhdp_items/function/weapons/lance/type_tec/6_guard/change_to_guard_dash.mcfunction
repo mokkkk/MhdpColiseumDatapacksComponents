@@ -6,6 +6,7 @@
 
 # タグ消去
     tag @s remove Ply.Weapon.StaminaNotRegen
+    tag @s remove Wpn.Ss.Tec.Guard.Just
     tag @s remove Ply.Weapon.Guard
     
 # 対象の処理を実行

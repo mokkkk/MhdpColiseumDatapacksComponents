@@ -48,6 +48,12 @@
         execute if entity @s[tag=Wpn.Lc.Tec.Sweep] run function mhdp_items:weapons/lance/type_tec/5_sweep/main
         execute if entity @s[tag=Wpn.Lc.Tec.Sweep.Charge] run function mhdp_items:weapons/lance/type_tec/5_sweep/main_charge
 
+# 溜めカウンター
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.ChargeCounter] run function mhdp_items:weapons/lance/type_tec/11_charge_counter/main
+    # カウンター突き
+        execute if entity @s[tag=Wpn.Lc.Tec.CounterSpear] run function mhdp_items:weapons/lance/type_tec/12_counter_spear/main
+
 # ガード
     # 開始：スニーク
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/lance/type_tec/6_guard/start
@@ -58,6 +64,12 @@
 # ガードダッシュ
     # 処理
         execute if entity @s[tag=Wpn.Lc.Tec.GuardDash] run function mhdp_items:weapons/lance/type_tec/7_guard_dash/main
+
+# ステップ
+    # 開始：ジャンプ
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartKeyJump,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/lance/type_tec/10_step/start_noope
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.Step] run function mhdp_items:weapons/lance/type_tec/10_step/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe
