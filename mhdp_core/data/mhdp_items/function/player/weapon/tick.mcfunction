@@ -27,8 +27,12 @@
 
 # ジャンプ関連処理
     # ベクトルジャンプ
-        execute if score @s Ply.Timer.VectorJumpCoolTime matches 1.. run function mhdp_items:player/weapon/move_jump/tick
-        execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting,tag=Ply.Weapon.Drawing,tag=!Ply.Weapon.NoAvoid,tag=!Ply.Ope.IsAir,tag=!Ply.Weapon.StaminaEmpty,tag=!Ply.Weapon.NoMoveJump] unless score @s Wpn.DeactivateTimer matches 1.. unless score @s Ply.Timer.VectorJumpCoolTime matches 1.. if score @s Ply.Timer.ClimbBuild matches ..0 run function mhdp_items:player/weapon/move_jump/main
+        # tick処理
+            execute if score @s Ply.Timer.VectorJumpCoolTime matches 1.. run function mhdp_items:player/weapon/move_jump/tick
+        # 段差飛び降り判定
+            execute if score @s Ply.Timer.JumpOffCheckTime matches 1.. run function mhdp_items:player/weapon/move_jump/check_jump_off.m with storage mhdp_core:temp PlayerData.VectorMove
+        # ジャンプ実行
+            execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsSprinting,tag=Ply.Weapon.Drawing,tag=!Ply.Weapon.NoAvoid,tag=!Ply.Ope.IsAir,tag=!Ply.Weapon.StaminaEmpty,tag=!Ply.Weapon.NoMoveJump] unless score @s Wpn.DeactivateTimer matches 1.. unless score @s Ply.Timer.VectorJumpCoolTime matches 1.. if score @s Ply.Timer.ClimbBuild matches ..0 run function mhdp_items:player/weapon/move_jump/main
     # ダッシュジャンプ時、ジャンプ回避
         execute if entity @s[tag=Ply.Ope.IsSprinting,tag=Ply.Ope.StartKeyJump] run function mhdp_items:player/jump_avoid/main
 

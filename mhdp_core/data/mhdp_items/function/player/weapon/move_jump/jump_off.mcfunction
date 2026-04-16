@@ -15,5 +15,6 @@
 # 移動ジャンプ終了
     scoreboard players set @s Wpn.DeactivateTimer 0
     scoreboard players set @s Ply.Timer.VectorJumpCoolTime 0
+    scoreboard players set @s Ply.Timer.JumpOffCheckTime 0
     attribute @s movement_speed modifier remove mhdp_core:movejump_movement_speed
     attribute @s jump_strength modifier remove mhdp_core:movejump_jump_strength

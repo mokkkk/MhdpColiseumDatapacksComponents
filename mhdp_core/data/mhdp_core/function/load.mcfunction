@@ -49,6 +49,8 @@
     # 処理用タイマー
         # ベクトルジャンプクールタイム
             scoreboard objectives add Ply.Timer.VectorJumpCoolTime dummy
+        # 段差飛び降り判定時間
+            scoreboard objectives add Ply.Timer.JumpOffCheckTime dummy
         # 無敵時間
             scoreboard objectives add Ply.Timer.DamageInterval dummy
         # 回避時間
