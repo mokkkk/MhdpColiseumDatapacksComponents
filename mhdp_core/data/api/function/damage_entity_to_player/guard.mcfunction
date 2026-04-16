@@ -30,6 +30,9 @@
     # スタミナが足りない場合
         execute if score @s Ply.Stats.Stamina < #mhdp_temp_guard_stamina MhdpCore run tag @s remove Ply.Weapon.Guard
 
+# デバッグ
+    # scoreboard players set #mhdp_temp_guard_value MhdpCore 4
+
 # ガード成功時
     # ノックバックの値を上書き
         execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches ..2 if score #mhdp_temp_knockback_strength MhdpCore matches 1.. run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 2

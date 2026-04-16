@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/short_sword/type_tec/12_counter_spear/attack
+#> mhdp_items:weapons/short_sword/type_tec/14_counter_double_spear/attack
 #
 # カウンター突き 攻撃判定
 #
@@ -18,7 +18,7 @@
     execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
 
 # 攻撃
-    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.Lance.Tec.CounterSpear
+    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.Lance.Tec.CounterDoubleSpear.1
     execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了
