@@ -15,5 +15,8 @@
 # 溜めカウンター
     execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Lc.Tec.ChargeCounter] run function mhdp_items:weapons/lance/type_tec/11_charge_counter/guard
 
+# パワーガード
+    execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Lc.Tec.PowerGuard] run function mhdp_items:weapons/lance/type_tec/15_power_guard/guard
+
 # カウンター突き・ジャスト判定
     execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Lc.Tec.CounterSpear] if score @s Wpn.GeneralTimer matches ..4 run function mhdp_items:weapons/lance/type_tec/12_counter_spear/guard

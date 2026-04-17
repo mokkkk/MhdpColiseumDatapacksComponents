@@ -69,6 +69,14 @@
     # 処理
         execute if entity @s[tag=Wpn.Lc.Tec.GuardDash] run function mhdp_items:weapons/lance/type_tec/7_guard_dash/main
 
+# パワーガード
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.PowerGuard] run function mhdp_items:weapons/lance/type_tec/15_power_guard/main
+
+# 渾身返し突き
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.PowerCounter] run function mhdp_items:weapons/lance/type_tec/16_power_counter/main
+
 # ステップ
     # 開始：ジャンプ
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartKeyJump,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/lance/type_tec/10_step/start_noope

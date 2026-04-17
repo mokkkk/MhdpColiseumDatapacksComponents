@@ -41,6 +41,8 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 遷移
+    # ジャンプ：パワーガードに移行
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsKeyJump] if score @s Wpn.GeneralTimer matches 1..149 run function mhdp_items:weapons/lance/type_tec/11_charge_counter/change_to_power_guard
     # 右クリック解除 or 強制：カウンター突きに移行
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..149 run function mhdp_items:weapons/lance/type_tec/12_counter_spear/start
         execute if score @s Wpn.GeneralTimer matches 150.. run function mhdp_items:weapons/lance/type_tec/12_counter_spear/start

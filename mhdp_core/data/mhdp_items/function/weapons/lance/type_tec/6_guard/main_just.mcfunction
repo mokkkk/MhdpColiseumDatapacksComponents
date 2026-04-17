@@ -28,12 +28,13 @@
     # execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/start
 
 # 遷移
-    # # 右クリック：カウンター斬りに移行
-    #     execute if entity @s[tag=Wpn.Ss.Tec.Guard.Just,tag=Ply.Ope.StartUsingWeapon] run function mhdp_items:weapons/lance/type_tec/6_guard/change_to_counter
+    # 左右クリック：渾身返し突きに移行
+        execute if entity @s[tag=Wpn.Lc.Tec.Guard.Just,tag=Ply.Ope.StartLeftClick] run function mhdp_items:weapons/lance/type_tec/6_guard/change_to_counter
+        execute if entity @s[tag=Wpn.Lc.Tec.Guard.Just,tag=Ply.Ope.StartUsingWeapon] run function mhdp_items:weapons/lance/type_tec/6_guard/change_to_counter
     # スニーク：ガードに移行
         execute if entity @s[tag=Wpn.Lc.Tec.Guard.Just,tag=Ply.Ope.StartSneak] run function mhdp_items:weapons/lance/type_tec/6_guard/change_to_guard
-    # # ジャンプ回避
-    #     execute if entity @s[tag=Wpn.Ss.Tec.Guard.Just,tag=Ply.Ope.Buffering.Jump] run function mhdp_items:weapons/short_sword/util/move_jump
+    # ステップ
+        execute if entity @s[tag=Wpn.Lc.Tec.Guard.Just,tag=Ply.Ope.Buffering.Jump] run function mhdp_items:weapons/lance/type_tec/10_step/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/lance/type_tec/6_guard/end_just
