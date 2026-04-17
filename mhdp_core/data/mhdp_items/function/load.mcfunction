@@ -74,6 +74,10 @@
     # ランス
         # 突き段階
             scoreboard objectives add Wpn.Lc.SpearCount dummy
+        # 溜め時間
+            scoreboard objectives add Wpn.Lc.ChargeTimer dummy
+        # 溜め段階
+            scoreboard objectives add Wpn.Lc.ChargeCount dummy
     # 弓
         # 溜め時間
             scoreboard objectives add Wpn.Bw.ChargeTimer dummy

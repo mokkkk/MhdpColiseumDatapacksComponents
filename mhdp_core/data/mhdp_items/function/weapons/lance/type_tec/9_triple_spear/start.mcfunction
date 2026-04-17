@@ -12,4 +12,4 @@
     tag @s remove Ply.Weapon.NoOpe
 
 # 突き段階設定
-    scoreboard players set @s Wpn.Lc.SpearCount 2
+    scoreboard players set @s Wpn.Lc.SpearCount 0

@@ -29,14 +29,21 @@
     # execute if score @s Wpn.GeneralTimer matches 20 run playsound entity.experience_orb.pickup master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
     # execute if score @s Wpn.GeneralTimer matches 20 positioned ~ ~1.65 ~ run particle flash{color:[1.000,1.000,1.000,1.00]} ^ ^ ^0.5 0 0 0 0 1
 
+# 溜め
+    execute if entity @s[tag=!Skill.Stamina.ShortCharge.1,tag=!Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Lc.ChargeTimer 5
+    execute if entity @s[tag=Skill.Stamina.ShortCharge.1] run scoreboard players add @s Wpn.Lc.ChargeTimer 6
+    execute if entity @s[tag=Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Lc.ChargeTimer 7
+    execute if score @s Wpn.Lc.ChargeTimer matches 300.. if score @s Wpn.Lc.ChargeCount matches ..0 run function mhdp_items:weapons/lance/type_tec/11_charge_counter/up_charge_count
+    execute if score @s Wpn.Lc.ChargeTimer matches 600.. if score @s Wpn.Lc.ChargeCount matches ..1 run function mhdp_items:weapons/lance/type_tec/11_charge_counter/up_charge_count
+
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 遷移
     # 右クリック解除 or 強制：カウンター突きに移行
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..144 run function mhdp_items:weapons/lance/type_tec/12_counter_spear/start
-        execute if score @s Wpn.GeneralTimer matches 155.. run function mhdp_items:weapons/lance/type_tec/12_counter_spear/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..149 run function mhdp_items:weapons/lance/type_tec/12_counter_spear/start
+        execute if score @s Wpn.GeneralTimer matches 150.. run function mhdp_items:weapons/lance/type_tec/12_counter_spear/start
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 160.. run function mhdp_items:weapons/lance/type_tec/11_charge_counter/end
+    execute if score @s Wpn.GeneralTimer matches 151.. run function mhdp_items:weapons/lance/type_tec/11_charge_counter/end
