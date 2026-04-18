@@ -7,6 +7,7 @@
 # タグ消去
     tag @s remove Wpn.Ls.Tec.Guard
     tag @s remove Ply.Weapon.Guard
+    tag @s remove Ply.Weapon.StaminaNotRegen
     
 # 対象の処理を実行
     function mhdp_items:weapons/lance/type_tec/1_spear_1/start

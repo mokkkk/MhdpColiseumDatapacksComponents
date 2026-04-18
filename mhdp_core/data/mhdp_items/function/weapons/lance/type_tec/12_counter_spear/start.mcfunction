@@ -10,3 +10,4 @@
 # タグ付与
     tag @s add Wpn.Lc.Tec.CounterSpear
     tag @s remove Ply.Weapon.NoOpe
+    tag @s remove Ply.Weapon.StaminaNotRegen
