@@ -25,7 +25,7 @@
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 2 run function mhdp_items:weapons/lance/type_tec/5_sweep/attack_charge
-    execute if score @s Wpn.GeneralTimer matches 6 run function mhdp_items:weapons/lance/type_tec/5_sweep/attack_charge_pursuit
+    execute if score @s Wpn.GeneralTimer matches 5 run function mhdp_items:weapons/lance/type_tec/5_sweep/attack_charge_pursuit
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:false, IsAdjust:false}

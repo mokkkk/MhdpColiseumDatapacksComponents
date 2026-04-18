@@ -73,6 +73,10 @@
     # 処理
         execute if entity @s[tag=Wpn.Lc.Tec.PowerGuard] run function mhdp_items:weapons/lance/type_tec/15_power_guard/main
 
+# 大返し突き
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.HighCounter] run function mhdp_items:weapons/lance/type_tec/17_high_counter/main
+
 # 渾身返し突き
     # 処理
         execute if entity @s[tag=Wpn.Lc.Tec.PowerCounter] run function mhdp_items:weapons/lance/type_tec/16_power_counter/main

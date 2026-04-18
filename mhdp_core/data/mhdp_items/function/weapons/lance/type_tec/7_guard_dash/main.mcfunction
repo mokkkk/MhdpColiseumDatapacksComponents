@@ -32,11 +32,14 @@
     # execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/30_upper_bash/start
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/b
 
 # 遷移
+    # 左クリック：突き1に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 13.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/change_to_spear
     # 右クリック：飛び込み突きに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 13.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/change_to_dash_spear
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 13.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/change_to_dash_spear
     # スニーク：ガードに移行
         execute if entity @s[tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 15.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/change_to_guard
 

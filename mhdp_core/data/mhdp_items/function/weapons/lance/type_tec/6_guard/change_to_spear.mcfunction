@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/lance/type_tec/6_guard/change_to_counter
+#> mhdp_items:weapons/lance/type_tec/6_guard/change_to_spear
 #
 # ジャストガード → ガード
 #
@@ -10,4 +10,4 @@
     tag @s remove Ply.Weapon.Guard
     
 # 対象の処理を実行
-    function mhdp_items:weapons/lance/type_tec/17_high_counter/start
+    function mhdp_items:weapons/lance/type_tec/1_spear_1/start
