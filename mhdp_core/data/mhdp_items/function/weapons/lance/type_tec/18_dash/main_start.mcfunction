@@ -13,7 +13,7 @@
 
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/lance/type_tec/18_dash/animation_0
-    execute if score @s Wpn.AnimationTimer matches 2 run function mhdp_items:weapons/lance/type_tec/18_dash/animation_1
+    execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/lance/type_tec/18_dash/animation_1
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 2 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:1500, IsForce:false, IsAdjust:false}

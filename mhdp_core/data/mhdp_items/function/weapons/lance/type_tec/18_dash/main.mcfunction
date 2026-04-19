@@ -39,7 +39,7 @@
        execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.AnimationTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/19_finish_spear/start
        execute if score @s Wpn.AnimationTimer matches 3.. if score @s Ply.Stats.Stamina matches ..1 run function mhdp_items:weapons/lance/type_tec/19_finish_spear/start
     # スニーク：ガードに移行
-       execute if entity @s[tag=Ply.Ope.IsSneaking] if score @s Wpn.AnimationTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/18_dash/change_to_guard
+       execute if entity @s[tag=Ply.Ope.StartSneak] if score @s Wpn.AnimationTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/18_dash/change_to_guard
 
 # 終了
     execute if score @s Wpn.AnimationTimer matches 3.. if score @s Ply.Stats.Stamina matches ..1 run function mhdp_items:weapons/lance/type_tec/18_dash/end

@@ -19,7 +19,7 @@
 
 # 移動
     execute if score @s Wpn.AnimationTimer matches 1 run tp @s @s
-    execute if score @s Wpn.AnimationTimer matches 1 rotated ~ -40 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:true, IsAdjust:false}
+    execute if score @s Wpn.AnimationTimer matches 1 rotated ~ -30 run function api:weapon_operation/use_player_motion.m {Strength:7000, IsForce:true, IsAdjust:false}
 
 # 移動制限
     execute if score @s Wpn.AnimationTimer matches 1 run function api:weapon_operation/attribute_movestop
