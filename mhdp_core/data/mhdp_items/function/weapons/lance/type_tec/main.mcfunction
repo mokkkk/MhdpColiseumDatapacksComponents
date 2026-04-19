@@ -58,6 +58,16 @@
     # 自動カウンター
         execute if entity @s[tag=Wpn.Lc.Tec.AutoCounter] run function mhdp_items:weapons/lance/type_tec/13_auto_counter/main
 
+# 突進
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.Dash.Start] run function mhdp_items:weapons/lance/type_tec/18_dash/main_start
+        execute if entity @s[tag=Wpn.Lc.Tec.Dash] run function mhdp_items:weapons/lance/type_tec/18_dash/main
+        execute if entity @s[tag=Wpn.Lc.Tec.Dash.Jump] run function mhdp_items:weapons/lance/type_tec/18_dash/main_jump
+
+# フィニッシュ突き
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.FinishSpear] run function mhdp_items:weapons/lance/type_tec/19_finish_spear/main
+
 # ガード
     # 開始：スニーク
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/lance/type_tec/6_guard/start

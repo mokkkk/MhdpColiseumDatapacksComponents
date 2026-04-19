@@ -5,5 +5,5 @@
 # @within function mhdp_items:weapons/lance/type_tec/17_high_counter/main
 
 # アニメーション
-    function api:weapon/animation.m {Slot:"mainhand", Cmd:"high_spear_0"}
+    function api:weapon/animation.m {Slot:"mainhand", Cmd:"spear_2"}
     function api:weapon/animation.m {Slot:"offhand", Cmd:"guard_dash_sub_0"}

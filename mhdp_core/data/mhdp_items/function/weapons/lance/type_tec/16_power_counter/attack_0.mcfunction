@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/short_sword/type_tec/17_high_counter/attack
+#> mhdp_items:weapons/short_sword/type_tec/16_power_counter/attack_0
 #
-# 大返し突き 攻撃判定
+# カウンター突き 攻撃判定
 #
 # @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
 
@@ -19,7 +19,7 @@
     execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
 
 # 攻撃
-    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.Lance.Tec.HighCounter
+    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.Lance.Tec.PowerCounter.1
     execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了
