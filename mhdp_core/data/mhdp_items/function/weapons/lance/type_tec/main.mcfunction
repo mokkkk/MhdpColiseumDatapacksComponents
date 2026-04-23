@@ -13,7 +13,12 @@
 
 # 特殊空中攻撃：
 
-# 空中攻撃：
+# 空中攻撃：強突き
+    # 開始
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsFlying] align y if block ~ ~-0.5 ~ #mhdp_core:no_collision if block ~ ~-1.5 ~ #mhdp_core:no_collision if block ~ ~-2.5 ~ #mhdp_core:no_collision run function mhdp_items:weapons/lance/type_tec/20_low_spear/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsFlying] align y if block ~ ~-0.5 ~ #mhdp_core:no_collision if block ~ ~-1.5 ~ #mhdp_core:no_collision if block ~ ~-2.5 ~ #mhdp_core:no_collision run function mhdp_items:weapons/lance/type_tec/20_low_spear/start
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.LowSpear] run function mhdp_items:weapons/lance/type_tec/20_low_spear/main
 
 # 狩技：
 

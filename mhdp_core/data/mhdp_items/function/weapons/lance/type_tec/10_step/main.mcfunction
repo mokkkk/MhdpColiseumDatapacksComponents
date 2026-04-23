@@ -29,8 +29,10 @@
     execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 1..11 run function mhdp_items:core/buffering/a
 
 # 遷移
+    # 空中：空中強突きに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] align y if block ~ ~-0.5 ~ #mhdp_core:no_collision if block ~ ~-1.5 ~ #mhdp_core:no_collision if block ~ ~-2.5 ~ #mhdp_core:no_collision run function mhdp_items:weapons/lance/type_tec/20_low_spear/start
     # 左クリック：突きに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 10.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/1_spear_1/start
+        execute if entity @s[tag=Ply.Ope.Buffering.A,tag=!Wpn.Lc.Tec.LowSpear] if score @s Wpn.GeneralTimer matches 10.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/1_spear_1/start
     # スニーク：ガードに移行
         execute if entity @s[tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 10.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/change_to_guard
 
