@@ -17,8 +17,8 @@
 # 通常：突き1に移行
     execute if entity @s[tag=!Wpn.Lc.Tec.FallSpear,tag=!Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/lance/type_tec/1_spear_1/start
 
-# 翔蟲：飛影に移行
-    # execute if entity @s[tag=Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/short_sword/type_tec/23_tobikage/start
+# 翔蟲：流転突きに移行
+    execute if entity @s[tag=Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/lance/type_tec/21_spiral_thrust/start
 
 # チュートリアル用処理
     tag @s remove Ply.Temp.Tutorial.DrawAttack

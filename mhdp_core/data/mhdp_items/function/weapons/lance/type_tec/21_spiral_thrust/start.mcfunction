@@ -1,0 +1,24 @@
+#> mhdp_items:weapons/lance/type_tec/21_spiral_thrust/start
+#
+# 流転突き 開始
+#
+# @within function mhdp_items:weapons/lance/type_tec/1_charge/change_to_chargeattack
+
+# 前処理
+    function mhdp_items:weapons/lance/util/before_attack
+
+# タグ付与
+    tag @s add Wpn.Lc.Tec.Spiral
+    tag @s remove Ply.Weapon.NoOpe
+    tag @s add Ply.Weapon.Guard
+
+# 演出
+    particle flash{color:[1.000,1.000,1.000,1.00]} ~ ~1.65 ~ 0 0 0 0 1
+    playsound entity.player.levelup master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 2
+
+# 翔蟲使用中の場合、クールタイムを伸ばす
+    execute if entity @s[tag=Itm.Sp.Wirebug.Using] run tag @s add Itm.Sp.Wirebug.UsedSkill
+    execute if entity @s[tag=Itm.Sp.Wirebug.Using] run scoreboard players set @s Itm.Wirebug.CoolTime 400
+
+# 終了
+    tag @s remove Ply.Flag.SpJumpAttack

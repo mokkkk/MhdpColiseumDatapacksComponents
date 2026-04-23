@@ -22,3 +22,4 @@
     attribute @s movement_speed modifier remove mhdp_core:weapon_movement_speed
     attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
     attribute @s attack_damage modifier remove mhdp_core:weapon_attack_damage
+    attribute @s gravity modifier remove mhdp_core:weapon_gravity

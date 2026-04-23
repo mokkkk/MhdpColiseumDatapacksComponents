@@ -11,7 +11,11 @@
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/lance/type_tec/0_drawattack/start
     execute if entity @s[tag=Ply.Ope.StartSneak,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/lance/type_tec/0_drawattack/start_guard
 
-# 特殊空中攻撃：
+# 特殊空中攻撃：流転突き
+    # 開始
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingWeapon,tag=Ply.Weapon.NoOpe,tag=Ply.Flag.SpJumpAttack,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/lance/type_tec/21_spiral_thrust/start
+    # 処理
+        execute if entity @s[tag=Wpn.Lc.Tec.Spiral] run function mhdp_items:weapons/lance/type_tec/21_spiral_thrust/main
 
 # 空中攻撃：強突き
     # 開始

@@ -17,8 +17,11 @@
 # ヒットストップ    
     execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
 
+# ヒット判定
+    execute if entity @n[tag=Temp.Victim] run tag @s add Ply.Flag.Hit
+
 # 攻撃
-    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.Lance.Tec.FallSpear
+    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.Lance.Tec.SpiralThrust
     execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了
