@@ -34,6 +34,8 @@
     scoreboard players reset #mhdp_temp_element_attack_value MhdpCore
     scoreboard players reset #mhdp_temp_counter_value MhdpCore
 
+    scoreboard players reset #mhdp_temp_damage_vfx_random
+
 # 攻撃者、対象の解放
     tag @e[tag=Temp.Victim] remove Temp.Victim
     tag @s remove Temp.Attacker

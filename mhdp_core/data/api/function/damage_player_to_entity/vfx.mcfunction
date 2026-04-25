@@ -35,11 +35,15 @@
         execute if score #mhdp_temp_condition_value_bomb MhdpCore matches 1.. run particle dust{color:[0.220,0.820,0.000],scale:1.5} ~ ~ ~ 0.5 0.5 0.5 0.15 10
 
 # エフェクト表示
-    # 打撃の場合、角度をランダムに設定
+    # 角度
         data modify storage mhdp_core:temp Arg.VfxRotation set from storage api: Arg.VfxRotation
-        execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 store result storage mhdp_core:temp Arg.VfxRotation int 1 run random value 0..360
+        # エフェクト散布が1以上の場合、角度をランダムに設定
+            execute store result score #mhdp_temp_damage_vfx_random MhdpCore run data get storage api: Arg.VfxRandom
+            execute if score #mhdp_temp_damage_vfx_random MhdpCore matches 1.. store result storage mhdp_core:temp Arg.VfxRotation int 1 run random value 0..360
+        # 打撃の場合、角度をランダムに設定
+            execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 store result storage mhdp_core:temp Arg.VfxRotation int 1 run random value 0..360
     # 位置オフセット取得
-        function api:damage_player_to_entity/vfx/calc_offset
+        function api:damage_player_to_entity/vfx/calc_offset with storage api: Arg
     # ヒットエフェクト表示
         execute if data storage api: Arg{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function api:damage_player_to_entity/vfx/summon_vfx.m with storage mhdp_core:temp Arg
     # ダメージ数値表示
