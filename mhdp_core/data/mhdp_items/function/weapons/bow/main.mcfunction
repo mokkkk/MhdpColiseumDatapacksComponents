@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:/**
 
+# tick
+    function mhdp_items:weapons/bow/util/tick
+
 # 地の型
     execute if entity @s[tag=!Ply.Weapon.Type.Tech] run function mhdp_items:weapons/bow/type_normal/main
 

@@ -48,8 +48,8 @@
     execute if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/arts_main
 
 # 遷移
-    # 左クリック：突き2に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 18.. run function mhdp_items:weapons/lance/type_tec/2_spear_2/start
+    # 左クリック：3連突きに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 18.. run function mhdp_items:weapons/lance/type_tec/9_triple_spear/start
     # 右クリック：溜めに移行
         execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 18.. run function mhdp_items:weapons/lance/type_tec/4_charge/start
     # スニーク+ジャンプ：ガードダッシュに移行
