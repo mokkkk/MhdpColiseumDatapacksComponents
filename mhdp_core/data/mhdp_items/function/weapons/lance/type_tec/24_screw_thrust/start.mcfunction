@@ -10,6 +10,7 @@
 # タグ付与
     tag @s add Wpn.Lc.Tec.ScrewThrust
     tag @s remove Ply.Weapon.NoOpe
+    tag @s remove Ply.Weapon.Guard
 
 # 溜め段階初期化
     scoreboard players set @s Wpn.Lc.ChargeTimer 0

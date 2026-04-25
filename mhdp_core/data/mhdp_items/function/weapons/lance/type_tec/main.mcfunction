@@ -33,7 +33,6 @@
         execute if entity @s[tag=Wpn.Lc.Tec.RageCounter] run function mhdp_items:weapons/lance/type_tec/23_rage_counter/main
 
 # 狩技：スクリュースラスト
-    # メモ：演出は、円形ベクトルパーティクルを前に伸ばす感じで出す
     # 開始
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/start
     # 溜め
