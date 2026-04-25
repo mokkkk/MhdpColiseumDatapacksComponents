@@ -20,12 +20,12 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 先行入力
-    # execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:core/buffering/jump
-    # execute if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:core/buffering/arts_main
+    execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:core/buffering/jump
+    execute if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:core/buffering/arts_main
 
 # 狩技遷移
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/start
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/22_guard_rage/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/start
 
 # 遷移
     # 左クリック：大返し突きに移行

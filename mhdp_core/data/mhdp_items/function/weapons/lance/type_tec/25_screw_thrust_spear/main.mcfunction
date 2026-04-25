@@ -33,9 +33,9 @@
     execute if score @s Wpn.GeneralTimer matches 14 if score @s Wpn.Lc.ChargeCount matches 1.. positioned ^ ^ ^1 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
     execute if score @s Wpn.GeneralTimer matches 16 if score @s Wpn.Lc.ChargeCount matches 1.. positioned ^ ^ ^2 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
     execute if score @s Wpn.GeneralTimer matches 18 if score @s Wpn.Lc.ChargeCount matches 1.. positioned ^ ^ ^3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
-    execute if score @s Wpn.GeneralTimer matches 20 if score @s Wpn.Lc.ChargeCount matches 2.. positioned ^ ^ ^4 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
-    execute if score @s Wpn.GeneralTimer matches 22 if score @s Wpn.Lc.ChargeCount matches 2.. positioned ^ ^ ^5 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
-    execute if score @s Wpn.GeneralTimer matches 24 if score @s Wpn.Lc.ChargeCount matches 2.. positioned ^ ^ ^6 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
+    execute if score @s Wpn.GeneralTimer matches 20 if score @s Wpn.Lc.ChargeCount matches 2.. positioned ^ ^ ^3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
+    execute if score @s Wpn.GeneralTimer matches 22 if score @s Wpn.Lc.ChargeCount matches 2.. positioned ^ ^ ^3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
+    execute if score @s Wpn.GeneralTimer matches 24 if score @s Wpn.Lc.ChargeCount matches 2.. positioned ^ ^ ^3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}

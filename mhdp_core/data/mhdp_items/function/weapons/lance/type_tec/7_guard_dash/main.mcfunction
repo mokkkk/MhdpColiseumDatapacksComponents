@@ -26,11 +26,6 @@
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function mhdp_items:weapons/lance/type_tec/7_guard_dash/move
     execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function mhdp_items:weapons/lance/type_tec/7_guard_dash/move
 
-# 狩技遷移
-    # execute if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:core/buffering/arts_main
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/31_blade_dance/start
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/30_upper_bash/start
-
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/b
