@@ -23,9 +23,9 @@
     execute unless entity @s[tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsKeyBack,tag=!Ply.Ope.IsKeyRight,tag=!Ply.Ope.IsKeyLeft] if score @s Wpn.GuardStopTimer matches 0 if score @s Ply.Stats.Stamina matches ..999 run scoreboard players add @s Ply.Stats.Stamina 3
 
 # 狩技遷移
-    # execute if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:core/buffering/arts_main
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/31_blade_dance/start
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/30_upper_bash/start
+    execute if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:core/buffering/arts_main
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/22_guard_rage/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/start
 
 # 遷移  
     # ジャンプ：ガードダッシュに移行

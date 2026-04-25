@@ -24,7 +24,13 @@
     # 処理
         execute if entity @s[tag=Wpn.Lc.Tec.LowSpear] run function mhdp_items:weapons/lance/type_tec/20_low_spear/main
 
-# 狩技：
+# 狩技：ガードレイジ
+    # 開始
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/lance/type_tec/22_guard_rage/start
+    # ガード
+        execute if entity @s[tag=Wpn.Lc.Tec.GuardRage] run function mhdp_items:weapons/lance/type_tec/22_guard_rage/main
+    # カウンター
+        execute if entity @s[tag=Wpn.Lc.Tec.RageCounter] run function mhdp_items:weapons/lance/type_tec/23_rage_counter/main
 
 # 狩技：
 

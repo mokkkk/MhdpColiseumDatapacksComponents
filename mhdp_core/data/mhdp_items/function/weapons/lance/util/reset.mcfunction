@@ -16,6 +16,8 @@
 
 # 専用スコア消去
     scoreboard players reset @s Wpn.Lc.SpearCount
+    scoreboard players reset @s Wpn.Lc.RageLevel
+    scoreboard players reset @s Wpn.Lc.RageTimer
 
 # ステータス削除
     attribute @s attack_speed modifier remove mhdp_core:weapon_attack

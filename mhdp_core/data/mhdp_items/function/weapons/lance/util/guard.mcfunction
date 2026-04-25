@@ -20,3 +20,6 @@
 
 # カウンター突き・ジャスト判定
     execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Lc.Tec.CounterSpear] if score @s Wpn.GeneralTimer matches ..4 run function mhdp_items:weapons/lance/type_tec/12_counter_spear/guard
+
+# ガードレイジ
+    execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Lc.Tec.GuardRage] run function mhdp_items:weapons/lance/type_tec/22_guard_rage/guard

@@ -15,6 +15,7 @@
 
 # ガード判定
 # ガード値 - 威力値
+    scoreboard players operation #mhdp_temp_guard_value_original MhdpCore = #mhdp_temp_guard_value MhdpCore
     scoreboard players operation #mhdp_temp_guard_value MhdpCore -= #mhdp_temp_guard_strength MhdpCore
 
 # スタミナ消費量決定

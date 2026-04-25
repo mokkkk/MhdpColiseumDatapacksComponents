@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/lance/type_tec/5_sweep/end
+#> mhdp_items:weapons/lance/type_tec/22_guard_rage/end
 #
-# 溜めカウンター 終了処理
+# ガードレイジ 終了処理
 #
-# @within function mhdp_items:weapons/lance/type_tec/5_sweep/main
+# @within function mhdp_items:weapons/lance/type_tec/22_guard_rage/main
 
 # タグ消去
     tag @s remove Wpn.Lc.Tec.GuardRage
