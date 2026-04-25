@@ -4,12 +4,19 @@
 #
 # @within function api:damage_player_to_entity
 
-# 弱点特攻
+# 武器効果
+    # ランス・ガードレイジ（攻撃）
+        execute if entity @s[tag=Ply.Weapon.Equip.Lance] if score @s Wpn.Lc.RageLevel matches 1 run scoreboard players operation #mhdp_temp_attack_value MhdpCore *= #const_attack_weapon_lance_rage_1 Const
+        execute if entity @s[tag=Ply.Weapon.Equip.Lance] if score @s Wpn.Lc.RageLevel matches 2 run scoreboard players operation #mhdp_temp_attack_value MhdpCore *= #const_attack_weapon_lance_rage_2 Const
+        execute if entity @s[tag=Ply.Weapon.Equip.Lance] if score @s Wpn.Lc.RageLevel matches 3 run scoreboard players operation #mhdp_temp_attack_value MhdpCore *= #const_attack_weapon_lance_rage_3 Const
+        execute if entity @s[tag=Ply.Weapon.Equip.Lance] if score @s Wpn.Lc.RageLevel matches 1.. run scoreboard players operation #mhdp_temp_attack_value MhdpCore /= #const_100 Const
+
+# 弱点特攻（会心率）
     execute if entity @s[tag=Skill.Attack.Status.WeakExploit.1] if score #mhdp_temp_defence_phys MhdpCore matches 45.. run scoreboard players add #mhdp_temp_crit_value MhdpCore 15
     execute if entity @s[tag=Skill.Attack.Status.WeakExploit.2] if score #mhdp_temp_defence_phys MhdpCore matches 45.. run scoreboard players add #mhdp_temp_crit_value MhdpCore 30
     execute if entity @s[tag=Skill.Attack.Status.WeakExploit.3] if score #mhdp_temp_defence_phys MhdpCore matches 45.. run scoreboard players add #mhdp_temp_crit_value MhdpCore 50
 
-# 弱点特攻【属性】
+# 弱点特攻【属性】（属性）
 # ついでに、属性肉質を用いて属性ダメージ量を計算する
     # 火
         execute store result score #mhdp_temp_defence_element MhdpCore run data get storage mhdp_core:temp Damage.Defence[3]
@@ -37,7 +44,7 @@
         scoreboard players operation #mhdp_temp_element_value_dragon MhdpCore *= #mhdp_temp_defence_element MhdpCore
         scoreboard players operation #mhdp_temp_element_value_dragon MhdpCore /= #const_100 Const
 
-# 閃転
+# 閃転（攻撃力、会心率）
     # 100超え会心率量
         scoreboard players operation #mhdp_temp_crit_over100_value MhdpCore = #mhdp_temp_crit_value MhdpCore
         scoreboard players remove #mhdp_temp_crit_over100_value MhdpCore 100

@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/lance/type_tec/6_guard/change_to_spear
+#> mhdp_items:weapons/lance/type_tec/6_guard/change_to_dash
 #
 # ジャストガード → ガード
 #
@@ -11,4 +11,4 @@
     tag @s remove Ply.Weapon.StaminaNotRegen
     
 # 対象の処理を実行
-    function mhdp_items:weapons/lance/type_tec/1_spear_1/start
+    function mhdp_items:weapons/lance/type_tec/18_dash/start

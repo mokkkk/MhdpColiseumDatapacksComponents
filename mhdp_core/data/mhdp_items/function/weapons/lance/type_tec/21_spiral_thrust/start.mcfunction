@@ -10,7 +10,6 @@
 # タグ付与
     tag @s add Wpn.Lc.Tec.Spiral
     tag @s remove Ply.Weapon.NoOpe
-    tag @s add Ply.Weapon.Guard
 
 # 演出
     particle flash{color:[1.000,1.000,1.000,1.00]} ~ ~1.65 ~ 0 0 0 0 1

@@ -44,7 +44,6 @@
 # 着地判定
     execute if score @s Wpn.GeneralTimer matches 3 run tag @s add Ply.Ope.IsAir
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 8..98 run scoreboard players set @s Wpn.GeneralTimer 99
-    execute if score @s Wpn.GeneralTimer matches 99.. run tag @s remove Ply.Weapon.Guard
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartLeftClick,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..129 run function mhdp_items:core/buffering/a
