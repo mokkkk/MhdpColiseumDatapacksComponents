@@ -39,9 +39,9 @@
         data modify storage mhdp_core:temp Arg.VfxRotation set from storage api: Arg.VfxRotation
         # エフェクト散布が1以上の場合、角度をランダムに設定
             execute store result score #mhdp_temp_damage_vfx_random MhdpCore run data get storage api: Arg.VfxRandom
-            execute if score #mhdp_temp_damage_vfx_random MhdpCore matches 1.. store result storage mhdp_core:temp Arg.VfxRotation int 1 run random value 0..360
+            execute if score #mhdp_temp_damage_vfx_random MhdpCore matches 1.. store result storage mhdp_core:temp Arg.VfxRotation float 1 run random value 0..360
         # 打撃の場合、角度をランダムに設定
-            execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 store result storage mhdp_core:temp Arg.VfxRotation int 1 run random value 0..360
+            execute if score #mhdp_temp_damage_phys_type MhdpCore matches 1 store result storage mhdp_core:temp Arg.VfxRotation float 1 run random value 0..360
     # 位置オフセット取得
         function api:damage_player_to_entity/vfx/calc_offset with storage api: Arg
     # ヒットエフェクト表示
