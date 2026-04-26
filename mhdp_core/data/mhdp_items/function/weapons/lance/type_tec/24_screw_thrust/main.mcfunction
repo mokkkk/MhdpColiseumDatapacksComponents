@@ -16,17 +16,16 @@
     execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 1..20 run playsound entity.breeze.inhale master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 0.5
     execute if score @s Wpn.AnimationTimer matches 21..40 run playsound entity.breeze.inhale master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 0.6
-    execute if score @s Wpn.AnimationTimer matches 41..55 run playsound entity.breeze.inhale master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 0.7
-    execute if score @s Wpn.AnimationTimer matches 56..59 run playsound entity.breeze.inhale master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 0.8
+    execute if score @s Wpn.AnimationTimer matches 41..50 run playsound entity.breeze.inhale master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 0.7
     execute if score @s Wpn.AnimationTimer matches 1.. anchored eyes run particle cloud ~ ~1 ~ 0.7 1 0.7 0.05 1
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/animation_0
     execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/animation_1
     execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/animation_2
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
-    execute if score @s Wpn.GeneralTimer matches 3 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
-    execute if score @s Wpn.GeneralTimer matches 5 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 3 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 5 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:2000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 7 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
 
 # 演出

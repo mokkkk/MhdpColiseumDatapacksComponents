@@ -10,10 +10,13 @@
 
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s Wpn.AnimationTimer matches 10 run playsound minecraft:entity.warden.attack_impact master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    execute if score @s Wpn.AnimationTimer matches 10 run playsound minecraft:entity.warden.attack_impact master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    execute if score @s Wpn.AnimationTimer matches 12 run playsound item.spear.lunge_3 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.AnimationTimer matches 12 run playsound item.spear.lunge_2 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 12 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
-    execute if score @s Wpn.AnimationTimer matches 12 run playsound entity.breeze.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
-    execute if score @s Wpn.AnimationTimer matches 1..20 run playsound entity.breeze.inhale master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 0.8
-    execute if score @s Wpn.AnimationTimer matches 21..40 run playsound entity.breeze.inhale master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 0.3 0.8
+    execute if score @s Wpn.AnimationTimer matches 12 run playsound entity.breeze.wind_burst master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.AnimationTimer matches 12 run playsound entity.breeze.wind_burst master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/animation_0
     execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/animation_1
     execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/animation_2
@@ -38,10 +41,10 @@
     execute if score @s Wpn.GeneralTimer matches 24 if score @s Wpn.Lc.ChargeCount matches 3.. positioned ^ ^ ^3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
-    execute if score @s Wpn.GeneralTimer matches 3 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:2000, IsForce:false, IsAdjust:false}
-    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:7000, IsForce:false, IsAdjust:false}
-    execute if score @s Wpn.GeneralTimer matches 10 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:8000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 3 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:12000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 10 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 12 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1500, IsForce:false, IsAdjust:false}
 
 # 移動制限

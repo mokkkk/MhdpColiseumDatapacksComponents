@@ -15,6 +15,10 @@
     playsound item.shield.block master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.3
     playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.3
+    playsound entity.blaze.hurt master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    playsound entity.blaze.hurt master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
+    playsound entity.iron_golem.death master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
+    execute at @s anchored eyes positioned ^ ^ ^1 run function mhdp_items:weapons/lance/type_tec/22_guard_rage/particle_guard
 
 # 後ずさる
     execute at @s rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:false, IsAdjust:false}

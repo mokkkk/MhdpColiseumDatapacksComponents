@@ -17,6 +17,9 @@
 
 # 演出
     playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    playsound block.enchantment_table.use master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    playsound block.enchantment_table.use master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
+    execute anchored eyes positioned ^ ^-0.5 ^1 run function mhdp_items:weapons/lance/type_tec/15_power_guard/particle_guard
 
 # タイマー初期化
     scoreboard players set @s Wpn.GuardStopTimer 5
