@@ -47,4 +47,5 @@
     # ヒットエフェクト表示
         execute if data storage api: Arg{IsShowVfx:true} positioned as @e[tag=Temp.Victim] facing entity @s feet run function api:damage_player_to_entity/vfx/summon_vfx.m with storage mhdp_core:temp Arg
     # ダメージ数値表示
+        execute store result storage mhdp_core:temp Arg.Dist float 0.01 run random value 0..150
         function api:damage_player_to_entity/vfx/show_damage
