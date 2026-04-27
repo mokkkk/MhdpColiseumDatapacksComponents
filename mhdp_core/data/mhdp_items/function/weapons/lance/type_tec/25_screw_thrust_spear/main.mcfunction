@@ -38,7 +38,7 @@
     execute if score @s Wpn.GeneralTimer matches 18 if score @s Wpn.Lc.ChargeCount matches 2.. positioned ^ ^ ^3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
     execute if score @s Wpn.GeneralTimer matches 20 if score @s Wpn.Lc.ChargeCount matches 2.. positioned ^ ^ ^3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
     execute if score @s Wpn.GeneralTimer matches 22 if score @s Wpn.Lc.ChargeCount matches 3.. positioned ^ ^ ^3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
-    execute if score @s Wpn.GeneralTimer matches 24 if score @s Wpn.Lc.ChargeCount matches 3.. positioned ^ ^ ^3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit
+    execute if score @s Wpn.GeneralTimer matches 24 if score @s Wpn.Lc.ChargeCount matches 3.. positioned ^ ^ ^3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/attack_pursuit_last
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:8000, IsForce:false, IsAdjust:false}

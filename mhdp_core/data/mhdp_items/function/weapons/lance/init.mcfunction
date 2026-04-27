@@ -43,6 +43,7 @@ data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.ScrewThrust.1
 data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.ScrewThrust.2 set value {AttackType:Cut,DamageMult:10,PartDamageMult:100,ElementDamageMult:130,StunValue:0,TireValue:120,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxType:shot_arts,VfxRotation:1.1,IsVfxStrong:false,VfxScale:[8f,8f,8f],VfxRandom:1}
 data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.ScrewThrust.3 set value {AttackType:Cut,DamageMult:10,PartDamageMult:100,ElementDamageMult:130,StunValue:0,TireValue:120,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:true,IsShowVfx:true,VfxType:shot_arts,VfxRotation:1.1,IsVfxStrong:false,VfxScale:[9f,9f,9f],VfxRandom:1}
 data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.ScrewThrust.Pursuit set value {AttackType:Cut,DamageMult:10,PartDamageMult:100,ElementDamageMult:130,StunValue:0,TireValue:120,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxType:shot_strong,VfxRotation:-0.05,IsVfxStrong:false,VfxScale:[4f,4f,4f],VfxRandom:1}
+data modify storage mhdp_core:game_data WeaponAttackData.Lance.Tec.ScrewThrust.Last set value {AttackType:Cut,DamageMult:10,PartDamageMult:100,ElementDamageMult:130,StunValue:0,TireValue:120,DragonAuraValue:0,CounterValue:0,IsDecreseSharpness:false,IsShowVfx:true,VfxType:shot_arts,VfxRotation:-0.05,IsVfxStrong:false,VfxScale:[5f,5f,5f],VfxRandom:1}
 
 # 地の型
 
