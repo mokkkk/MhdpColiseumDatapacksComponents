@@ -9,14 +9,14 @@
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
 
 # アニメーション演出
-    execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s Wpn.AnimationTimer matches 10 run playsound minecraft:entity.warden.attack_impact master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
-    execute if score @s Wpn.AnimationTimer matches 10 run playsound minecraft:entity.warden.attack_impact master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
-    execute if score @s Wpn.AnimationTimer matches 12 run playsound item.spear.lunge_3 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
-    execute if score @s Wpn.AnimationTimer matches 12 run playsound item.spear.lunge_2 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
-    execute if score @s Wpn.AnimationTimer matches 12 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
-    execute if score @s Wpn.AnimationTimer matches 12 run playsound entity.breeze.wind_burst master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
-    execute if score @s Wpn.AnimationTimer matches 12 run playsound entity.breeze.wind_burst master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
+    execute if score @s Wpn.GeneralTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s Wpn.GeneralTimer matches 10 run playsound minecraft:entity.warden.attack_impact master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    execute if score @s Wpn.GeneralTimer matches 10 run playsound minecraft:entity.warden.attack_impact master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    execute if score @s Wpn.GeneralTimer matches 12 run playsound item.spear.lunge_3 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.GeneralTimer matches 12 run playsound item.spear.lunge_2 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.GeneralTimer matches 12 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.GeneralTimer matches 12 run playsound entity.breeze.wind_burst master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.GeneralTimer matches 12 run playsound entity.breeze.wind_burst master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/animation_0
     execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/animation_1
     execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/animation_2
@@ -25,7 +25,7 @@
     execute if score @s Wpn.AnimationTimer matches 12 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/animation_5
     execute if score @s Wpn.AnimationTimer matches 14 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/animation_6
     execute if score @s Wpn.AnimationTimer matches 17 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/animation_7
-    execute if score @s Wpn.AnimationTimer matches 12 positioned ~ ~1.65 ~ positioned ^ ^ ^2 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/particle_0
+    # execute if score @s Wpn.AnimationTimer matches 12 positioned ~ ~1.65 ~ positioned ^ ^ ^3 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/particle_0
     execute if score @s Wpn.AnimationTimer matches 13 if score @s Wpn.Lc.ChargeCount matches 1.. positioned ~ ~1.65 ~ positioned ^ ^ ^4 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/particle_0
     execute if score @s Wpn.AnimationTimer matches 15 if score @s Wpn.Lc.ChargeCount matches 2.. positioned ~ ~1.65 ~ positioned ^ ^ ^6 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/particle_1
     execute if score @s Wpn.AnimationTimer matches 17 if score @s Wpn.Lc.ChargeCount matches 3.. positioned ~ ~1.65 ~ positioned ^ ^ ^8 run function mhdp_items:weapons/lance/type_tec/25_screw_thrust_spear/particle_1

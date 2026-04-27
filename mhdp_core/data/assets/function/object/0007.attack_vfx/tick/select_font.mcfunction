@@ -13,3 +13,5 @@
     execute if entity @s[tag=blow] run data modify storage mhdp_core:temp Temp.Vfx.Font set value "blow"
     execute if entity @s[tag=blow_strong] run data modify storage mhdp_core:temp Temp.Vfx.Font set value "blow_strong"
     execute if entity @s[tag=shot] run data modify storage mhdp_core:temp Temp.Vfx.Font set value "shot"
+    execute if entity @s[tag=shot_strong] run data modify storage mhdp_core:temp Temp.Vfx.Font set value "shot_strong"
+    execute if entity @s[tag=shot_arts] run data modify storage mhdp_core:temp Temp.Vfx.Font set value "shot_arts"

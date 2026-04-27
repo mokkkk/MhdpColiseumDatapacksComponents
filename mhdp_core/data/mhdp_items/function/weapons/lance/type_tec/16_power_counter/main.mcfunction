@@ -12,8 +12,8 @@
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
 
 # アニメーション演出
-    execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s Wpn.AnimationTimer matches 10 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.GeneralTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s Wpn.GeneralTimer matches 10 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/lance/type_tec/16_power_counter/animation_0
     execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/lance/type_tec/16_power_counter/animation_1
     execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/lance/type_tec/16_power_counter/animation_2
@@ -35,6 +35,8 @@
     execute if score @s Wpn.GeneralTimer matches 6 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 8 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 10 rotated ~ -60 run function api:weapon_operation/use_player_motion.m {Strength:3500, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 11..13 if entity @s[tag=Ply.Weapon.HisStop] run tp @s @s
+    execute if score @s Wpn.GeneralTimer matches 13 if entity @s[tag=Ply.Weapon.HisStop] rotated ~ -60 run function api:weapon_operation/use_player_motion.m {Strength:2000, IsForce:false, IsAdjust:false}
 
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 at @s run tp @s ~ ~ ~ ~1 ~0.5

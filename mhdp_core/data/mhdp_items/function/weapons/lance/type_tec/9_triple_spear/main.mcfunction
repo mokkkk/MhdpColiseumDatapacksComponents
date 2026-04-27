@@ -12,9 +12,9 @@
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
 
 # アニメーション演出
-    execute if score @s Wpn.AnimationTimer matches 4 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
-    execute if score @s Wpn.AnimationTimer matches 12 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
-    execute if score @s Wpn.AnimationTimer matches 22 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.GeneralTimer matches 4 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.GeneralTimer matches 12 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.GeneralTimer matches 22 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/lance/type_tec/9_triple_spear/animation_0
     execute if score @s Wpn.AnimationTimer matches 2 run function mhdp_items:weapons/lance/type_tec/9_triple_spear/animation_1
     execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/lance/type_tec/9_triple_spear/animation_2
