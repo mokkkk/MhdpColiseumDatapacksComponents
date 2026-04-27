@@ -28,8 +28,8 @@
     execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/start
 
 # 遷移
-    # 左クリック：大返し突きに移行
-        execute if entity @s[tag=Ply.Ope.StartLeftClick] run function mhdp_items:weapons/lance/type_tec/6_guard/change_to_counter
+    # 左クリック：突きに移行
+        execute if entity @s[tag=Ply.Ope.StartLeftClick] run function mhdp_items:weapons/lance/type_tec/6_guard/change_to_spear
     # 右クリック：大返し突きに移行
         execute if entity @s[tag=Wpn.Lc.Tec.Guard.Just,tag=Ply.Ope.StartUsingWeapon] run function mhdp_items:weapons/lance/type_tec/6_guard/change_to_counter
     # スニーク：ガードに移行
