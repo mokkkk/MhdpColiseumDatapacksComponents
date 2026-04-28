@@ -27,6 +27,12 @@
     execute if score @s Wpn.GeneralTimer matches 24.. if entity @s[tag=!Skill.Stamina.ShortCharge.1,tag=!Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Gs.ChargeTimer 5
     execute if score @s Wpn.GeneralTimer matches 24.. if entity @s[tag=Skill.Stamina.ShortCharge.1] run scoreboard players add @s Wpn.Gs.ChargeTimer 6
     execute if score @s Wpn.GeneralTimer matches 24.. if entity @s[tag=Skill.Stamina.ShortCharge.2] run scoreboard players add @s Wpn.Gs.ChargeTimer 7
+    execute if score @s Wpn.Gs.ChargeTimer matches ..200 run playsound block.beacon.activate master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 0.5
+    execute if score @s Wpn.Gs.ChargeTimer matches 201..350 run playsound block.beacon.activate master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 0.7
+    execute if score @s Wpn.Gs.ChargeTimer matches 351.. run playsound block.beacon.activate master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 0.5 0.9
+    execute if score @s Wpn.Gs.ChargeTimer matches 150 run playsound block.beacon.activate master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.5
+    execute if score @s Wpn.Gs.ChargeTimer matches 300 run playsound block.beacon.activate master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.7
+    execute if score @s Wpn.Gs.ChargeTimer matches 450 run playsound block.beacon.activate master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.9
     execute if score @s Wpn.Gs.ChargeTimer matches 150.. if score @s Wpn.Gs.ChargeCount matches ..0 rotated ~ -90 run function mhdp_items:weapons/great_sword/type_tec/33_rage_charge/up_charge_count
     execute if score @s Wpn.Gs.ChargeTimer matches 300.. if score @s Wpn.Gs.ChargeCount matches ..1 rotated ~ -90 run function mhdp_items:weapons/great_sword/type_tec/33_rage_charge/up_charge_count
     execute if score @s Wpn.Gs.ChargeTimer matches 450.. if score @s Wpn.Gs.ChargeCount matches ..2 rotated ~ -90 run function mhdp_items:weapons/great_sword/type_tec/33_rage_charge/up_charge_count
