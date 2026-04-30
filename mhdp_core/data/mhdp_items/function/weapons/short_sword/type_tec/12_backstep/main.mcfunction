@@ -21,34 +21,35 @@
 
 # 演出
     execute if score @s Wpn.GeneralTimer matches 22 run playsound entity.experience_orb.pickup master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
-    execute if score @s Wpn.GeneralTimer matches 22 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
+    execute if score @s Wpn.GeneralTimer matches 22 positioned ~ ~1.65 ~ run particle flash{color:[1.000,1.000,1.000,1.00]} ^ ^ ^0.5 0 0 0 0 1
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 無敵時間
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set @s Ply.Timer.Avoid 5
+    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set @s Ply.Timer.Avoid 4
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 7500
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~-180 -30 run function player_motion:api/launch_looking
+    # 建築の上では移動控え目
+        execute if score @s Wpn.GeneralTimer matches 1 positioned ~ ~-1.5 ~ unless entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.01,dy=0.01,dz=0.01] rotated ~-180 -30 run function api:weapon_operation/use_player_motion.m {Strength:7500, IsForce:true, IsAdjust:false}
+        execute if score @s Wpn.GeneralTimer matches 1 positioned ~ ~-1.5 ~ if entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.01,dy=0.01,dz=0.01] rotated ~-180 -60 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:true, IsAdjust:false}
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 2..20 run function mhdp_items:core/buffering/a
-    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 2..20 if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:core/buffering/b
+    execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 2..20 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] if score @s Wpn.GeneralTimer matches 2..20 run function mhdp_items:core/buffering/a
 
 # 遷移
     # 無操作：突進斬りに移行
-        execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A,tag=!Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 16..21 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/start
-    # 右クリック短押し：飛び込み斬りに移行
+        # execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A,tag=!Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 16..21 run function mhdp_items:weapons/short_sword/type_tec/19_moveslash/start
+    # 左クリックまたは右クリック短押し：飛び込み斬りに移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/13_just_1/start
-    # スニーク+右クリック同時押し：ブレイドダンスに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/start
+    # # スニーク+右クリック同時押し：ブレイドダンスに移行
+    #     execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/start
     # 右クリック長押し：溜め斬りに移行
         execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye,tag=!Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/type_tec/20_chargeslash/start
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 49.. run function mhdp_items:weapons/short_sword/type_tec/20_chargeslash/start
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 50.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/end
+    execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 17.. run function mhdp_items:weapons/short_sword/type_tec/12_backstep/end

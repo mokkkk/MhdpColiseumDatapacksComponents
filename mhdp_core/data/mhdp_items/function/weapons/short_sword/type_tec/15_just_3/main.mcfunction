@@ -33,7 +33,7 @@
     execute if score @s Wpn.AnimationTimer matches 11 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s Wpn.GeneralTimer matches 11..13 positioned ~ ~1.65 ~ run particle crit ^ ^ ^1 0 0 0 0.5 1
     execute if score @s Wpn.GeneralTimer matches 14 run playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
-    execute if score @s Wpn.GeneralTimer matches 14 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
+    execute if score @s Wpn.GeneralTimer matches 14 positioned ~ ~1.65 ~ run particle flash{color:[1.000,1.000,1.000,1.00]} ^ ^ ^0.5 0 0 0 0 1
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
@@ -46,8 +46,8 @@
 # 遷移
     # 同時押し長押し：溜め斬り落としに移行
         execute if entity @s[tag=Ply.Ope.Buffering.F] if score @s Wpn.GeneralTimer matches 2..39 run function mhdp_items:weapons/short_sword/type_tec/27_charge_spear/start_finish
-    # 右クリック短押し：通常コンボ2に移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.NotSneak] if score @s Wpn.GeneralTimer matches 12..39 run function mhdp_items:weapons/short_sword/type_tec/15_just_3/change_to_just_4
+    # 右クリック短押し：ジャストラッシュ4に移行
+        execute if entity @s[tag=Ply.Ope.StartUsingWeapon,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 12..39 run function mhdp_items:weapons/short_sword/type_tec/15_just_3/change_to_just_4
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 12..39 run function mhdp_items:weapons/short_sword/util/move_jump
 

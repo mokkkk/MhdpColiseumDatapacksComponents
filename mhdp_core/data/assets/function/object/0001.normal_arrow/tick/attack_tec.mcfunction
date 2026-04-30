@@ -30,7 +30,7 @@
         execute if entity @a[tag=1.TargetPlayer,tag=Ply.Weapon.Bow.IsHorming] if score @p[tag=1.TargetPlayer] Wpn.Bw.HormingTarget = @n[tag=Temp.Victim] Entity.Uuid run function assets:object/0001.normal_arrow/tick/attack_tec_horming
     # ビン補正
         # 強撃ビン
-            execute if entity @s[tag=1.Bin.Strong] run function assets:object/0001.normal_arrow/tick/attack_tec_bottle_strong
+            execute if entity @s[tag=1.Bin.Strong] run function assets:object/0001.normal_arrow/tick/attack_bottle_strong
 
 # 攻撃実行
     execute as @a[tag=1.TargetPlayer] if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity

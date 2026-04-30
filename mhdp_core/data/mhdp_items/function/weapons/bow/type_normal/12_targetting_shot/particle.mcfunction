@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/bow/type_tec/12_targetting_shot/particle
+#> mhdp_items:weapons/bow/type_normal/12_targetting_shot/particle
 #
 # 竜の一矢 演出
 #
-# @within function mhdp_items:weapons/bow/type_tec/12_targetting_shot/main
+# @within function mhdp_items:weapons/bow/type_normal/12_targetting_shot/main
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAGYAclAhgwIwDsAtAKy0BMrALAGxc6rau37tWlAMxSADAE5SsgQCNG7MAQB2dALYJkgMMUABI01gYdDHoDOScCgD2hLRCSNZBFHFdwM9sAA3OmxCA3AADyRPMChogF94gmtSNEI7RA9ZbJyCGwgrN0QYuGxsNBgbAyzkxwKIAxi0GwBRMoqqloBHQhDsKABlS29yRHpsKsSAXSA_3
 # 円 1

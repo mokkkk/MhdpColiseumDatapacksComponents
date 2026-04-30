@@ -95,11 +95,19 @@
             #declare tag Ply.Ope.IsKeySprint
             #declare tag Ply.Ope.StartKeySneak
             #declare tag Ply.Ope.IsKeySneak
+        # その他
+            #declare tag Ply.Ope.StartLeftClick
+            #declare tag Ply.Ope.StartUsingWeapon
         # 先行入力
             #declare tag Ply.Ope.Buffering.A 先行入力A
             #declare tag Ply.Ope.Buffering.B 先行入力B
             #declare tag Ply.Ope.Buffering.C 先行入力C
             #declare tag Ply.Ope.Buffering.D 先行入力D
+            #declare tag Ply.Ope.Buffering.E 先行入力E
+            #declare tag Ply.Ope.Buffering.F 先行入力F
+            #declare tag Ply.Ope.Buffering.Jump 先行入力移動ジャンプ
+            #declare tag Ply.Ope.Buffering.Arts1 先行入力狩技1
+            #declare tag Ply.Ope.Buffering.Arts2 先行入力狩技2
     # クエスト中処理
         #declare tag Ply.Event.DeathAnimation 死亡演出
     # 進捗

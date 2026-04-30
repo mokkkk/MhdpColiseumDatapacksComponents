@@ -48,9 +48,13 @@
     execute if score @s Wpn.AnimationTimer matches 43 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/animation_26
     execute if score @s Wpn.AnimationTimer matches 44 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/animation_27
     # 8-9
-    execute if score @s Wpn.AnimationTimer matches 50 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/animation_28
-    execute if score @s Wpn.AnimationTimer matches 55 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/animation_29
-    execute if score @s Wpn.AnimationTimer matches 57 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/animation_30
+    execute if score @s Wpn.AnimationTimer matches 48 run function mhdp_items:weapons/short_sword/type_tec/10_spin/animation_0
+    execute if score @s Wpn.AnimationTimer matches 49 run function mhdp_items:weapons/short_sword/type_tec/10_spin/animation_1
+    execute if score @s Wpn.AnimationTimer matches 51 run function mhdp_items:weapons/short_sword/type_tec/10_spin/animation_2
+    execute if score @s Wpn.AnimationTimer matches 53 run function mhdp_items:weapons/short_sword/type_tec/10_spin/animation_3
+    execute if score @s Wpn.AnimationTimer matches 54 run function mhdp_items:weapons/short_sword/type_tec/10_spin/animation_4
+    execute if score @s Wpn.AnimationTimer matches 56 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/animation_29
+    execute if score @s Wpn.AnimationTimer matches 58 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/animation_30
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/attack_0
@@ -60,8 +64,8 @@
     execute if score @s Wpn.GeneralTimer matches 29 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/attack_4
     execute if score @s Wpn.GeneralTimer matches 35 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/attack_5
     execute if score @s Wpn.GeneralTimer matches 43 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/attack_6
-    execute if score @s Wpn.GeneralTimer matches 55 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/attack_7
-    execute if score @s Wpn.GeneralTimer matches 58 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/attack_8
+    execute if score @s Wpn.GeneralTimer matches 56 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/attack_7
+    execute if score @s Wpn.GeneralTimer matches 59 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/attack_8
 
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..2 run tp @s ~ ~ ~ ~-1 ~2
@@ -92,16 +96,14 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 12000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -5 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 27 run scoreboard players set $strength player_motion.api.launch 1000
-    execute if score @s Wpn.GeneralTimer matches 27 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 33 run scoreboard players set $strength player_motion.api.launch 1000
-    execute if score @s Wpn.GeneralTimer matches 33 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 42 run scoreboard players set $strength player_motion.api.launch 5000
-    execute if score @s Wpn.GeneralTimer matches 42 rotated ~ 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 55 run scoreboard players set $strength player_motion.api.launch 4000
-    execute if score @s Wpn.GeneralTimer matches 55 rotated ~170 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -5 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 27 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 33 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 42 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:5000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 48 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 50 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 54 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 56 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:false, IsAdjust:false}
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 75.. run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/end

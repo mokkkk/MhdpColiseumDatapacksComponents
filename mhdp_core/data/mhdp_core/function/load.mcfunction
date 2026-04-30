@@ -49,6 +49,8 @@
     # 処理用タイマー
         # ベクトルジャンプクールタイム
             scoreboard objectives add Ply.Timer.VectorJumpCoolTime dummy
+        # 段差飛び降り判定時間
+            scoreboard objectives add Ply.Timer.JumpOffCheckTime dummy
         # 無敵時間
             scoreboard objectives add Ply.Timer.DamageInterval dummy
         # 回避時間
@@ -118,12 +120,20 @@
     scoreboard players set #const_80 Const 80
     scoreboard players set #const_100 Const 100
     scoreboard players set #const_10000 Const 10000
-    scoreboard players set #const_crit_multiply_normal Const 125
-    scoreboard players set #const_crit_multiply_lv1 Const 130
-    scoreboard players set #const_crit_multiply_lv2 Const 135
-    scoreboard players set #const_crit_multiply_lv3 Const 140
-    scoreboard players set #const_crit_multiply_element Const 115
-    scoreboard players set #const_crit_minus_multiply_normal Const 75
+    # 攻撃力関連
+        # ランス・ガードレイジ
+            scoreboard players set #const_attack_weapon_lance_rage_1 Const 105
+            scoreboard players set #const_attack_weapon_lance_rage_2 Const 110
+            scoreboard players set #const_attack_weapon_lance_rage_3 Const 115
+    # 会心関連
+        scoreboard players set #const_crit_multiply_normal Const 125
+        scoreboard players set #const_crit_minus_multiply_normal Const 75
+        # 超会心
+            scoreboard players set #const_crit_multiply_lv1 Const 130
+            scoreboard players set #const_crit_multiply_lv2 Const 135
+            scoreboard players set #const_crit_multiply_lv3 Const 140
+        # 属性会心
+            scoreboard players set #const_crit_multiply_element Const 115
     # スライムのサイズ
         scoreboard players set #const_slime_size Const 5205
 

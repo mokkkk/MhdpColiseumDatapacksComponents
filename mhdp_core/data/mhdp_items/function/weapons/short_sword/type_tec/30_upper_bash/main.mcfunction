@@ -47,8 +47,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 8 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 8 run scoreboard players set $strength player_motion.api.launch 14000
-    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ -90 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ -90 run function api:weapon_operation/use_player_motion.m {Strength:14000, IsForce:true, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 10 run tag @s add Ply.Ope.IsAir
 
 # ガード判定
@@ -62,8 +61,12 @@
 
 # 遷移
     # 右クリック：強フォールバッシュに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A,tag=!Ply.Flag.Ss.UpperBashCounter] if score @s Wpn.GeneralTimer matches 20..34 run tp @s @s
+        execute if entity @s[tag=Ply.Ope.Buffering.A,tag=Ply.Flag.Ss.UpperBashCounter] if score @s Wpn.GeneralTimer matches 25..34 run tp @s @s
         execute if entity @s[tag=Ply.Ope.Buffering.A,tag=!Ply.Flag.Ss.UpperBashCounter] if score @s Wpn.GeneralTimer matches 20..34 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/start
         execute if entity @s[tag=Ply.Ope.Buffering.A,tag=Ply.Flag.Ss.UpperBashCounter] if score @s Wpn.GeneralTimer matches 25..34 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/start
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 35.. run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/end
+    
+    execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 35.. run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/end
+    execute if score @s Wpn.GeneralTimer matches 80.. run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/end

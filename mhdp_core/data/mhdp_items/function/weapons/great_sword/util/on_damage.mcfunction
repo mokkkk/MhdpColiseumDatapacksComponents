@@ -4,12 +4,18 @@
 #
 # @within function mhdp_items:core/switch/macro/m.on_damage
 
+# ステータスリセット
+    function mhdp_items:weapons/lance/util/set_status
+
 # ジャストタックル
     execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Gs.Tec.Tackle] if score @s Wpn.GeneralTimer matches ..3 run function mhdp_items:weapons/great_sword/type_tec/3_tackle/just_tackle
 
 # 威姿呵成の構え
     execute if entity @s[tag=Wpn.Gs.Normal.CounterStance,tag=!Ply.Weapon.Type.Tech] if score @s Wpn.GeneralTimer matches ..39 run function mhdp_items:weapons/great_sword/type_normal/20_counter_stance_success/start
     execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Gs.Tec.CounterStance] if score @s Wpn.GeneralTimer matches ..39 run function mhdp_items:weapons/great_sword/type_tec/20_counter_stance_success/start
+
+# 震怒竜怨斬
+    execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Gs.Tec.RageCharge] if score @s Wpn.GeneralTimer matches 24.. run function mhdp_items:weapons/great_sword/type_tec/33_rage_charge/counter
 
 # 相殺成功時、ダメージ軽減
     execute if entity @s[tag=Ply.Flag.CounterSuccess] run scoreboard players set #mhdp_temp_damage_reduction MhdpCore 25

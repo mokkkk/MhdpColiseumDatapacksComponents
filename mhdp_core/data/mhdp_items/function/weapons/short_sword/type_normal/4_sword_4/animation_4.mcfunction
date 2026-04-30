@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_tec/5_horizon_2/animation_4
+#> mhdp_items:weapons/short_sword/type_tec/7_bash_1/animation_4
 #
-# 水平斬りコンボ2 アニメーション処理
+# 盾攻撃 アニメーション処理
 #
-# @within function mhdp_items:weapons/short_sword/type_tec/5_horizon_2/main
+# @within function mhdp_items:weapons/short_sword/type_tec/7_bash_1/main
 
 # アニメーション
-    function api:weapon/animation.m {Slot:"mainhand", Cmd:"empty"}
+    function api:weapon/animation.m {Slot:"offhand", Cmd:"bash_2_1_sub"}

@@ -38,7 +38,7 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 4..10 at @s run tp @s ~ ~ ~ ~0.6 ~0.8
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 25..26 at @s run tp @s ~ ~ ~ ~-2 ~-2
     execute if score @s Wpn.GeneralTimer matches 20 run playsound entity.experience_orb.pickup master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
-    execute if score @s Wpn.GeneralTimer matches 20 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
+    execute if score @s Wpn.GeneralTimer matches 20 positioned ~ ~1.65 ~ run particle flash{color:[1.000,1.000,1.000,1.00]} ^ ^ ^0.5 0 0 0 0 1
     execute if score @s Wpn.AnimationTimer matches 25..27 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s Wpn.AnimationTimer matches 25 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 0.4 0.1 0.4 0 10
 
@@ -52,21 +52,21 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 2 run scoreboard players set $strength player_motion.api.launch 6000
-    execute if score @s Wpn.GeneralTimer matches 2 rotated ~180 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 5 run scoreboard players set $strength player_motion.api.launch 4000
-    execute if score @s Wpn.GeneralTimer matches 5 rotated ~180 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 25 run scoreboard players set $strength player_motion.api.launch 10000
-    execute if score @s Wpn.GeneralTimer matches 25 rotated ~ -30 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 31 run scoreboard players set $strength player_motion.api.launch 8000
-    execute if score @s Wpn.GeneralTimer matches 31 rotated ~ 60 run function player_motion:api/launch_looking
+    # execute if score @s Wpn.GeneralTimer matches 2 run scoreboard players set $strength player_motion.api.launch 6000
+    execute if score @s Wpn.GeneralTimer matches 2 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:true, IsAdjust:true}
+    # execute if score @s Wpn.GeneralTimer matches 5 run scoreboard players set $strength player_motion.api.launch 4000
+    execute if score @s Wpn.GeneralTimer matches 5 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:true, IsAdjust:true}
+    # execute if score @s Wpn.GeneralTimer matches 25 run scoreboard players set $strength player_motion.api.launch 10000
+    execute if score @s Wpn.GeneralTimer matches 25 rotated ~ -30 run function api:weapon_operation/use_player_motion.m {Strength:10000, IsForce:true, IsAdjust:true}
+    # execute if score @s Wpn.GeneralTimer matches 31 run scoreboard players set $strength player_motion.api.launch 8000
+    execute if score @s Wpn.GeneralTimer matches 31 rotated ~ 60 run function api:weapon_operation/use_player_motion.m {Strength:8000, IsForce:true, IsAdjust:true}
 
 # 先行入力
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 3..44 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartUsingWeapon] if score @s Wpn.GeneralTimer matches 3..44 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 3..44 run function mhdp_items:core/buffering/jump
 
 # 遷移
-    # 右クリック：斬り上げに移行
+    # クリック：斬り上げに移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 38..44 run function mhdp_items:weapons/short_sword/type_tec/29_upper_slash/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 38..44 run function mhdp_items:weapons/short_sword/util/move_jump

@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/bow/type_tec/14_air_shot/move
 #
-# チャージステップ 移動
+# 空中射撃
 #
 # @within function mhdp_items:weapons/bow/type_tec/1_charge/change_to_chargeattack
 
@@ -10,5 +10,4 @@
 
 # 移動
     tp @s @s
-    scoreboard players set $strength player_motion.api.launch 4500
-    execute rotated ~180 -45 run function player_motion:api/launch_looking
+    execute rotated ~180 -45 run function api:weapon_operation/use_player_motion.m {Strength:4500, IsForce:true, IsAdjust:false}

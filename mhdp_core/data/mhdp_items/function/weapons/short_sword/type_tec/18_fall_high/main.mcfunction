@@ -16,7 +16,7 @@
     execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/animation_1
 
 # 攻撃
-    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 5..20 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/attack_1
+    execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 5..59 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/attack_1
     execute if score @s Wpn.GeneralTimer matches 61 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/attack_2
 # 効果音・パーティクル
     execute if score @s Wpn.AnimationTimer matches 4..59 run particle cloud ~ ~1 ~ 0 0 0 0.05 1
@@ -27,13 +27,13 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 5000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -90 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 5 run scoreboard players set $strength player_motion.api.launch 13000
-    execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 90 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -90 run function api:weapon_operation/use_player_motion.m {Strength:5000, IsForce:true, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 90 run function api:weapon_operation/use_player_motion.m {Strength:13000, IsForce:true, IsAdjust:false}
 
 # 着地
     execute if entity @s[tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches ..59 run scoreboard players set @s Wpn.GeneralTimer 60
+    # 落下中にヒットしなかった場合の保証
+        execute if entity @s[tag=!Ply.Flag.Hit,tag=!Ply.Ope.IsAir] if score @s Wpn.GeneralTimer matches 60 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/attack_1_nohit
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 68.. run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/end

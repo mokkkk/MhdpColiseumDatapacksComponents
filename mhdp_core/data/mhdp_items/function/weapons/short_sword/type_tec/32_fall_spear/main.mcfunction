@@ -39,10 +39,8 @@
     execute if score @s Wpn.GeneralTimer matches 99 run function mhdp_items:weapons/short_sword/type_tec/32_fall_spear/effect_on_ground
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 5000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -60 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 6 run scoreboard players set $strength player_motion.api.launch 8000
-    execute if score @s Wpn.GeneralTimer matches 6 rotated ~ 90 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -60 run function api:weapon_operation/use_player_motion.m {Strength:5000, IsForce:true, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 6 rotated ~ 90 run function api:weapon_operation/use_player_motion.m {Strength:8000, IsForce:true, IsAdjust:false}
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 3..114 run function mhdp_items:core/buffering/a

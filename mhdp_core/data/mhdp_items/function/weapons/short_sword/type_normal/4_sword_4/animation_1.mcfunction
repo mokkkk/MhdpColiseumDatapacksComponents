@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_normal/4_sword_4/animation_1
+#> mhdp_items:weapons/short_sword/type_tec/8_bash_2/animation_1
 #
-# 剣コンボ4 アニメーション処理
+# バックナックル アニメーション処理
 #
-# @within function mhdp_items:weapons/short_sword/type_normal/4_sword_4/main
+# @within function mhdp_items:weapons/short_sword/type_tec/8_bash_2/main
 
 # アニメーション
-    function api:weapon/animation.m {Slot:"mainhand", Cmd:"horizon_2_2"}
+    function api:weapon/animation.m {Slot:"offhand", Cmd:"bash_2_2_sub"}

@@ -4,8 +4,13 @@
 #
 # @within function mhdp_items:weapons/bow/type_normal/12_targetting_shot/main
 
+# ターゲットがない場合、ただの射撃
+    execute if score @s Wpn.Bw.Bottle.Targetting matches ..0 run return run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/attack_normal
+
+# ビン消費
+    scoreboard players operation @s Wpn.Bw.Bottle.Count -= @s Wpn.Bw.Bottle.Targetting
+
 # 矢を召喚
-    scoreboard players set @s Wpn.Bw.Bottle.Targetting 6
     scoreboard players set #mhdp_temp_start_rotation MhdpCore -10
     execute store result storage mhdp_core:temp Temp.StartRotation int 1 run scoreboard players operation #mhdp_temp_start_rotation MhdpCore *= @s Wpn.Bw.Bottle.Targetting
     function mhdp_items:weapons/bow/type_normal/12_targetting_shot/attack_loop.m with storage mhdp_core:temp Temp
@@ -17,6 +22,10 @@
     tag @s remove Ply.Weapon.UsingArts.2
     scoreboard players set @s Ply.Stats.Arts.2 0
     scoreboard players set @s Ply.Stats.Arts.2.Percent 0
+
+# 対象解放
+    data remove storage mhdp_core:temp PlayerData.Bow.TargetUidList
+    function mhdp_core:player/data/save_data
 
 # 終了
     tag @e[type=item_display,tag=Other.Shot,tag=Wpn.Bw.Shot.Pierce,tag=Start] remove Start

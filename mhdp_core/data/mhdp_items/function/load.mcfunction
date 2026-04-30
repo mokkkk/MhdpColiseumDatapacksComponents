@@ -71,6 +71,16 @@
             scoreboard objectives add Wpn.Ss.ChargeTimer dummy
         # 溜め段階
             scoreboard objectives add Wpn.Ss.ChargeCount dummy
+    # ランス
+        # 突き段階
+            scoreboard objectives add Wpn.Lc.SpearCount dummy
+        # 溜め時間
+            scoreboard objectives add Wpn.Lc.ChargeTimer dummy
+        # 溜め段階
+            scoreboard objectives add Wpn.Lc.ChargeCount dummy
+        # ガードレイジ
+            scoreboard objectives add Wpn.Lc.RageLevel dummy
+            scoreboard objectives add Wpn.Lc.RageTimer dummy
     # 弓
         # 溜め時間
             scoreboard objectives add Wpn.Bw.ChargeTimer dummy
@@ -88,7 +98,7 @@
             scoreboard objectives add Wpn.Bw.Bottle.Count dummy
         # 飛翔睨み撃ち回数
             scoreboard objectives add Wpn.Bw.FlyingShot.Count dummy
-        # 昇天煌弓・箭射のロックオン済みビン
+        # 昇天煌弓・箭雨のロックオン済みビン
             scoreboard objectives add Wpn.Bw.Bottle.Targetting dummy
 # 特殊装具ごとの特殊スコア
     # 砥石

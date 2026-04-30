@@ -11,7 +11,7 @@
     execute if score @s ObjectTick matches 1 run data modify entity @s teleport_duration set value 1
 
 # メイン処理実行
-    execute if entity @s[tag=!6.IsJump] if score @s ObjectTick matches 8.. run particle flash ~ ~ ~ 0 0 0 0 1
+    execute if entity @s[tag=!6.IsJump] if score @s ObjectTick matches 8.. run particle flash{color:[1.000,1.000,1.000,1.00]} ~ ~ ~ 0 0 0 0 1
     execute if entity @s[tag=!6.IsJump] if score @s ObjectTick matches 8.. run playsound entity.breeze.jump master @a ~ ~ ~ 2 1
     execute if entity @s[tag=!6.IsJump] if score @s ObjectTick matches 8.. run tag @s add 6.IsJump
     execute if entity @s[tag=6.IsJump] run tp @s ~ ~ ~ ~ -90

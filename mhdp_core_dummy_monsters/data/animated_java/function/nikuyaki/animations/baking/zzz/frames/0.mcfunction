@@ -2,4 +2,4 @@
 $data merge entity $(bone_meat) {transformation: [-1.5f,0f,0f,0f,0f,1.0607f,1.0607f,1.079f,0f,1.0607f,-1.0607f,-0.6885f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
 $data merge entity $(bone_chair1) {transformation: [-1.5f,0f,0f,0f,0f,1.5f,0f,0.4845f,0f,0f,-1.5f,-2.1679f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
 $data merge entity $(bone_base) {transformation: [-1.5f,0f,0f,0.0937f,0f,1.5f,0f,0f,0f,0f,-1.5f,0.0938f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
-data modify entity @s data merge value {"cameras":{},"locators":{"chair":{"posx":2.64064466066148e-16,"posy":0.3984375,"posz":-2.15625,"roty":0,"rotx":0},"interaction":{"posx":0,"posy":0.609375,"posz":0,"roty":0,"rotx":0}}}
+data modify entity @s data merge value {"cameras":{},"locators":{"chair":{"px":2.64064466066148e-16,"py":0.3984375,"pz":-2.15625,"ry":0,"rx":0},"interaction":{"px":0,"py":0.609375,"pz":0,"ry":0,"rx":0}}}

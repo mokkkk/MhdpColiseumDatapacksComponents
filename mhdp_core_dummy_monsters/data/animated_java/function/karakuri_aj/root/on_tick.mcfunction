@@ -3,5 +3,5 @@ execute unless entity @s[tag=aj.karakuri_aj.root] run return 0
 execute if entity @s[tag=aj.karakuri_aj.animation.idle.playing] run function animated_java:karakuri_aj/animations/idle/zzz/on_tick
 execute if entity @s[tag=aj.karakuri_aj.animation.damage_counter.playing] run function animated_java:karakuri_aj/animations/damage_counter/zzz/on_tick
 execute if entity @s[tag=aj.karakuri_aj.animation.bite.playing] run function animated_java:karakuri_aj/animations/bite/zzz/on_tick
-execute on passengers if entity @s[tag=aj.karakuri_aj.data] run function animated_java:karakuri_aj/root/zzz/on_tick/locators_and_cameras
-execute at @s on passengers run rotate @s ~ ~
+execute on passengers if entity @s[tag=aj.global.data] run function animated_java:karakuri_aj/root/on_tick/transform_floating_entities
+execute on passengers run rotate @s ~ ~

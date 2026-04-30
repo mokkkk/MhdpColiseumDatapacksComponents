@@ -26,13 +26,24 @@
         execute if entity @s[tag=Wpn.Bw.Normal.Shot.Air] run function mhdp_items:weapons/bow/type_normal/14_air_shot/main
 
 # 狩技：身躱し射法
+    # 開始：スニーク+Ctrl+左クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max run function mhdp_items:weapons/bow/type_normal/11_moving_shot/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Normal.MovingShot] run function mhdp_items:weapons/bow/type_normal/11_moving_shot/main
 
-# 狩技：昇天煌弓・箭射
+# 狩技：昇天煌弓・箭雨
+    # 開始：スニーク+Ctrl+右クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/start
     # 処理
         execute if entity @s[tag=Wpn.Bw.Normal.TargettingShot] run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/main
         execute if entity @s[tag=Wpn.Bw.Normal.JumpShot] run function mhdp_items:weapons/bow/type_normal/13_jump_shot/main
+
+# クイックショット
+    # 通常
+        # 開始：立ち+左クリック
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_normal/15_quick_shot/start
+        # 処理
+            execute if entity @s[tag=Wpn.Bw.Normal.QuickShot] run function mhdp_items:weapons/bow/type_normal/15_quick_shot/main
 
 # 溜め
     # 通常
@@ -46,6 +57,12 @@
         # 処理
             execute if entity @s[tag=Wpn.Bw.Normal.Shot] run function mhdp_items:weapons/bow/type_normal/2_shot/main
 
+# ビン装填
+    # 開始：スニーク+左クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Wpn.Bw.Gauge matches 13.. if score @s Wpn.Bw.Bottle.Count matches ..7 run function mhdp_items:weapons/bow/type_normal/9_equip_bottle/start
+    # 処理
+        execute if entity @s[tag=Wpn.Bw.Normal.Equip] run function mhdp_items:weapons/bow/type_normal/9_equip_bottle/main
+
 # 竜の一矢
     # 開始：スニーク+右クリック
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] if score @s Ply.Stats.Stamina matches 1.. run function mhdp_items:weapons/bow/type_normal/6_shot_pierce/start
@@ -55,10 +72,6 @@
 # 竜の千々矢
     # 処理
         execute if entity @s[tag=Wpn.Bw.Normal.Shot.Shower] run function mhdp_items:weapons/bow/type_normal/7_shot_shower/main
-
-# 飛翔睨み撃ち
-    # 処理
-        execute if entity @s[tag=Wpn.Bw.Normal.FlyingShot] run function mhdp_items:weapons/bow/type_normal/10_flying_shot/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

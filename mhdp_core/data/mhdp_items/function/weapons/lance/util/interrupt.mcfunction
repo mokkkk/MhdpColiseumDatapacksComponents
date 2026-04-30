@@ -1,0 +1,35 @@
+#> mhdp_items:weapons/lance/util/interrupt
+#
+# 武器の初期化処理
+#
+# @within function mhdp_items:core/switch/macro/m.interrupt
+
+# ステータス削除
+    attribute @s attack_speed modifier remove mhdp_core:weapon_attack_speed
+    attribute @s movement_speed modifier remove mhdp_core:weapon_movement_speed
+    attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength
+    attribute @s attack_damage modifier remove mhdp_core:weapon_attack_damage
+    attribute @s attack_damage modifier add mhdp_core:weapon_attack_damage 5.0 add_value
+    attribute @s gravity modifier remove mhdp_core:weapon_gravity
+    effect clear @s slowness
+
+# タイマー初期化
+    scoreboard players set @s Wpn.GeneralTimer -1
+    scoreboard players set @s Wpn.AnimationTimer 0
+
+# 状態タグ削除
+    function api:weapon_operation/remove_state_tags
+    # ランス独自
+        # tag @s remove Ply.Flag.Ss.UpperBashCounter
+
+# アニメーション停止
+    function mhdp_items:weapons/lance/util/stop_all_animations
+
+# 武器モデルのリセット
+    # メインハンド
+        execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function api:weapon/draw.m {Slot:"mainhand", Cmd:"drawing"}
+    # オフハンド
+        execute if items entity @s weapon.offhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsSubWeapon:1b,IsDrawing:1b}] run function api:weapon/draw_sub.m {Slot:"offhand", Cmd:"drawing_sub"}
+
+# 抜刀中はステータスをリセットする
+    execute if entity @s[tag=Ply.Weapon.Drawing] run function mhdp_items:weapons/lance/util/set_status

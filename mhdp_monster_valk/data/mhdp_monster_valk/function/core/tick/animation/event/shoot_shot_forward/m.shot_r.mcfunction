@@ -12,7 +12,7 @@
     execute as @n[type=item_display,tag=Mns.Shot.Valk.Shot,tag=Start] at @s facing entity @n[type=area_effect_cloud,tag=Mns.ShotPos.Valk] feet run tp @s ~ ~ ~ ~ ~
 
 # 演出
-    $particle flash ^$(posx) ^$(posy) ^$(posz) 0 0 0 0 1 force
+    $particle flash{color:[1.000,1.000,1.000,1.00]} ^$(posx) ^$(posy) ^$(posz) 0 0 0 0 1 force
     playsound entity.breeze.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
     playsound entity.breeze.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.5
     playsound entity.shulker.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8

@@ -31,9 +31,7 @@
     execute if score @s Wpn.Gs.ChargeTimer matches 300.. if score @s Wpn.Gs.ChargeCount matches ..2 run function mhdp_items:weapons/great_sword/type_tec/13_upper_charge/up_charge_count
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 6000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:false, IsAdjust:false}
 
 # 演出
    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..5 run tp @s ~ ~ ~ ~ ~0.6
@@ -45,6 +43,8 @@
     # 溜めすぎた場合、自動的に相殺斬り上げに移行
         execute if score @s Wpn.Gs.ChargeTimer matches 450.. run scoreboard players set @s Wpn.Gs.ChargeCount 2
         execute if score @s Wpn.Gs.ChargeTimer matches 450.. run function mhdp_items:weapons/great_sword/type_tec/14_upper_slash/start
-    # S + スニーク、威姿呵成の構えに移行
+    # 威姿呵成の構え：Sneak+後ろ移動 or Sneak+Ctrl
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeySprint,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start
+        execute if entity @s[tag=Ply.Ope.StartSneak,tag=Ply.Ope.IsKeySprint,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start
         execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyBack,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start
         execute if entity @s[tag=Ply.Ope.StartSneak,tag=Ply.Ope.IsKeyBack,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start

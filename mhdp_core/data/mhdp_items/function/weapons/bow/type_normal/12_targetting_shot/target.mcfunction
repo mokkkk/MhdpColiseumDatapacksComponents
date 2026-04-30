@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/bow/type_tec/12_targetting_shot/target
+#> mhdp_items:weapons/bow/type_normal/12_targetting_shot/target
 #
-# 昇天煌弓・箭射 ロックオン
+# 昇天煌弓・箭雨 ロックオン
 #
-# @within function mhdp_items:weapons/bow/type_tec/12_targetting_shot/main
+# @within function mhdp_items:weapons/bow/type_normal/12_targetting_shot/main
 
 # ビンが足りない場合、スキップ
     execute if score @s Wpn.Bw.Bottle.Count <= @s Wpn.Bw.Bottle.Targetting run return run scoreboard players set @s Wpn.AnimationTimer 0

@@ -1,25 +1,28 @@
-#> mhdp_items:weapons/short_sword/type_normal/4_sword_4/particle
+#> mhdp_items:weapons/short_sword/type_tec/8_bash_2/particle
 #
-# 剣コンボ4 演出
+# 盾攻撃 演出
 #
-# @within function mhdp_items:weapons/short_sword/type_normal/4_sword_4/main
+# @within function mhdp_items:weapons/short_sword/type_tec/8_bash_2/main
 
-# [ImportKey]: NobwRALgngDgpmAXGANgSwHYIDRgK55oAmSYAnACwAMAZgOwAcAxgEYC0RZDVbFAzCz5tuzNiwYA2AIxUGZOHAZ8ATGFwYAhgFsEyQFu+AAilqwMDQCdtAZyTgmAezwYISKXVw1z9rbbAA3DRQ8XXAADyQqADp3MCgkNilI5QBfZNwIe18AoJCwcMQ2KIBWXDjERL5U3HsaGis4F0QqXBY4AC80OHMI3DQrACF2zvMAUQBHPECUKABlMyY4EkQaQPrUgF0gA_3
-# 線 1
-particle crit ^0.7 ^-1.2 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^0.625 ^-1.04375 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^0.55 ^-0.8875 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^0.475 ^-0.73125 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^0.4 ^-0.575 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^0.325 ^-0.41875 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^0.25 ^-0.2625 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^0.175 ^-0.10625 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^0.1 ^0.05 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^0.025 ^0.20625 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^-0.05 ^0.3625 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^-0.125 ^0.51875 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^-0.2 ^0.675 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^-0.275 ^0.83125 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^-0.35 ^0.9875 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^-0.425 ^1.14375 ^ 0.05 0.05 0.05 0.0 1
-particle crit ^-0.5 ^1.3 ^ 0.05 0.05 0.05 0.0 1
+# [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmACwAMKAnJQGYoCsAtAIZwNs0Bs1NgA5KAJkptSHUnSEBmFHBYBGUXTAEAdhwC2CZIDDFAATKNYGBwy6AzknAoA9oU0Qko6gUUu4GO2ABuHNiE+uAAHkgeYFCRAL6xBFakaIS2iMrUmVlR1hCWrohRcNjYaDDW+hlRGA55EPpRaNYAoiVlFc0AjoRB2FAAyhaK5IiMQRXxALpAA_3
+# 円 1
+particle crit ~ ~ ~ ^0 ^-10000000 ^ 0.0000001 0
+particle crit ~ ~ ~ ^3090169.94375 ^-9510565.16295 ^ 0.0000001 0
+particle crit ~ ~ ~ ^5877852.52292 ^-8090169.94375 ^ 0.0000001 0
+particle crit ~ ~ ~ ^8090169.94375 ^-5877852.52292 ^ 0.0000001 0
+particle crit ~ ~ ~ ^9510565.16295 ^-3090169.94375 ^ 0.0000001 0
+particle crit ~ ~ ~ ^10000000 ^0 ^ 0.0000001 0
+particle crit ~ ~ ~ ^9510565.16295 ^3090169.94375 ^ 0.0000001 0
+particle crit ~ ~ ~ ^8090169.94375 ^5877852.52292 ^ 0.0000001 0
+particle crit ~ ~ ~ ^5877852.52292 ^8090169.94375 ^ 0.0000001 0
+particle crit ~ ~ ~ ^3090169.94375 ^9510565.16295 ^ 0.0000001 0
+particle crit ~ ~ ~ ^0 ^10000000 ^ 0.0000001 0
+particle crit ~ ~ ~ ^-3090169.94375 ^9510565.16295 ^ 0.0000001 0
+particle crit ~ ~ ~ ^-5877852.52292 ^8090169.94375 ^ 0.0000001 0
+particle crit ~ ~ ~ ^-8090169.94375 ^5877852.52292 ^ 0.0000001 0
+particle crit ~ ~ ~ ^-9510565.16295 ^3090169.94375 ^ 0.0000001 0
+particle crit ~ ~ ~ ^-10000000 ^0 ^ 0.0000001 0
+particle crit ~ ~ ~ ^-9510565.16295 ^-3090169.94375 ^ 0.0000001 0
+particle crit ~ ~ ~ ^-8090169.94375 ^-5877852.52292 ^ 0.0000001 0
+particle crit ~ ~ ~ ^-5877852.52292 ^-8090169.94375 ^ 0.0000001 0
+particle crit ~ ~ ~ ^-3090169.94375 ^-9510565.16295 ^ 0.0000001 0

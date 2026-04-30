@@ -18,7 +18,6 @@
     scoreboard players set @s Wpn.Gs.ChargeSlashCount 0
 
 # 移動
-    scoreboard players set $strength player_motion.api.launch 6000
-    execute rotated ~ -90 run function player_motion:api/launch_looking
+    execute rotated ~ -90 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:true, IsAdjust:false}
 
 # say 武器操作：大剣・空中溜め

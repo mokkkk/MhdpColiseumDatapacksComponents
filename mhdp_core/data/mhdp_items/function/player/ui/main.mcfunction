@@ -5,13 +5,14 @@
 # @within function mhdp_core:player/tick
 
 # 初期化
-    data modify storage mhdp_core:temp UI set value {Sharpness:{},Stamina:{},StaminaArray:[],ExArray:[]}
+    data modify storage mhdp_core:temp UI set value {Weapon:{},Stamina:{},StaminaArray:[],ExArray:[]}
+    # data modify storage mhdp_core:temp UI set value {Sharpness:{},Stamina:{},StaminaArray:[],ExArray:[]}
 
 # 斬れ味
-    function mhdp_items:player/ui/sharpness/main
+    # function mhdp_items:player/ui/sharpness/main
 
-# # 武器ごとの特殊ゲージ
-#     function mhdp_items:player/ui/weapon/main
+# 武器固有UI
+    function mhdp_items:player/ui/weapon/main
 
 # 特殊装具
     function mhdp_items:player/ui/item/main
@@ -38,22 +39,19 @@
     function mhdp_items:player/ui/option/main
 
 # UI表示
-# 1近接：-6px 切れ味(44px) +4px 武器(40px) 空欄(53px) アイテム1(16px) +4px アイテム2(16px) : 計178px
+# 1： -8px 武器固有UI(148px) +3px アイテム1(16px) +4px アイテム2(16px) : 計178px
 # 2：-22px -200px 型表示(20) +180px +22px : 計0px
 # 3：-204px タイマー(20px) -1px スタミナ(82px) +100px : 計-1px
 # 4：-9px 狩技ゲージ1(41px) -2px 狩技ゲージ2(41px) : 計-1px
 # 5：-89px 建築マーク(24px) -1px 建築ゲージ(82px) -1px : 計-1px
 # 5：+7px ジャンプトグル(24px) -32px
     title @s actionbar [\
-        {"text":"\uF998\uF998\uF998\uF801","font":"space"},\
-        {"interpret":true,"nbt":"UI.Sharpness","storage":"mhdp_core:temp"},\
-        {"text":"\uF804","font":"space"},\
-        {"text":"#","font":"ui/new_player_ui/weapon",shadow_color:[0,0,0,0]},\
-        {"text":"\uF888\uF888\uF888\uF888\uF888\uF888\uF802\uF802\uF802\uF801","font":"space"},\
+        {"text":"\uF998\uF998\uF998\uF998","font":"space"},\
+        {"interpret":true,"nbt":"UI.Weapon","storage":"mhdp_core:temp"},\
+        {"text":"\uF802\uF802\uF802","font":"space"},\
         {"interpret":true,"nbt":"UI.Item0","storage":"mhdp_core:temp"},\
         {"text":"\uF804","font":"space"},\
         {"interpret":true,"nbt":"UI.Item1","storage":"mhdp_core:temp"},\
-        {"text":"\uF801","font":"space"},\
         \
         {"text":"\uF999\uF999\uF801\uF801\uF801","font":"space"},\
         {"text":"\uF815","font":"space"},\
@@ -82,78 +80,50 @@
         {"text":"\uF999\uF999\uF999\uF998","font":"space"},\
     ]
 
-# # UI表示
-# # 1段：斬れ味(60px) +4px 武器(60px) +10px アイテム1(16px) +10px アイテム2(16px)  - 計176px
-# # 3段：-176px -70px 狩技2(62px) +68px +116px - 計0px
-# # 3段：-176px -70px 狩技1(62px) +68px +116px - 計0px
-# # 4段：                                              +4px -80px スタミナ(80px) - 計 4px
-#     title @s actionbar [\
-#         {"interpret":true,"nbt":"UI.Sharpness","storage":"mhdp_core:temp"},\
-#         {"text":"\uF804","font":"space"},\
-#         {"interpret":true,"nbt":"UI.Weapon","storage":"mhdp_core:temp"},\
-#         {"text":"\uF888","font":"space"},\
-#         {"interpret":true,"nbt":"UI.Item0","storage":"mhdp_core:temp"},\
-#         {"text":"\uF888","font":"space"},\
-#         {"interpret":true,"nbt":"UI.Item1","storage":"mhdp_core:temp"},\
-#         \
-#         {"text":"\uF812\uF812 ","font":"space"},\
-#         {"text":"\uF998\uF998\uF814\uF998\uF998\uF998","font":"space"},\
-#         {"interpret":true,"nbt":"UI.Arts1","storage":"mhdp_core:temp"},\
-#         {"text":"\uF821\uF888\uF888  ","font":"space"},\
-#         {"text":"\uF900\uF998\uF998","font":"space"},\
-#         \
-#         {"text":"\uF812\uF812 ","font":"space"},\
-#         {"text":"\uF998\uF998\uF814\uF998\uF998\uF998","font":"space"},\
-#         {"interpret":true,"nbt":"UI.Arts2","storage":"mhdp_core:temp"},\
-#         {"text":"\uF821\uF888\uF888  ","font":"space"},\
-#         {"text":"\uF801","font":"space"},\
-#         {"text":"\uF900\uF998\uF998","font":"space"},\
-#         \
-#         {"text": " \uF812\uF888\uF801","font":"space"},\
-#         {"interpret":true,"nbt":"UI.Stamina","storage":"mhdp_core:temp"}\
-#     ]
-
-# # UI表示
-# # 1：-6px 切れ味(44px) +4px 武器(40px) 空欄(52px) アイテム1(16px) +4px アイテム2(16px) -1px : 計178px
-# # 2：-22px -200px 型表示(20) +180px +22px : 計0px
-# # 3：-204px タイマー(20px) -1px スタミナ(82px) +100px : 計-1px
-# # 4：-80px 狩技ゲージ1(41px) -2px 狩技ゲージ2(41px) -1px : 計-1px
-# # 5：-87px 建築マーク(7px) -3px 建築ゲージ(82px) : 計-1px
-#     title @s actionbar [\
-#         {"text":"\uF998\uF998\uF998\uF801","font":"space"},\
-#         {"text":"#","font":"ui/new_player_ui/sharpness",shadow_color:[0,0,0,0]},\
-#         {"text":"\uF804","font":"space"},\
-#         {"text":"#","font":"ui/new_player_ui/weapon",shadow_color:[0,0,0,0]},\
-#         {"text":"\uF888\uF888\uF888\uF888\uF888\uF888\uF802\uF802","font":"space"},\
-#         {"text":"1","font":"ui/new_player_ui/item",shadow_color:[0,0,0,0]},\
-#         {"text":"\uF804","font":"space"},\
-#         {"text":"2","font":"ui/new_player_ui/item",shadow_color:[0,0,0,0]},\
-#         {"text":"\uF801","font":"space"},\
-#         \
-#         {"text":"\uF999\uF999\uF801\uF801","font":"space"},\
-#         {"text":"\uF815","font":"space"},\
-#         {"text":"#","font":"ui/new_player_ui/type",shadow_color:[0,0,0,0]},\
-#         {"text":"\uF900\uF822","font":"space"},\
-#         {"text":"\uF888\uF888\uF802\uF802","font":"space"},\
-#         \
-#         {"text":"\uF815\uF998\uF998","font":"space"},\
-#         {"text":"#","font":"ui/new_player_ui/timer",shadow_color:[0,0,0,0]},\
-#         {"text":"\uF801","font":"space"},\
-#         {"text":"#","font":"ui/new_player_ui/stamina",shadow_color:[0,0,0,0]},\
-#         {"text":"\uF821\uF822","font":"space"},\
-#         \
-#         {"text":"\uF813","font":"space"},\
-#         {"text":"1","font":"ui/new_player_ui/arts",shadow_color:[0,0,0,0]},\
-#         {"text":"\uF998","font":"space"},\
-#         {"text":"2","font":"ui/new_player_ui/arts",shadow_color:[0,0,0,0]},\
-#         {"text":"\uF801","font":"space"},\
-#         \
-#         {"text":"\uF813\uF998\uF998\uF998\uF801","font":"space"},\
-#         {"text":"#","font":"ui/new_player_ui/block",shadow_color:[0,0,0,0]},\
-#         {"text":"\uF998\uF801","font":"space"},\
-#         {"text":"$","font":"ui/new_player_ui/block",shadow_color:[0,0,0,0]},\
-#         {"text":"\uF801","font":"space"},\
-#     ]
+# UI表示
+# 1：-6px 切れ味(44px) +4px 武器(40px) 空欄(53px) アイテム1(16px) +4px アイテム2(16px) : 計178px
+# 2：-22px -200px 型表示(20) +180px +22px : 計0px
+# 3：-204px タイマー(20px) -1px スタミナ(82px) +100px : 計-1px
+# 4：-9px 狩技ゲージ1(41px) -2px 狩技ゲージ2(41px) : 計-1px
+# 5：-89px 建築マーク(24px) -1px 建築ゲージ(82px) -1px : 計-1px
+# 6：+7px ジャンプトグル(24px) -32px
+    # title @s actionbar [\
+    #     {"text":"\uF998\uF998\uF998\uF801","font":"space"},\
+    #     {"interpret":true,"nbt":"UI.Sharpness","storage":"mhdp_core:temp"},\
+    #     {"text":"\uF804","font":"space"},\
+    #     {"text":"#","font":"ui/new_player_ui/weapon",shadow_color:[0,0,0,0]},\
+    #     {"text":"\uF888\uF888\uF888\uF888\uF888\uF888\uF802\uF802\uF802\uF801","font":"space"},\
+    #     {"interpret":true,"nbt":"UI.Item0","storage":"mhdp_core:temp"},\
+    #     {"text":"\uF804","font":"space"},\
+    #     {"interpret":true,"nbt":"UI.Item1","storage":"mhdp_core:temp"},\
+    #     {"text":"\uF801","font":"space"},\
+    #     \
+    #     {"text":"\uF999\uF999\uF801\uF801\uF801","font":"space"},\
+    #     {"text":"\uF815","font":"space"},\
+    #     {"interpret":true,"nbt":"UI.Type","storage":"mhdp_core:temp"},\
+    #     {"text":"\uF900\uF822","font":"space"},\
+    #     {"text":"\uF888\uF888\uF802\uF802\uF802","font":"space"},\
+    #     \
+    #     {"text":"\uF815\uF998\uF998","font":"space"},\
+    #     {"text":"#","font":"ui/new_player_ui/timer",shadow_color:[0,0,0,0]},\
+    #     {"interpret":true,"nbt":"UI.Stamina","storage":"mhdp_core:temp"},\
+    #     {"text":"\uF821\uF822","font":"space"},\
+    #     \
+    #     {"text":"\uF813\uF801","font":"space"},\
+    #     {"interpret":true,"nbt":"UI.Arts1","storage":"mhdp_core:temp"},\
+    #     {"text":"\uF998","font":"space"},\
+    #     {"interpret":true,"nbt":"UI.Arts2","storage":"mhdp_core:temp"},\
+    #     \
+    #     {"text":"\uF813\uF998\uF998\uF998\uF801\uF801\uF801","font":"space"},\
+    #     {"interpret":true,"nbt":"UI.Block","storage":"mhdp_core:temp"},\
+    #     {"text":"\uF801","font":"space"},\
+    #     {"interpret":true,"nbt":"UI.BuildGauge","storage":"mhdp_core:temp"},\
+    #     {"text":"\uF801","font":"space"},\
+    #     \
+    #     {"text":"\uF805","font":"space"},\
+    #     {"interpret":true,"nbt":"UI.Option.MoveJump","storage":"mhdp_core:temp"},\
+    #     {"text":"\uF999\uF999\uF999\uF998","font":"space"},\
+    # ]
 
 # 終了
     data remove storage mhdp_core:temp UI

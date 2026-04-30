@@ -40,15 +40,9 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..10 run tp @s ~ ~ ~ ~ ~-0.5
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 12000
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 4 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 4 run scoreboard players set $strength player_motion.api.launch 7000
-    execute if score @s Wpn.GeneralTimer matches 4 rotated ~180 0 run function player_motion:api/launch_looking
-    execute if score @s Wpn.GeneralTimer matches 7 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 7 run scoreboard players set $strength player_motion.api.launch 3000
-    execute if score @s Wpn.GeneralTimer matches 7 rotated ~180 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:12000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 4 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:7000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 7 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:false, IsAdjust:false}
 
 # 遷移
     # 右クリックを離した場合、溜め斬りに移行
@@ -58,6 +52,8 @@
         execute if score @s Wpn.Gs.ChargeTimer matches 450.. run function mhdp_items:weapons/great_sword/type_tec/2_chargeattack/start
     # ジャンプした場合、タックルに移行
         execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Wpn.Gs.Normal.ChargeSlash] if score @s Wpn.GeneralTimer matches 22.. if score @s Ply.Stats.Stamina matches 150.. run function mhdp_items:weapons/great_sword/type_tec/3_tackle/start
-    # S + スニーク、威姿呵成の構えに移行
-        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyBack,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start
-        execute if entity @s[tag=Ply.Ope.StartSneak,tag=Ply.Ope.IsKeyBack,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start
+    # 威姿呵成の構え：Sneak+後ろ移動 or Sneak+Ctrl
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeySprint,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start
+        execute if entity @s[tag=Ply.Ope.StartSneak,tag=Ply.Ope.IsKeySprint,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start
+        execute if entity @s[tag=Ply.Ope.IsSneaking,tag=Ply.Ope.StartKeyBack,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start
+        execute if entity @s[tag=Ply.Ope.StartSneak,tag=Ply.Ope.IsKeyBack,tag=Ply.Ope.IsUsingEnderEye] if score @s Ply.Stats.Arts.1 >= @s Ply.Stats.Arts.1.Max if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/start

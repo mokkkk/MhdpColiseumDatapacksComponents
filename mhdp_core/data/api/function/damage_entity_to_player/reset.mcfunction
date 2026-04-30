@@ -9,6 +9,7 @@
     scoreboard players reset #mhdp_temp_element_dagame_multiply MhdpCore
     scoreboard players reset #mhdp_temp_element_defence_effective MhdpCore
     scoreboard players reset #mhdp_temp_guard_value MhdpCore
+    scoreboard players reset #mhdp_temp_guard_value_original MhdpCore
     scoreboard players reset #mhdp_temp_knockback_strength MhdpCore
 
 # 攻撃者、対象の解放

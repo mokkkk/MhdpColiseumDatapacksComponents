@@ -18,7 +18,7 @@
     scoreboard players set @s Wpn.Gs.ChargeSlashCount 0
 
 # 演出
-    particle flash ~ ~1.65 ~ 0 0 0 0 1
+    particle flash{color:[1.000,1.000,1.000,1.00]} ~ ~1.65 ~ 0 0 0 0 1
     playsound entity.player.levelup master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 2
 
 # 翔蟲使用中の場合、クールタイムを伸ばす

@@ -29,6 +29,9 @@
 # 無敵時間設定
     scoreboard players set @s Ply.Timer.Avoid 3
 
+# 飛び降り判定時間設定
+    scoreboard players set @s Ply.Timer.JumpOffCheckTime 10
+
 # 武器操作停止
     scoreboard players set @s Wpn.DeactivateTimer 8
 

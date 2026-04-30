@@ -10,5 +10,5 @@
     attribute @s movement_speed modifier remove mhdp_core:weapon_movement_speed
     attribute @s movement_speed modifier add mhdp_core:weapon_movement_speed 0 add_value
     attribute @s attack_damage modifier remove mhdp_core:weapon_attack_damage
-    attribute @s attack_damage modifier add mhdp_core:weapon_attack_damage -0.5 add_value
+    attribute @s attack_damage modifier add mhdp_core:weapon_attack_damage -1.0 add_value
     attribute @s jump_strength modifier remove mhdp_core:weapon_jump_strength

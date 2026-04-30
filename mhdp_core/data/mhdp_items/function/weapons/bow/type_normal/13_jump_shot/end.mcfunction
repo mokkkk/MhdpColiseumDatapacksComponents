@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/bow/type_normal/13_jump_shot/end
 #
-# 昇天煌弓・箭射 終了処理
+# 昇天煌弓・箭雨 終了処理
 #
 # @within function mhdp_items:weapons/bow/type_normal/13_jump_shot/main
 

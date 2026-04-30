@@ -14,5 +14,11 @@
     execute store result storage mhdp_core:temp Arg.OffsetY float 0.0001 run scoreboard players get #mhdp_temp_slime_size MhdpCore
     execute store result storage mhdp_core:temp Arg.OffsetZ float 0.0001 run scoreboard players get #mhdp_temp_slime_size MhdpCore
 
+# ランダム位置ずらし
+    execute store result storage mhdp_core:temp Arg.RotX int 1 run random value 0..90
+    execute store result storage mhdp_core:temp Arg.RotY int 1 run random value 0..359
+    data modify storage mhdp_core:temp Arg.Dist set value 0
+    $execute if score #mhdp_temp_damage_vfx_random MhdpCore matches 1.. store result storage mhdp_core:temp Arg.Dist float 0.01 run random value 0..$(VfxRandom)
+
 # 終了
     scoreboard players reset #mhdp_temp_slime_size MhdpCore

@@ -21,14 +21,19 @@
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:core/buffering/jump
+    execute if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:core/buffering/arts_main
+
+# 狩技遷移
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:weapons/short_sword/type_tec/31_blade_dance/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 1..19 run function mhdp_items:weapons/short_sword/type_tec/30_upper_bash/start
 
 # 遷移
-    # 右クリック：盾攻撃に移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_counter
+    # 右クリック：カウンター斬りに移行
+        execute if entity @s[tag=Wpn.Ss.Tec.Guard.Just,tag=Ply.Ope.StartUsingWeapon] run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_counter
     # スニーク：ガードに移行
-        execute if entity @s[tag=Ply.Ope.StartSneak] run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_guard
+        execute if entity @s[tag=Wpn.Ss.Tec.Guard.Just,tag=Ply.Ope.StartSneak] run function mhdp_items:weapons/short_sword/type_tec/24_guard/change_to_guard
     # ジャンプ回避
-        execute if entity @s[tag=Ply.Ope.Buffering.Jump] run function mhdp_items:weapons/short_sword/util/move_jump
+        execute if entity @s[tag=Wpn.Ss.Tec.Guard.Just,tag=Ply.Ope.Buffering.Jump] run function mhdp_items:weapons/short_sword/util/move_jump
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 20.. run function mhdp_items:weapons/short_sword/type_tec/24_guard/end_just

@@ -1,11 +1,11 @@
 #> mhdp_items:weapons/bow/type_tec/12_targetting_shot/main
 #
-# 昇天煌弓・箭射 メイン処理
+# 昇天煌弓・箭雨 メイン処理
 #
 # @within function mhdp_items:weapons/bow/type_tec/main
 
 # 操作表示
-    # execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"昇天煌弓・箭射"}
+    # execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"昇天煌弓・箭雨"}
 
 # タイマー増加
     execute if score @s Wpn.GeneralTimer matches ..22 run scoreboard players add @s Wpn.GeneralTimer 1
@@ -60,8 +60,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 25 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 25 run scoreboard players set $strength player_motion.api.launch 8000
-    execute if score @s Wpn.GeneralTimer matches 25 rotated ~180 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 25 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:8000, IsForce:false, IsAdjust:false}
 
 # 昇天煌弓に遷移
     execute if score @s Wpn.GeneralTimer matches 36 run function mhdp_items:weapons/bow/type_tec/13_jump_shot/start

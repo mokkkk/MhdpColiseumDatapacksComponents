@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/bow/type_tec/12_targetting_shot/target
 #
-# 昇天煌弓・箭射 ロックオン
+# 昇天煌弓・箭雨 ロックオン
 #
 # @within function mhdp_items:weapons/bow/type_tec/12_targetting_shot/main
 

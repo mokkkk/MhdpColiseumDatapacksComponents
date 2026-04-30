@@ -5,7 +5,7 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
 # データ読み込み
-    function mhdp_monsters:core/util/tick/get_attack_data.m {Name:"BiteStrong"}
+    function mhdp_monsters:core/util/tick/get_attack_data.m {Uid:1001, Name:"BiteStrong"}
 
 # ヒット確認
     # 対プレイヤー

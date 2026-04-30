@@ -2,7 +2,7 @@
 #
 # 武器のUI描画処理
 #
-# @within function mhdp_items:core/switch/macro/m.ui
+# @within function mhdp_items:weapons/bow/util/ui_bottle/main
 
 # 値を入れる
     execute if score #mhdp_temp_bottle_targetting MhdpCore matches ..0 if score #mhdp_temp_bottle MhdpCore matches ..0 run data modify storage mhdp_core:temp UI.BowBottleArray append value [{"text":"0","font":"ui/weapon/bow/bottle"}]

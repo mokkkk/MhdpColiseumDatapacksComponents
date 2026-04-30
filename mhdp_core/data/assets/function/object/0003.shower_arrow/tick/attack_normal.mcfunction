@@ -28,6 +28,9 @@
 # 攻撃実行
     execute as @a[tag=3.TargetPlayer] if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
+# ゲージ上昇
+    execute as @a[tag=3.TargetPlayer] run scoreboard players add @s Wpn.Bw.Gauge 2
+
 # 終了
     tag @a remove 3.TargetPlayer
     scoreboard players add @s MhdpCore 1

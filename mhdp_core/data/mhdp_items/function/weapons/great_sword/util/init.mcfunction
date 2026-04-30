@@ -14,8 +14,8 @@
     scoreboard players set @s Ply.Stats.Arts.1 0
     scoreboard players set @s Ply.Stats.Arts.2 0
     execute if entity @s[tag=!Ply.Weapon.Type.Tech] run scoreboard players set @s Ply.Stats.Arts.1.Max 900
-    execute if entity @s[tag=!Ply.Weapon.Type.Tech] run scoreboard players set @s Ply.Stats.Arts.2.Max 2200
+    execute if entity @s[tag=!Ply.Weapon.Type.Tech] run scoreboard players set @s Ply.Stats.Arts.2.Max 3000
     execute if entity @s[tag=Ply.Weapon.Type.Tech] run scoreboard players set @s Ply.Stats.Arts.1.Max 1200
-    execute if entity @s[tag=Ply.Weapon.Type.Tech] run scoreboard players set @s Ply.Stats.Arts.2.Max 1800
+    execute if entity @s[tag=Ply.Weapon.Type.Tech] run scoreboard players set @s Ply.Stats.Arts.2.Max 3000
     scoreboard players set @s Ply.Stats.Arts.1.Percent 0
     scoreboard players set @s Ply.Stats.Arts.2.Percent 0

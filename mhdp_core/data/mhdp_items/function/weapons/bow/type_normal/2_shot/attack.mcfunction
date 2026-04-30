@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/bow/type_tec/2_shot/attack
+#> mhdp_items:weapons/bow/type_normal/2_shot/attack
 #
 # 射撃 攻撃判定
 #
-# @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
+# @within function mhdp_items:weapons/great_sword/type_normal/1_charge/change_to_chargeattack
 
 # 矢を召喚
     execute if entity @s[tag=Ply.Weapon.Bow.IsHorming] run scoreboard players operation #mhdo_temp_charge_count MhdpCore = @s Wpn.Bw.ChargeCount

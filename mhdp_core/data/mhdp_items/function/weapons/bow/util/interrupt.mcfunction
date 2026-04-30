@@ -25,3 +25,6 @@
 # 武器モデルのリセット
     # メインハンド
         execute if items entity @s weapon.mainhand ender_eye[custom_data~{IsMhdpWeapon:1b,IsDrawing:1b}] run function api:weapon/draw.m {Slot:"mainhand", Cmd:"drawing"}
+
+# 抜刀中はステータスをリセットする
+    execute if entity @s[tag=Ply.Weapon.Drawing] run function mhdp_items:weapons/bow/util/set_status

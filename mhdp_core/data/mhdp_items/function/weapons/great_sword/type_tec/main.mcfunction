@@ -32,15 +32,24 @@
     # 空中溜め斬り
         execute if entity @s[tag=Wpn.Gs.Tec.ChargeSlash.Air] run function mhdp_items:weapons/great_sword/type_tec/22_chargeattack_air/main
 
-# 狩技：強化納刀
-    # 処理
-        execute if entity @s[tag=Wpn.Gs.Tec.PowerSheathe] run function mhdp_items:weapons/great_sword/type_tec/17_power_sheathe/main
-
 # 狩技：威姿呵成の構え
     # 構え
         execute if entity @s[tag=Wpn.Gs.Tec.CounterStance] run function mhdp_items:weapons/great_sword/type_tec/19_counter_stance/main
     # 成功
         execute if entity @s[tag=Wpn.Gs.Tec.CounterStance.Success] run function mhdp_items:weapons/great_sword/type_tec/20_counter_stance_success/main
+
+# 狩技：震怒竜怨斬
+    # 処理
+        execute if entity @s[tag=Wpn.Gs.Tec.RageCharge] run function mhdp_items:weapons/great_sword/type_tec/33_rage_charge/main
+        execute if entity @s[tag=Wpn.Gs.Tec.RageSlash] run function mhdp_items:weapons/great_sword/type_tec/34_rage_attack/main
+
+# 通常攻撃
+    # 開始：左クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/great_sword/type_tec/30_normal_attack_1/start
+    # 処理
+        execute if entity @s[tag=Wpn.Gs.Tec.Attack.1] run function mhdp_items:weapons/great_sword/type_tec/30_normal_attack_1/main
+        execute if entity @s[tag=Wpn.Gs.Tec.Attack.2] run function mhdp_items:weapons/great_sword/type_tec/31_normal_attack_2/main
+        execute if entity @s[tag=Wpn.Gs.Tec.Attack.3] run function mhdp_items:weapons/great_sword/type_tec/32_normal_attack_3/main
 
 # 溜め
     # 通常

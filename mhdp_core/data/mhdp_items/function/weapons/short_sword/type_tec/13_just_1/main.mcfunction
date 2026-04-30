@@ -38,7 +38,7 @@
     execute if score @s Wpn.AnimationTimer matches 25 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s Wpn.GeneralTimer matches 25..28 positioned ~ ~1.65 ~ run particle crit ^ ^ ^1 0 0 0 0.5 1
     execute if score @s Wpn.GeneralTimer matches 29 run playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
-    execute if score @s Wpn.GeneralTimer matches 29 positioned ~ ~1.65 ~ run particle flash ^ ^ ^0.5 0 0 0 0 1
+    execute if score @s Wpn.GeneralTimer matches 29 positioned ~ ~1.65 ~ run particle flash{color:[1.000,1.000,1.000,1.00]} ^ ^ ^0.5 0 0 0 0 1
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
@@ -46,15 +46,15 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set $strength player_motion.api.launch 9500
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -25 run function player_motion:api/launch_looking
+    # 建築の上では移動控え目
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -25 run function api:weapon_operation/use_player_motion.m {Strength:9500, IsForce:false, IsAdjust:true}
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 2..59 run function mhdp_items:core/buffering/jump
 
 # 遷移
-    # 右クリック：2段目に移行
-        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/type_tec/13_just_1/change_to_just_2
+    # クリック：2段目に移行
+        execute if entity @s[tag=Ply.Ope.StartUsingWeapon] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/type_tec/13_just_1/change_to_just_2
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/short_sword/util/move_jump
 

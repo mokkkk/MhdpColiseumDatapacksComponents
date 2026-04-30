@@ -7,7 +7,6 @@
 # アニメーション
     function api:weapon/animation.m {Slot:"mainhand", Cmd:"charge_super_5"}
 
-
 # 演出
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5

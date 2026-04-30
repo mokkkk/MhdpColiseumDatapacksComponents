@@ -12,5 +12,5 @@
     data remove storage mhdp_core:temp Arg
 
 # test
-    # particle flash ~ ~ ~ 0 0 0 0 1
+    # particle flash{color:[1.000,1.000,1.000,1.00]} ~ ~ ~ 0 0 0 0 1
     # function assets:object/1000.normal_wall/validate/

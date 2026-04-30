@@ -10,10 +10,12 @@
 # ガード値取得
     execute if entity @s[tag=Ply.Weapon.Equip.ShortSword] run scoreboard players set #mhdp_temp_guard_strength MhdpCore 2
     execute if entity @s[tag=Ply.Weapon.Equip.GreatSword] run scoreboard players set #mhdp_temp_guard_strength MhdpCore 3
+    execute if entity @s[tag=Ply.Weapon.Equip.Lance] run scoreboard players set #mhdp_temp_guard_strength MhdpCore 5
     function mhdp_core:player/skill/damage/guard
 
 # ガード判定
 # ガード値 - 威力値
+    scoreboard players operation #mhdp_temp_guard_value_original MhdpCore = #mhdp_temp_guard_value MhdpCore
     scoreboard players operation #mhdp_temp_guard_value MhdpCore -= #mhdp_temp_guard_strength MhdpCore
 
 # スタミナ消費量決定
@@ -28,6 +30,9 @@
         execute if score #mhdp_temp_guard_value MhdpCore matches 5.. run tag @s remove Ply.Weapon.Guard
     # スタミナが足りない場合
         execute if score @s Ply.Stats.Stamina < #mhdp_temp_guard_stamina MhdpCore run tag @s remove Ply.Weapon.Guard
+
+# デバッグ
+    # scoreboard players set #mhdp_temp_guard_value MhdpCore 4
 
 # ガード成功時
     # ノックバックの値を上書き

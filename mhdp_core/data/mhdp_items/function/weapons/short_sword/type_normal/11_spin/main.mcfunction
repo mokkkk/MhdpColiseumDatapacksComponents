@@ -42,8 +42,12 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 5 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 5 run scoreboard players set $strength player_motion.api.launch 8000
-    execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 5 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:8000, IsForce:false, IsAdjust:true}
+
+# 狩技遷移
+    execute if score @s Wpn.GeneralTimer matches 1..17 run function mhdp_items:core/buffering/arts_main
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/short_sword/type_normal/31_blade_dance/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/short_sword/type_normal/30_upper_bash/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 18.. run function mhdp_items:weapons/short_sword/type_normal/11_spin/end

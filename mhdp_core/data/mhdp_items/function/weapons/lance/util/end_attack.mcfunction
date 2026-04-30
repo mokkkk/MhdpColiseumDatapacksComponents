@@ -1,0 +1,29 @@
+#> mhdp_items:weapons/lance/util/end_attack
+#
+# ランス攻撃終了時の共通処理
+#
+# @within function mhdp_items:core/*
+
+# アニメーションリセット
+    # 操作取得
+        function mhdp_items:weapons/lance/util/get_no_ope
+    # 無操作の場合、アニメーションをリセット
+        # メイン
+            data modify storage mhdp_core:temp Args.IsDrawing set value true
+            execute if entity @s[tag=Ply.Weapon.NoOpe] run function api:weapon/animation.m {Slot:"mainhand", Cmd:"drawing"}
+            execute if entity @s[tag=Ply.Weapon.NoOpe] run function api:weapon/reset_name.m {Slot:"mainhand"}
+        # サブ
+            execute if entity @s[tag=Ply.Weapon.NoOpe] run function api:weapon/animation.m {Slot:"offhand", Cmd:"drawing_sub"}
+    # 終了
+        tag @s remove Ply.Weapon.NoOpe
+        # tag @s remove Ply.Weapon.NoMoveJump
+        function api:weapon_operation/remove_state_tags
+
+# attributeリセット
+    function mhdp_items:weapons/lance/util/set_status
+
+# スコアリセット
+    scoreboard players reset @s Wpn.Lc.SpearCount
+
+# 先行入力解除
+    function mhdp_items:core/buffering/reset

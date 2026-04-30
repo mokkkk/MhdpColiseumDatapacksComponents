@@ -47,16 +47,14 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1001 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1001 run scoreboard players set $strength player_motion.api.launch 8000
-    execute if score @s Wpn.GeneralTimer matches 1001 rotated ~180 0 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 1001 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:8000, IsForce:false, IsAdjust:false}
 
 # スタミナ消費
     execute if score @s Wpn.GeneralTimer matches 1001 run scoreboard players remove @s Ply.Stats.Stamina 100
 
 # 遷移
-    # 右クリック押し続け：竜の千々矢、または昇天煌弓に移行
-        execute if score @s Wpn.GeneralTimer matches 56 if score @s Ply.Stats.Arts.2 >= @s Ply.Stats.Arts.2.Max run function mhdp_items:weapons/bow/type_normal/12_targetting_shot/start
-        execute if score @s Wpn.GeneralTimer matches 56 unless entity @s[tag=Wpn.Bw.Tec.TargettingShot] run function mhdp_items:weapons/bow/type_normal/7_shot_shower/start
+    # 右クリック押し続け：竜の千々矢に移行
+        execute if score @s Wpn.GeneralTimer matches 56 run function mhdp_items:weapons/bow/type_normal/7_shot_shower/start
 
 # 終了
     execute if entity @s[tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..30 run function mhdp_items:weapons/bow/type_normal/6_shot_pierce/end

@@ -47,8 +47,7 @@
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 8 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 8 run scoreboard players set $strength player_motion.api.launch 14000
-    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ -90 run function player_motion:api/launch_looking
+    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ -90 run function api:weapon_operation/use_player_motion.m {Strength:14000, IsForce:true, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 10 run tag @s add Ply.Ope.IsAir
 
 # ガード判定
