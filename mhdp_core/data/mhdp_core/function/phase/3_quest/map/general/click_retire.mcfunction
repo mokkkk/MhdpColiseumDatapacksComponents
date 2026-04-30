@@ -5,8 +5,7 @@
 # @within function mhdp_core:phase/tick
 
 # ベルを鳴らす
-    # 大闘技場
-        execute if data storage mhdp_core:game_data ActiveQuest{Field:"Coliseum"} run function mhdp_core:phase/3_quest/map/coliseum/ring_bell
+    function assets:core/field/ring_bell.m with storage mhdp_core:game_data ActiveQuest
 
 # クエスト中のみ実行
     execute unless data storage mhdp_core:game_data ActiveQuest{State:"Playing"} run return 0

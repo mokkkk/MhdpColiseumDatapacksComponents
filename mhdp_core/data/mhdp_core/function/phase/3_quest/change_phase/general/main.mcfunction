@@ -7,8 +7,8 @@
 #    function mhdp_core:phase/3_quest/change_phase/failed/change
 
 # 中心点の削除
-    kill @e[type=marker,tag=Mk.Field.Center]
-    kill @e[type=marker,tag=Mk.Field.Back]
+    # kill @e[type=marker,tag=Mk.Field.Center]
+    # kill @e[type=marker,tag=Mk.Field.Back]
 
 # プレイヤーの状態リセット
     execute as @a[tag=Ply.State.PlayingQuest] run function mhdp_core:phase/3_quest/change_phase/general/player/reset
@@ -20,6 +20,9 @@
 
 # モンスターのリセット処理
     function mhdp_core:phase/3_quest/change_phase/general/monster/main
+
+# フィールドのリセット処理
+    function assets:core/field/remove.m with storage mhdp_core:game_data ActiveField
 
 # ActiveQuestの解放
     scoreboard players operation #mhdp_core_pre_played_quest_id MhdpCore = #mhdp_core_loading_quest_id MhdpCore
@@ -38,7 +41,7 @@
         scoreboard players reset $mhdp_temp_quest_timer_value Quest.Timer.Text
 
 # forceloadのリセット
-    forceload remove all
+    # forceload remove all
     forceload add 0 0
 
 # フェーズ変更

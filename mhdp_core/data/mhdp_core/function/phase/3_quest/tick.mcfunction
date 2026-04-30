@@ -17,8 +17,7 @@
     execute if score #mhdp_quest_timer MhdpCore matches 0 run function mhdp_core:phase/3_quest/end/failed
 
 # マップ個別処理(tick)
-    # 大闘技場
-        execute if data storage mhdp_core:game_data ActiveQuest{Field:"Coliseum"} run function mhdp_core:phase/3_quest/map/coliseum/main
+    function assets:core/field/tick.m with storage mhdp_core:game_data ActiveQuest
 
 # フェーズ移行処理
     # クエスト成功時

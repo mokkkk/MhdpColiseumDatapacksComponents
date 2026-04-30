@@ -22,6 +22,6 @@
         execute store result score #mhdp_quest_deathcount MhdpCore run scoreboard players get #mhdp_quest_deathcount_max MhdpCore
 
 # マップ個別処理(init)
-    function assets:core/field/init.m with storage mhdp_core:game_data ActiveQuest.Content
+    function assets:core/field/init.m with storage mhdp_core:game_data ActiveQuest
     # 大闘技場
         # execute if data storage mhdp_core:game_data ActiveQuest{Field:"Coliseum"} run function mhdp_core:phase/2_village_to_quest/change_phase/setup/map/coliseum_forceload
