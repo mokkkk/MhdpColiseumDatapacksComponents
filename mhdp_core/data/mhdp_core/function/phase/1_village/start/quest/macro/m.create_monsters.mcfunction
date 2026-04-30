@@ -13,7 +13,7 @@
     # UID取得
         execute store result score #mhdp_temp_monsterdata_uid MhdpCore run data get storage mhdp_core:temp TempMonsterData.MonsterId
     # 非表示の場合スキップする。UIDを9000以上に上書き
-        execute if data storage mhdp_core:temp TempMonsterData{Visible:true} run scoreboard players set #mhdp_temp_monsterdata_uid MhdpCore 9001
+        execute if data storage mhdp_core:temp TempMonsterData{Visible:false} run scoreboard players set #mhdp_temp_monsterdata_uid MhdpCore 9001
     # UID9000以上はダミーのため表示しない
         execute unless score #mhdp_temp_monsterdata_uid MhdpCore matches 9000.. store result storage mhdp_core:temp TempMonsterData.Index int 1 run scoreboard players add #mhdp_temp_grobal MhdpCore 1
 

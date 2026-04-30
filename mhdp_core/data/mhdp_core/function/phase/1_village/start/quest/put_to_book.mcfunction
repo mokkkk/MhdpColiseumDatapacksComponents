@@ -10,7 +10,7 @@
     data modify storage mhdp_core:temp TargetQuest set from storage mhdp_core:temp TempQuestList[0]
 
 # 必要なデータの取得
-    data modify storage mhdp_core:temp TargetQuest.Field set from storage mhdp_core:temp TargetQuest.Content.Field
+    data modify storage mhdp_core:temp TargetQuest.Field set from storage mhdp_core:temp TargetQuest.Content.FieldId
 
 # 必要なデータ用ストレージを作成
     data modify storage mhdp_core:temp Data set value {}

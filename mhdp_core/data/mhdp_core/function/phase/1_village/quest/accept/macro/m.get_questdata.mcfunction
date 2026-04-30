@@ -8,4 +8,4 @@
     $data modify storage mhdp_core:temp TargetQuest set from storage mhdp_core:game_data QuestList[{ID:$(ActiveQuestId)}]
 
 # 必要なデータの取り出し
-    data modify storage mhdp_core:temp TargetQuest.Field set from storage mhdp_core:temp TargetQuest.Content.Field
+    data modify storage mhdp_core:temp TargetQuest.Field set from storage mhdp_core:temp TargetQuest.Content.FieldId
