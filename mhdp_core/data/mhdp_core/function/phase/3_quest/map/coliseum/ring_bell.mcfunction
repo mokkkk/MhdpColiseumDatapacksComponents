@@ -4,6 +4,8 @@
 #
 # @within function mhdp_core:phase/3_quest/tick
 
+tellraw @a {text:"【ERROR】 旧バージョンのフィールドtick処理が呼び出されています",color:"red"}
+
 # ベルを鳴らす
     setblock 216 65 147 redstone_torch
 

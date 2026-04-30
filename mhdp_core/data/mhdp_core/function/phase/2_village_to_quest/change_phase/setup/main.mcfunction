@@ -9,15 +9,16 @@
     function mhdp_core:phase/2_village_to_quest/start/quest/enable_datapack
     data remove storage mhdp_core:temp Monsters
 
-# モンスター配置
-    data modify storage mhdp_core:game_data ActiveQuest.TargetMonsters set from storage mhdp_core:game_data ActiveQuest.Monsters
-    say モンスター配置処理スキップ
-    # function mhdp_core:phase/2_village_to_quest/change_phase/setup/monster/main
-
 # マップ個別処理(late_init)
     function assets:core/field/late_init.m with storage mhdp_core:game_data ActiveField
     # 大闘技場
         # execute if data storage mhdp_core:game_data ActiveQuest{Field:"Coliseum"} run function mhdp_core:phase/2_village_to_quest/change_phase/setup/map/coliseum
+
+
+# モンスター配置用
+    data modify storage mhdp_core:game_data ActiveQuest.TargetMonsters set from storage mhdp_core:game_data ActiveQuest.Monsters
+    say モンスター配置処理スキップ
+    # function mhdp_core:phase/2_village_to_quest/change_phase/setup/monster/main
 
 # クエストクリア判定に使用するため、再度データを設定
     data modify storage mhdp_core:game_data ActiveQuest.TargetMonsters set from storage mhdp_core:game_data ActiveQuest.Monsters

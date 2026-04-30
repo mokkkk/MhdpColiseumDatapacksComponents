@@ -7,7 +7,7 @@
 
 # 中心点削除
     kill @e[type=marker,tag=Mk.Field.Center]
-    kill @e[type=marker,tag=Mk.Field.Back]
+    kill @e[type=marker,tag=Mk.Field.AreaCenter]
 
 # forceload解除
     forceload remove -167 37 251 100

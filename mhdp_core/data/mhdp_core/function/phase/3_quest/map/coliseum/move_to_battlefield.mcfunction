@@ -4,6 +4,8 @@
 #
 # @within function mhdp_core:phase/3_quest/tp/1_colliseum
 
+tellraw @a {text:"【ERROR】 旧バージョンのフィールドtick処理が呼び出されています",color:"red"}
+
 # 移動
     tp @s -20 66 87
 

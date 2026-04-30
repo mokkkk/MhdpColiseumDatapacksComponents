@@ -8,6 +8,8 @@
 # - 共通
 #declare tag Asset.Object オブジェクト用タグ
 #declare tag Asset.Object.Init 初期化が必要なオブジェクト
+# - フィールド
+#declare tag Mk.Field.AreaCenter エリア用マーカー
 # - 建築
 #declare tag Asset.Build.Root 建造物ルート
 #declare tag Asset.Build.Target 紐づけ対象

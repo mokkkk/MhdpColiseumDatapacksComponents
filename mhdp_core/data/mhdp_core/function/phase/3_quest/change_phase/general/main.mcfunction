@@ -42,7 +42,7 @@
 
 # forceloadのリセット
     # forceload remove all
-    forceload add 0 0
+    # forceload add 0 0
 
 # フェーズ変更
     data modify storage mhdp_core:game_data Phase set value 1

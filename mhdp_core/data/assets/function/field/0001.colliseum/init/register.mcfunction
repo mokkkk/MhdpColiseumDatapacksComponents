@@ -7,9 +7,14 @@
     data modify storage mhdp_core:game_data FieldData append value {\
         FieldId:1,\
         Name:"闘技場",\
-        Pos:[-67,66,102],\
-        StartPos:[221,66,141],\
+        Pos:{X:-67,Y:66,Z:102},\
+        StartPos:{X:221,Y:66,Z:141},\
         AreaList:[\
-            {AreaId:1, CenterPos:[-67,66,102], Height:66}\
+            {AreaId:0, X:220,Y:66,Z:140, Height:66, FromArea:[\
+                {AreaId:1}\
+            ]},\
+            {AreaId:1, X:-67,Y:66,Z:102, Height:66, FromArea:[\
+                {AreaId:0}\
+            ]}\
         ]\
     }

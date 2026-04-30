@@ -6,4 +6,4 @@
     setblock 216 65 147 redstone_torch
 
 # レッドストーントーチの除去
-    schedule function mhdp_core:phase/3_quest/map/coliseum/remove_redstone 1t append
+    schedule function assets:field/0001.colliseum/tick/ring_bell_schedule 1t append

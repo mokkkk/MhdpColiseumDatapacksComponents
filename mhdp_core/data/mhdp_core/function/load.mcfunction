@@ -69,6 +69,12 @@
         # 参加したクエストの連番ID
             scoreboard objectives add Ply.Other.QuestSerialId dummy
 
+# クエスト関連
+    # エリアId
+        scoreboard objectives add Fld.CurrentAreaId dummy
+    # エリア高度
+        scoreboard objectives add Fld.Height dummy
+
 # 村人関連
     # タイマー
         scoreboard objectives add Vlg.General.Timer dummy

@@ -5,4 +5,4 @@
 # @within tag/function minecraft:tick
 
 # set
-    $spawnpoint @s $(X) $(Y) $(Z) $(Rotate)
+    $spawnpoint @s $(X) $(Y) $(Z) $(Rotate) 0

@@ -21,6 +21,9 @@
     # スタミナ
         function mhdp_items:player/weapon/stamina/penalry_end
 
+# スコア消去
+    scoreboard players reset @s Fld.CurrentAreaId
+
 # タグ消去
     # 状態
         tag @s remove Ply.State.EnableDamage
