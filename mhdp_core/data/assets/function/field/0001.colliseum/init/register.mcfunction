@@ -11,10 +11,10 @@
         StartPos:{X:221,Y:66,Z:141},\
         AreaList:[\
             {AreaId:0, X:220,Y:66,Z:140, Height:66, FromArea:[\
-                {AreaId:1}\
+                {AreaId:1,X:196,Y:66,Z:144,Rotate:-90}\
             ]},\
             {AreaId:1, X:-67,Y:66,Z:102, Height:66, FromArea:[\
-                {AreaId:0}\
+                {AreaId:0,X:-18,Y:66,Z:87,Rotate:90}\
             ]}\
         ]\
     }

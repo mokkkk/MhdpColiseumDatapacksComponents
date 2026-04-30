@@ -2,6 +2,8 @@
 #
 # フィールドtick処理
 
+tellraw @a {text:"【WARN】非推奨のメソッド(assets:field/0001.colliseum/tick/move_to_battlefield)が呼び出されています",color:gold}
+
 # 移動
     tp @s -20 66 87
 
