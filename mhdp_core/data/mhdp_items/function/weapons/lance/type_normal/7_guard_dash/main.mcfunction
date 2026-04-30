@@ -1,0 +1,42 @@
+#> mhdp_items:weapons/lance/type_tec/7_guard_dash/main
+#
+# ガード メイン処理
+#
+# @within function mhdp_items:weapons/lance/type_tec/main
+
+# 操作表示
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"ガードダッシュ"}
+
+# タイマー増加
+    scoreboard players add @s Wpn.GeneralTimer 1
+    execute if score @s Wpn.GuardStopTimer matches 1.. run scoreboard players remove @s Wpn.GuardStopTimer 1
+
+# アニメーション演出
+    execute if score @s Wpn.GeneralTimer matches 1..5 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s Wpn.GeneralTimer matches 1..7 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 0.3 0.1 0.3 0 3
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/lance/type_tec/7_guard_dash/animation_0
+    execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/lance/type_tec/7_guard_dash/animation_1
+    execute if score @s Wpn.GeneralTimer matches 7 run function mhdp_items:weapons/lance/type_tec/7_guard_dash/animation_2
+
+# 移動制限
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
+
+# 移動
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function mhdp_items:weapons/lance/type_tec/7_guard_dash/move
+    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function mhdp_items:weapons/lance/type_tec/7_guard_dash/move
+
+# 先行入力
+    execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..15 run function mhdp_items:core/buffering/b
+
+# 遷移
+    # 左クリック：突き1に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 13.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/change_to_spear
+    # 右クリック：飛び込み突きに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 13.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/change_to_dash_spear
+    # スニーク：ガードに移行
+        execute if entity @s[tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 15.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/change_to_guard
+
+# 終了
+    execute if score @s Wpn.GeneralTimer matches 16.. if score @s Wpn.GuardStopTimer matches 0 run function mhdp_items:weapons/lance/type_tec/7_guard_dash/end
