@@ -10,9 +10,12 @@
 
 # データの取り出し
     data modify storage mhdp_core:temp TempMonsterData set from storage mhdp_core:temp Data.MonsterList[0]
-    # UID取得、UID9000以上はダミーのため表示しない
+    # UID取得
         execute store result score #mhdp_temp_monsterdata_uid MhdpCore run data get storage mhdp_core:temp TempMonsterData.MonsterId
-    execute unless score #mhdp_temp_monsterdata_uid MhdpCore matches 9000.. store result storage mhdp_core:temp TempMonsterData.Index int 1 run scoreboard players add #mhdp_temp_grobal MhdpCore 1
+    # 非表示の場合スキップする。UIDを9000以上に上書き
+        execute if data storage mhdp_core:temp TempMonsterData{Visible:true} run scoreboard players set #mhdp_temp_monsterdata_uid MhdpCore 9001
+    # UID9000以上はダミーのため表示しない
+        execute unless score #mhdp_temp_monsterdata_uid MhdpCore matches 9000.. store result storage mhdp_core:temp TempMonsterData.Index int 1 run scoreboard players add #mhdp_temp_grobal MhdpCore 1
 
 # 表示内容の特定
     execute unless score #mhdp_temp_monsterdata_uid MhdpCore matches 9000.. run function mhdp_core:phase/1_village/start/quest/macro/m.create_monsters_getname with storage mhdp_core:temp TempMonsterData

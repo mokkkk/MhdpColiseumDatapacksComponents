@@ -31,7 +31,7 @@
     data modify storage mhdp_core:temp Data.Reward set from storage mhdp_core:temp TargetQuest.Content.RewardMoney
 
 # フィールド
-    $data modify storage mhdp_core:temp Data.Field set from storage mhdp_core:game_data QuestBookData.Field[{ID:$(Field)}].Name
+    $data modify storage mhdp_core:temp Data.Field set from storage mhdp_core:game_data FieldData[{ID:$(Field)}].Name
 
 # モンスターリスト
     data modify storage mhdp_core:temp Data.MonsterList set from storage mhdp_core:temp TargetQuest.Content.Monsters
