@@ -1,6 +1,6 @@
 #> mhdp_core:phase/1_village/training_area/enter/check
 #
-# 次Phaseへ遷移できるか確認する
+# 訓練所への移動チェック処理
 #
 # @within function mhdp_core:phase/1_village/bell/click
 

@@ -34,7 +34,7 @@
 
 # 遷移
     # 空中：ジャンプに移行
-       execute if entity @s[tag=!Ply.Ope.IsAir,nbt={OnGround:0b}] if score @s Wpn.AnimationTimer matches 5.. run function mhdp_items:weapons/lance/type_tec/18_dash/change_to_jump
+       execute if entity @s[tag=!Ply.Ope.IsAir,nbt={OnGround:0b}] rotated ~ 0 if block ^ ^-0.5 ^0.3 #mhdp_core:no_collision rotated as @s if score @s Wpn.AnimationTimer matches 5.. run function mhdp_items:weapons/lance/type_tec/18_dash/change_to_jump
     # 左クリックまたはスタミナ切れ：フィニッシュ突きに移行
        execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.AnimationTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/19_finish_spear/start
        execute if score @s Wpn.AnimationTimer matches 3.. if score @s Ply.Stats.Stamina matches ..1 run function mhdp_items:weapons/lance/type_tec/19_finish_spear/start

@@ -60,8 +60,8 @@
     execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 18.. run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/start
 
 # ガード判定終了
-    execute if score @s Wpn.GeneralTimer matches 4 run tag @s remove Ply.Weapon.StaminaNotRegen
-    execute if score @s Wpn.GeneralTimer matches 4 run tag @s remove Ply.Weapon.Guard
+    execute if score @s Wpn.GeneralTimer matches 6 run tag @s remove Ply.Weapon.StaminaNotRegen
+    execute if score @s Wpn.GeneralTimer matches 6 run tag @s remove Ply.Weapon.Guard
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 28.. run function mhdp_items:weapons/lance/type_tec/12_counter_spear/end

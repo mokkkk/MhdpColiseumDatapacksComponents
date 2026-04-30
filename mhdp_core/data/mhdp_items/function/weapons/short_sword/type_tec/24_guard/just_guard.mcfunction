@@ -18,7 +18,7 @@
     scoreboard players operation #mhdp_temp_damage_reduction MhdpCore /= #const_2 Const
 
 # 後ずさる
-    execute rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:10000, IsForce:false, IsAdjust:false}
+    execute at @s rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:10000, IsForce:false, IsAdjust:false}
 
 # ジャストガードに移行
     # 前処理
