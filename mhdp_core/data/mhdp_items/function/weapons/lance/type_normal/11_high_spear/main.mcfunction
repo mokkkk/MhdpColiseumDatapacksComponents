@@ -2,7 +2,7 @@
 #
 # 強突き メイン処理
 #
-# @within function mhdp_items:weapons/lance/type_tec/main
+# @within function mhdp_items:weapons/lance/type_normal/main
 
 # 操作表示
     execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"強突き"}
@@ -42,8 +42,8 @@
     execute if score @s Wpn.GeneralTimer matches 3..16 run function mhdp_items:core/buffering/arts_main
 
 # 狩技遷移
-    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 16 run function mhdp_items:weapons/lance/type_tec/22_guard_rage/start
-    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 16 run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 16 run function mhdp_items:weapons/lance/type_normal/22_guard_rage/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 16 run function mhdp_items:weapons/lance/type_normal/24_screw_thrust/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 17.. run function mhdp_items:weapons/lance/type_normal/11_high_spear/end

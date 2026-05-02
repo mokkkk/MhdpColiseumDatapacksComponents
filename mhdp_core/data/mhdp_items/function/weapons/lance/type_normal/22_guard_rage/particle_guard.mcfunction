@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/lance/type_tec/22_guard_rage/particle_guard
+#> mhdp_items:weapons/lance/type_normal/22_guard_rage/particle_guard
 #
 # ガードレイジ 演出
 #
-# @within function mhdp_items:weapons/great_sword/type_tec/main
+# @within function mhdp_items:weapons/great_sword/type_normal/main
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmACwAMKAnJQGYoCsAtAIZwNs0Bs1NgA5KAJkptSHUnSEBmFHBYBGUXTAEAdhwC2CZIDDFAATKNYGBwy6AzknAoA9oU0Qko6gUUu4GO2ABuHNiE+uAAHkgeYFCRAL6xBFakaIS2iMrUmVlR1hCWrohRcNjYaDDW+hlRGA55EPpRaNYAoiVlFc0AjoRB2FAAyhaK5IiMQRXxALpAA_3
 # 円 1

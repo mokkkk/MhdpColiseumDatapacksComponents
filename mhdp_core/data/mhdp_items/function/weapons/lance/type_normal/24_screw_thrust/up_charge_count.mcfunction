@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/lance/type_tec/24_screw_thrust/up_charge_count
+#> mhdp_items:weapons/lance/type_normal/24_screw_thrust/up_charge_count
 #
 # スクリュースラスト メイン処理
 #
-# @within function mhdp_items:weapons/great_sword/type_tec/main
+# @within function mhdp_items:weapons/great_sword/type_normal/main
 
 # 処理
     scoreboard players add @s Wpn.Lc.ChargeCount 1

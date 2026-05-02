@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/lance/type_tec/23_rage_counter/end
+#> mhdp_items:weapons/lance/type_normal/23_rage_counter/end
 #
 # カウンター突き 終了処理
 #
-# @within function mhdp_items:weapons/lance/type_tec/23_rage_counter/main
+# @within function mhdp_items:weapons/lance/type_normal/23_rage_counter/main
 
 # タグ消去
-    tag @s remove Wpn.Lc.Tec.RageCounter
+    tag @s remove Wpn.Lc.Normal.RageCounter
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0

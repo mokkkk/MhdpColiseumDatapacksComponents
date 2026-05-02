@@ -23,4 +23,5 @@
 # 地の型
     # ガード溜め
         execute if entity @s[tag=!Ply.Weapon.Type.Tech,tag=Wpn.Lc.Normal.GuardCharge] run function mhdp_items:weapons/lance/type_normal/8_guard_charge/guard
-    
+    # ガードレイジ
+        execute if entity @s[tag=!Ply.Weapon.Type.Tech,tag=Wpn.Lc.Normal.GuardRage] run function mhdp_items:weapons/lance/type_normal/22_guard_rage/guard

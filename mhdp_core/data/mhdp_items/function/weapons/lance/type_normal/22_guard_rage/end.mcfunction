@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/lance/type_tec/22_guard_rage/end
+#> mhdp_items:weapons/lance/type_normal/22_guard_rage/end
 #
 # ガードレイジ 終了処理
 #
-# @within function mhdp_items:weapons/lance/type_tec/22_guard_rage/main
+# @within function mhdp_items:weapons/lance/type_normal/22_guard_rage/main
 
 # タグ消去
-    tag @s remove Wpn.Lc.Tec.GuardRage
+    tag @s remove Wpn.Lc.Normal.GuardRage
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0

@@ -2,7 +2,7 @@
 #
 # ガード メイン処理
 #
-# @within function mhdp_items:weapons/lance/type_tec/main
+# @within function mhdp_items:weapons/lance/type_normal/main
 
 # 操作表示
     execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"ガード"}
@@ -24,15 +24,11 @@
 
 # 狩技遷移
     execute if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:core/buffering/arts_main
-    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/22_guard_rage/start
-    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_normal/22_guard_rage/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 3.. run function mhdp_items:weapons/lance/type_normal/24_screw_thrust/start
 
-# 遷移  
-    # ジャンプ：ガードダッシュに移行
-        execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 3.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_normal/7_guard/change_to_guard_dash
-    # 左クリック：突進に移行
-        execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 3.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_normal/7_guard/change_to_dash
-    # 右クリック：溜めカウンターに移行
+# 遷移
+    # 右クリック：ガード溜めに移行
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 3.. unless score @s Wpn.GuardStopTimer matches 1.. run function mhdp_items:weapons/lance/type_normal/7_guard/change_to_charge_counter
 
 # 終了

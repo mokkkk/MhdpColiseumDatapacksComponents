@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/lance/type_tec/5_sweep/particle
+#> mhdp_items:weapons/lance/type_normal/5_sweep/particle
 #
 # 溜めカウンター 演出
 #
-# @within function mhdp_items:weapons/lance/type_tec/5_sweep/main
+# @within function mhdp_items:weapons/lance/type_normal/5_sweep/main
 
 # [ImportKey]: NobwRALgngDgpmAXGANgSwHYIDRgK55oAmSYcAjAEYAsAxgJy1wC0AhqwEzXPUDsAZkTYdy9ZgDZqHOLUoBmABz1+5VmFwZWAWwTJAW74ACcurAxWAJ20BnJOFoB7PBghJy1XP3P2ttsADdWFDxdcAAPVwA6OVwoJGZyAF8E3Ah7XwCgkLBwxHiI9zBYxAAGCPEk3Ht+fis4FxLcSjgALzQ4cyRi3DQrACEWtvMAUQBHPECUKABlMyYSRH5A2qSAXSA_3
 # 線 1

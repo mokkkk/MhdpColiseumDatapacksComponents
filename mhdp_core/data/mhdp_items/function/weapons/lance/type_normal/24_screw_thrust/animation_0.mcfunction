@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/lance/type_tec/24_screw_thrust/animation_0
+#> mhdp_items:weapons/lance/type_normal/24_screw_thrust/animation_0
 #
 # 溜めカウンター アニメーション処理
 #
-# @within function mhdp_items:weapons/lance/type_tec/24_screw_thrust/main
+# @within function mhdp_items:weapons/lance/type_normal/24_screw_thrust/main
 
 # アニメーション
     function api:weapon/animation.m {Slot:"mainhand", Cmd:"charge_counter_1"}
