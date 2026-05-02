@@ -5,8 +5,8 @@
 # @within function mhdp_items:weapons/lance/type_tec/6_guard/main
 
 # タグ消去
-    tag @s remove Wpn.Ss.Tec.Guard
-    tag @s remove Wpn.Ss.Tec.Guard.Just
+    tag @s remove Wpn.Lc.Tec.Guard
+    tag @s remove Wpn.Lc.Tec.Guard.Just
     tag @s remove Ply.Weapon.Guard
     tag @s remove Ply.Weapon.StaminaNotRegen
     

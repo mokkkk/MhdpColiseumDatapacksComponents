@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/lance/type_tec/21_spiral_thrust/animation_1
+#> mhdp_items:weapons/lance/type_normal/21_spiral_thrust/animation_1
 #
 # 流転突き アニメーション処理
 #
-# @within function mhdp_items:weapons/lance/type_tec/21_spiral_thrust/main
+# @within function mhdp_items:weapons/lance/type_normal/21_spiral_thrust/main
 
 # アニメーション
     function api:weapon/animation.m {Slot:"mainhand", Cmd:"low_spear_1"}

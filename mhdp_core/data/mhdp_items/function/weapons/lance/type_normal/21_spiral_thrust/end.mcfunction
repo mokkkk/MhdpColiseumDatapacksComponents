@@ -1,11 +1,11 @@
-#> mhdp_items:weapons/lance/type_tec/21_spiral_thrust/end
+#> mhdp_items:weapons/lance/type_normal/21_spiral_thrust/end
 #
 # 流転突き 終了処理
 #
-# @within function mhdp_items:weapons/lance/type_tec/21_spiral_thrust/main
+# @within function mhdp_items:weapons/lance/type_normal/21_spiral_thrust/main
 
 # タグ消去
-    tag @s remove Wpn.Lc.Tec.Spiral
+    tag @s remove Wpn.Lc.Normal.Spiral
     tag @s remove Ply.Flag.Hit
 
 # タイマー初期化

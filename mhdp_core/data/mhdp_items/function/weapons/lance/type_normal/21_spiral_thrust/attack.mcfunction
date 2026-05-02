@@ -1,8 +1,8 @@
-#> mhdp_items:weapons/short_sword/type_tec/1_spear_1/attack
+#> mhdp_items:weapons/short_sword/type_normal/1_spear_1/attack
 #
 # 突き1 攻撃判定
 #
-# @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
+# @within function mhdp_items:weapons/great_sword/type_normal/1_charge/change_to_chargeattack
 
 # 命中判定
     execute anchored eyes positioned ^ ^ ^1 positioned ~-0.5 ~-0.5 ~-0.5 run tag @e[type=slime,tag=Mns.HitBox,dx=1,dy=1,dz=1] add Temp.Hit
@@ -21,7 +21,7 @@
     execute if entity @n[tag=Temp.Victim] run tag @s add Ply.Flag.Hit
 
 # 攻撃
-    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.Lance.Tec.SpiralThrust
+    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.Lance.Normal.SpiralThrust
     execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了

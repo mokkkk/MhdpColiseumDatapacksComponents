@@ -25,6 +25,7 @@
     # タグ付与
         tag @s remove Wpn.Lc.Tec.Guard
         tag @s remove Ply.Weapon.Guard
+        tag @s remove Ply.Weapon.StaminaNotRegen
         tag @s add Wpn.Lc.Tec.AutoCounter
     # タイマー初期化
         scoreboard players set @s Wpn.GeneralTimer 0

@@ -1,14 +1,14 @@
-#> mhdp_items:weapons/lance/type_tec/22_guard_rage/start
+#> mhdp_items:weapons/lance/type_normal/22_guard_rage/start
 #
 # ガードレイジ 開始
 #
-# @within function mhdp_items:weapons/lance/type_tec/1_charge/change_to_chargeattack
+# @within function mhdp_items:weapons/lance/type_normal/1_charge/change_to_chargeattack
 
 # 前処理
     function mhdp_items:weapons/lance/util/before_attack
 
 # タグ付与
-    tag @s add Wpn.Lc.Tec.GuardRage
+    tag @s add Wpn.Lc.Normal.GuardRage
     tag @s remove Ply.Weapon.NoOpe
     tag @s add Ply.Weapon.Guard
     tag @s add Ply.Weapon.StaminaNotRegen
