@@ -5,4 +5,4 @@
 # @within function mhdp_items:core/switch/weapon_init
 
 # 対象のモンスターの召喚処理を実行
-    $function mhdp_monster_$(Prefix):core/summon/summon
+    $execute rotated ~$(Rotate) ~ run function mhdp_monster_$(Prefix):core/summon/summon

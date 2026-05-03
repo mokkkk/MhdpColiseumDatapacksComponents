@@ -10,7 +10,8 @@
     $execute at @n[type=marker,tag=Mk.Field.Area$(AreaId)] run spreadplayers ~ ~ 10 20 under 95 false @e[type=marker,tag=Mk.Field.SummonPos]
 
 # モンスター配置
-    say モンスター置きまーす
+    execute store result storage mhdp_core:temp Temp.Rotate int 1 run random value 0..359
+    execute at @n[type=marker,tag=Mk.Field.SummonPos] run function mhdp_monsters:core/switch/summon with storage mhdp_core:temp Temp
 
 # 終了
     kill @e[type=marker,tag=Mk.Field.SummonPos]
