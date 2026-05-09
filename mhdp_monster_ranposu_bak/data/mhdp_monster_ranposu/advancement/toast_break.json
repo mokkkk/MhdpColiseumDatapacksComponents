@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": "---",
+    "frame": "task",
+    "hidden": true,
+    "icon": {
+      "components": {
+        "minecraft:item_model": "icons/ranposu"
+      },
+      "id": "minecraft:stick"
+    },
+    "show_toast": true,
+    "title": "部位破壊"
+  }
+}

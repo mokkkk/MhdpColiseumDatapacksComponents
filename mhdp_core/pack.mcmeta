@@ -1,7 +1,8 @@
 {
     "pack": {
-        "pack_format": 81,
-        "description": "For Mhdp Coliseum"
+		"min_format": 101,
+		"max_format": 101,
+        "description": "For MhdpColiseum main datapack"
     },
     "filter": {
         "block": [
@@ -11,7 +12,7 @@
             },
             {
                 "namespace": "minecraft",
-                "path": "advencement/.*"
+                "path": "advancement/.*"
             }
         ]
     }

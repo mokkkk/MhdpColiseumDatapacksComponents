@@ -10,6 +10,7 @@
 
 # 出現条件 = Initialの場合、配置処理を行う
     execute if data storage mhdp_core:temp Arg{Timing:"Initial"} run function assets:core/monster/quest_setup/summon.m with storage mhdp_core:temp Arg
+    data remove storage mhdp_core:temp Arg
 
 # デバッグ用
     execute if data storage mhdp_core:game_data {ShowDebugMessage:true} run say assets:monster/quest_setup

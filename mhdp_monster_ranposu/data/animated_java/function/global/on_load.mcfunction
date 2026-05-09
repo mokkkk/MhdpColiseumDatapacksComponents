@@ -4,6 +4,6 @@ scoreboard objectives add aj.id dummy
 scoreboard objectives add aj.is_rig_loaded dummy
 scoreboard objectives add aj.tween_duration dummy
 scoreboard players add aj.last_id aj.id 0
-data modify storage aj:temp args set value {}
-scoreboard players reset * aj.is_rig_loaded
+function animated_java:global/gu/on_load
+function animated_java:global/data_manager/on_load
 function #animated_java:global/on_load

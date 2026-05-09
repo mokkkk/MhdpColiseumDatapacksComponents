@@ -1,6 +1,7 @@
 {
 	"pack": {
-		"pack_format": 81,
-		"description": "青鳥竜処理用のデータパック"
+		"description": "For Monster Ranposu",
+		"min_format": 101,
+		"max_format": 101
 	}
 }

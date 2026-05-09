@@ -12,5 +12,4 @@
     function mhdp_monsters:core/switch/macro/m.summon_get_data with storage mhdp_core:temp Temp
     function mhdp_monsters:core/switch/macro/m.summon with storage mhdp_core:temp Temp
     data remove storage mhdp_core:temp Temp
-    data remove storage mhdp_core:temp Arg
     data remove storage mhdp_core:temp TargetMonsterData
