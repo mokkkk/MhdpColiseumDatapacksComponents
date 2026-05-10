@@ -5,4 +5,4 @@ execute positioned ^0 ^2.5467080982 ^2.8858877096 rotated ~0 ~5 run function ani
 $execute as $(hitbox_head_0) positioned ^0 ^1.9347955049 ^2.8323522946 rotated ~0 ~5 run function animated_java:ranposu/animations/walk_relax/zzz/frames/58_locator_hitbox_head_0
 $execute as $(hitbox_tail_0) positioned ^-0.2432189273 ^0.6409203284 ^-1.8587728877 rotated ~344.3351941353 ~-16.7931670571 run function animated_java:ranposu/animations/walk_relax/zzz/frames/58_locator_hitbox_tail_0
 $execute as $(hitbox_tail_1) positioned ^-0.6775986824 ^0.5330951722 ^-3.0639591004 rotated ~336.0868709354 ~3.9306741909 run function animated_java:ranposu/animations/walk_relax/zzz/frames/58_locator_hitbox_tail_1
-$execute as $(shadow) positioned ^0 ^0.1125 ^-0.1125 rotated ~0 ~0 run function animated_java:ranposu/animations/walk_relax/zzz/frames/58_locator_shadow
+$execute as $(shadow) positioned ^0 ^0.39375 ^-0.225 rotated ~0 ~0 run function animated_java:ranposu/animations/walk_relax/zzz/frames/58_locator_shadow

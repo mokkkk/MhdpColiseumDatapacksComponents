@@ -5,4 +5,4 @@ execute positioned ^0 ^2.8391174345 ^2.796024501 rotated ~0 ~2.5 run function an
 $execute as $(hitbox_head_0) positioned ^0 ^2.2254520644 ^2.7692312923 rotated ~0 ~2.5 run function animated_java:ranposu/animations/ecology_relax/zzz/frames/74_locator_hitbox_head_0
 $execute as $(hitbox_tail_0) positioned ^0.1719267318 ^0.45734548 ^-1.7672739588 rotated ~8.0872552456 ~-22.2603438037 run function animated_java:ranposu/animations/ecology_relax/zzz/frames/74_locator_hitbox_tail_0
 $execute as $(hitbox_tail_1) positioned ^0.3345077545 ^0.2188435153 ^-3.0249800365 rotated ~6.8830399512 ~-2.294585848 run function animated_java:ranposu/animations/ecology_relax/zzz/frames/74_locator_hitbox_tail_1
-$execute as $(shadow) positioned ^0 ^0.1125 ^-0.1125 rotated ~0 ~0 run function animated_java:ranposu/animations/ecology_relax/zzz/frames/74_locator_shadow
+$execute as $(shadow) positioned ^0 ^0.39375 ^-0.225 rotated ~0 ~0 run function animated_java:ranposu/animations/ecology_relax/zzz/frames/74_locator_shadow

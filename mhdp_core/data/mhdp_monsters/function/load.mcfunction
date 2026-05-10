@@ -107,6 +107,8 @@
         scoreboard objectives add Mns.Shot.Timer dummy
 
 # 一時的処理用
+    # 回転
+        scoreboard objectives add Mns.Temp.RotateValue dummy
     # 回転速度
         scoreboard objectives add Mns.Temp.RotateVec dummy
     # 移動速度

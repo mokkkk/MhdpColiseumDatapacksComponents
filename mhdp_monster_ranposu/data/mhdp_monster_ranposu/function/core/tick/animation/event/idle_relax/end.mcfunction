@@ -4,5 +4,5 @@
 #
 # @within function mhdp_monster_ranposu:core/tick/animation/event/idle/main
 
-# 行動選択
-    # function mhdp_monster_ranposu:core/tick/animation/change/main
+# 一定確率で遷移
+    execute if predicate {"condition":"minecraft:random_chance","chance":0.4} run function mhdp_monster_ranposu:core/tick/animation/change/main

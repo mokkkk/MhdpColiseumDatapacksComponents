@@ -7,6 +7,12 @@
 # 行動回数加算
     scoreboard players add @s Mns.General.ActCount.Idle 1
 
+# 移動
+    execute if entity @s[tag=Anim.Walk] run function animated_java:ranposu/animations/walk_relax/tween {duration:5, to_frame: 5}
+
+# 生態行動
+    execute if entity @s[tag=Anim.Ecology] run function animated_java:ranposu/animations/ecology_relax/tween {duration:1, to_frame: 1}
+
 # 待機
     execute if entity @s[tag=Anim.Idle] run function animated_java:ranposu/animations/idle/tween {duration:1, to_frame: 1}
 

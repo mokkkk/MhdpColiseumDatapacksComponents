@@ -5,6 +5,9 @@
 # モンスター用の一時storageを初期化
     data modify storage mhdp_core:temp MonsterTemp set value {}
 
+# 現在いるエリアを保持
+    execute store result storage mhdp_core:temp MonsterTemp.CurrentArea.AreaId int 1 run scoreboard players get @s Fld.CurrentAreaId
+
 # 現在位置を保持
     data modify storage mhdp_core:temp MonsterTemp.PrePosArray set from entity @s Pos
     data modify storage mhdp_core:temp MonsterTemp.PrePos.X set from storage mhdp_core:temp MonsterTemp.PrePosArray[0]

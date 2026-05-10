@@ -6,6 +6,10 @@
 
 # 非発見時・待機
     execute if entity @s[tag=animated_java.ranposu.animation.idle_relax.playing] run function mhdp_monster_ranposu:core/tick/animation/event/idle_relax/main
+# 非発見時・移動
+    execute if entity @s[tag=animated_java.ranposu.animation.walk_relax.playing] run function mhdp_monster_ranposu:core/tick/animation/event/walk_relax/main
+# 非発見時・生態行動
+    execute if entity @s[tag=animated_java.ranposu.animation.ecology_relax.playing] run function mhdp_monster_ranposu:core/tick/animation/event/ecology_relax/main
 
 # 待機
 #     execute if entity @s[tag=aj.ranposu_aj.animation.idle.playing] run function mhdp_monster_ranposu:core/tick/animation/event/idle/main
