@@ -9,6 +9,8 @@
     # メイン
         # メイン処理用
             scoreboard objectives add Mns.General.AnimationTimer dummy
+        # フェーズ
+            scoreboard objectives add Mns.General.Phase dummy
         # 連続行動回数(威嚇用)
             scoreboard objectives add Mns.General.ActCount.Idle dummy
         # 連続行動回数(ターゲット更新用)

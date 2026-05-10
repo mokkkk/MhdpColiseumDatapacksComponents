@@ -4,7 +4,7 @@
 #
 # @within function mhdp_monster_ranposu:core/summon/summon
 
-# 共通処理・共通データの初期化
+# 共通処理
     function mhdp_monsters:core/super/init/
 
 # ボスバー作成

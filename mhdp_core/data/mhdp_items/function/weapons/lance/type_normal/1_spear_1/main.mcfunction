@@ -28,12 +28,13 @@
 # 演出
 
 # 移動制限
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_nojump
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartLeftClick,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..17 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..17 run function mhdp_items:core/buffering/jump
-    execute if score @s Wpn.GeneralTimer matches 3..2171 run function mhdp_items:core/buffering/arts_main
+    execute if score @s Wpn.GeneralTimer matches 3..17 run function mhdp_items:core/buffering/arts_main
 
 # 遷移
      # 左クリック：突き2に移行

@@ -11,6 +11,7 @@
     function mhdp_items:weapons/lance/util/before_attack
 
 # タグ付与
+    tag @s remove Ply.Weapon.Guard
     tag @s add Wpn.Lc.Normal.Step
     tag @s remove Ply.Weapon.NoOpe
 

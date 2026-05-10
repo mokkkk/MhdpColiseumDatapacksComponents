@@ -42,14 +42,12 @@
     # 計算
         scoreboard players operation @s Mns.Stun.Damage *= #mhdp_temp_hp_multiply_playercount MhdpCore
         execute store result score @s Mns.Stun.Damage.Max run scoreboard players operation @s Mns.Stun.Damage /= #const_100 Const
-
 # 減気耐性値
     # 倍率取得
         execute store result score #mhdp_temp_multiply MhdpCore run data get storage mhdp_core:temp TargetMonsterData.TireDamage
     # 計算
         scoreboard players operation @s Mns.Tire.Damage *= #mhdp_temp_hp_multiply_playercount MhdpCore
         execute store result score @s Mns.Tire.Damage.Max run scoreboard players operation @s Mns.Tire.Damage /= #const_100 Const
-
 # 怒り
     # 耐性値
         # 倍率取得
@@ -64,7 +62,6 @@
         execute store result score @s Mns.Anger.AttackMutiply run data get storage mhdp_core:temp TargetMonsterData.AngerAttackMult
     # 行動速度
         execute store result score @s Mns.Anger.Speed run data get storage mhdp_core:temp TargetMonsterData.AngerSpeed
-
 # 麻痺
     # 耐性値
         # 基礎値取得
@@ -77,7 +74,6 @@
     # 継続時間
         execute store result score @s Mns.Paralysis.Timer.Max run data get storage mhdp_core:temp TargetMonsterData.ParalysisTimer
         execute store result score @s Mns.Paralysis.Timer run scoreboard players operation @s Mns.Paralysis.Timer.Max *= #const_20 Const
-
 # 毒
     # 耐性値
         # 基礎値取得
@@ -96,7 +92,6 @@
         # 計算
             scoreboard players operation @s Mns.Poison.Effect.Value *= @s Mns.Hp
             scoreboard players operation @s Mns.Poison.Effect.Value /= #const_10000 Const
-
 # 爆破
     # 耐性値
         # 基礎値取得
@@ -109,11 +104,9 @@
     # 効果ダメージ
         # 基礎値取得
             execute store result score @s Mns.Bomb.Effect.Value run data get storage mhdp_core:temp TargetMonsterData.BombEffectDamage
-
 # 龍気
     # 耐性値
         execute store result score @s Mns.DragonAura.Damage store result score @s Mns.DragonAura.Damage.Max run scoreboard players get #const_dragonaura_damage_initial_value Const
-
 # 相殺
     # 基礎値取得
         execute store result score @s Mns.Counter.Damage store result score @s Mns.Counter.Damage.Max run data get storage mhdp_core:temp TargetMonsterData.CounterDamage
@@ -150,6 +143,8 @@
     execute if data storage mhdp_core:game_data ActiveQuest{Time:"day"} on passengers if entity @s[type=item_display] run data modify entity @s brightness set value {sky:15,block:15}
     execute if data storage mhdp_core:game_data ActiveQuest{Time:"night"} on passengers if entity @s[type=item_display] run data modify entity @s brightness set value {sky:3,block:3}
 # スコア初期化
+    # フェーズ
+        scoreboard players set @s Mns.General.Phase 0
     # 怒り中の行動速度増加
         scoreboard players set @s Mns.Temp.AngerSpeed.Timer 0
     # 連続行動回数

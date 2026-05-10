@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/lance/type_tec/6_guard/just_guard
+#> mhdp_items:weapons/lance/type_normal/6_guard/just_guard
 #
 # ガード ジャストガード成功
 #
@@ -24,7 +24,7 @@
     # 前処理
         function mhdp_items:weapons/lance/util/before_attack
     # タグ付与
-        tag @s remove Wpn.Lc.Tec.Guard
-        tag @s add Wpn.Lc.Tec.Guard.Just
+        tag @s remove Wpn.Lc.Normal.Guard
+        tag @s add Wpn.Lc.Normal.Guard.Just
     # タイマー初期化
         scoreboard players set @s Wpn.GeneralTimer 0

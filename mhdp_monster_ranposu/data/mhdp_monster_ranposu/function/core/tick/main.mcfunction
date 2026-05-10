@@ -1,4 +1,4 @@
-#> mhdp_monster_ranposu:core/tick/tick_main
+#> mhdp_monster_ranposu:core/tick/main
 #
 # tick処理
 #
@@ -7,8 +7,16 @@
 # Animated Java側処理
     function animated_java:ranposu/root/on_tick
 
-# 共通処理
-    # function mhdp_monsters:core/util/tick/pre_tick
+# 共通tick開始処理
+    function mhdp_monsters:core/super/tick/pre_tick
+
+# tick中処理
+    # 非発見時
+        execute if score @s Mns.General.Phase matches 0
+    # 警戒時
+        execute if score @s Mns.General.Phase matches 0
+    # 戦闘時
+        execute if score @s Mns.General.Phase matches 0
     # function mhdp_monsters:core/util/tick/tick
 
 # アニメーションイベントハンドラ

@@ -68,6 +68,7 @@
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsSneaking,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/lance/type_normal/7_guard/start
     # 処理
         execute if entity @s[tag=Wpn.Lc.Normal.Guard] run function mhdp_items:weapons/lance/type_normal/7_guard/main
+        execute if entity @s[tag=Wpn.Lc.Normal.Guard.Just] run function mhdp_items:weapons/lance/type_normal/7_guard/main_just
 
 # ガード溜め
     # 処理
