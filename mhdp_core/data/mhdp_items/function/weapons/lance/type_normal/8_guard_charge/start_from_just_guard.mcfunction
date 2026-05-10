@@ -14,5 +14,5 @@
     tag @s add Ply.Weapon.StaminaNotRegen
 
 # 溜め段階初期化
-    scoreboard players set @s Wpn.Lc.ChargeTimer 150
-    scoreboard players set @s Wpn.Lc.ChargeCount 1
+    scoreboard players set @s Wpn.Lc.ChargeTimer 144
+    scoreboard players set @s Wpn.Lc.ChargeCount 0
