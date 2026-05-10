@@ -17,8 +17,12 @@
             scoreboard objectives add Mns.General.ActCount.Target dummy
         # 連続行動回数(位置リセット用)
             scoreboard objectives add Mns.General.ActCount.Move dummy
-        # プレイヤー発見までの時間
+        # 非発見時・警戒までの時間
+            scoreboard objectives add Mns.General.CautionTimer dummy
+        # 警戒時・プレイヤー発見までの時間
             scoreboard objectives add Mns.General.SearchTimer dummy
+        # 非発見時・移動アニメーションループ回数
+            scoreboard objectives add Mns.General.WalkCount dummy
         # 連続軸合わせ回数
             scoreboard objectives add Mns.General.TurnCount dummy
         # ダウンのもがき回数
