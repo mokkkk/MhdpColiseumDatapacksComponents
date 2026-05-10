@@ -6,4 +6,7 @@
     data modify storage mhdp_core:temp MonsterTemp set value {}
 
 # 現在位置を保持
-    data modify storage mhdp_core:temp MonsterTemp.PrePos set from entity @s Pos
+    data modify storage mhdp_core:temp MonsterTemp.PrePosArray set from entity @s Pos
+    data modify storage mhdp_core:temp MonsterTemp.PrePos.X set from storage mhdp_core:temp MonsterTemp.PrePosArray[0]
+    data modify storage mhdp_core:temp MonsterTemp.PrePos.Y set from storage mhdp_core:temp MonsterTemp.PrePosArray[1]
+    data modify storage mhdp_core:temp MonsterTemp.PrePos.Z set from storage mhdp_core:temp MonsterTemp.PrePosArray[2]

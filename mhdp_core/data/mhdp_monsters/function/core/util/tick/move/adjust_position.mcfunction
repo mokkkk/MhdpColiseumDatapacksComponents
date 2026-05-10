@@ -10,8 +10,8 @@
 # Y座標確認
     function mhdp_monsters:core/util/tick/move/check_height.m with storage mhdp_core:temp MonsterTemp.CurrentPos
 
-# 前の位置に戻る
-    function mhdp_monsters:core/util/tick/move/back_to_preposition
+# 前tick位置確認
+    execute at @s run function mhdp_monsters:core/util/tick/move/check_preposition.m with storage mhdp_core:temp MonsterTemp.PrePos
 
 # # PrePos更新
 #     function mhdp_monsters:core/util/tick/move/save_position
