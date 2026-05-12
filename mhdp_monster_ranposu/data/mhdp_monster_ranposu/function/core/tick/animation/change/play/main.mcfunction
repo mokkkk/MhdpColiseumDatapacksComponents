@@ -13,6 +13,9 @@
 # 生態行動
     execute if entity @s[tag=Anim.Ecology] run function animated_java:ranposu/animations/ecology_relax/tween {duration:1, to_frame: 1}
 
+# 探索
+    execute if entity @s[tag=Anim.Search] run function animated_java:ranposu/animations/search/tween {duration:1, to_frame: 1}
+
 # 待機
     execute if entity @s[tag=Anim.Idle] run function animated_java:ranposu/animations/idle/tween {duration:1, to_frame: 1}
 

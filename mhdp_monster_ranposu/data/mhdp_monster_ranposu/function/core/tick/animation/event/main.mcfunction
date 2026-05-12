@@ -11,15 +11,18 @@
 # 非発見時・生態行動
     execute if entity @s[tag=animated_java.ranposu.animation.ecology_relax.playing] run function mhdp_monster_ranposu:core/tick/animation/event/ecology_relax/main
 
+# 警戒中
+    execute if entity @s[tag=animated_java.ranposu.animation.search.playing] run function mhdp_monster_ranposu:core/tick/animation/event/search/main
+
 # 待機
 #     execute if entity @s[tag=aj.ranposu_aj.animation.idle.playing] run function mhdp_monster_ranposu:core/tick/animation/event/idle/main
 
-# # 警戒中
-#     execute if entity @s[tag=aj.ranposu_aj.animation.search.playing] run function mhdp_monster_ranposu:core/tick/animation/event/search/main
+# 咆哮
+    execute if entity @s[tag=animated_java.ranposu.animation.voice.playing] run function mhdp_monster_ranposu:core/tick/animation/event/voice/main
 
-# # 軸合わせ
-#     execute if entity @s[tag=aj.ranposu_aj.animation.turn_right.playing] run function mhdp_monster_ranposu:core/tick/animation/event/turn_right/main
-#     execute if entity @s[tag=aj.ranposu_aj.animation.turn_left.playing] run function mhdp_monster_ranposu:core/tick/animation/event/turn_left/main
+# 軸合わせ
+    execute if entity @s[tag=animated_java.ranposu.animation.turn_right.playing] run function mhdp_monster_ranposu:core/tick/animation/event/turn_right/main
+    execute if entity @s[tag=animated_java.ranposu.animation.turn_left.playing] run function mhdp_monster_ranposu:core/tick/animation/event/turn_left/main
 
 # # 怯み
 #     # 通常
@@ -55,9 +58,6 @@
 
 # # バックステップ
 #     execute if entity @s[tag=aj.ranposu_aj.animation.step_back.playing] run function mhdp_monster_ranposu:core/tick/animation/event/step_back/main
-
-# # 咆哮
-#     execute if entity @s[tag=aj.ranposu_aj.animation.voice.playing] run function mhdp_monster_ranposu:core/tick/animation/event/voice/main
 
 # # 噛みつき
 #     execute if entity @s[tag=aj.ranposu_aj.animation.bite.playing] run function mhdp_monster_ranposu:core/tick/animation/event/bite/main

@@ -11,10 +11,15 @@
 
 # 共通処理
     # Animタグがすでについているか確認
+    # 軸合わせ後の行動、およびコンボ攻撃実装のため
         function mhdp_monsters:core/util/tick/check_animation_tag
 
 # 非発見時
-    execute if score @s Mns.General.Phase matches 0 run function mhdp_monster_ranposu:core/tick/animation/change/main_relax
+    execute if score @s Mns.General.Phase matches 0 run function mhdp_monster_ranposu:core/tick/animation/change/on_relax/main
+# 警戒時
+    execute if score @s Mns.General.Phase matches 1 run function mhdp_monster_ranposu:core/tick/animation/change/on_caution/main
+# 戦闘時
+    execute if score @s Mns.General.Phase matches 2 run function mhdp_monster_ranposu:core/tick/animation/change/on_battle/main
 
 # # 事前処理
 #     # 発見
@@ -45,16 +50,13 @@
 # # デバッグ時はここをコメントアウト
 #     # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn,tag=!Mns.State.IsNotMove] if entity @e[tag=Mns.Target.Ranposu] run function mhdp_monster_ranposu:core/tick/animation/change/random/main
 
-# # 軸合わせアニメーション再生
-#     execute if entity @s[tag=Mns.Temp.IsTurn] store result score #mhdp_temp_result MhdpCore run function mhdp_monster_ranposu:core/tick/animation/change/play/turn
-#     # 軸合わせ不要な場合、すぐアニメーションを再生する
-#         execute if score #mhdp_temp_result MhdpCore matches 99 run tag @s remove Mns.Temp.IsTurn
-#     scoreboard players reset #mhdp_temp_result MhdpCore
+# 軸合わせアニメーション再生
+    execute if entity @s[tag=Mns.Temp.IsTurn] run function mhdp_monster_ranposu:core/tick/animation/change/play/turn
 
-# 軸合わせしない場合、攻撃アニメーション再生・タグ消去
+# アニメーション再生(軸合わせ以外)
     execute if entity @s[tag=!Mns.Temp.IsTurn] run function mhdp_monster_ranposu:core/tick/animation/change/play/main
 
 # 終了
     tag @s remove Mns.Temp.IsTurn
-    tag @s remove Mns.Temp.IsFirstContact
+    tag @s remove Mns.Temp.Anim.IsFirstContact
     tag @s remove Mns.Temp.IsAlreadyAnimation

@@ -14,9 +14,9 @@
     # 非発見時
         execute if score @s Mns.General.Phase matches 0 run function mhdp_monster_ranposu:core/tick/on_relax/tick
     # 警戒時
-        execute if score @s Mns.General.Phase matches 1
+        execute if score @s Mns.General.Phase matches 1 run function mhdp_monster_ranposu:core/tick/on_caution/tick
     # 戦闘時
-        execute if score @s Mns.General.Phase matches 2
+        execute if score @s Mns.General.Phase matches 2 run function mhdp_monster_ranposu:core/tick/on_battle/tick
     # function mhdp_monsters:core/util/tick/tick
 
 # 共通tick中処理

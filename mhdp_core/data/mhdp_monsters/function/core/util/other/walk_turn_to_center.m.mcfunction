@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:/**
 
 # 中心位置が近い場合、実行しない
-    $execute if entity @n[type=marker,tag=Mk.Field.AreaCenter,tag=Mk.Field.Area$(AreaId),distance=..30] run return 0
+    $execute if entity @n[type=marker,tag=Mk.Field.AreaCenter,tag=Mk.Field.Area$(AreaId),distance=..20] run return 0
 
 # 中心位置に向かう
     summon marker ~ ~ ~ {Tags:["Temp.Rotate.Target.Marker"]}
