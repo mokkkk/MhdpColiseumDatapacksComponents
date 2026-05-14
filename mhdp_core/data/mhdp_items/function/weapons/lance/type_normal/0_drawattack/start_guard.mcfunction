@@ -11,4 +11,4 @@
     function mhdp_items:player/weapon/sheathe/force_drawing
     
 # ガードに移行
-    function mhdp_items:weapons/short_sword/type_normal/24_guard/start
+    function mhdp_items:weapons/lance/type_normal/7_guard/start

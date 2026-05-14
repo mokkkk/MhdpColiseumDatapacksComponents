@@ -2,5 +2,8 @@
 #
 # オブジェクト初期化処理
 
+# 初期化
+    scoreboard players set @s MhdpCore 255
+
 # データ設定
     function assets:object/0009.floating_text/init/apply.m with storage api: Arg.Override

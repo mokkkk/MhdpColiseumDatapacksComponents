@@ -3,3 +3,5 @@
 
 #> tag
 # @within function **
+
+#declare tag 9.IsReaction 判別用タグ
