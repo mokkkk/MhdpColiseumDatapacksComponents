@@ -11,7 +11,7 @@
     tag @a remove Mns.Temp.Situation.Near
     tag @a remove Mns.Temp.Situation.Middle
     tag @a remove Mns.Temp.Situation.Far
-    tag @s remove Mns.Temp.Situation.IsSprinting
-    tag @s remove Mns.Temp.Situation.IsStopping
-    tag @s remove Mns.Temp.Situation.IsSneaking
-    tag @s remove Mns.Temp.Situation.IsCovering
+    tag @a remove Mns.Temp.Situation.IsSprinting
+    tag @a remove Mns.Temp.Situation.IsStopping
+    tag @a remove Mns.Temp.Situation.IsSneaking
+    tag @a remove Mns.Temp.Situation.IsCovering

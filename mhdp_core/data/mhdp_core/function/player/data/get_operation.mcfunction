@@ -103,6 +103,8 @@
 #     # スニーク
 #         execute if entity @s[tag=Ply.Ope.StartSneak] run say スニーク
 #         execute if entity @s[tag=Ply.Ope.StartDoubleSneak] run say 連続スニーク
+#     # スプリント
+        # execute if entity @s[tag=Ply.Ope.IsSprinting] run say スプリント
 #     # エンダーアイ
         # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] run say エンダーアイ使用開始
         # execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] run say エンダーアイ使用中

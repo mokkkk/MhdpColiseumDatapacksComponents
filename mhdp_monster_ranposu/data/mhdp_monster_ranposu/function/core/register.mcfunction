@@ -7,16 +7,22 @@
 ## 青鳥竜
 
 # scoreboard定義
-    # 頭部位耐久値
-        scoreboard objectives add Mns.Ranposu.Head.Damage dummy
-        scoreboard objectives add Mns.Ranposu.Head.Damage.Max dummy
-    # 胴部位耐久値
-        scoreboard objectives add Mns.Ranposu.Body.Damage dummy
-        scoreboard objectives add Mns.Ranposu.Body.Damage.Max dummy
-    # 怯み回数
-        scoreboard objectives add Mns.Ranposu.DamageCount dummy
-    # 尻尾攻撃回数
-        scoreboard objectives add Mns.Ranposu.TailCount dummy
+# 頭部位耐久値
+    scoreboard objectives add Mns.Ranposu.Head.Damage dummy
+    scoreboard objectives add Mns.Ranposu.Head.Damage.Max dummy
+# 胴部位耐久値
+    scoreboard objectives add Mns.Ranposu.Body.Damage dummy
+    scoreboard objectives add Mns.Ranposu.Body.Damage.Max dummy
+# 怯み回数
+    scoreboard objectives add Mns.Ranposu.DamageCount dummy
+# 尻尾攻撃回数
+    scoreboard objectives add Mns.Ranposu.TailCount dummy
+# 警戒値
+    scoreboard objectives add Mns.Ranposu.Caution dummy
+# 発見値
+    scoreboard objectives add Mns.Ranposu.Search dummy
+# ヘイト
+    scoreboard objectives add Mns.Ranposu.Hate dummy
 
 # メインデータ
     execute if data storage mhdp_core:monster_data MonsterData[{Uid:1001}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1001}]

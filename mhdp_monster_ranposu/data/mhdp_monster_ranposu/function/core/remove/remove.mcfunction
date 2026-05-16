@@ -10,6 +10,11 @@
 # ボスバー消去
     bossbar remove mhdp_monster:ranposu
 
+# スコア消去
+    scoreboard players reset @a Mns.Ranposu.Caution
+    scoreboard players reset @a Mns.Ranposu.Search
+    scoreboard players reset @a Mns.Ranposu.Hate
+
 # モデル消去
     function animated_java:ranposu/remove/this
 

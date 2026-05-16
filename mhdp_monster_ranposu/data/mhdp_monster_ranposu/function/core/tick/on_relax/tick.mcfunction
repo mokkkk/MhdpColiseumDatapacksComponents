@@ -8,4 +8,4 @@
     execute if entity @s[tag=Mns.Temp.IsTick] run function mhdp_monster_ranposu:core/tick/on_relax/update_caution
 
 # 警戒度が一定以上になったとき、フェーズ移行
-    execute if score @s Mns.General.CautionTimer matches 2000.. run function mhdp_monster_ranposu:core/tick/on_caution/start
+    execute if entity @a[tag=Mns.Candidate.Ranposu,scores={Mns.Ranposu.Caution=1000..}] run function mhdp_monster_ranposu:core/tick/on_caution/start
