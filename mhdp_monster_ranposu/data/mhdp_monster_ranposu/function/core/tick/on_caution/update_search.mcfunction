@@ -67,3 +67,9 @@
 
 # 終了
     function mhdp_monsters:core/util/tick/fetch_player/remove_tag
+
+# 別エリアのプレイヤーの警戒度減少
+    execute as @a[tag=Ply.State.PlayingQuest,tag=!Mns.Candidate.Ranposu,scores={Mns.Ranposu.Caution=1..}] run scoreboard players remove @s Mns.Ranposu.Caution 40
+
+# 全プレイヤーの警戒度が0以下になった場合、未発見に戻る
+    execute unless entity @a[tag=Ply.State.PlayingQuest,scores={Mns.Ranposu.Caution=1..}] run function mhdp_monster_ranposu:core/tick/on_relax/start

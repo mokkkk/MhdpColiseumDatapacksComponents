@@ -13,8 +13,11 @@
 # ボスバー表示更新
     bossbar set mhdp_monster:ranposu players @a[tag=Mns.Candidate.Ranposu]
 
-# 戦闘中の場合、ターゲット確認
-    execute if score @s Mns.General.Phase matches 2 run function mhdp_monster_ranposu:core/tick/on_battle/check_target
+# 戦闘中
+    # 同エリアプレイヤーの発見値を固定
+        execute if score @s Mns.General.Phase matches 2 run scoreboard players set @a[tag=Mns.Candidate.Ranposu] Mns.Ranposu.Search 1000
+    # ターゲット確認
+        execute if score @s Mns.General.Phase matches 2 run function mhdp_monster_ranposu:core/tick/on_battle/check_target
 
 # デバッグ用
     execute if data storage mhdp_core:game_data {ShowDebugMessage:true} run say mhdp_monster_ranposu:core/util/fetch_player
