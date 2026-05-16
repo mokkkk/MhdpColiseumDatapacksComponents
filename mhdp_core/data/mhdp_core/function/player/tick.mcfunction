@@ -23,8 +23,6 @@
     execute if entity @s[tag=Ply.State.PlayingQuest] run function mhdp_core:player/phase_quest/tick
 
 # 終了
-    # 操作の初期化
-        function mhdp_core:player/data/remove_operation
     # 一時タグの消去    
         function mhdp_core:player/data/remove_temp_tags
     # キャッシュデータの削除

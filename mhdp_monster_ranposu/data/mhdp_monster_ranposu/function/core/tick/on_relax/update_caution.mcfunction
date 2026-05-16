@@ -12,18 +12,22 @@
         # 近距離
             # 前、横
                 # 移動中
+                    # スプリント中
+                        execute as @a[tag=Mns.Temp.Situation.Near,tag=!Mns.Temp.Situation.Back,tag=Mns.Temp.Situation.IsSprinting,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 300
                     # 非スニーク中
-                        execute as @a[tag=Mns.Temp.Situation.Near,tag=!Mns.Temp.Situation.Back,tag=!Mns.Temp.Situation.IsStopping,tag=!Mns.Temp.Situation.IsSneaking,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 150
+                        execute as @a[tag=Mns.Temp.Situation.Near,tag=!Mns.Temp.Situation.Back,tag=!Mns.Temp.Situation.IsSprinting,tag=!Mns.Temp.Situation.IsStopping,tag=!Mns.Temp.Situation.IsSneaking,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 150
                     # スニーク中
-                        execute as @a[tag=Mns.Temp.Situation.Near,tag=!Mns.Temp.Situation.Back,tag=!Mns.Temp.Situation.IsStopping,tag=Mns.Temp.Situation.IsSneaking,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 100
+                        execute as @a[tag=Mns.Temp.Situation.Near,tag=!Mns.Temp.Situation.Back,tag=!Mns.Temp.Situation.IsSprinting,tag=!Mns.Temp.Situation.IsStopping,tag=Mns.Temp.Situation.IsSneaking,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 100
                 # 停止中
                     execute as @a[tag=Mns.Temp.Situation.Near,tag=!Mns.Temp.Situation.Back,tag=Mns.Temp.Situation.IsStopping,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 100
             # 後
                 # 移動中
+                    # スプリント中
+                        execute as @a[tag=Mns.Temp.Situation.Near,tag=Mns.Temp.Situation.Back,tag=Mns.Temp.Situation.IsSprinting,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 80
                     # 非スニーク中
-                        execute as @a[tag=Mns.Temp.Situation.Near,tag=Mns.Temp.Situation.Back,tag=!Mns.Temp.Situation.IsStopping,tag=!Mns.Temp.Situation.IsSneaking,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 50
+                        execute as @a[tag=Mns.Temp.Situation.Near,tag=Mns.Temp.Situation.Back,tag=!Mns.Temp.Situation.IsSprinting,tag=!Mns.Temp.Situation.IsStopping,tag=!Mns.Temp.Situation.IsSneaking,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 50
                     # スニーク中
-                        execute as @a[tag=Mns.Temp.Situation.Near,tag=Mns.Temp.Situation.Back,tag=!Mns.Temp.Situation.IsStopping,tag=Mns.Temp.Situation.IsSneaking,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 10
+                        execute as @a[tag=Mns.Temp.Situation.Near,tag=Mns.Temp.Situation.Back,tag=!Mns.Temp.Situation.IsSprinting,tag=!Mns.Temp.Situation.IsStopping,tag=Mns.Temp.Situation.IsSneaking,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 10
                 # その他
                     execute as @a[tag=Mns.Temp.Situation.Near,tag=Mns.Temp.Situation.Back,tag=Mns.Temp.Situation.IsStopping,tag=!Mns.Temp.Situation.IsCovering] run scoreboard players add @s Mns.Ranposu.Caution 10
         # 中距離

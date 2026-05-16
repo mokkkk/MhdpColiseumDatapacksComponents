@@ -31,4 +31,4 @@
 #     execute as @e[tag=Effect.General] at @s run function mhdp_monsters:core/effect/tick
 
 # tick終了時処理
-    function mhdp_core:core/on_end_tick
+    function mhdp_core:core/post_tick
