@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:tall_grass",
+        "minecraft:tall_dry_grass"
+    ]
+}

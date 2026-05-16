@@ -22,5 +22,10 @@
 
 # 状態
     # ダッシュ移動中
-        # execute as @a[tag=Ply.Ope.IsKeySprint]
-    # 移動中
+        $execute as @a[tag=$(Tag),tag=Ply.Ope.IsSprinting,distance=..100] run tag @s add Mns.Temp.Situation.IsSprinting
+    # 停止中
+        $execute as @a[tag=$(Tag),distance=..100] if entity @s[tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsKeyBack,tag=!Ply.Ope.IsKeyRight,tag=!Ply.Ope.IsKeyLeft,tag=!Ply.Ope.IsKeyJump] run tag @s add Mns.Temp.Situation.IsStopping
+    # スニーク中
+        $execute as @a[tag=$(Tag),tag=Ply.Ope.IsSneaking,distance=..100] run tag @s add Mns.Temp.Situation.IsSneaking
+    # ブロックに隠れている
+        $execute as @a[tag=$(Tag),distance=..100] at @s if block ~ ~ ~ #mhdp_core:cover if block ~ ~1 ~ #mhdp_core:cover run tag @s add Mns.Temp.Situation.IsCovering
