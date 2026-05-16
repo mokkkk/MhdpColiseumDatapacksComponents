@@ -4,5 +4,8 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
+# ボスバー名更新
+    function mhdp_monsters:core/util/tick/update_bossbar.m {Monster:"ranposu",State:"relax"}
+
 # 戦闘状態解除
     tag @s remove Mns.State.IsBattle

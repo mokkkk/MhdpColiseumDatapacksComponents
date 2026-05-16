@@ -16,5 +16,8 @@
     execute positioned as @n[type=slime,tag=Mns.HitBox.Ranposu.Head] run function api:object/summon.m {ObjectId:9}
     execute as @n[type=text_display,tag=9.Ranposu,distance=..10] run ride @s mount @n[type=slime,tag=Mns.HitBox.Ranposu.Head]
 
+# ボスバー名更新
+    function mhdp_monsters:core/util/tick/update_bossbar.m {Monster:"ranposu",State:"caution"}
+
 # アニメーション変更
     function mhdp_monster_ranposu:core/tick/animation/change/main

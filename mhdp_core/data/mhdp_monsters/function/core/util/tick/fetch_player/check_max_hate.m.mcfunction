@@ -8,7 +8,7 @@
 # @input arg Score 比較するスコアボード名
 
 # 初期化
-    scoreboard players set #temp_max_hate MhdpCore 0
+    scoreboard players set #temp_max_hate MhdpCore -1
 
 # 実行
     $execute as @a[tag=$(CandidateTag)] run function mhdp_monsters:core/util/tick/fetch_player/check_max_hate_as_player.m {CandidateTag:"$(CandidateTag)",TargetTag:"$(TargetTag)",Score:"$(Score)"}

@@ -7,8 +7,11 @@
 # ターゲット確認
     function mhdp_monster_ranposu:core/tick/on_battle/check_target
 
-# 連続行動回数加算
-    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] run scoreboard players add @s Mns.General.ActCount.Target 1
+# 行動回数加算
+    # ターゲット更新用
+        scoreboard players add @s Mns.General.ActCount.Target 1
+    # 威嚇用
+        scoreboard players add @s Mns.General.ActCount.Target 1
 
 # 初回発見時
     execute if entity @s[tag=Mns.Temp.Anim.IsFirstContact] run return run function mhdp_monster_ranposu:core/tick/animation/change/on_battle/first

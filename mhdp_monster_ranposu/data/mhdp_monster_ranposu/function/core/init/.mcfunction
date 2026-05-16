@@ -8,7 +8,8 @@
     function mhdp_monsters:core/super/init/
 
 # ボスバー作成
-    bossbar add mhdp_monster:ranposu [{"text":"青鳥竜"},{"text":"\uE000","font":"minecraft:ui/monster_hp"}]
+    bossbar add mhdp_monster:ranposu {"text":""}
+    function mhdp_monsters:core/util/tick/update_bossbar.m {Monster:"ranposu",State:"relax"}
     execute store result bossbar mhdp_monster:ranposu max run scoreboard players get @s Mns.Hp
     execute store result bossbar mhdp_monster:ranposu value run scoreboard players get @s Mns.Hp
 

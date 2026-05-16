@@ -10,7 +10,10 @@
     execute as @a if score @s Fld.CurrentAreaId = #temp_current_area_id Fld.CurrentAreaId run tag @s add Mns.Candidate.Ranposu
     scoreboard players reset #temp_current_area_id
 
-# 戦闘中、ターゲット確認
+# ボスバー表示更新
+    bossbar set mhdp_monster:ranposu players @a[tag=Mns.Candidate.Ranposu]
+
+# 戦闘中の場合、ターゲット確認
     execute if score @s Mns.General.Phase matches 2 run function mhdp_monster_ranposu:core/tick/on_battle/check_target
 
 # デバッグ用

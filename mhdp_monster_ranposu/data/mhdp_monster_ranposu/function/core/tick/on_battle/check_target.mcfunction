@@ -9,5 +9,3 @@
 
 # ターゲットが存在しない場合、新しいターゲットを決定する
     execute unless entity @a[tag=Mns.Target.Ranposu] run function mhdp_monster_ranposu:core/tick/on_battle/update_target
-
-say check target

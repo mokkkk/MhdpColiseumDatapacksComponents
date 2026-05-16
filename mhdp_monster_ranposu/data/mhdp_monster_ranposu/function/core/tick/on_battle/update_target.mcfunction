@@ -13,7 +13,7 @@
         execute unless entity @a[tag=Mns.Target.Ranposu] as @p[tag=Mns.Candidate.Ranposu] run tag @s add Mns.Target.Ranposu
 
 # ターゲットになったプレイヤーのヘイトを減少
-    scoreboard players remove @a[tag=Mns.Target.Ranposu] Mns.Ranposu.Hate 200
+    scoreboard players remove @a[tag=Mns.Target.Ranposu] Mns.Ranposu.Hate 300
     execute as @a[tag=Mns.Target.Ranposu] if score @s Mns.Ranposu.Hate matches ..-1 run scoreboard players set @s Mns.Ranposu.Hate 0
 
 # ターゲット変更用の行動回数リセット
