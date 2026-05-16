@@ -17,4 +17,4 @@
     execute as @n[type=text_display,tag=9.Ranposu,distance=..10] run ride @s mount @n[type=slime,tag=Mns.HitBox.Ranposu.Head]
 
 # 初回遭遇
-    tag @s add Mns.Temp.Anim.IsFirstContact
+    execute unless entity @s[tag=Mns.State.IsBattle] run tag @s add Mns.Temp.Anim.IsFirstContact

@@ -9,3 +9,6 @@
 
 # モンスター用の一時storageを消去
     data remove storage mhdp_core:temp MonsterTemp
+
+# タグ消去
+    tag @s remove Mns.Temp.IsTick

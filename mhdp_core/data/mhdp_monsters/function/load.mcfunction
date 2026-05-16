@@ -17,6 +17,8 @@
             scoreboard objectives add Mns.General.ActCount.Target dummy
         # 連続行動回数(位置リセット用)
             scoreboard objectives add Mns.General.ActCount.Move dummy
+        # 警戒、ヘイト用タイマー
+            scoreboard objectives add Mns.General.TickTimer dummy
         # 非発見時・警戒までの時間
             scoreboard objectives add Mns.General.CautionTimer dummy
         # 警戒時・プレイヤー発見までの時間

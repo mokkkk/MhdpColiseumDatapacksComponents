@@ -26,6 +26,7 @@
     #declare tag Mns.Temp.IsAlreadyAnimation Animタグがすでについている
     #declare tag Mns.Temp.IsFirstContact 初回行動
     #declare tag Mns.Temp.IsDamaged 怯み適用済みフラグ
+    #declare tag Mns.Temp.IsTick 20tick毎の処理を実行する
     #declare tag Mns.Temp.Damage.Anger 怒り発動フラグ
     #declare tag Mns.Temp.Damage.Poison 毒発動フラグ
     #declare tag Mns.Temp.Damage.Paralysis 麻痺発動フラグ

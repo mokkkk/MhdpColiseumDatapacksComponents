@@ -31,6 +31,3 @@
 
 # 共通tick終了時処理
     function mhdp_monsters:core/super/tick/post_tick
-
-# 共通処理
-    # function mhdp_monsters:core/util/tick/post_tick
