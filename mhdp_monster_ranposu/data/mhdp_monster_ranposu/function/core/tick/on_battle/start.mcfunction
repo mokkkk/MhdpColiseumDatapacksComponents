@@ -16,5 +16,10 @@
     execute positioned as @n[type=slime,tag=Mns.HitBox.Ranposu.Head] run function api:object/summon.m {ObjectId:9}
     execute as @n[type=text_display,tag=9.Ranposu,distance=..10] run ride @s mount @n[type=slime,tag=Mns.HitBox.Ranposu.Head]
 
-# 初回遭遇
-    execute unless entity @s[tag=Mns.State.IsBattle] run tag @s add Mns.Temp.Anim.IsFirstContact
+# 初回遭遇時
+    # この時点で発見されているプレイヤーに大きなヘイトを与える
+        execute as @a[tag=Mns.Candidate.Ranposu,scores={Mns.Ranposu.Search=1000..}] run scoreboard players add @s Mns.Ranposu.Hate 100
+    # この時点で発見されているプレイヤーに大きなヘイトを与える
+        execute as @a[tag=Mns.Candidate.Ranposu,scores={Mns.Ranposu.Search=1000..}] run scoreboard players add @s Mns.Ranposu.Hate 100
+    # 咆哮アニメーション再生
+        execute unless entity @s[tag=Mns.State.IsBattle] run tag @s add Mns.Temp.Anim.IsFirstContact
