@@ -4,17 +4,23 @@
 #
 # @within function mhdp_monster_ranposu:core/tick/tick
 
-# 非発見時・待機
+## 非発見時
+
+# 待機
     execute if entity @s[tag=animated_java.ranposu.animation.idle_relax.playing] run function mhdp_monster_ranposu:core/tick/animation/event/idle_relax/main
-# 非発見時・移動
+# 移動
     execute if entity @s[tag=animated_java.ranposu.animation.walk_relax.playing] run function mhdp_monster_ranposu:core/tick/animation/event/walk_relax/main
-# 非発見時・生態行動
+# 生態行動
     execute if entity @s[tag=animated_java.ranposu.animation.ecology_relax.playing] run function mhdp_monster_ranposu:core/tick/animation/event/ecology_relax/main
 
-# 警戒中
+## 警戒時
+
+# 警戒
     execute if entity @s[tag=animated_java.ranposu.animation.search.playing] run function mhdp_monster_ranposu:core/tick/animation/event/search/main
 
-# 戦闘中・待機
+## 戦闘時
+
+# 待機
     execute if entity @s[tag=animated_java.ranposu.animation.idle.playing] run function mhdp_monster_ranposu:core/tick/animation/event/idle/main
 
 # 咆哮

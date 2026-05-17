@@ -13,8 +13,7 @@
     execute if score @s aj.turn_right.frame matches 14 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
 
 # 接地
-    # execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    # execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
     execute if score @s aj.turn_right.frame matches 19 run function mhdp_monster_ranposu:core/tick/animation/event/turn_right/end
