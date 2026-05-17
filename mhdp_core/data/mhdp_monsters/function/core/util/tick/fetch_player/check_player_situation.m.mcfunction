@@ -2,15 +2,14 @@
 # 
 # 汎用処理 プレイヤーの状態取得
 #
-# @within function mhdp_monsters:core/util/tick/tick
+# @input arg Tag セレクターに使用するCandidateタグ
+# @input arg DistNear 近距離判定のDistance
+# @input arg DistFar 遠距離判定のDistance
+# @input arg Fov 視野角。正面から両方向への角度
 
 # 位置取り
-    # 正面
-        $execute rotated ~ 0 run function api:bounding/cake.m {Selector:"@a[tag=$(Tag)]",Tag:"Mns.Temp.Situation.Forward",Radius:80.0,Height:4.0,Angle:45.0}
-    # # 背面
-        $execute rotated ~180 0 run function api:bounding/cake.m {Selector:"@a[tag=$(Tag)]",Tag:"Mns.Temp.Situation.Back",Radius:80.0,Height:4.0,Angle:45.0}
-    # 横
-        $execute as @a[tag=$(Tag),tag=!Mns.Temp.Situation.Forward,tag=Mns.Temp.Situation.Back] run tag @s add Mns.Temp.Situation.Side
+    # 視野内
+        $execute rotated ~ 0 run function api:bounding/cake.m {Selector:"@a[tag=$(Tag)]",Tag:"Mns.Temp.Situation.InFov",Radius:80.0,Height:4.0,Angle:$(Fov)}
 
 # 距離
     # 近距離

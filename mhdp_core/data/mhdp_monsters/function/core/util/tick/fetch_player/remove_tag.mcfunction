@@ -8,6 +8,7 @@
     tag @a remove Mns.Temp.Situation.Forward
     tag @a remove Mns.Temp.Situation.Side
     tag @a remove Mns.Temp.Situation.Back
+    tag @a remove Mns.Temp.Situation.InFov
     tag @a remove Mns.Temp.Situation.Near
     tag @a remove Mns.Temp.Situation.Middle
     tag @a remove Mns.Temp.Situation.Far
