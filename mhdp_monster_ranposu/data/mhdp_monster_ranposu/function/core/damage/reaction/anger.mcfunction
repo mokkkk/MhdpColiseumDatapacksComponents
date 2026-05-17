@@ -7,11 +7,8 @@
 # 共通処理
     # スコアリセット
         scoreboard players operation @s Mns.Anger.Damage = @s Mns.Anger.Damage.Max
-        scoreboard players operation @s Mns.Anger.Timer = @s Mns.Anger.Timer.Max
     # 状態更新
-        tag @s add Mns.State.IsAnger
-    # ボスバー更新
-        bossbar set mhdp_monster:ranposu name [{"text":"青鳥竜"},{"text":"\uE001","font":"minecraft:ui/monster_hp"}]
+        function mhdp_monster_ranposu:core/tick/on_battle/anger_start
 
 # アニメーション再生処理
     # 麻痺・ダウン・スタン時以外

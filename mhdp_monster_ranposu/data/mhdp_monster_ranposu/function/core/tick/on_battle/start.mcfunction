@@ -21,7 +21,7 @@
 
 # 初回遭遇時
     # この時点で発見されているプレイヤーに大きなヘイトを与える
-        execute as @a[tag=Mns.Candidate.Ranposu,scores={Mns.Ranposu.Search=1000..}] run scoreboard players add @s Mns.Ranposu.Hate 100
+        execute as @a[tag=Mns.Candidate.Ranposu,scores={Mns.Ranposu.Search=1000..}] run scoreboard players add @s Mns.Ranposu.Hate 300
     # 咆哮アニメーション再生
         execute unless entity @s[tag=Mns.State.IsBattle] run tag @s add Mns.Temp.Anim.IsFirstContact
     # 戦闘状態開始

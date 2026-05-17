@@ -1,4 +1,4 @@
-#> mhdp_monster_ranposu:core/tick/animation/change/random/m.near
+#> mhdp_monster_ranposu:core/tick/animation/change/on_battle/m.near
 #
 # 行動ランダム選択
 #

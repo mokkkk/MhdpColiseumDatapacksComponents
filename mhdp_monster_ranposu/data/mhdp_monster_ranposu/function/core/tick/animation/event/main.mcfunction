@@ -14,8 +14,8 @@
 # 警戒中
     execute if entity @s[tag=animated_java.ranposu.animation.search.playing] run function mhdp_monster_ranposu:core/tick/animation/event/search/main
 
-# 待機
-#     execute if entity @s[tag=aj.ranposu_aj.animation.idle.playing] run function mhdp_monster_ranposu:core/tick/animation/event/idle/main
+# 戦闘中・待機
+    execute if entity @s[tag=animated_java.ranposu.animation.idle.playing] run function mhdp_monster_ranposu:core/tick/animation/event/idle/main
 
 # 咆哮
     execute if entity @s[tag=animated_java.ranposu.animation.voice.playing] run function mhdp_monster_ranposu:core/tick/animation/event/voice/main

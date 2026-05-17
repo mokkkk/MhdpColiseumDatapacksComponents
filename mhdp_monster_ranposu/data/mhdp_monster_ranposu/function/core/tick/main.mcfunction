@@ -10,6 +10,9 @@
 # 共通tick開始時処理
     function mhdp_monsters:core/super/tick/pre_tick
 
+# 共通tick中処理
+    function mhdp_monsters:core/super/tick/in_tick
+
 # tick中処理
     # 非発見時
         execute if score @s Mns.General.Phase matches 0 run function mhdp_monster_ranposu:core/tick/on_relax/tick
@@ -18,9 +21,6 @@
     # 戦闘時
         execute if score @s Mns.General.Phase matches 2 run function mhdp_monster_ranposu:core/tick/on_battle/tick
     # function mhdp_monsters:core/util/tick/tick
-
-# 共通tick中処理
-    function mhdp_monsters:core/super/tick/in_tick
 
 # アニメーションイベントハンドラ
     function mhdp_monster_ranposu:core/tick/animation/event/main

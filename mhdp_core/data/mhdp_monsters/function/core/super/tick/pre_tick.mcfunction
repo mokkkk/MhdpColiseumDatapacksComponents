@@ -14,7 +14,7 @@
     data modify storage mhdp_core:temp MonsterTemp.PrePos.Y set from storage mhdp_core:temp MonsterTemp.PrePosArray[1]
     data modify storage mhdp_core:temp MonsterTemp.PrePos.Z set from storage mhdp_core:temp MonsterTemp.PrePosArray[2]
 
-# tick増加
+# 1秒ごとの処理
     scoreboard players add @s Mns.General.TickTimer 1
     execute if score @s Mns.General.TickTimer matches 20.. run tag @s add Mns.Temp.IsTick
     execute if entity @s[tag=Mns.Temp.IsTick] run scoreboard players set @s Mns.General.TickTimer 0

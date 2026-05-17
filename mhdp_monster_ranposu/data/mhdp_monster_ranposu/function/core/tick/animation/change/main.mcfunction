@@ -5,7 +5,8 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # 事前処理
-    # 待機アニメーション再生、動作する場合は後の処理でアニメーションを上書き
+    # アニメーションが停止しないよう、とりあえず待機アニメーションを再生
+    # 後の処理でアニメーションを上書きする
         execute if score @s Mns.General.Phase matches 0 run function animated_java:ranposu/animations/idle_relax/tween {duration:1, to_frame: 0}
         execute unless score @s Mns.General.Phase matches 0 run function animated_java:ranposu/animations/idle/tween {duration:1, to_frame: 0}
 
@@ -13,33 +14,22 @@
     # Animタグがすでについているか確認
     # 軸合わせ後の行動、およびコンボ攻撃実装のため
         function mhdp_monsters:core/util/tick/check_animation_tag
+    # ターゲット存在確認
+        function mhdp_monster_ranposu:core/tick/on_battle/check_target
     # 怒り終了
-        execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches ..0 run function mhdp_monster_ranposu:core/damage/reaction/anger_end
+        execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches ..0 run function mhdp_monster_ranposu:core/tick/on_battle/anger_end
 
 # 非発見時
     execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 0 run function mhdp_monster_ranposu:core/tick/animation/change/on_relax/main
 # 警戒時
     execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 1 run function mhdp_monster_ranposu:core/tick/animation/change/on_caution/main
 # 戦闘時
-    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 2 run function mhdp_monster_ranposu:core/tick/animation/change/on_battle/main
-
-# # ターゲット更新
-#     # ターゲットがいない場合
-#         execute unless entity @e[tag=Mns.Target.Ranposu] run function mhdp_monster_ranposu:core/tick/animation/change/update_target
-#     # 一定以上行動した場合
-#         execute if score @s Mns.General.ActCount.Target matches ..4 run function mhdp_monster_ranposu:core/tick/animation/change/update_target
-
-# # 非怒り中・一定以上行動した場合、威嚇を選択(そのまま処理中断)
-#     execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.ActCount.Idle matches 7.. run return run function mhdp_monsters:core/util/tick/skip
-
-# # アニメーション選択
-# # デバッグ時はここをコメントアウト
-#     # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation,tag=!Mns.Temp.IsTurn,tag=!Mns.State.IsNotMove] if entity @e[tag=Mns.Target.Ranposu] run function mhdp_monster_ranposu:core/tick/animation/change/random/main
+    # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 2 run function mhdp_monster_ranposu:core/tick/animation/change/on_battle/main
 
 # 軸合わせアニメーション再生
     execute if entity @s[tag=Mns.Temp.IsTurn] run function mhdp_monster_ranposu:core/tick/animation/change/play/turn
 
-# アニメーション再生(軸合わせ以外)
+# アニメーション再生
     execute if entity @s[tag=!Mns.Temp.IsTurn] run function mhdp_monster_ranposu:core/tick/animation/change/play/main
 
 # 終了
