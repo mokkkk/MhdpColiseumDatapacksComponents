@@ -6,6 +6,7 @@
                     "functions": [
                         {
                             "components": {
+                                "enchantment_glint_override": false,
                                 "minecraft:custom_data": "{IsMhdpWeapon:1b,Id:201,WeaponType:3,AttackDamage:100,Element:0,ElementDamage:0,Critical:0,Sharpness:[10,10,40,90,0,0,0],SharpnessMax:120,SharpnessMaxCraft:150,ModelOffset:300}",
                                 "minecraft:enchantments": {
                                     "mhdp_core:item/weapon_leftclick": 1
@@ -14,29 +15,47 @@
                                 "minecraft:item_name": {
                                     "color": "aqua",
                                     "italic": false,
-                                    "text": "ハンターナイフ"
+                                    "translate": "weapon.short_sword.iron.name"
                                 },
                                 "minecraft:lore": [
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "武器種：片手剣"
-                                    },
-                                    {
-                                        "color": "white",
-                                        "italic": false,
-                                        "text": "攻撃力：100"
-                                    },
-                                    {
-                                        "color": "white",
-                                        "italic": false,
-                                        "text": "会心率：0%"
+                                        "translate": "weapon.generic.weapon_type",
+                                        "with": [
+                                            {
+                                                "translate": "weapon.generic.weapon_type.short_sword"
+                                            }
+                                        ]
                                     },
                                     [
                                         {
                                             "color": "white",
                                             "italic": false,
-                                            "text": "斬れ味：["
+                                            "translate": "weapon.generic.weapon_attack_value",
+                                            "with": [
+                                                "100"
+                                            ]
+                                        }
+                                    ],
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "translate": "weapon.generic.crit",
+                                        "with": [
+                                            "0"
+                                        ]
+                                    },
+                                    [
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "translate": "weapon.generic.sharpness"
+                                        },
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "：["
                                         },
                                         {
                                             "color": "#FF0000",
@@ -139,96 +158,6 @@
                                         },
                                         {
                                             "color": "#FFF700",
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "#"
-                                        },
-                                        {
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "\uF801"
-                                        },
-                                        {
-                                            "color": "#11FF00",
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "#"
-                                        },
-                                        {
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "\uF801"
-                                        },
-                                        {
-                                            "color": "#11FF00",
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "#"
-                                        },
-                                        {
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "\uF801"
-                                        },
-                                        {
-                                            "color": "#11FF00",
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "#"
-                                        },
-                                        {
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "\uF801"
-                                        },
-                                        {
-                                            "color": "#11FF00",
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "#"
-                                        },
-                                        {
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "\uF801"
-                                        },
-                                        {
-                                            "color": "#11FF00",
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "#"
-                                        },
-                                        {
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "\uF801"
-                                        },
-                                        {
-                                            "color": "#11FF00",
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "#"
-                                        },
-                                        {
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "\uF801"
-                                        },
-                                        {
-                                            "color": "#11FF00",
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "#"
-                                        },
-                                        {
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "\uF801"
-                                        },
-                                        {
-                                            "color": "#11FF00",
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "#"
-                                        },
-                                        {
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "\uF801"
-                                        },
-                                        {
-                                            "color": "#11FF00",
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "#"
-                                        },
-                                        {
-                                            "font": "items/mhdp_sharpness",
-                                            "text": "\uF801"
-                                        },
-                                        {
-                                            "color": "#11FF00",
                                             "font": "items/mhdp_sharpness",
                                             "text": "#"
                                         },
@@ -327,17 +256,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "狩人の基本的な武器．"
+                                        "translate": "weapon.short_sword.iron.lore0"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "研ぎ澄まされた鋼鉄の刃は"
+                                        "translate": "weapon.short_sword.iron.lore1"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "竜を斬る十分な威力を持つ．"
+                                        "translate": "weapon.short_sword.iron.lore2"
                                     },
                                     {
                                         "color": "dark_gray",

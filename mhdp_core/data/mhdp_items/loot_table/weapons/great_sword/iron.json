@@ -6,6 +6,7 @@
                     "functions": [
                         {
                             "components": {
+                                "enchantment_glint_override": false,
                                 "minecraft:custom_data": "{IsMhdpWeapon:1b,Id:101,WeaponType:2,AttackDamage:100,Element:0,ElementDamage:0,Critical:0,Sharpness:[10,10,40,40,0,0,0],SharpnessMax:70,SharpnessMaxCraft:100,ModelOffset:200}",
                                 "minecraft:enchantments": {
                                     "mhdp_core:item/weapon_leftclick": 1
@@ -14,29 +15,47 @@
                                 "minecraft:item_name": {
                                     "color": "aqua",
                                     "italic": false,
-                                    "text": "アイアンソード"
+                                    "translate": "weapon.great_sword.iron.name"
                                 },
                                 "minecraft:lore": [
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "武器種：大剣"
-                                    },
-                                    {
-                                        "color": "white",
-                                        "italic": false,
-                                        "text": "攻撃力：100"
-                                    },
-                                    {
-                                        "color": "white",
-                                        "italic": false,
-                                        "text": "会心率：0%"
+                                        "translate": "weapon.generic.weapon_type",
+                                        "with": [
+                                            {
+                                                "translate": "weapon.generic.weapon_type.great_sword"
+                                            }
+                                        ]
                                     },
                                     [
                                         {
                                             "color": "white",
                                             "italic": false,
-                                            "text": "斬れ味：["
+                                            "translate": "weapon.generic.weapon_attack_value",
+                                            "with": [
+                                                "100"
+                                            ]
+                                        }
+                                    ],
+                                    {
+                                        "color": "white",
+                                        "italic": false,
+                                        "translate": "weapon.generic.crit",
+                                        "with": [
+                                            "0"
+                                        ]
+                                    },
+                                    [
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "translate": "weapon.generic.sharpness"
+                                        },
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "text": "：["
                                         },
                                         {
                                             "color": "#FF0000",
@@ -237,17 +256,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "初心者にも扱いやすい大剣．"
+                                        "translate": "weapon.great_sword.iron.lore0"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "力を溜めることで，強力な"
+                                        "translate": "weapon.great_sword.iron.lore1"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "一撃を放つことができる．"
+                                        "translate": "weapon.great_sword.iron.lore2"
                                     },
                                     {
                                         "color": "dark_gray",

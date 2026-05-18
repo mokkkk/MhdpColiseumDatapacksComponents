@@ -9,7 +9,7 @@
     scoreboard players remove #mhdp_temp_damage_total MhdpCore 100
 
 # 通知
-    tellraw @s {"text":"【根性が発動した】"}
+    tellraw @s {"translate":"skill.guts.message"}
 
 # 発動タグ付与
     tag @s add Ply.State.IsUsedGuts

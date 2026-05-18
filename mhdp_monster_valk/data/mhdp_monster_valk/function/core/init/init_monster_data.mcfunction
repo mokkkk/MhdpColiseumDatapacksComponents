@@ -77,8 +77,8 @@
         Icon:"uE014",\
         Name:"valk",\
         UpperName:"Valk",\
-        JpName:"天彗龍",\
-        ShowName:{"text":"天彗龍"},\
+        NameId:"monster.valstrax.name",\
+        ShowName:{"translate":"monster.valstrax.name"},\
         LootTable:"mhdp_items:materials/valk/random_all",\
         ShowHp:true,\
         Hp:13000,\

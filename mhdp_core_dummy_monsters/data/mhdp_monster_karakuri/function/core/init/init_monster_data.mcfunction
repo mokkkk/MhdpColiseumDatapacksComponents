@@ -25,8 +25,8 @@
         Icon:"NONE",\
         Name:"karakuri",\
         UpperName:"Karakuri",\
-        JpName:"からくり飛竜",\
-        ShowName:{"text":"からくり飛竜"},\
+        NameId:"monster.karakuri.name",\
+        ShowName:{"translate":"monster.karakuri.name"},\
         LootTable:"mhdp_items:materials/karakuri",\
         ShowHp:true,\
         Hp:99999,\

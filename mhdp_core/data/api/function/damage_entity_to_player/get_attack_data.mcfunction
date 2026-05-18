@@ -34,7 +34,7 @@
     execute store result score #mhdp_temp_knockback_strength MhdpCore run data get storage mhdp_core:temp Arg.Knockback
 
 # フラグ確認
-    execute unless data storage mhdp_core:temp Arg{UseUtil:true} run tellraw @a [{"text":"【ERROR: モンスター攻撃データ初期化に util/tick/get_attack_data.m が使用されていません】","color":"red"}]
+    execute unless data storage mhdp_core:temp Arg{UseUtil:true} run tellraw @a [{"translate":"errormessage.api.get_attack_data","color":"red"}]
 
 # 終了
     scoreboard players reset #mhdp_temp_attack_multiply_quest MhdpCore

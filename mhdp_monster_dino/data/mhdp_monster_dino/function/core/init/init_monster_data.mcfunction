@@ -49,8 +49,8 @@
         Icon:"uE013",\
         Name:"dino",\
         UpperName:"Dino",\
-        JpName:"斬竜",\
-        ShowName:{"text":"斬竜"},\
+        NameId:"monster.glavenus.name",\
+        ShowName:{"translate":"monster.glavenus.name"},\
         LootTable:"mhdp_items:materials/dino/random_all",\
         ShowHp:true,\
         Hp:11000,\

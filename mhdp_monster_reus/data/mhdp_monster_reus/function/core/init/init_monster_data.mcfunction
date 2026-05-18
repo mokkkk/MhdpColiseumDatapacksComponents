@@ -38,8 +38,8 @@
         Icon:"uE012",\
         Name:"reus",\
         UpperName:"Reus",\
-        JpName:"火竜",\
-        ShowName:{"text":"火竜"},\
+        NameId:"monster.rathalos.name",\
+        ShowName:{"translate":"monster.rathalos.name"},\
         LootTable:"mhdp_items:materials/reus/random_all",\
         ShowHp:true,\
         Hp:11000,\

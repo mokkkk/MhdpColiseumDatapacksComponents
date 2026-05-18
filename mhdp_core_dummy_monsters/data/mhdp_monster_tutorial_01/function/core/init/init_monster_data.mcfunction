@@ -16,8 +16,8 @@
         Icon:"NONE",\
         Name:"tutorial_01",\
         UpperName:"Tutorial01",\
-        JpName:"チュートリアル01",\
-        ShowName:{"text":"チュートリアル01"},\
+        NameId:"monster.tutorial01.name",\
+        ShowName:{"translate":"monster.tutorial01.name"},\
         LootTable:"mhdp_items:materials/tutorial_01",\
         ShowHp:true,\
         Hp:10000,\

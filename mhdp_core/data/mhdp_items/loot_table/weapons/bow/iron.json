@@ -6,6 +6,7 @@
                     "functions": [
                         {
                             "components": {
+                                "enchantment_glint_override": false,
                                 "minecraft:custom_data": "{IsMhdpWeapon:1b,Id:1,WeaponType:1,AttackDamage:100,Element:0,ElementDamage:0,Critical:0,Sharpness:[0,0,100,0,0,0,0],SharpnessMax:100,SharpnessMaxCraft:100,ModelOffset:100,BowBottleType:0}",
                                 "minecraft:enchantments": {
                                     "mhdp_core:item/weapon_leftclick": 1
@@ -14,23 +15,36 @@
                                 "minecraft:item_name": {
                                     "color": "aqua",
                                     "italic": false,
-                                    "text": "鉄弓"
+                                    "translate": "weapon.bow.iron.name"
                                 },
                                 "minecraft:lore": [
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "武器種：弓"
+                                        "translate": "weapon.generic.weapon_type",
+                                        "with": [
+                                            {
+                                                "translate": "weapon.generic.weapon_type.bow"
+                                            }
+                                        ]
                                     },
+                                    [
+                                        {
+                                            "color": "white",
+                                            "italic": false,
+                                            "translate": "weapon.generic.weapon_attack_value",
+                                            "with": [
+                                                "100"
+                                            ]
+                                        }
+                                    ],
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "攻撃力：100"
-                                    },
-                                    {
-                                        "color": "white",
-                                        "italic": false,
-                                        "text": "会心率：0%"
+                                        "translate": "weapon.generic.crit",
+                                        "with": [
+                                            "0"
+                                        ]
                                     },
                                     {
                                         "color": "dark_gray",
@@ -40,17 +54,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "金属製の弓．その大きさゆえ"
+                                        "translate": "weapon.bow.iron.lore0"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "扱いは難しいが，威力が高く"
+                                        "translate": "weapon.bow.iron.lore1"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "モンスターの体を貫く矢を放つ．"
+                                        "translate": "weapon.bow.iron.lore2"
                                     },
                                     {
                                         "color": "dark_gray",
