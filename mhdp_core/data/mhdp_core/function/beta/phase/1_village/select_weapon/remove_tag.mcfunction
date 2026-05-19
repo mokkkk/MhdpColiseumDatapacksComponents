@@ -10,6 +10,7 @@
     tag @s remove Beta.Ply.Weapon.GreatSword
     tag @s remove Beta.Ply.Weapon.Bow
     tag @s remove Beta.Ply.Weapon.Lance
+    tag @s remove Beta.Ply.Weapon.LongSword
 
 # 天の型
     tag @s remove Ply.Weapon.Type.Tech

@@ -18,6 +18,8 @@
         execute if entity @s[tag=Beta.Ply.Weapon.ShortSword] run loot replace entity @s weapon.offhand loot mhdp_items:weapons/short_sword/iron
     # ランス
         execute if entity @s[tag=Beta.Ply.Weapon.Lance] run loot replace entity @s weapon.offhand loot mhdp_items:weapons/lance/iron
+    # 太刀
+        execute if entity @s[tag=Beta.Ply.Weapon.LongSword] run loot replace entity @s weapon.offhand loot mhdp_items:weapons/long_sword/iron
     # 弓
         execute if entity @s[tag=Beta.Ply.Weapon.Bow] run loot replace entity @s weapon.offhand loot mhdp_items:weapons/bow/iron
         execute if entity @s[tag=Beta.Ply.Weapon.Bow] run tag @s add Skill.Stamina.StaminaSurge.1

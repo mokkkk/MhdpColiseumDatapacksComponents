@@ -12,7 +12,7 @@
     execute if entity @s[tag=Ply.Temp.IsTraining.Keep] run function mhdp_core:phase/1_village/training_area/exit/player
 
 # 通知
-    tellraw @s {"text":"【弓・天ノ型を選択した】","color": "light_purple"}
+    tellraw @s {"translate":"beta.village.select_weapon.type_tec","with":[{"translate":"weapon.generic.weapon_type.bow"}],"color": "light_purple"}
     playsound ui.button.click master @s ~ ~ ~ 1 1
 
 # タグ付与
