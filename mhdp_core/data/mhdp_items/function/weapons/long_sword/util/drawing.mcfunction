@@ -4,9 +4,6 @@
 #
 # @within function mhdp_items:core/switch/macro/m.drawing
 
-# TODO: 武器の初期化処理
-    # say TODO:太刀抜刀処理
-
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0
     scoreboard players set @s Wpn.AnimationTimer 0
@@ -21,3 +18,7 @@
 
 # ステータス設定
     function mhdp_items:weapons/long_sword/util/set_status
+
+# 効果音
+    playsound minecraft:item.axe.scrape master @s ~ ~ ~ 1 1.5
+    playsound minecraft:item.spear.lunge_1 master @s ~ ~ ~ 0.4 0.6
