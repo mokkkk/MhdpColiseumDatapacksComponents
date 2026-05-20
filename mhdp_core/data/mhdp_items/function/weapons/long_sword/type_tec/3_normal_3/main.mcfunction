@@ -5,27 +5,27 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"斬り上げ"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.long_sword.action.normal_3"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
 
 # アニメーション演出
-    execute if score @s Wpn.AnimationTimer matches 2 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
+    execute if score @s Wpn.GeneralTimer matches 4 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/animation_0
     execute if score @s Wpn.AnimationTimer matches 2 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/animation_1
-    execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/animation_2
-    execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/animation_3
-    execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/animation_4
-    execute if score @s Wpn.AnimationTimer matches 4 positioned ~ ~1.65 ~ positioned ^-0.5 ^-0.3 ^1.2 rotated ~90 40 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/particle
-    execute if score @s Wpn.AnimationTimer matches 4 positioned ~ ~1.65 ~ positioned ^-0.5 ^-0.3 ^2.2 rotated ~90 40 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/particle
+    execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/animation_2
+    execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/animation_3
+    execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/animation_4
+    execute if score @s Wpn.GeneralTimer matches 4 positioned ~ ~1.65 ~ positioned ^-0.5 ^-0.3 ^1.2 rotated ~90 40 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/particle
+    execute if score @s Wpn.GeneralTimer matches 4 positioned ~ ~1.65 ~ positioned ^-0.5 ^-0.3 ^2.2 rotated ~90 40 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/particle
 
 # 攻撃
-    execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/attack
+    execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/attack
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:2500, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:2500, IsForce:false, IsAdjust:false}
 
 # 演出
 

@@ -10,6 +10,11 @@
 # タグ付与
     tag @s add Ply.Weapon.Equip.LongSword
 
+# スコア初期化
+    scoreboard players set @s Wpn.Ls.SpiritGauge 0
+    scoreboard players set @s Wpn.Ls.SpiritLevel 0
+    scoreboard players set @s Wpn.Ls.SpiritLevelGauge 0
+
 # 狩技ゲージ上限決定
     scoreboard players set @s Ply.Stats.Arts.1 0
     scoreboard players set @s Ply.Stats.Arts.2 0

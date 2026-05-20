@@ -53,5 +53,19 @@
         # 処理
             execute if entity @s[tag=Wpn.Ls.Tec.Normal.3] run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/main
 
+# 気刃斬りコンボ
+    # 1段目
+        # 開始：右クリック
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/4_spirit_slash_1/start
+        # 処理
+            execute if entity @s[tag=Wpn.Ls.Tec.Spirit.Miss] run function mhdp_items:weapons/long_sword/type_tec/4_spirit_slash_1/main_miss
+            execute if entity @s[tag=Wpn.Ls.Tec.Spirit.1] run function mhdp_items:weapons/long_sword/type_tec/4_spirit_slash_1/main
+    # 2段目
+        # 処理
+            execute if entity @s[tag=Wpn.Ls.Tec.Spirit.2] run function mhdp_items:weapons/long_sword/type_tec/5_spirit_slash_2/main
+    # 3段目
+        # 処理
+            execute if entity @s[tag=Wpn.Ls.Tec.Spirit.3] run function mhdp_items:weapons/long_sword/type_tec/6_spirit_slash_3/main
+
 # 終了
     tag @s remove Ply.Weapon.NoOpe

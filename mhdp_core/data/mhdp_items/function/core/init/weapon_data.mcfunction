@@ -15,6 +15,8 @@
     function mhdp_items:weapons/bow/init
 # ランス
     function mhdp_items:weapons/lance/init
+# 太刀
+    function mhdp_items:weapons/long_sword/init
 
 # デバッグ用
     execute if data storage mhdp_core:game_data {ShowDebugMessage:true} run say 武器データ初期化

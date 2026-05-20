@@ -81,6 +81,12 @@
         # ガードレイジ
             scoreboard objectives add Wpn.Lc.RageLevel dummy
             scoreboard objectives add Wpn.Lc.RageTimer dummy
+    # 太刀
+        # 練気ゲージ
+            scoreboard objectives add Wpn.Ls.SpiritGauge dummy
+        # 練気色
+            scoreboard objectives add Wpn.Ls.SpiritLevel dummy
+            scoreboard objectives add Wpn.Ls.SpiritLevelGauge dummy
     # 弓
         # 溜め時間
             scoreboard objectives add Wpn.Bw.ChargeTimer dummy

@@ -15,10 +15,10 @@
     execute as @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] run tag @s add Temp.Victim
 
 # ヒットストップ    
-    execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 2
+    execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 3
 
 # 攻撃
-    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.LongSword.Tec.Normal.3
+    data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.LongSword.Tec.Spirit.1
     execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
 # 終了
