@@ -10,7 +10,7 @@
 # 練気確認
     execute if score @s Wpn.Ls.SpiritGauge matches 150.. run tag @s add Wpn.Ls.Tec.Spirit.1
     execute if score @s Wpn.Ls.SpiritGauge matches 150.. run scoreboard players remove @s Wpn.Ls.SpiritGauge 150
-    execute unless score @s Wpn.Ls.SpiritGauge matches 150.. run tag @s add Wpn.Ls.Tec.Spirit.Miss
+    execute unless entity @s[tag=Wpn.Ls.Tec.Spirit.1] run tag @s add Wpn.Ls.Tec.Spirit.Miss
 
 # タグ付与
     tag @s remove Ply.Weapon.NoOpe
