@@ -48,8 +48,8 @@
     execute if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/arts_main
 
 # 遷移
-     # 左クリック：突きに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/long_sword/type_tec/2_normal_2/start
+    # 左クリック：突きに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 17.. run function mhdp_items:weapons/long_sword/type_tec/2_normal_2/start
 
 # 狩技遷移
     # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/long_sword/type_tec/22_guard_rage/start

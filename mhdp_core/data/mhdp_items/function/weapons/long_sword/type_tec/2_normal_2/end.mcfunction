@@ -6,6 +6,7 @@
 
 # タグ消去
     tag @s remove Wpn.Ls.Tec.Normal.2
+    tag @s remove Wpn.Ls.Tec.Normal.2.InSpirit
 
 # タイマー初期化
     scoreboard players set @s Wpn.GeneralTimer 0

@@ -49,9 +49,11 @@
     # 突き
         # 処理
             execute if entity @s[tag=Wpn.Ls.Tec.Normal.2] run function mhdp_items:weapons/long_sword/type_tec/2_normal_2/main
+            execute if entity @s[tag=Wpn.Ls.Tec.Normal.2.InSpirit] run function mhdp_items:weapons/long_sword/type_tec/2_normal_2/main_in_spirit
     # 斬り上げ
         # 処理
             execute if entity @s[tag=Wpn.Ls.Tec.Normal.3] run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/main
+            execute if entity @s[tag=Wpn.Ls.Tec.Normal.3.InSpirit] run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/main_in_spirit
 
 # 気刃斬りコンボ
     # 1段目

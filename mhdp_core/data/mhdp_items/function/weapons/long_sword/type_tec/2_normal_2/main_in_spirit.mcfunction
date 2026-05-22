@@ -1,4 +1,4 @@
-#> mhdp_items:weapons/long_sword/type_tec/2_normal_2/main
+#> mhdp_items:weapons/long_sword/type_tec/2_normal_2/main_in_spirit
 #
 # 突き メイン処理
 #
@@ -42,8 +42,8 @@
 # 遷移
      # 左クリック：斬り上げに移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/start
-    # 右クリック：気刃斬り1に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/long_sword/type_tec/4_spirit_slash_1/start
+    # 右クリック：気刃斬り2に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 14.. if score @s Wpn.Ls.SpiritGauge matches 150.. run function mhdp_items:weapons/long_sword/type_tec/5_spirit_slash_2/start
 
 # 狩技遷移
     # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/long_sword/type_tec/22_guard_rage/start
