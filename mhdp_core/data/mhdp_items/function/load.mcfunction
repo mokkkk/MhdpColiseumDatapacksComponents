@@ -87,6 +87,8 @@
         # 練気色
             scoreboard objectives add Wpn.Ls.SpiritLevel dummy
             scoreboard objectives add Wpn.Ls.SpiritLevelGauge dummy
+        # 練気色減少用
+            scoreboard objectives add Wpn.Ls.SpiritLevelReduction dummy
     # 弓
         # 溜め時間
             scoreboard objectives add Wpn.Bw.ChargeTimer dummy

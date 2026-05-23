@@ -6,11 +6,17 @@
 
 # 練気色
     scoreboard players operation #mhdp_temp_gauge MhdpCore = @s Wpn.Ls.SpiritLevelGauge
-    function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"yellow",Type:0}
+    execute if score @s Wpn.Ls.SpiritLevel matches ..1 run function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"white",Type:0}
+    execute if score @s Wpn.Ls.SpiritLevel matches 2 run function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"yellow",Type:0}
+    execute if score @s Wpn.Ls.SpiritLevel matches 3 run function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"red",Type:0}
     scoreboard players remove #mhdp_temp_gauge MhdpCore 200
-    function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"yellow",Type:1}
+    execute if score @s Wpn.Ls.SpiritLevel matches ..1 run function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"white",Type:1}
+    execute if score @s Wpn.Ls.SpiritLevel matches 2 run function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"yellow",Type:1}
+    execute if score @s Wpn.Ls.SpiritLevel matches 3 run function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"red",Type:1}
     scoreboard players remove #mhdp_temp_gauge MhdpCore 200
-    function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"yellow",Type:2}
+    execute if score @s Wpn.Ls.SpiritLevel matches ..1 run function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"white",Type:2}
+    execute if score @s Wpn.Ls.SpiritLevel matches 2 run function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"yellow",Type:2}
+    execute if score @s Wpn.Ls.SpiritLevel matches 3 run function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"red",Type:2}
     scoreboard players reset #mhdp_temp_gauge
 
 # 練気ゲージ

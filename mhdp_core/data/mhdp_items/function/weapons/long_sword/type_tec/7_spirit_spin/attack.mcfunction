@@ -21,9 +21,8 @@
 # ヒットストップ    
     execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
 
-# ヒット時
-    scoreboard players set @s Wpn.Ls.SpiritLevel 1
-    scoreboard players set @s Wpn.Ls.SpiritLevelGauge 600
+# ヒット時、練気色変更
+    execute if entity @n[tag=Temp.Victim] run function mhdp_items:weapons/long_sword/util/up_spirit_level
 
 # 攻撃
     data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.LongSword.Tec.Spirit.Spin
