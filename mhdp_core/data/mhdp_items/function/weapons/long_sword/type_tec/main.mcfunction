@@ -69,5 +69,9 @@
         # 処理
             execute if entity @s[tag=Wpn.Ls.Tec.Spirit.3] run function mhdp_items:weapons/long_sword/type_tec/6_spirit_slash_3/main
 
+# 気刃大回転斬り
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Tec.Spirit.Spin] run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/main
+
 # 終了
     tag @s remove Ply.Weapon.NoOpe

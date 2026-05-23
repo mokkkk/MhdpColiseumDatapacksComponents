@@ -1,0 +1,41 @@
+#> mhdp_items:weapons/long_sword/util/ui_spirit/main
+#
+# 武器のUI描画処理
+#
+# @within function mhdp_items:core/switch/macro/m.ui
+
+# 練気色
+    scoreboard players operation #mhdp_temp_gauge MhdpCore = @s Wpn.Ls.SpiritLevelGauge
+    function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"yellow",Type:0}
+    scoreboard players remove #mhdp_temp_gauge MhdpCore 200
+    function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"yellow",Type:1}
+    scoreboard players remove #mhdp_temp_gauge MhdpCore 200
+    function mhdp_items:weapons/long_sword/util/ui_spirit/append_color.m {Color:"yellow",Type:2}
+    scoreboard players reset #mhdp_temp_gauge
+
+# 練気ゲージ
+    scoreboard players operation #mhdp_temp_gauge MhdpCore = @s Wpn.Ls.SpiritGauge
+    function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Type:0}
+    scoreboard players remove #mhdp_temp_gauge MhdpCore 334
+    function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Type:1}
+    scoreboard players remove #mhdp_temp_gauge MhdpCore 333
+    function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Type:2}
+
+# UI作成
+# (+15px +15px +15px) -45px +9px (+11px +11px +11px) - 42px + 45px
+    data modify storage mhdp_core:temp UI.Spirit set value [\
+        {"interpret":true,"nbt":"UI.ColorArray[0]","storage":"mhdp_core:temp"},\
+        {"interpret":true,"nbt":"UI.ColorArray[1]","storage":"mhdp_core:temp"},\
+        {"interpret":true,"nbt":"UI.ColorArray[2]","storage":"mhdp_core:temp"},\
+        {"text":"\uF808","font":"ui/weapon/space"},\
+        {"text":"\uF902","font":"ui/weapon/space"},\
+        {"interpret":true,"nbt":"UI.SpiritArray[0]","storage":"mhdp_core:temp"},\
+        {"interpret":true,"nbt":"UI.SpiritArray[1]","storage":"mhdp_core:temp"},\
+        {"interpret":true,"nbt":"UI.SpiritArray[2]","storage":"mhdp_core:temp"},\
+        {"text":"\uF807","font":"ui/weapon/space"},\
+        {"text":"#","font":"ui/weapon/long_sword/gauge"},\
+        {"text":"\uF801","font":"ui/weapon/space"}\
+    ]
+
+# 終了
+    scoreboard players reset #mhdp_temp_gauge
