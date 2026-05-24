@@ -73,5 +73,13 @@
     # 処理
         execute if entity @s[tag=Wpn.Ls.Tec.Spirit.Spin] run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/main
 
+# 移動斬り
+    # 開始：スニーク+左クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/start
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Tec.MoveSlash.Back] run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/main
+        execute if entity @s[tag=Wpn.Ls.Tec.MoveSlash.Right] run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/main_right
+        execute if entity @s[tag=Wpn.Ls.Tec.MoveSlash.Left] run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/main_left
+
 # 終了
     tag @s remove Ply.Weapon.NoOpe

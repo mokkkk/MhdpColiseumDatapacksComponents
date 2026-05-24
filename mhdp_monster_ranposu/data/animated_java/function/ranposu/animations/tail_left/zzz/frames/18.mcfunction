@@ -8,6 +8,6 @@ $data merge entity $(leg_left_1) {transformation: [-1.7853f,0.2103f,-0.092f,0.42
 $data merge entity $(leg_left_0) {transformation: [-1.7853f,-0.0404f,-0.2259f,0.447f,0.1635f,1.02f,-1.474f,1.5684f,0.1611f,-1.4825f,-1.008f,-0.3924f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
 $data merge entity $(leg_right_2) {transformation: [-1.7924f,-0.0106f,-0.1652f,-0.5652f,-0.0087f,1.7999f,-0.0212f,0.8261f,0.1653f,-0.0203f,-1.7923f,-1.0511f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
 $data merge entity $(leg_right_1) {transformation: [-1.7924f,0.0575f,-0.1552f,-0.5174f,-0.0087f,1.6529f,0.7127f,1.0228f,0.1653f,0.7105f,-1.6456f,-0.4667f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
-data modify storage animated_java:temp entry.data merge value {"cameras":{},"locators":{"pos_head":{"px":0.500952805845674,"py":1.0225793492579676,"pz":2.308212229082769,"ry":300.1137932791338,"rx":1.2600746654358324},"hitbox_head_0":{"px":0.5451891839009905,"py":0.418601754378617,"pz":2.2054636512809203,"ry":300.1137932791338,"rx":1.2600746654358324}}}
+data modify storage animated_java:temp entry.data merge value {"cameras":{},"locators":{"pos_head":{"px":0.5009528058,"py":1.0225793493,"pz":2.3082122291,"ry":300.1137932791,"rx":1.2600746654},"hitbox_head_0":{"px":0.5451891839,"py":0.4186017544,"pz":2.2054636513,"ry":300.1137932791,"rx":1.2600746654}}}
 # Data Manager: Write
 function animated_java:global/data_manager/write with storage animated_java:temp args

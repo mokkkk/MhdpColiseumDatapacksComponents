@@ -4,6 +4,6 @@ $data merge entity $(head_upper) {transformation: [-1.781f,-0.0101f,-0.2605f,0.0
 $data merge entity $(neck_0) {transformation: [-1.781f,-0.0328f,-0.2586f,0.0285f,-0.0414f,1.7986f,0.0574f,1.4043f,0.2573f,0.0628f,-1.7804f,2.6643f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
 $data merge entity $(neck_1) {transformation: [-1.7979f,0f,-0.0872f,0.015f,-0.0189f,1.7573f,0.3894f,1.1603f,0.0852f,0.3899f,-1.7552f,2.3259f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
 $data merge entity $(neck_2) {transformation: [-1.7979f,0f,-0.0872f,0f,-0.0189f,1.7573f,0.3894f,1.2753f,0.0852f,0.3899f,-1.7552f,2.0349f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
-data modify storage animated_java:temp entry.data merge value {"cameras":{},"locators":{"pos_head":{"px":0.13317879905540483,"py":1.3934793424730858,"pz":3.387316039302431,"ry":351.62012355294587,"rx":6.82619880676858},"hitbox_head_0":{"px":0.13663229293485943,"py":0.7837475725918318,"pz":3.3130307468314566,"ry":351.62012355294587,"rx":6.82619880676858}}}
+data modify storage animated_java:temp entry.data merge value {"cameras":{},"locators":{"pos_head":{"px":0.1331787991,"py":1.3934793425,"pz":3.3873160393,"ry":351.6201235529,"rx":6.8261988068},"hitbox_head_0":{"px":0.1366322929,"py":0.7837475726,"pz":3.3130307468,"ry":351.6201235529,"rx":6.8261988068}}}
 # Data Manager: Write
 function animated_java:global/data_manager/write with storage animated_java:temp args

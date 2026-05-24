@@ -2,6 +2,6 @@
 $data merge entity $(tail_2) {transformation: [-1.8f,0f,0f,0f,0f,1.7482f,-0.4288f,2.0499f,0f,-0.4288f,-1.7482f,-2.4739f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
 $data merge entity $(tail_1) {transformation: [-1.8f,0f,0f,0f,0f,1.7994f,-0.0461f,2.0758f,0f,-0.0461f,-1.7994f,-1.4617f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
 $data merge entity $(tail_0) {transformation: [-1.8f,0f,0f,0f,0f,1.7728f,0.3116f,1.8582f,0f,0.3116f,-1.7728f,-0.3862f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
-data modify storage animated_java:temp entry.data merge value {"cameras":{},"locators":{"hitbox_tail_0":{"px":2.4538811303945846e-16,"py":1.5377819452853432,"pz":-2.0037460042381787,"ry":0,"rx":-1.468750000000003},"hitbox_tail_1":{"px":3.671458443926643e-16,"py":1.3818145542366134,"pz":-2.997973331153811,"ry":0,"rx":-13.781250000000009}}}
+data modify storage animated_java:temp entry.data merge value {"cameras":{},"locators":{"hitbox_tail_0":{"px":0,"py":1.5377819453,"pz":-2.0037460042,"ry":0,"rx":-1.46875},"hitbox_tail_1":{"px":0,"py":1.3818145542,"pz":-2.9979733312,"ry":0,"rx":-13.78125}}}
 # Data Manager: Write
 function animated_java:global/data_manager/write with storage animated_java:temp args

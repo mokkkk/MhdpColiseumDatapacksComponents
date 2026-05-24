@@ -36,3 +36,4 @@ execute if entity @s[tag=animated_java.ranposu.animation.down_end.playing] run f
 execute if entity @s[tag=animated_java.ranposu.animation.damage_flying.playing] run function animated_java:ranposu/animations/damage_flying/zzz/on_tick
 execute if entity @s[tag=animated_java.ranposu.animation.death.playing] run function animated_java:ranposu/animations/death/zzz/on_tick
 execute if entity @s[tag=animated_java.ranposu.animation.death_flying.playing] run function animated_java:ranposu/animations/death_flying/zzz/on_tick
+execute if entity @s[tag=animated_java.ranposu.animation.hoge.playing] run function animated_java:ranposu/animations/hoge/zzz/on_tick

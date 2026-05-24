@@ -37,3 +37,4 @@ scoreboard objectives add aj.down_end.frame dummy
 scoreboard objectives add aj.damage_flying.frame dummy
 scoreboard objectives add aj.death.frame dummy
 scoreboard objectives add aj.death_flying.frame dummy
+scoreboard objectives add aj.hoge.frame dummy

@@ -36,3 +36,4 @@ tag @s remove animated_java.ranposu.animation.down_end.playing
 tag @s remove animated_java.ranposu.animation.damage_flying.playing
 tag @s remove animated_java.ranposu.animation.death.playing
 tag @s remove animated_java.ranposu.animation.death_flying.playing
+tag @s remove animated_java.ranposu.animation.hoge.playing
