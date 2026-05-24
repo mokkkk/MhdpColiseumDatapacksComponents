@@ -5,6 +5,7 @@
 # @within function mhdp_items:weapons/long_sword/type_tec/8_move_slash/main
 
 # タグ消去
+    tag @s remove Wpn.Ls.Tec.MoveSlash
     tag @s remove Wpn.Ls.Tec.MoveSlash.Back
     tag @s remove Wpn.Ls.Tec.MoveSlash.Right
     tag @s remove Wpn.Ls.Tec.MoveSlash.Left

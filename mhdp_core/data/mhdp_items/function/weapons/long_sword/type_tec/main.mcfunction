@@ -81,5 +81,10 @@
         execute if entity @s[tag=Wpn.Ls.Tec.MoveSlash.Right] run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/main_right
         execute if entity @s[tag=Wpn.Ls.Tec.MoveSlash.Left] run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/main_left
 
+# 見切り斬り
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Tec.Foresight] run function mhdp_items:weapons/long_sword/type_tec/9_foresight_slash/main
+        execute if entity @s[tag=Wpn.Ls.Tec.Foresight.Success] run function mhdp_items:weapons/long_sword/type_tec/9_foresight_slash/main_success
+    
 # 終了
     tag @s remove Ply.Weapon.NoOpe

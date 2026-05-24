@@ -8,6 +8,7 @@
     function mhdp_items:weapons/long_sword/util/before_attack
 
 # タグ付与
+    tag @s add Wpn.Ls.Tec.MoveSlash
     tag @s remove Ply.Weapon.NoOpe
 
 # 移動方向決定
