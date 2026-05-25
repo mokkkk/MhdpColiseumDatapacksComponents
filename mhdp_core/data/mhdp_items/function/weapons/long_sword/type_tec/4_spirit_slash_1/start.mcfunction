@@ -9,7 +9,7 @@
 
 # 練気確認
     execute if score @s Wpn.Ls.SpiritGauge matches 150.. run tag @s add Wpn.Ls.Tec.Spirit.1
-    execute if score @s Wpn.Ls.SpiritGauge matches 150.. run scoreboard players remove @s Wpn.Ls.SpiritGauge 150
+    execute if entity @s[tag=Wpn.Ls.Tec.Spirit.1] unless score @s Wpn.Ls.SpiritLevel matches 3.. run scoreboard players remove @s Wpn.Ls.SpiritGauge 150
     execute unless entity @s[tag=Wpn.Ls.Tec.Spirit.1] run tag @s add Wpn.Ls.Tec.Spirit.Miss
 
 # タグ付与
