@@ -8,5 +8,6 @@
     function mhdp_items:weapons/long_sword/util/before_attack
 
 # タグ付与
-    tag @s add Wpn.Ls.Tec.Normal.3
+    execute unless score @s Wpn.Ls.SpiritLevel matches 3 run tag @s add Wpn.Ls.Tec.Normal.3
+    execute if score @s Wpn.Ls.SpiritLevel matches 3 run tag @s add Wpn.Ls.Tec.RedNormal.3
     tag @s remove Ply.Weapon.NoOpe

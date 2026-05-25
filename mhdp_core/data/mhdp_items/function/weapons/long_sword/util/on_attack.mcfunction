@@ -20,6 +20,10 @@
         execute if entity @s[tag=Wpn.Ls.Tec.MoveSlash] run scoreboard players add @s Wpn.Ls.SpiritGauge 100
     # 見切り斬り成功
         execute if entity @s[tag=Wpn.Ls.Tec.Foresight.Success] run scoreboard players add @s Wpn.Ls.SpiritGauge 1000
+    # 赤刃斬り
+        execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.1] run scoreboard players add @s Wpn.Ls.SpiritGauge 80
+        execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.2] run scoreboard players add @s Wpn.Ls.SpiritGauge 90
+        execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.3] run scoreboard players add @s Wpn.Ls.SpiritGauge 70
 # 上限
     execute if score @s Wpn.Ls.SpiritGauge matches 1001.. run scoreboard players set @s Wpn.Ls.SpiritGauge 1000
 

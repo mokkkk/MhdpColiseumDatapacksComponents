@@ -22,7 +22,7 @@
     execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/long_sword/type_tec/11_step_spirit_slash/animation_3
     execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/long_sword/type_tec/11_step_spirit_slash/animation_4
     execute if score @s Wpn.AnimationTimer matches 9 run function mhdp_items:weapons/long_sword/type_tec/11_step_spirit_slash/animation_5
-    execute if score @s Wpn.GeneralTimer matches 8 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 30 run function mhdp_items:weapons/long_sword/type_tec/11_step_spirit_slash/particle
+    execute if score @s Wpn.GeneralTimer matches 8 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 -40 run function mhdp_items:weapons/long_sword/type_tec/11_step_spirit_slash/particle
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 8 run function mhdp_items:weapons/long_sword/type_tec/11_step_spirit_slash/attack
