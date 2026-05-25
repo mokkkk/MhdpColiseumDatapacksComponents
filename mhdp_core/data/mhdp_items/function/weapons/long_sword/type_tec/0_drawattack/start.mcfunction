@@ -14,11 +14,14 @@
 # 空中：落下突きに移行
     # execute if entity @s[tag=!Ply.Flag.SpJumpAttack] align y if block ~ ~-0.5 ~ #mhdp_core:no_collision if block ~ ~-1.5 ~ #mhdp_core:no_collision if block ~ ~-2.5 ~ #mhdp_core:no_collision run function mhdp_items:weapons/short_sword/type_tec/32_fall_spear/start
 
-# 通常：突き1に移行
-    execute if entity @s[tag=!Wpn.Lc.Tec.FallSpear,tag=!Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/lance/type_tec/1_spear_1/start
+# 通常：
+    # 非移動時、縦斬りに移行
+        execute if entity @s[tag=!Ply.Ope.IsKeyForward,tag=!Wpn.Lc.Tec.FallSpear,tag=!Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/long_sword/type_tec/1_normal_1/start
+    # 前移動時、踏み込み斬りに移行
+        execute if entity @s[tag=Ply.Ope.IsKeyForward,tag=!Wpn.Lc.Tec.FallSpear,tag=!Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/long_sword/type_tec/10_step_slash/start
 
 # 翔蟲：流転突きに移行
-    execute if entity @s[tag=Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/lance/type_tec/21_spiral_thrust/start
+    # execute if entity @s[tag=Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/lance/type_tec/21_spiral_thrust/start
 
 # チュートリアル用処理
     tag @s remove Ply.Temp.Tutorial.DrawAttack

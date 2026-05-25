@@ -8,7 +8,7 @@
     function mhdp_items:weapons/long_sword/util/get_no_ope
 
 # 抜刀攻撃
-    # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/long_sword/type_tec/0_drawattack/start
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/long_sword/type_tec/0_drawattack/start
     # execute if entity @s[tag=Ply.Ope.StartSneak,tag=!Ply.Weapon.Drawing] run function mhdp_items:weapons/long_sword/type_tec/0_drawattack/start_guard
 
 # 特殊空中攻撃：流転突き
@@ -43,7 +43,7 @@
 # 縦斬りコンボ
     # 縦斬り
         # 開始：左クリック
-            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/1_normal_1/start
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/1_normal_1/start
         # 処理
             execute if entity @s[tag=Wpn.Ls.Tec.Normal.1] run function mhdp_items:weapons/long_sword/type_tec/1_normal_1/main
     # 突き
@@ -54,6 +54,12 @@
         # 処理
             execute if entity @s[tag=Wpn.Ls.Tec.Normal.3] run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/main
             execute if entity @s[tag=Wpn.Ls.Tec.Normal.3.InSpirit] run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/main_in_spirit
+
+# 踏み込み斬り
+    # 開始：前移動 + 左クリック
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsKeyForward,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/10_step_slash/start
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Tec.StepSlash] run function mhdp_items:weapons/long_sword/type_tec/10_step_slash/main
 
 # 気刃斬りコンボ
     # 1段目
@@ -68,6 +74,9 @@
     # 3段目
         # 処理
             execute if entity @s[tag=Wpn.Ls.Tec.Spirit.3] run function mhdp_items:weapons/long_sword/type_tec/6_spirit_slash_3/main
+    # 踏み込み気刃斬り
+        # 処理
+            execute if entity @s[tag=Wpn.Ls.Tec.Spirit.Step] run function mhdp_items:weapons/long_sword/type_tec/11_step_spirit_slash/main
 
 # 気刃大回転斬り
     # 処理

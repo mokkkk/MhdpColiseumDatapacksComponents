@@ -9,5 +9,5 @@
 
 # タグ付与
     tag @s add Wpn.Ls.Tec.Spirit.Spin
-    scoreboard players remove @s Wpn.Ls.SpiritGauge 200
+    scoreboard players remove @s Wpn.Ls.SpiritGauge 250
     tag @s remove Ply.Weapon.NoOpe

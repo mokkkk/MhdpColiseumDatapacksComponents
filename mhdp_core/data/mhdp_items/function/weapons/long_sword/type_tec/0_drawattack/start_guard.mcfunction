@@ -7,8 +7,8 @@
 # メインハンドが空の場合のみ実行
     execute if items entity @s weapon.mainhand * run return 0
 
-# 強制抜刀
-    function mhdp_items:player/weapon/sheathe/force_drawing
+# # 強制抜刀
+#     function mhdp_items:player/weapon/sheathe/force_drawing
     
-# ガードに移行
-    function mhdp_items:weapons/lance/type_tec/6_guard/start
+# # ガードに移行
+#     function mhdp_items:weapons/lance/type_tec/6_guard/start

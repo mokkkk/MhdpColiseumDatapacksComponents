@@ -62,8 +62,8 @@
     execute if score @s Wpn.GeneralTimer matches 3..45 run function mhdp_items:core/buffering/arts_main
 
 # 遷移
-    # 右クリック：気刃斬り3に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 35.. if score @s Wpn.Ls.SpiritGauge matches 200.. run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/start
+    # 右クリック：気刃大回転斬りに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 35.. if score @s Wpn.Ls.SpiritGauge matches 250.. run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/start
     # スニーク右クリック：見切り斬りに移行
         execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 35.. if score @s Wpn.Ls.SpiritGauge matches 1.. run function mhdp_items:weapons/long_sword/type_tec/9_foresight_slash/start
     # ジャンプ回避
