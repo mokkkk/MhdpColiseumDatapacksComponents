@@ -42,5 +42,17 @@
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
+# 先行入力
+    # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..45 run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 1..1019 run function mhdp_items:core/buffering/b
+    # execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..45 run function mhdp_items:core/buffering/jump
+    execute if score @s Wpn.GeneralTimer matches 1..1019 run function mhdp_items:core/buffering/arts_main
+
+# 遷移
+    # 右クリック：練気解放無双斬りに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 1018..1019 if score @s Wpn.Ls.SpiritLevel matches 2.. run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/start
+    # # ジャンプ回避
+    #     execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 35.. run function mhdp_items:weapons/short_sword/util/move_jump
+
 # 終了
     execute if score @s Wpn.GeneralTimer matches 1020.. run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/end

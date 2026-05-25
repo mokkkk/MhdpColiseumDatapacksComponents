@@ -107,6 +107,10 @@
     # 処理
         execute if entity @s[tag=Wpn.Ls.Tec.HelmBreaker] run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/main
 
+# 練気解放無双斬り
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Tec.SpiritRelease] run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/main
+
 # 移動斬り
     # 開始：スニーク+左クリック
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/start

@@ -19,20 +19,17 @@
     # データ設定
         execute store result storage api: Arg.Override.PlyUid int 1 run scoreboard players get @s Ply.Uid
         execute store result storage api: Arg.Override.TargetUuid int 1 run scoreboard players get @n[tag=Temp.Victim] Entity.Uuid
-        execute if score @s Wpn.Ls.SpiritLevel matches ..1 run data modify storage api: Arg.Override.Color set value "White"
-        execute if score @s Wpn.Ls.SpiritLevel matches 2 run data modify storage api: Arg.Override.Color set value "Yellow"
-        execute if score @s Wpn.Ls.SpiritLevel matches 3.. run data modify storage api: Arg.Override.Color set value "Red"
     # 召喚
-        function api:object/summon.m {ObjectId:10}
+        function api:object/summon.m {ObjectId:11}
 
 # 演出用VFXオブジェクト召喚
     # データ設定
         data modify storage api: Arg.Override.Tag set value "slash_strong"
         data modify storage api: Arg.Override.IsCounter set value false
-        data modify storage api: Arg.Override.Rotation set value -0.05
-        data modify storage api: Arg.Override.Scale set value [5f,9f,5f]
+        data modify storage api: Arg.Override.Rotation set value -1.5708
+        data modify storage api: Arg.Override.Scale set value [7f,20f,7f]
     # 召喚
-        execute positioned ~ ~1.65 ~ positioned ^ ^ ^3.5 facing entity @s eyes run function api:object/summon.m {ObjectId:7}
+        execute rotated ~ 0 positioned ~ ~2.65 ~ positioned ^ ^ ^5.5 facing entity @s eyes run function api:object/summon.m {ObjectId:7}
 
 # ゲージ色を下げる
     scoreboard players set @s Wpn.Ls.SpiritLevelGauge 0
