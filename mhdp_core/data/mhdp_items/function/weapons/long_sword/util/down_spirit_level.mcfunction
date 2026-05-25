@@ -4,7 +4,7 @@
 #
 # @within function mhdp_items:core/switch/macro/m.tick
 
-# 練気色ゲージ上昇
+# 練気色ゲージ減少
     scoreboard players remove @s Wpn.Ls.SpiritLevelGauge 1
     scoreboard players set @s Wpn.Ls.SpiritLevelReduction 0
 

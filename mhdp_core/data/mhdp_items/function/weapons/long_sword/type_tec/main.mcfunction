@@ -55,6 +55,17 @@
             execute if entity @s[tag=Wpn.Ls.Tec.Normal.3] run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/main
             execute if entity @s[tag=Wpn.Ls.Tec.Normal.3.InSpirit] run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/main_in_spirit
 
+# 赤刃斬りコンボ
+    # 1段目
+        # 処理
+            execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.1] run function mhdp_items:weapons/long_sword/type_tec/12_red_normal_1/main
+    # 2段目
+        # 処理
+            execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.2] run function mhdp_items:weapons/long_sword/type_tec/13_red_normal_2/main
+    # 3段目
+        # 処理
+            execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.3] run function mhdp_items:weapons/long_sword/type_tec/14_red_normal_3/main
+
 # 踏み込み斬り
     # 開始：前移動 + 左クリック
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsKeyForward,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/10_step_slash/start
@@ -86,6 +97,16 @@
     # 処理
         execute if entity @s[tag=Wpn.Ls.Tec.RedSpin] run function mhdp_items:weapons/long_sword/type_tec/16_red_spin/main
 
+# 気刃突き
+    # 開始：スニーク+右クリック同時押し
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye.WithSneak,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/start
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Tec.SpiritSpear] run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/main
+
+# 気刃兜割
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Tec.HelmBreaker] run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/main
+
 # 移動斬り
     # 開始：スニーク+左クリック
         execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/start
@@ -99,21 +120,10 @@
         execute if entity @s[tag=Wpn.Ls.Tec.Foresight] run function mhdp_items:weapons/long_sword/type_tec/9_foresight_slash/main
         execute if entity @s[tag=Wpn.Ls.Tec.Foresight.Success] run function mhdp_items:weapons/long_sword/type_tec/9_foresight_slash/main_success
 
-# 赤刃斬りコンボ
-    # 1段目
-        # 処理
-            execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.1] run function mhdp_items:weapons/long_sword/type_tec/12_red_normal_1/main
-    # 2段目
-        # 処理
-            execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.2] run function mhdp_items:weapons/long_sword/type_tec/13_red_normal_2/main
-    # 3段目
-        # 処理
-            execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.3] run function mhdp_items:weapons/long_sword/type_tec/14_red_normal_3/main
-
 # 見切り斬り・旋
     # 処理
         execute if entity @s[tag=Wpn.Ls.Tec.RedForesight] run function mhdp_items:weapons/long_sword/type_tec/15_red_foresight/main
         execute if entity @s[tag=Wpn.Ls.Tec.RedForesight.Success] run function mhdp_items:weapons/long_sword/type_tec/15_red_foresight/main_success
-    
+
 # 終了
     tag @s remove Ply.Weapon.NoOpe

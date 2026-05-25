@@ -15,7 +15,3 @@
 
 # 召喚
     $execute positioned ~ ~$(OffsetY) ~ rotated ~$(RotY) ~$(RotX) positioned ^ ^ ^$(Dist) facing entity @s eyes positioned ^ ^ ^$(OffsetZ) run function api:object/summon.m {ObjectId:7}
-    
-    # $execute if data storage api: Arg{VfxRandom:1} positioned ~ ~$(OffsetY) ~ rotated ~$(RotY) ~$(RotX) positioned ^ ^ ^$(Dist) facing entity @s eyes positioned ^ ^ ^$(OffsetZ) run function api:object/summon.m {ObjectId:7}
-    # $execute unless data storage api: Arg{VfxRandom:1} positioned ~ ~$(OffsetY) ~ facing entity @s eyes positioned ^ ^ ^$(OffsetZ) run function api:object/summon.m {ObjectId:7}
-    # $execute positioned ~ ~$(OffsetY) ~ rotated as @s positioned ^ ^ ^2000 facing entity @s eyes positioned ^ ^ ^2000 facing entity @s eyes positioned ^ ^ ^$(OffsetZ) run function api:object/summon.m {ObjectId:7}
