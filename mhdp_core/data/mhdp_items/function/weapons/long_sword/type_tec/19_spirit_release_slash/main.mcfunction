@@ -28,14 +28,14 @@
     execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_6
     execute if score @s Wpn.AnimationTimer matches 12 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_7
     execute if score @s Wpn.AnimationTimer matches 21 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_8
-    execute if score @s Wpn.AnimationTimer matches 23 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_9
-    execute if score @s Wpn.AnimationTimer matches 24 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_10
-    execute if score @s Wpn.AnimationTimer matches 25 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_11
-    execute if score @s Wpn.AnimationTimer matches 28 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_12
-    execute if score @s Wpn.AnimationTimer matches 30 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_8
-    execute if score @s Wpn.AnimationTimer matches 32 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_9
-    execute if score @s Wpn.AnimationTimer matches 33 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_10
-    execute if score @s Wpn.AnimationTimer matches 34 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_11
+    execute if score @s Wpn.AnimationTimer matches 22 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_9
+    execute if score @s Wpn.AnimationTimer matches 23 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_10
+    execute if score @s Wpn.AnimationTimer matches 24 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_11
+    execute if score @s Wpn.AnimationTimer matches 25 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_12
+    execute if score @s Wpn.AnimationTimer matches 28 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_8
+    execute if score @s Wpn.AnimationTimer matches 29 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_9
+    execute if score @s Wpn.AnimationTimer matches 30 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_10
+    execute if score @s Wpn.AnimationTimer matches 31 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_11
     execute if score @s Wpn.AnimationTimer matches 50 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_13
     execute if score @s Wpn.AnimationTimer matches 52 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_14
     execute if score @s Wpn.GeneralTimer matches 4 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 45 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/particle
@@ -59,7 +59,7 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 8..10 run tp @s ~ ~ ~ ~0.6 ~
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_move_veryslow
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
     execute if score @s Wpn.GeneralTimer matches 45 run function api:weapon_operation/attribute_moveslow
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
@@ -80,6 +80,10 @@
 # 狩技遷移
     # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/long_sword/type_tec/22_guard_rage/start
     # execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/long_sword/type_tec/24_screw_thrust/start
+
+# アーマー
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.Armor.Hyper
+    execute if score @s Wpn.GeneralTimer matches 28 run tag @s remove Ply.Weapon.Armor.Hyper
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 56.. run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/end

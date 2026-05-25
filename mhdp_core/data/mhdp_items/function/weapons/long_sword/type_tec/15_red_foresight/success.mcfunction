@@ -11,4 +11,4 @@
 # タグ更新
     tag @s remove Wpn.Ls.Tec.RedForesight
     tag @s add Wpn.Ls.Tec.RedForesight.Success
-    scoreboard players add @s Wpn.Ls.SpiritLevelGauge 120
+    scoreboard players add @s Wpn.Ls.SpiritLevelGauge 80

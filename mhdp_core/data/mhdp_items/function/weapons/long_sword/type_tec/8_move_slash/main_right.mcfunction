@@ -43,6 +43,7 @@
     execute if entity @s[tag=Ply.Ope.StartLeftClick,tag=!Ply.Ope.IsKeyForward] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsKeyForward] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/b
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/c
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/e
     # execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..22 run function mhdp_items:core/buffering/jump
     # execute if score @s Wpn.GeneralTimer matches 3..22 run function mhdp_items:core/buffering/arts_main
 
@@ -53,6 +54,8 @@
         execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 17.. run function mhdp_items:weapons/long_sword/type_tec/10_step_slash/start
     # 右クリック：踏み込み気刃斬りに移行
         execute if entity @s[tag=Ply.Ope.Buffering.C] if score @s Wpn.GeneralTimer matches 17.. if score @s Wpn.Ls.SpiritGauge matches 150.. run function mhdp_items:weapons/long_sword/type_tec/11_step_spirit_slash/start
+    # スニーク右クリック同時：気刃突きに移行
+        execute if entity @s[tag=Ply.Ope.Buffering.E] if score @s Wpn.GeneralTimer matches 17.. if score @s Wpn.Ls.SpiritGauge matches 1.. run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/start
     # # ジャンプ回避
     #     execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/short_sword/util/move_jump
     

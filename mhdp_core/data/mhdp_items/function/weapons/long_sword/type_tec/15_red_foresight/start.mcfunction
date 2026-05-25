@@ -9,7 +9,7 @@
 
 # 練気確認
     tag @s add Wpn.Ls.Tec.RedForesight
-    scoreboard players remove @s Wpn.Ls.SpiritLevelGauge 60
+    scoreboard players remove @s Wpn.Ls.SpiritLevelGauge 100
 
 # タグ付与
     tag @s remove Ply.Weapon.NoOpe
