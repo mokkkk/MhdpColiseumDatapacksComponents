@@ -34,7 +34,6 @@
 
 # 移動
     execute if entity @s[tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsKeyBack] if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:2500, IsForce:false, IsAdjust:false}
-    execute if entity @s[tag=Ply.Ope.IsKeyBack] if score @s Wpn.GeneralTimer matches 4 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
     execute if entity @s[tag=Ply.Ope.IsKeyForward] if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:8000, IsForce:false, IsAdjust:false}
 
 # 演出

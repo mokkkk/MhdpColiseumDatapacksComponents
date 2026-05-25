@@ -6,3 +6,5 @@
 
 # 見切り斬り成功判定
     execute if entity @s[tag=Wpn.Ls.Tec.Foresight] run function mhdp_items:weapons/long_sword/type_tec/9_foresight_slash/success
+# 見切り斬り・旋成功判定
+    execute if entity @s[tag=Wpn.Ls.Tec.RedForesight] run function mhdp_items:weapons/long_sword/type_tec/15_red_foresight/success

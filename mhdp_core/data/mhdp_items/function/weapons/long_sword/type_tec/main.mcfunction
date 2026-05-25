@@ -96,15 +96,20 @@
         execute if entity @s[tag=Wpn.Ls.Tec.Foresight.Success] run function mhdp_items:weapons/long_sword/type_tec/9_foresight_slash/main_success
 
 # 赤刃斬りコンボ
-    # 1
+    # 1段目
         # 処理
             execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.1] run function mhdp_items:weapons/long_sword/type_tec/12_red_normal_1/main
-    # 2
+    # 2段目
         # 処理
             execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.2] run function mhdp_items:weapons/long_sword/type_tec/13_red_normal_2/main
-    # 3
+    # 3段目
         # 処理
             execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.3] run function mhdp_items:weapons/long_sword/type_tec/14_red_normal_3/main
 
+# 見切り斬り・旋
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Tec.RedForesight] run function mhdp_items:weapons/long_sword/type_tec/15_red_foresight/main
+        execute if entity @s[tag=Wpn.Ls.Tec.RedForesight.Success] run function mhdp_items:weapons/long_sword/type_tec/15_red_foresight/main_success
+    
 # 終了
     tag @s remove Ply.Weapon.NoOpe
