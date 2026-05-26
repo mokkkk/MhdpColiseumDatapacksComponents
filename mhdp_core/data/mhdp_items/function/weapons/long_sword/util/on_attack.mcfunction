@@ -10,6 +10,8 @@
 # 練気ゲージ上昇
     # 縦斬り
         execute if entity @s[tag=Wpn.Ls.Tec.Normal.1] run scoreboard players add @s Wpn.Ls.SpiritGauge 100
+    # 踏み込み斬り
+        execute if entity @s[tag=Wpn.Ls.Tec.StepSlash] run scoreboard players add @s Wpn.Ls.SpiritGauge 100
     # 突き
         execute if entity @s[tag=Wpn.Ls.Tec.Normal.2] run scoreboard players add @s Wpn.Ls.SpiritGauge 100
         execute if entity @s[tag=Wpn.Ls.Tec.Normal.2.InSpirit] run scoreboard players add @s Wpn.Ls.SpiritGauge 100
@@ -24,6 +26,8 @@
         execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.1] run scoreboard players add @s Wpn.Ls.SpiritGauge 80
         execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.2] run scoreboard players add @s Wpn.Ls.SpiritGauge 90
         execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.3] run scoreboard players add @s Wpn.Ls.SpiritGauge 70
+    # 居合抜刀斬り
+        execute if entity @s[tag=Wpn.Ls.Tec.IaiSlash] run scoreboard players add @s Wpn.Ls.SpiritGauge 80
 # 上限
     execute if score @s Wpn.Ls.SpiritGauge matches 1001.. run scoreboard players set @s Wpn.Ls.SpiritGauge 1000
 

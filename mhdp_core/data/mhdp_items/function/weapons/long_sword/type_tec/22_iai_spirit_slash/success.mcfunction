@@ -7,5 +7,3 @@
 # タグ更新
     tag @s remove Wpn.Ls.Tec.IaiSpiritSlash
     tag @s add Wpn.Ls.Tec.IaiSpiritSlash.Success
-
-say せいこう

@@ -5,14 +5,13 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
 
 # 命中判定
-    function api:bounding/cylinder.m {Selector:"@e[type=slime,tag=Mns.HitBox]",Tag:"Temp.Hit",Radius:6.0,Height:3.0}
+    function api:bounding/cylinder.m {Selector:"@e[type=slime,tag=Mns.HitBox]",Tag:"Temp.Hit",Radius:6.0,Height:5.0}
 
 # ターゲット決定
-    execute if entity @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit] run say ひっと
     execute as @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] run tag @s add Temp.Victim
 
 # 非ヒット時、ここで終了
-    execute unless entity @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim] run tag @e[type=slime,tag=Temp.Hit] remove Temp.Hit
+    execute unless entity @e[type=slime,tag=Mns.HitBox,tag=Temp.Victim] run return run tag @e[type=slime,tag=Temp.Hit] remove Temp.Hit
 
 # ヒットストップ    
     execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 1
