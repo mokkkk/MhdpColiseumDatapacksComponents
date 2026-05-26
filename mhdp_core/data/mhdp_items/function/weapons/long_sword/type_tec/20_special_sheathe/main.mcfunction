@@ -40,8 +40,8 @@
 # 遷移
     # 左クリック：居合抜刀斬りに移行
         execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 51.. run function mhdp_items:weapons/long_sword/type_tec/21_iai_slash/start
-    # 右クリック：気刃斬り1に移行
-        # execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 51.. run function mhdp_items:weapons/long_sword/type_tec/4_spirit_slash_1/start
+    # 右クリック：居合抜刀気刃斬りに移行
+        execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 51.. run function mhdp_items:weapons/long_sword/type_tec/22_iai_spirit_slash/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.IsKeyJump] if score @s Wpn.GeneralTimer matches 51.. run function mhdp_items:weapons/long_sword/type_tec/20_special_sheathe/cancel_jump
 # 狩技遷移

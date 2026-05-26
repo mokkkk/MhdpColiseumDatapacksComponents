@@ -135,6 +135,10 @@
 # 居合抜刀斬り
     # 処理
         execute if entity @s[tag=Wpn.Ls.Tec.IaiSlash] run function mhdp_items:weapons/long_sword/type_tec/21_iai_slash/main
+# 居合抜刀気刃斬り
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Tec.IaiSpiritSlash] run function mhdp_items:weapons/long_sword/type_tec/22_iai_spirit_slash/main
+        execute if entity @s[tag=Wpn.Ls.Tec.IaiSpiritSlash.Success] run function mhdp_items:weapons/long_sword/type_tec/22_iai_spirit_slash/main_success
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe
