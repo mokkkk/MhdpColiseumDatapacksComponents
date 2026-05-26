@@ -129,5 +129,12 @@
         execute if entity @s[tag=Wpn.Ls.Tec.RedForesight] run function mhdp_items:weapons/long_sword/type_tec/15_red_foresight/main
         execute if entity @s[tag=Wpn.Ls.Tec.RedForesight.Success] run function mhdp_items:weapons/long_sword/type_tec/15_red_foresight/main_success
 
+# 特殊納刀
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Tec.SpecialSheathe] run function mhdp_items:weapons/long_sword/type_tec/20_special_sheathe/main
+# 居合抜刀斬り
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Tec.IaiSlash] run function mhdp_items:weapons/long_sword/type_tec/21_iai_slash/main
+
 # 終了
     tag @s remove Ply.Weapon.NoOpe

@@ -52,7 +52,7 @@
     # 右クリック：練気解放無双斬りに移行
         execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 1018..1019 if score @s Wpn.Ls.SpiritLevel matches 2.. run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/start
     # # ジャンプ回避
-    #     execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 35.. run function mhdp_items:weapons/short_sword/util/move_jump
+    #     execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 35.. run function mhdp_items:weapons/long_sword/util/move_jump
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 1020.. run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/end
