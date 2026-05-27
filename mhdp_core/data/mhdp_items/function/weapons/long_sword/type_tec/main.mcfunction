@@ -26,21 +26,19 @@
     # 処理
         execute if entity @s[tag=Wpn.Ls.Tec.FallThrust] run function mhdp_items:weapons/long_sword/type_tec/23_fall_thrust/main
 
-# 狩技：
+# 狩技：鏡花の構え
     # 開始
-        # execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/long_sword/type_tec/22_guard_rage/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/long_sword/type_tec/27_critical_juncture/start
     # ガード
-        # execute if entity @s[tag=Wpn.Lc.Tec.GuardRage] run function mhdp_items:weapons/long_sword/type_tec/22_guard_rage/main
+        execute if entity @s[tag=Wpn.Ls.Tec.Juncture] run function mhdp_items:weapons/long_sword/type_tec/27_critical_juncture/main
     # カウンター
-        # execute if entity @s[tag=Wpn.Lc.Tec.RageCounter] run function mhdp_items:weapons/long_sword/type_tec/23_rage_counter/main
+        execute if entity @s[tag=Wpn.Ls.Tec.CriticalCounter] run function mhdp_items:weapons/long_sword/type_tec/28_critical_juncture_counter/main
 
-# 狩技：
+# 狩技：桜花気刃斬り
     # 開始
-        # execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/long_sword/type_tec/24_screw_thrust/start
-    # 溜め
-        # execute if entity @s[tag=Wpn.Lc.Tec.ScrewThrust] run function mhdp_items:weapons/long_sword/type_tec/24_screw_thrust/main
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking,tag=Ply.Ope.IsKeySprint,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/start
     # 攻撃
-        # execute if entity @s[tag=Wpn.Lc.Tec.ScrewSpear] run function mhdp_items:weapons/long_sword/type_tec/25_screw_thrust_spear/main
+        execute if entity @s[tag=Wpn.Ls.Tec.SakuraSlash] run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/main
 
 # 縦斬りコンボ
     # 縦斬り
