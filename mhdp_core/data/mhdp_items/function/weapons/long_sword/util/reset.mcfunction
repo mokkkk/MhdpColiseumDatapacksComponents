@@ -15,6 +15,11 @@
     tag @s remove Ply.Weapon.Equip.LongSword
 
 # 専用スコア消去
+    scoreboard players reset @s Wpn.Ls.SpiritGauge
+    scoreboard players reset @s Wpn.Ls.SpiritLevel
+    scoreboard players reset @s Wpn.Ls.SpiritLevelGauge
+    scoreboard players reset @s Wpn.Ls.SpiritGaugeRegen
+    scoreboard players reset @s Wpn.Ls.SpiritReduction
 
 # ステータス削除
     attribute @s attack_speed modifier remove mhdp_core:weapon_attack

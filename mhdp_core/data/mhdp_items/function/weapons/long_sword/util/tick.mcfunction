@@ -4,6 +4,19 @@
 #
 # @within function mhdp_items:core/switch/macro/m.tick
 
+# インターバル減少
+    execute if score @s Wpn.Ls.SpiritInterval matches 1.. run scoreboard players remove @s Wpn.Ls.SpiritInterval 1
+
+# 練気減少
+    execute unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. unless score @s Wpn.Ls.SpiritInterval matches 1.. run scoreboard players add @s Wpn.Ls.SpiritReduction 1
+    execute if score @s Wpn.Ls.SpiritGauge matches 1.. if score @s Wpn.Ls.SpiritReduction matches 2.. run scoreboard players remove @s Wpn.Ls.SpiritGauge 1
+    execute if score @s Wpn.Ls.SpiritReduction matches 2.. run scoreboard players set @s Wpn.Ls.SpiritReduction 0
+
+# 練気上昇
+    execute if score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run scoreboard players add @s Wpn.Ls.SpiritGauge 2
+    execute if score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run scoreboard players remove @s Wpn.Ls.SpiritGaugeRegen 2
+    execute if score @s Wpn.Ls.SpiritGauge matches 1001.. run scoreboard players set @s Wpn.Ls.SpiritGauge 1000
+
 # 練気色減少
     execute if score @s Wpn.Ls.SpiritLevelGauge matches 601.. run scoreboard players set @s Wpn.Ls.SpiritLevelGauge 600
     execute if score @s Wpn.Ls.SpiritLevel matches 1.. run scoreboard players add @s Wpn.Ls.SpiritLevelReduction 1

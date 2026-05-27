@@ -89,6 +89,11 @@
             scoreboard objectives add Wpn.Ls.SpiritLevelGauge dummy
         # 練気色減少用
             scoreboard objectives add Wpn.Ls.SpiritLevelReduction dummy
+        # 練気ゲージ自然回復
+            scoreboard objectives add Wpn.Ls.SpiritGaugeRegen dummy
+        # 練気ゲージ減少用
+            scoreboard objectives add Wpn.Ls.SpiritInterval dummy
+            scoreboard objectives add Wpn.Ls.SpiritReduction dummy
     # 弓
         # 溜め時間
             scoreboard objectives add Wpn.Bw.ChargeTimer dummy

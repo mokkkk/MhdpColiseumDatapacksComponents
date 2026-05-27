@@ -26,10 +26,19 @@
         execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.1] run scoreboard players add @s Wpn.Ls.SpiritGauge 80
         execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.2] run scoreboard players add @s Wpn.Ls.SpiritGauge 90
         execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.3] run scoreboard players add @s Wpn.Ls.SpiritGauge 70
-    # 居合抜刀斬り
-        execute if entity @s[tag=Wpn.Ls.Tec.IaiSlash] run scoreboard players add @s Wpn.Ls.SpiritGauge 80
 # 上限
     execute if score @s Wpn.Ls.SpiritGauge matches 1001.. run scoreboard players set @s Wpn.Ls.SpiritGauge 1000
+
+# 練気ゲージ自然上昇
+    # 居合抜刀斬り
+        execute if entity @s[tag=Wpn.Ls.Tec.IaiSlash] unless score @s Wpn.Ls.SpiritGaugeRegen matches 400.. run scoreboard players set @s Wpn.Ls.SpiritGaugeRegen 400
+    # 落下突き
+        execute if entity @s[tag=Wpn.Ls.Tec.FallThrust] unless score @s Wpn.Ls.SpiritGaugeRegen matches 300.. run scoreboard players set @s Wpn.Ls.SpiritGaugeRegen 300
+    # 飛翔円月斬
+        execute if entity @s[tag=Wpn.Ls.Tec.SoaringSpirit.Jump] run scoreboard players set @s Wpn.Ls.SpiritGaugeRegen 1000
+
+# 練気ゲージ攻撃間隔
+    scoreboard players set @s Wpn.Ls.SpiritInterval 60
 
 # 終了
     data remove storage api: Return

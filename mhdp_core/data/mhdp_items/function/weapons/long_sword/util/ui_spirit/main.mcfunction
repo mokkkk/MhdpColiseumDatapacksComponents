@@ -21,11 +21,14 @@
 
 # 練気ゲージ
     scoreboard players operation #mhdp_temp_gauge MhdpCore = @s Wpn.Ls.SpiritGauge
-    function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Type:0}
+    execute unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit",Type:0}
+    execute if score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit_regen",Type:0}
     scoreboard players remove #mhdp_temp_gauge MhdpCore 334
-    function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Type:1}
+    execute unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit",Type:1}
+    execute if score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit_regen",Type:1}
     scoreboard players remove #mhdp_temp_gauge MhdpCore 333
-    function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Type:2}
+    execute unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit",Type:2}
+    execute if score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit_regen",Type:2}
 
 # UI作成
 # (+15px +15px +15px) -45px +9px (+11px +11px +11px) - 42px + 45px

@@ -23,3 +23,7 @@
 # 移動制限
     function api:weapon_operation/attribute_movestop
     tag @s add Ply.Weapon.NoMoveJump
+
+# 移動
+    tp @s @s
+    execute rotated ~ -90 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:true, IsAdjust:false}
