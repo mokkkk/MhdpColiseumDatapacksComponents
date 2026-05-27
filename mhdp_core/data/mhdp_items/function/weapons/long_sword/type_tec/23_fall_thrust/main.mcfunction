@@ -25,7 +25,7 @@
     execute if score @s Wpn.GeneralTimer matches 100 run function mhdp_items:weapons/long_sword/type_tec/23_fall_thrust/attack
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -60 run function api:weapon_operation/use_player_motion.m {Strength:5000, IsForce:true, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ -90 run function api:weapon_operation/use_player_motion.m {Strength:5000, IsForce:true, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 6 rotated ~ 90 run function api:weapon_operation/use_player_motion.m {Strength:8000, IsForce:true, IsAdjust:false}
 
 # 演出

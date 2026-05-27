@@ -6,5 +6,4 @@
 
 # 演出
     # playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.5
-    playsound item.trident.hit_ground master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.5
     execute rotated ~ 0 run particle cloud ^ ^0.8 ^1 0.2 0.1 0.2 0.15 5 normal

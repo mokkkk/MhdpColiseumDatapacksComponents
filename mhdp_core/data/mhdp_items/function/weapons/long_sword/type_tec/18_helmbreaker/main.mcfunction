@@ -18,7 +18,7 @@
     execute if score @s Wpn.GeneralTimer matches 1001 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
     execute if score @s Wpn.GeneralTimer matches 1001 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s Wpn.GeneralTimer matches 1001 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
-    execute if score @s Wpn.GeneralTimer matches 8 run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/animation_1
+    execute if score @s Wpn.GeneralTimer matches 9 run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/animation_1
     execute if score @s Wpn.GeneralTimer matches 11 run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/animation_2
     execute if score @s Wpn.GeneralTimer matches 1001 run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/animation_4
     execute if score @s Wpn.GeneralTimer matches 1002 run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/animation_5

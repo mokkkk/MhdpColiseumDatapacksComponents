@@ -40,23 +40,9 @@
     execute if score @s Wpn.GeneralTimer matches 25 run function api:weapon_operation/attribute_moveslow
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
-# 先行入力
-
 # 遷移
     # ヒット時：気刃兜割に移行
         execute if entity @s[tag=Ply.Flag.Hit] if score @s Wpn.Ls.SpiritLevel matches 1.. if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/start
-    # # 右クリック：気刃斬り1に移行
-    #     execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 14.. run function mhdp_items:weapons/long_sword/type_tec/4_spirit_slash_1/start
-    # # スニーク左クリック：移動斬りに移行
-    #     execute if entity @s[tag=Ply.Ope.Buffering.C] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/start
-    # # スニーク右クリック：見切り斬りに移行
-    #     execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 14.. if score @s Wpn.Ls.SpiritGauge matches 1.. run function mhdp_items:weapons/long_sword/type_tec/9_foresight_slash/start
-    # # ジャンプ回避
-    #     execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 10.. run function mhdp_items:weapons/long_sword/util/move_jump
-
-# 狩技遷移
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/long_sword/type_tec/22_guard_rage/start
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/long_sword/type_tec/24_screw_thrust/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 35.. run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/end

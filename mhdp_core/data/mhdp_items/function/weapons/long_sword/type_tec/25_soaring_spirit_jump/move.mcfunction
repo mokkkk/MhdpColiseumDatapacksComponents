@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/move
+#> mhdp_items:weapons/long_sword/type_tec/25_soaring_spirit_jump/move
 #
-# 気刃兜割 移動
+# 飛翔円月斬 移動
 #
 # @within function mhdp_items:weapons/long_sword/type_tec/1_charge/change_to_chargeattack
 

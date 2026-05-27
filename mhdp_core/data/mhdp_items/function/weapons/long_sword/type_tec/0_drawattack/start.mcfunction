@@ -23,8 +23,8 @@
     # 前移動時、踏み込み斬りに移行
         execute if entity @s[tag=Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsSneaking,tag=!Wpn.Lc.Tec.FallSpear,tag=!Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/long_sword/type_tec/10_step_slash/start
 
-# 翔蟲：流転突きに移行
-    # execute if entity @s[tag=Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/lance/type_tec/21_spiral_thrust/start
+# 翔蟲：飛翔円月斬に移行
+    execute if entity @s[tag=Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/long_sword/type_tec/24_soaring_spirit_slash/start
 
 # チュートリアル用処理
     tag @s remove Ply.Temp.Tutorial.DrawAttack

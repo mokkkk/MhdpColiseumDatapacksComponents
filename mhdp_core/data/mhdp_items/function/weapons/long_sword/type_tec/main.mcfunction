@@ -13,9 +13,11 @@
 
 # 特殊空中攻撃：飛翔円月斬り
     # 開始
-        # execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingWeapon,tag=Ply.Weapon.NoOpe,tag=Ply.Flag.SpJumpAttack,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/21_spiral_thrust/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingWeapon,tag=Ply.Weapon.NoOpe,tag=Ply.Flag.SpJumpAttack,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/24_soaring_spirit_slash/start
     # 処理
-        # execute if entity @s[tag=Wpn.Lc.Tec.Spiral] run function mhdp_items:weapons/long_sword/type_tec/21_spiral_thrust/main
+        execute if entity @s[tag=Wpn.Ls.Tec.SoaringSpirit] run function mhdp_items:weapons/long_sword/type_tec/24_soaring_spirit_slash/main
+    # ジャンプ処理
+        execute if entity @s[tag=Wpn.Ls.Tec.SoaringSpirit.Jump] run function mhdp_items:weapons/long_sword/type_tec/25_soaring_spirit_jump/main
 
 # 空中攻撃：落下突き
     # 開始
