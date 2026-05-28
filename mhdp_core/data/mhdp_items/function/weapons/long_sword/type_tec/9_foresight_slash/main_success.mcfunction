@@ -62,7 +62,7 @@
     # 左クリック：縦斬りに移行
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 23.. run function mhdp_items:weapons/long_sword/type_tec/3_normal_3/start_in_spirit
     # 右クリック：気刃斬り大回転斬りに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 13.. if score @s Wpn.Ls.SpiritGauge matches 200.. run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/start
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 23.. if score @s Wpn.Ls.SpiritGauge matches 200.. run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/start
     # スニーク+ジャンプ：特殊納刀に移行
         execute if entity @s[tag=Ply.Ope.Buffering.F] if score @s Wpn.GeneralTimer matches 23.. run function mhdp_items:weapons/long_sword/type_tec/20_special_sheathe/start
     # スニーク右クリック同時：気刃突きに移行
