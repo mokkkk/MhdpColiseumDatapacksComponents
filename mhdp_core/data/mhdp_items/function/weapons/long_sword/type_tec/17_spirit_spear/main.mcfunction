@@ -22,7 +22,6 @@
     execute if score @s Wpn.AnimationTimer matches 17 run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/animation_3
     execute if score @s Wpn.AnimationTimer matches 18 run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/animation_4
     execute if score @s Wpn.AnimationTimer matches 21 run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/animation_5
-    # execute if score @s Wpn.AnimationTimer matches 4 positioned ~ ~1.65 ~ positioned ^-0.5 ^ ^1.2 rotated ~90 -80 run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/particle
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 17 run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/attack

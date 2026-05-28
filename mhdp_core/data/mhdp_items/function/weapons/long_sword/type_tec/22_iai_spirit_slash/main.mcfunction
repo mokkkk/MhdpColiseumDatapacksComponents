@@ -47,7 +47,7 @@
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 3..36 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..36 run function mhdp_items:core/buffering/e
-    # execute if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/arts_main
+    execute if score @s Wpn.GeneralTimer matches 3..36 run function mhdp_items:core/buffering/arts_main
 
 # 無敵時間
     execute if score @s Wpn.GeneralTimer matches 1 run scoreboard players set @s Ply.Timer.Avoid 5
@@ -57,10 +57,9 @@
         execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/long_sword/type_tec/1_normal_1/start
     # スニーク右クリック同時：気刃突きに移行
         execute if entity @s[tag=Ply.Ope.Buffering.E] if score @s Wpn.GeneralTimer matches 22.. if score @s Wpn.Ls.SpiritGauge matches 1.. run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/start
-
 # 狩技遷移
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/long_sword/type_tec/22_guard_rage/start
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/long_sword/type_tec/24_screw_thrust/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/long_sword/type_tec/27_critical_juncture/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 45.. run function mhdp_items:weapons/long_sword/type_tec/22_iai_spirit_slash/end

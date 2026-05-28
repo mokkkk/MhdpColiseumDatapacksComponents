@@ -23,7 +23,7 @@
         execute if score @s Wpn.Ls.SpiritLevel matches 2 run data modify storage api: Arg.Override.Color set value "Yellow"
         execute if score @s Wpn.Ls.SpiritLevel matches 3.. run data modify storage api: Arg.Override.Color set value "Red"
     # 召喚
-        function api:object/summon.m {ObjectId:10}
+        execute if entity @n[tag=Temp.Victim] run function api:object/summon.m {ObjectId:10}
 
 # 演出用VFXオブジェクト召喚
     # データ設定

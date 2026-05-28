@@ -66,8 +66,8 @@
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 105.. run function mhdp_items:weapons/long_sword/util/move_jump
 # 狩技遷移
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 105.. run function mhdp_items:weapons/long_sword/type_tec/22_guard_rage/start
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 105.. run function mhdp_items:weapons/long_sword/type_tec/24_screw_thrust/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 105.. run function mhdp_items:weapons/long_sword/type_tec/27_critical_juncture/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 105.. run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 120.. run function mhdp_items:weapons/long_sword/type_tec/23_fall_thrust/end

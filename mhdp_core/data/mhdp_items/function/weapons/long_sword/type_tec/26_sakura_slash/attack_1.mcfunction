@@ -23,7 +23,7 @@
         execute store result storage api: Arg.Override.PlyUid int 1 run scoreboard players get @s Ply.Uid
         execute store result storage api: Arg.Override.TargetUuid int 1 run scoreboard players get @n[tag=Temp.Victim] Entity.Uuid
     # 召喚
-        function api:object/summon.m {ObjectId:13}
+        execute if entity @n[tag=Temp.Victim] run function api:object/summon.m {ObjectId:13}
 
 # 攻撃
     data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.LongSword.Tec.SakuraSlash.2
