@@ -13,7 +13,7 @@
 
 # アニメーション演出
     execute if score @s Wpn.GeneralTimer matches 1 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
-    execute if score @s Wpn.AnimationTimer matches 17 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
+    execute if score @s Wpn.AnimationTimer matches 17 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
     execute if score @s Wpn.GeneralTimer matches 14..16 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s Wpn.GeneralTimer matches 14..17 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 0.3 0.1 0.3 0 3
     execute if score @s Wpn.AnimationTimer matches 1 run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/animation_0
