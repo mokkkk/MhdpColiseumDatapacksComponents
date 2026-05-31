@@ -5,9 +5,9 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.bite_strong.frame matches 2 run function mhdp_monster_ranposu:core/tick/animation/event/bite_strong/turn_start
-    execute if score @s aj.bite_strong.frame matches 11 run function mhdp_monster_ranposu:core/tick/animation/event/bite_strong/turn_start
-    execute if score @s aj.bite_strong.frame matches 2..21 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.bite_strong.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:10}
+    execute if score @s aj.bite_strong.frame matches 11 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:10}
+    execute if score @s aj.bite_strong.frame matches 2..21 at @s run function mhdp_monsters:core/util/tick/event/alignment
 
 # 移動
     execute if score @s aj.bite_strong.frame matches 1..5 at @s run tp @s ^ ^ ^-0.1
@@ -26,8 +26,7 @@
     execute if score @s aj.bite_strong.frame matches 24 run function mhdp_monster_ranposu:core/tick/animation/event/bite_strong/attack
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
     execute if score @s aj.bite_strong.frame matches 53 run function mhdp_monster_ranposu:core/tick/animation/event/bite_strong/end

@@ -68,8 +68,8 @@
 # # 噛みつき
 #     execute if entity @s[tag=aj.ranposu_aj.animation.bite.playing] run function mhdp_monster_ranposu:core/tick/animation/event/bite/main
 
-# # 強嚙みつき
-#     execute if entity @s[tag=aj.ranposu_aj.animation.bite_strong.playing] run function mhdp_monster_ranposu:core/tick/animation/event/bite_strong/main
+# 強嚙みつき
+    execute if entity @s[tag=animated_java.ranposu.animation.bite_strong.playing] run function mhdp_monster_ranposu:core/tick/animation/event/bite_strong/main
 
 # # 尻尾攻撃
 #     execute if entity @s[tag=aj.ranposu_aj.animation.tail_right.playing] run function mhdp_monster_ranposu:core/tick/animation/event/tail_right/main

@@ -7,7 +7,7 @@
     execute if score #mhdp_build_uid_grobal Build.Uid matches 2147483647.. run scoreboard players set #mhdp_build_uid_grobal Build.Uid -2147483648
 
 # 念のため、位置を正確に移動
-    execute align xyz positioned ~0.5 ~ ~0.5 run tp @s ~ ~ ~ 0 0
+    # execute align xyz positioned ~0.5 ~ ~0.5 run tp @s ~ ~ ~ 0 0
 
 # 見た目召喚
     execute positioned as @s run summon item_display ~ ~ ~ {interpolation_duration:3,teleport_duration:0,Tags:["Asset.Build.Display","Asset.Build.Display.Init"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.75f,0f],scale:[1.5f,1.5f,1.5f]},item:{id:"minecraft:stone",count:1,components:{"minecraft:item_model":"builds/wall_normal"}}}

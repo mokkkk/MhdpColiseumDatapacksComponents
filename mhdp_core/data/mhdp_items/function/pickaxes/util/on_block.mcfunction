@@ -5,7 +5,8 @@
 # @within function mhdp_items:**
 
 # 足元で実行
-    execute positioned ~ ~-0.5 ~ align xyz positioned ~0.5 ~0.5 ~0.5 run function mhdp_items:pickaxes/util/execute_command.m with storage api: Arg
+    execute if block ~ ~-1 ~ #mhdp_core:no_collision at @s positioned ~ ~-1.5 ~ run function mhdp_items:pickaxes/util/execute_command.m with storage api: Arg
+    execute unless block ~ ~-1 ~ #mhdp_core:no_collision positioned ~ ~-0.5 ~ align xyz positioned ~0.5 ~0.5 ~0.5 run function mhdp_items:pickaxes/util/execute_command.m with storage api: Arg
 
 # 終了
     tag @s remove Itm.Pick.Executed
