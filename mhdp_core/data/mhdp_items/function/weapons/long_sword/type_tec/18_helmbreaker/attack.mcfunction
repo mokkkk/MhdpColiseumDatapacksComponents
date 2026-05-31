@@ -30,7 +30,7 @@
         data modify storage api: Arg.Override.Tag set value "slash_sharp"
         data modify storage api: Arg.Override.IsCounter set value false
         data modify storage api: Arg.Override.Rotation set value -0.05
-        data modify storage api: Arg.Override.Scale set value [5f,9f,5f]
+        data modify storage api: Arg.Override.Scale set value [8f,8f,8f]
     # 召喚
         execute positioned ~ ~1.65 ~ positioned ^ ^ ^3.5 facing entity @s eyes run function api:object/summon.m {ObjectId:7}
 

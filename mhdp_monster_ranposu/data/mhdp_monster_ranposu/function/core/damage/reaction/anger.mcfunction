@@ -8,10 +8,10 @@
     # スコアリセット
         scoreboard players operation @s Mns.Anger.Damage = @s Mns.Anger.Damage.Max
     # 状態更新
-        function mhdp_monster_ranposu:core/tick/on_battle/anger_start
+        function mhdp_monsters:core/util/tick/start_anger.m {Name:"ranposu"}
 
 # アニメーション再生処理
-    # 麻痺・ダウン・スタン時以外
+    # 麻痺・ダウン・スタン時
         execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
     # アニメーション再生
         execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:ranposu/animations/anger/tween {duration:1, to_frame: 0}

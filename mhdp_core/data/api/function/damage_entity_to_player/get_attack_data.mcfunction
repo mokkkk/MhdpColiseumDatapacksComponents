@@ -31,7 +31,7 @@
     execute store result score #mhdp_temp_guard_value MhdpCore run data get storage mhdp_core:temp Arg.GuardValue
 
 # ノックバック
-    execute store result score #mhdp_temp_knockback_strength MhdpCore run data get storage mhdp_core:temp Arg.Knockback
+    execute store result score #mhdp_temp_knockback_strength MhdpCore run data get storage mhdp_core:temp Arg.KnockbackStrength
 
 # フラグ確認
     execute unless data storage mhdp_core:temp Arg{UseUtil:true} run tellraw @a [{"translate":"errormessage.api.get_attack_data","color":"red"}]

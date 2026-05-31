@@ -5,7 +5,7 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/change/on_battle/main
 
 # 状態取得
-    function mhdp_monsters:core/util/tick/animation/check_player_situation.m {Tag:"Mns.Candidate.Target"}
+    function mhdp_monsters:core/util/tick/animation/check_player_situation.m {Tag:"Mns.Ranposu.Target"}
 
 # 基礎確率設定
     data modify storage mhdp_core:temp Temp.AttackRandom set value {Bite:3,BiteStrong:3,Tail:3,MoveClaw:4,Tackle:3,BackStep:2,StepJump:0}

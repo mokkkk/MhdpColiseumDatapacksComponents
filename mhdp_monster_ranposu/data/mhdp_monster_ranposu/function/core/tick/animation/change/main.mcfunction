@@ -17,7 +17,7 @@
     # ターゲット存在確認
         function mhdp_monster_ranposu:core/tick/on_battle/check_target
     # 怒り終了
-        execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches ..0 run function mhdp_monster_ranposu:core/tick/on_battle/anger_end
+        execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches ..0 run function mhdp_monsters:core/util/tick/end_anger.m {Name:"ranposu"}
 
 # 非発見時
     execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 0 run function mhdp_monster_ranposu:core/tick/animation/change/on_relax/main
