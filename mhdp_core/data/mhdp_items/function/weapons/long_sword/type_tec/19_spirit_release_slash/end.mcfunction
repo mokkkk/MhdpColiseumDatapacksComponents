@@ -13,7 +13,3 @@
 
 # 共通処理
     function mhdp_items:weapons/long_sword/util/end_attack
-
-# 強制納刀
-    playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.7
-    function mhdp_items:player/weapon/sheathe/force_sheathe

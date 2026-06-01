@@ -105,7 +105,12 @@
     # 処理用
         scoreboard objectives add ObjectTick dummy
     # 建造物ステータス
-        scoreboard objectives add Build.Stats.Height dummy
+        # 耐久力
+            scoreboard objectives add Build.Stats.Hp dummy
+        # 高さ
+            scoreboard objectives add Build.Stats.Height dummy
+        # 押し出しの強さ
+            scoreboard objectives add Build.Stats.JumpStrength dummy
 
 ## Scoreboard初期値設定
 # プレイヤーUID

@@ -13,6 +13,9 @@
     execute store result bossbar mhdp_monster:ranposu max run scoreboard players get @s Mns.Hp
     execute store result bossbar mhdp_monster:ranposu value run scoreboard players get @s Mns.Hp
 
+# 同士討ちダメージ有効化
+    function mhdp_monsters:core/util/tick/enable_damage.m {Name:"ranposu"}
+
 # 部位耐久値
     # 基礎値取得
         execute store result score @s Mns.Ranposu.Head.Damage store result score @s Mns.Ranposu.Body.Damage run scoreboard players get @s Mns.Hp

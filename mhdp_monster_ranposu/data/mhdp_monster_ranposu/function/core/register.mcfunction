@@ -85,7 +85,7 @@
 # 強噛みつき
     data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {\
         Name:"BiteStrong",AttackPart:"body",\
-        DamageValue:7.0f,GuardValue:4,ElementType:0,ElementMultiply:0,\
+        DamageValue:7.0f,ObjectDamageValue:5,GuardValue:4,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:2,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }

@@ -36,8 +36,8 @@
     execute if score @s Wpn.AnimationTimer matches 29 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_9
     execute if score @s Wpn.AnimationTimer matches 30 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_10
     execute if score @s Wpn.AnimationTimer matches 31 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_11
-    execute if score @s Wpn.AnimationTimer matches 50 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_13
-    execute if score @s Wpn.AnimationTimer matches 52 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_14
+    # execute if score @s Wpn.AnimationTimer matches 50 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_13
+    # execute if score @s Wpn.AnimationTimer matches 52 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_14
     execute if score @s Wpn.GeneralTimer matches 4 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 45 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/particle
     execute if score @s Wpn.GeneralTimer matches 9 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 -45 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/particle
     execute if score @s Wpn.GeneralTimer matches 23 positioned ~ ~1.65 ~ positioned ^ ^ ^ rotated ~80 -100 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/particle

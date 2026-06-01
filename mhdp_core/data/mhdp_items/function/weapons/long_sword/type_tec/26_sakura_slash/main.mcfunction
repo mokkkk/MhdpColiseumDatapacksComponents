@@ -33,8 +33,8 @@
     execute if score @s Wpn.AnimationTimer matches 22 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/animation_4
     execute if score @s Wpn.AnimationTimer matches 23 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/animation_5
     execute if score @s Wpn.AnimationTimer matches 24 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/animation_6
-    execute if score @s Wpn.AnimationTimer matches 38 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/animation_7
-    execute if score @s Wpn.AnimationTimer matches 40 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/animation_8
+    # execute if score @s Wpn.AnimationTimer matches 38 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/animation_7
+    # execute if score @s Wpn.AnimationTimer matches 40 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/animation_8
     execute if score @s Wpn.GeneralTimer matches 14 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 15 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/particle
     execute if score @s Wpn.GeneralTimer matches 23 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 -10 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/particle
 

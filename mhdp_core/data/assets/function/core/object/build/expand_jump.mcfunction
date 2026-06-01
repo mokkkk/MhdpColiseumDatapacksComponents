@@ -3,7 +3,7 @@
 # プレイヤー打ち上げ
 
 # 値設定
-    scoreboard players operation $strength player_motion.api.launch = @n[type=item_display,tag=Asset.Build.Root,tag=This] Build.Stats.Height
+    scoreboard players operation $strength player_motion.api.launch = @n[type=item_display,tag=Asset.Build.Root,tag=This] Build.Stats.JumpStrength
     # 少し飛距離を伸ばす
         scoreboard players operation $strength player_motion.api.launch *= #const_3 Const
 

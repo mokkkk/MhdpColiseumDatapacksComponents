@@ -26,8 +26,8 @@
     execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/animation_4
     execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/animation_5
     execute if score @s Wpn.AnimationTimer matches 9 run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/animation_6
-    execute if score @s Wpn.AnimationTimer matches 23 run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/animation_7
-    execute if score @s Wpn.AnimationTimer matches 27 run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/animation_8
+    # execute if score @s Wpn.AnimationTimer matches 23 run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/animation_7
+    # execute if score @s Wpn.AnimationTimer matches 27 run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/animation_8
     execute if score @s Wpn.GeneralTimer matches 7 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 -10 run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/particle
     # execute if score @s Wpn.GeneralTimer matches 7 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^2.2 rotated ~80 -5 run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/particle
 
