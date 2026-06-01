@@ -51,6 +51,7 @@
     #declare tag Mns.State.IsDisableSoundBomb 一時的に音爆弾無効
     #declare tag Mns.State.IsDisableParalyseTrap 一時的に痺れ罠無効
     #declare tag Mns.State.IsDisableHallTrap 一時的に落とし穴無効
+    #declare tag Mns.State.IsAttackPart 攻撃中部位
     #declare tag Mns.State.IsDamageInterval 同士討ち無敵時間中
     #declare tag Mns.State.HpHalf Hp半減の処理実行済み
     #declare tag Mns.State.Death 討伐済み

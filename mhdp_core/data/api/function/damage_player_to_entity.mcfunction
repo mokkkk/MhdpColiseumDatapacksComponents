@@ -50,7 +50,7 @@
 # 演出
     execute positioned as @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] run function api:damage_player_to_entity/vfx
 
-# プレイヤー側の与ダメージ処理に移行
+# プレイヤーの武器攻撃時処理を実行
     function mhdp_items:core/switch/weapon_on_attack
 
 # データのリセット

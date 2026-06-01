@@ -9,13 +9,13 @@
 
 # ヒット確認
     # 対プレイヤー
-        execute positioned ^ ^1.8 ^5 as @a[tag=Ply.State.EnableDamage,distance=..2.5] run tag @s add Temp.Hit
+        execute positioned ^ ^1.6 ^5 run function api:bounding/cuboid_with_preview.m {Selector:"@a[tag=Ply.State.EnableDamage,distance=..20]",Tag:"Temp.Hit",X:"1.8",Y:"1.9",Z:"2"}
         execute as @a[tag=Temp.Hit] run function api:damage_entity_to_player
         tag @a remove Temp.Hit
-    # 対エンティティ
-        execute positioned ^ ^1.8 ^5 as @e[tag=w,tag=!Mns.HitBox.Ranposu,distance=..2.5] run tag @s add Temp.Hit
-        execute if entity @e[tag=Temp.Hit] as @n[tag=Temp.Hit] run tag @s add Temp.Victim
-        execute if entity @e[tag=Temp.Victim] as @e[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
+    # # 対エンティティ
+    #     execute positioned ^ ^1.8 ^5 as @e[tag=w,tag=!Mns.HitBox.Ranposu,distance=..2.5] run tag @s add Temp.Hit
+    #     execute if entity @e[tag=Temp.Hit] as @n[tag=Temp.Hit] run tag @s add Temp.Victim
+    #     execute if entity @e[tag=Temp.Victim] as @e[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
 
 # 終了
     tag @e[tag=Temp.Hit] remove Temp.Hit

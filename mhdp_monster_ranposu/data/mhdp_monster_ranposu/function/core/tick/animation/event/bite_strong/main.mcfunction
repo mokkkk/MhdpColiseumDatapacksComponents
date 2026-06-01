@@ -23,7 +23,9 @@
     execute if score @s aj.bite_strong.frame matches 24 run playsound entity.wither.break_block master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1.7
 
 # 攻撃
+    execute if score @s aj.bite_strong.frame matches 19 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks[{Name:"BiteStrong"}]
     execute if score @s aj.bite_strong.frame matches 24 run function mhdp_monster_ranposu:core/tick/animation/event/bite_strong/attack
+    execute if score @s aj.bite_strong.frame matches 25 run function mhdp_monsters:core/util/tick/event/end_attack
 
 # 接地
     function mhdp_monsters:core/util/tick/move/check_landing

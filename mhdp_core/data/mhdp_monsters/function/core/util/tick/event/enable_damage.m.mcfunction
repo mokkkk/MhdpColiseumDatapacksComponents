@@ -1,4 +1,4 @@
-#> mhdp_monsters:core/util/tick/enable_damage.m
+#> mhdp_monsters:core/util/tick/event/enable_damage.m
 # 
 # 汎用処理 ダメージ有効化
 #
