@@ -22,5 +22,5 @@
     $data modify storage api: Arg.Override.X set value $(X)
     $data modify storage api: Arg.Override.Y set value $(Y)
     $data modify storage api: Arg.Override.Z set value $(Z)
-    data modify storage api: Arg.Override.Color set value "red"
+    data modify storage api: Arg.Override.Color set value "blue"
     function api:object/summon.m {ObjectId:14}

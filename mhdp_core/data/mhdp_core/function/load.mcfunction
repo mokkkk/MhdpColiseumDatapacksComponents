@@ -111,6 +111,8 @@
             scoreboard objectives add Build.Stats.Height dummy
         # 押し出しの強さ
             scoreboard objectives add Build.Stats.JumpStrength dummy
+        # ダメージインターバル
+            scoreboard objectives add Build.Stats.DamageInterval dummy
 
 ## Scoreboard初期値設定
 # プレイヤーUID

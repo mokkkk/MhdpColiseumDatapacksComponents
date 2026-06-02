@@ -12,6 +12,8 @@
 #declare tag Mk.Field.AreaCenter エリア用マーカー
 # - 建築
 #declare tag Asset.Build.Root 建造物ルート
+#declare tag Asset.Build.Type.Wall 建造物種別：壁
+#declare tag Asset.Build.Type.Tower 建造物種別：塔
 #declare tag Asset.Build.Target 紐づけ対象
 #declare tag Asset.Build.HitBox 当たり判定
 #declare tag Asset.Build.HitBox.Init 当たり判定初期化用

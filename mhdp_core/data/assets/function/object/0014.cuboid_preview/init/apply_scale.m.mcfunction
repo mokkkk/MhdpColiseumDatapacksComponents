@@ -4,3 +4,6 @@
 
 # scale適用
     $data modify entity @s transformation.scale set value [$(TransScaleX),$(TransScaleY),$(TransScaleZ)]
+
+# color適用
+    $data modify entity @s item.id set value "minecraft:$(Color)_stained_glass"

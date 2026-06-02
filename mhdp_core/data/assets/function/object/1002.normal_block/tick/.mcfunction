@@ -5,6 +5,9 @@
 # スコア増加
     scoreboard players add @s ObjectTick 1
 
+# ダメージインターバル減少
+    execute if score @s Build.Stats.DamageInterval matches 1.. run scoreboard players remove @s Build.Stats.DamageInterval 1
+
 # 演出・拡大
     execute if score @s ObjectTick matches 1 run function assets:object/1002.normal_block/tick/expand
 
