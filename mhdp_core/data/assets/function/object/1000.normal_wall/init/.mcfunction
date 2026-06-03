@@ -18,6 +18,7 @@
     scoreboard players set @s Build.Stats.Hp 30
     scoreboard players set @s Build.Stats.JumpStrength 2500
     scoreboard players set @s Build.Stats.Height 3
+    scoreboard players set @s Build.Stats.RemainingTime 600
 
 # 演出
     playsound block.smithing_table.use master @a ~ ~ ~ 1 0.7

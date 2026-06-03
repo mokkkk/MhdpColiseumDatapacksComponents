@@ -16,4 +16,4 @@
     execute if score @s ObjectTick matches 15 run function assets:object/1001.normal_tower/tick/summon_hitbox
 
 # 消去
-    execute if score @s ObjectTick matches 600.. run function assets:object/1001.normal_tower/remove/
+    execute if score @s ObjectTick >= @s Build.Stats.RemainingTime run function assets:object/1001.normal_tower/remove/

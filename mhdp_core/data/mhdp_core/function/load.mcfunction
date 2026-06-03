@@ -97,23 +97,6 @@
         scoreboard objectives add Mns.Tutorial.Text dummy {"text":"チュートリアル","color":"gold","bold":true}
         scoreboard objectives modify Mns.Tutorial.Text displayname {"text":"チュートリアル","color":"gold","bold":true,"underlined":true}
 
-# asset関連
-    # ID
-        scoreboard objectives add ObjectId dummy
-    # 建造物固有ID
-        scoreboard objectives add Build.Uid dummy
-    # 処理用
-        scoreboard objectives add ObjectTick dummy
-    # 建造物ステータス
-        # 耐久力
-            scoreboard objectives add Build.Stats.Hp dummy
-        # 高さ
-            scoreboard objectives add Build.Stats.Height dummy
-        # 押し出しの強さ
-            scoreboard objectives add Build.Stats.JumpStrength dummy
-        # ダメージインターバル
-            scoreboard objectives add Build.Stats.DamageInterval dummy
-
 ## Scoreboard初期値設定
 # プレイヤーUID
     execute unless score #mhdp_player_uid_grobal Ply.Uid matches -2147483648.. run scoreboard players set #mhdp_player_uid_grobal Ply.Uid 1
@@ -181,6 +164,9 @@
         scoreboard players set $65536 Const 65536
     # NBS再生用
         function mhdp_core:sound/nikubgm/load
+
+## Asset用ロード処理
+    function assets:load
 
 ## アイテム用ロード処理
     function mhdp_items:load

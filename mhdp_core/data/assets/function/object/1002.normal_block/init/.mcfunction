@@ -17,6 +17,7 @@
 # スコア初期化
     scoreboard players set @s Build.Stats.Hp 5
     scoreboard players set @s Build.Stats.JumpStrength 600
+    scoreboard players set @s Build.Stats.RemainingTime 100
 
 # 演出
     playsound block.smithing_table.use master @a ~ ~ ~ 1 0.7

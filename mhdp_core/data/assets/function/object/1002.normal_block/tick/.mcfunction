@@ -15,4 +15,4 @@
     execute if score @s ObjectTick matches 3 run function assets:object/1002.normal_block/tick/summon_hitbox
 
 # 消去
-    execute if score @s ObjectTick matches 100.. run function assets:object/1002.normal_block/remove/
+    execute if score @s ObjectTick >= @s Build.Stats.RemainingTime run function assets:object/1002.normal_block/remove/
