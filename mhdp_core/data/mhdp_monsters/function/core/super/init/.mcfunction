@@ -153,7 +153,7 @@
     # 連続軸合わせ回数
         scoreboard players set @s Mns.General.TurnCount 0
 # 当たり判定初期化
-    execute as @e[type=slime,tag=Mns.HitBox,tag=!AlreadyInitMob,distance=..100] run function mob_manager:init/
+    execute as @e[type=slime,tag=Mns.HitBox,tag=!AlreadyInitMob,distance=..100] run function mhdp_monsters:core/super/init/init_hitbox
 
 # 終了
     scoreboard players reset #mhdp_temp_player_count MhdpCore
