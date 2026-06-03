@@ -4,7 +4,12 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
-# 特定モーション時
-    say 建築殴った
-    execute if data storage api: Return{IsWall:true} run say 壁を殴った
-    execute if data storage api: Return{IsRemainObject:true} run say こわせませんでした
+# 攻撃キャンセル
+    execute unless entity @s[\
+        tag=!animated_java.ranposu.animation.bite_strong.playing\
+    ] if data storage api: Return{IsRemainObject:true} run function mhdp_monster_ranposu:core/tick/on_battle/interact/reaction/cancel_attack
+
+# temp
+    # say 建築殴った
+    # execute if data storage api: Return{IsWall:true} run say 壁を殴った
+    # execute if data storage api: Return{IsRemainObject:true} run say こわせませんでした

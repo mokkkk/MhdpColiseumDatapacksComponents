@@ -53,6 +53,9 @@
 #         execute if entity @s[tag=aj.ranposu_aj.animation.damage_counter_start.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage_counter_start/main
 #         execute if entity @s[tag=aj.ranposu_aj.animation.damage_counter.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage_counter/main
 #         execute if entity @s[tag=aj.ranposu_aj.animation.damage_counter_end.playing] run function mhdp_monster_ranposu:core/tick/animation/event/damage_counter_end/main
+    # 建築物攻撃
+        execute if entity @s[tag=animated_java.ranposu.animation.interrupt_object.playing] run function mhdp_monster_ranposu:core/tick/animation/event/interrupt_object/main
+
 # # 討伐
 #     # 通常
 #         execute if entity @s[tag=aj.ranposu_aj.animation.death.playing] run function mhdp_monster_ranposu:core/tick/animation/event/death/main
