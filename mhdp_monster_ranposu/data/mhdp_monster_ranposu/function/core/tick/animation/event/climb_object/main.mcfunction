@@ -8,7 +8,7 @@
     execute if score @s aj.climb_object.frame matches 2 positioned ^ ^ ^3 run tag @n[type=item_display,tag=Asset.Build.Root] add Asset.Build.Temp.MoveTarget
     execute if score @s aj.climb_object.frame matches 2 as @n[type=item_display,tag=Asset.Build.Root,tag=Asset.Build.Temp.MoveTarget] run scoreboard players add @s Build.Stats.RemainingTime 100
 
-# 軸合わせ・弱め
+# 軸合わせ
     execute if score @s aj.climb_object.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Asset.Build.Temp.MoveTarget",Tick:4}
     execute if score @s aj.climb_object.frame matches 2..5 at @s run function mhdp_monsters:core/util/tick/event/alignment
     execute if score @s aj.climb_object.frame matches 2 run tag @n[type=item_display,tag=Asset.Build.Root,tag=Asset.Build.Temp.MoveTarget] remove Asset.Build.Temp.MoveTarget
@@ -26,10 +26,10 @@
     execute if score @s aj.climb_object.frame matches 19 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 接地
-    # execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    # execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    execute if score @s aj.climb_object.frame matches 1..5 run function mhdp_monsters:core/util/tick/move/check_landing
 
 # 状態
+    execute if score @s aj.climb_object.frame matches 2 run tag @s add Mns.State.OnObject
     execute if score @s aj.climb_object.frame matches 5 run tag @s add Mns.State.IsFlying
     execute if score @s aj.climb_object.frame matches 19 run tag @s remove Mns.State.IsFlying
 

@@ -5,7 +5,7 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
 # オブジェクト探知開始
-    execute if score @s aj.move.frame matches 1 run tag @s add Mns.State.IsSearchObject
+    execute if score @s aj.move.frame matches 2 run tag @s add Mns.State.IsSearchObject
 
 # 軸合わせ
     tag @n[tag=Mns.Target.Ranposu] add Temp.Rotate.Target

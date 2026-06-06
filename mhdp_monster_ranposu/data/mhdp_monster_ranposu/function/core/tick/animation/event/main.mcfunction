@@ -87,8 +87,8 @@
 # # タックル
 #     execute if entity @s[tag=animated_java.ranposu.animation.tackle.playing] run function mhdp_monster_ranposu:core/tick/animation/event/tackle/main
 
-# # 急襲
-#     execute if entity @s[tag=animated_java.ranposu.animation.jump.playing] run function mhdp_monster_ranposu:core/tick/animation/event/jump/main
+# 急襲
+    execute if entity @s[tag=animated_java.ranposu.animation.jump.playing] run function mhdp_monster_ranposu:core/tick/animation/event/jump/main
 
 # # 回り込み急襲
 #     execute if entity @s[tag=animated_java.ranposu.animation.step_jump_right.playing] run function mhdp_monster_ranposu:core/tick/animation/event/step_jump_right/main

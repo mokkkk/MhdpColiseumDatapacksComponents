@@ -6,5 +6,3 @@
 
 # 実行
     execute store result entity @s Pos[1] float 1 run scoreboard players get @s Fld.Height
-
-say adjust height

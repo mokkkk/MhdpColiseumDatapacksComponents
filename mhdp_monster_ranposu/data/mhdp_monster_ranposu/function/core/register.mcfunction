@@ -84,7 +84,7 @@
 
 # 強噛みつき
     data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {\
-        Name:"BiteStrong",AttackPart:"body",\
+        Name:"BiteStrong",AttackPart:"body",VectorType:"Normal",\
         DamageValue:7.0f,ObjectDamageValue:5,GuardValue:4,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:2,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
@@ -99,8 +99,13 @@
 # # タックル
 #     data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {Name:"Tackle",DamageValue:6.0f,GuardValue:5,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
-# # 急襲
-#     data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {Name:"Jump",DamageValue:9.0f,GuardValue:6,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+# 急襲
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {\
+        Name:"Jump",AttackPart:"body",VectorType:"Normal",\
+        DamageValue:9.0f,ObjectDamageValue:15,GuardValue:6,ElementType:0,ElementMultiply:0,\
+        KnockbackStrength:2,IsLaunch:false,LaunchAngle:0,\
+        IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
+    }
 
 # デバッグ用
     execute if data storage mhdp_core:game_data {ShowDebugMessage:true} run say mhdp_monster_ranposu:core/register データ登録完了

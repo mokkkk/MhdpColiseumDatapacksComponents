@@ -25,14 +25,14 @@
     execute if entity @s[tag=Mns.State.IsAnger] run scoreboard players operation #mhdp_temp_attack_multiply_anger MhdpCore = @s Mns.Anger.AttackMutiply
 
 # 対プレイヤー
-    function mhdp_monsters:core/util/tick/get_attack_data.m {Uid:1001, Name:"BiteStrong"}
+    $function mhdp_monsters:core/util/tick/get_attack_data.m {Uid:$(Uid), Name:"$(AttackName)"}
     $execute positioned ^$(Player_Offset_X) ^$(Player_Offset_Y) ^$(Player_Offset_Z) run function api:bounding/cuboid.m {Selector:"$(Player_Selector)",Tag:"Temp.Hit",X:"$(Player_Scale_X)",Y:"$(Player_Scale_Y)",Z:"$(Player_Scale_Z)"}
     execute as @a[tag=Temp.Hit] run function api:damage_entity_to_player
     data remove storage api: Arg
     tag @a remove Temp.Hit
 
 # 対建築物
-    function mhdp_monsters:core/util/tick/get_attack_data.m {Uid:1001, Name:"BiteStrong"}
+    $function mhdp_monsters:core/util/tick/get_attack_data.m {Uid:$(Uid), Name:"$(AttackName)"}
     tag @s add Temp.ObjectAttacker
     $execute positioned ^$(Entity_Offset_X) ^$(Entity_Offset_Y) ^$(Entity_Offset_Z) run function api:bounding/cuboid.m {Selector:"@e[type=shulker,tag=Entity.EnableDamage,distance=..30]",Tag:"Temp.Hit",X:"$(Entity_Scale_X)",Y:"$(Entity_Scale_Y)",Z:"$(Entity_Scale_Z)"}
     execute as @e[type=shulker,tag=Temp.Hit,distance=..30] run function api:damage_entity_to_object
@@ -41,7 +41,7 @@
     tag @s remove Temp.ObjectAttacker
 
 # 対モンスター
-    function mhdp_monsters:core/util/tick/get_attack_data.m {Uid:1001, Name:"BiteStrong"}
+    $function mhdp_monsters:core/util/tick/get_attack_data.m {Uid:$(Uid), Name:"$(AttackName)"}
     tag @s add Temp.Attacker
     $execute positioned ^$(Entity_Offset_X) ^$(Entity_Offset_Y) ^$(Entity_Offset_Z) run function api:bounding/cuboid.m {Selector:"$(Entity_Selector)",Tag:"Temp.Hit",X:"$(Entity_Scale_X)",Y:"$(Entity_Scale_Y)",Z:"$(Entity_Scale_Z)"}
     execute as @e[type=slime,tag=Temp.Hit,distance=..30] run function api:damage_entity_to_entity
