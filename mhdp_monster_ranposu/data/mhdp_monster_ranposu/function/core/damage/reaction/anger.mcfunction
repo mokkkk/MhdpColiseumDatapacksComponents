@@ -5,6 +5,8 @@
 # @within function mhdp_monster_ranposu:core/damage/damage
 
 # 共通処理
+    # 怯み開始時
+        function mhdp_monsters:core/util/damage/on_reaction_start
     # スコアリセット
         scoreboard players operation @s Mns.Anger.Damage = @s Mns.Anger.Damage.Max
     # 状態更新

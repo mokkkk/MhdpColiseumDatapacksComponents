@@ -9,6 +9,8 @@
     tag @s remove Mns.State.Tutorial.IsBroken
 
 # 共通処理
+    # 怯み開始時
+        function mhdp_monsters:core/util/damage/on_reaction_start
     # スコアリセット
         scoreboard players operation @s Mns.Ranposu.Head.Damage = @s Mns.Ranposu.Head.Damage.Max
 

@@ -21,5 +21,6 @@
 #declare tag Asset.Build.Display.A 見た目・複数用
 #declare tag Asset.Build.Display.B 見た目・複数用
 #declare tag Asset.Build.Display.C 見た目・複数用
+#declare tag Asset.Build.Temp.MoveTarget 建造物・移動対象
 # - 建築種別
 #declare tag Asset.Build.Type.Wall 壁系建造物

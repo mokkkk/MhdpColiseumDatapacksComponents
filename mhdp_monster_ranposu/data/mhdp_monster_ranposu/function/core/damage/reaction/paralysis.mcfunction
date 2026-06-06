@@ -5,6 +5,8 @@
 # @within function mhdp_monster_ranposu:core/damage/damage
 
 # 共通処理
+    # 怯み開始時
+        function mhdp_monsters:core/util/damage/on_reaction_start
     # 耐性値上昇
         scoreboard players operation @s Mns.Paralysis.Damage.Max *= #const_paralysis_damage_multiply Const
         execute store result score @s Mns.Paralysis.Damage run scoreboard players operation @s Mns.Paralysis.Damage.Max /= #const_100 Const

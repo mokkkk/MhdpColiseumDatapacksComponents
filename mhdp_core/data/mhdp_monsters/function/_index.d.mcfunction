@@ -63,6 +63,8 @@
     #declare tag Mns.State.IsDisablePartDamage 部位ダメージ無効
     #declare tag Mns.State.IsNotMove 攻撃しない
     #declare tag Mns.State.IsDisableDamage ダメージ無効
+    #declare tag Mns.State.IsSearchObject オブジェクト探知中
+    #declare tag Mns.State.OnObject オブジェクトに乗っている
 # モンスター関連・チュートリアル用
     #declare tag Mns.State.Tutorial.IsDamage ダメージを受けた
     #declare tag Mns.State.Tutorial.IsBroken 部位破壊された

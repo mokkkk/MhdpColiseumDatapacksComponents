@@ -20,13 +20,15 @@
         execute if entity @s[tag=Mns.State.IsBlink] run scoreboard players remove @s Mns.General.BlinkTimer 1
         execute if entity @s[tag=Mns.State.IsBlink] if score @s Mns.General.BlinkTimer matches ..0 run function mhdp_monsters:core/util/tick/end_blink
 
-# 討伐済み
-    # 一定時間後に消滅
-        execute if entity @s[tag=Mns.State.Death] run scoreboard players add @s Mns.General.RemoveTimer 1
-        execute if entity @s[tag=Mns.State.Death] if score @s Mns.General.RemoveTimer matches 600.. run function mhdp_monsters:core/switch/remove
-
 # 状態に応じた処理
     # 怒り状態：時間減少
         execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches 1.. run scoreboard players remove @s Mns.Anger.Timer 1
     # 毒
         # execute if entity @s[tag=Mns.State.IsPoison,tag=!Mns.State.Death] run function mhdp_monsters:core/util/tick/condition_poison
+    # 建築物サーチ中
+        # サーチ距離を変えるため、各モンスターの on_battle で実行
+
+# 討伐済み
+    # 一定時間後に消滅
+        execute if entity @s[tag=Mns.State.Death] run scoreboard players add @s Mns.General.RemoveTimer 1
+        execute if entity @s[tag=Mns.State.Death] if score @s Mns.General.RemoveTimer matches 600.. run function mhdp_monsters:core/switch/remove

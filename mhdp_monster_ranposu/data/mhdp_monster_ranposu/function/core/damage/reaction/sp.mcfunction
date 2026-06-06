@@ -5,6 +5,8 @@
 # @within function mhdp_monster_ranposu:core/damage/damage
 
 # 共通処理
+    # 怯み開始時
+        function mhdp_monsters:core/util/damage/on_reaction_start
     # 怯み回数増加
         scoreboard players add @s Mns.Ranposu.DamageCount 1
     # スコアリセット
