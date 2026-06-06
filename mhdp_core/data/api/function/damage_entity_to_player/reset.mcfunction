@@ -17,4 +17,4 @@
     # tag @s remove Temp.Attacker
 
 # 引数の解放
-    data remove storage api: Arg
+    # data remove storage api: Arg

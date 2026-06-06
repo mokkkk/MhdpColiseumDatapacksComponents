@@ -11,7 +11,7 @@
         # execute store result score #mhdp_temp_attack_multiply_quest MhdpCore run data get storage mhdp_core:game_data ActiveQuest.AttackMultiply
         scoreboard players operation #mhdp_temp_damage_total MhdpCore *= #mhdp_temp_attack_multiply_quest MhdpCore
     # 怒りによる倍率
-        execute unless score #mhdp_temp_attack_multiply_anger MhdpCore matches 1.. run scoreboard players set #mhdp_temp_attack_multiply_anger MhdpCore 100
+        # execute unless score #mhdp_temp_attack_multiply_anger MhdpCore matches 1.. run scoreboard players set #mhdp_temp_attack_multiply_anger MhdpCore 100
         scoreboard players operation #mhdp_temp_damage_total MhdpCore *= #mhdp_temp_attack_multiply_anger MhdpCore
     # 桁合わせ
         scoreboard players operation #mhdp_temp_damage_total MhdpCore /= #const_10000 Const
