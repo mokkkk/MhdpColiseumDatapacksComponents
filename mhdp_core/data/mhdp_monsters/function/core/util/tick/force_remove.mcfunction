@@ -8,7 +8,7 @@
     tellraw @a {"text":"【ERROR：モンスターが読み込み範囲外に出ました。\nこのエラーが頻出する場合、製作者に報告してください。】","color": "red"}
 
 # 全モンスターremove処理
-    execute as @e[tag=Mns.Root] at @s run function mhdp_monsters:core/switch/remove
+    execute as @e[type=item_display,tag=Mns.Root,tag=!Mns.Root.Karakuri] at @s run function mhdp_monsters:core/switch/remove
 
 # クエスト中断
     function mhdp_core:phase/3_quest/end/retired

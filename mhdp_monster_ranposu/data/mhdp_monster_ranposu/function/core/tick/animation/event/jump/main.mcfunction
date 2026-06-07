@@ -13,7 +13,7 @@
 
 # 移動
     execute if score @s aj.jump.frame matches 19 at @s run function mhdp_monsters:core/util/tick/event/vector_move_start.m {\
-        TargetType:"player",TargetTag:"Mns.Target.Ranposu",MaxDistance:25,Tick:15,OffsetX:0.0,OffsetY:0.0,OffsetZ:2.0\
+        TargetType:"player",TargetTag:"Mns.Target.Ranposu",MaxDistance:35,Tick:16,OffsetX:0.0,OffsetY:0.0,OffsetZ:-1.0\
     }
     execute if score @s aj.jump.frame matches 24..38 at @s run function mhdp_monsters:core/util/tick/event/vector_move
 
@@ -34,7 +34,7 @@
 
 # 状態
     execute if score @s aj.jump.frame matches 24 run tag @s add Mns.State.IsFlying
-    execute if score @s aj.jump.frame matches 30 run tag @s remove Mns.State.OnObject
+    execute if score @s aj.jump.frame matches 38 run tag @s remove Mns.State.OnObject
     execute if score @s aj.jump.frame matches 38 run tag @s remove Mns.State.IsFlying
 
 # 終了

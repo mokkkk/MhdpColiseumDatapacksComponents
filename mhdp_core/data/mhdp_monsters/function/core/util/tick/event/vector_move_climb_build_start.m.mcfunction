@@ -9,6 +9,11 @@
 # @input arg OffsetX 移動位置のオフセット。移動するモンスター基準
 # @input arg OffsetZ 移動位置のオフセット。移動するモンスター基準
 
+# バグ対策の初期値
+    scoreboard players set @s Mns.Temp.MoveVec.X 0
+    scoreboard players set @s Mns.Temp.MoveVec.Y 0
+    scoreboard players set @s Mns.Temp.MoveVec.Z 0
+
 # 移動対象がいない場合、処理中断
     $execute unless entity @n[type=$(TargetType),tag=$(TargetTag)] run return 0
 

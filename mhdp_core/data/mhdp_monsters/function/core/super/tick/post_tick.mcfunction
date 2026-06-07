@@ -10,7 +10,7 @@
     # ブロック内にいる場合
         execute at @s unless block ~ ~ ~ #mhdp_core:no_collision run function mhdp_monsters:core/util/tick/move/adjust_position
     # 建築内にいる場合
-        execute if entity @s[tag=Mns.State.OnObject] at @s if entity @n[type=shulker,dx=0.1,dy=0.1,dz=0.1] run function mhdp_monsters:core/util/tick/move/back_to_rear.m
+        execute if entity @s[tag=!Mns.State.OnObject] at @s if entity @n[type=shulker,dx=0.1,dy=0.1,dz=0.1] run function mhdp_monsters:core/util/tick/move/back_to_rear.m
 
 # モンスター用の一時storageを消去
     data remove storage mhdp_core:temp MonsterTemp
