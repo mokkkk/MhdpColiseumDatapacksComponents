@@ -9,7 +9,7 @@
 
 # 通常再生
     # タグ付与
-        tag @s add Anim.Move
+        tag @s add Anim.BiteStrong
         # function mhdp_monster_ranposu:core/tick/animation/change/play/step_jump
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn
