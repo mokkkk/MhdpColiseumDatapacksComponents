@@ -98,8 +98,13 @@
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 
-# # 尻尾攻撃
-#     data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {Name:"Tail",DamageValue:4.0f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:1,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+# 尻尾攻撃
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {\
+        Name:"Tail",AttackPart:"tail",VectorType:"Radial",\
+        DamageValue:4.0f,ObjectDamageValue:5,GuardValue:2,ElementType:0,ElementMultiply:0,\
+        KnockbackStrength:1,IsLaunch:false,LaunchAngle:0,\
+        IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
+    }
 
 # # 移動ひっかき
 #     data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {Name:"MoveClaw",DamageValue:7.0f,GuardValue:3,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}

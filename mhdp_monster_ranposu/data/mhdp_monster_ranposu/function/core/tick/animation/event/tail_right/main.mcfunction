@@ -20,11 +20,12 @@
     execute if score @s aj.tail_right.frame matches 22 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
 
 # 攻撃
-    execute if score @s aj.tail_right.frame matches 22..30 run function mhdp_monster_ranposu:core/tick/animation/event/tail_right/attack
+    execute if score @s aj.tail_right.frame matches 21 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks[{Name:"Tail"}]
+    execute if score @s aj.tail_right.frame matches 22..31 run function mhdp_monster_ranposu:core/tick/animation/event/tail_right/attack
+    execute if score @s aj.tail_right.frame matches 32 run function mhdp_monsters:core/util/tick/event/end_attack
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
     execute if score @s aj.tail_right.frame matches 59.. run function mhdp_monster_ranposu:core/tick/animation/event/tail_right/end
