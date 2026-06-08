@@ -13,9 +13,13 @@
 
 # 移動
     execute if score @s aj.jump.frame matches 19 at @s run function mhdp_monsters:core/util/tick/event/vector_move_start.m {\
-        TargetType:"player",TargetTag:"Mns.Target.Ranposu",MaxDistance:35,Tick:16,OffsetX:0.0,OffsetY:0.0,OffsetZ:-1.0\
+        TargetType:"player",TargetTag:"Mns.Target.Ranposu",MaxDistance:35,Tick:7,OffsetX:0.0,OffsetY:0.0,OffsetZ:-3.0,IsAdjustLand:"false"\
     }
-    execute if score @s aj.jump.frame matches 24..38 at @s run function mhdp_monsters:core/util/tick/event/vector_move
+    execute if score @s aj.jump.frame matches 24..30 at @s run function mhdp_monsters:core/util/tick/event/vector_move
+    execute if score @s aj.jump.frame matches 31 at @s run function mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {\
+        Tick:8,OffsetX:0.0,OffsetY:0.0,OffsetZ:8.0,IsAdjustLand:"true"\
+    }
+    execute if score @s aj.jump.frame matches 31..38 at @s run function mhdp_monsters:core/util/tick/event/vector_move
 
 # 効果音
     execute if score @s aj.jump.frame matches 20 run playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.5
@@ -30,7 +34,8 @@
     execute if score @s aj.jump.frame matches 38 run function mhdp_monsters:core/util/tick/event/end_attack
 
 # 接地
-    execute if entity @s[tag=!Mns.State.OnObject] run function mhdp_monsters:core/util/tick/move/check_landing
+    execute if entity @s[tag=!Mns.State.OnObject] if score @s aj.jump.frame matches 1..24 run function mhdp_monsters:core/util/tick/move/check_landing
+    execute if entity @s[tag=!Mns.State.OnObject] if score @s aj.jump.frame matches 34.. run function mhdp_monsters:core/util/tick/move/check_landing
 
 # 状態
     execute if score @s aj.jump.frame matches 24 run tag @s add Mns.State.IsFlying

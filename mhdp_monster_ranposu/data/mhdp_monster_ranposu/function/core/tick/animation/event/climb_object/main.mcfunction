@@ -15,7 +15,7 @@
 
 # 移動
     execute if score @s aj.climb_object.frame matches 5 at @s positioned ^ ^ ^3 run function mhdp_monsters:core/util/tick/event/vector_move_climb_build_start.m {\
-        TargetType:"item_display",TargetTag:"Asset.Build.Root",MaxDistance:15,Tick:14,OffsetX:0.0,OffsetZ:0.0\
+        TargetType:"item_display",TargetTag:"Asset.Build.Root",MaxDistance:15,Tick:14,OffsetX:0.0,OffsetZ:0.0,IsAdjustLand:"false"\
     }
     execute if score @s aj.climb_object.frame matches 6..19 at @s run function mhdp_monsters:core/util/tick/event/vector_move
 

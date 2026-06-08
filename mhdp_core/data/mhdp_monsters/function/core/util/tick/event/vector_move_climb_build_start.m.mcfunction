@@ -8,6 +8,7 @@
 # @input arg Tick 移動にかける時間
 # @input arg OffsetX 移動位置のオフセット。移動するモンスター基準
 # @input arg OffsetZ 移動位置のオフセット。移動するモンスター基準
+# @input arg IsAdjustLand 移動先の高さを地面に調整するかどうか
 
 # バグ対策の初期値
     scoreboard players set @s Mns.Temp.MoveVec.X 0
@@ -24,6 +25,7 @@
     $data modify storage mhdp_core:temp Temp.Tick set value $(Tick)
     $data modify storage mhdp_core:temp Temp.OffsetX set value $(OffsetX)
     $data modify storage mhdp_core:temp Temp.OffsetZ set value $(OffsetZ)
+    data modify storage mhdp_core:temp Temp.IsAdjustLand set value "false"
 
 # OffsetYの取得
     $execute store result storage mhdp_core:temp Temp.OffsetY double 1 run scoreboard players get @n[type=$(TargetType),tag=$(TargetTag)] Build.Stats.Height

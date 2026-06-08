@@ -1,10 +1,7 @@
-#> mhdp_monsters:core/util/tick/event/vector_move_start.m
+#> mhdp_monsters:core/util/tick/event/vector_move_offset_start.m
 # 
-# 汎用処理 移動開始
+# 汎用処理 移動開始 オフセットまでの移動
 #
-# @input arg TargetType 対象のEntityType
-# @input arg TargetTag 対象のタグ
-# @input arg MaxDistance 距離閾値。Distanceより対象が遠い場合、Distance距離を移動する
 # @input arg Tick 移動にかける時間
 # @input arg OffsetX 移動位置のオフセット。移動するモンスター基準
 # @input arg OffsetY 移動位置のオフセット。移動するモンスター基準
@@ -16,13 +13,9 @@
     scoreboard players set @s Mns.Temp.MoveVec.Y 0
     scoreboard players set @s Mns.Temp.MoveVec.Z 0
 
-# 移動対象がいない場合、処理中断
-    $execute unless entity @n[type=$(TargetType),tag=$(TargetTag)] run return 0
-
 # ターゲット配置
     summon marker ~ ~ ~ {Tags:["Temp.Move.Target.Marker"]}
-    $execute facing entity @n[type=$(TargetType),tag=$(TargetTag)] feet rotated ~ 0 positioned ^ ^ ^$(MaxDistance) run tp @n[type=marker,tag=Temp.Move.Target.Marker] ~ ~ ~
-    $execute if entity @n[type=$(TargetType),tag=$(TargetTag),distance=..$(MaxDistance)] positioned as @n[type=$(TargetType),tag=$(TargetTag)] rotated ~ 0 positioned ^$(OffsetX) ^$(OffsetY) ^$(OffsetZ) run tp @n[type=marker,tag=Temp.Move.Target.Marker] ~ ~ ~
+    $execute rotated ~ 0 positioned ^$(OffsetX) ^$(OffsetY) ^$(OffsetZ) run tp @n[type=marker,tag=Temp.Move.Target.Marker] ~ ~ ~
 
 # ターゲットの高さ調整
     $data modify storage mhdp_core:temp Temp.IsAdjustLand set value $(IsAdjustLand)
