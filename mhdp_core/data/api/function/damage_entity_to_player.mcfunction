@@ -13,7 +13,7 @@
         execute if score @s Ply.Timer.Avoid matches 1.. unless score #mhdp_temp_guard_value MhdpCore matches 20.. at @s run return run function mhdp_core:player/damage/entity_to_player/avoid/main
 
 # バリデーション
-    # function api:damage_entity_to_player/validate
+    function api:damage_entity_to_player/validate
 
 # 無敵時間設定
     execute if data storage mhdp_core:temp Arg{IsDisableDamageInterval:false} run scoreboard players set @s Ply.Timer.DamageInterval 20

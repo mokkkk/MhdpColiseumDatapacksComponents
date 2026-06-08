@@ -4,23 +4,17 @@
 #
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
-# データ読み込み
-    function mhdp_monsters:core/util/tick/get_attack_data.m {Uid:1001, Name:"Bite"}
-    # data modify storage mhdp_core:temp Damage set from storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks[{Name:"Bite"}]
-    # execute if entity @s[tag=!Mns.State.IsAnger] run scoreboard players set #mhdp_temp_attack_multiply_anger MhdpCore 100
-    # execute if entity @s[tag=Mns.State.IsAnger] run scoreboard players operation #mhdp_temp_attack_multiply_anger MhdpCore = @s Mns.Anger.AttackMutiply
-
 # ヒット確認
-    # 対プレイヤー
-        execute positioned ^ ^1.8 ^5 as @a[tag=Ply.State.EnableDamage,distance=..2.5] run tag @s add Temp.Hit
-        execute as @a[tag=Temp.Hit] run function api:damage_entity_to_player
-        tag @a remove Temp.Hit
-    # 対モンスター
-        execute positioned ^ ^1.8 ^5 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Ranposu,distance=..2.5] run tag @s add Temp.Hit
-        execute if entity @e[tag=Temp.Hit] as @n[tag=Temp.Hit] run tag @s add Temp.Victim
-        execute if entity @e[tag=Temp.Victim] as @e[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
+    # デバッグ用
+        # execute positioned ^ ^1.6 ^5 run function api:bounding/cuboid_with_preview.m {Selector:"@a[tag=Ply.State.EnableDamage,distance=..20]",Tag:"Temp.Hit",X:"1.8",Y:"1.9",Z:"2"}
+        # execute positioned ^ ^1.6 ^4.1 run function api:bounding/cuboid_with_preview_blue.m {Selector:"@e[type=shulker,tag=Entity.EnableDamage,distance=..20]",Tag:"Temp.Hit",X:"2",Y:"3",Z:"3"}
 
-# 終了
-    tag @e[tag=Temp.Hit] remove Temp.Hit
-    data remove storage mhdp_core:temp Damage
-    scoreboard players reset #mhdp_temp_attack_multiply_anger MhdpCore
+# 攻撃実行
+    function mhdp_monsters:core/util/tick/event/apply_attack.m {Uid:1001,AttackName:"Bite",\
+        Player_Selector:"@a[tag=Ply.State.EnableDamage,distance=..30]",\
+            Player_Offset_X:0.0,Player_Offset_Y:1.6,Player_Offset_Z:5.0,\
+            Player_Scale_X:1.8,Player_Scale_Y:1.9,Player_Scale_Z:2.0,\
+        Entity_Selector:"@e[type=slime,tag=Entity.EnableDamage,tag=!Mns.HitBox.Ranposu,distance=..30]",\
+            Entity_Offset_X:0.0,Entity_Offset_Y:1.6,Entity_Offset_Z:4.1,\
+            Entity_Scale_X:2.0,Entity_Scale_Y:3.0,Entity_Scale_Z:3.0\
+    }

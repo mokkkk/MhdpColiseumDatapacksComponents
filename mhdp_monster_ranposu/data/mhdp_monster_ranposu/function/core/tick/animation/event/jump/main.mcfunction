@@ -5,10 +5,10 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
 # 軸合わせ・弱め
-    execute if score @s aj.jump.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:4}
-    execute if score @s aj.jump.frame matches 6 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:4}
-    execute if score @s aj.jump.frame matches 11 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:4}
-    execute if score @s aj.jump.frame matches 15 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:4}
+    execute if score @s aj.jump.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:4,MaxRotation:999}
+    execute if score @s aj.jump.frame matches 6 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:4,MaxRotation:999}
+    execute if score @s aj.jump.frame matches 11 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:4,MaxRotation:999}
+    execute if score @s aj.jump.frame matches 15 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:4,MaxRotation:999}
     execute if score @s aj.jump.frame matches 2..19 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
 
 # 移動

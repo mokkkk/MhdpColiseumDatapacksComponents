@@ -5,8 +5,8 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.bite_strong.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:10}
-    execute if score @s aj.bite_strong.frame matches 11 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:10}
+    execute if score @s aj.bite_strong.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:10,MaxRotation:999}
+    execute if score @s aj.bite_strong.frame matches 11 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:10,MaxRotation:999}
     execute if score @s aj.bite_strong.frame matches 2..21 at @s run function mhdp_monsters:core/util/tick/event/alignment
 
 # 移動

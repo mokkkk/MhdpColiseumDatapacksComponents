@@ -16,8 +16,7 @@
     execute if score @s aj.bite.frame matches 13 run function mhdp_monster_ranposu:core/tick/animation/event/bite/attack
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
     execute if score @s aj.bite.frame matches 44 run function mhdp_monster_ranposu:core/tick/animation/event/bite/end

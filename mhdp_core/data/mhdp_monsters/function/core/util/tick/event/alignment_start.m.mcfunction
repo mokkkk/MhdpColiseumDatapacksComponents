@@ -15,6 +15,10 @@
     execute if score @s Mns.Temp.RotateVec matches 180000.. run scoreboard players remove @s Mns.Temp.RotateVec 360000
     execute if score @s Mns.Temp.RotateVec matches ..-180000 run scoreboard players add @s Mns.Temp.RotateVec 360000
 
+# 最大角度
+    $execute if score @s Mns.Temp.RotateVec matches $(MaxRotation)000.. run scoreboard players set @s Mns.Temp.RotateVec $(MaxRotation)000
+    $execute if score @s Mns.Temp.RotateVec matches ..-$(MaxRotation)000 run scoreboard players set @s Mns.Temp.RotateVec -$(MaxRotation)000
+
 # 回転時間で割る
     $scoreboard players set #mhdp_temp_rotate_tick MhdpCore $(Tick)
     scoreboard players operation @s Mns.Temp.RotateVec /= #mhdp_temp_rotate_tick MhdpCore
