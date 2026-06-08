@@ -44,12 +44,10 @@
     execute if score @s Mns.Bomb.Damage matches ..0 run tag @s add Mns.Temp.Damage.Bomb
 
 # 相殺
-    # 攻撃中部位ではない場合、相殺ダメージを無効化
-        execute if entity @s[tag=!Mns.State.IsAttackPart] run scoreboard players set #mhdp_temp_counter_value MhdpCore 0
     execute if entity @s[tag=!Mns.State.IsDisablePartDamage] run scoreboard players operation @s Mns.Counter.Damage -= #mhdp_temp_counter_value MhdpCore
     execute if score @s Mns.Counter.Damage matches ..0 run tag @s add Mns.Temp.Damage.Counter
     # 相殺成功判定
-        execute if entity @s[tag=Mns.State.IsAttackPart] run data modify storage api: Return.Counter set value true
+        execute if score #mhdp_temp_counter_value MhdpCore matches 1.. run data modify storage api: Return.Counter set value true
     # 相殺大成功判定
         execute if entity @s[tag=Mns.Temp.Damage.Counter] run data modify storage api: Return.CounterSuccess set value true
 

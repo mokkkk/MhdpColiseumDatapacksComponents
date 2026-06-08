@@ -11,7 +11,6 @@
 
 # 計算
     scoreboard players operation @s Build.Stats.Hp -= #mhdp_temp_object_damage MhdpCore
-    tellraw @a {"score":{"name":"@s","objective":"Build.Stats.Hp"}}
 
 # 演出
     particle block{block_state:"minecraft:oak_planks"} ~ ~2 ~ 1.5 1.5 1.5 0 25

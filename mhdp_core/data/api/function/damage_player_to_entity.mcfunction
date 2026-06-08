@@ -34,6 +34,8 @@
 
 # 相殺フラグ
     execute store result score #mhdp_temp_counter_value MhdpCore run data get storage api: Arg.CounterValue
+    # 対象が攻撃中部位ではない場合、相殺値を0にする
+        execute if entity @n[tag=Temp.Victim,tag=!Mns.State.IsAttackPart] run scoreboard players set #mhdp_temp_counter_value MhdpCore 0
     execute if score #mhdp_temp_counter_value MhdpCore matches 1.. run data modify storage api: Arg.IsCounterAttack set value true
 
 # 返り値用意
