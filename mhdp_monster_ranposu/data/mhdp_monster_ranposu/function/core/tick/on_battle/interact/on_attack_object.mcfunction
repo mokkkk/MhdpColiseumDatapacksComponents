@@ -4,9 +4,10 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
-# 攻撃キャンセル
+# 建築を破壊できなかった場合、攻撃キャンセル
     execute unless entity @s[\
-        tag=!animated_java.ranposu.animation.bite_strong.playing\
+        tag=!animated_java.ranposu.animation.bite_strong.playing,\
+        tag=!animated_java.ranposu.animation.move_claw.playing\
     ] if data storage api: Return{IsRemainObject:true} run function mhdp_monster_ranposu:core/tick/on_battle/interact/reaction/cancel_attack
 
 # temp

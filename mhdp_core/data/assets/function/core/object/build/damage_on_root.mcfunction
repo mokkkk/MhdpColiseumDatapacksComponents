@@ -24,7 +24,7 @@
     scoreboard players set @s Build.Stats.DamageInterval 10
 
 # 建築のHPが残っている場合
-    data modify storage api: Return.IsRemainObject set value true
+    execute if score @s Build.Stats.Hp matches 1.. run data modify storage api: Return.IsRemainObject set value true
 
 # タイプ取得
     execute if entity @s[tag=Asset.Build.Type.Wall] run data modify storage api: Return.IsWall set value true

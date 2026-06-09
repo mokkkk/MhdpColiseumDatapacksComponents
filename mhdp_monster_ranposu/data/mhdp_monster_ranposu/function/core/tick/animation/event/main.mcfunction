@@ -68,8 +68,8 @@
 # 建築物の上に乗る
     execute if entity @s[tag=animated_java.ranposu.animation.climb_object.playing] run function mhdp_monster_ranposu:core/tick/animation/event/climb_object/main
 
-# # バックステップ
-#     execute if entity @s[tag=animated_java.ranposu.animation.step_back.playing] run function mhdp_monster_ranposu:core/tick/animation/event/step_back/main
+# バックステップ
+    execute if entity @s[tag=animated_java.ranposu.animation.step_back.playing] run function mhdp_monster_ranposu:core/tick/animation/event/step_back/main
 
 # 噛みつき
     execute if entity @s[tag=animated_java.ranposu.animation.bite.playing] run function mhdp_monster_ranposu:core/tick/animation/event/bite/main
@@ -81,8 +81,8 @@
     execute if entity @s[tag=animated_java.ranposu.animation.tail_right.playing] run function mhdp_monster_ranposu:core/tick/animation/event/tail_right/main
     execute if entity @s[tag=animated_java.ranposu.animation.tail_left.playing] run function mhdp_monster_ranposu:core/tick/animation/event/tail_left/main
 
-# # 移動ひっかき
-#     execute if entity @s[tag=animated_java.ranposu.animation.move_claw.playing] run function mhdp_monster_ranposu:core/tick/animation/event/move_claw/main
+# 移動ひっかき
+    execute if entity @s[tag=animated_java.ranposu.animation.move_claw.playing] run function mhdp_monster_ranposu:core/tick/animation/event/move_claw/main
 
 # # タックル
 #     execute if entity @s[tag=animated_java.ranposu.animation.tackle.playing] run function mhdp_monster_ranposu:core/tick/animation/event/tackle/main
