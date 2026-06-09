@@ -5,9 +5,9 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
 # 軸合わせ・弱め
-    execute if score @s aj.tackle.frame matches 2 run function mhdp_monster_ranposu:core/tick/animation/event/tackle/turn_start
-    execute if score @s aj.tackle.frame matches 6 run function mhdp_monster_ranposu:core/tick/animation/event/tackle/turn_start
-    execute if score @s aj.tackle.frame matches 2..10 at @s run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.tackle.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:10,MaxRotation:90}
+    execute if score @s aj.tackle.frame matches 6 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Ranposu",Tick:10,MaxRotation:90}
+    execute if score @s aj.tackle.frame matches 2..10 at @s run function mhdp_monsters:core/util/tick/event/alignment
 
 # 移動
     execute if score @s aj.tackle.frame matches 1..5 at @s run tp @s ^ ^ ^-0.3
@@ -26,11 +26,12 @@
     execute if score @s aj.tackle.frame matches 38 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 攻撃
+    execute if score @s aj.tackle.frame matches 23 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks[{Name:"Tackle"}]
     execute if score @s aj.tackle.frame matches 24..34 run function mhdp_monster_ranposu:core/tick/animation/event/tackle/attack
+    execute if score @s aj.tackle.frame matches 35 run function mhdp_monsters:core/util/tick/event/end_attack
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
-    execute if score @s aj.tackle.frame matches 69 run function mhdp_monster_ranposu:core/tick/animation/event/tackle/end
+    execute if score @s aj.tackle.frame matches 69.. run function mhdp_monster_ranposu:core/tick/animation/event/tackle/end

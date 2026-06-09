@@ -109,13 +109,18 @@
 # 移動ひっかき
     data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {\
         Name:"MoveClaw",AttackPart:"body",VectorType:"Normal",\
-        DamageValue:7.0f,ObjectDamageValue:20,GuardValue:3,ElementType:0,ElementMultiply:0,\
+        DamageValue:7.0f,ObjectDamageValue:10,GuardValue:3,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:2,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 
-# # タックル
-#     data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {Name:"Tackle",DamageValue:6.0f,GuardValue:5,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+# タックル
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {\
+        Name:"Tackle",AttackPart:"body",VectorType:"Normal",\
+        DamageValue:6.0f,ObjectDamageValue:25,GuardValue:5,ElementType:0,ElementMultiply:0,\
+        KnockbackStrength:2,IsLaunch:true,LaunchAngle:30,\
+        IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
+    }
 
 # 急襲
     data modify storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks append value {\

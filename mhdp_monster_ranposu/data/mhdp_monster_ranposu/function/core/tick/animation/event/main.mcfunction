@@ -85,7 +85,7 @@
     execute if entity @s[tag=animated_java.ranposu.animation.move_claw.playing] run function mhdp_monster_ranposu:core/tick/animation/event/move_claw/main
 
 # # タックル
-#     execute if entity @s[tag=animated_java.ranposu.animation.tackle.playing] run function mhdp_monster_ranposu:core/tick/animation/event/tackle/main
+    execute if entity @s[tag=animated_java.ranposu.animation.tackle.playing] run function mhdp_monster_ranposu:core/tick/animation/event/tackle/main
 
 # 急襲
     execute if entity @s[tag=animated_java.ranposu.animation.jump.playing] run function mhdp_monster_ranposu:core/tick/animation/event/jump/main

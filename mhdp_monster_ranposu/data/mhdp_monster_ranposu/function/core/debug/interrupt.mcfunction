@@ -9,7 +9,7 @@
 
 # 通常再生
     # タグ付与
-        tag @s add Anim.MoveClaw
+        tag @s add Anim.Tackle
         # function mhdp_monster_ranposu:core/tick/animation/change/play/tail
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn
