@@ -7,16 +7,16 @@
 # 共通処理
     # 怯み開始時
         function mhdp_monsters:core/util/damage/on_reaction_start
-    # スコアリセット
+    # 耐性値リセット
         scoreboard players operation @s Mns.Anger.Damage = @s Mns.Anger.Damage.Max
     # 状態更新
         function mhdp_monsters:core/util/tick/start_anger.m {Name:"ranposu"}
 
-# アニメーション再生処理
-    # 麻痺・ダウン・スタン時
-        execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
-    # アニメーション再生
-        execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:ranposu/animations/anger/tween {duration:1, to_frame: 0}
+# 麻痺・ダウン・スタン時はアニメーションを再生しない
+    execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
+
+# アニメーション再生
+    execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:ranposu/animations/anger/tween {duration:1, to_frame: 0}
 
 # 終了
     tag @s add Mns.Temp.IsDamaged

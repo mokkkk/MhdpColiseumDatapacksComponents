@@ -18,15 +18,14 @@
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
 
 # 非戦闘時、戦闘に移行
-    # execute if entity @s[tag=!Mns.State.IsBattle] run scoreboard players set @s Mns.General.SearchTimer 3000
-    # execute if entity @s[tag=!Mns.State.IsBattle] run function mhdp_monster_ranposu:core/tick/animation/change/main
+    execute unless score @s Mns.General.Phase matches 2 run function mhdp_monster_ranposu:core/tick/on_battle/start_ambush
 
 # 共通ステータスの減算
     function mhdp_monsters:core/util/damage/damage_common_data
-    # 討伐時、処理を中断
+    # 討伐された場合、以降の処理は行わない
         execute if entity @s[tag=Mns.State.Death] run return 0
-    
-# チュートリアル
+
+# チュートリアル用処理
     execute if entity @s[tag=Mns.State.Tutorial.IsDamage] run tag @s remove Mns.State.Tutorial.IsDamage
 
 # 部位ダメージの減算
@@ -37,9 +36,12 @@
         execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run scoreboard players operation @s Mns.Ranposu.Body.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Ranposu.Body.Damage matches ..0 run tag @s add Mns.Temp.Damage.Body
 
-# 以下の優先度で怯みを適用
+# ボスバー更新
+    execute if entity @s[tag=!Mns.Param.IsHideHp] store result bossbar mhdp_monster:ranposu value run scoreboard players get @s Mns.Hp
+
+# 怯み適用：優先度順
     # 麻痺
-        execute if entity @s[tag=Mns.Temp.Damage.Paralysis] run function mhdp_monster_ranposu:core/damage/reaction/paralysis
+        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Paralysis] run function mhdp_monster_ranposu:core/damage/reaction/paralysis
     # スタン
         execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Stun] run function mhdp_monster_ranposu:core/damage/reaction/stun
     # 減気
@@ -62,9 +64,6 @@
         execute if entity @s[tag=Mns.Temp.Damage.Bomb] run function mhdp_monsters:core/util/damage/reaction_bomb
     # 龍気
         execute if entity @s[tag=Mns.Temp.Damage.DragonAura]
-
-# ボスバー更新
-    execute if entity @s[tag=!Mns.Param.IsHideHp] store result bossbar mhdp_monster:ranposu value run scoreboard players get @s Mns.Hp
 
 # 終了
     function mhdp_monsters:core/util/damage/remove_tags

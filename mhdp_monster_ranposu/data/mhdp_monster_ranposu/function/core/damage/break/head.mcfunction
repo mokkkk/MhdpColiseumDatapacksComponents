@@ -1,4 +1,4 @@
-#> mhdp_monster_ranposu:core/damage/reaction/head_break
+#> mhdp_monster_ranposu:core/damage/break/head
 #
 # 怯みリアクション 頭部位破壊
 #
