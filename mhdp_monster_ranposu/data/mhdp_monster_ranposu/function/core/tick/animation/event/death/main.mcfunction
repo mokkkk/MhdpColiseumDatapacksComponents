@@ -14,13 +14,12 @@
     execute if score @s aj.death.frame matches 89 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 1 0.7
 
 # 接地
-    execute if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # まばたき
     execute if score @s aj.death.frame matches 76 run scoreboard players set @s Mns.General.BlinkTimer 10000000
 
-# 剝ぎ取り可能
+# 剝ぎ取り可能にする
     execute if score @s aj.death.frame matches 76 run tag @s add Mns.State.IsCanCarving
     execute if score @s aj.death.frame matches 76 run scoreboard players set @s Mns.General.Carving.Count 3
 

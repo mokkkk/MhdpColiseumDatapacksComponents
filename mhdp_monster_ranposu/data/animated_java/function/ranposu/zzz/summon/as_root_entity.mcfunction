@@ -142,4 +142,3 @@ function animated_java:ranposu/zzz/summon/zzz/11 with storage animated_java:temp
 execute at @s run function animated_java:ranposu/zzz/summon/on_summon/rig
 tag @s remove aj.new
 execute on passengers run tag @s remove aj.new
-execute on passengers run ride @s dismount

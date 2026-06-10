@@ -5,4 +5,4 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/down/main
 
 # スタンパーティクル
-    $execute positioned ^$(posx) ^$(posy) ^$(posz) run particle crit ~ ~1 ~ 0.3 0.1 0.3 0.3 1
+    execute positioned ^ ^ ^ run particle crit ~ ~1 ~ 0.3 0.1 0.3 0.3 1

@@ -27,7 +27,6 @@ scoreboard objectives add aj.jump.frame dummy
 scoreboard objectives add aj.tackle.frame dummy
 scoreboard objectives add aj.step_jump_right.frame dummy
 scoreboard objectives add aj.step_jump_left.frame dummy
-scoreboard objectives add aj.interrupt_object.frame dummy
 scoreboard objectives add aj.damage.frame dummy
 scoreboard objectives add aj.damage_counter_start.frame dummy
 scoreboard objectives add aj.damage_counter.frame dummy
@@ -38,4 +37,6 @@ scoreboard objectives add aj.down_end.frame dummy
 scoreboard objectives add aj.damage_flying.frame dummy
 scoreboard objectives add aj.death.frame dummy
 scoreboard objectives add aj.death_flying.frame dummy
+scoreboard objectives add aj.interrupt_object.frame dummy
+scoreboard objectives add aj.interrupt_object_tackle.frame dummy
 scoreboard objectives add aj.climb_object.frame dummy

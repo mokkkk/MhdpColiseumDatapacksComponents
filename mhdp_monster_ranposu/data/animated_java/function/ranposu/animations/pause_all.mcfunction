@@ -26,7 +26,6 @@ tag @s remove animated_java.ranposu.animation.jump.playing
 tag @s remove animated_java.ranposu.animation.tackle.playing
 tag @s remove animated_java.ranposu.animation.step_jump_right.playing
 tag @s remove animated_java.ranposu.animation.step_jump_left.playing
-tag @s remove animated_java.ranposu.animation.interrupt_object.playing
 tag @s remove animated_java.ranposu.animation.damage.playing
 tag @s remove animated_java.ranposu.animation.damage_counter_start.playing
 tag @s remove animated_java.ranposu.animation.damage_counter.playing
@@ -37,4 +36,6 @@ tag @s remove animated_java.ranposu.animation.down_end.playing
 tag @s remove animated_java.ranposu.animation.damage_flying.playing
 tag @s remove animated_java.ranposu.animation.death.playing
 tag @s remove animated_java.ranposu.animation.death_flying.playing
+tag @s remove animated_java.ranposu.animation.interrupt_object.playing
+tag @s remove animated_java.ranposu.animation.interrupt_object_tackle.playing
 tag @s remove animated_java.ranposu.animation.climb_object.playing
