@@ -1,4 +1,1 @@
-{
-	"replace": false,
-	"values": ["animated_java:karakuri_aj/on_load", "animated_java:nikuyaki/on_load"]
-}
+{"values":["animated_java:karakuri/on_load"]}

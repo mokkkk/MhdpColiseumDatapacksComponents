@@ -1,4 +1,1 @@
-{
-	"replace": false,
-	"values": ["animated_java:global/on_load"]
-}
+{"values":["animated_java:global/on_load"]}

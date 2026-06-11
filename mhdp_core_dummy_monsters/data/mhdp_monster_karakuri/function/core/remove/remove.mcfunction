@@ -4,10 +4,12 @@
 #
 # @within function 
 
-# 当たり判定を消去
-    execute as @e[type=slime,tag=Mns.HitBox.Karakuri] run function mhdp_monsters:core/util/other/remove_hitbox
+# スコア消去
+    scoreboard players reset @a Mns.Karakuri.Caution
+    scoreboard players reset @a Mns.Karakuri.Search
+    scoreboard players reset @a Mns.Karakuri.Hate
 
 # モデル消去
-    function animated_java:karakuri_aj/remove/this
+    function animated_java:karakuri/remove/this
 
 # say モンスター処理：からくり飛竜消去処理

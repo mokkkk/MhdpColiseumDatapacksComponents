@@ -17,8 +17,13 @@
 #        score #mhdp_temp_damage_tire_value MhdpCore 減気量
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
 
-# 相殺判定
-    execute if entity @s[tag=Mns.Karakuri.Attack.Head] if score #mhdp_temp_target_part_id MhdpCore matches 0 if data storage api: Arg{IsCounterAttack:true} run data modify storage api: Return.Counter set value true
+# 相殺判定のみ行う
+    execute if entity @s[tag=!Mns.State.IsDisablePartDamage] run scoreboard players operation @s Mns.Counter.Damage -= #mhdp_temp_counter_value MhdpCore
+    execute if score @s Mns.Counter.Damage matches ..0 run tag @s add Mns.Temp.Damage.Counter
+    # 相殺成功判定
+        execute if score #mhdp_temp_counter_value MhdpCore matches 1.. run data modify storage api: Return.Counter set value true
+    # 相殺大成功判定
+        execute if entity @s[tag=Mns.Temp.Damage.Counter] run data modify storage api: Return.CounterSuccess set value true
 
 # 無敵時間のみ設定
     execute if score #mhdp_temp_damage_interval MhdpCore matches 1.. run scoreboard players operation @s Mns.General.DamageInterval = #mhdp_temp_damage_interval MhdpCore
