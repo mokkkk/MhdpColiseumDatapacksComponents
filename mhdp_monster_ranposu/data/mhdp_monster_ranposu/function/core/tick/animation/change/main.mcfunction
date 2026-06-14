@@ -7,8 +7,8 @@
 # 事前処理
     # アニメーションが停止しないよう、とりあえず待機アニメーションを再生
     # 後の処理でアニメーションを上書きする
-        execute if score @s Mns.General.Phase matches 0 run function animated_java:ranposu/animations/idle_relax/tween {duration:1, to_frame: 0}
-        execute unless score @s Mns.General.Phase matches 0 run function animated_java:ranposu/animations/idle/tween {duration:1, to_frame: 0}
+        execute if score @s Mns.General.Phase matches 0 run function animated_java_ranposu:ranposu/animations/idle_relax/tween {duration:1, to_frame: 0}
+        execute unless score @s Mns.General.Phase matches 0 run function animated_java_ranposu:ranposu/animations/idle/tween {duration:1, to_frame: 0}
 
 # 共通処理
     # Animタグがすでについているか確認

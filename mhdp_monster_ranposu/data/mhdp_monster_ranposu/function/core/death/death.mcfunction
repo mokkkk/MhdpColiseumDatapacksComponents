@@ -9,7 +9,7 @@
     tag @s remove Mns.State.IsAnger
 
 # アニメーション再生
-    execute if entity @s[tag=!Mns.State.IsFlying] run function animated_java:ranposu/animations/death/tween {duration:1, to_frame: 0}
+    execute if entity @s[tag=!Mns.State.IsFlying] run function animated_java_ranposu:ranposu/animations/death/tween {duration:1, to_frame: 0}
     execute if entity @s[tag=Mns.State.IsFlying] run function mhdp_monsters:core/util/damage/death_flying
 
 # 当たり判定を消去

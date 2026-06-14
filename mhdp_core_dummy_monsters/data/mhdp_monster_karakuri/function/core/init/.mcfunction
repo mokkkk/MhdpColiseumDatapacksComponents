@@ -27,4 +27,4 @@
 
 # アニメーション再生
     # 待機
-        execute if entity @s[tag=Mns.Temp.IsIdleAnimation] run function animated_java:karakuri/animations/idle/play
+        execute if entity @s[tag=Mns.Temp.IsIdleAnimation] run function animated_java_karakuri:karakuri/animations/idle/play

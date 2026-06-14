@@ -13,7 +13,7 @@
 
 # アニメーション再生処理
     # アニメーション再生
-        function animated_java:ranposu/animations/state_paralysis_start/tween {duration:1, to_frame: 0}
+        function animated_java_ranposu:ranposu/animations/state_paralysis_start/tween {duration:1, to_frame: 0}
     # 効果時間設定
         scoreboard players operation @s Mns.Paralysis.Timer = @s Mns.Paralysis.Timer.Max
 

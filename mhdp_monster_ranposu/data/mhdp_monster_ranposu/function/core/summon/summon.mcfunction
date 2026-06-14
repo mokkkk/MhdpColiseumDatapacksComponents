@@ -14,7 +14,7 @@
     data modify storage mhdp_core:temp TargetMonsterData set from storage mhdp_core:monster_data MonsterData[{Uid:1001}]
 
 # モデル召喚
-    function animated_java:ranposu/summon {args: {}}
+    function animated_java_ranposu:ranposu/summon {args: {}}
 
 # アニメーション種別を待機に設定
     tag @e[type=item_display,tag=Mns.Root.Ranposu] add Mns.Temp.IsIdleAnimation

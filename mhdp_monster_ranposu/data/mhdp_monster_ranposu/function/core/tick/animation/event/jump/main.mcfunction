@@ -30,7 +30,7 @@
 
 # 攻撃
     execute if score @s aj.jump.frame matches 24 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks[{Name:"Jump"}]
-    execute if score @s aj.jump.frame matches 28..38 run function animated_java:ranposu/at_locator {name:"pos_head",command:"function mhdp_monster_ranposu:core/tick/animation/event/jump/attack"}
+    execute if score @s aj.jump.frame matches 28..38 run function animated_java_ranposu:ranposu/at_locator {name:"pos_head",command:"function mhdp_monster_ranposu:core/tick/animation/event/jump/attack"}
     execute if score @s aj.jump.frame matches 38 run function mhdp_monsters:core/util/tick/event/end_attack
 
 # 接地

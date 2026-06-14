@@ -5,4 +5,4 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # 怯み終了に移行
-    function animated_java:ranposu/animations/damage_counter_end/tween {duration:1, to_frame: 1}
+    function animated_java_ranposu:ranposu/animations/damage_counter_end/tween {duration:1, to_frame: 1}

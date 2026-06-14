@@ -41,6 +41,7 @@
 # 返り値用意
     # モーション値
         data modify storage api: Return.DamageMult set from storage api: Arg.DamageMult
+        execute store result storage api: Return.UpBuildGauge int 0.2 run data get storage api: Arg.DamageMult
     # 相殺成功
         data modify storage api: Return.Counter set value false
     # 相殺大成功
@@ -52,8 +53,13 @@
 # 演出
     execute positioned as @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] run function api:damage_player_to_entity/vfx
 
-# プレイヤーの武器攻撃時処理を実行
-    function mhdp_items:core/switch/weapon_on_attack
+# プレイヤーの攻撃成功時処理
+    # 狩技ゲージ上昇
+        function api:weapon_operation/charge_arts.m with storage api: Return
+    # 建材ゲージ上昇
+        function api:weapon_operation/up_build_gauge.m with storage api: Return
+    # 武器固有
+        function mhdp_items:core/switch/weapon_on_attack
 
 # データのリセット
     function api:damage_player_to_entity/reset

@@ -6,11 +6,11 @@
 
 # 建築を破壊できなかった場合、攻撃キャンセル
     execute unless entity @s[\
-        tag=!animated_java.ranposu.animation.bite_strong.playing,\
-        tag=!animated_java.ranposu.animation.move_claw.playing\
+        tag=!animated_java_ranposu.ranposu.animation.bite_strong.playing,\
+        tag=!animated_java_ranposu.ranposu.animation.move_claw.playing\
     ] if data storage api: Return{IsRemainObject:true} run function mhdp_monster_ranposu:core/tick/on_battle/interact/reaction/cancel_attack
     execute unless entity @s[\
-        tag=!animated_java.ranposu.animation.tackle.playing\
+        tag=!animated_java_ranposu.ranposu.animation.tackle.playing\
     ] if data storage api: Return{IsRemainObject:true} run function mhdp_monster_ranposu:core/tick/on_battle/interact/reaction/cancel_attack_tackle
 
 # temp

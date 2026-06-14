@@ -10,6 +10,6 @@
     scoreboard players reset @a Mns.Karakuri.Hate
 
 # モデル消去
-    function animated_java:karakuri/remove/this
+    function animated_java_karakuri:karakuri/remove/this
 
 # say モンスター処理：からくり飛竜消去処理

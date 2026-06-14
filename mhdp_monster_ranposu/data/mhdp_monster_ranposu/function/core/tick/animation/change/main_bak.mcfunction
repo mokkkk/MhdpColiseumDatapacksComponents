@@ -6,12 +6,12 @@
 
 # 事前処理
     # 待機アニメーション再生、動作する場合は後の処理でアニメーションを上書き
-        function animated_java:ranposu/animations/idle/tween {duration:1, to_frame: 0}
+        function animated_java_ranposu:ranposu/animations/idle/tween {duration:1, to_frame: 0}
     # 発見
         execute if entity @s[tag=!Mns.State.IsBattle] if score @s Mns.General.SearchTimer matches 2000.. run tag @s add Mns.Temp.IsFirstContact
         execute if entity @s[tag=Mns.Temp.IsFirstContact,tag=!Mns.State.IsBattle] run tag @s add Mns.State.IsBattle
     # 非戦闘時は警戒アニメーションのみ再生
-        execute if entity @s[tag=!Mns.State.IsBattle] if entity @n[tag=Ply.State.MnsTarget] run function animated_java:ranposu/animations/search/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=!Mns.State.IsBattle] if entity @n[tag=Ply.State.MnsTarget] run function animated_java_ranposu:ranposu/animations/search/tween {duration:1, to_frame: 0}
         execute if entity @s[tag=!Mns.State.IsBattle] run return 0
 
 # 共通処理

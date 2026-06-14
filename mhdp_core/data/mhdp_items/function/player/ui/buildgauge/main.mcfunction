@@ -3,6 +3,9 @@
 # UI表示処理等 建材ゲージ関連
 #
 
+# 上限
+    execute if score @s Ply.Stats.BuildGauge matches 1001.. run scoreboard players set @s Ply.Stats.BuildGauge 1000
+
 # メモリ計算
     execute if score @s Ply.Stats.BuildGauge.Count matches ..0 if score @s Ply.Stats.BuildGauge matches 125.. run function mhdp_items:player/ui/buildgauge/up_count
     execute if score @s Ply.Stats.BuildGauge.Count matches ..1 if score @s Ply.Stats.BuildGauge matches 250.. run function mhdp_items:player/ui/buildgauge/up_count

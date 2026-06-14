@@ -15,7 +15,7 @@
     data modify storage mhdp_core:temp TargetMonsterData set from storage mhdp_core:monster_data MonsterData[{Uid:8001}]
 
 # モデル召喚
-    function animated_java:karakuri/summon {args: {}}
+    function animated_java_karakuri:karakuri/summon {args: {}}
 
 # アニメーション種別を待機に設定
     tag @e[type=item_display,tag=Mns.Root.Karakuri] add Mns.Temp.IsIdleAnimation

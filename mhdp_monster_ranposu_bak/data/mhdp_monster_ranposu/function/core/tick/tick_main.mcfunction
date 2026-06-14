@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # Animated Java側処理
-    function animated_java:ranposu/root/on_tick
+    function animated_java_ranposu:ranposu/root/on_tick
 
 # 共通処理
     function mhdp_monsters:core/util/tick/pre_tick

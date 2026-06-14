@@ -17,7 +17,7 @@
     # 麻痺・ダウン・スタン時以外
         execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
     # アニメーション再生
-        function animated_java:ranposu/animations/damage_down/tween {duration:1, to_frame: 0}
+        function animated_java_ranposu:ranposu/animations/damage_down/tween {duration:1, to_frame: 0}
     # 怯み回数リセット
         scoreboard players set @s Mns.Ranposu.DamageCount 0
     # ダウン時間設定

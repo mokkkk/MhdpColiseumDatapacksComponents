@@ -6,7 +6,7 @@
 
 # アニメーション再生処理
     # アニメーション再生
-        function animated_java:ranposu/animations/interrupt_object_tackle/tween {duration:1, to_frame: 1}
+        function animated_java_ranposu:ranposu/animations/interrupt_object_tackle/tween {duration:1, to_frame: 1}
 
     # 演出
         playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.9

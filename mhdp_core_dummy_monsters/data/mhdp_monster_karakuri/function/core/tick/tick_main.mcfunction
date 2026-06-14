@@ -5,7 +5,8 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # Animated Java側処理
-    function animated_java:karakuri/root/on_tick
+    function animated_java:global/data_manager/on_tick
+    function animated_java:global/root/on_tick
 
 # 共通tick開始時処理
     # function mhdp_monsters:core/super/tick/pre_tick

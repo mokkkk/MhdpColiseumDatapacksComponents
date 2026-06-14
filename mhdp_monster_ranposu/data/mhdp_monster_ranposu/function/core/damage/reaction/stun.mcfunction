@@ -15,7 +15,7 @@
         scoreboard players set @s Mns.General.DownCount 6
 
 # アニメーション再生
-    execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:ranposu/animations/damage_down/tween {duration:1, to_frame: 0}
+    execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java_ranposu:ranposu/animations/damage_down/tween {duration:1, to_frame: 0}
     execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monsters:core/util/damage/reaction_flying
 
 # 攻撃者を向く

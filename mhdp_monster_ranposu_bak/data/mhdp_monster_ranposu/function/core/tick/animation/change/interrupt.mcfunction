@@ -15,4 +15,4 @@
 # アニメーション変更
     function mhdp_monster_ranposu:core/tick/animation/change/main
 
-# function animated_java:ranposu/animations/damage_counter_start/tween {duration:1, to_frame: 1}
+# function animated_java_ranposu:ranposu/animations/damage_counter_start/tween {duration:1, to_frame: 1}

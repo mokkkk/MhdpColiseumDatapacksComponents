@@ -12,6 +12,6 @@
     bossbar remove mhdp_monster:ranposu
 
 # モデル消去
-    function animated_java:ranposu/remove/this
+    function animated_java_ranposu:ranposu/remove/this
 
 # say モンスター処理：ドスランポス消去処理

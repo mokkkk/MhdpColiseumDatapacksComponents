@@ -5,8 +5,8 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # モードに応じてアニメーションを再生する
-    execute if entity @s[tag=Mns.Karakuri.Mode.Idle] run function animated_java:karakuri/animations/idle/tween {duration:1, to_frame: 1}
-    execute if entity @s[tag=Mns.Karakuri.Mode.Attack] run function animated_java:karakuri/animations/bite/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Mns.Karakuri.Mode.Idle] run function animated_java_karakuri:karakuri/animations/idle/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Mns.Karakuri.Mode.Attack] run function animated_java_karakuri:karakuri/animations/bite/tween {duration:1, to_frame: 1}
 
 # 終了
     scoreboard players set @s Mns.General.DummyTimer 0

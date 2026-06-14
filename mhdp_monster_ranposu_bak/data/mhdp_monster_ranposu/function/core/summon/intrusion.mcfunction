@@ -5,7 +5,7 @@
 # @within function 
 
 # モデル召喚
-    function animated_java:ranposu/summon
+    function animated_java_ranposu:ranposu/summon
 
 # アニメーション種別を召喚に設定
     tag @e[type=item_display,tag=Mns.Root.Ranposu] add Mns.Temp.IsSummonAnimation

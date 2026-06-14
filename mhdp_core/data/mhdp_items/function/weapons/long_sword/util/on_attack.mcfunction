@@ -4,9 +4,6 @@
 #
 # @within function mhdp_items:core/switch/macro/m.on_attack
 
-# 狩技ゲージ上昇
-    function api:weapon_operation/charge_arts.m with storage api: Return
-
 # 練気ゲージ上昇
     # 縦斬り
         execute if entity @s[tag=Wpn.Ls.Tec.Normal.1] run scoreboard players add @s Wpn.Ls.SpiritGauge 100

@@ -8,4 +8,4 @@
     scoreboard players reset @s Mns.General.WalkCount
 
 # 待機に戻る
-    function animated_java:ranposu/animations/idle_relax/tween {duration:5, to_frame: 5}
+    function animated_java_ranposu:ranposu/animations/idle_relax/tween {duration:5, to_frame: 5}

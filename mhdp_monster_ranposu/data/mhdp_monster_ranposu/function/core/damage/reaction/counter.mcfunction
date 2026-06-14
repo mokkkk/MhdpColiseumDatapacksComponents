@@ -15,7 +15,7 @@
     execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
  
 # アニメーション再生
-    function animated_java:ranposu/animations/damage_counter_start/tween {duration:1, to_frame: 0}
+    function animated_java_ranposu:ranposu/animations/damage_counter_start/tween {duration:1, to_frame: 0}
    
 # 飛行状態リセット
     tag @s remove Mns.State.IsFlying

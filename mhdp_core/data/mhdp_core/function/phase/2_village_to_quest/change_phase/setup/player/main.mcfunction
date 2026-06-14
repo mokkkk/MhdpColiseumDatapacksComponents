@@ -30,8 +30,8 @@
     execute unless score @s Ply.Stats.DefenceValue.Thunder matches -200.. run scoreboard players set @s Ply.Stats.DefenceValue.Thunder 0
     execute unless score @s Ply.Stats.DefenceValue.Ice matches -200.. run scoreboard players set @s Ply.Stats.DefenceValue.Ice 0
     execute unless score @s Ply.Stats.DefenceValue.Dragon matches -200.. run scoreboard players set @s Ply.Stats.DefenceValue.Dragon 0
-    scoreboard players set @s Ply.Stats.BuildGauge 0
-    scoreboard players set @s Ply.Stats.BuildGauge.Count 0
+    scoreboard players set @s Ply.Stats.BuildGauge 500
+    scoreboard players set @s Ply.Stats.BuildGauge.Count 5
     scoreboard players set @s Ply.Timer.BuildGaugeAnimation 0
     scoreboard players set @s Ply.Timer.ClimbBuild 0
 

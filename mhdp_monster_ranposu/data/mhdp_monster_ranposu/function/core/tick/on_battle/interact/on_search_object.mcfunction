@@ -6,7 +6,7 @@
 
 # 移動中
     execute unless entity @s[\
-        tag=!animated_java.ranposu.animation.move.playing\
+        tag=!animated_java_ranposu.ranposu.animation.move.playing\
     ] run function mhdp_monster_ranposu:core/tick/on_battle/interact/reaction/climb_object
 
 # サーチ終了

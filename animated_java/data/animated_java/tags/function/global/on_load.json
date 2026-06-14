@@ -1,0 +1,4 @@
+{
+	"replace": false,
+	"values": ["animated_java_karakuri:karakuri/on_load", "animated_java_ranposu:ranposu/on_load"]
+}

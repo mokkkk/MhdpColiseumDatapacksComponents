@@ -15,7 +15,7 @@
     # ある程度近くにいる場合、攻撃者から見て正面に移動
         execute if entity @a[tag=Temp.Attacker,distance=..4] at @a[tag=Temp.Attacker] rotated ~ 0 run tp @s ^ ^ ^3 ~180 0
     # アニメーション再生
-        function animated_java:ranposu/animations/damage_counter_start/tween {duration:1, to_frame: 0}
+        function animated_java_ranposu:ranposu/animations/damage_counter_start/tween {duration:1, to_frame: 0}
     # 演出
         playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.9
         playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.6

@@ -5,4 +5,4 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/state_paralysis_start/main
 
 # アニメーション再生
-    function animated_java:ranposu/animations/state_paralysis/tween {duration:1, to_frame: 0}
+    function animated_java_ranposu:ranposu/animations/state_paralysis/tween {duration:1, to_frame: 0}

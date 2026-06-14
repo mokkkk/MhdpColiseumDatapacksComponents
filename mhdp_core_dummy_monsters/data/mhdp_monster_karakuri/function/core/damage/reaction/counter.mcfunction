@@ -9,7 +9,7 @@
         function mhdp_monsters:core/util/damage/on_reaction_start
 
 # アニメーション再生
-    function animated_java:karakuri/animations/damage_counter/tween {duration:1, to_frame: 0}
+    function animated_java_karakuri:karakuri/animations/damage_counter/tween {duration:1, to_frame: 0}
 
 # 遷移タイマー初期化
     scoreboard players set @s Mns.General.DummyTimer 0
