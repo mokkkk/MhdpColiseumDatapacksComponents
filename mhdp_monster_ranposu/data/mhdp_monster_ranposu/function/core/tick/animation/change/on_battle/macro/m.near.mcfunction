@@ -17,3 +17,5 @@ $loot spawn ~ ~10 ~ loot {\
             ]}\
         ]\
     }
+
+return 1

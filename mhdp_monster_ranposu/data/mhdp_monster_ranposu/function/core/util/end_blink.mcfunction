@@ -11,5 +11,5 @@
         'data modify entity @s item.components."minecraft:item_model" set value "animated_java_ranposu:blueprint/ranposu/head_upper"'\
     }
     execute if entity @s[tag=Mns.Break.Head] run function animated_java_ranposu:ranposu/as_node {name: 'head_upper', command: \
-        'data modify entity @s item.components."minecraft:item_model" set value "animated_java_ranposu:blueprint/ranposu/head_upper_break"'\
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/ranposu/head_upper_break"'\
     }

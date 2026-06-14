@@ -17,7 +17,7 @@
     }
     execute if score @s aj.jump.frame matches 24..30 at @s run function mhdp_monsters:core/util/tick/event/vector_move
     execute if score @s aj.jump.frame matches 31 at @s run function mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {\
-        Tick:8,OffsetX:0.0,OffsetY:0.0,OffsetZ:8.0,IsAdjustLand:"true"\
+        Tick:8,OffsetX:0.0,OffsetY:0.0,OffsetZ:4.0,IsAdjustLand:"true"\
     }
     execute if score @s aj.jump.frame matches 31..38 at @s run function mhdp_monsters:core/util/tick/event/vector_move
 

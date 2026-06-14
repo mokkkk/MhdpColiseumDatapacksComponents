@@ -37,7 +37,7 @@
         ID:10,Name:"初級：青鳥竜の狩猟",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:12,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
-            {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1,AreaId:1,Visible:true,Override:{HpMultiply:300,AttackMultiply:50}}\
+            {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1,AreaId:1,Visible:true,Override:{HpMultiply:12,AttackMultiply:50}}\
         ]}\
     }
     # data modify storage mhdp_core:game_data QuestList append value {\

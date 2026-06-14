@@ -11,11 +11,11 @@
 # 移動
     execute if score @s aj.step_jump_left.frame matches 2..18 at @s run tp @s ^1 ^ ^
     execute if score @s aj.step_jump_left.frame matches 28 at @s run function mhdp_monsters:core/util/tick/event/vector_move_start.m {\
-        TargetType:"player",TargetTag:"Mns.Target.Ranposu",MaxDistance:35,Tick:7,OffsetX:0.0,OffsetY:0.0,OffsetZ:-6.0,IsAdjustLand:"false"\
+        TargetType:"player",TargetTag:"Mns.Target.Ranposu",MaxDistance:35,Tick:7,OffsetX:0.0,OffsetY:0.0,OffsetZ:-3.0,IsAdjustLand:"false"\
     }
     execute if score @s aj.step_jump_left.frame matches 30..36 at @s run function mhdp_monsters:core/util/tick/event/vector_move
     execute if score @s aj.step_jump_left.frame matches 37 at @s run function mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {\
-        Tick:8,OffsetX:0.0,OffsetY:0.0,OffsetZ:8.0,IsAdjustLand:"true"\
+        Tick:8,OffsetX:0.0,OffsetY:0.0,OffsetZ:4.0,IsAdjustLand:"true"\
     }
     execute if score @s aj.step_jump_left.frame matches 37..44 at @s run function mhdp_monsters:core/util/tick/event/vector_move
 
@@ -33,8 +33,8 @@
 
 # 攻撃
     execute if score @s aj.step_jump_left.frame matches 30 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1001}].Attacks[{Name:"Jump"}]
-    execute if score @s aj.step_jump_left.frame matches 32..44 run function animated_java_ranposu:ranposu/at_locator {name:"pos_head",command:"function mhdp_monster_ranposu:core/tick/animation/event/step_jump_left/attack"}
-    execute if score @s aj.step_jump_left.frame matches 45 run function mhdp_monsters:core/util/tick/event/end_attack
+    execute if score @s aj.step_jump_left.frame matches 32..45 run function animated_java_ranposu:ranposu/at_locator {name:"pos_head",command:"function mhdp_monster_ranposu:core/tick/animation/event/step_jump_left/attack"}
+    execute if score @s aj.step_jump_left.frame matches 46 run function mhdp_monsters:core/util/tick/event/end_attack
 
 # 接地
     execute if entity @s[tag=!Mns.State.OnObject] if score @s aj.step_jump_left.frame matches 1..29 run function mhdp_monsters:core/util/tick/move/check_landing

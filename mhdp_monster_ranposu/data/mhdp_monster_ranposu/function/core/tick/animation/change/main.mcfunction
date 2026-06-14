@@ -24,7 +24,7 @@
 # 警戒時
     execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 1 run function mhdp_monster_ranposu:core/tick/animation/change/on_caution/main
 # 戦闘時
-    # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 2 run function mhdp_monster_ranposu:core/tick/animation/change/on_battle/main
+    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 2 run function mhdp_monster_ranposu:core/tick/animation/change/on_battle/main
 
 # 軸合わせアニメーション再生
     execute if entity @s[tag=Mns.Temp.IsTurn] run function mhdp_monster_ranposu:core/tick/animation/change/play/turn
