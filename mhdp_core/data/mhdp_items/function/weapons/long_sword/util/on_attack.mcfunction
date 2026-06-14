@@ -4,7 +4,12 @@
 #
 # @within function mhdp_items:core/switch/macro/m.on_attack
 
-# 練気ゲージ上昇
+# 地の型:練気ゲージ上昇
+    # 通常攻撃
+        execute if entity @s[tag=Wpn.Ls.Normal.Normal.1] run scoreboard players add @s Wpn.Ls.SpiritGauge 100
+        execute if entity @s[tag=Wpn.Ls.Normal.Normal.2] run scoreboard players add @s Wpn.Ls.SpiritGauge 100
+        execute if entity @s[tag=Wpn.Ls.Normal.Normal.3] run scoreboard players add @s Wpn.Ls.SpiritGauge 100
+# 天の型:練気ゲージ上昇
     # 縦斬り
         execute if entity @s[tag=Wpn.Ls.Tec.Normal.1] run scoreboard players add @s Wpn.Ls.SpiritGauge 100
     # 踏み込み斬り
