@@ -7,4 +7,4 @@
 
 # 建材ゲージ消費
     scoreboard players remove @s Ply.Stats.BuildGauge.Count 3
-    scoreboard players remove @s Ply.Stats.BuildGauge 300
+    scoreboard players remove @s Ply.Stats.BuildGauge 375
