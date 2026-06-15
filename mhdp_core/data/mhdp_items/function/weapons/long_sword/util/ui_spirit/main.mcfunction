@@ -20,14 +20,19 @@
     scoreboard players reset #mhdp_temp_gauge
 
 # 練気ゲージ
+    scoreboard players operation #mhdp_temp_max_timer MhdpCore = @s Wpn.Ls.SpiritMaxTimer
+    scoreboard players operation #mhdp_temp_max_timer MhdpCore %= #const_30 Const
     scoreboard players operation #mhdp_temp_gauge MhdpCore = @s Wpn.Ls.SpiritGauge
-    execute unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit",Type:0}
+    execute if score #mhdp_temp_max_timer MhdpCore matches ..14 unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit",Type:0}
+    execute if score #mhdp_temp_max_timer MhdpCore matches 15.. unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit_max.m {Color:"spirit",Type:0}
     execute if score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit_regen",Type:0}
     scoreboard players remove #mhdp_temp_gauge MhdpCore 334
-    execute unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit",Type:1}
+    execute if score #mhdp_temp_max_timer MhdpCore matches ..14 unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit",Type:1}
+    execute if score #mhdp_temp_max_timer MhdpCore matches 15.. unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit_max.m {Color:"spirit",Type:1}
     execute if score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit_regen",Type:1}
     scoreboard players remove #mhdp_temp_gauge MhdpCore 333
-    execute unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit",Type:2}
+    execute if score #mhdp_temp_max_timer MhdpCore matches ..14 unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit",Type:2}
+    execute if score #mhdp_temp_max_timer MhdpCore matches 15.. unless score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit_max.m {Color:"spirit",Type:2}
     execute if score @s Wpn.Ls.SpiritGaugeRegen matches 1.. run function mhdp_items:weapons/long_sword/util/ui_spirit/append_spirit.m {Color:"spirit_regen",Type:2}
 
 # UI作成
@@ -48,3 +53,4 @@
 
 # 終了
     scoreboard players reset #mhdp_temp_gauge
+    scoreboard players reset #mhdp_temp_max_timer

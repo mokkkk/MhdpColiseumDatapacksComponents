@@ -94,6 +94,8 @@
         # 練気ゲージ減少用
             scoreboard objectives add Wpn.Ls.SpiritInterval dummy
             scoreboard objectives add Wpn.Ls.SpiritReduction dummy
+        # 練気マックス補正
+            scoreboard objectives add Wpn.Ls.SpiritMaxTimer dummy
     # 弓
         # 溜め時間
             scoreboard objectives add Wpn.Bw.ChargeTimer dummy

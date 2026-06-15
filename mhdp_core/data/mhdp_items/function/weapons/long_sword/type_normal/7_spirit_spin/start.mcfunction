@@ -1,0 +1,13 @@
+#> mhdp_items:weapons/long_sword/type_normal/7_spirit_spin/start
+#
+# 気刃大回転斬り 開始
+#
+# @within function mhdp_items:weapons/long_sword/type_normal/1_charge/change_to_chargeattack
+
+# 前処理
+    function mhdp_items:weapons/long_sword/util/before_attack
+
+# タグ付与
+    tag @s add Wpn.Ls.Normal.Spirit.Spin
+    execute unless score @s Wpn.Ls.SpiritLevel matches 3.. run scoreboard players remove @s Wpn.Ls.SpiritGauge 250
+    tag @s remove Ply.Weapon.NoOpe

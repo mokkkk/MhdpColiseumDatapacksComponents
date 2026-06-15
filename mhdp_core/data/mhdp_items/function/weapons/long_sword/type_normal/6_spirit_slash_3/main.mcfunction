@@ -60,7 +60,7 @@
 
 # 遷移
     # 右クリック：気刃大回転斬りに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 32.. if score @s Wpn.Ls.SpiritGauge matches 250.. run function mhdp_items:weapons/long_sword/type_normal/7_spirit_spin/start
+        execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 32.. if score @s Wpn.Ls.SpiritGauge matches 250.. run function mhdp_items:weapons/long_sword/type_normal/7_spirit_spin/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 32.. run function mhdp_items:weapons/long_sword/util/move_jump
 

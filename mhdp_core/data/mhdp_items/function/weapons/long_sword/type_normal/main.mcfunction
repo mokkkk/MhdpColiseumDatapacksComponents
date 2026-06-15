@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:weapons/long_sword/main
 
+# 共通処理
+    function mhdp_items:weapons/long_sword/type_normal/general
+
 # 無操作確認
     function mhdp_items:weapons/long_sword/util/get_no_ope
 
@@ -67,9 +70,9 @@
         # 処理
             execute if entity @s[tag=Wpn.Ls.Normal.Spirit.3] run function mhdp_items:weapons/long_sword/type_normal/6_spirit_slash_3/main
 
-# # 気刃大回転斬り
-#     # 処理
-#         execute if entity @s[tag=Wpn.Ls.Normal.Spirit.Spin] run function mhdp_items:weapons/long_sword/type_normal/7_spirit_spin/main
+# 気刃大回転斬り
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Normal.Spirit.Spin] run function mhdp_items:weapons/long_sword/type_normal/7_spirit_spin/main
 
 # 終了
     tag @s remove Ply.Weapon.NoOpe

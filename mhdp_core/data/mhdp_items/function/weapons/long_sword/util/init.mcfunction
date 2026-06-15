@@ -15,6 +15,7 @@
     scoreboard players set @s Wpn.Ls.SpiritLevel 0
     scoreboard players set @s Wpn.Ls.SpiritLevelGauge 0
     scoreboard players set @s Wpn.Ls.SpiritGaugeRegen 0
+    scoreboard players set @s Wpn.Ls.SpiritMaxTimer 0
 
 # 狩技ゲージ上限決定
     scoreboard players set @s Ply.Stats.Arts.1 0
