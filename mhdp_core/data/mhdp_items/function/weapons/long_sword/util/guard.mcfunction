@@ -6,6 +6,10 @@
 
 # 斬れ味消費なし
 
+# 地の型
+    # 鏡花の構え
+        execute if entity @s[tag=!Ply.Weapon.Type.Tech,tag=Wpn.Ls.Normal.Juncture] run return run function mhdp_items:weapons/long_sword/type_normal/27_critical_juncture/guard
+
 # 天の型
     # 鏡花の構え
         execute if entity @s[tag=Ply.Weapon.Type.Tech,tag=Wpn.Ls.Tec.Juncture] run return run function mhdp_items:weapons/long_sword/type_tec/27_critical_juncture/guard

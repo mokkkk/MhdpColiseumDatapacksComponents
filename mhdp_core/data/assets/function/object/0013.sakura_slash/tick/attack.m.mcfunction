@@ -15,8 +15,9 @@
     scoreboard players reset #mhdp_temp_target_victim_uid
 
 # 攻撃データ設定
-    $data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.LongSword.Tec.SakuraPursuit.$(Type)
-
+    $data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.LongSword.Normal.SakuraPursuit.$(Type)
+    $execute if entity @a[tag=13.TargetPlayer,tag=Ply.Weapon.Type.Tech] run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.LongSword.Tec.SakuraPursuit.$(Type)
+    
 # 攻撃実行
     execute as @a[tag=13.TargetPlayer] if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 

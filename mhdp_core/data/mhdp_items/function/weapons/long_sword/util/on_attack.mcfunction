@@ -35,8 +35,10 @@
     # 居合抜刀斬り
         execute if entity @s[tag=Wpn.Ls.Tec.IaiSlash] unless score @s Wpn.Ls.SpiritGaugeRegen matches 400.. run scoreboard players set @s Wpn.Ls.SpiritGaugeRegen 400
     # 落下突き
+        execute if entity @s[tag=Wpn.Ls.Normal.FallThrust] unless score @s Wpn.Ls.SpiritGaugeRegen matches 300.. run scoreboard players set @s Wpn.Ls.SpiritGaugeRegen 200
         execute if entity @s[tag=Wpn.Ls.Tec.FallThrust] unless score @s Wpn.Ls.SpiritGaugeRegen matches 300.. run scoreboard players set @s Wpn.Ls.SpiritGaugeRegen 300
     # 飛翔円月斬
+        execute if entity @s[tag=Wpn.Ls.Normal.SoaringSpirit.Jump] run scoreboard players set @s Wpn.Ls.SpiritGaugeRegen 1000
         execute if entity @s[tag=Wpn.Ls.Tec.SoaringSpirit.Jump] run scoreboard players set @s Wpn.Ls.SpiritGaugeRegen 1000
 
 # 練気ゲージ攻撃間隔
