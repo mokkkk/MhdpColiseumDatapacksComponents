@@ -4,6 +4,10 @@
 #
 # @within function mhdp_items:core/switch/macro/m.tick
 
+# 上限・下限
+    execute if score @s Wpn.Ls.SpiritGauge matches 1001.. run scoreboard players set @s Wpn.Ls.SpiritGauge 1000
+    execute if score @s Wpn.Ls.SpiritGauge matches ..-1 run scoreboard players set @s Wpn.Ls.SpiritGauge 0
+
 # インターバル減少
     execute if score @s Wpn.Ls.SpiritInterval matches 1.. run scoreboard players remove @s Wpn.Ls.SpiritInterval 1
 
