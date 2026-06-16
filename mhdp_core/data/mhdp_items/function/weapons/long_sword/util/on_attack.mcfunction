@@ -42,5 +42,8 @@
 # 練気ゲージ攻撃間隔
     scoreboard players set @s Wpn.Ls.SpiritInterval 60
 
+# 地の型：威合カウンター
+    execute if entity @s[tag=Wpn.Ls.Normal.SacredSlash] if entity @n[tag=Temp.Victim,tag=Mns.State.IsAttackPart] run function mhdp_items:weapons/long_sword/type_normal/9_sacred_slash/counter
+
 # 終了
     data remove storage api: Return

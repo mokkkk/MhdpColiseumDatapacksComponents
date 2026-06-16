@@ -35,7 +35,7 @@
     execute if score @s Wpn.AnimationTimer matches 23 run function mhdp_items:weapons/long_sword/type_normal/10_sacred_release_slash/animation_11
     execute if score @s Wpn.GeneralTimer matches 4 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 -10 run function mhdp_items:weapons/long_sword/type_normal/6_spirit_slash_3/particle
     execute if score @s Wpn.GeneralTimer matches 11 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 -40 run function mhdp_items:weapons/long_sword/type_normal/6_spirit_slash_3/particle
-    execute if score @s Wpn.GeneralTimer matches 22 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 -90 run function mhdp_items:weapons/long_sword/type_normal/6_spirit_slash_3/particle
+    execute if score @s Wpn.GeneralTimer matches 22 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~90 -90 run function mhdp_items:weapons/long_sword/type_normal/6_spirit_slash_3/particle
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/long_sword/type_normal/10_sacred_release_slash/attack_0
@@ -45,7 +45,7 @@
 # 移動
     execute if score @s Wpn.GeneralTimer matches 3 at @s rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:5000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 10 at @s rotated ~ -70 run function api:weapon_operation/use_player_motion.m {Strength:6000, IsForce:false, IsAdjust:false}
-    execute if score @s Wpn.GeneralTimer matches 21 at @s rotated ~ 90 run function api:weapon_operation/use_player_motion.m {Strength:5000, IsForce:false, IsAdjust:false}
+    execute if entity @s[tag=Ply.Weapon.HisStop] run tp @s @s
 
 # 演出
 
