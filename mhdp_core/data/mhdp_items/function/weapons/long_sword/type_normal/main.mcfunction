@@ -85,8 +85,7 @@
         execute if entity @s[tag=Wpn.Ls.Normal.SacredSlash] run function mhdp_items:weapons/long_sword/type_normal/9_sacred_slash/main
 
 # 気刃解放斬り
-    # 中溜め
-    # 最大溜め
+    # 処理
         execute if entity @s[tag=Wpn.Ls.Normal.SacredRelease] run function mhdp_items:weapons/long_sword/type_normal/10_sacred_release_slash/main
 
 # 終了

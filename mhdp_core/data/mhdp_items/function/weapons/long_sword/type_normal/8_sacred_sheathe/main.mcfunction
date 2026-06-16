@@ -34,6 +34,10 @@
     execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 3 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:4000, IsForce:false, IsAdjust:false}
 
+# ステップ移動
+    execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Wpn.GeneralTimer matches 51.. run function mhdp_items:core/buffering/a
+    execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 51.. if score @s Wpn.AnimationTimer matches 10.. if score @s Ply.Stats.Stamina matches 150.. run function mhdp_items:weapons/long_sword/type_normal/8_sacred_sheathe/move
+
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
@@ -42,12 +46,6 @@
     # 右クリック解除：威合抜刀斬り または 気刃解放斬りに遷移
         execute if entity @s[tag=!Ply.Flag.Ls.SacredCharge,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 5.. run function mhdp_items:weapons/long_sword/type_normal/9_sacred_slash/start
         execute if entity @s[tag=Ply.Flag.Ls.SacredCharge,tag=!Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 5.. run function mhdp_items:weapons/long_sword/type_normal/10_sacred_release_slash/start
-    # ジャンプ回避
-        # execute if entity @s[tag=Ply.Ope.IsKeyJump] if score @s Wpn.GeneralTimer matches 51.. run function mhdp_items:weapons/long_sword/type_normal/8_sacred_sheathe/cancel_jump
-
-# 狩技遷移
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/long_sword/type_normal/22_guard_rage/start
-    # execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/long_sword/type_normal/24_screw_thrust/start
 
 # 終了
-    execute if score @s Wpn.GeneralTimer matches 800.. run function mhdp_items:weapons/long_sword/type_normal/8_sacred_sheathe/end
+    execute if score @s Wpn.GeneralTimer matches 1200.. run function mhdp_items:weapons/long_sword/type_normal/8_sacred_sheathe/end

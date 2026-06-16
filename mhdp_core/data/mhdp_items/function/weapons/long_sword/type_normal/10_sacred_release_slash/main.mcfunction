@@ -58,6 +58,10 @@
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..34 run function mhdp_items:core/buffering/jump
     execute if score @s Wpn.GeneralTimer matches 3..34 run function mhdp_items:core/buffering/arts_main
 
+# アーマー
+    execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.Armor.Hyper
+    execute if score @s Wpn.GeneralTimer matches 25 run tag @s remove Ply.Weapon.Armor.Hyper
+
 # 遷移
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 32.. run function mhdp_items:weapons/long_sword/util/move_jump
