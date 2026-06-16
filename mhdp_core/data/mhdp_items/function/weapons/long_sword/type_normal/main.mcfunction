@@ -74,5 +74,20 @@
     # 処理
         execute if entity @s[tag=Wpn.Ls.Normal.Spirit.Spin] run function mhdp_items:weapons/long_sword/type_normal/7_spirit_spin/main
 
+# 威合
+    # 開始：スニーク+右クリック
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_normal/8_sacred_sheathe/start
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Normal.SacredSheathe] run function mhdp_items:weapons/long_sword/type_normal/8_sacred_sheathe/main
+
+# 威合抜刀斬り
+    # 処理
+        execute if entity @s[tag=Wpn.Ls.Normal.SacredSlash] run function mhdp_items:weapons/long_sword/type_normal/9_sacred_slash/main
+
+# 気刃解放斬り
+    # 中溜め
+    # 最大溜め
+        execute if entity @s[tag=Wpn.Ls.Normal.SacredRelease] run function mhdp_items:weapons/long_sword/type_normal/10_sacred_release_slash/main
+
 # 終了
     tag @s remove Ply.Weapon.NoOpe

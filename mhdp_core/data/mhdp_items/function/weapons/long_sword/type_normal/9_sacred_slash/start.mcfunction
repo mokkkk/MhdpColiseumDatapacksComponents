@@ -1,6 +1,6 @@
-#> mhdp_items:weapons/long_sword/type_normal/5_spirit_slash_2/start
+#> mhdp_items:weapons/long_sword/type_normal/9_sacred_slash/start
 #
-# 縦斬り 開始
+# 踏み込み気刃斬り 開始
 #
 # @within function mhdp_items:weapons/long_sword/type_normal/1_charge/change_to_chargeattack
 
@@ -8,8 +8,7 @@
     function mhdp_items:weapons/long_sword/util/before_attack
 
 # 練気確認
-    tag @s add Wpn.Ls.Normal.Spirit.2
-    scoreboard players remove @s Wpn.Ls.SpiritGauge 150
+    tag @s add Wpn.Ls.Normal.SacredSlash
 
 # タグ付与
     tag @s remove Ply.Weapon.NoOpe

@@ -44,11 +44,13 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 先行入力
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 3..16 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..16 run function mhdp_items:core/buffering/jump
     execute if score @s Wpn.GeneralTimer matches 3..16 run function mhdp_items:core/buffering/arts_main
 
 # 遷移
     # 右クリック：気刃斬り2に移行
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 16.. if score @s Wpn.Ls.SpiritGauge matches 150.. run function mhdp_items:weapons/long_sword/type_normal/5_spirit_slash_2/start
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] if score @s Wpn.GeneralTimer matches 16.. if score @s Wpn.Ls.SpiritGauge matches 150.. run function mhdp_items:weapons/long_sword/type_normal/5_spirit_slash_2/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 16.. run function mhdp_items:weapons/long_sword/util/move_jump

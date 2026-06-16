@@ -9,7 +9,7 @@
 
 # 練気確認
     tag @s add Wpn.Ls.Normal.Spirit.3
-    execute unless score @s Wpn.Ls.SpiritLevel matches 3.. run scoreboard players remove @s Wpn.Ls.SpiritGauge 200
+    scoreboard players remove @s Wpn.Ls.SpiritGauge 200
 
 # タグ付与
     tag @s remove Ply.Weapon.NoOpe

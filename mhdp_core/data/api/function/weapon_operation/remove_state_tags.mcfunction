@@ -11,6 +11,7 @@
     tag @s remove Ply.Flag.Hit
     tag @s remove Ply.Flag.Just.Success
     tag @s remove Ply.Flag.CounterSuccess
+    tag @s remove Ply.Flag.Ls.SacredCharge
     tag @s remove Ply.Weapon.NoMoveJump
 
 # ヒット数リセット
