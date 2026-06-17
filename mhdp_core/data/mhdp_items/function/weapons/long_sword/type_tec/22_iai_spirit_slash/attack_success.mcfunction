@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/1_charge/change_to_chargeattack
 
 # 命中判定
-    function api:bounding/cylinder.m {Selector:"@e[type=slime,tag=Mns.HitBox]",Tag:"Temp.Hit",Radius:6.0,Height:5.0}
+    execute rotated ~ 0 run function api:bounding/cylinder.m {Selector:"@e[type=slime,tag=Mns.HitBox]",Tag:"Temp.Hit",Radius:7.0,Height:6.0}
 
 # ターゲット決定
     execute as @e[type=slime,tag=Mns.HitBox,tag=Temp.Hit,sort=nearest,limit=1] run tag @s add Temp.Victim
