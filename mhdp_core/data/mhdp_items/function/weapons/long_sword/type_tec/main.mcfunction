@@ -43,7 +43,7 @@
 # 縦斬りコンボ
     # 縦斬り
         # 開始：左クリック
-            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/1_normal_1/start
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/1_normal_1/start
         # 処理
             execute if entity @s[tag=Wpn.Ls.Tec.Normal.1] run function mhdp_items:weapons/long_sword/type_tec/1_normal_1/main
     # 突き
@@ -67,8 +67,6 @@
             execute if entity @s[tag=Wpn.Ls.Tec.RedNormal.3] run function mhdp_items:weapons/long_sword/type_tec/14_red_normal_3/main
 
 # 踏み込み斬り
-    # 開始：前移動 + 左クリック
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsKeyForward,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/10_step_slash/start
     # 処理
         execute if entity @s[tag=Wpn.Ls.Tec.StepSlash] run function mhdp_items:weapons/long_sword/type_tec/10_step_slash/main
 

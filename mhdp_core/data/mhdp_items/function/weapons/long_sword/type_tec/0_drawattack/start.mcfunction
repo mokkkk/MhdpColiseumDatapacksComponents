@@ -17,7 +17,6 @@
 # 通常：
     # スニーク時、気刃斬りに移行
         execute if entity @s[tag=Ply.Ope.IsSneaking,tag=!Wpn.Lc.Tec.FallSpear,tag=!Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/long_sword/type_tec/4_spirit_slash_1/start
-
     # 非移動時、縦斬りに移行
         execute if entity @s[tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsSneaking,tag=!Wpn.Lc.Tec.FallSpear,tag=!Ply.Flag.SpJumpAttack] run function mhdp_items:weapons/long_sword/type_tec/1_normal_1/start
     # 前移動時、踏み込み斬りに移行

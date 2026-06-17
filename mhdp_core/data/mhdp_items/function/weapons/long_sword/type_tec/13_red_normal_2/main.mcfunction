@@ -11,6 +11,9 @@
     scoreboard players add @s Wpn.GeneralTimer 1
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
 
+# キー入力時、移動
+    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function api:weapon_operation/vector_move_before.m {Strength:3000}
+
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_chain master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.3
     execute if score @s Wpn.GeneralTimer matches 4 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
@@ -32,16 +35,11 @@
     execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/long_sword/type_tec/13_red_normal_2/attack_0
     execute if score @s Wpn.GeneralTimer matches 10 run function mhdp_items:weapons/long_sword/type_tec/13_red_normal_2/attack_1
 
-# 移動
-    execute if entity @s[tag=!Ply.Ope.IsKeyForward,tag=!Ply.Ope.IsKeyBack] if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:2500, IsForce:false, IsAdjust:false}
-    execute if entity @s[tag=Ply.Ope.IsKeyForward] if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:8000, IsForce:false, IsAdjust:false}
-
 # 演出
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
-    execute if score @s Wpn.GeneralTimer matches 11 run function api:weapon_operation/attribute_moveslow
-    execute if score @s Wpn.GeneralTimer matches 20 run function api:weapon_operation/attribute_nojump
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 16 run function api:weapon_operation/attribute_nojump
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 先行入力
