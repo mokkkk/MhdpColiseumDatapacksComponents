@@ -22,6 +22,7 @@
     execute if score @s Wpn.GeneralTimer matches 4 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^2.2 rotated ~80 -40 run function mhdp_items:weapons/long_sword/type_normal/9_sacred_slash/particle
 
 # 攻撃
+    execute if score @s Wpn.GeneralTimer matches 1..3 run function mhdp_items:weapons/long_sword/type_normal/9_sacred_slash/delay_counter
     execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/long_sword/type_normal/9_sacred_slash/attack
 
 # 移動
@@ -41,6 +42,9 @@
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 3..33 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..33 run function mhdp_items:core/buffering/jump
     execute if score @s Wpn.GeneralTimer matches 3..33 run function mhdp_items:core/buffering/arts_main
+
+# アーマー
+    execute if score @s Wpn.AnimationTimer matches 5 run tag @s remove Ply.Weapon.Armor.Hyper
 
 # 遷移
     # カウンター成功時、気刃大回転斬り
