@@ -38,6 +38,8 @@
         # エンダーアイ使用タイマー
             scoreboard objectives add Ply.Ope.EnderEyeTimer dummy
             scoreboard objectives add Ply.Ope.SneakingEnderEyeTimer dummy
+        # ジャンプキータイマー
+            scoreboard objectives add Ply.Ope.JumpKeyTimer dummy
         # アイテム使用タイマー
             scoreboard objectives add Ply.Ope.EatingTimer dummy
             scoreboard objectives add Ply.Ope.EatingTimerMax dummy

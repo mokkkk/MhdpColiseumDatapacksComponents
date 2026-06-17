@@ -72,6 +72,12 @@
         execute if entity @s[tag=!Ply.Ope.IsKeyJump] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"jump":true}}}} run tag @s add Ply.Ope.StartKeyJump
         execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeyJump] run tag @s add Ply.Ope.IsKeyJump
         execute if entity @s[tag=Ply.Ope.IsKeyJump] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"type_specific":{"type":"minecraft:player","input":{"jump":false}}}} run tag @s remove Ply.Ope.IsKeyJump
+        
+        # 短押し・長押し
+            execute if entity @s[tag=Ply.Ope.IsKeyJump] run scoreboard players add @s Ply.Ope.JumpKeyTimer 1
+            execute if entity @s[tag=!Ply.Ope.IsKeyJump] if score @s Ply.Ope.JumpKeyTimer matches 1..3 run tag @s add Ply.Ope.IsKeyJump.Short
+            execute if entity @s[tag=Ply.Ope.IsKeyJump] if score @s Ply.Ope.JumpKeyTimer matches 4 run tag @s add Ply.Ope.IsKeyJump.Long
+            execute if entity @s[tag=!Ply.Ope.IsKeyJump] run scoreboard players set @s Ply.Ope.JumpKeyTimer 0
         # 連続ジャンプ
             execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Ply.Ope.JumpInterval matches ..2 run tag @s add Ply.Ope.StartDoubleJump
     # スプリント
@@ -119,6 +125,8 @@
         # execute if entity @s[tag=Ply.Ope.StartUsingCoas] run say ニンジン棒使用
 #     # ジャンプ
 #         execute if entity @s[tag=Ply.Ope.StartKeyJump] run say ジャンプ
+        # execute if entity @s[tag=Ply.Ope.IsKeyJump.Short] run say ジャンプ短押し
+        # execute if entity @s[tag=Ply.Ope.IsKeyJump.Long] run say ジャンプ長押し
 #         execute if entity @s[tag=Ply.Ope.StartDoubleJump] run say 連続ジャンプ
 #     # キー入力
         # execute if entity @s[tag=Ply.Ope.StartKeyForward] run say 前移動
