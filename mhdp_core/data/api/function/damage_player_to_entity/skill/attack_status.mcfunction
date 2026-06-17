@@ -5,6 +5,11 @@
 # @within function api:damage_player_to_entity
 
 # 武器効果
+    # 太刀・天ノ型ゲージ色補正
+        execute if entity @s[tag=Ply.Weapon.Equip.LongSword,tag=Ply.Weapon.Type.Tech] if score @s Wpn.Ls.SpiritLevel matches 1 run scoreboard players operation #mhdp_temp_attack_value MhdpCore *= #const_attack_weapon_long_sword_spirit_level_1 Const
+        execute if entity @s[tag=Ply.Weapon.Equip.LongSword,tag=Ply.Weapon.Type.Tech] if score @s Wpn.Ls.SpiritLevel matches 2 run scoreboard players operation #mhdp_temp_attack_value MhdpCore *= #const_attack_weapon_long_sword_spirit_level_2 Const
+        execute if entity @s[tag=Ply.Weapon.Equip.LongSword,tag=Ply.Weapon.Type.Tech] if score @s Wpn.Ls.SpiritLevel matches 3 run scoreboard players operation #mhdp_temp_attack_value MhdpCore *= #const_attack_weapon_long_sword_spirit_level_3 Const
+        execute if entity @s[tag=Ply.Weapon.Equip.LongSword,tag=Ply.Weapon.Type.Tech] if score @s Wpn.Ls.SpiritLevel matches 1.. run scoreboard players operation #mhdp_temp_attack_value MhdpCore /= #const_100 Const
     # ランス・ガードレイジ（攻撃）
         execute if entity @s[tag=Ply.Weapon.Equip.Lance] if score @s Wpn.Lc.RageLevel matches 1 run scoreboard players operation #mhdp_temp_attack_value MhdpCore *= #const_attack_weapon_lance_rage_1 Const
         execute if entity @s[tag=Ply.Weapon.Equip.Lance] if score @s Wpn.Lc.RageLevel matches 2 run scoreboard players operation #mhdp_temp_attack_value MhdpCore *= #const_attack_weapon_lance_rage_2 Const

@@ -119,6 +119,10 @@
     scoreboard players set #const_100 Const 100
     scoreboard players set #const_10000 Const 10000
     # 攻撃力関連
+        # 太刀・ゲージ色
+            scoreboard players set #const_attack_weapon_long_sword_spirit_level_1 Const 105
+            scoreboard players set #const_attack_weapon_long_sword_spirit_level_2 Const 110
+            scoreboard players set #const_attack_weapon_long_sword_spirit_level_3 Const 120
         # ランス・ガードレイジ
             scoreboard players set #const_attack_weapon_lance_rage_1 Const 105
             scoreboard players set #const_attack_weapon_lance_rage_2 Const 110

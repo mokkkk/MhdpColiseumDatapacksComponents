@@ -5,14 +5,18 @@
 # @input storage api: Arg.
 
 # 物理ダメージ斬れ味補正
-        scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 100
-        execute if score @s Ply.Stats.CurrentSharpnessColor matches ..0 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 50
-        execute if score @s Ply.Stats.CurrentSharpnessColor matches 1 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 75
-        execute if score @s Ply.Stats.CurrentSharpnessColor matches 2 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 100
-        execute if score @s Ply.Stats.CurrentSharpnessColor matches 3 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 105
-        execute if score @s Ply.Stats.CurrentSharpnessColor matches 4 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 120
-        execute if score @s Ply.Stats.CurrentSharpnessColor matches 5 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 132
-        execute if score @s Ply.Stats.CurrentSharpnessColor matches 6.. run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 139
+    scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 100
+    execute if score @s Ply.Stats.CurrentSharpnessColor matches ..0 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 50
+    execute if score @s Ply.Stats.CurrentSharpnessColor matches 1 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 75
+    execute if score @s Ply.Stats.CurrentSharpnessColor matches 2 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 100
+    execute if score @s Ply.Stats.CurrentSharpnessColor matches 3 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 105
+    execute if score @s Ply.Stats.CurrentSharpnessColor matches 4 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 120
+    execute if score @s Ply.Stats.CurrentSharpnessColor matches 5 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 132
+    execute if score @s Ply.Stats.CurrentSharpnessColor matches 6.. run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 139
+
+# 武器効果
+    # 太刀・地ノ型の練気補正
+        execute if entity @s[tag=Ply.Weapon.Equip.LongSword,tag=!Ply.Weapon.Type.Tech] if score @s Wpn.Ls.SpiritMaxTimer matches 1.. run scoreboard players add #mhdp_temp_damage_sharpness_multiply MhdpCore 13
 
 # 物理ダメージ計算
     # モーション値取得
@@ -31,6 +35,10 @@
     execute if score @s Ply.Stats.CurrentSharpnessColor matches 2..4 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 100
     execute if score @s Ply.Stats.CurrentSharpnessColor matches 5 run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 115
     execute if score @s Ply.Stats.CurrentSharpnessColor matches 6.. run scoreboard players set #mhdp_temp_damage_sharpness_multiply MhdpCore 125
+
+# 武器効果
+    # 太刀・地ノ型の練気補正
+        execute if entity @s[tag=Ply.Weapon.Equip.LongSword,tag=!Ply.Weapon.Type.Tech] if score @s Wpn.Ls.SpiritMaxTimer matches 1.. run scoreboard players add #mhdp_temp_damage_sharpness_multiply MhdpCore 8
 
 # 属性
     # 属性ダメージ加算
