@@ -21,8 +21,8 @@
     execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/long_sword/type_tec/5_spirit_slash_2/animation_4
     execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/long_sword/type_tec/5_spirit_slash_2/animation_5
     execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/long_sword/type_tec/5_spirit_slash_2/animation_2
-    execute if score @s Wpn.GeneralTimer matches 7 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 30 run function mhdp_items:weapons/long_sword/type_tec/4_spirit_slash_1/particle
-    execute if score @s Wpn.GeneralTimer matches 7 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^2.2 rotated ~80 30 run function mhdp_items:weapons/long_sword/type_tec/4_spirit_slash_1/particle
+    execute if score @s Wpn.GeneralTimer matches 7 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 30 run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/particle
+    execute if score @s Wpn.GeneralTimer matches 7 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^2.2 rotated ~80 30 run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/particle
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 7 run function mhdp_items:weapons/long_sword/type_tec/8_move_slash/attack.m {Direction:"Left"}
@@ -43,7 +43,7 @@
     execute if entity @s[tag=Ply.Ope.StartLeftClick,tag=!Ply.Ope.IsKeyForward] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsKeyForward] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/b
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/c
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/e
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/e
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/f
     execute if score @s Wpn.GeneralTimer matches 3..22 run function mhdp_items:core/buffering/arts_main
 

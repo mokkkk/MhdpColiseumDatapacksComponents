@@ -43,7 +43,7 @@
     execute if entity @s[tag=Ply.Ope.StartLeftClick,tag=!Ply.Ope.IsKeyForward] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsKeyForward] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/b
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/c
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/e
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/e
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..27 run function mhdp_items:core/buffering/f
     execute if score @s Wpn.GeneralTimer matches 3..22 run function mhdp_items:core/buffering/arts_main
 

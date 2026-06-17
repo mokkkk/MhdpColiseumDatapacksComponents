@@ -46,7 +46,7 @@
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 3..36 run function mhdp_items:core/buffering/a
-    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 3..36 run function mhdp_items:core/buffering/e
+    execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..36 run function mhdp_items:core/buffering/e
     execute if score @s Wpn.GeneralTimer matches 3..36 run function mhdp_items:core/buffering/arts_main
 
 # 無敵時間
