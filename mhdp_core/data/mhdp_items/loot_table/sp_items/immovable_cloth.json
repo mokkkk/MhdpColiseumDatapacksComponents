@@ -6,18 +6,18 @@
                     "functions": [
                         {
                             "components": {
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:1000,ItemName:\"immovable_cloth\",UseTimer:50,IsSpItem:1b}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:1000,ItemName:\"immovable_cloth\",UseTimer:10,IsSpItem:1b}",
                                 "minecraft:item_model": "sp_items/immovable_cloth",
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "text": "不動の装衣"
+                                    "translate": "item.consume.immovable_cloth.name"
                                 },
                                 "minecraft:lore": [
                                     {
                                         "color": "dark_purple",
                                         "italic": false,
-                                        "text": "[特殊装具]"
+                                        "translate": "item.generic.sp_item_prefix"
                                     },
                                     {
                                         "color": "dark_gray",
@@ -27,17 +27,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "一定時間の間、"
+                                        "translate": "item.consume.immovable_cloth.lore0"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "ノックバックを無効化する。"
+                                        "translate": "item.consume.immovable_cloth.lore1"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "受けるダメージも軽減する。"
+                                        "translate": "item.consume.immovable_cloth.lore2"
                                     },
                                     {
                                         "color": "dark_gray",

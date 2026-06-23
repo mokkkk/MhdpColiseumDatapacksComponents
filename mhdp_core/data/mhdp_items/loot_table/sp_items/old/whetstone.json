@@ -6,12 +6,12 @@
                     "functions": [
                         {
                             "components": {
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:103,ItemName:\"nikuyaki\",UseTimer:10}",
-                                "minecraft:item_model": "sp_items/nikuyaki",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:100,ItemName:\"whetstone\",UseTimer:50}",
+                                "minecraft:item_model": "sp_items/whetstone",
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "translate": "item.consume.nikuyaki.name"
+                                    "text": "砥石"
                                 },
                                 "minecraft:lore": [
                                     {
@@ -22,17 +22,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "translate": "item.consume.nikuyaki.lore0"
+                                        "text": "武器を研磨し，"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "translate": "item.consume.nikuyaki.lore1"
+                                        "text": "斬れ味を回復させる。"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "translate": "item.consume.nikuyaki.lore2"
+                                        "text": "何度でも使用できる。"
                                     },
                                     {
                                         "color": "dark_gray",

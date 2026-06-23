@@ -6,12 +6,12 @@
                     "functions": [
                         {
                             "components": {
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:103,ItemName:\"nikuyaki\",UseTimer:10}",
-                                "minecraft:item_model": "sp_items/nikuyaki",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:102,ItemName:\"carving_knife\",UseTimer:50}",
+                                "minecraft:item_model": "sp_items/carving_knife",
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "translate": "item.consume.nikuyaki.name"
+                                    "text": "剥ぎ取りナイフ"
                                 },
                                 "minecraft:lore": [
                                     {
@@ -22,17 +22,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "translate": "item.consume.nikuyaki.lore0"
+                                        "text": "狩猟生活の必需品。"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "translate": "item.consume.nikuyaki.lore1"
+                                        "text": "倒したモンスターに使用すると、"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "translate": "item.consume.nikuyaki.lore2"
+                                        "text": "素材を剥ぎ取ることができる。"
                                     },
                                     {
                                         "color": "dark_gray",

@@ -6,12 +6,12 @@
                     "functions": [
                         {
                             "components": {
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:100,ItemName:\"whetstone\",UseTimer:50}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:100,ItemName:\"whetstone\",UseTimer:10}",
                                 "minecraft:item_model": "sp_items/whetstone",
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "text": "砥石"
+                                    "translate": "item.consume.whetstone.name"
                                 },
                                 "minecraft:lore": [
                                     {
@@ -22,17 +22,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "武器を研磨し，"
+                                        "translate": "item.consume.whetstone.lore0"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "斬れ味を回復させる。"
+                                        "translate": "item.consume.whetstone.lore1"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "何度でも使用できる。"
+                                        "translate": "item.consume.whetstone.lore2"
                                     },
                                     {
                                         "color": "dark_gray",

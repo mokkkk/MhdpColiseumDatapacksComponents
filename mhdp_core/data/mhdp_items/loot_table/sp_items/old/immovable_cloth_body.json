@@ -14,18 +14,23 @@
                                 "minecraft:enchantments": {
                                     "minecraft:binding_curse": 1
                                 },
-                                "minecraft:item_model": "sp_items/immovable_cloth_head",
+                                "minecraft:item_model": "sp_items/immovable_cloth",
                                 "minecraft:item_name": {
-                                    "translate": "item.consume.immovable_cloth.name"
+                                    "text": "不動の装衣",
+                                    "type": "text"
                                 },
                                 "minecraft:tooltip_display": {
                                     "hide_tooltip": true
+                                },
+                                "minecraft:equippable": {
+                                    "slot": "chest",
+                                    "asset_id": "rocksteady"
                                 }
                             },
                             "function": "minecraft:set_components"
                         }
                     ],
-                    "name": "minecraft:carrot_on_a_stick",
+                    "name": "minecraft:chainmail_chestplate",
                     "type": "minecraft:item"
                 }
             ],

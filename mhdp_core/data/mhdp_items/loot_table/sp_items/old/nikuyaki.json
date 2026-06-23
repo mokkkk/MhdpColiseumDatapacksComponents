@@ -6,12 +6,12 @@
                     "functions": [
                         {
                             "components": {
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:103,ItemName:\"nikuyaki\",UseTimer:10}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:103,ItemName:\"nikuyaki\",UseTimer:50}",
                                 "minecraft:item_model": "sp_items/nikuyaki",
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "translate": "item.consume.nikuyaki.name"
+                                    "text": "肉焼きセット"
                                 },
                                 "minecraft:lore": [
                                     {
@@ -22,17 +22,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "translate": "item.consume.nikuyaki.lore0"
+                                        "text": "使用すると肉を焼くことができる。"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "translate": "item.consume.nikuyaki.lore1"
+                                        "text": "上手に焼こう。"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "translate": "item.consume.nikuyaki.lore2"
+                                        "text": ""
                                     },
                                     {
                                         "color": "dark_gray",

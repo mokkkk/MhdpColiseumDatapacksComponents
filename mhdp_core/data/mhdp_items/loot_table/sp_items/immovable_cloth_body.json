@@ -16,8 +16,7 @@
                                 },
                                 "minecraft:item_model": "sp_items/immovable_cloth",
                                 "minecraft:item_name": {
-                                    "text": "不動の装衣",
-                                    "type": "text"
+                                    "translate": "item.consume.immovable_cloth.name"
                                 },
                                 "minecraft:tooltip_display": {
                                     "hide_tooltip": true

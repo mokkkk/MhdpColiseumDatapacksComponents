@@ -6,18 +6,18 @@
                     "functions": [
                         {
                             "components": {
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:1001,ItemName:\"wirebug\",UseTimer:50,IsSpItem:1b}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:3,ItemId:1001,ItemName:\"wirebug\",UseTimer:10,IsSpItem:1b}",
                                 "minecraft:item_model": "sp_items/wirebug",
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "text": "翔蟲"
+                                    "translate": "item.consume.wirebug.name"
                                 },
                                 "minecraft:lore": [
                                     {
                                         "color": "dark_purple",
                                         "italic": false,
-                                        "text": "[特殊装具]"
+                                        "translate": "item.generic.sp_item_prefix"
                                     },
                                     {
                                         "color": "dark_gray",
@@ -27,17 +27,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "正面方向に糸を伸ばし、"
+                                        "translate": "item.consume.wirebug.lore0"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "高速で移動する。"
+                                        "translate": "item.consume.wirebug.lore1"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "移動中は鉄蟲糸技が使用可能。"
+                                        "translate": "item.consume.wirebug.lore2"
                                     },
                                     {
                                         "color": "dark_gray",
