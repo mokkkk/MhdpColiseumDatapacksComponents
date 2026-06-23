@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:sp_items/nikuyaki/tick
 
+# 紐づけ
+    function mhdp_items:sp_items/nikuyaki/using/get_target_model
+
 # アイテム入手
     execute if score @n[type=item_display,tag=Itm.Root.Nikuyaki.Target] MhdpCore matches ..79 run data modify storage api: Arg.Path set value "mhdp_items:consume_items/raw_meat"
     execute if score @n[type=item_display,tag=Itm.Root.Nikuyaki.Target] MhdpCore matches 80..169 run data modify storage api: Arg.Path set value "mhdp_items:consume_items/half_cooked_meat"
@@ -20,3 +23,6 @@
     
 # 使用中断
     function mhdp_items:sp_items/nikuyaki/util/interrupt
+
+# 紐づけ終了
+    tag @n[type=item_display,tag=Itm.Root.Nikuyaki,tag=Itm.Root.Nikuyaki.Target] remove Itm.Root.Nikuyaki.Target

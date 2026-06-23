@@ -13,9 +13,8 @@
 # モデル消去
     # 念のため紐づけ
         function mhdp_items:sp_items/nikuyaki/using/get_target_model
-    # 消去
-        execute as @n[type=item_display,tag=Itm.Root.Nikuyaki.Target] run tp @s 0.0 0.0 0.0
-        execute as @n[type=item_display,tag=Itm.Root.Nikuyaki.Target] run function animated_java:nikuyaki/remove/this
+    # オブジェクトに消去処理
+        execute as @n[type=item_display,tag=Itm.Root.Nikuyaki.Target] on vehicle run tag @s add 15.IsRemove
 
 # アイテム使用開始前の位置に戻る
     function mhdp_core:player/data/load_data

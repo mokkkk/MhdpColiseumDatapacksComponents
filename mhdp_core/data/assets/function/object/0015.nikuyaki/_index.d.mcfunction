@@ -4,3 +4,4 @@
 #> tag
 # @within function **
 #declare tag 15.IsInit Init終了
+#declare tag 15.IsRemove Remove予約
