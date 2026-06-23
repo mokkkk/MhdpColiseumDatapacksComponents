@@ -21,5 +21,21 @@
     data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.LongSword.Tec.SpiritRelease.1
     execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
+# 演出用VFXオブジェクト召喚
+    # データ設定
+        data modify storage api: Arg.Override.Tag set value "slash_strong"
+        data modify storage api: Arg.Override.IsCounter set value false
+        data modify storage api: Arg.Override.Rotation set value -1.39626
+        data modify storage api: Arg.Override.Scale set value [3f,12f,3f]
+    # 召喚
+        execute positioned ~ ~1.65 ~ positioned ^-1.3 ^0.2 ^3.5 facing entity @s eyes run function api:object/summon.m {ObjectId:7}
+    # データ設定
+        data modify storage api: Arg.Override.Tag set value "slash_strong"
+        data modify storage api: Arg.Override.IsCounter set value false
+        data modify storage api: Arg.Override.Rotation set value -2.19626
+        data modify storage api: Arg.Override.Scale set value [3f,12f,3f]
+    # 召喚
+        execute positioned ~ ~1.65 ~ positioned ^1.4 ^-0.2 ^3.5 facing entity @s eyes run function api:object/summon.m {ObjectId:7}
+
 # 終了
     tag @e[type=slime,tag=Temp.Hit] remove Temp.Hit

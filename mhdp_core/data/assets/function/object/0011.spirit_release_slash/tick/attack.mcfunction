@@ -17,6 +17,9 @@
 # 攻撃データ設定
     data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.LongSword.Tec.SpiritRelease.3
 
+# 演出
+    execute if score @s ObjectTick matches ..12 at @n[tag=Temp.Victim] facing entity @p[tag=11.TargetPlayer] eyes run function assets:object/0011.spirit_release_slash/tick/vfx_start
+
 # 攻撃実行
     execute as @a[tag=11.TargetPlayer] if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 
