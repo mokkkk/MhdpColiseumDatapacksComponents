@@ -21,12 +21,12 @@
     tag @s add Itm.Sp.Nikuyaki.Using
 
 # モデル召喚
-    execute at @s rotated ~ 0 positioned ^ ^ ^2 run function animated_java:nikuyaki/summon {args: {animation: 'baking', start_animation: true}}
+    # execute at @s rotated ~ 0 positioned ^ ^ ^2 run function animated_java_nikuyaki:nikuyaki/summon {args: {animation: 'baking', start_animation: true}}
 
 # 紐づけ
-    scoreboard players operation @n[type=item_display,tag=Itm.Root,tag=Itm.Root.Nikuyaki,tag=Itm.Root.Nikuyaki.Start] Ply.Uid = @s Ply.Uid
-    scoreboard players operation @n[type=interaction,tag=Other.Interaction.Meat,tag=!Other.Interaction.Meat.IsInit] Ply.Uid = @s Ply.Uid
-    scoreboard players set @n[type=item_display,tag=Itm.Root,tag=Itm.Root.Nikuyaki,tag=Itm.Root.Nikuyaki.Start] Mns.General.DummyCounter 10
+    # scoreboard players operation @n[type=item_display,tag=Itm.Root,tag=Itm.Root.Nikuyaki,tag=Itm.Root.Nikuyaki.Start] Ply.Uid = @s Ply.Uid
+    # scoreboard players operation @n[type=interaction,tag=Other.Interaction.Meat,tag=!Other.Interaction.Meat.IsInit] Ply.Uid = @s Ply.Uid
+    # scoreboard players set @n[type=item_display,tag=Itm.Root,tag=Itm.Root.Nikuyaki,tag=Itm.Root.Nikuyaki.Start] Mns.General.DummyCounter 10
 
 # 使用開始前の位置を保存
     function mhdp_core:player/data/load_data

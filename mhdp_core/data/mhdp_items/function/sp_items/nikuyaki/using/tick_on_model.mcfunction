@@ -6,10 +6,11 @@
 
 # remove予約されている場合、削除
     execute if entity @s[tag=Itm.Root.Nikuyaki.Remove] as @p[tag=Ply.Temp.Target] run ride @s dismount
-    execute if entity @s[tag=Itm.Root.Nikuyaki.Remove] run function animated_java:nikuyaki/remove/this
+    execute if entity @s[tag=Itm.Root.Nikuyaki.Remove] run function animated_java_nikuyaki:nikuyaki/remove/this
 
 # アニメーション処理実行
-    function animated_java:nikuyaki/root/on_tick
+    function animated_java:global/data_manager/on_tick
+    function animated_java:global/root/on_tick
 
 # スコア増加
     scoreboard players add @s MhdpCore 1

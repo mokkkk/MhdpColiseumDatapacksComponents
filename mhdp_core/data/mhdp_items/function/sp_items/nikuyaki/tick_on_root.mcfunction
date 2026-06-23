@@ -8,5 +8,4 @@
     scoreboard players remove @s Mns.General.DummyCounter 1
 
 # カウンターがなくなったら削除
-    execute if score @s Mns.General.DummyCounter matches ..0 on passengers if entity @s[tag=aj.data] run function animated_java:nikuyaki/remove/zzz/0
-    execute if score @s Mns.General.DummyCounter matches ..0 run function animated_java:nikuyaki/remove/this
+    execute if score @s Mns.General.DummyCounter matches ..0 run function animated_java_nikuyaki:nikuyaki/remove/this
