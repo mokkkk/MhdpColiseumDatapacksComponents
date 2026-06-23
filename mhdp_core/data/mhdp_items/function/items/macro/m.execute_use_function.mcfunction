@@ -5,4 +5,4 @@
 # @within function mhdp_items:/**
 
 # functionを実行する
-    $function mhdp_items:items/switch/$(Prefix)/on_use
+    $function mhdp_items:items/switch/$(ItemName)/on_use

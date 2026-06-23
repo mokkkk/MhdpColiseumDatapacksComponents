@@ -16,7 +16,7 @@
                                         "sound_id": ""
                                     }
                                 },
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:57,ItemName:\"RawMeat\",UseTimer:99999999}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:57,ItemName:\"raw_meat\",UseTimer:99999999}",
                                 "minecraft:food": {
                                     "can_always_eat": true,
                                     "nutrition": 0,
@@ -26,7 +26,7 @@
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "text": "生肉"
+                                    "translate": "item.consume.raw_meat.name"
                                 },
                                 "minecraft:lore": [
                                     {
@@ -37,17 +37,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "肉焼きセットを使えば"
+                                        "translate": "item.consume.raw_meat.lore0"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "焼いて食べることができる。"
+                                        "translate": "item.consume.raw_meat.lore1"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": ""
+                                        "translate": "item.consume.raw_meat.lore2"
                                     },
                                     {
                                         "color": "dark_gray",

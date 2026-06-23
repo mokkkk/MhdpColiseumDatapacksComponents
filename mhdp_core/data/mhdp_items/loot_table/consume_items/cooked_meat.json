@@ -16,7 +16,7 @@
                                         "sound_id": ""
                                     }
                                 },
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:56,ItemName:\"CookedMeat\",UseTimer:100}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:56,ItemName:\"cooked_meat\",UseTimer:100}",
                                 "minecraft:food": {
                                     "can_always_eat": true,
                                     "nutrition": 0,
@@ -26,7 +26,7 @@
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "text": "こんがり肉"
+                                    "translate": "item.consume.cooked_meat.name"
                                 },
                                 "minecraft:lore": [
                                     {
@@ -37,17 +37,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "おいしく焼けた肉。"
+                                        "translate": "item.consume.cooked_meat.lore0"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "体力の最大値が上昇し、"
+                                        "translate": "item.consume.cooked_meat.lore1"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "さらに体力を完全に回復する。"
+                                        "translate": "item.consume.cooked_meat.lore2"
                                     },
                                     {
                                         "color": "dark_gray",

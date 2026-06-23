@@ -16,7 +16,7 @@
                                         "sound_id": ""
                                     }
                                 },
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:54,ItemName:\"HalfCookedMeat\",UseTimer:100}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:54,ItemName:\"half_cooked_meat\",UseTimer:100}",
                                 "minecraft:food": {
                                     "can_always_eat": true,
                                     "nutrition": 0,
@@ -26,7 +26,7 @@
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "text": "生焼け肉"
+                                    "translate": "item.consume.half_cooked_meat.name"
                                 },
                                 "minecraft:lore": [
                                     {
@@ -37,17 +37,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "火が通っていない肉。"
+                                        "translate": "item.consume.half_cooked_meat.lore0"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "体力を少量回復する。"
+                                        "translate": "item.consume.half_cooked_meat.lore1"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": ""
+                                        "translate": "item.consume.half_cooked_meat.lore2"
                                     },
                                     {
                                         "color": "dark_gray",

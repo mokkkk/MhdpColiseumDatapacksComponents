@@ -16,7 +16,7 @@
                                         "sound_id": ""
                                     }
                                 },
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:53,ItemName:\"MaxPotion\",UseTimer:10}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:2,ItemId:53,ItemName:\"max_potion\",UseTimer:10}",
                                 "minecraft:food": {
                                     "can_always_eat": true,
                                     "nutrition": 0,
@@ -26,7 +26,7 @@
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "text": "秘薬"
+                                    "translate": "item.consume.max_potion.name"
                                 },
                                 "minecraft:lore": [
                                     {
@@ -37,17 +37,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "体力の最大値が上昇し、"
+                                        "translate": "item.consume.max_potion.lore0"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "さらに体力を完全に回復する。"
+                                        "translate": "item.consume.max_potion.lore1"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": ""
+                                        "translate": "item.consume.max_potion.lore2"
                                     },
                                     {
                                         "color": "dark_gray",

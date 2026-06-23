@@ -16,7 +16,7 @@
                                         "sound_id": ""
                                     }
                                 },
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:55,ItemName:\"BurntMeat\",UseTimer:100}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:55,ItemName:\"burnt_meat\",UseTimer:100}",
                                 "minecraft:food": {
                                     "can_always_eat": true,
                                     "nutrition": 0,
@@ -26,7 +26,7 @@
                                 "minecraft:item_name": {
                                     "color": "green",
                                     "italic": false,
-                                    "text": "コゲ肉"
+                                    "translate": "item.consume.burnt_meat.name"
                                 },
                                 "minecraft:lore": [
                                     {
@@ -37,17 +37,17 @@
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "黒焦げになってしまった肉。"
+                                        "translate": "item.consume.burnt_meat.lore0"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": "食べられなくはない……"
+                                        "translate": "item.consume.burnt_meat.lore1"
                                     },
                                     {
                                         "color": "white",
                                         "italic": false,
-                                        "text": ""
+                                        "translate": "item.consume.burnt_meat.lore2"
                                     },
                                     {
                                         "color": "dark_gray",
