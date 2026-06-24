@@ -36,16 +36,18 @@
     execute if score @s Wpn.AnimationTimer matches 29 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_9
     execute if score @s Wpn.AnimationTimer matches 30 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_10
     execute if score @s Wpn.AnimationTimer matches 31 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_11
-    # execute if score @s Wpn.AnimationTimer matches 50 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_13
-    # execute if score @s Wpn.AnimationTimer matches 52 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/animation_14
     execute if score @s Wpn.GeneralTimer matches 4 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 45 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/particle
     execute if score @s Wpn.GeneralTimer matches 9 positioned ~ ~1.65 ~ positioned ^-0.3 ^ ^1.2 rotated ~80 -45 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/particle
-    execute if score @s Wpn.GeneralTimer matches 23 positioned ~ ~1.65 ~ positioned ^ ^ ^ rotated ~80 -100 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/particle
-    execute if score @s Wpn.GeneralTimer matches 24 positioned ~ ~1.65 ~ positioned ^ ^ ^ rotated ~80 100 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/particle
+    execute if score @s Wpn.GeneralTimer matches 23 positioned ~ ~1.65 ~ positioned ^ ^ ^ rotated ~80 -10 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/particle
+    execute if score @s Wpn.GeneralTimer matches 24 positioned ~ ~1.65 ~ positioned ^ ^ ^ rotated ~80 10 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/particle
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/attack_0
+    execute if score @s Wpn.GeneralTimer matches 5 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/effect.m {Rotation:-1.39626,PosX:-1.3,PosY:0.2}
+    execute if score @s Wpn.GeneralTimer matches 7 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/effect.m {Rotation:-2.19626,PosX:1.4,PosY:-0.3}
     execute if score @s Wpn.GeneralTimer matches 9 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/attack_1
+    execute if score @s Wpn.GeneralTimer matches 10 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/effect.m {Rotation:0.9,PosX:-1.3,PosY:0.4}
+    execute if score @s Wpn.GeneralTimer matches 12 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/effect.m {Rotation:1.8,PosX:1.4,PosY:-0.2}
     execute if score @s Wpn.GeneralTimer matches 24 run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/attack_2
 
 # 移動
@@ -68,14 +70,6 @@
     execute if entity @s[tag=Ply.Ope.StartLeftClick,tag=Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..55 run function mhdp_items:core/buffering/b
     execute if entity @s[tag=Ply.Ope.IsKeyJump.Short,tag=!Ply.Ope.IsKeySprint,tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 3..55 run function mhdp_items:core/buffering/jump
     execute if score @s Wpn.GeneralTimer matches 3..55 run function mhdp_items:core/buffering/arts_main
-
-# 遷移
-    # # 右クリック：気刃大回転斬りに移行
-    #     execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 35.. if score @s Wpn.Ls.SpiritGauge matches 250.. run function mhdp_items:weapons/long_sword/type_tec/7_spirit_spin/start
-    # # スニーク右クリック：見切り斬りに移行
-    #     execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 35.. if score @s Wpn.Ls.SpiritGauge matches 1.. run function mhdp_items:weapons/long_sword/type_tec/9_foresight_slash/start
-    # # ジャンプ回避
-    #     execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 35.. run function mhdp_items:weapons/long_sword/util/move_jump
 
 # 狩技遷移
     execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 49 run function mhdp_items:weapons/long_sword/type_tec/27_critical_juncture/start

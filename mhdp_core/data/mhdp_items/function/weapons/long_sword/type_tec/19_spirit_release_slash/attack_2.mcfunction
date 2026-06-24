@@ -29,7 +29,7 @@
 
 # 演出用VFXオブジェクト召喚
     # データ設定
-        data modify storage api: Arg.Override.Tag set value "slash_strong"
+        data modify storage api: Arg.Override.Tag set value "slash_sharp"
         data modify storage api: Arg.Override.IsCounter set value false
         data modify storage api: Arg.Override.Rotation set value -1.5708
         data modify storage api: Arg.Override.Scale set value [7f,20f,7f]
