@@ -55,13 +55,9 @@
 
 # 飛び込み突き
     # 開始：右クリック
-            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/lance/type_normal/5_dash_spear/start
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/lance/type_normal/5_dash_spear/start
     # 処理
         execute if entity @s[tag=Wpn.Lc.Normal.DashSpear] run function mhdp_items:weapons/lance/type_normal/5_dash_spear/main
-
-# 薙ぎ払い
-    # 処理
-        execute if entity @s[tag=Wpn.Lc.Normal.Sweep] run function mhdp_items:weapons/lance/type_normal/6_sweep/main
 
 # ガード
     # 開始：スニーク
