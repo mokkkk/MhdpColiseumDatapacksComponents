@@ -15,6 +15,6 @@
     # 通常時
         execute at @s rotated ~ 0 run function api:bounding/cake.m {Selector:"@e[type=area_effect_cloud,tag=Other.Temp.GuardVector]",Tag:"Other.Temp.GuardVector.Success",Radius:3.0,Height:3.0,Angle:90.0}
 # 攻撃元を向いていない場合、ガード失敗
-    execute unless entity @n[type=area_effect_cloud,tag=Other.Temp.GuardVector,tag=Other.Temp.GuardVector.Success,distance=..5] run tag @s remove Ply.Weapon.Guard
+    execute positioned as @s unless entity @n[type=area_effect_cloud,tag=Other.Temp.GuardVector,tag=Other.Temp.GuardVector.Success,distance=..5] run tag @s remove Ply.Weapon.Guard
 # 終了
     kill @n[type=area_effect_cloud,tag=Other.Temp.GuardVector]

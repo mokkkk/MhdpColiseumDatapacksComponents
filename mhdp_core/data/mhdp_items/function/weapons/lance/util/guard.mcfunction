@@ -5,6 +5,7 @@
 # @within function mhdp_items:core/switch/macro/m.guard
 
 # 斬れ味消費なし
+    say weapon guard
 
 # 天の型
     # ジャストガード判定
