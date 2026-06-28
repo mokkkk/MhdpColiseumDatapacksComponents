@@ -22,7 +22,7 @@
 # 非発見時
     execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 0 run function mhdp_monster_dino:core/tick/animation/change/on_relax/main
 # 警戒時
-    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 1 run function mhdp_monster_dino:core/tick/animation/change/on_caution/main
+    # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 1 run function mhdp_monster_dino:core/tick/animation/change/on_caution/main
 # 戦闘時
     # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 2 run function mhdp_monster_dino:core/tick/animation/change/on_battle/main
 

@@ -21,7 +21,6 @@
         execute if score @s Mns.General.Phase matches 1 run function mhdp_monster_dino:core/tick/on_caution/tick
     # 戦闘時
         execute if score @s Mns.General.Phase matches 2 run function mhdp_monster_dino:core/tick/on_battle/tick
-    # function mhdp_monsters:core/util/tick/tick
 
 # アニメーションイベントハンドラ
     function mhdp_monster_dino:core/tick/animation/event/main

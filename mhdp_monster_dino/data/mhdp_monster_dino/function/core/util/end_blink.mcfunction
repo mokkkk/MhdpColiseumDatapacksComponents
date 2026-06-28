@@ -1,15 +1,15 @@
-#> mhdp_monster_ranposu:core/util/end_blink
+#> mhdp_monster_dino:core/util/end_blink
 #
 # まばたき終了時のモデル変更
 #
 # @within function mhdp_monsters:core/switch/macro/m.end_blink
 
-# say TODO: mhdp_monster_ranposu:core/util/end_blink
+# say TODO: mhdp_monster_dino:core/util/end_blink
 
-# モデル変更
-    execute if entity @s[tag=!Mns.Break.Head] run function animated_java_ranposu:ranposu/as_node {name: 'head_upper', command: \
-        'data modify entity @s item.components."minecraft:item_model" set value "animated_java_ranposu:blueprint/ranposu/head_upper"'\
-    }
-    execute if entity @s[tag=Mns.Break.Head] run function animated_java_ranposu:ranposu/as_node {name: 'head_upper', command: \
-        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/ranposu/head_upper_break"'\
-    }
+# # モデル変更
+#     execute if entity @s[tag=!Mns.Break.Head] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+#         'data modify entity @s item.components."minecraft:item_model" set value "animated_java_dino:blueprint/dino/head_upper"'\
+#     }
+#     execute if entity @s[tag=Mns.Break.Head] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+#         'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_break"'\
+#     }

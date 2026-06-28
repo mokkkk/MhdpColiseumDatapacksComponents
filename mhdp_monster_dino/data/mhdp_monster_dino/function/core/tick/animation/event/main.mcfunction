@@ -11,7 +11,7 @@
 # 移動
     execute if entity @s[tag=animated_java_dino.dino.animation.walk_relax.playing] run function mhdp_monster_dino:core/tick/animation/event/walk_relax/main
 # 生態行動
-    execute if entity @s[tag=animated_java_dino.dino.animation.ecology_relax.playing] run function mhdp_monster_dino:core/tick/animation/event/ecology_relax/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.ecology_relax_short.playing] run function mhdp_monster_dino:core/tick/animation/event/ecology_relax_short/main
     execute if entity @s[tag=animated_java_dino.dino.animation.ecology_relax_long.playing] run function mhdp_monster_dino:core/tick/animation/event/ecology_relax_long/main
 
 # ## 警戒時

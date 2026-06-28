@@ -8,11 +8,11 @@
     function mhdp_monsters:core/util/other/turn_by_value
 
 # 移動
-    execute if score @s aj.walk_relax.frame matches ..13 at @s run tp @s ^ ^ ^0.04
-    execute if score @s aj.walk_relax.frame matches 14..23 at @s run tp @s ^ ^ ^0.1
-    execute if score @s aj.walk_relax.frame matches 24..41 at @s run tp @s ^ ^ ^0.04
-    execute if score @s aj.walk_relax.frame matches 41..50 at @s run tp @s ^ ^ ^0.1
-    execute if score @s aj.walk_relax.frame matches 51.. at @s run tp @s ^ ^ ^0.04
+    execute if score @s aj.walk_relax.frame matches ..13 at @s run tp @s ^ ^ ^0.08
+    execute if score @s aj.walk_relax.frame matches 14..23 at @s run tp @s ^ ^ ^0.2
+    execute if score @s aj.walk_relax.frame matches 24..41 at @s run tp @s ^ ^ ^0.08
+    execute if score @s aj.walk_relax.frame matches 41..50 at @s run tp @s ^ ^ ^0.2
+    execute if score @s aj.walk_relax.frame matches 51.. at @s run tp @s ^ ^ ^0.08
 
 # 効果音
     execute if score @s aj.walk_relax.frame matches 25 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 0.4 0.1 0.4 0 1
