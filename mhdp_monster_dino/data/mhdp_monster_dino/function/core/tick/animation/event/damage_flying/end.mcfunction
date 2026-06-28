@@ -1,9 +1,8 @@
-#> mhdp_monster_dino:core/tick/animation/event/damage_flying/end
+#> mhdp_monster_ranposu:core/tick/animation/event/damage_flying/end
 #
-# アニメーションイベントハンドラ 怯み
+# アニメーションイベントハンドラ バックステップ
 #
-# @within function mhdp_monster_dino:core/tick/animation/event/damage_flying/main
+# @within function mhdp_monsters:core/switch/macro/m.damage
 
-# ダウンに移行
-    function animated_java:dino_aj/animations/down_left/tween {duration:1, to_frame: 1}
-    
+# ダウンもがきに移行
+    function animated_java_ranposu:ranposu/animations/down/tween {duration:1, to_frame: 1}

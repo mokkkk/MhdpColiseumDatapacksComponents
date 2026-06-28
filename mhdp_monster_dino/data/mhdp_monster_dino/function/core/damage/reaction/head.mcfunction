@@ -1,33 +1,37 @@
-#> mhdp_monster_dino:core/damage/reaction/head
+#> mhdp_monster_ranposu:core/damage/reaction/head
 #
 # 怯みリアクション 頭
 #
-# @within function mhdp_monster_dino:core/damage/damage
+# @within function mhdp_monster_ranposu:core/damage/damage
+
+# 部位破壊処理
+    execute if entity @s[tag=!Mns.Break.Head] run function mhdp_monster_ranposu:core/damage/break/head
+    tag @s remove Mns.State.Tutorial.IsBroken
 
 # 共通処理
-    # スコアリセット
-        scoreboard players operation @s Mns.Dino.Head.Damage = @s Mns.Dino.Head.Damage.Max
-    # カウンター増加
-        scoreboard players add @s Mns.Dino.Head.Damage.Count 1
-        
-# 部位破壊処理
-    execute if entity @s[tag=!Mns.Break.Head] if score @s Mns.Dino.Head.Damage.Count matches 2.. run function mhdp_monster_dino:core/damage/reaction/head_break
+    # 怯み開始時
+        function mhdp_monsters:core/util/damage/on_reaction_start
+    # 耐性値リセット
+        scoreboard players operation @s Mns.Ranposu.Head.Damage = @s Mns.Ranposu.Head.Damage.Max
 
-# アニメーション再生処理
-    # 麻痺・ダウン・スタン時以外
-        execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
-    # アニメーション再生
-        execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java:dino_aj/animations/damage_head/tween {duration:1, to_frame: 0}
-        execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monster_dino:core/damage/reaction/flying
+# 麻痺・ダウン・スタン時はアニメーションを再生しない
+    execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
+    
+# アニメーション再生
+    execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java_ranposu:ranposu/animations/damage/tween {duration:1, to_frame: 0}
+    execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monsters:core/util/damage/reaction_flying
+
+# 独自処理
+    # 怯み回数増加
+        scoreboard players add @s Mns.Ranposu.DamageCount 1
     # ダウン時間設定
         scoreboard players set @s Mns.General.DownCount 2
     # 攻撃者を向く
         execute at @s facing entity @a[tag=Temp.Attacker] feet run tp @s ~ ~ ~ ~ 0
     # 演出
+        playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.9
+        playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.6
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
-        playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
-    # アニメーションタグ消去
-        function mhdp_monsters:core/util/other/remove_animation_tag
 
 # 終了
-    function mhdp_monster_dino:core/damage/reaction/general
+    tag @s add Mns.Temp.IsDamaged

@@ -18,60 +18,44 @@
 #        score #mhdp_temp_damage_dragonaura_value MhdpCore 龍気量
 
 # 非戦闘時、戦闘に移行
-    execute if entity @s[tag=!Mns.State.IsBattle] run scoreboard players set @s Mns.General.SearchTimer 3000
-    execute if entity @s[tag=!Mns.State.IsBattle] run function mhdp_monster_dino:core/tick/animation/change/main
+    execute unless score @s Mns.General.Phase matches 2 run function mhdp_monster_dino:core/tick/on_battle/start_ambush
 
 # 共通ステータスの減算
     function mhdp_monsters:core/util/damage/damage_common_data
-    # 討伐時、処理を中断
+    # 討伐された場合、以降の処理は行わない
         execute if entity @s[tag=Mns.State.Death] run return 0
-    
-# 部位ダメージの減算
-    # 頭
-        execute if score #mhdp_temp_target_part_id MhdpCore matches 0 run scoreboard players operation @s Mns.Dino.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if score #mhdp_temp_target_part_id MhdpCore matches 5 run scoreboard players operation @s Mns.Dino.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if score @s Mns.Dino.Head.Damage matches ..0 run tag @s add Mns.Temp.Damage.Head
-        execute if entity @s[tag=Mns.Dino.State.HeadHeat] if score #mhdp_temp_target_part_id MhdpCore matches 0 run scoreboard players operation @s Mns.Dino.Sp.RedHead.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if entity @s[tag=Mns.Dino.State.HeadHeat] if score #mhdp_temp_target_part_id MhdpCore matches 5 run scoreboard players operation @s Mns.Dino.Sp.RedHead.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if score @s Mns.Dino.Sp.RedHead.Damage matches ..0 run tag @s add Mns.Temp.Damage.HeadHead
-    # 胴
-        execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run scoreboard players operation @s Mns.Dino.Body.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if score @s Mns.Dino.Body.Damage matches ..0 run tag @s add Mns.Temp.Damage.Body
-    # 尻尾
-        execute if score #mhdp_temp_target_part_id MhdpCore matches 2 run scoreboard players operation @s Mns.Dino.Tail.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if score #mhdp_temp_target_part_id MhdpCore matches 6 run scoreboard players operation @s Mns.Dino.Tail.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if score #mhdp_temp_target_part_id MhdpCore matches 7 run scoreboard players operation @s Mns.Dino.Tail.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if score @s Mns.Dino.Tail.Damage matches ..0 run tag @s add Mns.Temp.Damage.Tail
-    # 右足
-        execute if score #mhdp_temp_target_part_id MhdpCore matches 3 run scoreboard players operation @s Mns.Dino.LegR.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if score @s Mns.Dino.LegR.Damage matches ..0 run tag @s add Mns.Temp.Damage.LegR
-    # 左足
-        execute if score #mhdp_temp_target_part_id MhdpCore matches 4 run scoreboard players operation @s Mns.Dino.LegL.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
-        execute if score @s Mns.Dino.LegL.Damage matches ..0 run tag @s add Mns.Temp.Damage.LegL
 
-# 以下の優先度で怯みを適用
-    # 麻痺
-        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Paralysis,tag=!Mns.State.IsFlying] run function mhdp_monster_dino:core/damage/reaction/paralysis
-    # スタン
-        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Stun] run function mhdp_monster_dino:core/damage/reaction/stun
-    # 減気
-        # execute if entity @s[tag=Mns.Temp.Damage.Tire]
-    # 相殺
-        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Counter] run function mhdp_monster_dino:core/damage/reaction/counter
-    # 赤熱化頭(独自)
-        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.HeadHead,tag=!Mns.State.IsFlying] run function mhdp_monster_dino:core/damage/reaction/head_heat
-    # 頭(独自)
-        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Head] run function mhdp_monster_dino:core/damage/reaction/head
-    # 胴(独自)
-        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Body] run function mhdp_monster_dino:core/damage/reaction/body
-    # 尻尾(独自)
-        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Tail] run function mhdp_monster_dino:core/damage/reaction/tail
-    # 右足(独自)
-        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.LegR] run function mhdp_monster_dino:core/damage/reaction/leg_r
-    # 左足(独自)
-        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.LegL] run function mhdp_monster_dino:core/damage/reaction/leg_l
-    # 怒り
-        execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Anger,tag=!Mns.State.IsFlying] run function mhdp_monster_dino:core/damage/reaction/anger
+# チュートリアル用処理
+    execute if entity @s[tag=Mns.State.Tutorial.IsDamage] run tag @s remove Mns.State.Tutorial.IsDamage
+
+# # 部位ダメージの減算
+#     # 頭
+#         execute if score #mhdp_temp_target_part_id MhdpCore matches 0 run scoreboard players operation @s Mns.Dino.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+#         execute if score @s Mns.Dino.Head.Damage matches ..0 run tag @s add Mns.Temp.Damage.Head
+#     # 胴
+#         execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run scoreboard players operation @s Mns.Dino.Body.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+#         execute if score @s Mns.Dino.Body.Damage matches ..0 run tag @s add Mns.Temp.Damage.Body
+
+# ボスバー更新
+    execute if entity @s[tag=!Mns.Param.IsHideHp] store result bossbar mhdp_monster:dino value run scoreboard players get @s Mns.Hp
+
+# 怯み適用：優先度順
+    # # 麻痺
+    #     execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Paralysis] run function mhdp_monster_dino:core/damage/reaction/paralysis
+    # # スタン
+    #     execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Stun] run function mhdp_monster_dino:core/damage/reaction/stun
+    # # 減気
+    #     execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Tire]
+    # # 相殺
+    #     execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Counter] run function mhdp_monster_dino:core/damage/reaction/counter
+    # # 大ダウン(独自)
+    #     execute unless entity @s[tag=!Mns.Temp.IsDamaged,tag=!Mns.Temp.Damage.Head,tag=!Mns.Temp.Damage.Body] if score @s Mns.Dino.DamageCount matches 2.. run function mhdp_monster_dino:core/damage/reaction/sp
+    # # 頭(独自)
+    #     execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Head] run function mhdp_monster_dino:core/damage/reaction/head
+    # # 胴(独自)
+    #     execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Body] run function mhdp_monster_dino:core/damage/reaction/body
+    # # 怒り
+    #     execute if entity @s[tag=!Mns.Temp.IsDamaged,tag=Mns.Temp.Damage.Anger] run function mhdp_monster_dino:core/damage/reaction/anger
 
 # 状態異常の発動
     # 毒
@@ -79,18 +63,9 @@
     # 爆破
         execute if entity @s[tag=Mns.Temp.Damage.Bomb] run function mhdp_monsters:core/util/damage/reaction_bomb
     # 龍気
-        # execute if entity @s[tag=Mns.Temp.Damage.DragonAura]
-
-# ボスバー更新
-    execute if entity @s[tag=!Mns.Param.IsHideHp] store result bossbar mhdp_monster:dino value run scoreboard players get @s Mns.Hp
+        execute if entity @s[tag=Mns.Temp.Damage.DragonAura]
 
 # 終了
     function mhdp_monsters:core/util/damage/remove_tags
     tag @s remove Mns.Temp.Damage.Head
-    tag @s remove Mns.Temp.Damage.HeadHead
     tag @s remove Mns.Temp.Damage.Body
-    tag @s remove Mns.Temp.Damage.Tail
-    tag @s remove Mns.Temp.Damage.LegR
-    tag @s remove Mns.Temp.Damage.LegL
-
-# say モンスター処理：斬竜被ダメージ

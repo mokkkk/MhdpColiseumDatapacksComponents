@@ -36,17 +36,10 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:10,Name:"初級：青鳥竜の狩猟",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
-        Content:{HpMultiply:12,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:12,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1,AreaId:1,Visible:true,Override:{HpMultiply:12,AttackMultiply:50}}\
         ]}\
     }
-    # data modify storage mhdp_core:game_data QuestList append value {\
-    #     ID:10,Name:"初級：青鳥竜の狩猟",Level:1,Pos:0,IsEmergency:false,HideMonsters:false,\
-    #     State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
-    #     Content:{HpMultiply:12,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
-    #         {MonsterId:1001,Timing:"Initial",TargetMonsterId:-1,Override:{HpMultiply:200,AttackMultiply:50}}\
-    #     ]}\
-    # }
 
 # 中級：火竜の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
@@ -61,8 +54,8 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:12,Name:"上級：斬竜の狩猟",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
-        Content:{HpMultiply:18,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
-            {MonsterId:1003,Timing:"Initial",TargetMonsterId:-1,AreaId:1,Visible:true}\
+        Content:{HpMultiply:18,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+            {MonsterId:1003,Timing:"Initial",TargetMonsterId:-1,AreaId:1,Visible:true,Override:{HpMultiply:999,AttackMultiply:50}}\
         ]}\
     }
 

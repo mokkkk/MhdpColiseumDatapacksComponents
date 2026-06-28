@@ -1,8 +1,8 @@
-#> mhdp_monster_dino:core/tick/animation/event/state_paralysis_start/end
+#> mhdp_monster_ranposu:core/tick/animation/event/state_paralysis_start/end
 #
-# アニメーションイベントハンドラ 麻痺1開始
+# アニメーションイベントハンドラ 麻痺開始
 #
-# @within function mhdp_monster_dino:core/tick/animation/event/state_paralysis_start/main
+# @within function mhdp_monster_ranposu:core/tick/animation/event/state_paralysis_start/main
 
-# 麻痺に移行
-    function animated_java:dino_aj/animations/state_paralysis/tween {duration:1, to_frame: 1}
+# アニメーション再生
+    function animated_java_ranposu:ranposu/animations/state_paralysis/tween {duration:1, to_frame: 0}

@@ -1,8 +1,8 @@
-#> mhdp_monster_dino:core/tick/animation/event/damage_counter_end/end
+#> mhdp_monster_ranposu:core/tick/animation/event/damage_counter_end/end
 #
 # アニメーションイベントハンドラ 怯み
 #
-# @within function mhdp_monster_dino:core/tick/animation/event/damage_counter_end/main
+# @within function mhdp_monsters:core/switch/macro/m.damage
 
 # 行動選択
-    function mhdp_monster_dino:core/tick/animation/change/main
+    function mhdp_monster_ranposu:core/tick/animation/change/main

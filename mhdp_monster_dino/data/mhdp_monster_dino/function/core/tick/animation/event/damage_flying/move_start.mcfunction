@@ -1,18 +1,18 @@
-#> mhdp_monster_dino:core/tick/animation/event/damage_flying/move_start
+#> mhdp_monster_ranposu:core/tick/animation/event/damage_flying/move_start
 #
-# アニメーションイベントハンドラ 飛行中怯み
+# アニメーションイベントハンドラ 空中怯み
 #
-# @within function mhdp_monster_dino:core/tick/animation/event/damage_flying/main
+# @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
 # 移動対象取得
-    tag @n[tag=Mns.Target.Reus] add Temp.Move.Target
+    tag @n[tag=Mns.Target.Ranposu] add Temp.Move.Target
 
 # ターゲット配置
-    execute facing entity @n[tag=Mns.Target.Reus] feet rotated ~ 0 run summon marker ^ ^ ^ {Tags:["Temp.Move.Target.Marker"]}
+    summon marker ^ ^ ^ {Tags:["Temp.Move.Target.Marker"]}
     execute as @e[type=marker,tag=Temp.Move.Target.Marker] at @s run function mhdp_monsters:core/util/other/on_ground
 
 # 移動ベクトル計算
-    scoreboard players set #mhdp_temp_move_tick MhdpCore 10
+    scoreboard players set #mhdp_temp_move_tick MhdpCore 8
     function mhdp_monsters:core/util/other/move_to_target_calc
 
 # 終了
