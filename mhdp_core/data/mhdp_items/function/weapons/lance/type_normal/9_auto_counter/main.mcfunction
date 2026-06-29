@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_normal/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"カウンター突き"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.lance.action.auto_counter"}
 
 # タイマー増加
 # ガードストップ中はタイマー増加無し
