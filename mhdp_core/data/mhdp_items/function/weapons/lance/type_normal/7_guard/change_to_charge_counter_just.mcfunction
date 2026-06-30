@@ -8,4 +8,4 @@
     tag @s remove Ply.Weapon.Guard
     
 # 対象の処理を実行
-    function mhdp_items:weapons/lance/type_normal/8_guard_charge/start_from_just_guard
+    function mhdp_items:weapons/lance/type_normal/11_high_spear/start

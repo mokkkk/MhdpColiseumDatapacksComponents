@@ -30,7 +30,7 @@
 # 遷移
     # 左クリック：突きに移行
         execute if entity @s[tag=Ply.Ope.StartLeftClick] run function mhdp_items:weapons/lance/type_normal/7_guard/change_to_spear
-    # 右クリック：突きに移行
+    # 右クリック：強突きに移行
         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] run function mhdp_items:weapons/lance/type_normal/7_guard/change_to_charge_counter_just
     # スニーク：ガードに移行
         execute if entity @s[tag=Wpn.Lc.Tec.Guard.Just,tag=Ply.Ope.StartSneak] run function mhdp_items:weapons/lance/type_normal/7_guard/change_to_guard
