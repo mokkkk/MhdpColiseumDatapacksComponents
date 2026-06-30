@@ -2,6 +2,7 @@
 tag @s remove animated_java_dino.dino.animation.pose.playing
 tag @s remove animated_java_dino.dino.animation.idle_relax.playing
 tag @s remove animated_java_dino.dino.animation.walk_relax.playing
+tag @s remove animated_java_dino.dino.animation.walk_relax_stop.playing
 tag @s remove animated_java_dino.dino.animation.ecology_relax_short.playing
 tag @s remove animated_java_dino.dino.animation.ecology_relax_long.playing
 tag @s remove animated_java_dino.dino.animation.idle.playing

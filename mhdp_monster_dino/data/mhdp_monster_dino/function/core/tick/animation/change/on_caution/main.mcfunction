@@ -1,4 +1,4 @@
-#> mhdp_monster_ranposu:core/tick/animation/change/main_relax
+#> mhdp_monster_dino:core/tick/animation/change/main_relax
 #
 # アニメーション変更処理
 #

@@ -7,5 +7,5 @@
 # スコアリセット
     scoreboard players reset @s Mns.General.WalkCount
 
-# 待機に戻る
-    function animated_java_dino:dino/animations/idle_relax/tween {duration:5, to_frame: 5}
+# 移動停止
+    function animated_java_dino:dino/animations/walk_relax_stop/tween {duration:1, to_frame: 1}

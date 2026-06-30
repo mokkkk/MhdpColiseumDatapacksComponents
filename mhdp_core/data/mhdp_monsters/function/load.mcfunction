@@ -21,10 +21,12 @@
             scoreboard objectives add Mns.General.TickTimer dummy
         # 非発見時・警戒までの時間
             scoreboard objectives add Mns.General.CautionTimer dummy
-        # 警戒時・プレイヤー発見までの時間
-            scoreboard objectives add Mns.General.SearchTimer dummy
         # 非発見時・移動アニメーションループ回数
             scoreboard objectives add Mns.General.WalkCount dummy
+        # 非発見時・生態行動アニメーション回数
+            scoreboard objectives add Mns.General.EcologyCount dummy
+        # 警戒時・プレイヤー発見までの時間
+            scoreboard objectives add Mns.General.SearchTimer dummy
         # 連続軸合わせ回数
             scoreboard objectives add Mns.General.TurnCount dummy
         # ダウンのもがき回数

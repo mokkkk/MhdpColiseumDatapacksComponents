@@ -3,6 +3,7 @@ data modify storage animated_java_dino:dino rig_hash set value '00cc6d746501ed22
 scoreboard objectives add aj.pose.frame dummy
 scoreboard objectives add aj.idle_relax.frame dummy
 scoreboard objectives add aj.walk_relax.frame dummy
+scoreboard objectives add aj.walk_relax_stop.frame dummy
 scoreboard objectives add aj.ecology_relax_short.frame dummy
 scoreboard objectives add aj.ecology_relax_long.frame dummy
 scoreboard objectives add aj.idle.frame dummy

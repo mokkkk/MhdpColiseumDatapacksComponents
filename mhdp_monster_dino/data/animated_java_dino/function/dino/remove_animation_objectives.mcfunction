@@ -2,6 +2,7 @@
 scoreboard objectives remove aj.pose.frame
 scoreboard objectives remove aj.idle_relax.frame
 scoreboard objectives remove aj.walk_relax.frame
+scoreboard objectives remove aj.walk_relax_stop.frame
 scoreboard objectives remove aj.ecology_relax_short.frame
 scoreboard objectives remove aj.ecology_relax_long.frame
 scoreboard objectives remove aj.idle.frame

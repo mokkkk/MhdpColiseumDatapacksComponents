@@ -10,14 +10,15 @@
     execute if entity @s[tag=animated_java_dino.dino.animation.idle_relax.playing] run function mhdp_monster_dino:core/tick/animation/event/idle_relax/main
 # 移動
     execute if entity @s[tag=animated_java_dino.dino.animation.walk_relax.playing] run function mhdp_monster_dino:core/tick/animation/event/walk_relax/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.walk_relax_stop.playing] run function mhdp_monster_dino:core/tick/animation/event/walk_relax_stop/main
 # 生態行動
     execute if entity @s[tag=animated_java_dino.dino.animation.ecology_relax_short.playing] run function mhdp_monster_dino:core/tick/animation/event/ecology_relax_short/main
     execute if entity @s[tag=animated_java_dino.dino.animation.ecology_relax_long.playing] run function mhdp_monster_dino:core/tick/animation/event/ecology_relax_long/main
 
-# ## 警戒時
+## 警戒時
 
-# # 警戒
-#     execute if entity @s[tag=animated_java_dino.dino.animation.search.playing] run function mhdp_monster_dino:core/tick/animation/event/search/main
+# 警戒
+    execute if entity @s[tag=animated_java_dino.dino.animation.search.playing] run function mhdp_monster_dino:core/tick/animation/event/search/main
 
 # ## 戦闘時
 

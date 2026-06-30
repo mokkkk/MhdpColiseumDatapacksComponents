@@ -2,6 +2,7 @@
 execute if entity @s[tag=animated_java_dino.dino.animation.pose.playing] run function animated_java_dino:dino/animations/pose/zzz/on_tick
 execute if entity @s[tag=animated_java_dino.dino.animation.idle_relax.playing] run function animated_java_dino:dino/animations/idle_relax/zzz/on_tick
 execute if entity @s[tag=animated_java_dino.dino.animation.walk_relax.playing] run function animated_java_dino:dino/animations/walk_relax/zzz/on_tick
+execute if entity @s[tag=animated_java_dino.dino.animation.walk_relax_stop.playing] run function animated_java_dino:dino/animations/walk_relax_stop/zzz/on_tick
 execute if entity @s[tag=animated_java_dino.dino.animation.ecology_relax_short.playing] run function animated_java_dino:dino/animations/ecology_relax_short/zzz/on_tick
 execute if entity @s[tag=animated_java_dino.dino.animation.ecology_relax_long.playing] run function animated_java_dino:dino/animations/ecology_relax_long/zzz/on_tick
 execute if entity @s[tag=animated_java_dino.dino.animation.idle.playing] run function animated_java_dino:dino/animations/idle/zzz/on_tick
