@@ -4,4 +4,5 @@
 #
 # @within function mhdp_items:core/switch/macro/m.guard
 
-# 処理なし
+# ガード値
+    scoreboard players set #mhdp_temp_guard_strength MhdpCore 5

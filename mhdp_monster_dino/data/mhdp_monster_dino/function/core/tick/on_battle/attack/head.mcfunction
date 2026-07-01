@@ -8,4 +8,4 @@
     execute if entity @s[type=item_display] run return 1
 
 # 攻撃中タグ付与
-    execute if entity @s[type=slime,tag=Mns.HitBox.Ranposu.Head] run tag @s add Mns.State.IsAttackPart
+    execute if entity @s[type=slime,tag=Mns.HitBox.Dino.Head] run tag @s add Mns.State.IsAttackPart
