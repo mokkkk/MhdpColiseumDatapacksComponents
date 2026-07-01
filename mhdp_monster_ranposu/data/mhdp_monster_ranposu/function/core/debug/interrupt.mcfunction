@@ -7,6 +7,9 @@
 # 実行者変更
     execute unless entity @s[type=item_display,tag=Mns.Root.Ranposu] as @n[type=item_display,tag=Mns.Root.Ranposu] run return run function mhdp_monster_ranposu:core/debug/interrupt
 
+# 攻撃データ更新のため、register実行
+    function mhdp_monster_ranposu:core/register
+
 # 通常再生
     # タグ付与
         tag @s add Anim.Jump

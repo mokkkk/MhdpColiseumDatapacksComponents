@@ -7,9 +7,12 @@
 # 実行者変更
     execute unless entity @s[type=item_display,tag=Mns.Root.Dino] as @n[type=item_display,tag=Mns.Root.Dino] run return run function mhdp_monster_dino:core/debug/interrupt
 
+# 攻撃データ更新のため、register実行
+    function mhdp_monster_dino:core/register
+
 # 通常再生
     # タグ付与
-        tag @s add Anim.Tail.L
+        tag @s add Anim.TailSide.L
         # function mhdp_monster_dino:core/tick/animation/change/play/step_jump
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn
