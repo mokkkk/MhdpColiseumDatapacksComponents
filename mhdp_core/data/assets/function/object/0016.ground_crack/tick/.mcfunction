@@ -14,5 +14,3 @@
 
 # 削除
     execute if score @s ObjectTick matches 60.. run function assets:object/0016.ground_crack/tick/remove
-
-say tick

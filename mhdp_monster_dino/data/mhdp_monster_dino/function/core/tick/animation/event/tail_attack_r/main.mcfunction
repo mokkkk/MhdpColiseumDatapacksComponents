@@ -5,8 +5,8 @@
 # @within function mhdp_monster_dino:core/tick/animation/event/tick
 
 # 軸合わせ・弱め
-    execute if score @s aj.tail_attack_r.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:90}
-    execute if score @s aj.tail_attack_r.frame matches 10 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:90}
+    execute if score @s aj.tail_attack_r.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:180}
+    execute if score @s aj.tail_attack_r.frame matches 10 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:180}
     execute if score @s aj.tail_attack_r.frame matches 2..18 at @s run function mhdp_monsters:core/util/tick/event/alignment
 
 # 移動
@@ -40,10 +40,6 @@
 
 # フェーズ
     # execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.tail_attack_r.frame matches 26 run function mhdp_monster_dino:core/util/phase/tail_heat
-
-# 状態更新
-    # execute if score @s aj.tail_attack_r.frame matches 18 run tag @s add Mns.Dino.State.Attack.Tail.R
-    # execute if score @s aj.tail_attack_r.frame matches 30 run tag @s remove Mns.Dino.State.Attack.Tail.R
 
 # 終了
     execute if score @s aj.tail_attack_r.frame matches 108 run function mhdp_monster_dino:core/tick/animation/event/tail_attack_r/end

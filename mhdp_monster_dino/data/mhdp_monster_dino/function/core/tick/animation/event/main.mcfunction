@@ -70,3 +70,4 @@
 
 # 尻尾たたきつけ
     execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_r/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l/main
