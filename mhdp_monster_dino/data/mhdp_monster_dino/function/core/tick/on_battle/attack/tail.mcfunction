@@ -1,4 +1,4 @@
-#> mhdp_monster_ranposu:core/tick/on_battle/attack/tail
+#> mhdp_monster_dino:core/tick/on_battle/attack/tail
 #
 # tick処理 戦闘中 攻撃
 #
@@ -8,4 +8,4 @@
     execute if entity @s[type=item_display] run return 1
 
 # 攻撃中タグ付与
-    execute if entity @s[type=slime,tag=Mns.HitBox.Ranposu.Body] run tag @s add Mns.State.IsAttackPart
+    execute if entity @s[type=slime,tag=Mns.HitBox.Dino.Tail] run tag @s add Mns.State.IsAttackPart

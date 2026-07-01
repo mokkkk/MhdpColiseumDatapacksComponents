@@ -22,8 +22,8 @@
 
 # ## 戦闘時
 
-# # 待機
-#     execute if entity @s[tag=animated_java_dino.dino.animation.idle.playing] run function mhdp_monster_dino:core/tick/animation/event/idle/main
+# 待機
+    execute if entity @s[tag=animated_java_dino.dino.animation.idle.playing] run function mhdp_monster_dino:core/tick/animation/event/idle/main
 
 # # 咆哮
 #     execute if entity @s[tag=animated_java_dino.dino.animation.voice.playing] run function mhdp_monster_dino:core/tick/animation/event/voice/main
@@ -68,31 +68,5 @@
 # # 移動
 #     execute if entity @s[tag=animated_java_dino.dino.animation.move.playing] run function mhdp_monster_dino:core/tick/animation/event/move/main
 
-# # 建築物の上に乗る
-#     execute if entity @s[tag=animated_java_dino.dino.animation.climb_object.playing] run function mhdp_monster_dino:core/tick/animation/event/climb_object/main
-
-# # バックステップ
-#     execute if entity @s[tag=animated_java_dino.dino.animation.step_back.playing] run function mhdp_monster_dino:core/tick/animation/event/step_back/main
-
-# # 噛みつき
-#     execute if entity @s[tag=animated_java_dino.dino.animation.bite.playing] run function mhdp_monster_dino:core/tick/animation/event/bite/main
-
-# # 強嚙みつき
-#     execute if entity @s[tag=animated_java_dino.dino.animation.bite_strong.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_strong/main
-
-# # 尻尾攻撃
-#     execute if entity @s[tag=animated_java_dino.dino.animation.tail_right.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_right/main
-#     execute if entity @s[tag=animated_java_dino.dino.animation.tail_left.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_left/main
-
-# # 移動ひっかき
-#     execute if entity @s[tag=animated_java_dino.dino.animation.move_claw.playing] run function mhdp_monster_dino:core/tick/animation/event/move_claw/main
-
-# # タックル
-#     execute if entity @s[tag=animated_java_dino.dino.animation.tackle.playing] run function mhdp_monster_dino:core/tick/animation/event/tackle/main
-
-# # 急襲
-#     execute if entity @s[tag=animated_java_dino.dino.animation.jump.playing] run function mhdp_monster_dino:core/tick/animation/event/jump/main
-
-# # 回り込み急襲
-#     execute if entity @s[tag=animated_java_dino.dino.animation.step_jump_right.playing] run function mhdp_monster_dino:core/tick/animation/event/step_jump_right/main
-#     execute if entity @s[tag=animated_java_dino.dino.animation.step_jump_left.playing] run function mhdp_monster_dino:core/tick/animation/event/step_jump_left/main
+# 尻尾たたきつけ
+    execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_r/main
