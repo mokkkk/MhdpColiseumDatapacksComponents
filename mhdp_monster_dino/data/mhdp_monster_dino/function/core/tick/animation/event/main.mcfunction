@@ -94,7 +94,7 @@
         # execute if entity @s[tag=animated_java_dino.dino.animation.bite_to_tail.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/main
 
 # 2連嚙みつき
-    # execute if entity @s[tag=animated_java_dino.dino.animation.bite_double_normal.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_double_normal/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.bite_double_normal.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_double_normal/main
     # execute if entity @s[tag=animated_java_dino.dino.animation.bite_double_anger.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_double_anger/main
 
 # 尻尾攻撃・正面
@@ -113,8 +113,8 @@
     execute if entity @s[tag=animated_java_dino.dino.animation.tail_side_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_side_l/main
 
 # 尻尾攻撃・背面
-    # execute if entity @s[tag=animated_java_dino.dino.animation.tail_back_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_back_r/main
-    # execute if entity @s[tag=animated_java_dino.dino.animation.tail_back_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_back_l/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.tail_back_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_back_r/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.tail_back_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_back_l/main
 
 # 尻尾攻撃・飛びかかり
     # 通常時
