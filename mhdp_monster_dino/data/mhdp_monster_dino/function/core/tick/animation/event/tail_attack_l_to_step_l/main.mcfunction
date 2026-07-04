@@ -1,0 +1,48 @@
+#> mhdp_monster_dino:core/tick/animation/event/tail_attack_l_to_step_l/main
+#
+# アニメーションイベントハンドラ 尻尾叩きつけ
+#
+# @within function mhdp_monster_dino:core/tick/animation/event/tick
+
+# 軸合わせ・弱め
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:180}
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 10 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:180}
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 2..18 at @s run function mhdp_monsters:core/util/tick/event/alignment
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 42..58 run tag @n[tag=Mns.Target.Dino] add Temp.Rotate.Target
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 42..58 run function mhdp_monsters:core/util/other/turn_to_target_accurate
+
+# 移動
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 1..5 if entity @n[tag=Mns.Target.Dino,distance=..8] at @s run tp @s ^ ^ ^-0.5
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 16..25 unless entity @n[tag=Mns.Target.Dino,distance=..9] at @s run tp @s ^ ^ ^0.4
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 81..87 at @s run tp @s ^ ^ ^-0.1
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 42..53 unless entity @n[tag=Mns.Target.Dino,distance=..9] at @s run tp @s ^ ^ ^0.8
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 42..53 at @s run tp @s ^0.9 ^ ^0.25
+
+# 効果音
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 16 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 26 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 26 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1.8 0.1 1.8 0 30
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 42 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 42 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1.8 0.1 1.8 0 30
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 53 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 53 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1.8 0.1 1.8 0 30
+
+# 攻撃
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 20 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Tail"}]
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 21 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l_to_step_l/attack_tail_start.m {Rotate:-90}
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 22 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l_to_step_l/attack_tail_start.m {Rotate:-70}
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 23 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l_to_step_l/attack_tail_start.m {Rotate:-50}
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 24 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l_to_step_l/attack_tail_start.m {Rotate:-30}
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 25 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l_to_step_l/attack_tail_start.m {Rotate:-10}
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 26 run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l_to_step_l/attack
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 27 run function mhdp_monsters:core/util/tick/event/end_attack
+
+# 接地
+    function mhdp_monsters:core/util/tick/move/check_landing
+
+# フェーズ
+    # execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.tail_attack_l_to_step_l.frame matches 26 run function mhdp_monster_dino:core/util/phase/tail_heat
+
+# 終了
+    execute if score @s aj.tail_attack_l_to_step_l.frame matches 61 run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l_to_step_l/end

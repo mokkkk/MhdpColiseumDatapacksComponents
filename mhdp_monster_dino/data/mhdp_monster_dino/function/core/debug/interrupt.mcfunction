@@ -12,7 +12,7 @@
 
 # 通常再生
     # タグ付与
-        tag @s add Anim.TailJump.Anger.L
+        tag @s add Anim.BiteDouble
         # function mhdp_monster_dino:core/tick/animation/change/play/step_jump
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn

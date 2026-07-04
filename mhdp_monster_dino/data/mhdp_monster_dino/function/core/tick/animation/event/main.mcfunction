@@ -91,22 +91,22 @@
 # 嚙みつき
     execute if entity @s[tag=animated_java_dino.dino.animation.bite.playing] run function mhdp_monster_dino:core/tick/animation/event/bite/main
     # 噛みつき→尻尾コンボ
-        # execute if entity @s[tag=animated_java_dino.dino.animation.bite_to_tail.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.bite_to_tail.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/main
 
 # 2連嚙みつき
     execute if entity @s[tag=animated_java_dino.dino.animation.bite_double_normal.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_double_normal/main
-    # execute if entity @s[tag=animated_java_dino.dino.animation.bite_double_anger.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_double_anger/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.bite_double_anger.playing] run function mhdp_monster_dino:core/tick/animation/event/bite_double_anger/main
 
 # 尻尾攻撃・正面
     # 通常時
         execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_r/main
         execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l/main
     # 怒り時
-        # execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_anger_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_r/main
-        # execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_anger_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_l/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_anger_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_r/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_anger_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_l/main
     # 尻尾攻撃→ステップコンボ
-        # execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_r_to_step_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_r_to_step_r/main
-        # execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_l_to_step_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l_to_step_l/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_r_to_step_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_r_to_step_r/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.tail_attack_l_to_step_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l_to_step_l/main
 
 # 尻尾攻撃・側面
     execute if entity @s[tag=animated_java_dino.dino.animation.tail_side_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_side_r/main
