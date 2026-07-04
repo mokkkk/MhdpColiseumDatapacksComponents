@@ -5,7 +5,7 @@
 # @within function mhdp_items:core/switch/macro/m.guard
 
 # ガード値
-    scoreboard players set #mhdp_temp_guard_strength MhdpCore 5
+    scoreboard players set #mhdp_temp_guard_strength MhdpCore 4
 
 # 攻撃ベクトルによるガード成否判定
 # ダミー用AEC召喚

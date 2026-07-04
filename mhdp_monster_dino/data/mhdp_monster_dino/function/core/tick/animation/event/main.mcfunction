@@ -118,11 +118,11 @@
 
 # 尻尾攻撃・飛びかかり
     # 通常時
-        # execute if entity @s[tag=animated_java_dino.dino.animation.jump_tail_r.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/main
-        # execute if entity @s[tag=animated_java_dino.dino.animation.jump_tail_l.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_l/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.jump_tail_r.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.jump_tail_l.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_l/main
     # 怒り時2回攻撃
-        # execute if entity @s[tag=animated_java_dino.dino.animation.jump_tail_anger_r.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_r/main
-        # execute if entity @s[tag=animated_java_dino.dino.animation.jump_tail_anger_l.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.jump_tail_anger_r.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_r/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.jump_tail_anger_l.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/main
 
 # 火炎
     # execute if entity @s[tag=animated_java_dino.dino.animation.tail_flame_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_flame_r/main

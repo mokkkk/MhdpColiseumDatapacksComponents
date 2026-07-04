@@ -42,7 +42,11 @@
     execute if entity @s[tag=Anim.TailBack.R] run function animated_java_dino:dino/animations/tail_back_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.TailBack.L] run function animated_java_dino:dino/animations/tail_back_l/tween {duration:1, to_frame: 1}
 
-
+# 尻尾攻撃・飛びかかり
+    execute if entity @s[tag=Anim.TailJump.R] run function animated_java_dino:dino/animations/jump_tail_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.TailJump.L] run function animated_java_dino:dino/animations/jump_tail_l/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.TailJump.Anger.R] run function animated_java_dino:dino/animations/jump_tail_anger_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.TailJump.Anger.L] run function animated_java_dino:dino/animations/jump_tail_anger_l/tween {duration:1, to_frame: 1}
 
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag
