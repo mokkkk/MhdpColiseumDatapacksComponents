@@ -54,6 +54,10 @@
     execute if entity @s[tag=Anim.TailJump.Anger.R] run function animated_java_dino:dino/animations/jump_tail_anger_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.TailJump.Anger.L] run function animated_java_dino:dino/animations/jump_tail_anger_l/tween {duration:1, to_frame: 1}
 
+# 火炎
+    execute if entity @s[tag=Anim.TailFlame.R] run function animated_java_dino:dino/animations/tail_flame_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.TailFlame.L] run function animated_java_dino:dino/animations/tail_flame_l/tween {duration:1, to_frame: 1}
+
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag
     tag @s remove Mns.Temp.IsCombo

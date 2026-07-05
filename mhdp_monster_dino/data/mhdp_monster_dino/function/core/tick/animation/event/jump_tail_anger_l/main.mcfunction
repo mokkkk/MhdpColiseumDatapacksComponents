@@ -10,9 +10,9 @@
     execute if score @s aj.jump_tail_anger_l.frame matches 11 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:5,MaxRotation:999}
     execute if score @s aj.jump_tail_anger_l.frame matches 30 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:999}
     execute if score @s aj.jump_tail_anger_l.frame matches 58 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:999}
-    execute if score @s aj.jump_tail_anger_l.frame matches 2..22 at @s run function mhdp_monsters:core/util/tick/event/alignment
+    execute if score @s aj.jump_tail_anger_l.frame matches 2..16 at @s run function mhdp_monsters:core/util/tick/event/alignment
     execute if score @s aj.jump_tail_anger_l.frame matches 30..35 at @s run function mhdp_monsters:core/util/tick/event/alignment
-    execute if score @s aj.jump_tail_anger_r.frame matches 58..66 at @s run function mhdp_monsters:core/util/tick/event/alignment
+    execute if score @s aj.jump_tail_anger_l.frame matches 58..66 at @s run function mhdp_monsters:core/util/tick/event/alignment
 
 # 移動
     execute if score @s aj.jump_tail_anger_l.frame matches 1..5 if entity @n[tag=Mns.Target.Dino,distance=..8] at @s run tp @s ^ ^ ^-0.2

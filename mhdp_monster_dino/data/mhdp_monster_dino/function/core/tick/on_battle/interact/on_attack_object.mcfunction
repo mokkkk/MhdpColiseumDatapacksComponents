@@ -4,6 +4,10 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
+# オブジェクト発射時の処理
+    # 火炎
+        execute if entity @s[tag=Mns.Dino.Object.Flame] if data storage api: Return{IsRemainObject:true} as @n[type=item_display,tag=Asset.Object,tag=This] run function assets:object/10031.dino_tail_flame/tick/on_hit_object
+
 # 建築を破壊できなかった場合、攻撃キャンセル
     execute unless entity @s[\
         tag=!animated_java_ranposu.ranposu.animation.bite_strong.playing,\

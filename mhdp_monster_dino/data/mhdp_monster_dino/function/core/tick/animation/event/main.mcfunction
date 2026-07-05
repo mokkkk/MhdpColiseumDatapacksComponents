@@ -125,8 +125,8 @@
         execute if entity @s[tag=animated_java_dino.dino.animation.jump_tail_anger_l.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/main
 
 # 火炎
-    # execute if entity @s[tag=animated_java_dino.dino.animation.tail_flame_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_flame_r/main
-    # execute if entity @s[tag=animated_java_dino.dino.animation.tail_flame_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_flame_l/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.tail_flame_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_flame_r/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.tail_flame_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_flame_l/main
 
 # 大回転斬り
     # execute if entity @s[tag=animated_java_dino.dino.animation.roundforce.playing] run function mhdp_monster_dino:core/tick/animation/event/roundforce/main

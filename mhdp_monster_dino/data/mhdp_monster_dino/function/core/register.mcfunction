@@ -193,10 +193,20 @@
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 
-# # 火炎・尻尾
-#     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailFlame.Tail",DamageValue:7.2f,GuardValue:3,ElementType:1,ElementMultiply:20,Knockback:2,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
-# # 火炎・炎
-#     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailFlame.Flame",DamageValue:8.0f,GuardValue:4,ElementType:1,ElementMultiply:100,Knockback:1,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+# 火炎・尻尾
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {\
+        Name:"TailFlame",AttackPart:"tail",VectorType:"Normal",\
+        DamageValue:7.2f,ObjectDamageValue:25,GuardValue:4,ElementType:1,ElementMultiply:20,\
+        KnockbackStrength:2,IsLaunch:false,LaunchAngle:0,\
+        IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
+    }
+# 火炎・炎
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {\
+        Name:"TailFlame.Shot",AttackPart:"tail",VectorType:"Normal",\
+        DamageValue:8.0f,ObjectDamageValue:15,GuardValue:4,ElementType:1,ElementMultiply:100,\
+        KnockbackStrength:2,IsLaunch:false,LaunchAngle:0,\
+        IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
+    }
 
 # # ブレス
 #     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Breath",DamageValue:8.0f,GuardValue:5,ElementType:1,ElementMultiply:80,Knockback:1,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}

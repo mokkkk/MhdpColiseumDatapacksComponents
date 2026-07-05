@@ -5,13 +5,13 @@
 # @within function mhdp_monster_dino:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.jump_tail_anger_l.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:5,MaxRotation:999}
-    execute if score @s aj.jump_tail_anger_l.frame matches 6 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:5,MaxRotation:999}
-    execute if score @s aj.jump_tail_anger_l.frame matches 11 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:5,MaxRotation:999}
-    execute if score @s aj.jump_tail_anger_l.frame matches 30 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:999}
-    execute if score @s aj.jump_tail_anger_l.frame matches 58 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:999}
-    execute if score @s aj.jump_tail_anger_l.frame matches 2..22 at @s run function mhdp_monsters:core/util/tick/event/alignment
-    execute if score @s aj.jump_tail_anger_l.frame matches 30..35 at @s run function mhdp_monsters:core/util/tick/event/alignment
+    execute if score @s aj.jump_tail_anger_r.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:5,MaxRotation:999}
+    execute if score @s aj.jump_tail_anger_r.frame matches 6 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:5,MaxRotation:999}
+    execute if score @s aj.jump_tail_anger_r.frame matches 11 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:5,MaxRotation:999}
+    execute if score @s aj.jump_tail_anger_r.frame matches 30 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:999}
+    execute if score @s aj.jump_tail_anger_r.frame matches 58 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:999}
+    execute if score @s aj.jump_tail_anger_r.frame matches 2..16 at @s run function mhdp_monsters:core/util/tick/event/alignment
+    execute if score @s aj.jump_tail_anger_r.frame matches 30..35 at @s run function mhdp_monsters:core/util/tick/event/alignment
     execute if score @s aj.jump_tail_anger_r.frame matches 58..66 at @s run function mhdp_monsters:core/util/tick/event/alignment
 
 # 移動
