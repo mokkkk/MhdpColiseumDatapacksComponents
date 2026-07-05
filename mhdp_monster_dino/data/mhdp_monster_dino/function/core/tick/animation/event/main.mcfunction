@@ -129,7 +129,7 @@
     execute if entity @s[tag=animated_java_dino.dino.animation.tail_flame_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_flame_l/main
 
 # 大回転斬り
-    # execute if entity @s[tag=animated_java_dino.dino.animation.roundforce.playing] run function mhdp_monster_dino:core/tick/animation/event/roundforce/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.roundforce.playing] run function mhdp_monster_dino:core/tick/animation/event/roundforce/main
 
 # 研ぎ
     # execute if entity @s[tag=animated_java_dino.dino.animation.polish.playing] run function mhdp_monster_dino:core/tick/animation/event/polish/main
