@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"通常コンボ・１"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.short_sword.action.normal_combo_1"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -20,15 +20,11 @@
     execute if score @s Wpn.AnimationTimer matches 2 run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/animation_1
     execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/animation_2
     execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/animation_3
-    execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/particle
-    execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/particle
-    execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/particle
+    execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^-0.1 ^ ^1.7 run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/particle
+    execute if score @s Wpn.AnimationTimer matches 2 positioned ~ ~1.65 ~ positioned ^-0.1 ^ ^2.2 run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/particle
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 3 run function mhdp_items:weapons/short_sword/type_tec/1_normal_1/attack
-
-# 演出
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..2 at @s run tp @s ~ ~ ~ ~-0.5 ~1
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow

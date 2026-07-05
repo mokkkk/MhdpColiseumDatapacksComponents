@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"ジャストラッシュ・３"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.short_sword.action.justrush_3"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -27,8 +27,8 @@
     execute if score @s Wpn.AnimationTimer matches 3 positioned ~ ~1.65 ~ positioned ^ ^ ^1.5 run function mhdp_items:weapons/short_sword/type_tec/15_just_3/particle_1
 
 # 演出
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 at @s run tp @s ~ ~ ~ ~0.5 ~-1
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 4..8 at @s run tp @s ~ ~ ~ ~0.5 ~1
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 at @s run tp @s ~ ~ ~ ~0.25 ~-0.5
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 4..8 at @s run tp @s ~ ~ ~ ~0.25 ~0.5
     execute if score @s Wpn.AnimationTimer matches 8 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s Wpn.AnimationTimer matches 11 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s Wpn.GeneralTimer matches 11..13 positioned ~ ~1.65 ~ run particle crit ^ ^ ^1 0 0 0 0.5 1

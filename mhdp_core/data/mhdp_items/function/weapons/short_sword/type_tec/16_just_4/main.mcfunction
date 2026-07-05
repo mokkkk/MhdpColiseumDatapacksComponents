@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"ジャストラッシュ・４"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.short_sword.action.justrush_4"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -28,7 +28,7 @@
     execute if score @s Wpn.AnimationTimer matches 3 positioned ~ ~1.65 ~ positioned ^ ^ ^1.5 run function mhdp_items:weapons/short_sword/type_tec/16_just_4/particle_1
 
 # 演出
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 at @s run tp @s ~ ~ ~ ~-1 ~-0.5
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 at @s run tp @s ~ ~ ~ ~-0.5 ~-0.25
     execute if score @s Wpn.AnimationTimer matches 26 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 移動制限

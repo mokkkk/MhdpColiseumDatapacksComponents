@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"水平斬りコンボ・１"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.short_sword.action.horizontal_combo_1"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -20,24 +20,17 @@
     execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/animation_1
     execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/animation_2
     execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/animation_3
-    execute if score @s Wpn.AnimationTimer matches 3 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/particle
     execute if score @s Wpn.AnimationTimer matches 3 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/particle
     execute if score @s Wpn.AnimationTimer matches 3 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/particle
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/short_sword/type_tec/4_horizon_1/attack
 
-# 演出
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..4 run tp @s ~ ~ ~ ~-0.8 ~1
-
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
     execute if score @s Wpn.GeneralTimer matches 13 run function api:weapon_operation/attribute_reset
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
     execute if score @s Wpn.GeneralTimer matches 13 run tag @s remove Ply.Weapon.NoMoveJump
-
-# 移動
-    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye,tag=!Ply.Ope.IsSneaking,tag=!Ply.Ope.StartUsingEnderEye.WithSneak] if score @s Wpn.GeneralTimer matches 2..22 run function mhdp_items:core/buffering/a

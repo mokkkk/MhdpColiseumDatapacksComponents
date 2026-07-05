@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/short_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"ガード"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.short_sword.action.guard"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -36,4 +36,4 @@
 
 
 # 終了
-    execute if entity @s[tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 10.. if score @s Wpn.GuardStopTimer matches 0 run function mhdp_items:weapons/short_sword/type_tec/24_guard/end
+    execute if entity @s[tag=!Ply.Ope.IsSneaking] if score @s Wpn.GeneralTimer matches 5.. if score @s Wpn.GuardStopTimer matches 0 run function mhdp_items:weapons/short_sword/type_tec/24_guard/end

@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"カウンター斬り"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.short_sword.action.counter_slash"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -14,21 +14,21 @@
 # アニメーション演出
     execute if score @s Wpn.AnimationTimer matches 1 run playsound item.armor.equip_iron master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 3 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s Wpn.AnimationTimer matches 8 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
+    execute if score @s Wpn.AnimationTimer matches 4 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 1..2 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_5
-    execute if score @s Wpn.AnimationTimer matches 3..4 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_6
-    execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_7
-    execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_0
-    execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_1
-    execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_2
-    execute if score @s Wpn.AnimationTimer matches 9 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_3
-    execute if score @s Wpn.AnimationTimer matches 10 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_4
-    execute if score @s Wpn.AnimationTimer matches 6 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/particle
-    execute if score @s Wpn.AnimationTimer matches 6 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/particle
-    execute if score @s Wpn.AnimationTimer matches 6 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/particle
+    execute if score @s Wpn.AnimationTimer matches 3 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_6
+    execute if score @s Wpn.AnimationTimer matches 4 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_7
+    execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_0
+    execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_1
+    execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_2
+    execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_3
+    execute if score @s Wpn.AnimationTimer matches 9 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/animation_4
+    execute if score @s Wpn.AnimationTimer matches 4 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/particle
+    execute if score @s Wpn.AnimationTimer matches 4 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/particle
+    execute if score @s Wpn.AnimationTimer matches 4 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/particle
 
 # 攻撃
-    execute if score @s Wpn.GeneralTimer matches 6 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/attack
+    execute if score @s Wpn.GeneralTimer matches 5 run function mhdp_items:weapons/short_sword/type_tec/25_just_counter/attack
 
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..2 run tp @s ~ ~ ~ ~-2.2 ~
@@ -37,12 +37,10 @@
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
-    execute if score @s Wpn.GeneralTimer matches 10 run function api:weapon_operation/attribute_reset
+    execute if score @s Wpn.GeneralTimer matches 9 run function api:weapon_operation/attribute_reset
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 1 run tp @s @s
-    execute if score @s Wpn.GeneralTimer matches 1 rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:5000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 2 run tp @s @s
     execute if score @s Wpn.GeneralTimer matches 2 run tp @s ~ ~0.05 ~
     execute if score @s Wpn.GeneralTimer matches 2 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:12000, IsForce:false, IsAdjust:false}

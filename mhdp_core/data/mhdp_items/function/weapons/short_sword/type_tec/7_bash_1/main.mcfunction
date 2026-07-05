@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"盾攻撃コンボ・１"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.short_sword.action.shield_combo_1"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -23,19 +23,13 @@
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/short_sword/type_tec/7_bash_1/attack
 
-# 演出
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~-1 ~
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 4..7 run tp @s ~ ~ ~ ~1.3 ~
-
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
     execute if score @s Wpn.GeneralTimer matches 7 run function api:weapon_operation/attribute_moveslow
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 移動
-    # execute if score @s Wpn.GeneralTimer matches 3 run scoreboard players set $strength player_motion.api.launch 3000
-    execute if score @s Wpn.GeneralTimer matches 3 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:false, IsAdjust:true}
-    
+   
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.NotSneak] if score @s Wpn.GeneralTimer matches 3..12 run function mhdp_items:core/buffering/a
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 3..12 run function mhdp_items:core/buffering/jump

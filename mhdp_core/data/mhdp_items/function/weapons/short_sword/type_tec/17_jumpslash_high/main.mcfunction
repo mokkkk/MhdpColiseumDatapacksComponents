@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"駆け上がり斬り"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.short_sword.action.rising_slash"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -44,8 +44,8 @@
     execute if score @s Wpn.GeneralTimer matches 8 run tag @s add Ply.Ope.IsAir
 
 # 遷移
-    # 左クリック：落下突きに移行
-        execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/type_tec/32_fall_spear/start
+    # 左クリック：フォールバッシュに移行
+        execute if entity @s[tag=Ply.Ope.StartLeftClick] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/type_tec/22_fall/start
     # 右クリック：フォールバッシュに移行
         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] if score @s Wpn.GeneralTimer matches 12.. run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/start
 

@@ -29,8 +29,8 @@
     execute if entity @s[tag=Anim.BiteToTail] run function animated_java_dino:dino/animations/bite_to_tail/tween {duration:1, to_frame: 1}
 
 # 2連噛みつき
-    # execute if entity @s[tag=Anim.BiteDouble] run function animated_java_dino:dino/animations/bite_double_normal/tween {duration:1, to_frame: 1}
-    execute if entity @s[tag=Anim.BiteDouble] run function animated_java_dino:dino/animations/bite_double_anger/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=!Mns.State.IsAnger,tag=Anim.BiteDouble] run function animated_java_dino:dino/animations/bite_double_normal/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Mns.State.IsAnger,tag=Anim.BiteDouble] run function animated_java_dino:dino/animations/bite_double_anger/tween {duration:1, to_frame: 1}
 
 # 尻尾たたきつけ
     execute if entity @s[tag=Anim.Tail.R] run function animated_java_dino:dino/animations/tail_attack_r/tween {duration:1, to_frame: 1}

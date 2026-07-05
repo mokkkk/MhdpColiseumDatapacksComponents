@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"水平斬りコンボ・３"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.short_sword.action.horizontal_combo_3"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -26,16 +26,11 @@
     execute if score @s Wpn.AnimationTimer matches 6 run function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/animation_5
     execute if score @s Wpn.AnimationTimer matches 7 run function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/animation_6
     execute if score @s Wpn.AnimationTimer matches 8 run function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/animation_7
-    execute if score @s Wpn.AnimationTimer matches 7 positioned ~ ~1.65 ~ positioned ^ ^0.5 ^1.2 run function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/particle
     execute if score @s Wpn.AnimationTimer matches 7 positioned ~ ~1.65 ~ positioned ^ ^0.5 ^1.7 run function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/particle
     execute if score @s Wpn.AnimationTimer matches 7 positioned ~ ~1.65 ~ positioned ^ ^0.5 ^2.2 run function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/particle
 
 # 攻撃
     execute if score @s Wpn.GeneralTimer matches 6 run function mhdp_items:weapons/short_sword/type_tec/6_horizon_3/attack
-
-# 演出
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~-1 ~
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 4..7 run tp @s ~ ~ ~ ~1.3 ~
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow

@@ -5,8 +5,8 @@
 # @within function mhdp_monster_dino:core/tick/animation/event/tick
 
 # 軸合わせ・弱め
-    execute if score @s aj.bite_double_normal.frame matches 1 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:180}
-    execute if score @s aj.bite_double_normal.frame matches 6 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:180}
+    execute if score @s aj.bite_double_normal.frame matches 1 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:360}
+    execute if score @s aj.bite_double_normal.frame matches 6 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:360}
     execute if score @s aj.bite_double_normal.frame matches 2..11 at @s run function mhdp_monsters:core/util/tick/event/alignment
 
 # 移動
