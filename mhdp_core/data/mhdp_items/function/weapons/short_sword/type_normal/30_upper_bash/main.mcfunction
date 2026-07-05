@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_normal/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"滅・昇竜撃"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.short_sword.action.metsu_shoryugeki"}
 
 # タイマー増加
     execute if score @s Wpn.GeneralTimer matches ..4 run scoreboard players add @s Wpn.GeneralTimer 1

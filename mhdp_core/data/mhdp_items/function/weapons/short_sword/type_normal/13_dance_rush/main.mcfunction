@@ -5,7 +5,7 @@
 # @within function mhdp_items:weapons/great_sword/type_tec/main
 
 # 操作表示
-    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"剣盾ラッシュ"}
+    execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:core/util/item_modify_custom_name {Name:"weapon.short_sword.action.rush_combo"}
 
 # タイマー増加
     scoreboard players add @s Wpn.GeneralTimer 1
@@ -77,11 +77,11 @@
     execute if score @s Wpn.GeneralTimer matches 71 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/attack_8
 
 # 演出
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..2 run tp @s ~ ~ ~ ~-2.2 ~
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 9..11 run tp @s ~ ~ ~ ~2 ~
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 12..13 run tp @s ~ ~ ~ ~0.3 ~
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 17..19 at @s run tp @s ~ ~ ~ ~0.5 ~-1
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 21..25 at @s run tp @s ~ ~ ~ ~0.5 ~1
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..2 run tp @s ~ ~ ~ ~-1.2 ~
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 9..11 run tp @s ~ ~ ~ ~1 ~
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 12..13 run tp @s ~ ~ ~ ~0.15 ~
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 17..19 at @s run tp @s ~ ~ ~ ~0.25 ~-0.5
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 21..25 at @s run tp @s ~ ~ ~ ~0.25 ~0.5
     execute if score @s Wpn.AnimationTimer matches 18 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 18 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 16 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_2
@@ -90,10 +90,10 @@
     execute if score @s Wpn.AnimationTimer matches 27 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_3
     execute if score @s Wpn.AnimationTimer matches 27 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_3
     execute if score @s Wpn.AnimationTimer matches 27 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_3
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 27..30 at @s run tp @s ~ ~ ~ ~1 ~
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 35..38 at @s run tp @s ~ ~ ~ ~-2 ~1
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 39..41 at @s run tp @s ~ ~ ~ ~-0.6 ~-1.5
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 42..45 at @s run tp @s ~ ~ ~ ~2 ~1
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 27..30 at @s run tp @s ~ ~ ~ ~0.5 ~
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 35..38 at @s run tp @s ~ ~ ~ ~-1 ~0.5
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 39..41 at @s run tp @s ~ ~ ~ ~-0.6 ~-1
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 42..45 at @s run tp @s ~ ~ ~ ~1 ~0.5
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 50..53 at @s run tp @s ~ ~ ~ ~-1 ~0.5
     execute if score @s Wpn.AnimationTimer matches 35 run playsound entity.player.attack.sweep master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.AnimationTimer matches 36 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_2
@@ -108,11 +108,11 @@
     execute if score @s Wpn.AnimationTimer matches 52 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s Wpn.AnimationTimer matches 52 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_4
     execute if score @s Wpn.AnimationTimer matches 53 positioned ~ ~1.65 ~ positioned ^ ^ ^1.5 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_4
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 51..53 at @s run tp @s ~ ~ ~ ~-1 ~-0.5
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 51..53 at @s run tp @s ~ ~ ~ ~-0.5 ~-0.5
     execute if score @s Wpn.AnimationTimer matches 67 positioned ~ ~1.65 ~ positioned ^ ^ ^1.2 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_5
     execute if score @s Wpn.AnimationTimer matches 67 positioned ~ ~1.65 ~ positioned ^ ^ ^1.7 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_5
     execute if score @s Wpn.AnimationTimer matches 67 positioned ~ ~1.65 ~ positioned ^ ^ ^2.2 run function mhdp_items:weapons/short_sword/type_normal/13_dance_rush/particle_5
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 60..61 run tp @s ~ ~ ~ ~-2.2 ~
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 60..61 run tp @s ~ ~ ~ ~-1.2 ~
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 68..70 run tp @s ~ ~ ~ ~2 ~
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 71..72 run tp @s ~ ~ ~ ~0.3 ~
 
