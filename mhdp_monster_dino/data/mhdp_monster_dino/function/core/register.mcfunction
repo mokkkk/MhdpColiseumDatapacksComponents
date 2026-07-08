@@ -176,8 +176,6 @@
         KnockbackStrength:2,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
-#     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailBack",DamageValue:6.2f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
-#     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"TailBack.Heat",DamageValue:7.8f,GuardValue:3,ElementType:1,ElementMultiply:20,Knockback:2,IsLaunch:false,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
 
 # 尻尾攻撃・飛びかかり
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {\
@@ -218,5 +216,9 @@
         KnockbackStrength:2,IsLaunch:true,LaunchAngle:45,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
-#     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Round",DamageValue:12.0f,GuardValue:7,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:true,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
-#     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"Round.Heat",DamageValue:14.0f,GuardValue:7,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:true,LaunchType:1,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {\
+        Name:"Round.Heat",AttackPart:"tail",VectorType:"Normal",\
+        DamageValue:14.0f,ObjectDamageValue:80,GuardValue:11,ElementType:1,ElementMultiply:30,\
+        KnockbackStrength:2,IsLaunch:true,LaunchAngle:45,\
+        IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
+    }

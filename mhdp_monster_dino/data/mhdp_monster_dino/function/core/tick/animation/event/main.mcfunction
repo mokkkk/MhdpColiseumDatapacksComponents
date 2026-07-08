@@ -66,14 +66,14 @@
 #         execute if entity @s[tag=animated_java_dino.dino.animation.death_flying.playing] run function mhdp_monster_dino:core/tick/animation/event/death_flying/main
 
 # 移動
-    # execute if entity @s[tag=animated_java_dino.dino.animation.move.playing] run function mhdp_monster_dino:core/tick/animation/event/move/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.move.playing] run function mhdp_monster_dino:core/tick/animation/event/move/main
 
 # 車庫入れ
-    # execute if entity @s[tag=animated_java_dino.dino.animation.move_back.playing] run function mhdp_monster_dino:core/tick/animation/event/move_back/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.move_back.playing] run function mhdp_monster_dino:core/tick/animation/event/move_back/main
 
 # サイドステップ
-    # execute if entity @s[tag=animated_java_dino.dino.animation.step_side_r.playing] run function mhdp_monster_dino:core/tick/animation/event/step_side_r/main
-    # execute if entity @s[tag=animated_java_dino.dino.animation.step_side_l.playing] run function mhdp_monster_dino:core/tick/animation/event/step_side_l/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.step_side_r.playing] run function mhdp_monster_dino:core/tick/animation/event/step_side_r/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.step_side_l.playing] run function mhdp_monster_dino:core/tick/animation/event/step_side_l/main
 
 # ブレス
     # execute if entity @s[tag=animated_java_dino.dino.animation.breath.playing] run function mhdp_monster_dino:core/tick/animation/event/breath/main
@@ -132,4 +132,4 @@
     execute if entity @s[tag=animated_java_dino.dino.animation.roundforce.playing] run function mhdp_monster_dino:core/tick/animation/event/roundforce/main
 
 # 研ぎ
-    # execute if entity @s[tag=animated_java_dino.dino.animation.polish.playing] run function mhdp_monster_dino:core/tick/animation/event/polish/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.polish.playing] run function mhdp_monster_dino:core/tick/animation/event/polish/main

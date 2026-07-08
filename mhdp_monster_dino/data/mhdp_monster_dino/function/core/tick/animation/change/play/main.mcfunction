@@ -24,6 +24,16 @@
     execute if entity @s[tag=Anim.Turn.R] run function animated_java_dino:dino/animations/turn_right/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Turn.L] run function animated_java_dino:dino/animations/turn_left/tween {duration:1, to_frame: 1}
 
+# 移動
+    execute if entity @s[tag=Anim.Move] run function animated_java_dino:dino/animations/move/tween {duration:1, to_frame: 1}
+
+# サイドステップ
+    execute if entity @s[tag=Anim.Step.R] run function animated_java_dino:dino/animations/step_side_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.Step.L] run function animated_java_dino:dino/animations/step_side_l/tween {duration:1, to_frame: 1}
+
+# 車庫入れ
+    execute if entity @s[tag=Anim.MoveBack] run function animated_java_dino:dino/animations/move_back/tween {duration:1, to_frame: 1}
+
 # 噛みつき
     execute if entity @s[tag=Anim.Bite] run function animated_java_dino:dino/animations/bite/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.BiteToTail] run function animated_java_dino:dino/animations/bite_to_tail/tween {duration:1, to_frame: 1}
@@ -60,6 +70,9 @@
 
 # 大回転
     execute if entity @s[tag=Anim.RoundForce] run function animated_java_dino:dino/animations/roundforce/tween {duration:1, to_frame: 1}
+
+# 研ぎ
+    execute if entity @s[tag=Anim.Polish] run function animated_java_dino:dino/animations/polish/tween {duration:1, to_frame: 1}
 
 # タグ消去
     function mhdp_monsters:core/util/other/remove_animation_tag
