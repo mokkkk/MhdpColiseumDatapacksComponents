@@ -3,3 +3,5 @@
 
 #> tag
 # @within function **
+    #declare tag 10032.OnGround
+    #declare tag 10032.IsAttacked

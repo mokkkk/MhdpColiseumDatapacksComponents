@@ -76,7 +76,7 @@
     execute if entity @s[tag=animated_java_dino.dino.animation.step_side_l.playing] run function mhdp_monster_dino:core/tick/animation/event/step_side_l/main
 
 # ブレス
-    # execute if entity @s[tag=animated_java_dino.dino.animation.breath.playing] run function mhdp_monster_dino:core/tick/animation/event/breath/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.breath.playing] run function mhdp_monster_dino:core/tick/animation/event/breath/main
 
 # 3連ブレス
     # execute if entity @s[tag=animated_java_dino.dino.animation.breath_triple.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_triple/main

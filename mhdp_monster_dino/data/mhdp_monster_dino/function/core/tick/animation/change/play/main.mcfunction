@@ -27,12 +27,15 @@
 # 移動
     execute if entity @s[tag=Anim.Move] run function animated_java_dino:dino/animations/move/tween {duration:1, to_frame: 1}
 
+# 車庫入れ
+    execute if entity @s[tag=Anim.MoveBack] run function animated_java_dino:dino/animations/move_back/tween {duration:1, to_frame: 1}
+
 # サイドステップ
     execute if entity @s[tag=Anim.Step.R] run function animated_java_dino:dino/animations/step_side_r/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.Step.L] run function animated_java_dino:dino/animations/step_side_l/tween {duration:1, to_frame: 1}
 
-# 車庫入れ
-    execute if entity @s[tag=Anim.MoveBack] run function animated_java_dino:dino/animations/move_back/tween {duration:1, to_frame: 1}
+# ブレス
+    execute if entity @s[tag=Anim.Breath] run function animated_java_dino:dino/animations/breath/tween {duration:1, to_frame: 1}
 
 # 噛みつき
     execute if entity @s[tag=Anim.Bite] run function animated_java_dino:dino/animations/bite/tween {duration:1, to_frame: 1}
