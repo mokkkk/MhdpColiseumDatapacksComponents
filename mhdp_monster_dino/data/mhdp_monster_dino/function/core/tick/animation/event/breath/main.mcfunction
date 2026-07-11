@@ -11,7 +11,7 @@
 
 # 効果音
     execute if score @s aj.breath.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s aj.breath.frame matches 2..24 on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/breath/m.particle_head with entity @s data.locators.pos_head
+    execute if score @s aj.breath.frame matches 2..24 run function animated_java_dino:dino/at_locator {name:"pos_head",command:"function mhdp_monster_dino:core/tick/animation/event/breath/particle_head"} 
     execute if score @s aj.breath.frame matches 27..31 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.ravager.attack master @s ^ ^1 ^1 0.4 0.8 0.4
     execute if score @s aj.breath.frame matches 27..31 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.hoglin.attack master @s ^ ^1 ^1 0.4 0.65 0.4
     execute if score @s aj.breath.frame matches 27..28 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^1 0.4 0.8 0.4

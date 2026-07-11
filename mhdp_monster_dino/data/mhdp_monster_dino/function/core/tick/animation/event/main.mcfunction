@@ -79,14 +79,14 @@
     execute if entity @s[tag=animated_java_dino.dino.animation.breath.playing] run function mhdp_monster_dino:core/tick/animation/event/breath/main
 
 # 3連ブレス
-    # execute if entity @s[tag=animated_java_dino.dino.animation.breath_triple.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_triple/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.breath_triple.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_triple/main
 
 # バックジャンプブレス
-    # execute if entity @s[tag=animated_java_dino.dino.animation.breath_backstep.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_backstep/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.breath_backstep.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_backstep/main
 
 # 移動ブレス
-    # execute if entity @s[tag=animated_java_dino.dino.animation.breath_move_r.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_move_r/main
-    # execute if entity @s[tag=animated_java_dino.dino.animation.breath_move_l.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_move_l/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.breath_move_r.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_move_r/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.breath_move_l.playing] run function mhdp_monster_dino:core/tick/animation/event/breath_move_l/main
 
 # 嚙みつき
     execute if entity @s[tag=animated_java_dino.dino.animation.bite.playing] run function mhdp_monster_dino:core/tick/animation/event/bite/main

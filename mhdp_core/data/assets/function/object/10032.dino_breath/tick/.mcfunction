@@ -10,6 +10,7 @@
 # 接地前：移動
     execute if entity @s[tag=!10032.OnGround,tag=!10032.IsAttacked] at @s run function assets:object/10032.dino_breath/tick/move
     execute if entity @s[tag=!10032.OnGround,tag=!10032.IsAttacked] at @s run function assets:object/10032.dino_breath/tick/move
+    execute if entity @s[tag=!10032.OnGround,tag=!10032.IsAttacked] at @s run function assets:object/10032.dino_breath/tick/move
 
 # 接地後：爆発
     execute if entity @s[tag=10032.OnGround,tag=!10032.IsAttacked] at @s run function assets:object/10032.dino_breath/tick/wait

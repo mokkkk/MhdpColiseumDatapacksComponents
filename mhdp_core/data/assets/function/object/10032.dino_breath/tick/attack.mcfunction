@@ -9,12 +9,12 @@
 
 # 攻撃実行
     function mhdp_monsters:core/util/tick/event/apply_attack_distance.m {Uid:1003,AttackName:"Breath",\
-        Player_Selector:"@a[tag=Ply.State.EnableDamage,distance=..5.2]",\
+        Player_Selector:"@a[tag=Ply.State.EnableDamage,distance=..6.2]",\
             Player_Offset_X:0.0,Player_Offset_Y:0.0,Player_Offset_Z:0.0,\
-            Player_Distance:5.2,\
-        Entity_Selector:"@e[type=slime,tag=Entity.EnableDamage,tag=!Mns.HitBox.Dino,distance=..5.2]",\
+            Player_Distance:6.2,\
+        Entity_Selector:"@e[type=slime,tag=Entity.EnableDamage,tag=!Mns.HitBox.Dino,distance=..6.2]",\
             Entity_Offset_X:0.0,Entity_Offset_Y:0.0,Entity_Offset_Z:0.0,\
-            Entity_Distance:5.2\
+            Entity_Distance:6.2\
     }
 
 # 演出

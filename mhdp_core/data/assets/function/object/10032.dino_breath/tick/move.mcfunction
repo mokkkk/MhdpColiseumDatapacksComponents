@@ -9,8 +9,7 @@
     particle dust{color:[1.000,0.198,0.000],scale:1.5} ~ ~ ~ 0.5 0.5 0.5 0 5
     particle flame ~ ~ ~ 0.3 0.3 0.3 0.02 10
 
-# ヒット確認
-    execute if entity @s[tag=!10032.IsAttacked] if entity @a[tag=Ply.State.EnableDamage,distance=..1.5] run function assets:object/10032.dino_breath/tick/hit
+# オブジェクトヒット確認
     execute if entity @s[tag=!10032.IsAttacked] if entity @n[type=shulker,tag=Asset.Build.HitBox,dx=0.1,dy=0.1,dz=0.1] run function assets:object/10032.dino_breath/tick/hit
 
 # 移動

@@ -37,6 +37,16 @@
 # ブレス
     execute if entity @s[tag=Anim.Breath] run function animated_java_dino:dino/animations/breath/tween {duration:1, to_frame: 1}
 
+# 3連ブレス
+    execute if entity @s[tag=Anim.BreathTriple] run function animated_java_dino:dino/animations/breath_triple/tween {duration:1, to_frame: 1}
+
+# バックジャンプブレス
+    execute if entity @s[tag=Anim.BreathBack] run function animated_java_dino:dino/animations/breath_backstep/tween {duration:1, to_frame: 1}
+
+# 移動ブレス
+    execute if entity @s[tag=Anim.BreathMove.R] run function animated_java_dino:dino/animations/breath_move_r/tween {duration:1, to_frame: 1}
+    execute if entity @s[tag=Anim.BreathMove.L] run function animated_java_dino:dino/animations/breath_move_l/tween {duration:1, to_frame: 1}
+
 # 噛みつき
     execute if entity @s[tag=Anim.Bite] run function animated_java_dino:dino/animations/bite/tween {duration:1, to_frame: 1}
     execute if entity @s[tag=Anim.BiteToTail] run function animated_java_dino:dino/animations/bite_to_tail/tween {duration:1, to_frame: 1}
