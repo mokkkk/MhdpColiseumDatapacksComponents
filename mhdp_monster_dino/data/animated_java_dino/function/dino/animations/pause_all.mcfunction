@@ -55,6 +55,8 @@ tag @s remove animated_java_dino.dino.animation.breath_triple.playing
 tag @s remove animated_java_dino.dino.animation.breath_backstep.playing
 tag @s remove animated_java_dino.dino.animation.breath_move_r.playing
 tag @s remove animated_java_dino.dino.animation.breath_move_l.playing
+tag @s remove animated_java_dino.dino.animation.step_l_to_jumptail_r.playing
+tag @s remove animated_java_dino.dino.animation.step_r_to_jumptail_l.playing
 tag @s remove animated_java_dino.dino.animation.tail_back_r.playing
 tag @s remove animated_java_dino.dino.animation.tail_back_l.playing
 tag @s remove animated_java_dino.dino.animation.tail_side_r.playing

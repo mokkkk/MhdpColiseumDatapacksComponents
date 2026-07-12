@@ -117,6 +117,9 @@
     execute if entity @s[tag=animated_java_dino.dino.animation.tail_back_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_back_l/main
 
 # 尻尾攻撃・飛びかかり
+    # ステップ
+        execute if entity @s[tag=animated_java_dino.dino.animation.step_l_to_jumptail_r.playing] run function mhdp_monster_dino:core/tick/animation/event/step_l_to_jumptail_r/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.step_r_to_jumptail_l.playing] run function mhdp_monster_dino:core/tick/animation/event/step_r_to_jumptail_l/main
     # 通常時
         execute if entity @s[tag=animated_java_dino.dino.animation.jump_tail_r.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/main
         execute if entity @s[tag=animated_java_dino.dino.animation.jump_tail_l.playing] run function mhdp_monster_dino:core/tick/animation/event/jump_tail_l/main

@@ -55,6 +55,8 @@ scoreboard objectives remove aj.breath_triple.frame
 scoreboard objectives remove aj.breath_backstep.frame
 scoreboard objectives remove aj.breath_move_r.frame
 scoreboard objectives remove aj.breath_move_l.frame
+scoreboard objectives remove aj.step_l_to_jumptail_r.frame
+scoreboard objectives remove aj.step_r_to_jumptail_l.frame
 scoreboard objectives remove aj.tail_back_r.frame
 scoreboard objectives remove aj.tail_back_l.frame
 scoreboard objectives remove aj.tail_side_r.frame

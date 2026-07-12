@@ -4,10 +4,15 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
-# 通常時
-    # サイドステップ
-        # return run function animated_java_dino:dino/animations/step_side_r/tween {duration:1, to_frame: 1}
-    
+# 尻尾赤熱化時
+    # ステップ→叩きつけ
+        return run function animated_java_dino:dino/animations/step_l_to_jumptail_r/tween {duration:1, to_frame: 1}
+        
 # 喉赤熱化時
     # 移動ブレス
         return run function animated_java_dino:dino/animations/breath_move_r/tween {duration:1, to_frame: 1}
+
+# 通常時
+    # サイドステップ
+        return run function animated_java_dino:dino/animations/step_side_r/tween {duration:1, to_frame: 1}
+    
