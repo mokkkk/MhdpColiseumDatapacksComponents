@@ -21,8 +21,7 @@
     execute if entity @s[tag=Anim.Idle] run function animated_java_dino:dino/animations/idle/tween {duration:1, to_frame: 1}
 
 # 軸合わせ
-    execute if entity @s[tag=Anim.Turn.R] run function animated_java_dino:dino/animations/turn_right/tween {duration:1, to_frame: 1}
-    execute if entity @s[tag=Anim.Turn.L] run function animated_java_dino:dino/animations/turn_left/tween {duration:1, to_frame: 1}
+    # 別箇所で実行
 
 # 移動
     execute if entity @s[tag=Anim.Move] run function animated_java_dino:dino/animations/move/tween {duration:1, to_frame: 1}

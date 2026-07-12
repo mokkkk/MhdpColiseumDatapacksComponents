@@ -5,17 +5,17 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # 実行者変更
-    execute unless entity @s[type=item_display,tag=Mns.Root.Dino] as @n[type=item_display,tag=Mns.Root.Dino] run return run function mhdp_monster_dino:core/debug/interrupt
+    execute unless entity @s[type=item_display,tag=Mns.Root.Dino] as @n[type=item_display,tag=Mns.Root.Dino] at @s run return run function mhdp_monster_dino:core/debug/interrupt
 
 # 攻撃データ更新のため、register実行
     function mhdp_monster_dino:core/register
 
 # 通常再生
     # タグ付与
-        tag @s add Anim.StepToTailJump.L
+        # tag @s add Anim.Tail.R
         # function mhdp_monster_dino:core/tick/animation/change/play/step_jump
     # 軸合わせ
-        # tag @s add Mns.Temp.IsTurn
+        tag @s add Mns.Temp.IsTurn
         # scoreboard players set @s Mns.General.TurnCount 2
     # アニメーション変更
         function mhdp_monster_dino:core/tick/animation/change/main

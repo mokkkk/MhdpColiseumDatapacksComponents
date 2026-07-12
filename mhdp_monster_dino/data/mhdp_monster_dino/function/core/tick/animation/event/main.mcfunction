@@ -28,9 +28,13 @@
 # # 咆哮
 #     execute if entity @s[tag=animated_java_dino.dino.animation.voice.playing] run function mhdp_monster_dino:core/tick/animation/event/voice/main
 
-# # 軸合わせ
-#     execute if entity @s[tag=animated_java_dino.dino.animation.turn_right.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_right/main
-#     execute if entity @s[tag=animated_java_dino.dino.animation.turn_left.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_left/main
+# 軸合わせ
+    execute if entity @s[tag=animated_java_dino.dino.animation.turn_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_r/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.turn_l.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_l/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.turn_big_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_big_r/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.turn_big_l.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_big_l/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.turn_bite_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_bite_r/main
+    execute if entity @s[tag=animated_java_dino.dino.animation.turn_bite_l.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_bite_l/main
 
 # # 怯み
 #     # 通常
