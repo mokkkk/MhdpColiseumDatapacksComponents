@@ -6,13 +6,12 @@
 
 # 尻尾赤熱化時
     # ステップ→叩きつけ
-        return run function animated_java_dino:dino/animations/step_l_to_jumptail_r/tween {duration:1, to_frame: 1}
+        execute if entity @s[tag=Mns.Dino.State.TailHeat] run return run function mhdp_monster_dino:core/tick/animation/change/play/step_to_jumptail_forceplay
         
 # 喉赤熱化時
     # 移動ブレス
-        return run function animated_java_dino:dino/animations/breath_move_r/tween {duration:1, to_frame: 1}
+        execute if entity @s[tag=Mns.Dino.State.HeadHeat] run return run function mhdp_monster_dino:core/tick/animation/change/play/move_breath_forceplay
 
 # 通常時
     # サイドステップ
-        return run function animated_java_dino:dino/animations/step_side_r/tween {duration:1, to_frame: 1}
-    
+        return run function mhdp_monster_dino:core/tick/animation/change/play/step_forceplay

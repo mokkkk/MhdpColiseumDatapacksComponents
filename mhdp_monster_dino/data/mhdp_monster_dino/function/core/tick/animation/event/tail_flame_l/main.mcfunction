@@ -5,8 +5,8 @@
 # @within function mhdp_monster_dino:core/tick/animation/event/tick
 
 # 軸合わせ・弱め
-    execute if score @s aj.tail_flame_l.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:180}
-    execute if score @s aj.tail_flame_l.frame matches 10 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:180}
+    execute if score @s aj.tail_flame_l.frame matches 2 at @s run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:180}
+    execute if score @s aj.tail_flame_l.frame matches 10 at @s run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Dino",Tick:10,MaxRotation:180}
     execute if score @s aj.tail_flame_l.frame matches 2..18 at @s run function mhdp_monsters:core/util/tick/event/alignment
 
 # 移動

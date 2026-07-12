@@ -12,10 +12,10 @@
 
 # 通常再生
     # タグ付与
-        # tag @s add Anim.Tail.R
-        # function mhdp_monster_dino:core/tick/animation/change/play/step_jump
+        tag @s add Anim.Move
+        # function mhdp_monster_dino:core/tick/animation/change/play/step
     # 軸合わせ
-        tag @s add Mns.Temp.IsTurn
+        # tag @s add Mns.Temp.IsTurn
         # scoreboard players set @s Mns.General.TurnCount 2
     # アニメーション変更
         function mhdp_monster_dino:core/tick/animation/change/main

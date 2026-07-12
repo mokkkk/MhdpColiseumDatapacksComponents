@@ -1,4 +1,4 @@
-#> mhdp_monster_dino:core/tick/animation/change/play/tail
+#> mhdp_monster_dino:core/tick/animation/change/play/tail_flame
 #
 # アニメーション変更処理 尻尾攻撃
 #
@@ -8,8 +8,8 @@
     execute facing entity @e[tag=Mns.Target.Dino,limit=1] feet rotated ~ 0 positioned ^ ^ ^3.0 rotated as @s positioned ^4.0 ^ ^ if entity @s[distance=..5.0] run tag @s add Mns.Temp.Right
 
 # 再生アニメーション決定
-    execute if entity @s[tag=Mns.Temp.Right] run tag @s add Anim.Tail.R
-    execute if entity @s[tag=!Mns.Temp.Right] run tag @s add Anim.Tail.L
+    execute if entity @s[tag=Mns.Temp.Right] run tag @s add Anim.TailFlame.R
+    execute if entity @s[tag=!Mns.Temp.Right] run tag @s add Anim.TailFlame.L
 
 # 終了
     tag @s remove Mns.Temp.Right
