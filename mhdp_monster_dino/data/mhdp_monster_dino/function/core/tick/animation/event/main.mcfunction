@@ -20,7 +20,7 @@
 # 警戒
     execute if entity @s[tag=animated_java_dino.dino.animation.search.playing] run function mhdp_monster_dino:core/tick/animation/event/search/main
 
-# ## 戦闘時
+## 戦闘時
 
 # 待機
     execute if entity @s[tag=animated_java_dino.dino.animation.idle.playing] run function mhdp_monster_dino:core/tick/animation/event/idle/main

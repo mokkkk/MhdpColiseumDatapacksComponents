@@ -25,6 +25,10 @@
 # プレイヤー
     #declare tag Mns.Candidate.Dino ターゲット候補になるプレイヤー
     #declare tag Mns.Target.Dino 現在狙っているプレイヤー
+# 状態
+    #declare tag Mns.Dino.State.TailHeat 尻尾赤熱化状態
+    #declare tag Mns.Dino.State.TailRust 尻尾錆び状態
+    #declare tag Mns.Dino.State.HeadHeat 喉赤熱化状態
 # 部位破壊
     #declare tag Mns.Break.Head 頭部位破壊
     #declare tag Mns.Break.Tail 尻尾部位破壊
