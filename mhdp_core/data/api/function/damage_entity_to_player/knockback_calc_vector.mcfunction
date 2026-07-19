@@ -1,6 +1,6 @@
 #> api:damage_entity_to_player/knockback_calc_vector
 #
-# モンスターからプレイヤーに対してのダメージ処理 ガード
+# モンスターからプレイヤーに対してのダメージ処理 ノックバック保存
 #
 # @within function mhdp_core:player/damage/entity_to_player/apply
 
