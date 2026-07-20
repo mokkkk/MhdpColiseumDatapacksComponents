@@ -18,3 +18,6 @@
     execute if entity @s[tag=Ply.State.PlayingQuest] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run function mhdp_core:player/death/in_advancement_setspawnpoint
     execute if entity @s[tag=Ply.State.PlayingQuest] run scoreboard players set @s Ply.Timer.DeathAnimation 0
     execute if entity @s[tag=Ply.State.PlayingQuest] run tag @s add Ply.Event.DeathAnimation
+
+# エフェクト消去
+    function assets:core/effect/on_death

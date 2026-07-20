@@ -15,6 +15,10 @@
         function mhdp_items:core/switch/item/interrupt
     function mhdp_items:core/switch/item/reset
 
+# エフェクトのリセット
+# 訓練中はリセットしない
+    execute if entity @s[tag=!Ply.State.IsTraining] run function assets:core/effect/on_start_village
+
 # 演出の強制終了
     # 死亡演出
         execute if entity @s[tag=Ply.Event.DeathAnimation] at @s run function mhdp_core:player/phase_quest/death_animation/end_on_quest

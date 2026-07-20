@@ -4,15 +4,15 @@
 #
 # @within function 
 
+# 訓練所利用タグを付与
+    tag @s add Ply.State.IsTraining
+
 # 武器の使用開始処理
 # 村→クエストPhaseでの処理を流用する
     function mhdp_core:phase/2_village_to_quest/start/quest_member
     function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/main
     tag @s remove Ply.State.PlayingQuest
     team leave @s
-
-# 訓練所利用タグを付与
-    tag @s add Ply.State.IsTraining
 
 # 通知
     tellraw @s {"text":"【訓練を開始します】"}

@@ -13,3 +13,7 @@
         IsRemoveStartQuest:true,\
         IsRemoveOnDeath:true\
     }
+
+# attribute操作
+    attribute @s movement_speed modifier add mhdp_core:effect_bind_voice_movement_speed -0.07 add_value
+    attribute @s jump_strength modifier add mhdp_core:effect_bind_voice_jump_strength -1.00 add_value

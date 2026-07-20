@@ -46,5 +46,9 @@
 # 特殊装具の初期化
     function mhdp_core:phase/2_village_to_quest/change_phase/setup/player/sp_items
 
+# エフェクトのリセット
+# 訓練中はリセットしない
+    execute if entity @s[tag=!Ply.State.IsTraining] run function assets:core/effect/on_start_quest
+
 # 念のためadvancementを除去
     execute if entity @s[tag=Ply.Adv.Using.EnderEye] run tag @s remove Ply.Adv.Using.EnderEye
