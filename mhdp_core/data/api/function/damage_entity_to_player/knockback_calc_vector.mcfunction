@@ -20,7 +20,7 @@
         execute if entity @s[tag=Ply.Weapon.Guard] if score #mhdp_temp_guard_value MhdpCore matches 3..4 if score #mhdp_temp_knockback_strength MhdpCore matches 2.. run scoreboard players set $strength player_motion.api.launch 12000
 
 # 角度
-    execute at @s run summon area_effect_cloud ~ ~ ~ {Tags:["Other.Temp.KnockbackVector"]}
+    execute at @s run summon area_effect_cloud ~ ~ ~ {Tags:["Other.Temp.KnockbackVector"],custom_particle:{type:"block",block_state:"minecraft:air"},Duration:5}
     # 非ガード時
         execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Arg{IsLaunch:false} facing entity @s feet rotated ~ -25 positioned as @s run tp @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] ~ ~ ~ ~ ~
     # 非ガード時、打ち上げあり

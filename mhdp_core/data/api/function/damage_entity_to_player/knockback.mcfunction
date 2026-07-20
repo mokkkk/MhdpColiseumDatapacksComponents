@@ -9,6 +9,9 @@
     execute if entity @s[tag=Ply.Weapon.Armor.Hyper] run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
     execute if entity @s[tag=Itm.Sp.ImmovableCloth.Using] run scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
 
+# ノックバック量が0の場合、実行しない
+    execute if score #mhdp_temp_knockback_strength MhdpCore matches ..0 run return 0
+
 # 角度計算
     execute if data storage mhdp_core:temp Arg{VectorType:"Normal"} positioned as @s positioned ^ ^ ^-5 run function api:damage_entity_to_player/knockback_calc_vector
     execute unless data storage mhdp_core:temp Arg{VectorType:"Normal"} run function api:damage_entity_to_player/knockback_calc_vector

@@ -25,8 +25,8 @@
 # 待機
     execute if entity @s[tag=animated_java_dino.dino.animation.idle.playing] run function mhdp_monster_dino:core/tick/animation/event/idle/main
 
-# # 咆哮
-#     execute if entity @s[tag=animated_java_dino.dino.animation.voice.playing] run function mhdp_monster_dino:core/tick/animation/event/voice/main
+# 咆哮
+    execute if entity @s[tag=animated_java_dino.dino.animation.voice.playing] run function mhdp_monster_dino:core/tick/animation/event/voice/main
 
 # 軸合わせ
     execute if entity @s[tag=animated_java_dino.dino.animation.turn_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_r/main

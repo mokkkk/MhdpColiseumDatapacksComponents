@@ -12,7 +12,7 @@
 
 # 通常再生
     # タグ付与
-        tag @s add Anim.Move
+        tag @s add Anim.Voice
         # function mhdp_monster_dino:core/tick/animation/change/play/step
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn

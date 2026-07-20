@@ -20,6 +20,9 @@
 # 待機
     execute if entity @s[tag=Anim.Idle] run function animated_java_dino:dino/animations/idle/tween {duration:1, to_frame: 1}
 
+# 咆哮
+    execute if entity @s[tag=Anim.Voice] run function animated_java_dino:dino/animations/voice/tween {duration:1, to_frame: 1}
+
 # 軸合わせ
     # 別箇所で実行
 

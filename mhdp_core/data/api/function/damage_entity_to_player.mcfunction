@@ -52,6 +52,9 @@
     # ダメージを与える
         function api:damage_entity_to_player/apply/apply_damage with storage mhdp_core:temp Arg
 
+# エフェクトの付与
+    execute if entity @s[tag=!Ply.Weapon.Guard] if data storage mhdp_core:temp Arg.Effect{IsApplyEffect:true} run function api:damage_entity_to_player/apply_effect.m with storage mhdp_core:temp Arg.Effect
+
 # 参考
     # function mhdp_core:player/damage/entity_to_player/apply
 

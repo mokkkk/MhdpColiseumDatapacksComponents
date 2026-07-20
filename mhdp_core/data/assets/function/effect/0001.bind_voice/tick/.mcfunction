@@ -3,3 +3,4 @@
 # エフェクトtick処理
 
 # 処理なし
+    # execute if score #temp_effect_tick MhdpCore matches 60 run say うわあああ
