@@ -17,7 +17,8 @@
     execute if score @s aj.bite_to_tail.frame matches 1..5 if entity @n[tag=Mns.Target.Dino,distance=..9] at @s run tp @s ^ ^ ^-0.5
     execute if score @s aj.bite_to_tail.frame matches 6..10 at @s run tp @s ^ ^ ^-0.1
     execute if score @s aj.bite_to_tail.frame matches 20..25 unless entity @n[tag=Mns.Target.Dino,distance=..7] at @s run tp @s ^ ^ ^0.5
-    execute if score @s aj.bite_to_tail.frame matches 43..58 at @s run tp @s ^ ^ ^-0.1
+    execute if score @s aj.bite_to_tail.frame matches 43..45 at @s run tp @s ^ ^ ^-0.1
+    execute if score @s aj.bite_to_tail.frame matches 46..55 unless entity @n[tag=Mns.Target.Dino,distance=..7] at @s run tp @s ^ ^ ^0.4
 
 # 効果音
     execute if score @s aj.bite_to_tail.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
@@ -30,19 +31,20 @@
     execute if score @s aj.bite_to_tail.frame matches 109 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 攻撃
-    execute if score @s aj.bite_to_tail.frame matches 20 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Bite"}]
-    execute if score @s aj.bite_to_tail.frame matches 21..26 run function animated_java_dino:dino/at_locator {name:"pos_head",command:"function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_head"}
-    execute if score @s aj.bite_to_tail.frame matches 25 run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_0
-    execute if score @s aj.bite_to_tail.frame matches 27 run function mhdp_monsters:core/util/tick/event/end_attack
-    
-    execute if score @s aj.bite_to_tail.frame matches 49 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Tail"}]
-    execute if score @s aj.bite_to_tail.frame matches 50 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-90}
-    execute if score @s aj.bite_to_tail.frame matches 51 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-70}
-    execute if score @s aj.bite_to_tail.frame matches 52 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-50}
-    execute if score @s aj.bite_to_tail.frame matches 53 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-30}
-    execute if score @s aj.bite_to_tail.frame matches 54 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-10}
-    execute if score @s aj.bite_to_tail.frame matches 55 run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_1
-    execute if score @s aj.bite_to_tail.frame matches 56 run function mhdp_monsters:core/util/tick/event/end_attack
+    # 噛みつき
+        execute if score @s aj.bite_to_tail.frame matches 20 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"BiteCombo"}]
+        execute if score @s aj.bite_to_tail.frame matches 21..26 run function animated_java_dino:dino/at_locator {name:"pos_head",command:"function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_head"}
+        execute if score @s aj.bite_to_tail.frame matches 25 run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_0
+        execute if score @s aj.bite_to_tail.frame matches 27 run function mhdp_monsters:core/util/tick/event/end_attack
+    # 尻尾
+        execute if score @s aj.bite_to_tail.frame matches 49 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Tail"}]
+        execute if score @s aj.bite_to_tail.frame matches 50 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-90}
+        execute if score @s aj.bite_to_tail.frame matches 51 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-70}
+        execute if score @s aj.bite_to_tail.frame matches 52 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-50}
+        execute if score @s aj.bite_to_tail.frame matches 53 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-30}
+        execute if score @s aj.bite_to_tail.frame matches 54 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-10}
+        execute if score @s aj.bite_to_tail.frame matches 55 run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_1
+        execute if score @s aj.bite_to_tail.frame matches 56 run function mhdp_monsters:core/util/tick/event/end_attack
 
 # 接地
     function mhdp_monsters:core/util/tick/move/check_landing

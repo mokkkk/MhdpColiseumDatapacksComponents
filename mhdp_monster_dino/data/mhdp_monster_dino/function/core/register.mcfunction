@@ -131,8 +131,18 @@
     }
 
 # 噛みつきコンボ
-#     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"BiteCombo",DamageValue:5.0f,GuardValue:2,ElementType:0,ElementMultiply:0,Knockback:2,IsLaunch:true,LaunchType:2,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
-#     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {Name:"BiteCombo.Heat",DamageValue:5.5f,GuardValue:2,ElementType:1,ElementMultiply:20,Knockback:2,IsLaunch:true,LaunchType:2,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false}
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {\
+        Name:"BiteCombo",AttackPart:"head",VectorType:"Normal",\
+        DamageValue:5.0f,ObjectDamageValue:10,GuardValue:2,ElementType:0,ElementMultiply:0,\
+        KnockbackStrength:2,IsLaunch:true,LaunchAngle:45,\
+        IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
+    }
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {\
+        Name:"BiteCombo.Heat",AttackPart:"head",VectorType:"Normal",\
+        DamageValue:5.0f,ObjectDamageValue:10,GuardValue:2,ElementType:0,ElementMultiply:0,\
+        KnockbackStrength:2,IsLaunch:true,LaunchAngle:45,\
+        IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
+    }
 
 # 2連噛みつき
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {\
