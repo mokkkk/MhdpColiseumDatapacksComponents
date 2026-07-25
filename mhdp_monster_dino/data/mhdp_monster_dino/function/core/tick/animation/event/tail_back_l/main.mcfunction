@@ -37,7 +37,7 @@
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # 喉赤熱化中はキャンセルしてブレスに移行
-    # execute if entity @s[tag=Mns.Dino.State.HeadHeat] if score @s aj.tail_back_l.frame matches 52 run function mhdp_monster_dino:core/tick/animation/event/tail_back_l/combo
+    execute if entity @s[tag=Mns.Dino.State.HeadHeat] if score @s aj.tail_back_l.frame matches 52 run function mhdp_monster_dino:core/tick/animation/event/tail_back_l/combo
 
 # 終了
     execute if score @s aj.tail_back_l.frame matches 94 run function mhdp_monster_dino:core/tick/animation/event/tail_back_l/end

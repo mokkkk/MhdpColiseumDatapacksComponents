@@ -28,6 +28,9 @@
 # 咆哮
     execute if entity @s[tag=animated_java_dino.dino.animation.voice.playing] run function mhdp_monster_dino:core/tick/animation/event/voice/main
 
+# 怒り開始
+    execute if entity @s[tag=animated_java_dino.dino.animation.anger.playing] run function mhdp_monster_dino:core/tick/animation/event/anger/main
+
 # 軸合わせ
     execute if entity @s[tag=animated_java_dino.dino.animation.turn_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_r/main
     execute if entity @s[tag=animated_java_dino.dino.animation.turn_l.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_l/main
@@ -36,32 +39,47 @@
     execute if entity @s[tag=animated_java_dino.dino.animation.turn_bite_r.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_bite_r/main
     execute if entity @s[tag=animated_java_dino.dino.animation.turn_bite_l.playing] run function mhdp_monster_dino:core/tick/animation/event/turn_bite_l/main
 
-# # 怯み
-#     # 通常
-#         execute if entity @s[tag=animated_java_dino.dino.animation.damage.playing] run function mhdp_monster_dino:core/tick/animation/event/damage/main
-#     # 大怯み
-#         execute if entity @s[tag=animated_java_dino.dino.animation.damage_down.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_down/main
-#     # 空中
-#         execute if entity @s[tag=animated_java_dino.dino.animation.damage_flying.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_flying/main
-#     # ダウン
-#         execute if entity @s[tag=animated_java_dino.dino.animation.down.playing] run function mhdp_monster_dino:core/tick/animation/event/down/main
-#         execute if entity @s[tag=animated_java_dino.dino.animation.down_end.playing] run function mhdp_monster_dino:core/tick/animation/event/down_end/main
-#     # 怒り
-#         execute if entity @s[tag=animated_java_dino.dino.animation.anger.playing] run function mhdp_monster_dino:core/tick/animation/event/anger/main
+# 怯み
+    # 正面・汎用
+        execute if entity @s[tag=animated_java_dino.dino.animation.damage_head.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_head/main
+    # 正面・尻尾
+        execute if entity @s[tag=animated_java_dino.dino.animation.damage_tail_forward.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_tail_forward/main
+    # 左右
+        execute if entity @s[tag=animated_java_dino.dino.animation.damage_right.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_right/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.damage_left.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_left/main
+    # 背後
+        execute if entity @s[tag=animated_java_dino.dino.animation.damage_tail_back.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_tail_back/main
+    # 部位破壊・尻尾
+        execute if entity @s[tag=animated_java_dino.dino.animation.damage_tail_break.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_tail_break/main
+    # ダウン
+        # 開始
+            execute if entity @s[tag=animated_java_dino.dino.animation.damage_down_right.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_down_right/main
+            execute if entity @s[tag=animated_java_dino.dino.animation.damage_down_left.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_down_left/main
+        # ダウン中
+            execute if entity @s[tag=animated_java_dino.dino.animation.down_right.playing] run function mhdp_monster_dino:core/tick/animation/event/down_right/main
+            execute if entity @s[tag=animated_java_dino.dino.animation.down_left.playing] run function mhdp_monster_dino:core/tick/animation/event/down_left/main
+        # 終了
+            execute if entity @s[tag=animated_java_dino.dino.animation.down_end_right.playing] run function mhdp_monster_dino:core/tick/animation/event/down_end_right/main
+            execute if entity @s[tag=animated_java_dino.dino.animation.down_end_left.playing] run function mhdp_monster_dino:core/tick/animation/event/down_end_left/main
+    # 特殊怯み(喉赤熱化解除)
+        execute if entity @s[tag=animated_java_dino.dino.animation.damage_head_heat.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_head_heat/main
+    # 相殺
+        # 頭
+            execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_head_start.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_head_start/main
+        # 尻尾
+            execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_tail_right_start.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_tail_right_start/main
+            execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_tail_left_start.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_tail_left_start/main
+        # 怯み中
+            execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter/main
+            execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_mirror.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_mirror/main
+        # 終了
+            execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_end.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_end/main
+            execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_end_mirror.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_end_mirror/main
+
 #     # 麻痺
 #         execute if entity @s[tag=animated_java_dino.dino.animation.state_paralysis_start.playing] run function mhdp_monster_dino:core/tick/animation/event/state_paralysis_start/main
 #         execute if entity @s[tag=animated_java_dino.dino.animation.state_paralysis.playing] run function mhdp_monster_dino:core/tick/animation/event/state_paralysis/main
 #         execute if entity @s[tag=animated_java_dino.dino.animation.state_paralysis_end.playing] run function mhdp_monster_dino:core/tick/animation/event/state_paralysis_end/main
-#     # スタン
-#         execute if entity @s[tag=animated_java_dino.dino.animation.state_stun.playing] run function mhdp_monster_dino:core/tick/animation/event/state_stun/main
-#         execute if entity @s[tag=animated_java_dino.dino.animation.state_stun_end.playing] run function mhdp_monster_dino:core/tick/animation/event/state_stun_end/main
-#     # 相殺
-#         execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_start.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_start/main
-#         execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter/main
-#         execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_end.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_end/main
-#     # 建築物攻撃時の怯み
-#         execute if entity @s[tag=animated_java_dino.dino.animation.interrupt_object.playing] run function mhdp_monster_dino:core/tick/animation/event/interrupt_object/main
-#         execute if entity @s[tag=animated_java_dino.dino.animation.interrupt_object_tackle.playing] run function mhdp_monster_dino:core/tick/animation/event/interrupt_object_tackle/main
 
 # # 討伐
 #     # 通常

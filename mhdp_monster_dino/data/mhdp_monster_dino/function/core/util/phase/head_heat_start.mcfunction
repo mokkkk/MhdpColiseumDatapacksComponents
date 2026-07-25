@@ -1,4 +1,4 @@
-#> mhdp_monster_dino:core/util/phase/head_heat
+#> mhdp_monster_dino:core/util/phase/head_heat_start
 #
 # 喉赤熱化から通常に戻るまで
 #

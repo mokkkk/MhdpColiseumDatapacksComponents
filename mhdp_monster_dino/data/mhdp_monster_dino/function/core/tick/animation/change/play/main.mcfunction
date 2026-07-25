@@ -23,6 +23,9 @@
 # 咆哮
     execute if entity @s[tag=Anim.Voice] run function animated_java_dino:dino/animations/voice/tween {duration:1, to_frame: 1}
 
+# 怒り開始
+    execute if entity @s[tag=Anim.Anger] run function animated_java_dino:dino/animations/anger/tween {duration:1, to_frame: 1}
+
 # 軸合わせ
     # 別箇所で実行
 

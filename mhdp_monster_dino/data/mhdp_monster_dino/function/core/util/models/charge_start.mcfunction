@@ -4,24 +4,31 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
 
-# 部位ID更新
-    scoreboard players set @e[type=slime,tag=Mns.HitBox.Dino.Head] Mns.Hitbox.PartId 5
+# 頭
+    # 通常
+    execute if entity @s[tag=!Mns.Break.Head,tag=!Mns.State.IsAnger] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_charge"'\
+    }
+    # 怒り
+    execute if entity @s[tag=!Mns.Break.Head,tag=Mns.State.IsAnger] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_anger_charge"'\
+    }
+    # 部位破壊
+    execute if entity @s[tag=Mns.Break.Head,tag=!Mns.State.IsAnger] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_charge_break"'\
+    }
+    # 怒り・部位破壊
+    execute if entity @s[tag=Mns.Break.Head,tag=Mns.State.IsAnger] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_anger_charge_break"'\
+    }
 
-# モデル変更
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.id set value "minecraft:white_dye"
-    # execute if entity @s[tag=!Mns.Break.Head,tag=!Mns.State.IsAnger] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 20
-    # execute if entity @s[tag=Mns.Break.Head,tag=!Mns.State.IsAnger] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 46
-    # execute if entity @s[tag=Mns.State.IsAnger,tag=!Mns.Break.Head] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 21
-    # execute if entity @s[tag=Mns.State.IsAnger,tag=Mns.Break.Head] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 47
-
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.head_lower] run data modify entity @s item.id set value "minecraft:white_dye"
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.head_lower] run data modify entity @s item.components."minecraft:custom_model_data" set value 25
-
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.neck_0] run data modify entity @s item.id set value "minecraft:white_dye"
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.neck_0] run data modify entity @s item.components."minecraft:custom_model_data" set value 22
-
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.neck_1] run data modify entity @s item.id set value "minecraft:white_dye"
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.neck_1] run data modify entity @s item.components."minecraft:custom_model_data" set value 23
-
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.neck_2] run data modify entity @s item.id set value "minecraft:white_dye"
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.neck_2] run data modify entity @s item.components."minecraft:custom_model_data" set value 24
+# 喉
+    function animated_java_dino:dino/as_node {name: 'neck_0', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/neck_0_charge"'\
+    }
+    function animated_java_dino:dino/as_node {name: 'neck_1', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/neck_1_charge"'\
+    }
+    function animated_java_dino:dino/as_node {name: 'neck_2', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/neck_2_charge"'\
+    }

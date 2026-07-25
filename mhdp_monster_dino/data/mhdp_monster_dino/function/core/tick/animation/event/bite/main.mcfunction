@@ -31,8 +31,5 @@
 # 接地
     function mhdp_monsters:core/util/tick/move/check_landing
 
-# フェーズ
-    # execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.bite.frame matches 26 run function mhdp_monster_dino:core/util/phase/tail_heat
-
 # 終了
     execute if score @s aj.bite.frame matches 65 run function mhdp_monster_dino:core/tick/animation/event/bite/end

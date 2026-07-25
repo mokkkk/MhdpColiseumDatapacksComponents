@@ -4,8 +4,12 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
 
-# カウント増加
-    scoreboard players add @s Mns.Dino.PhaseCount.Tail 1
+# 状態更新(一時)
+    tag @s remove Mns.Dino.State.TailHeat
+    tag @s add Mns.Dino.State.TailRust
+
+# 部位ID更新
+    scoreboard players set @e[type=slime,tag=Mns.HitBox.Dino.Tail] Mns.Hitbox.PartId 7
 
 # フェーズ変更
-    execute if entity @s[tag=!Mns.Dino.State.TailRust] if score @s Mns.Dino.PhaseCount.Tail matches 15.. run function mhdp_monster_dino:core/util/models/rust_start
+    function mhdp_monster_dino:core/util/models/rust_start

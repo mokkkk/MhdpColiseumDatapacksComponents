@@ -8,4 +8,4 @@
     execute facing entity @n[tag=Mns.Target.Dino] feet rotated ~ 0 positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 unless entity @s[distance=..1.3] run return 0
 
 # ブレスに遷移
-    function animated_java:dino_aj/animations/breath/tween {duration:5, to_frame: 2}
+    function animated_java_dino:dino/animations/breath/tween {duration:5, to_frame: 2}

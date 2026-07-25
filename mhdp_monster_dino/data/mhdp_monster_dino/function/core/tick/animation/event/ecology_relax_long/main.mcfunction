@@ -29,6 +29,11 @@
     execute if score @s aj.ecology_relax_long.frame matches 66..72 run function animated_java_dino:dino/at_locator {name:"pos_tail_3",command:"particle crit ~ ~0.5 ~ 0.6 0.1 0.6 0.1 3"}
     execute if score @s aj.ecology_relax_long.frame matches 87..91 run function animated_java_dino:dino/at_locator {name:"pos_tail_3",command:"particle block{block_state:\"minecraft:sand\"} ~ ~0.5 ~ 1 0.1 1 0 8"}
     execute if score @s aj.ecology_relax_long.frame matches 87..91 run function animated_java_dino:dino/at_locator {name:"pos_tail_3",command:"particle crit ~ ~0.5 ~ 0.6 0.1 0.6 0.1 3"}
-    
+
+# フェーズ
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.ecology_relax_long.frame matches 51 run function mhdp_monster_dino:core/util/phase/tail_heat_check
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.ecology_relax_long.frame matches 71 run function mhdp_monster_dino:core/util/phase/tail_heat_check
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.ecology_relax_long.frame matches 90 run function mhdp_monster_dino:core/util/phase/tail_heat_check
+
 # 終了
     execute if score @s aj.ecology_relax_long.frame matches 179 run function mhdp_monster_dino:core/tick/animation/event/ecology_relax_long/end

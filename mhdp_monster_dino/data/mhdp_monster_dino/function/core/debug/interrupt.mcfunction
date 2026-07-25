@@ -12,8 +12,8 @@
 
 # 通常再生
     # タグ付与
-        tag @s add Anim.Voice
-        # function mhdp_monster_dino:core/tick/animation/change/play/step
+        # tag @s add Anim.Anger
+        function mhdp_monster_dino:core/tick/animation/change/play/tail
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn
         # scoreboard players set @s Mns.General.TurnCount 2
@@ -21,7 +21,7 @@
         function mhdp_monster_dino:core/tick/animation/change/main
 
 # 強制再生
-    # function animated_java_dino:dino/animations/ecology_relax_long/tween {duration:1, to_frame: 1}
+    # function animated_java_dino:dino/animations/damage_counter_tail_left_start/tween {duration:1, to_frame: 1}
 
 # 強制リアクション
     # function mhdp_monster_dino:core/damage/reaction/anger

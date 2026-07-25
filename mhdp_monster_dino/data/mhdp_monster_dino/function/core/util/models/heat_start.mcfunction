@@ -4,20 +4,35 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
 
-# モデル変更
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.tail_1] run data modify entity @s item.id set value "minecraft:white_dye"
-    # execute if entity @s[tag=!Mns.State.IsAnger] on passengers if entity @s[tag=aj.dino_aj.bone.tail_1] run data modify entity @s item.components."minecraft:custom_model_data" set value 34
-    # execute if entity @s[tag=Mns.State.IsAnger] on passengers if entity @s[tag=aj.dino_aj.bone.tail_1] run data modify entity @s item.components."minecraft:custom_model_data" set value 38
-
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.tail_2] run data modify entity @s item.id set value "minecraft:white_dye"
-    # execute if entity @s[tag=!Mns.Break.Tail] on passengers if entity @s[tag=aj.dino_aj.bone.tail_2] run data modify entity @s item.components."minecraft:custom_model_data" set value 35
-    # execute if entity @s[tag=Mns.Break.Tail] on passengers if entity @s[tag=aj.dino_aj.bone.tail_2] run data modify entity @s item.components."minecraft:custom_model_data" set value 52
-
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.tail_3] run data modify entity @s item.id set value "minecraft:white_dye"
-    # execute if entity @s[tag=!Mns.Break.Tail] on passengers if entity @s[tag=aj.dino_aj.bone.tail_3] run data modify entity @s item.components."minecraft:custom_model_data" set value 36
-    # execute if entity @s[tag=Mns.Break.Tail] on passengers if entity @s[tag=aj.dino_aj.bone.tail_3] run data modify entity @s item.components."minecraft:custom_model_data" set value 53
-
-    # execute on passengers if entity @s[tag=aj.dino_aj.bone.tail_4] run data modify entity @s item.id set value "minecraft:white_dye"
-    # execute if entity @s[tag=!Mns.Break.Tail,tag=!Mns.Break.Tail.Cut] on passengers if entity @s[tag=aj.dino_aj.bone.tail_4] run data modify entity @s item.components."minecraft:custom_model_data" set value 37
-    # execute if entity @s[tag=Mns.Break.Tail,tag=!Mns.Break.Tail.Cut] on passengers if entity @s[tag=aj.dino_aj.bone.tail_4] run data modify entity @s item.components."minecraft:custom_model_data" set value 54
-    # execute if entity @s[tag=Mns.Break.Tail.Cut] on passengers if entity @s[tag=aj.dino_aj.bone.tail_4] run data modify entity @s item.components."minecraft:custom_model_data" set value 55
+# 尻尾
+    # 通常時
+        execute if entity @s[tag=!Mns.Dino.State.IsAnger] run function animated_java_dino:dino/as_node {name: 'tail_1', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/tail_1_heat"'\
+        }
+        execute if entity @s[tag=!Mns.Break.Tail] run function animated_java_dino:dino/as_node {name: 'tail_2', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/tail_2_heat"'\
+        }
+        execute if entity @s[tag=!Mns.Break.Tail] run function animated_java_dino:dino/as_node {name: 'tail_3', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/tail_3_heat"'\
+        }
+        execute if entity @s[tag=!Mns.Break.Tail,tag=!Mns.Break.Tail.Cut] run function animated_java_dino:dino/as_node {name: 'tail_4', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/tail_4_heat"'\
+        }
+    # 怒り
+        execute if entity @s[tag=1Mns.Dino.State.IsAnger] run function animated_java_dino:dino/as_node {name: 'tail_1', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/tail_1_heat_anger"'\
+        }
+    # 部位破壊
+        execute if entity @s[tag=Mns.Break.Tail] run function animated_java_dino:dino/as_node {name: 'tail_2', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/tail_2_heat_break"'\
+        }
+        execute if entity @s[tag=Mns.Break.Tail] run function animated_java_dino:dino/as_node {name: 'tail_3', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/tail_3_heat_break"'\
+        }
+        execute if entity @s[tag=Mns.Break.Tail,tag=!Mns.Break.Tail.Cut] run function animated_java_dino:dino/as_node {name: 'tail_4', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/tail_4_heat_break"'\
+        }
+    # 部位破壊・切断
+        execute if entity @s[tag=Mns.Break.Tail,tag=Mns.Break.Tail.Cut] run function animated_java_dino:dino/as_node {name: 'tail_4', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/tail_4_heat_break_cut"'\
+        }

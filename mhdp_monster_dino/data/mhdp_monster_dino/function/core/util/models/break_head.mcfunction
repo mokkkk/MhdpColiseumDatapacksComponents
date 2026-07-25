@@ -4,9 +4,20 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
 
-# モデル変更
-    execute on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Dino.State.HeadHeat] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 44
-    execute if entity @s[tag=Mns.State.IsAnger,tag=!Mns.Dino.State.HeadHeat] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 45
-    execute if entity @s[tag=Mns.Dino.State.HeadHeat,tag=!Mns.State.IsAnger] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 46
-    execute if entity @s[tag=Mns.State.IsAnger,tag=Mns.Dino.State.HeadHeat] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 47
+# 頭
+    # 通常
+        execute if entity @s[tag=!Mns.State.IsAnger,tag=!Mns.Dino.State.HeadHeat] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_break"'\
+        }
+    # 怒り
+        execute if entity @s[tag=Mns.State.IsAnger,tag=!Mns.Dino.State.HeadHeat] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_anger_break"'\
+        }
+    # 喉赤熱化
+        execute if entity @s[tag=!Mns.State.IsAnger,tag=Mns.Dino.State.HeadHeat] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_charge_break"'\
+        }
+    # 怒り・喉赤熱化
+        execute if entity @s[tag=Mns.State.IsAnger,tag=Mns.Dino.State.HeadHeat] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_anger_charge_break"'\
+        }

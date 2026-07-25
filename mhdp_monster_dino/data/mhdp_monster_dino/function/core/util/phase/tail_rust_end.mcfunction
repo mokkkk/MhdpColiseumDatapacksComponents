@@ -1,4 +1,4 @@
-#> mhdp_monster_dino:core/util/phase/tail_rust_check
+#> mhdp_monster_dino:core/util/phase/tail_rust_end
 #
 # 尻尾の風化
 #

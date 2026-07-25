@@ -51,8 +51,8 @@
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # フェーズ
-    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.roundforce.frame matches 80 run function mhdp_monster_dino:core/util/phase/tail_heat
-    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.roundforce.frame matches 81 run function mhdp_monster_dino:core/util/phase/tail_heat
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.roundforce.frame matches 80 run function mhdp_monster_dino:core/util/phase/tail_heat_check
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.roundforce.frame matches 81 run function mhdp_monster_dino:core/util/phase/tail_heat_check
 
 # 終了
     execute if score @s aj.roundforce.frame matches 159 run function mhdp_monster_dino:core/tick/animation/event/roundforce/end

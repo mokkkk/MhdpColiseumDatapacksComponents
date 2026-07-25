@@ -49,7 +49,7 @@
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # フェーズ
-    # execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.jump_tail_r.frame matches 26 run function mhdp_monster_dino:core/util/phase/tail_heat
+    execute if entity @s[tag=!Mns.Dino.State.TailHeat] if score @s aj.jump_tail_r.frame matches 43 run function mhdp_monster_dino:core/util/phase/tail_heat_check
 
 # 終了
     execute if score @s aj.jump_tail_r.frame matches 119 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_r/end

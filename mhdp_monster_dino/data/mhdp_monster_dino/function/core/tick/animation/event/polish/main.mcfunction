@@ -17,8 +17,8 @@
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # 状態変更
-    # execute if score @s aj.polish.frame matches 66 run function mhdp_monster_dino:core/util/models/rust_end
-    # execute if score @s aj.polish.frame matches 78 run function mhdp_monster_dino:core/util/phase/head_heat
+    execute if score @s aj.polish.frame matches 66 run function mhdp_monster_dino:core/util/phase/tail_rust_end
+    execute if score @s aj.polish.frame matches 78 run function mhdp_monster_dino:core/util/phase/head_heat_start
 
 # 終了
     execute if score @s aj.polish.frame matches 127 run function mhdp_monster_dino:core/tick/animation/event/polish/end

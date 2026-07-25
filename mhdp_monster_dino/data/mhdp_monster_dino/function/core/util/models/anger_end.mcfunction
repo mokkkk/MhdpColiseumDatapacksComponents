@@ -4,26 +4,46 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
 
-# 状態更新(一時)
-    tag @s remove Mns.State.IsAnger
+# 頭
+    # 通常
+    execute if entity @s[tag=!Mns.Break.Head,tag=!Mns.Dino.State.HeadHeat] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "animated_java_dino:blueprint/dino/head_upper"'\
+    }
+    # 喉赤熱化
+    execute if entity @s[tag=!Mns.Break.Head,tag=Mns.Dino.State.HeadHeat] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_charge"'\
+    }
+    # 部位破壊
+    execute if entity @s[tag=Mns.Break.Head,tag=!Mns.Dino.State.HeadHeat] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_break"'\
+    }
+    # 喉赤熱化・部位破壊
+    execute if entity @s[tag=Mns.Break.Head,tag=Mns.Dino.State.HeadHeat] run function animated_java_dino:dino/as_node {name: 'head_upper', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/head_upper_charge_break"'\
+    }
 
-# モデル変更
-    execute on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute if entity @s[tag=!Mns.Break.Head,tag=!Mns.Dino.State.HeadHeat] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 15
-    execute if entity @s[tag=Mns.Break.Head,tag=!Mns.Dino.State.HeadHeat] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 44
-    execute if entity @s[tag=Mns.Dino.State.HeadHeat,tag=!Mns.Break.Head] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 20
-    execute if entity @s[tag=Mns.Dino.State.HeadHeat,tag=Mns.Break.Head] on passengers if entity @s[tag=aj.dino_aj.bone.head_upper] run data modify entity @s item.components."minecraft:custom_model_data" set value 46
+# 胴体
+    function animated_java_dino:dino/as_node {name: 'body_0', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "animated_java_dino:blueprint/dino/body_0"'\
+    }
+    function animated_java_dino:dino/as_node {name: 'body_1', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "animated_java_dino:blueprint/dino/body_1"'\
+    }
 
-    execute on passengers if entity @s[tag=aj.dino_aj.bone.body_0] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute on passengers if entity @s[tag=aj.dino_aj.bone.body_0] run data modify entity @s item.components."minecraft:custom_model_data" set value 16
-
-    execute on passengers if entity @s[tag=aj.dino_aj.bone.body_1] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute on passengers if entity @s[tag=aj.dino_aj.bone.body_1] run data modify entity @s item.components."minecraft:custom_model_data" set value 17
-
-    execute on passengers if entity @s[tag=aj.dino_aj.bone.tail_0] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute on passengers if entity @s[tag=aj.dino_aj.bone.tail_0] run data modify entity @s item.components."minecraft:custom_model_data" set value 18
-
-    execute on passengers if entity @s[tag=aj.dino_aj.bone.tail_1] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute if entity @s[tag=!Mns.Dino.State.TailHeat] on passengers if entity @s[tag=aj.dino_aj.bone.tail_1] run data modify entity @s item.components."minecraft:custom_model_data" set value 19
-    execute if entity @s[tag=Mns.Dino.State.TailHeat] on passengers if entity @s[tag=aj.dino_aj.bone.tail_1] run data modify entity @s item.components."minecraft:custom_model_data" set value 34
-    execute if entity @s[tag=Mns.Dino.State.TailRust] on passengers if entity @s[tag=aj.dino_aj.bone.tail_1] run data modify entity @s item.components."minecraft:custom_model_data" set value 39
+# 尻尾
+    # 共通
+        function animated_java_dino:dino/as_node {name: 'tail_0', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "animated_java_dino:blueprint/dino/tail_0"'\
+        }
+    # 通常時
+        execute if entity @s[tag=!Mns.Dino.State.TailHeat,tag=!Mns.Dino.State.TailRust] run function animated_java_dino:dino/as_node {name: 'tail_1', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "animated_java_dino:blueprint/dino/tail_1"'\
+        }
+    # 尻尾赤熱化
+        execute if entity @s[tag=Mns.Dino.State.TailHeat] run function animated_java_dino:dino/as_node {name: 'tail_1', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/tail_1_heat"'\
+        }
+    # 尻尾錆び
+        execute if entity @s[tag=Mns.Dino.State.TailRust] run function animated_java_dino:dino/as_node {name: 'tail_1', command: \
+            'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/tail_1_rust"'\
+        }
