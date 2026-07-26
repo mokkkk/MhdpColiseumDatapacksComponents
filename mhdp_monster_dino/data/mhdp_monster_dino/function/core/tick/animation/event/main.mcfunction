@@ -75,6 +75,8 @@
         # 終了
             execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_end.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_end/main
             execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_end_mirror.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_end_mirror/main
+    # 飛行中
+            # execute if entity @s[tag=animated_java_dino.dino.animation.death.playing] run function mhdp_monster_dino:core/tick/animation/event/death/main
 
 #     # 麻痺
 #         execute if entity @s[tag=animated_java_dino.dino.animation.state_paralysis_start.playing] run function mhdp_monster_dino:core/tick/animation/event/state_paralysis_start/main

@@ -10,4 +10,4 @@
     # 前方
         $execute rotated ~ 0 run function api:bounding/cake.m {Selector:"@a[tag=$(Tag)]",Tag:"Mns.Temp.Situation.IsForward",Radius:80.0,Height:4.0,Angle:45}
     # 後方
-        $execute rotated ~ 0 run function api:bounding/cake.m {Selector:"@a[tag=$(Tag)]",Tag:"Mns.Temp.Situation.IsBack",Radius:80.0,Height:4.0,Angle:45}
+        $execute rotated ~180 0 run function api:bounding/cake.m {Selector:"@a[tag=$(Tag)]",Tag:"Mns.Temp.Situation.IsBack",Radius:80.0,Height:4.0,Angle:45}

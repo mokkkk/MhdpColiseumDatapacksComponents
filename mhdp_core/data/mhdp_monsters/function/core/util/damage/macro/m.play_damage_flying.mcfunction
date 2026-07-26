@@ -5,4 +5,4 @@
 # @within function mhdp_monsters:/**
 
 # 空中怯みモーション再生
-    $function animated_java:$(Prefix)_aj/animations/damage_flying/tween {duration:3, to_frame: 0}
+    $function animated_java_$(Prefix):$(Prefix)/animations/damage_flying/tween {duration:3, to_frame: 0}
