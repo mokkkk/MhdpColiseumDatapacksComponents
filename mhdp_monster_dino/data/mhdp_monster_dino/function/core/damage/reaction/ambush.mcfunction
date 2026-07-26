@@ -7,8 +7,6 @@
 # 共通処理
     # 怯み開始時
         function mhdp_monsters:core/util/damage/on_reaction_start
-    # 耐性値リセット
-        # scoreboard players operation @s Mns.Dino.Body.Damage = @s Mns.Dino.Body.Damage.Max
 
 # 麻痺・ダウン・スタン時はアニメーションを再生しない
     execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
@@ -25,8 +23,8 @@
     execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monsters:core/util/damage/reaction_flying
 
 # 独自処理
-    # 攻撃者を向く
-        # execute at @s facing entity @a[tag=Temp.Attacker] feet run tp @s ~ ~ ~ ~ 0
+    # 演出
+        playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
 
 # 終了
     tag @s add Mns.Temp.IsDamaged

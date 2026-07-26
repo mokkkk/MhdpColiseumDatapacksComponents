@@ -31,8 +31,6 @@
         # 喉
             scoreboard objectives add Mns.Dino.PhaseCount.Head dummy
     # 怯み回数
-        # 頭
-            scoreboard objectives add Mns.Dino.Head.Damage.Count dummy
         # 尻尾
             scoreboard objectives add Mns.Dino.Tail.Damage.Count dummy
         # 右足
@@ -84,7 +82,7 @@
 
 # 肉質データ
 # 切断,打撃,弾,火,水,雷,氷,龍
-# 頭, 胴
+# 0:頭, 1:胴, 2:尻尾, 3:右脚, 4:左脚, 5:頭赤熱化, 6:尻尾赤熱化, 7:尻尾錆び 
     execute if data storage mhdp_core:monster_data DefenceData[{Uid:1003}] run data remove storage mhdp_core:monster_data DefenceData[{Uid:1003}]
     data modify storage mhdp_core:monster_data DefenceData append value {\
         Uid:1003,\
