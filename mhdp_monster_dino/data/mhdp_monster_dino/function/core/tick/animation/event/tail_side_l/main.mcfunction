@@ -32,6 +32,7 @@
     execute if score @s aj.tail_side_l.frame matches 34..35 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^1 0.4 0.6 0.4
 
 # 攻撃
+    execute if score @s aj.tail_side_l.frame matches 31 run tag @s remove Mns.Temp.Attack.Tail.L
     execute if score @s aj.tail_side_l.frame matches 31 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"TailSide"}]
     execute if score @s aj.tail_side_l.frame matches 32..39 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_side_l/attack_tail_start
     execute if score @s aj.tail_side_l.frame matches 37..39 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_side_l/particle_tail_start

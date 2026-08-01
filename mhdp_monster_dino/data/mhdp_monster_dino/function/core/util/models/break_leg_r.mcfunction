@@ -4,9 +4,6 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
 
-# 状態更新(一時)
-    tag @s add Mns.Break.Leg.R
-
 # 右脚
     function animated_java_dino:dino/as_node {name: 'leg_right_0', command: \
         'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/dino/leg_right_0_break"'\

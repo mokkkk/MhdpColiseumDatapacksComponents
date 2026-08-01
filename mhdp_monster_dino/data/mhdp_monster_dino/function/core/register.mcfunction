@@ -55,29 +55,32 @@
         ShowName:{"translate":"monster.glavenus.name"},\
         LootTable:"mhdp_items:materials/dino/random_all",\
         ShowHp:true,\
-        Hp:10000,\
+        Hp:11000,\
         StunDamage:200,\
         TireDamage:300,\
-        AngerDamagePer:12,\
+        AngerDamagePer:10,\
         AngerTimer:60,\
-        AngerAttackMult:110,\
-        AngerSpeed:10,\
+        AngerAttackMult:115,\
+        AngerSpeed:9,\
         ParalysisDamage:500,\
         ParalysisTimer:10,\
         PoisonDamage:400,\
-        PoisonTimer:20,\
-        PoisonEffectDamage:50,\
+        PoisonTimer:17,\
+        PoisonEffectDamage:60,\
         BombDamage:400,\
         BombEffectDamage:200,\
         FlashBombEnable:true,\
         SoundBombEnable:false,\
         ParalyseTrapEnable:true,\
         ParalyseTrapTimer:10,\
-        HallTrapEnable:false,\
+        HallTrapEnable:true,\
         HallTrapTimer:15,\
-        CounterDamage:30,\
-        HeadPartDamage:11,\
-        BodyPartDamage:15\
+        CounterDamage:75,\
+        HeadPartDamage:10,\
+        BodyPartDamage:6,\
+        TailPartDamage:8,\
+        LegRPartDamage:5,\
+        LegLPartDamage:5\
     }
 
 # 肉質データ

@@ -45,6 +45,7 @@
     execute if score @s aj.jump_tail_anger_l.frame matches 128..134 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^1 0.4 0.6 0.4
 
 # 攻撃
+    execute if score @s aj.jump_tail_anger_l.frame matches 37 run tag @s remove Mns.Temp.Attack.Tail.L
     execute if score @s aj.jump_tail_anger_l.frame matches 37 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"TailJump"}]
     execute if score @s aj.jump_tail_anger_l.frame matches 38 at @s run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/attack_tail_start_1.m {Rotate:-90}
     execute if score @s aj.jump_tail_anger_l.frame matches 39 at @s run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/attack_tail_start_1.m {Rotate:-80}
@@ -53,6 +54,7 @@
     execute if score @s aj.jump_tail_anger_l.frame matches 42 at @s run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/attack_tail_start_1.m {Rotate:-20}
     execute if score @s aj.jump_tail_anger_l.frame matches 43 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/attack_1
     execute if score @s aj.jump_tail_anger_l.frame matches 44 run function mhdp_monsters:core/util/tick/event/end_attack
+    execute if score @s aj.jump_tail_anger_l.frame matches 66 run tag @s remove Mns.Temp.Attack.Tail.R
     execute if score @s aj.jump_tail_anger_l.frame matches 66 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"TailJump"}]
     execute if score @s aj.jump_tail_anger_l.frame matches 67 at @s run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/attack_tail_start_0.m {Rotate:-90}
     execute if score @s aj.jump_tail_anger_l.frame matches 68 at @s run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_l/attack_tail_start_0.m {Rotate:-80}

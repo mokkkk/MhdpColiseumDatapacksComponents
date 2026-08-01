@@ -9,3 +9,7 @@
 
 # 攻撃中タグ消去
     execute if entity @s[type=slime] run tag @s remove Mns.State.IsAttackPart
+
+# 判別用タグ消去
+    tag @s remove Mns.Temp.Attack.Tail.R
+    tag @s remove Mns.Temp.Attack.Tail.L

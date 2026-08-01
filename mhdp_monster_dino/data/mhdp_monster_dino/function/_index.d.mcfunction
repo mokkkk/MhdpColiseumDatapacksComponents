@@ -20,8 +20,11 @@
     #declare tag Mns.Temp.Damage.Tail 尻尾怯み
     #declare tag Mns.Temp.Damage.LegR 右足怯み
     #declare tag Mns.Temp.Damage.LegL 左足怯み
-    #declare tag Mns.Dino.Temp.ToBite 移動から噛みつきに遷移する
-    #declare tag Mns.Dino.Temp.ToTail 移動から尻尾叩きつけに遷移する
+    #declare tag Mns.Temp.Attack.Tail.R 尻尾攻撃・右
+    #declare tag Mns.Temp.Attack.Tail.L 尻尾攻撃・左
+# コンボ
+    #declare tag Mns.Dino.Combo.ToBite 移動から噛みつきに遷移する
+    #declare tag Mns.Dino.Combo.ToTail 移動から尻尾叩きつけに遷移する
 # プレイヤー
     #declare tag Mns.Candidate.Dino ターゲット候補になるプレイヤー
     #declare tag Mns.Target.Dino 現在狙っているプレイヤー

@@ -4,9 +4,6 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
 
-# 状態更新(一時)
-    tag @s add Mns.Break.Tail
-
 # 尻尾
     # 通常時
         execute if entity @s[tag=!Mns.Dino.State.TailHeat,tag=!Mns.Dino.State.TailRust] run function animated_java_dino:dino/as_node {name: 'tail_2', command: \

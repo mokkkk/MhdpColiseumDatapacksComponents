@@ -28,8 +28,13 @@
 # チュートリアル用処理
     execute if entity @s[tag=Mns.State.Tutorial.IsDamage] run tag @s remove Mns.State.Tutorial.IsDamage
 
+# 攻撃プレイヤーのヘイト増加
+    scoreboard players add @a[tag=Mns.Candidate.Dino,tag=Temp.Attacker] Mns.Dino.Hate 10
+
 # 部位ダメージの減算
     # 頭
+        # execute if score #mhdp_temp_target_part_id MhdpCore matches 0 run say 頭
+        # execute if score #mhdp_temp_target_part_id MhdpCore matches 5 run say 頭赤熱化
         execute if score #mhdp_temp_target_part_id MhdpCore matches 0 run scoreboard players operation @s Mns.Dino.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score #mhdp_temp_target_part_id MhdpCore matches 5 run scoreboard players operation @s Mns.Dino.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Dino.Head.Damage matches ..0 run tag @s add Mns.Temp.Damage.Head
@@ -37,14 +42,25 @@
         execute if score #mhdp_temp_target_part_id MhdpCore matches 5 run scoreboard players operation @s Mns.Dino.Sp.RedHead.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Dino.Sp.RedHead.Damage matches ..0 run tag @s add Mns.Temp.Damage.RedHead
     # 胴
+        # execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run say 体
         execute if score #mhdp_temp_target_part_id MhdpCore matches 1 run scoreboard players operation @s Mns.Dino.Body.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Dino.Body.Damage matches ..0 run tag @s add Mns.Temp.Damage.Body
     # 右脚
+        # execute if score #mhdp_temp_target_part_id MhdpCore matches 3 run say 右脚
         execute if score #mhdp_temp_target_part_id MhdpCore matches 3 run scoreboard players operation @s Mns.Dino.LegR.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Dino.LegR.Damage matches ..0 run tag @s add Mns.Temp.Damage.LegR
     # 左脚
-        execute if score #mhdp_temp_target_part_id MhdpCore matches 3 run scoreboard players operation @s Mns.Dino.LegL.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        # execute if score #mhdp_temp_target_part_id MhdpCore matches 4 run say 左脚
+        execute if score #mhdp_temp_target_part_id MhdpCore matches 4 run scoreboard players operation @s Mns.Dino.LegL.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
         execute if score @s Mns.Dino.LegL.Damage matches ..0 run tag @s add Mns.Temp.Damage.LegL
+    # 尻尾
+        # execute if score #mhdp_temp_target_part_id MhdpCore matches 2 run say 尻尾
+        # execute if score #mhdp_temp_target_part_id MhdpCore matches 6 run say 尻尾赤熱
+        # execute if score #mhdp_temp_target_part_id MhdpCore matches 7 run say 尻尾錆び
+        execute if score #mhdp_temp_target_part_id MhdpCore matches 2 run scoreboard players operation @s Mns.Dino.Tail.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if score #mhdp_temp_target_part_id MhdpCore matches 6 run scoreboard players operation @s Mns.Dino.Tail.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if score #mhdp_temp_target_part_id MhdpCore matches 7 run scoreboard players operation @s Mns.Dino.Tail.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore
+        execute if score @s Mns.Dino.Tail.Damage matches ..0 run tag @s add Mns.Temp.Damage.Tail
 
 # ボスバー更新
     execute if entity @s[tag=!Mns.Param.IsHideHp] store result bossbar mhdp_monster:dino value run scoreboard players get @s Mns.Hp

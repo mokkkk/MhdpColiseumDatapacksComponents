@@ -31,6 +31,7 @@
     execute if score @s aj.tail_flame_l.frame matches 67..68 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^1 0.4 0.6 0.4
 
 # 攻撃
+    execute if score @s aj.tail_flame_l.frame matches 25 run tag @s remove Mns.Temp.Attack.Tail.L
     execute if score @s aj.tail_flame_l.frame matches 25 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"TailFlame"}]
     execute if score @s aj.tail_flame_l.frame matches 26..40 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_flame_l/attack_tail_start
     execute if score @s aj.tail_flame_l.frame matches 33 positioned as @n[tag=Mns.Target.Dino] run summon area_effect_cloud ~ ~0.5 ~ {Duration:10,DurationOnUse:0,Tags:["Mns.ShotPos.Dino"],custom_particle:{type:"block",block_state:"minecraft:air"}}

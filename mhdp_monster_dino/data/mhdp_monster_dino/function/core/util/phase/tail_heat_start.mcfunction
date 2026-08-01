@@ -4,7 +4,10 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
 
-# 状態更新(一時)
+# カウントリセット
+    scoreboard players set @s Mns.Dino.PhaseCount.Tail 0
+
+# 状態更新
     tag @s add Mns.Dino.State.TailHeat
 
 # 部位ID更新

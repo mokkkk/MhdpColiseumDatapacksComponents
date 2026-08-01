@@ -15,8 +15,10 @@
     execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
  
 # アニメーション再生
-    function animated_java_dino:dino/animations/damage_counter_start/tween {duration:1, to_frame: 0}
-   
+    execute if entity @s[tag=Mns.Temp.Attack.Tail.R] run function animated_java_dino:dino/animations/damage_counter_tail_right_start/tween {duration:1, to_frame: 0}
+    execute if entity @s[tag=Mns.Temp.Attack.Tail.L] run function animated_java_dino:dino/animations/damage_counter_tail_left_start/tween {duration:1, to_frame: 0}
+    execute if entity @s[tag=!Mns.Temp.Attack.Tail.R,tag=!Mns.Temp.Attack.Tail.L] run function animated_java_dino:dino/animations/damage_counter_head_start/tween {duration:1, to_frame: 0}
+
 # 飛行状態リセット
     tag @s remove Mns.State.IsFlying
 

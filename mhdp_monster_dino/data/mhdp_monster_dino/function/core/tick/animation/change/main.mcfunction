@@ -19,12 +19,20 @@
     # 怒り終了
         execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches ..0 run function mhdp_monsters:core/util/tick/end_anger.m {Name:"dino"}
 
+# 独自処理
+    # 尻尾赤熱化 → 錆び
+        execute if entity @s[tag=Mns.Dino.State.TailHeat] run function mhdp_monster_dino:core/util/phase/tail_rust_check
+    # 尻尾研ぎ
+        execute if entity @s[tag=Mns.Dino.State.TailRust] run function mhdp_monster_dino:core/util/phase/tail_polish_check
+    # 喉赤熱化解除
+        execute if entity @s[tag=Mns.Dino.State.HeadHeat] run function mhdp_monster_dino:core/util/phase/head_heat_check
+
 # 非発見時
     execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 0 run function mhdp_monster_dino:core/tick/animation/change/on_relax/main
 # 警戒時
     execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 1 run function mhdp_monster_dino:core/tick/animation/change/on_caution/main
 # 戦闘時
-    # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 2 run function mhdp_monster_dino:core/tick/animation/change/on_battle/main
+    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 2 run function mhdp_monster_dino:core/tick/animation/change/on_battle/main
 
 # 軸合わせアニメーション再生
     execute if entity @s[tag=Mns.Temp.IsTurn] run function mhdp_monster_dino:core/tick/animation/change/play/turn

@@ -28,6 +28,9 @@
 # チュートリアル用処理
     execute if entity @s[tag=Mns.State.Tutorial.IsDamage] run tag @s remove Mns.State.Tutorial.IsDamage
 
+# 攻撃プレイヤーのヘイト増加
+    scoreboard players add @a[tag=Mns.Candidate.Dino,tag=Temp.Attacker] Mns.Ranposu.Hate 10
+
 # 部位ダメージの減算
     # 頭
         execute if score #mhdp_temp_target_part_id MhdpCore matches 0 run scoreboard players operation @s Mns.Ranposu.Head.Damage -= #mhdp_temp_damage_partdamage_value MhdpCore

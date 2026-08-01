@@ -5,4 +5,4 @@
 # @input arg Monster モンスター名
 
 # ダメージ有効化タグ付与
-    $function animated_java:$(Name)/as_all_locators {command:'execute if entity @s[type=slime,tag=Mns.HitBox] run tag @s add Entity.EnableDamage'}
+    $function animated_java_$(Name):$(Name)/as_all_locators {command:'execute if entity @s[type=slime,tag=Mns.HitBox] run tag @s add Entity.EnableDamage'}

@@ -1,8 +1,11 @@
 #> mhdp_monster_dino:core/damage/reaction/leg_l
 #
-# 怯みリアクション 胴
+# 怯みリアクション 左脚
 #
 # @within function mhdp_monster_dino:core/damage/damage
+
+# 部位破壊
+    execute if entity @s[tag=!Mns.Break.LegL] if score @s Mns.Dino.LegL.Damage.Count matches 1.. run function mhdp_monster_dino:core/damage/break/leg_r
 
 # 共通処理
     # 怯み開始時

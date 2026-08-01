@@ -55,3 +55,6 @@
 
 # 武器使用
     execute if entity @s[tag=Ply.Ope.StartUsingWeapon] run tag @s remove Ply.Ope.StartUsingWeapon
+
+# アイテム使用
+    execute if entity @s[tag=Ply.Ope.IsUsingItem] run tag @s remove Ply.Ope.IsUsingItem

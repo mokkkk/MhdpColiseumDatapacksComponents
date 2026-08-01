@@ -4,6 +4,9 @@
 #
 # @within function mhdp_items:player/item/tick
 
+# 使用中タグ付与
+    tag @s add Ply.Ope.IsUsingItem
+
 # アイテムごとの使用中演出
     function mhdp_items:items/using
 

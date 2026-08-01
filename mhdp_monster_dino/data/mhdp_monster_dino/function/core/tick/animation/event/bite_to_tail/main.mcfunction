@@ -37,6 +37,7 @@
         execute if score @s aj.bite_to_tail.frame matches 25 run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_0
         execute if score @s aj.bite_to_tail.frame matches 27 run function mhdp_monsters:core/util/tick/event/end_attack
     # 尻尾
+        execute if score @s aj.bite_to_tail.frame matches 49 run tag @s remove Mns.Temp.Attack.Tail.R
         execute if score @s aj.bite_to_tail.frame matches 49 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Tail"}]
         execute if score @s aj.bite_to_tail.frame matches 50 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-90}
         execute if score @s aj.bite_to_tail.frame matches 51 at @s run function mhdp_monster_dino:core/tick/animation/event/bite_to_tail/attack_tail_start.m {Rotate:-70}
