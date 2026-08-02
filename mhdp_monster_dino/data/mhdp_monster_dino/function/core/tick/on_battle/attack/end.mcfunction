@@ -1,4 +1,4 @@
-#> mhdp_monster_ranposu:core/tick/on_battle/attack/end
+#> mhdp_monster_dino:core/tick/on_battle/attack/end
 #
 # tick処理 戦闘中 攻撃
 #

@@ -170,7 +170,7 @@
 # 尻尾攻撃・正面
     data modify storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks append value {\
         Name:"Tail",AttackPart:"tail",VectorType:"Normal",\
-        DamageValue:8.4f,ObjectDamageValue:25,GuardValue:5,ElementType:0,ElementMultiply:0,\
+        DamageValue:8.4f,ObjectDamageValue:20,GuardValue:5,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }

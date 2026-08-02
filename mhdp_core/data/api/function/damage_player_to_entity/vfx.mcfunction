@@ -4,9 +4,6 @@
 #
 # @input storage api: Arg.
 
-# 効果音再生
-    execute if data storage mhdp_core:temp {IsPlayedHitSound:false} run function api:damage_player_to_entity/vfx/play_sound
-
 # 肉質が硬い場合、ヒットストップ時間を短縮
     execute if score #mhdp_temp_defence_phys MhdpCore matches ..30 if score @s Wpn.HitStopTimer matches 3.. run scoreboard players set @s Wpn.HitStopTimer 2
     execute if score #mhdp_temp_defence_phys MhdpCore matches ..15 if score @s Wpn.HitStopTimer matches 2.. run scoreboard players set @s Wpn.HitStopTimer 1

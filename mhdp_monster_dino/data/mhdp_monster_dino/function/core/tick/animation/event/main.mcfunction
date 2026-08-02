@@ -75,19 +75,22 @@
         # 終了
             execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_end.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_end/main
             execute if entity @s[tag=animated_java_dino.dino.animation.damage_counter_end_mirror.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_counter_end_mirror/main
+    # 建築物怯み・尻尾攻撃
+        execute if entity @s[tag=animated_java_dino.dino.animation.tail_interrupt_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_interrupt_r/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.tail_interrupt_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_interrupt_l/main
     # 飛行中
-            # execute if entity @s[tag=animated_java_dino.dino.animation.death.playing] run function mhdp_monster_dino:core/tick/animation/event/death/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.damage_flying.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_flying/main
 
 #     # 麻痺
 #         execute if entity @s[tag=animated_java_dino.dino.animation.state_paralysis_start.playing] run function mhdp_monster_dino:core/tick/animation/event/state_paralysis_start/main
 #         execute if entity @s[tag=animated_java_dino.dino.animation.state_paralysis.playing] run function mhdp_monster_dino:core/tick/animation/event/state_paralysis/main
 #         execute if entity @s[tag=animated_java_dino.dino.animation.state_paralysis_end.playing] run function mhdp_monster_dino:core/tick/animation/event/state_paralysis_end/main
 
-# # 討伐
-#     # 通常
-#         execute if entity @s[tag=animated_java_dino.dino.animation.death.playing] run function mhdp_monster_dino:core/tick/animation/event/death/main
-#     # 空中
-#         execute if entity @s[tag=animated_java_dino.dino.animation.death_flying.playing] run function mhdp_monster_dino:core/tick/animation/event/death_flying/main
+# 討伐
+    # 通常
+        execute if entity @s[tag=animated_java_dino.dino.animation.death.playing] run function mhdp_monster_dino:core/tick/animation/event/death/main
+    # 空中
+        execute if entity @s[tag=animated_java_dino.dino.animation.death_flying.playing] run function mhdp_monster_dino:core/tick/animation/event/death_flying/main
 
 # 移動
     execute if entity @s[tag=animated_java_dino.dino.animation.move.playing] run function mhdp_monster_dino:core/tick/animation/event/move/main

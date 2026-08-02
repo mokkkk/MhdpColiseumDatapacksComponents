@@ -20,8 +20,6 @@
         # 非怒り時、一定回数ごとに威嚇
             execute if entity @s[tag=!Mns.State.IsAnger] if score @s Mns.General.ActCount.Idle matches 12.. run return run scoreboard players reset @s Mns.General.ActCount.Idle
 
-say on battle
-
 # 初回発見時
     execute if entity @s[tag=Mns.Temp.Anim.IsFirstContact] run return run function mhdp_monster_dino:core/tick/animation/change/on_battle/first
 

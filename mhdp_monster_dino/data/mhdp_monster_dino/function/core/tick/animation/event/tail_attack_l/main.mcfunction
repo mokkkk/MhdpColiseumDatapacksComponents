@@ -26,7 +26,7 @@
     execute if score @s aj.tail_attack_l.frame matches 81 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 攻撃
-    execute if score @s aj.tail_attack_l.frame matches 20 run tag @s remove Mns.Temp.Attack.Tail.L
+    execute if score @s aj.tail_attack_l.frame matches 20 run tag @s add Mns.Temp.Attack.Tail.L
     execute if score @s aj.tail_attack_l.frame matches 20 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Tail"}]
     execute if score @s aj.tail_attack_l.frame matches 21 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l/attack_tail_start.m {Rotate:-90}
     execute if score @s aj.tail_attack_l.frame matches 22 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_attack_l/attack_tail_start.m {Rotate:-70}

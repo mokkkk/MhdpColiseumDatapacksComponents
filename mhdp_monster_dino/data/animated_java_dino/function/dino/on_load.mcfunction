@@ -64,6 +64,8 @@ scoreboard objectives add aj.tail_side_r.frame dummy
 scoreboard objectives add aj.tail_side_l.frame dummy
 scoreboard objectives add aj.tail_attack_r.frame dummy
 scoreboard objectives add aj.tail_attack_l.frame dummy
+scoreboard objectives add aj.tail_interrupt_r.frame dummy
+scoreboard objectives add aj.tail_interrupt_l.frame dummy
 scoreboard objectives add aj.tail_attack_anger_r.frame dummy
 scoreboard objectives add aj.tail_attack_anger_l.frame dummy
 scoreboard objectives add aj.tail_attack_r_to_step_r.frame dummy
@@ -76,3 +78,4 @@ scoreboard objectives add aj.tail_flame_r.frame dummy
 scoreboard objectives add aj.tail_flame_l.frame dummy
 scoreboard objectives add aj.roundforce.frame dummy
 scoreboard objectives add aj.polish.frame dummy
+scoreboard objectives add aj.death_bak.frame dummy

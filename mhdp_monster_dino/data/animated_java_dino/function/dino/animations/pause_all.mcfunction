@@ -63,6 +63,8 @@ tag @s remove animated_java_dino.dino.animation.tail_side_r.playing
 tag @s remove animated_java_dino.dino.animation.tail_side_l.playing
 tag @s remove animated_java_dino.dino.animation.tail_attack_r.playing
 tag @s remove animated_java_dino.dino.animation.tail_attack_l.playing
+tag @s remove animated_java_dino.dino.animation.tail_interrupt_r.playing
+tag @s remove animated_java_dino.dino.animation.tail_interrupt_l.playing
 tag @s remove animated_java_dino.dino.animation.tail_attack_anger_r.playing
 tag @s remove animated_java_dino.dino.animation.tail_attack_anger_l.playing
 tag @s remove animated_java_dino.dino.animation.tail_attack_r_to_step_r.playing
@@ -75,3 +77,4 @@ tag @s remove animated_java_dino.dino.animation.tail_flame_r.playing
 tag @s remove animated_java_dino.dino.animation.tail_flame_l.playing
 tag @s remove animated_java_dino.dino.animation.roundforce.playing
 tag @s remove animated_java_dino.dino.animation.polish.playing
+tag @s remove animated_java_dino.dino.animation.death_bak.playing

@@ -51,6 +51,9 @@
     function mhdp_monsters:core/switch/damage
 
 # 演出
+    # 効果音再生
+    # 討伐時、当たり判定が消える前に実行したいのでここで処理
+        execute if data storage mhdp_core:temp {IsPlayedHitSound:false} run function api:damage_player_to_entity/vfx/play_sound
     execute positioned as @n[type=slime,tag=Mns.HitBox,tag=Temp.Victim] run function api:damage_player_to_entity/vfx
 
 # プレイヤーの攻撃成功時処理

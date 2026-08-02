@@ -5,7 +5,7 @@
 # @within function 
 
 # データ登録
-    # function mhdp_monster_dino:core/register
+    function mhdp_monster_dino:core/register
 
 # 共通処理
     function mhdp_monsters:core/super/summon/

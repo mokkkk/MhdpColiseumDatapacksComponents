@@ -5,8 +5,10 @@
 # @within function mhdp_monster_dino:core/tick/animation/event/tick
 
 # 移動
-    execute if score @s aj.death_flying.frame matches 6 at @s run function mhdp_monster_dino:core/tick/animation/event/death_flying/move_start
-    execute if score @s aj.death_flying.frame matches 6..15 at @s run function mhdp_monsters:core/util/other/move_to_target_move
+    execute if score @s aj.death_flying.frame matches 6 at @s run function mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {\
+        Tick:10,OffsetX:0.0,OffsetY:0.0,OffsetZ:0.0,IsAdjustLand:"true"\
+    }
+    execute if score @s aj.death_flying.frame matches 6..15 at @s run function mhdp_monsters:core/util/tick/event/vector_move
     
 # 効果音
     execute if score @s aj.death_flying.frame matches 15 run particle block{block_state:"minecraft:sand"} ~ ~0.1 ~ 1.3 0.1 1.3 0 30
@@ -19,10 +21,9 @@
     execute if score @s aj.death_flying.frame matches 66 run scoreboard players set @s Mns.General.BlinkTimer 10000000
     
 # 接地
-    execute if score @s aj.death_flying.frame matches 15.. at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute if score @s aj.death_flying.frame matches 15.. at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    execute if score @s aj.death_flying.frame matches 15.. run function mhdp_monsters:core/util/tick/move/check_landing
 
-# 剝ぎ取り可能
+# 剝ぎ取り可能にする
     execute if score @s aj.death_flying.frame matches 65 run tag @s add Mns.State.IsCanCarving
     execute if score @s aj.death_flying.frame matches 65 run scoreboard players set @s Mns.General.Carving.Count 3
 

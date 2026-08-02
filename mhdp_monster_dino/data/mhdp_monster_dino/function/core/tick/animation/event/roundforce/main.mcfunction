@@ -43,7 +43,7 @@
     execute if score @s aj.roundforce.frame matches 123..129 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:item.mace.smash_ground master @s ^ ^1 ^1 0.4 0.6 0.4
 
 # 攻撃
-    execute if score @s aj.roundforce.frame matches 79 run tag @s remove Mns.Temp.Attack.Tail.R
+    execute if score @s aj.roundforce.frame matches 79 run tag @s add Mns.Temp.Attack.Tail.R
     execute if score @s aj.roundforce.frame matches 79 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Round"}]
     execute if score @s aj.roundforce.frame matches 80..90 at @s run function mhdp_monster_dino:core/tick/animation/event/roundforce/attack_tail_start
     execute if score @s aj.roundforce.frame matches 91 run function mhdp_monsters:core/util/tick/event/end_attack

@@ -54,8 +54,8 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:12,Name:"上級：斬竜の狩猟",Level:3,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
-        Content:{HpMultiply:18,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
-            {MonsterId:1003,Timing:"Initial",TargetMonsterId:-1,AreaId:1,Visible:true,Override:{HpMultiply:999,AttackMultiply:50}}\
+        Content:{HpMultiply:18,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+            {MonsterId:1003,Timing:"Initial",TargetMonsterId:-1,AreaId:1,Visible:true,Override:{HpMultiply:18,AttackMultiply:50}}\
         ]}\
     }
 

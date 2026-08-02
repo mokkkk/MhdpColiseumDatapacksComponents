@@ -31,7 +31,7 @@
     execute if score @s aj.tail_attack_anger_l.frame matches 114 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 攻撃
-    execute if score @s aj.tail_attack_anger_l.frame matches 20 run tag @s remove Mns.Temp.Attack.Tail.L
+    execute if score @s aj.tail_attack_anger_l.frame matches 20 run tag @s add Mns.Temp.Attack.Tail.L
     execute if score @s aj.tail_attack_anger_l.frame matches 20 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Tail"}]
     execute if score @s aj.tail_attack_anger_l.frame matches 21 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_l/attack_tail_start.m {Rotate:-90}
     execute if score @s aj.tail_attack_anger_l.frame matches 22 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_l/attack_tail_start.m {Rotate:-70}
@@ -41,7 +41,7 @@
     execute if score @s aj.tail_attack_anger_l.frame matches 26 run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_l/attack
     execute if score @s aj.tail_attack_anger_l.frame matches 27 run function mhdp_monsters:core/util/tick/event/end_attack
 
-    execute if score @s aj.tail_attack_anger_l.frame matches 74 run tag @s remove Mns.Temp.Attack.Tail.L
+    execute if score @s aj.tail_attack_anger_l.frame matches 74 run tag @s add Mns.Temp.Attack.Tail.L
     execute if score @s aj.tail_attack_anger_l.frame matches 74 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1003}].Attacks[{Name:"Tail"}]
     execute if score @s aj.tail_attack_anger_l.frame matches 75..85 at @s run function mhdp_monster_dino:core/tick/animation/event/tail_attack_anger_l/attack_tail_back_start.m {Rotate:0}
     execute if score @s aj.tail_attack_anger_l.frame matches 86 run function mhdp_monsters:core/util/tick/event/end_attack
