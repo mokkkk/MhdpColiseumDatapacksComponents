@@ -4,6 +4,9 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
+# デバッグ用
+    execute as @a run function debug:check_hate {"Name":"Ranposu"}
+
 # 事前処理
     # アニメーションが停止しないよう、とりあえず待機アニメーションを再生
     # 後の処理でアニメーションを上書きする

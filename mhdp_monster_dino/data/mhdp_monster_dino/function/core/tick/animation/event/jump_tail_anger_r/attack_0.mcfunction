@@ -24,10 +24,7 @@
             Entity_Scale_X:2.4,Entity_Scale_Y:4.0,Entity_Scale_Z:7.5\
     }
 
-# 演出
-    execute positioned ^ ^1 ^7 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_r/attack_particle
-    execute positioned ^ ^1 ^9 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_r/attack_particle
-    execute positioned ^ ^1 ^5 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_anger_r/attack_particle
+# 効果音演出
     playsound entity.ravager.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
     playsound entity.ravager.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     playsound item.mace.smash_air master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
@@ -36,3 +33,12 @@
     playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     playsound entity.iron_golem.death master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     playsound entity.iron_golem.death master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.57
+
+
+# 攻撃が建築物に当たった場合、演出無効化
+    execute if entity @s[tag=Mns.Temp.HitObject] run return 0
+
+# ひび割れ演出
+    execute positioned ^ ^1 ^7 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_l/attack_particle
+    execute positioned ^ ^1 ^9 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_l/attack_particle
+    execute positioned ^ ^1 ^5 run function mhdp_monster_dino:core/tick/animation/event/jump_tail_l/attack_particle
