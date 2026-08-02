@@ -4,6 +4,9 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
+# 攻撃キャンセルタグ付与
+    tag @s add Mns.Temp.HitObject
+
 # アニメーション再生処理
     # アニメーション再生
         execute if entity @s[tag=Mns.Temp.Attack.Tail.R] run function animated_java_dino:dino/animations/tail_interrupt_r/tween {duration:1, to_frame: 1}

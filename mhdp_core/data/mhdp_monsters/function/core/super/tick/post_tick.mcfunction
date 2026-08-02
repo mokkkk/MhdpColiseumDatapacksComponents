@@ -17,3 +17,4 @@
 
 # タグ消去
     tag @s remove Mns.Temp.IsTick
+    tag @s remove Mns.Temp.HitObject
