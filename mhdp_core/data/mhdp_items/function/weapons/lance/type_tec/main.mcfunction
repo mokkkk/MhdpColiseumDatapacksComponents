@@ -1,6 +1,6 @@
 #> mhdp_items:weapons/lance/type_tec/main
 #
-# 片手剣のメイン処理 天の型
+# ランスのメイン処理 天の型
 #
 # @within function mhdp_items:weapons/lance/main
 

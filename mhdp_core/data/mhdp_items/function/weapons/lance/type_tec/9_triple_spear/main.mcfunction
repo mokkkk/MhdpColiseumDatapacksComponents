@@ -11,6 +11,11 @@
     scoreboard players add @s Wpn.GeneralTimer 1
     execute if entity @s[tag=!Ply.Weapon.HisStop] run scoreboard players add @s Wpn.AnimationTimer 1
 
+# キー入力時、移動
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function api:weapon_operation/vector_move_before.m {Strength:4000}
+    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ 0 run function api:weapon_operation/vector_move_before.m {Strength:4000}
+    execute if score @s Wpn.GeneralTimer matches 19 rotated ~ 0 run function api:weapon_operation/vector_move_before.m {Strength:4000}
+
 # アニメーション演出
     execute if score @s Wpn.GeneralTimer matches 4 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
     execute if score @s Wpn.GeneralTimer matches 12 run playsound item.spear.lunge_1 master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.8
@@ -41,13 +46,13 @@
     execute if score @s Wpn.GeneralTimer matches 22 run function mhdp_items:weapons/lance/type_tec/9_triple_spear/attack_2
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
-    execute if score @s Wpn.GeneralTimer matches 12 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 1 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
+    execute if score @s Wpn.GeneralTimer matches 8 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 22 rotated ~ -20 run function api:weapon_operation/use_player_motion.m {Strength:1000, IsForce:false, IsAdjust:false}
 
 # 演出
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 22..23 at @s run tp @s ~ ~ ~ ~ ~-0.5
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 30..32 at @s run tp @s ~ ~ ~ ~ ~0.25
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 30..33 at @s run tp @s ~ ~ ~ ~ ~0.25
 
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop

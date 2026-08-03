@@ -30,13 +30,12 @@
     execute if score @s Wpn.GeneralTimer matches 4 run function mhdp_items:weapons/lance/type_tec/2_spear_2/attack
 
 # 移動
-    execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1500, IsForce:false, IsAdjust:false}
+    # execute if score @s Wpn.GeneralTimer matches 4 rotated ~ 0 run function api:weapon_operation/use_player_motion.m {Strength:1500, IsForce:false, IsAdjust:false}
 
 # 演出
 
 # 移動制限
-    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
-    execute if score @s Wpn.GeneralTimer matches 12 run function api:weapon_operation/attribute_moveslow
+    execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_moveslow
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 先行入力
@@ -50,22 +49,21 @@
 
 # 遷移
      # 左クリック：突き3に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/3_spear_3/start
+        execute if entity @s[tag=Ply.Ope.Buffering.A] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/lance/type_tec/3_spear_3/start
      # 右クリック：溜めに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/4_charge/start
+        execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/lance/type_tec/4_charge/start
      # スニーク+ジャンプ：ガードダッシュに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.C] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/start
+        execute if entity @s[tag=Ply.Ope.Buffering.C] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/lance/type_tec/7_guard_dash/start
      # スニーク+右クリック：溜めに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/11_charge_counter/start
-    
+        execute if entity @s[tag=Ply.Ope.Buffering.D] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/lance/type_tec/11_charge_counter/start
      # スニーク+左クリック：突進に移行
-        execute if entity @s[tag=Ply.Ope.Buffering.E] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/18_dash/start
+        execute if entity @s[tag=Ply.Ope.Buffering.E] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/lance/type_tec/18_dash/start
     # ジャンプ：ステップに移行
-        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/10_step/start
+        execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/lance/type_tec/10_step/start
 
 # 狩技遷移
-    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/22_guard_rage/start
-    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 15.. run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/lance/type_tec/22_guard_rage/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 13.. run function mhdp_items:weapons/lance/type_tec/24_screw_thrust/start
 
 # 終了
     execute if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/lance/type_tec/2_spear_2/end
