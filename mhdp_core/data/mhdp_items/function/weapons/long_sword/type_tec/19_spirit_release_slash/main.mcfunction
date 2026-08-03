@@ -69,8 +69,8 @@
     execute if score @s Wpn.GeneralTimer matches 3..55 run function mhdp_items:core/buffering/arts_main
 
 # 狩技遷移
-    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 49 run function mhdp_items:weapons/long_sword/type_tec/27_critical_juncture/start
-    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 49 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 38..55 run function mhdp_items:weapons/long_sword/type_tec/27_critical_juncture/start
+    execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 38..55 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/start
 
 # アーマー
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.Armor.Hyper
