@@ -37,7 +37,7 @@
     execute if score @s Wpn.GeneralTimer matches 1 run tag @s add Ply.Weapon.NoMoveJump
 
 # 演出
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..7 run tp @s ~ ~ ~ ~-0.2 ~-1
+    # execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..7 run tp @s ~ ~ ~ ~-0.2 ~-1
     execute if entity @s[tag=Ply.Weapon.HisStop,tag=Ply.Flag.CounterSuccess,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 4 at @s run tp @s ~ ~ ~ ~-1 ~
     execute if entity @s[tag=Ply.Weapon.HisStop,tag=Ply.Flag.CounterSuccess,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 5 at @s run tp @s ~ ~ ~ ~2 ~
     execute if entity @s[tag=Ply.Weapon.HisStop,tag=Ply.Flag.CounterSuccess,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 6 at @s run tp @s ~ ~ ~ ~-1 ~

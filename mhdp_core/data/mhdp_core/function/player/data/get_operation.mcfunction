@@ -110,11 +110,11 @@
 #         execute if entity @s[tag=Ply.Ope.StartSneak] run say スニーク
 #         execute if entity @s[tag=Ply.Ope.StartDoubleSneak] run say 連続スニーク
 #     # スプリント
-        # execute if entity @s[tag=Ply.Ope.IsSprinting] run say スプリント
+#         execute if entity @s[tag=Ply.Ope.IsSprinting] run say スプリント
 #     # エンダーアイ
-        # execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] run say エンダーアイ使用開始
-        # execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] run say エンダーアイ使用中
-        # execute if entity @s[tag=Ply.Ope.EndUsingEnderEye] run say エンダーアイ使用終了
+#         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye] run say エンダーアイ使用開始
+#         execute if entity @s[tag=Ply.Ope.IsUsingEnderEye] run say エンダーアイ使用中
+#         execute if entity @s[tag=Ply.Ope.EndUsingEnderEye] run say エンダーアイ使用終了
 #         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.NotSneak] run say エンダーアイ使用開始・スニークなし
 #         execute if entity @s[tag=Ply.Ope.StartUsingEnderEye.WithSneak] run say エンダーアイ使用開始・スニーク同時押し
 #         execute if entity @s[tag=Ply.Ope.UsedEnderEye.Short] run say エンダーアイ使用・短押し
@@ -122,18 +122,17 @@
 #         execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Short] run say エンダーアイ使用・スニーク同時押し・短押し
 #         execute if entity @s[tag=Ply.Ope.UsedSneakingEnderEye.Long] run say エンダーアイ使用・スニーク同時押し・長押し
 #     # ニンジン棒
-        # execute if entity @s[tag=Ply.Ope.StartUsingCoas] run say ニンジン棒使用
+#         execute if entity @s[tag=Ply.Ope.StartUsingCoas] run say ニンジン棒使用
 #     # ジャンプ
 #         execute if entity @s[tag=Ply.Ope.StartKeyJump] run say ジャンプ
-        # execute if entity @s[tag=Ply.Ope.IsKeyJump.Short] run say ジャンプ短押し
-        # execute if entity @s[tag=Ply.Ope.IsKeyJump.Long] run say ジャンプ長押し
+#         execute if entity @s[tag=Ply.Ope.IsKeyJump.Short] run say ジャンプ短押し
+#         execute if entity @s[tag=Ply.Ope.IsKeyJump.Long] run say ジャンプ長押し
 #         execute if entity @s[tag=Ply.Ope.StartDoubleJump] run say 連続ジャンプ
 #     # キー入力
-        # execute if entity @s[tag=Ply.Ope.StartKeyForward] run say 前移動
-        # execute if entity @s[tag=Ply.Ope.StartKeyLeft] run say 左移動
-        # execute if entity @s[tag=Ply.Ope.StartKeyBack] run say 後移動
-        # execute if entity @s[tag=Ply.Ope.StartKeyRight] run say 右移動
-#         execute if entity @s[tag=Ply.Ope.StartKeyJump] run say ジャンプ
+#         execute if entity @s[tag=Ply.Ope.StartKeyForward] run say 前移動
+#         execute if entity @s[tag=Ply.Ope.StartKeyLeft] run say 左移動
+#         execute if entity @s[tag=Ply.Ope.StartKeyBack] run say 後移動
+#         execute if entity @s[tag=Ply.Ope.StartKeyRight] run say 右移動
 #         execute if entity @s[tag=Ply.Ope.StartKeySprint] run say スプリント
 #     # 武器使用
-        #   execute if entity @s[tag=Ply.Ope.StartUsingWeapon] run say 武器使用
+#           execute if entity @s[tag=Ply.Ope.StartUsingWeapon] run say 武器使用

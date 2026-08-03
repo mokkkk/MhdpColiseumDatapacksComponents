@@ -33,10 +33,11 @@
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 if entity @s[nbt={OnGround:1b}] rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:7000, IsForce:false, IsAdjust:false}
     execute if score @s Wpn.GeneralTimer matches 3 if entity @s[nbt={OnGround:1b}] rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:7000, IsForce:false, IsAdjust:false}
+
 # 演出
-   execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..5 run tp @s ~ ~ ~ ~ ~-1
-   execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..5 at @s run tp @s ~ ~ ~ ~-0.5 ~
-   execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 6..10 at @s run tp @s ~ ~ ~ ~0.5 ~
+#    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..5 run tp @s ~ ~ ~ ~ ~-1
+#    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..5 at @s run tp @s ~ ~ ~ ~-0.5 ~
+#    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 6..10 at @s run tp @s ~ ~ ~ ~0.5 ~
 
 # 遷移
     # 右クリックを離した場合、溜め斬りに移行
