@@ -59,7 +59,7 @@
 # 気刃斬りコンボ
     # 1段目
         # 開始：右クリック
-            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_normal/4_spirit_slash_1/start
+            execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.IsUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=!Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_normal/4_spirit_slash_1/start
         # 処理
             execute if entity @s[tag=Wpn.Ls.Normal.Spirit.Miss] run function mhdp_items:weapons/long_sword/type_normal/4_spirit_slash_1/main_miss
             execute if entity @s[tag=Wpn.Ls.Normal.Spirit.1] run function mhdp_items:weapons/long_sword/type_normal/4_spirit_slash_1/main

@@ -24,7 +24,7 @@
     execute if score @s Wpn.GeneralTimer matches 1002 run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/animation_5
 
 # 攻撃
-    execute if score @s Wpn.GeneralTimer matches 1001 run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/attack
+    execute if score @s Wpn.GeneralTimer matches 1001 at @s run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/attack
 
 # 移動
     execute if score @s Wpn.GeneralTimer matches 1 run function mhdp_items:weapons/long_sword/type_tec/18_helmbreaker/move
@@ -52,6 +52,7 @@
         execute if entity @s[tag=Ply.Ope.Buffering.B] if score @s Wpn.GeneralTimer matches 1018..1019 if score @s Wpn.Ls.SpiritLevel matches 2.. run function mhdp_items:weapons/long_sword/type_tec/19_spirit_release_slash/start
     # ジャンプ回避
         execute if entity @s[tag=Ply.Ope.Buffering.Jump] if score @s Wpn.GeneralTimer matches 35.. run function mhdp_items:weapons/long_sword/util/move_jump
+
 # 狩技遷移
     execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 1018..1019 run function mhdp_items:weapons/long_sword/type_tec/27_critical_juncture/start
     execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 1018..1019 run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/start

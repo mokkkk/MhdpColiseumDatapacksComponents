@@ -60,6 +60,7 @@
         execute if entity @s[tag=Ply.Ope.Buffering.E] if score @s Wpn.GeneralTimer matches 22.. if score @s Wpn.Ls.SpiritGauge matches 1.. run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/start
     # スニーク+ジャンプ：特殊納刀に移行
         execute if entity @s[tag=Ply.Ope.Buffering.F] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/long_sword/type_tec/20_special_sheathe/start
+
 # 狩技遷移
     execute if entity @s[tag=Ply.Ope.Buffering.Arts1] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/long_sword/type_tec/27_critical_juncture/start
     execute if entity @s[tag=Ply.Ope.Buffering.Arts2] if score @s Wpn.GeneralTimer matches 22.. run function mhdp_items:weapons/long_sword/type_tec/26_sakura_slash/start

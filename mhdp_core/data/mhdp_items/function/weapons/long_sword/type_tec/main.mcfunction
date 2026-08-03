@@ -97,7 +97,7 @@
 
 # 気刃突き
     # 開始：スニーク+右クリック同時押し
-        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye.WithSneak,tag=Ply.Weapon.NoOpe] run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/start
+        execute if entity @s[tag=Ply.Weapon.Drawing,tag=Ply.Ope.StartUsingEnderEye,tag=Ply.Weapon.NoOpe,tag=Ply.Ope.IsSneaking] run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/start
     # 処理
         execute if entity @s[tag=Wpn.Ls.Tec.SpiritSpear] run function mhdp_items:weapons/long_sword/type_tec/17_spirit_spear/main
 
