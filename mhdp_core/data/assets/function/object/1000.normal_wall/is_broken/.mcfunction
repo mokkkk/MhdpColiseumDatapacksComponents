@@ -17,3 +17,7 @@
         function assets:core/object/build/get_link_target.m with storage api: Arg
         tp @e[type=shulker,tag=Asset.Build.Target] ~ ~-100 ~
         kill @e[type=shulker,tag=Asset.Build.Target]
+
+# 破壊された場合、吹っ飛び
+    execute if score @s Build.Stats.Hp matches ..0 positioned as @s positioned ~ ~3 ~ as @a[distance=..2] at @s \
+        facing entity @n[tag=Temp.ObjectAttacker] feet rotated ~180 -45 run function api:weapon_operation/use_player_motion.m {Strength:14000, IsForce:true, IsAdjust:false}
