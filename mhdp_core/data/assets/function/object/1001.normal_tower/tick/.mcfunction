@@ -5,15 +5,9 @@
 # スコア増加
     scoreboard players add @s ObjectTick 1
 
-# ダメージインターバル減少
-    execute if score @s Build.Stats.DamageInterval matches 1.. run scoreboard players remove @s Build.Stats.DamageInterval 1
-
-# 演出・拡大
-    execute if score @s ObjectTick matches 1..10 run particle block{block_state:"minecraft:oak_planks"} ~ ~0.5 ~ 1 0 1 0 10
-    execute if score @s ObjectTick matches 10 run function assets:object/1001.normal_tower/tick/expand
-
-# 当たり判定有効化
-    execute if score @s ObjectTick matches 15 run function assets:object/1001.normal_tower/tick/summon_hitbox
-
-# 消去
-    execute if score @s ObjectTick >= @s Build.Stats.RemainingTime run function assets:object/1001.normal_tower/remove/
+# 通常時
+    execute if entity @s[tag=!Asset.Build.IsBroken,tag=!Asset.Build.IsRemove] run function assets:object/1001.normal_tower/tick/tick_normal
+# 破壊 ~ 消滅まで
+    execute if entity @s[tag=Asset.Build.IsBroken,tag=!Asset.Build.IsRemove] run function assets:object/1001.normal_tower/tick/tick_broken
+# 消滅時
+    execute if entity @s[tag=Asset.Build.IsRemove] run function assets:object/1001.normal_tower/tick/tick_remove

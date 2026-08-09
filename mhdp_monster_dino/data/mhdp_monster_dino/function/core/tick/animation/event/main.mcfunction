@@ -78,6 +78,7 @@
     # 建築物怯み・尻尾攻撃
         execute if entity @s[tag=animated_java_dino.dino.animation.tail_interrupt_r.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_interrupt_r/main
         execute if entity @s[tag=animated_java_dino.dino.animation.tail_interrupt_l.playing] run function mhdp_monster_dino:core/tick/animation/event/tail_interrupt_l/main
+        execute if entity @s[tag=animated_java_dino.dino.animation.roundforce_interrupt.playing] run function mhdp_monster_dino:core/tick/animation/event/roundforce_interrupt/main
     # 飛行中
         execute if entity @s[tag=animated_java_dino.dino.animation.damage_flying.playing] run function mhdp_monster_dino:core/tick/animation/event/damage_flying/main
 

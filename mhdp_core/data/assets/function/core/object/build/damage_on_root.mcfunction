@@ -18,7 +18,7 @@
 
 # 破壊
     execute if score @s Build.Stats.Hp matches ..0 run playsound entity.zombie.break_wooden_door master @a ~ ~ ~ 1 1.2
-    execute if score @s Build.Stats.Hp matches ..0 run function assets:core/object/remove
+    execute if score @s Build.Stats.Hp matches ..0 run function assets:core/object/is_broken
 
 # インターバル設定
     scoreboard players set @s Build.Stats.DamageInterval 10

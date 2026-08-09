@@ -15,5 +15,8 @@
         # playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.9
         # playsound entity.phantom.bite master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.6
 
+# 上書き
+    data modify storage api: Return.OverrideRemoveTick set value 10
+
 # 攻撃終了
     function mhdp_monster_dino:core/tick/on_battle/attack/end

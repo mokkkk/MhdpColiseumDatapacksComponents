@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # デバッグ用
-    execute as @a run function debug:check_hate {"Name":"Dino"}
+    # execute as @a run function debug:check_hate {"Name":"Dino"}
 
 # 事前処理
     # アニメーションが停止しないよう、とりあえず待機アニメーションを再生
@@ -35,7 +35,7 @@
 # 警戒時
     execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 1 run function mhdp_monster_dino:core/tick/animation/change/on_caution/main
 # 戦闘時
-    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 2 run function mhdp_monster_dino:core/tick/animation/change/on_battle/main
+    # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 2 run function mhdp_monster_dino:core/tick/animation/change/on_battle/main
 
 # 軸合わせアニメーション再生
     execute if entity @s[tag=Mns.Temp.IsTurn] run function mhdp_monster_dino:core/tick/animation/change/play/turn

@@ -11,6 +11,9 @@
         scoreboard objectives add Build.Uid dummy
     # 処理用
         scoreboard objectives add ObjectTick dummy
+    # 建造物処理用
+        # 破壊 ~ 消滅までの時間
+        scoreboard objectives add Build.RemoveTick dummy
     # 建造物ステータス
         # 耐久力
             scoreboard objectives add Build.Stats.Hp dummy
