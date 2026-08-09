@@ -12,8 +12,8 @@
 
 # 通常再生
     # タグ付与
-        # tag @s add Anim.MoveBack
-        function mhdp_monster_dino:core/tick/animation/change/play/move_to_bite
+        # tag @s add Anim.RoundForce
+        function mhdp_monster_dino:core/tick/animation/change/play/tail
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn
         # scoreboard players set @s Mns.General.TurnCount 2
