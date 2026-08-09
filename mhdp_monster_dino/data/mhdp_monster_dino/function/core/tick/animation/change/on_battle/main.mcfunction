@@ -11,10 +11,10 @@
 # 行動回数処理
     # ターゲット更新
         scoreboard players add @s Mns.General.ActCount.Target 1
-        # 6回以上行動した後、一定確率でタゲ変更
-            execute if score @s Mns.General.ActCount.Target matches 6.. if predicate {"condition":"minecraft:random_chance","chance":0.40} run function mhdp_monster_dino:core/tick/on_battle/update_target
-        # 10回以上行動した後、確実にタゲ変更
-            execute if score @s Mns.General.ActCount.Target matches 10.. run function mhdp_monster_dino:core/tick/on_battle/update_target
+        # 3回以上行動した後、一定確率でタゲ変更
+            execute if score @s Mns.General.ActCount.Target matches 3.. if predicate {"condition":"minecraft:random_chance","chance":0.50} run function mhdp_monster_dino:core/tick/on_battle/update_target
+        # 6回以上行動した後、確実にタゲ変更
+            execute if score @s Mns.General.ActCount.Target matches 6.. run function mhdp_monster_dino:core/tick/on_battle/update_target
     # 威嚇
         scoreboard players add @s Mns.General.ActCount.Idle 1
         # 非怒り時、一定回数ごとに威嚇

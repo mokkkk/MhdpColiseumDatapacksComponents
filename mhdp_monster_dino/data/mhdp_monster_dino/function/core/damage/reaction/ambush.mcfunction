@@ -23,6 +23,8 @@
     execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monsters:core/util/damage/reaction_flying
 
 # 独自処理
+    # 初回咆哮
+        tag @s add Mns.Temp.Anim.IsFirstContact
     # 演出
         playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
 

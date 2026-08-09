@@ -34,9 +34,9 @@
 
 # Animタグ付与
     # ブレス
-        execute if score #mndp_temp_action_id MhdpCore matches 1 run tag @s add Anim.Breath.Back
+        execute if score #mndp_temp_action_id MhdpCore matches 1 run tag @s add Anim.BreathBack
     # 3連ブレス
-        execute if score #mndp_temp_action_id MhdpCore matches 2 run tag @s add Anim.Breath.Triple
+        execute if score #mndp_temp_action_id MhdpCore matches 2 run tag @s add Anim.BreathTriple
     # 移動ブレス
         execute if score #mndp_temp_action_id MhdpCore matches 3 run function mhdp_monster_dino:core/tick/animation/change/play/move_breath
     # 移動→2連嚙みつき
@@ -48,7 +48,7 @@
     # 火炎
         execute if score #mndp_temp_action_id MhdpCore matches 7 run function mhdp_monster_dino:core/tick/animation/change/play/tail_flame
     # 大回転斬り
-        execute if score #mndp_temp_action_id MhdpCore matches 8 run tag @s add Anim.Round
+        execute if score #mndp_temp_action_id MhdpCore matches 8 run tag @s add Anim.RoundForce
     # サイドステップ
         execute if score #mndp_temp_action_id MhdpCore matches 9 run function mhdp_monster_dino:core/tick/animation/change/play/step
 

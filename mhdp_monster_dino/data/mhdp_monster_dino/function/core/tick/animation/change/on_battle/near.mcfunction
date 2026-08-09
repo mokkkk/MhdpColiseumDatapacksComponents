@@ -17,13 +17,16 @@
         execute if entity @a[tag=Mns.Target.Dino,tag=Mns.Temp.Situation.IsBack] run \
             data modify storage mhdp_core:temp Temp.AttackRandom merge value {TailBack:8}
     # 通常・側面時
-        execute if entity @a[tag=Mns.Target.Dino,tag=Mns.Temp.Situation.IsForward,tag=Mns.Temp.Situation.IsBack] run \
+        execute if entity @a[tag=Mns.Target.Dino,tag=!Mns.Temp.Situation.IsForward,tag=!Mns.Temp.Situation.IsBack] run \
             data modify storage mhdp_core:temp Temp.AttackRandom merge value {Tail:2,TailSide:4}
+    # 怒り
+        execute if entity @a[tag=Mns.Target.Dino,tag=Mns.State.IsAnger] run \
+            data modify storage mhdp_core:temp Temp.AttackRandom merge value {Round:2}
     # 尻尾赤熱・正面時
         execute if entity @s[tag=Mns.Dino.State.TailHeat] if entity @a[tag=Mns.Target.Dino,tag=Mns.Temp.Situation.IsForward] run \
             data modify storage mhdp_core:temp Temp.AttackRandom merge value {Bite:2,Tail:7,TailSide:4,MoveBack:3}
     # 尻尾赤熱・背面時
-        execute if entity @s[tag=Mns.Dino.State.TailHeat] if entity @a[tag=Mns.Target.Dino,tag=Mns.Temp.Situation.IsForward,tag=Mns.Temp.Situation.IsBack] run \
+        execute if entity @s[tag=Mns.Dino.State.TailHeat] if entity @a[tag=Mns.Target.Dino,tag=Mns.Temp.Situation.IsBack] run \
             data modify storage mhdp_core:temp Temp.AttackRandom merge value {}
     # 尻尾赤熱・側面時
         execute if entity @s[tag=Mns.Dino.State.TailHeat] if entity @a[tag=Mns.Target.Dino,tag=Mns.Temp.Situation.IsForward,tag=Mns.Temp.Situation.IsBack] run \
@@ -32,10 +35,10 @@
         execute if entity @s[tag=Mns.Dino.State.HeadHeat] if entity @a[tag=Mns.Target.Dino,tag=Mns.Temp.Situation.IsForward] run \
             data modify storage mhdp_core:temp Temp.AttackRandom merge value {Bite:4,BreathBack:2,MoveBreath:2}
     # 喉赤熱・背面時
-        execute if entity @s[tag=Mns.Dino.State.HeadHeat] if entity @a[tag=Mns.Target.Dino,tag=Mns.Temp.Situation.IsForward,tag=Mns.Temp.Situation.IsBack] run \
+        execute if entity @s[tag=Mns.Dino.State.HeadHeat] if entity @a[tag=Mns.Target.Dino,tag=Mns.Temp.Situation.IsBack] run \
             data modify storage mhdp_core:temp Temp.AttackRandom merge value {}
     # 喉赤熱・側面時
-        execute if entity @s[tag=Mns.Dino.State.HeadHeat] if entity @a[tag=Mns.Target.Dino,tag=Mns.Temp.Situation.IsForward,tag=Mns.Temp.Situation.IsBack] run \
+        execute if entity @s[tag=Mns.Dino.State.HeadHeat] if entity @a[tag=Mns.Target.Dino,tag=!Mns.Temp.Situation.IsForward,tag=!Mns.Temp.Situation.IsBack] run \
             data modify storage mhdp_core:temp Temp.AttackRandom merge value {}
 
 # 決定
@@ -47,7 +50,7 @@
 
 # Animタグ付与
     # バックジャンプブレス
-        execute if score #mndp_temp_action_id MhdpCore matches 1 run tag @s add Anim.Breath.Back
+        execute if score #mndp_temp_action_id MhdpCore matches 1 run tag @s add Anim.BreathBack
     # 移動ブレス
         execute if score #mndp_temp_action_id MhdpCore matches 2 run function mhdp_monster_dino:core/tick/animation/change/play/move_breath
     # 噛みつき
@@ -63,7 +66,7 @@
     # 火炎
         execute if score #mndp_temp_action_id MhdpCore matches 8 run function mhdp_monster_dino:core/tick/animation/change/play/tail_flame
     # 大回転斬り
-        execute if score #mndp_temp_action_id MhdpCore matches 9 run tag @s add Anim.Round
+        execute if score #mndp_temp_action_id MhdpCore matches 9 run tag @s add Anim.RoundForce
     # サイドステップ
         execute if score #mndp_temp_action_id MhdpCore matches 10 run function mhdp_monster_dino:core/tick/animation/change/play/step
 

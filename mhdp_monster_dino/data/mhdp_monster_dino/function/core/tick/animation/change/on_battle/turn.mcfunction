@@ -11,7 +11,7 @@
 # 2連噛みつき
     execute if entity @s[tag=Anim.BiteDouble] run tag @s add Mns.Temp.IsTurn
 # 移動引っかき
-    execute if entity @s[tag=Anim.Breath.Back] run tag @s add Mns.Temp.IsTurn
+    execute if entity @s[tag=Anim.BreathBack] run tag @s add Mns.Temp.IsTurn
 # ブレス
     execute if entity @s[tag=Anim.Breath] run tag @s add Mns.Temp.IsTurn
 # 3連ブレス

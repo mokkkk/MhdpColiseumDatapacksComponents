@@ -27,7 +27,7 @@
 
 # Animタグ付与
     # バックジャンプブレス
-        execute if score #mndp_temp_action_id MhdpCore matches 1 run tag @s add Anim.Breath.Back
+        execute if score #mndp_temp_action_id MhdpCore matches 1 run tag @s add Anim.BreathBack
     # 移動ブレス
         execute if score #mndp_temp_action_id MhdpCore matches 2 run function mhdp_monster_dino:core/tick/animation/change/play/move_breath
     # 車庫入れ

@@ -53,3 +53,4 @@
 # 終了
     data remove storage mhdp_core:temp Damage
     scoreboard players reset #mhdp_temp_attack_multiply_anger MhdpCore
+
