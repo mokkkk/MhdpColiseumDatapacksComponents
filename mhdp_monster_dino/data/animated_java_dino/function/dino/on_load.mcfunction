@@ -77,6 +77,9 @@ scoreboard objectives add aj.tail_flame_l.frame dummy
 scoreboard objectives add aj.roundforce.frame dummy
 scoreboard objectives add aj.tail_interrupt_r.frame dummy
 scoreboard objectives add aj.tail_interrupt_l.frame dummy
+scoreboard objectives add aj.tail_interrupt_long_r.frame dummy
+scoreboard objectives add aj.tail_interrupt_long_l.frame dummy
 scoreboard objectives add aj.roundforce_interrupt.frame dummy
+scoreboard objectives add aj.idle_short.frame dummy
 scoreboard objectives add aj.polish.frame dummy
 scoreboard objectives add aj.death_bak.frame dummy

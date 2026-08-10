@@ -23,13 +23,16 @@
             tag=!animated_java_dino.dino.animation.tail_back_l.playing,\
             tag=!animated_java_dino.dino.animation.step_l_to_jumptail_r.playing,\
             tag=!animated_java_dino.dino.animation.step_r_to_jumptail_l.playing,\
-            tag=!animated_java_dino.dino.animation.jump_tail_r.playing,\
-            tag=!animated_java_dino.dino.animation.jump_tail_l.playing,\
-            tag=!animated_java_dino.dino.animation.jump_tail_anger_r.playing,\
-            tag=!animated_java_dino.dino.animation.jump_tail_anger_l.playing,\
             tag=!animated_java_dino.dino.animation.tail_flame_r.playing,\
             tag=!animated_java_dino.dino.animation.tail_flame_l.playing\
         ] run function mhdp_monster_dino:core/tick/on_battle/interact/reaction/cancel_attack_tail
+    # 飛び込み尻尾攻撃
+        execute unless entity @s[\
+            tag=!animated_java_dino.dino.animation.jump_tail_r.playing,\
+            tag=!animated_java_dino.dino.animation.jump_tail_l.playing,\
+            tag=!animated_java_dino.dino.animation.jump_tail_anger_r.playing,\
+            tag=!animated_java_dino.dino.animation.jump_tail_anger_l.playing\
+        ] run function mhdp_monster_dino:core/tick/on_battle/interact/reaction/cancel_attack_tail_long
     # 大回転
         execute unless entity @s[\
             tag=!animated_java_dino.dino.animation.roundforce.playing\

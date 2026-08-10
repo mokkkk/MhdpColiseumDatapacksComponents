@@ -76,6 +76,9 @@ tag @s remove animated_java_dino.dino.animation.tail_flame_l.playing
 tag @s remove animated_java_dino.dino.animation.roundforce.playing
 tag @s remove animated_java_dino.dino.animation.tail_interrupt_r.playing
 tag @s remove animated_java_dino.dino.animation.tail_interrupt_l.playing
+tag @s remove animated_java_dino.dino.animation.tail_interrupt_long_r.playing
+tag @s remove animated_java_dino.dino.animation.tail_interrupt_long_l.playing
 tag @s remove animated_java_dino.dino.animation.roundforce_interrupt.playing
+tag @s remove animated_java_dino.dino.animation.idle_short.playing
 tag @s remove animated_java_dino.dino.animation.polish.playing
 tag @s remove animated_java_dino.dino.animation.death_bak.playing

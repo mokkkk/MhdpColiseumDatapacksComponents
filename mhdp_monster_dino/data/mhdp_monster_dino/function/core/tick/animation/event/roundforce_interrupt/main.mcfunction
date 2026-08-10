@@ -9,6 +9,8 @@
     execute if score @s aj.roundforce_interrupt.frame matches 43..50 at @s run tp @s ^ ^ ^-0.2 ~ ~
 
 # 演出
+    execute if score @s aj.roundforce_interrupt.frame matches 1..4 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.ravager.hurt master @s ^ ^1 ^1 0.4 0.8 0.4
+    execute if score @s aj.roundforce_interrupt.frame matches 1..4 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.hoglin.hurt master @s ^ ^1 ^1 0.4 0.65 0.4
     execute if score @s aj.roundforce_interrupt.frame matches 5 run function animated_java_dino:dino/at_locator {name:"pos_tail_2",command:"execute rotated as @s rotated ~ 0 run function mhdp_monster_dino:core/tick/animation/event/roundforce_interrupt/particle_tail_hit"}
     execute if score @s aj.roundforce_interrupt.frame matches 5 run function animated_java_dino:dino/at_locator {name:"pos_tail_3",command:"execute rotated as @s rotated ~ 0 run function mhdp_monster_dino:core/tick/animation/event/roundforce_interrupt/particle_tail_hit"}
     execute if score @s aj.roundforce_interrupt.frame matches 36 run playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5

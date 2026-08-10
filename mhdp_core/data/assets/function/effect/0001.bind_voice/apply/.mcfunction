@@ -24,3 +24,7 @@
 # attribute操作
     attribute @s movement_speed modifier add mhdp_core:effect_bind_voice_movement_speed -0.07 add_value
     attribute @s jump_strength modifier add mhdp_core:effect_bind_voice_jump_strength -1.00 add_value
+
+# 武器操作停止
+    function mhdp_items:core/switch/weapon_interrupt
+    execute store result score @s Wpn.DeactivateTimer run data get storage mhdp_core:temp PlayerData.ActiveEffectList[{EffectId:1}].Tick

@@ -76,7 +76,10 @@ scoreboard objectives remove aj.tail_flame_l.frame
 scoreboard objectives remove aj.roundforce.frame
 scoreboard objectives remove aj.tail_interrupt_r.frame
 scoreboard objectives remove aj.tail_interrupt_l.frame
+scoreboard objectives remove aj.tail_interrupt_long_r.frame
+scoreboard objectives remove aj.tail_interrupt_long_l.frame
 scoreboard objectives remove aj.roundforce_interrupt.frame
+scoreboard objectives remove aj.idle_short.frame
 scoreboard objectives remove aj.polish.frame
 scoreboard objectives remove aj.death_bak.frame
 tellraw @a [[{color:gray,text:'\n '},{color:'#00aced',text:'ᴀɴɪᴍᴀᴛᴇᴅ ᴊᴀᴠᴀ'},{color:dark_gray,italic:true,text:'\n (animated_java_dino:dino)'},'\n → '],[{text:'Successfully uninstalled ',color:green},{text:'animated_java_dino:dino',color:yellow},{text:'!'},{text:'\n If you have exported multiple times, you may have to remove objectives from previous exports manually, as Animated Java only knows about the objectives from the most recent export.',color:gray,italic:true}],'\n']

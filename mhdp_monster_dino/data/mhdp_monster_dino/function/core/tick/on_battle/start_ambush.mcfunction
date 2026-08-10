@@ -23,6 +23,9 @@
 # ボスバー名更新
     function mhdp_monsters:core/util/tick/update_bossbar.m {Monster:"dino",State:"battle"}
 
+# 咆哮アニメーション再生
+    execute unless entity @s[tag=Mns.State.IsBattle] run tag @s add Mns.Temp.Anim.IsFirstContact
+
 # 戦闘状態開始
     tag @s add Mns.State.IsBattle
 
