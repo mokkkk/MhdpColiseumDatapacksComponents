@@ -25,3 +25,5 @@
             scoreboard objectives add Build.Stats.JumpStrength dummy
         # ダメージインターバル
             scoreboard objectives add Build.Stats.DamageInterval dummy
+        # 破壊段階
+            scoreboard objectives add Build.Stats.DestroyLevel dummy
