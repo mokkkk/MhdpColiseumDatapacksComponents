@@ -14,12 +14,16 @@
     function mhdp_core:player/data/get_operation
 
 # リスポーン時処理
+    # ???
 
 # 武器・アイテム処理
     function mhdp_items:player/tick
 
 # エフェクト処理
     function api:effect/tick
+
+# トリガー処理
+    function mhdp_core:player/trigger/tick
 
 # クエスト関連処理
     execute if entity @s[tag=Ply.State.QuestMember,tag=!Ply.State.QuestHost,tag=!Ply.State.PlayingQuest] run function mhdp_core:player/phase_village/tick

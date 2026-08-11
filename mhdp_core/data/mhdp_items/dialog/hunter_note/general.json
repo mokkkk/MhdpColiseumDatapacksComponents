@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "translate": "item.hunter_note.general",
+    "bold": true
+  },
+  "external_title": [
+    "★",
+    {
+      "translate": "item.hunter_note.open"
+    }
+  ],
+  "body": [],
+  "inputs": [],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": "TEST",
+      "tooltip": {
+        "text": "asdada"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger Ply.Ope.HunterNote.General set 1"
+      }
+    }
+  ]
+}

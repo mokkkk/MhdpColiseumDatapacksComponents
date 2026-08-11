@@ -44,10 +44,6 @@
             scoreboard objectives add Ply.Ope.EatingTimer dummy
             scoreboard objectives add Ply.Ope.EatingTimerMax dummy
             scoreboard objectives add Ply.Ope.EatingTimer.Effect dummy
-        # クエスト受注のトリガー
-            scoreboard objectives add Ply.Ope.AcceptedQuestId trigger
-        # チュートリアル再生のトリガー
-            scoreboard objectives add Ply.Ope.TutorialTrigger trigger
     # 処理用タイマー
         # ベクトルジャンプクールタイム
             scoreboard objectives add Ply.Timer.VectorJumpCoolTime dummy
@@ -98,6 +94,14 @@
     # チュートリアル用
         scoreboard objectives add Mns.Tutorial.Text dummy {"text":"チュートリアル","color":"gold","bold":true}
         scoreboard objectives modify Mns.Tutorial.Text displayname {"text":"チュートリアル","color":"gold","bold":true,"underlined":true}
+
+# トリガー
+    # クエスト受注のトリガー
+        scoreboard objectives add Ply.Ope.AcceptedQuestId trigger
+    # チュートリアル再生のトリガー
+        scoreboard objectives add Ply.Ope.TutorialTrigger trigger
+    # ハンターノート操作用のトリガー
+        scoreboard objectives add Ply.Ope.HunterNote.General trigger
 
 ## Scoreboard初期値設定
 # プレイヤーUID
