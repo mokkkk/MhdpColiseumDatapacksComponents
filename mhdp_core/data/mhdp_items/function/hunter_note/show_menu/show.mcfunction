@@ -8,10 +8,7 @@
     # execute if entity @s[tag=!Ply.State.PlayingQuest,tag=!Ply.State.IsTraining] run say むらです
 
 # 訓練
-    # execute if entity @s[tag=!Ply.State.PlayingQuest,tag=Ply.State.IsTraining] run say くんれんです
+    execute if entity @s[tag=!Ply.State.PlayingQuest,tag=Ply.State.IsTraining] run function mhdp_items:hunter_note/show_menu/training/show
 
 # クエスト中
-    # execute if entity @s[tag=Ply.State.PlayingQuest] run function mhdp_core:player/trigger/hunter_note/show_menu/in_quest
-
-# 仮
-    function mhdp_items:hunter_note/show_menu/quest/show
+    execute if entity @s[tag=Ply.State.PlayingQuest] run function mhdp_items:hunter_note/show_menu/quest/show

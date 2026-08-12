@@ -29,3 +29,4 @@
         ],\
         exit_action:{label:{translate:"ui.hunter_note.button_close"},action:{type:"minecraft:show_dialog",dialog:"mhdp_items:hunter_note/general"}}\
     }
+

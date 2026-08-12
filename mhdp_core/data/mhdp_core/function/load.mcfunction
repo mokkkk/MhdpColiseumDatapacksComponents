@@ -103,6 +103,7 @@
     # ハンターノート操作用のトリガー
         scoreboard objectives add Ply.Ope.HunterNote.General trigger
         scoreboard objectives add Ply.Ope.HunterNote.ShowMenu trigger
+        scoreboard objectives add Ply.Ope.HunterNote.TrainingOptions trigger
         scoreboard objectives add Ply.Ope.HunterNote.Options trigger
     # 全プレイヤーのトリガーリセット
         execute as @a run function mhdp_core:player/trigger/reset

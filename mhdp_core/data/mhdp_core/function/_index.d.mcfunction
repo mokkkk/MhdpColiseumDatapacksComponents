@@ -108,6 +108,11 @@
             #declare tag Ply.Ope.Buffering.Jump 先行入力移動ジャンプ
             #declare tag Ply.Ope.Buffering.Arts1 先行入力狩技1
             #declare tag Ply.Ope.Buffering.Arts2 先行入力狩技2
+        # オプション
+            #declare tag Ply.Option.DisableCameraEffect オプション：武器攻撃時のカメラ効果無効化
+            #declare tag Ply.Option.DisableMoveJump オプション：抜刀時の移動ジャンプ無効化
+            #declare tag Ply.Option.Training.IsArtsGaugeInfinity 訓練所オプション：狩技ゲージ無限化
+            #declare tag Ply.Option.Training.IsSpItemInfinity 訓練所オプション：特殊装具のクールダウン無効化
     # クエスト中処理
         #declare tag Ply.Event.DeathAnimation 死亡演出
     # 進捗

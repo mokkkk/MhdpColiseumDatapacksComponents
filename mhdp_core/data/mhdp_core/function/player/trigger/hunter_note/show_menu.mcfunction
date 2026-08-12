@@ -4,6 +4,12 @@
 #
 # @within function mhdp_core:player/tick
 
+# 訓練所
+    # 武器操作
+        # execute if score @s Ply.Ope.HunterNote.ShowMenu matches 11 run function mhdp_core:phase/3_quest/map/general/click_retire_dialog
+    # 訓練所オプション
+        execute if score @s Ply.Ope.HunterNote.ShowMenu matches 12 run function mhdp_items:hunter_note/show_menu/training_option/show
+
 # クエスト中
     # リタイア投票
         execute if score @s Ply.Ope.HunterNote.ShowMenu matches 21 run function mhdp_core:phase/3_quest/map/general/click_retire_dialog

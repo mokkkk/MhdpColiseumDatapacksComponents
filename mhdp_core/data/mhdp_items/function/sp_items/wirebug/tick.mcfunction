@@ -11,3 +11,7 @@
 
 # 使用中処理
     execute if entity @s[tag=Itm.Sp.Wirebug.Using] run function mhdp_items:sp_items/wirebug/using/tick
+
+# 訓練所のみ
+    execute if entity @s[tag=Ply.State.IsTraining,tag=Ply.Option.Training.IsSpItemInfinity,tag=Itm.Sp.Wirebug.Using] if score @s Itm.Wirebug.GeneralTimer matches 15.. run scoreboard players set @s Itm.Wirebug.CoolTime 0
+    execute if entity @s[tag=Ply.State.IsTraining,tag=Ply.Option.Training.IsSpItemInfinity,tag=!Itm.Sp.Wirebug.Using] if score @s Itm.Wirebug.CoolTime matches 2.. run scoreboard players set @s Itm.Wirebug.CoolTime 0

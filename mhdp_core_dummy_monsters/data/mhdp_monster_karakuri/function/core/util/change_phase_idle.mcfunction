@@ -10,3 +10,4 @@
 # 待機
     tag @s add Mns.Karakuri.Mode.Idle
     tag @s remove Mns.Karakuri.Mode.Attack
+    scoreboard players set @s Mns.General.DummyCounter 0

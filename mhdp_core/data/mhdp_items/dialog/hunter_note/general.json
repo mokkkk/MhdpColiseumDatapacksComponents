@@ -6,24 +6,44 @@
   },
   "external_title": [
     {
-      "text":"\uE000",
-      "font":"icons/book",
-      "shadow_color":[0,0,0,0]
+      "text": "\uE000",
+      "font": "icons/book",
+      "shadow_color": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
-      "text":" ",
-      "font":"default",
-      "shadow_color":[0,0,0,1]
+      "text": " ",
+      "font": "default",
+      "shadow_color": [
+        0,
+        0,
+        0,
+        1
+      ]
     },
     {
       "translate": "ui.hunter_note.open",
-      "font":"default",
-      "shadow_color":[0,0,0,1]
+      "font": "default",
+      "shadow_color": [
+        0,
+        0,
+        0,
+        1
+      ]
     }
   ],
   "body": [],
   "inputs": [],
   "can_close_with_escape": true,
+  "exit_action": {
+    "label": {
+      "translate": "ui.hunter_note.button_close"
+    }
+  },
   "columns": 1,
   "actions": [
     {
