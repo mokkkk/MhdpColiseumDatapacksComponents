@@ -6,7 +6,7 @@
 
 # 訓練所
     # 武器操作
-        # execute if score @s Ply.Ope.HunterNote.ShowMenu matches 11 run function mhdp_core:phase/3_quest/map/general/click_retire_dialog
+        execute if score @s Ply.Ope.HunterNote.ShowMenu matches 11 run function mhdp_items:hunter_note/info/weapon_guide/show.m {Trigger:"Ply.Ope.HunterNote.General",Value:"1"}
     # 訓練所オプション
         execute if score @s Ply.Ope.HunterNote.ShowMenu matches 12 run function mhdp_items:hunter_note/show_menu/training_option/show
 

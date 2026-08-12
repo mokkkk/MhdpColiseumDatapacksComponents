@@ -11,10 +11,6 @@
         ConfirmCommand:"trigger Ply.Ope.HunterNote.Options set $(OptCameraEffect)$(OptMoveJump)"\
     }
 
-# 狩技ゲージ
-    execute unless entity @s[tag=Ply.Option.Training.IsArtsGaugeInfinity] run data modify storage mhdp_core:temp Temp.Dialog.ArtsGaugeInfinityOff set value 1b
-    execute if entity @s[tag=Ply.Option.Training.IsArtsGaugeInfinity] run data modify storage mhdp_core:temp Temp.Dialog.ArtsGaugeInfinityOn set value 1b
-
 # 表示
     function mhdp_items:hunter_note/show_menu/training/show.m with storage mhdp_core:temp Temp.Dialog
 
