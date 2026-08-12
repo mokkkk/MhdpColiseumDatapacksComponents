@@ -8,5 +8,9 @@
     execute if score @s Ply.Ope.AcceptedQuestId matches 0.. run function mhdp_core:player/trigger/quest/click_accept
 
 # ハンターノート操作
-    # メインメニュー
+    # 一般
         execute if score @s Ply.Ope.HunterNote.General matches 0.. run function mhdp_core:player/trigger/hunter_note/general
+    # 各メニュー
+        execute if score @s Ply.Ope.HunterNote.ShowMenu matches 0.. run function mhdp_core:player/trigger/hunter_note/show_menu
+    # オプション
+        execute if score @s Ply.Ope.HunterNote.Options matches 0.. run function mhdp_core:player/trigger/hunter_note/options

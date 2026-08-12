@@ -102,6 +102,10 @@
         scoreboard objectives add Ply.Ope.TutorialTrigger trigger
     # ハンターノート操作用のトリガー
         scoreboard objectives add Ply.Ope.HunterNote.General trigger
+        scoreboard objectives add Ply.Ope.HunterNote.ShowMenu trigger
+        scoreboard objectives add Ply.Ope.HunterNote.Options trigger
+    # 全プレイヤーのトリガーリセット
+        execute as @a run function mhdp_core:player/trigger/reset
 
 ## Scoreboard初期値設定
 # プレイヤーUID
@@ -116,11 +120,13 @@
     scoreboard players set #const_3 Const 3
     scoreboard players set #const_6 Const 6
     scoreboard players set #const_7 Const 7
+    scoreboard players set #const_10 Const 10
     scoreboard players set #const_20 Const 20
     scoreboard players set #const_30 Const 30
     scoreboard players set #const_60 Const 60
     scoreboard players set #const_80 Const 80
     scoreboard players set #const_100 Const 100
+    scoreboard players set #const_1000 Const 1000
     scoreboard players set #const_10000 Const 10000
     # 攻撃力関連
         # 太刀・ゲージ色

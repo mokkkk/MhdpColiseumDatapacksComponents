@@ -1,27 +1,77 @@
 {
   "type": "minecraft:multi_action",
   "title": {
-    "translate": "item.hunter_note.general",
+    "translate": "ui.hunter_note.general",
     "bold": true
   },
   "external_title": [
-    "★",
     {
-      "translate": "item.hunter_note.open"
+      "text":"\uE000",
+      "font":"icons/book",
+      "shadow_color":[0,0,0,0]
+    },
+    {
+      "text":" ",
+      "font":"default",
+      "shadow_color":[0,0,0,1]
+    },
+    {
+      "translate": "ui.hunter_note.open",
+      "font":"default",
+      "shadow_color":[0,0,0,1]
     }
   ],
   "body": [],
   "inputs": [],
   "can_close_with_escape": true,
+  "columns": 1,
   "actions": [
     {
-      "label": "TEST",
+      "label": {
+        "translate": "ui.hunter_note.general.menu"
+      },
       "tooltip": {
-        "text": "asdada"
+        "translate": "ui.hunter_note.general.menu.tooltip"
       },
       "action": {
         "type": "minecraft:run_command",
         "command": "trigger Ply.Ope.HunterNote.General set 1"
+      }
+    },
+    {
+      "label": {
+        "translate": "ui.hunter_note.general.tutorial"
+      },
+      "tooltip": {
+        "translate": "ui.hunter_note.general.tutorial.tooltip"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger Ply.Ope.HunterNote.General set 2"
+      }
+    },
+    {
+      "label": {
+        "translate": "ui.hunter_note.general.show_info"
+      },
+      "tooltip": {
+        "translate": "ui.hunter_note.general.show_info.tooltip"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger Ply.Ope.HunterNote.General set 3"
+      }
+    },
+    {
+      "label": {
+        "translate": "ui.hunter_note.general.options"
+      },
+      "tooltip": {
+        "translate": "ui.hunter_note.general.options.tooltip"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger Ply.Ope.HunterNote.General set 4"
       }
     }
   ]

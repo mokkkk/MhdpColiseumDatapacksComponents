@@ -19,7 +19,7 @@
     execute if score #mhdp_temp_player_count MhdpCore matches ..1 if data storage mhdp_core:game_data ActiveQuest{State:"Playing"} run function mhdp_core:phase/3_quest/end/retired
 
 # それ以外の場合、通知
-    execute if score #mhdp_temp_player_count MhdpCore matches 2.. run tellraw @s [{"text":"【過半数のプレイヤーがリタイアした場合、クエストを中断します】"}]
+    execute if score #mhdp_temp_player_count MhdpCore matches 2.. run tellraw @s [{"text":"【過半数のプレイヤーがリタイアしたため、クエストを中断します】"}]
 
 # 終了
     scoreboard players reset #mhdp_temp_player_count MhdpCore
