@@ -10,8 +10,14 @@
         title:{translate:"ui.hunter_note.menu.quest",bold:1b},external_title:{translate:"ui.hunter_note.menu.quest"},\
         body:[],inputs:[],can_close_with_escape:1b,columns:1,\
         actions:[\
-            {label:[{translate:"ui.hunter_note.menu.quest.retire"}," ($(RetiredPlayerCount) / $(PlayerCount))"],tooltip:{translate:"ui.hunter_note.menu.quest.retire.tooltip"},"action": {\
+            {label:[{translate:"ui.hunter_note.menu.quest.show_target"}],tooltip:{translate:"ui.hunter_note.menu.quest.show_target.tooltip"},"action": {\
                 "type": "minecraft:run_command","command": "trigger Ply.Ope.HunterNote.ShowMenu set 21"\
+            }},\
+            {label:[{translate:"ui.hunter_note.menu.quest.show_weapon_guide"}],tooltip:{translate:"ui.hunter_note.menu.quest.show_weapon_guide.tooltip"},"action": {\
+                "type": "minecraft:run_command","command": "trigger Ply.Ope.HunterNote.ShowMenu set 22"\
+            }},\
+            {label:[{translate:"ui.hunter_note.menu.quest.retire"}," ($(RetiredPlayerCount) / $(PlayerCount))"],tooltip:{translate:"ui.hunter_note.menu.quest.retire.tooltip"},"action": {\
+                "type": "minecraft:run_command","command": "trigger Ply.Ope.HunterNote.ShowMenu set 23"\
             }}\
         ],\
         exit_action:{label:{translate:"ui.hunter_note.button_close"},action:{type:"minecraft:show_dialog",dialog:"mhdp_items:hunter_note/general"}}\
@@ -23,8 +29,14 @@
         title:{translate:"ui.hunter_note.menu.quest",bold:1b},external_title:{translate:"ui.hunter_note.menu.quest"},\
         body:[],inputs:[],can_close_with_escape:1b,columns:1,\
         actions:[\
-            {label:[{translate:"ui.hunter_note.menu.quest.retire"}," (X / Y)"],tooltip:{translate:"ui.hunter_note.menu.quest.retire.tooltip"},"action": {\
+            {label:[{translate:"ui.hunter_note.menu.quest.show_target"}],tooltip:{translate:"ui.hunter_note.menu.quest.show_target.tooltip"},"action": {\
                 "type": "minecraft:run_command","command": "trigger Ply.Ope.HunterNote.ShowMenu set 21"\
+            }},\
+            {label:[{translate:"ui.hunter_note.menu.quest.show_weapon_guide"}],tooltip:{translate:"ui.hunter_note.menu.quest.show_weapon_guide.tooltip"},"action": {\
+                "type": "minecraft:run_command","command": "trigger Ply.Ope.HunterNote.ShowMenu set 22"\
+            }},\
+            {label:[{translate:"ui.hunter_note.menu.quest.retire"}," (X / Y)"],tooltip:{translate:"ui.hunter_note.menu.quest.retire.tooltip"},"action": {\
+                "type": "minecraft:run_command","command": "trigger Ply.Ope.HunterNote.ShowMenu set 23"\
             }}\
         ],\
         exit_action:{label:{translate:"ui.hunter_note.button_close"},action:{type:"minecraft:show_dialog",dialog:"mhdp_items:hunter_note/general"}}\

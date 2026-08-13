@@ -13,8 +13,5 @@
 # 読込処理実行
     function mhdp_core:player/data/macro/m.load_data with storage mhdp_core:temp
 
-# デバッグ用
-    data modify storage mhdp_core:temp Debug set from storage mhdp_core:temp PlayerData
-
 # 終了
     data remove storage mhdp_core:temp UID
