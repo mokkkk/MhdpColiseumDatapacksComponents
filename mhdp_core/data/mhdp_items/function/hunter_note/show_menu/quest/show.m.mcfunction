@@ -8,7 +8,7 @@
     $return run dialog show @s {\
         type:"minecraft:multi_action",\
         title:{translate:"ui.hunter_note.menu.quest",bold:1b},external_title:{translate:"ui.hunter_note.menu.quest"},\
-        body:[],inputs:[],can_close_with_escape:1b,columns:1,\
+        body:[],inputs:[],can_close_with_escape:1b,after_action:"wait_for_response",columns:1,\
         actions:[\
             {label:[{translate:"ui.hunter_note.menu.quest.show_target"}],tooltip:{translate:"ui.hunter_note.menu.quest.show_target.tooltip"},"action": {\
                 "type": "minecraft:run_command","command": "trigger Ply.Ope.HunterNote.ShowMenu set 21"\
@@ -27,7 +27,7 @@
     dialog show @s {\
         type:"minecraft:multi_action",\
         title:{translate:"ui.hunter_note.menu.quest",bold:1b},external_title:{translate:"ui.hunter_note.menu.quest"},\
-        body:[],inputs:[],can_close_with_escape:1b,columns:1,\
+        body:[],inputs:[],can_close_with_escape:1b,after_action:"wait_for_response",columns:1,\
         actions:[\
             {label:[{translate:"ui.hunter_note.menu.quest.show_target"}],tooltip:{translate:"ui.hunter_note.menu.quest.show_target.tooltip"},"action": {\
                 "type": "minecraft:run_command","command": "trigger Ply.Ope.HunterNote.ShowMenu set 21"\

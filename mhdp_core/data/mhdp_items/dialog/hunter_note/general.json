@@ -6,7 +6,7 @@
   },
   "external_title": [
     {
-      "text": "\uE000",
+      "text": "",
       "font": "icons/book",
       "shadow_color": [
         0,
@@ -42,6 +42,10 @@
   "exit_action": {
     "label": {
       "translate": "ui.hunter_note.button_close"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger Ply.Ope.HunterNote.General set 99"
     }
   },
   "columns": 1,

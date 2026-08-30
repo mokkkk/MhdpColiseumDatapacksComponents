@@ -43,6 +43,7 @@
         #declare tag Ply.Flag.Hit 武器攻撃命中フラグ
         #declare tag Ply.Flag.Counter 相殺成功フラグ
         #declare tag Ply.Flag.SpJumpAttack 特殊空中攻撃フラグ
+        #declare tag Ply.Flag.IsCloseDialog ダイアログ消去フラグ
 # 一時
     #declare tag Temp.Hit ヒット判定用
     #declare tag Temp.Victim 攻撃対象判定用

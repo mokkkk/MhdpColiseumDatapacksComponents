@@ -7,7 +7,7 @@
 # 表示
     $return run dialog show @s {\
         type:"minecraft:confirmation",\
-        title:{translate:"ui.hunter_note.menu.training.show_option",bold:1b},external_title:{translate:"ui.hunter_note.menu.training.show_option"},body:[],can_close_with_escape:1b,\
+        title:{translate:"ui.hunter_note.menu.training.show_option",bold:1b},external_title:{translate:"ui.hunter_note.menu.training.show_option"},body:[],can_close_with_escape:1b,after_action:"wait_for_response",\
         inputs:[\
             {type:"minecraft:single_option",key:"OptArtsGaugeInfinity",label:{translate:"ui.hunter_note.menu.training.arts_gauge_infinity"},options:[\
                 {id:"1",display:{translate:"ui.hunter_note.menu.training.arts_gauge_infinity.off",color:"#ffbf6c"},initial:$(ArtsGaugeInfinityOff)},\
@@ -29,7 +29,7 @@
 # 保持
     dialog show @s {\
         type:"minecraft:confirmation",\
-        title:{translate:"ui.hunter_note.menu.training",bold:1b},external_title:{translate:"ui.hunter_note.menu.training"},body:[],can_close_with_escape:1b,\
+        title:{translate:"ui.hunter_note.menu.training",bold:1b},external_title:{translate:"ui.hunter_note.menu.training"},body:[],can_close_with_escape:1b,after_action:"wait_for_response",\
         inputs:[\
             {type:"minecraft:single_option",key:"OptArtsGaugeInfinity",label:{translate:"ui.hunter_note.menu.training.arts_gauge_infinity"},options:[\
                 {id:"1",display:{translate:"ui.hunter_note.menu.training.arts_gauge_infinity.off",color:"#ffbf6c",hover_event:{action:"show_text",value:{translate:"ui.hunter_note.options.move_jump.on.tooltip"}}},initial:0b},\

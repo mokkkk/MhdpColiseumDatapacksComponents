@@ -15,3 +15,6 @@
     scoreboard players operation @s Ply.Ope.HunterNote.Options %= #const_10 Const
     execute if score @s Ply.Ope.HunterNote.Options matches ..1 run tag @s remove Ply.Option.DisableMoveJump
     execute if score @s Ply.Ope.HunterNote.Options matches 2.. run tag @s add Ply.Option.DisableMoveJump
+
+# メインメニューに戻る
+    dialog show @s mhdp_items:hunter_note/general
