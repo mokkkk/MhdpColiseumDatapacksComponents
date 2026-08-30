@@ -3,6 +3,9 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
+> **最終保存状態**: Stage 1〜4 完了（全レビュー反映済み）。ユーザーがここでコミット予定。
+> 次の作業は **Stage 5-A（`animation/change/*`）** から。再開時は下記「Stage 進捗」→「次に着手」を確認。
+
 ## 参照
 - 手順書: `ai_docs/monster_datapack_spec.md` / 差分表: `ai_docs/monster_datapack_comparison.md`
 - 新形式テンプレ: `mhdp_monster_ranposu`（`mhdp_monster_ranposu_bak` からの同一変換の実例）, `mhdp_monster_dino`
@@ -54,20 +57,23 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - `core/tick/on_battle/attack/{head,body,tail,wing_right,wing_left,none,end}.mcfunction`
 - TODO: update_caution/update_search の FOV/距離は ranposu 値流用（valk 用に調整余地）
 
-### Stage 4 — damage / reaction / break  ⬜ 未着手
-対象（旧 `core/damage/` から移植 + 新形式化）:
-- [ ] `core/damage/damage.mcfunction`（非戦闘被弾→`on_battle/start_ambush`、怯み優先度、部位ID→Temp.Damage）
-- [ ] `core/damage/reaction/anger.mcfunction` / `anger_end.mcfunction`
-- [ ] `core/damage/reaction/counter.mcfunction` / `stun.mcfunction` / `paralysis.mcfunction`
-- [ ] `core/damage/reaction/sp.mcfunction`（大ダウン）/ `body_sp.mcfunction`（胴吸引中）
-- [ ] `core/damage/reaction/{head,body,tail,arm_r,arm_l,leg_r,leg_l,wing_r,wing_l}.mcfunction`
-- [ ] `core/damage/reaction/{head_break,arm_r_break,arm_l_break,tail_break,tail_break_cut,wing_r_break,wing_l_break}.mcfunction`
-- [ ] `core/damage/reaction/flying.mcfunction` / `flying_tail.mcfunction`
-- [ ] `core/damage/reaction/general.mcfunction`（valk 固有の末尾共通処理・維持）
-- [ ] `core/damage/reaction/macro/m.summon_tail.mcfunction`
-- [ ] **`core/damage/reaction/ambush.mcfunction`（新設）** ← Stage 3 の start_ambush が依存
-- 各 reaction に `mhdp_monsters:core/util/damage/on_reaction_start` を追加（新形式差分）
-- 注: valk は break/ ディレクトリを持たず reaction/*_break 方式（旧構造維持）
+### Stage 4 — damage / reaction / break  ✅ 完了（レビュー反映済み・break/ フォルダ化対応）
+- [x] `core/damage/damage.mcfunction`（Phase!=2→start_ambush、部位ID 0-9→Temp.Damage、怯み優先度、SearchTimer 撤去、`.playing` タグ新形式化）
+- [x] `reaction/anger.mcfunction`（`start_anger.m {Name:"valk"}` + `on_reaction_start`）/ `anger_end.mcfunction`（`end_anger.m` + EndAngerCount/Anim.Charge）
+- [x] `reaction/counter.mcfunction` / `stun.mcfunction` / `paralysis.mcfunction`
+- [x] `reaction/body_sp.mcfunction`（胸/吸引中）
+- [x] `reaction/{head,body,tail,arm_r,arm_l,leg_r,leg_l,wing_r,wing_l}.mcfunction`
+- [x] **`break/` フォルダ**（dino 準拠。レビュー反映）: `break/{head,arm_r,arm_l,wing_r,wing_l,tail_cut}.mcfunction`。`reaction/*` から `core/damage/break/*` を呼ぶ。plain `tail`（非切断）は valk では不要のため無し（尻尾は切断のみ破壊）。
+- [x] `reaction/flying.mcfunction`（valk 固有アニメ名 lance_damage_flying でインライン。共通 reaction_flying は damage_flying を要求するため未使用）
+- [x] `reaction/general.mcfunction`（valk 固有末尾共通処理・維持。Body0→Body 誤記修正）
+- [x] **`reaction/ambush.mcfunction`（新設）**
+- 各 reaction 冒頭に `mhdp_monsters:core/util/damage/on_reaction_start` 追加。末尾は valk 固有 `reaction/general`。
+- **省略**: `reaction/sp.mcfunction`（旧は ranposu コピペ・呼び出し無し）、`reaction/flying_tail.mcfunction`（旧は reus コピペ・呼び出し無し）、`reaction/macro/m.summon_tail.mcfunction`（尻尾切断エンティティ設置 = Stage 6 弾システムで対応、tail_break_cut に TODO）
+- 部位破壊処理は `break/` フォルダに集約（dino 準拠）。`reaction/<part>` が閾値到達時に `break/<part>` を呼ぶ。
+- **バグ修正**: 旧 stun の `aj.valk_aj.animation.lance_down_right.playing`（存在しないアニメ名）→ `lance_down_r`。旧 arm_l/leg_l/leg_r の IsDown 判定が `Mns.Valk.ArmR.Damage.Count` 固定だったのを各部位の Count に修正。
+- **要確認**: 旧コードは腕 staggering 初回で `arm_r_break`/`arm_l_break` を無条件発動（腕も部位破壊扱い）。比較表の破壊部位リスト（頭/尻尾/両翼）と食い違うが旧挙動を踏襲。
+- **_index.d 追加タグ**: `Mns.Valk.State.Attack.{Head,Wing.R,Wing.L}`, `Mns.Temp.Right`, `Mns.Valk.Temp.Tail.Break`, `Mns.Break.Arm.{R,L}`
+- **AJ 再エクスポート要件**: 墜落死アニメは `death_flying`（valk OK）。飛行怯みは valk では `lance_damage_flying` のまま使用（共通関数を使う場合は blueprint で `damage_flying` にリネーム要）。
 
 ### Stage 5 — animation change / event（メイン作業・バッチ処理）  ⬜ 未着手
 
@@ -154,4 +160,4 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 4（damage / reaction / break）**
+**Stage 5-A（animation/change/*）**

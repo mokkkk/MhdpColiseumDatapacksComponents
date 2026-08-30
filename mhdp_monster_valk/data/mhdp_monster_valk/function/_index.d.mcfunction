@@ -20,7 +20,12 @@
     #declare tag Mns.HitBox.Valk.WingL 左翼
 # 状態
     #declare tag Mns.Valk.State.IsShoot 龍気形態
+    #declare tag Mns.Valk.State.Attack.Head 頭攻撃中(相殺アニメ分岐用)
+    #declare tag Mns.Valk.State.Attack.Wing.R 右翼爪攻撃中(相殺アニメ分岐用)
+    #declare tag Mns.Valk.State.Attack.Wing.L 左翼爪攻撃中(相殺アニメ分岐用)
 # 一時
+    #declare tag Mns.Temp.Right 対象が右側にいる(怯みアニメ左右分岐用)
+    #declare tag Mns.Valk.Temp.Tail.Break 尻尾切断怯みアニメ用
     #declare tag Mns.Temp.Damage.Head 頭怯み
     #declare tag Mns.Temp.Damage.Body 胴怯み
     #declare tag Mns.Temp.Damage.Tail 尻尾怯み
@@ -47,6 +52,8 @@
     #declare tag Mns.Break.Tail.Cut 尻尾切断
     #declare tag Mns.Break.Wing.R 右翼部位破壊
     #declare tag Mns.Break.Wing.L 左翼部位破壊
+    #declare tag Mns.Break.Arm.R 右腕部位破壊
+    #declare tag Mns.Break.Arm.L 左腕部位破壊
 # アニメーション
     #declare tag Anim.Voice 咆哮
     #declare tag Anim.Charge 龍気吸引
