@@ -3,4 +3,4 @@
 execute store result storage animated_java:temp args.id int 1 run scoreboard players get @s aj.id
 # Data Manager: Read
 function animated_java:global/data_manager/read with storage animated_java:temp args
-function animated_java:global/util/zzz/1 with storage animated_java:temp entry.data
+return run function animated_java:global/util/zzz/1 with storage animated_java:temp entry.data

@@ -24,7 +24,13 @@
     #declare tag Mns.Valk.State.Attack.Wing.R 右翼爪攻撃中(相殺アニメ分岐用)
     #declare tag Mns.Valk.State.Attack.Wing.L 左翼爪攻撃中(相殺アニメ分岐用)
 # 一時
-    #declare tag Mns.Temp.Right 対象が右側にいる(怯みアニメ左右分岐用)
+    #declare tag Mns.Temp.Right 対象が右側にいる(アニメ左右分岐用)
+    #declare tag Mns.Temp.Forward 対象が正面にいる(行動選択用)
+    #declare tag Mns.Temp.Back 対象が背面にいる(行動選択用)
+    #declare tag Mns.Temp.Near 対象が近距離(行動選択用)
+    #declare tag Mns.Temp.IsUpper アッパー派生(翼槍叩きつけ)
+    #declare tag Mns.Temp.ChangePhase フェーズ移行フラグ
+    #declare tag Mns.Temp.IsTurn.Big 大きな軸合わせ
     #declare tag Mns.Valk.Temp.Tail.Break 尻尾切断怯みアニメ用
     #declare tag Mns.Temp.Damage.Head 頭怯み
     #declare tag Mns.Temp.Damage.Body 胴怯み

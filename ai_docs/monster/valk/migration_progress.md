@@ -3,8 +3,10 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了（全レビュー反映済み）。ユーザーがここでコミット予定。
-> 次の作業は **Stage 5-A（`animation/change/*`）** から。再開時は下記「Stage 進捗」→「次に着手」を確認。
+> **最終保存状態**: Stage 1〜4 完了 + **Stage 5-A（change/*）approve 済み**。
+> 次の作業は **Stage 5-B（event/main ディスパッチャ）→ 5-C（event グループ）** から。再開時は下記「Stage 進捗」→「次に着手」を確認。
+> `change/main.mcfunction` はユーザーが disk 上で dino 準拠へ微修正（怒り終了の `!IsAlreadyAnimation` 除去、軸合わせ 99 判定ブロック除去、終了の `IsTurn.Big` 除去）。
+> **要確認**: 現状 `change/main` の軸合わせ行は `store result #mhdp_temp_result` が未消費・未リセット、正面時 `play/turn` が `return 99` で早期 return すると `Mns.Temp.IsTurn` が残り play/main も走らず 1tick 何もしない可能性。`play/turn` 側での内部処理化 or 判定復活が要検討（ユーザー編集中）。
 
 ## 参照
 - 手順書: `ai_docs/monster_datapack_spec.md` / 差分表: `ai_docs/monster_datapack_comparison.md`
@@ -77,18 +79,24 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 
 ### Stage 5 — animation change / event（メイン作業・バッチ処理）  ⬜ 未着手
 
-#### 5-A: change/*（行動選択）  ⬜
-- [ ] `change/main.mcfunction`（Phase 分岐化: on_relax/on_caution/on_battle）
-- [ ] `change/on_relax/main.mcfunction`（新設）
-- [ ] `change/on_caution/main.mcfunction`（新設: Anim.Search）
-- [ ] `change/on_battle/main.mcfunction`（旧 `change/random/main` を移設）
-- [ ] `change/on_battle/{first,near,middle,far}.mcfunction`（旧 random/{first,lance_near,lance_middle,lance_far,shoot_near,shoot_middle} を寄せる）
-- [ ] `change/on_battle/macro/*`（旧 random/macro/*）
-- [ ] `change/on_battle/change_phase.mcfunction` / `move.mcfunction`
-- [ ] `change/play/main.mcfunction`（Anim.* → AJ tween。2形態分岐 lance_*/shoot_* 維持。AJ 名前空間置換）
-- [ ] `change/play/{beam,bomb_side,change_phase,dashattack_move,jet_tackle,sault_move,shoot,spear,spear_to_spin,spear_to_spin_move,sweep,turn,vertical,vertical_s,vertical_turn}.mcfunction`
-- [ ] `change/get_turn.mcfunction`
-- [ ] `change/interrupt.mcfunction`
+#### 5-A: change/*（行動選択）  ✅ 完了（approve 済み・2026-09-01）
+- [x] `change/main.mcfunction`（Phase 分岐化。コメント記法を dino 厳密準拠に修正。ユーザーが disk 上で更に微修正）
+- [x] `change/on_relax/main.mcfunction`（**新設・要方向性確認**: 現状は待機ループのみ、Anim 付与なし。TODO コメント付き）
+- [x] `change/on_caution/main.mcfunction`（新設: `Anim.Search` → play/main で `lance_search` 再生）
+- [x] `change/on_battle/main.mcfunction`（旧 `change/main` 戦闘部 + 旧 `random/main` を統合。PhaseCount/クールタイム/2形態/大技解禁は温存）
+- [x] `change/on_battle/{first,change_phase,move,turn}.mcfunction`
+- [x] `change/on_battle/{lance_near,lance_middle,lance_far,shoot_near,shoot_middle}.mcfunction`（**抽選は dino/ranposu 厳密準拠**: `check_player_situation.m` → 基礎重み → 状態別 merge → `decide_animation.m {Monster:"valk",State}` → `remove_tag` → action_id 分岐 → `on_battle/turn` → reset）
+- [x] `change/on_battle/macro/m.{lance_near,lance_middle,lance_far,shoot_near,shoot_middle,move}.mcfunction`（旧 random/macro/* + `return 1`）
+- [x] `change/play/main.mcfunction`（AJ 名前空間置換 + `Anim.Search` 行追加。2形態分岐維持）
+- [x] `change/play/{beam,bomb_side,change_phase,dashattack_move,jet_tackle,sault_move,shoot,spear,spear_to_spin,spear_to_spin_move,sweep,turn,vertical,vertical_s,vertical_turn}.mcfunction`（AJ 名前空間置換のみ）
+- [x] `change/get_turn.mcfunction` → **省略**（旧は ranposu コピペで呼び出し無し。軸合わせ判定は `on_battle/turn` に集約）
+- [ ] `change/interrupt.mcfunction` → Stage 6 の `core/debug/interrupt` へ
+
+**5-A の判断/注意**:
+- dino/ranposu の `check_player_situation.m {Tag:"Mns.<Upper>.Target"}` は誤記（実タグは `Mns.Target.<Upper>`）で状態別重み上書きが死んでいる。valk では **正しい `Mns.Target.Valk`** を使用し、旧 valk が持っていた正面/背面/側面の重み調整を機能させた。厳密なコピーを望むなら要指示。
+- 側面判定は `!IsForward,!IsBack`（dino near と同じ。middle/far の `IsForward,IsBack` 併記は dino のバグなので踏襲しない）。
+- `ActCount.Idle` 加算は旧同様 `play/main` に残置（dino は on_battle/main。二重加算回避のため on_battle/main では加算しない）。威嚇閾値は旧 valk の 18。
+- `play/spear_to_spin` / `play/vertical_turn` は現状どの選択からも呼ばれない（旧同様。debug/interrupt 用に残置）。
 
 #### 5-B: event/main.mcfunction（ディスパッチャ）  ⬜
 - [ ] 全 85 グループの `.playing` 判定行（`animated_java_valk.valk.animation.<anim>.playing`）
@@ -160,4 +168,4 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-A（animation/change/*）**
+**Stage 5-B（animation/event/main.mcfunction ディスパッチャ）→ 5-C（event/<group>/* をバッチ処理）**
