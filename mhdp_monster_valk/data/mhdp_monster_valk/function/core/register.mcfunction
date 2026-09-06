@@ -76,7 +76,7 @@
         Name:"valk",\
         UpperName:"Valk",\
         NameId:"monster.valk.name",\
-        ShowName:{"translate":"monster.valstrax.name"},\
+        ShowName:{"translate":"monster.valk.name"},\
         LootTable:"mhdp_items:materials/valk/random_all",\
         ShowHp:true,\
         Hp:13000,\
@@ -139,18 +139,16 @@
     }
 
 # 翼槍突き (右翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Spear.Right",AttackPart:"wing_right",VectorType:"Normal",\
-        DamageValue:8.0f,ObjectDamageValue:15,GuardValue:4,ElementType:5,ElementMultiply:10,\
+        DamageValue:8.0f,ObjectDamageValue:25,GuardValue:4,ElementType:5,ElementMultiply:10,\
         KnockbackStrength:2,IsLaunch:true,LaunchAngle:35,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 # 翼槍突き (左翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Spear.Left",AttackPart:"wing_left",VectorType:"Normal",\
-        DamageValue:8.0f,ObjectDamageValue:15,GuardValue:4,ElementType:5,ElementMultiply:10,\
+        DamageValue:8.0f,ObjectDamageValue:25,GuardValue:4,ElementType:5,ElementMultiply:10,\
         KnockbackStrength:2,IsLaunch:true,LaunchAngle:35,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
@@ -158,7 +156,7 @@
 # 翼槍回転斬り (右翼爪)
     #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
-        Name:"SpearSpin.Right",AttackPart:"wing_right",VectorType:"Normal",\
+        Name:"SpearSpin.Right",AttackPart:"wing_right",VectorType:"Radial",\
         DamageValue:8.6f,ObjectDamageValue:20,GuardValue:5,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
@@ -166,7 +164,7 @@
 # 翼槍回転斬り (左翼爪)
     #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
-        Name:"SpearSpin.Left",AttackPart:"wing_left",VectorType:"Normal",\
+        Name:"SpearSpin.Left",AttackPart:"wing_left",VectorType:"Radial",\
         DamageValue:8.6f,ObjectDamageValue:20,GuardValue:5,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\

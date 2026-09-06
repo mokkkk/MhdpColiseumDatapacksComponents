@@ -16,11 +16,11 @@
 
 # tick中処理
     # 非発見時
-        execute if score @s Mns.General.Phase matches 0 run function mhdp_monster_valk:core/tick/on_relax/tick
+        # execute if score @s Mns.General.Phase matches 0 run function mhdp_monster_valk:core/tick/on_relax/tick
     # 警戒時
-        execute if score @s Mns.General.Phase matches 1 run function mhdp_monster_valk:core/tick/on_caution/tick
+        # execute if score @s Mns.General.Phase matches 1 run function mhdp_monster_valk:core/tick/on_caution/tick
     # 戦闘時
-        execute if score @s Mns.General.Phase matches 2 run function mhdp_monster_valk:core/tick/on_battle/tick
+        # execute if score @s Mns.General.Phase matches 2 run function mhdp_monster_valk:core/tick/on_battle/tick
 
 # アニメーションイベントハンドラ
     function mhdp_monster_valk:core/tick/animation/event/main

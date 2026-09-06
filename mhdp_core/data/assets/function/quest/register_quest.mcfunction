@@ -61,9 +61,9 @@
 
 # 超上級：天彗龍の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:13,Name:"超上級：???の狩猟",Level:4,Pos:0,IsEmergency:false,HideMonsters:true,\
+        ID:13,Name:"超上級：天彗龍の狩猟",Level:4,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
-        Content:{HpMultiply:14,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:14,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1004,Timing:"Initial",TargetMonsterId:-1,AreaId:1,Visible:true}\
         ]}\
     }
@@ -97,7 +97,7 @@
 
 # 超上級：天彗龍の狩猟
     data modify storage mhdp_core:game_data QuestList append value {\
-        ID:17,Name:"超上級：???の狩猟(高難度)",Level:7,Pos:0,IsEmergency:false,HideMonsters:true,\
+        ID:17,Name:"超上級：天彗龍の狩猟(高難度)",Level:7,Pos:0,IsEmergency:false,HideMonsters:true,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
         Content:{HpMultiply:25,AttackMultiply:105,FieldId:1,Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1004,Timing:"Initial",TargetMonsterId:-1,AreaId:1,Visible:true}\

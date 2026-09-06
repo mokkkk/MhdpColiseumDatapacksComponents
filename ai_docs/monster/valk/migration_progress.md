@@ -3,8 +3,9 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + **Stage 5-A（change/*）approve 済み**。
-> 次の作業は **Stage 5-B（event/main ディスパッチャ）→ 5-C（event グループ）** から。再開時は下記「Stage 進捗」→「次に着手」を確認。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 進行中（5/85: lance_idle, lance_spear_l_to_r, lance_spear_r_to_l, lance_spear_to_spin_l, lance_spear_to_spin_r）**。
+> 次の作業は 5-C の残り 80 グループ。再開時は下記「Stage 進捗」→「次に着手」を確認。
+> `apply_attack.m` の当たり判定サイズは旧の球状距離判定からの近似値。実機テストで要調整。
 > `change/main.mcfunction` はユーザーが disk 上で dino 準拠へ微修正（怒り終了の `!IsAlreadyAnimation` 除去、軸合わせ 99 判定ブロック除去、終了の `IsTurn.Big` 除去）。
 > **要確認**: 現状 `change/main` の軸合わせ行は `store result #mhdp_temp_result` が未消費・未リセット、正面時 `play/turn` が `return 99` で早期 return すると `Mns.Temp.IsTurn` が残り play/main も走らず 1tick 何もしない可能性。`play/turn` 側での内部処理化 or 判定復活が要検討（ユーザー編集中）。
 
@@ -14,13 +15,18 @@
 - 共通エンジン: `mhdp_core/data/mhdp_monsters/`
 
 ## 前提・確定事項
-- **AJ 再エクスポート（`animated_java_valk`）はユーザーが実施**。コードは `animated_java_valk:valk/...` 前提。アニメ名は旧 `valk_aj/animations/` と同一前提。
+- **AJ 再エクスポート（`animated_java_valk`）はユーザーが実施済み（2026-09-02）**。`mhdp_monster_valk/data/animated_java_valk/` 配置済み。
+- **`animated_java*` フォルダは Read/Grep 禁止**（巨大・コンテキスト圧迫。ユーザー指示）。frame 番号は `mhdp_monster_valk_bak` の event ファイルから流用。ボーン/ロケータ名の確認はユーザーに質問。
+- コードは `animated_java_valk:valk/...` 前提。アニメ名は旧 `valk_aj/animations/` と同一前提。
 - `mhdp_core` 側は Uid 1004 配線済み → 変更不要。
 - **git commit はユーザーが手動**。Claude は commit すべきタイミングを通知するのみ、勝手に commit しない。
 - バッチ単位で作業し、各バッチ終了時にこのトラッカーを更新する。
 - `.mcfunction` のコマンドトークン間スペースは必ず1つ（CLAUDE.md 参照）。
 - AJ ロケータ参照は `at_locator`/`as_locator`（旧 `on passengers ... data.locators` は不可。CLAUDE.md 参照）。
 - 弾システムは `mhdp_core:assets` 側 + `api:object/summon.m {ObjectId:...}`（dino 方式）。**Stage 6 で保留対応**。旧 `core/tick/shot/*` は移植しない。
+- **軸合わせ処理は dino 準拠**（2026-09-05 レビューで既存4グループを修正済み。以降の全グループに適用）:
+  - 旧 `turn_start`/`turn_start_adjust`（個別ファイル）→ 廃止。`function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Valk",Tick:YY,MaxRotation:ZZZ}` を main.mcfunction に直接インライン。YY は旧ファイル内の `#mhdp_temp_rotate_tick` 設定値をそのまま流用（例: turn_start=10, turn_start_adjust=7）。ZZZ は基本 180。
+  - 旧 `function mhdp_monsters:core/util/other/turn_to_target_rotate`（frame範囲呼び出し）→ `execute ... at @s run function mhdp_monsters:core/util/tick/event/alignment`（`at @s` 必須、dino 実例準拠）。
 
 ## AttackData（register 済み・23 エントリ）
 - `Bite`=head / `Vertical.Hand`,`Upper`,`DashAttack`,`Tackle`,`JetTackle`=body
@@ -98,10 +104,23 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - `ActCount.Idle` 加算は旧同様 `play/main` に残置（dino は on_battle/main。二重加算回避のため on_battle/main では加算しない）。威嚇閾値は旧 valk の 18。
 - `play/spear_to_spin` / `play/vertical_turn` は現状どの選択からも呼ばれない（旧同様。debug/interrupt 用に残置）。
 
-#### 5-B: event/main.mcfunction（ディスパッチャ）  ⬜
-- [ ] 全 85 グループの `.playing` 判定行（`animated_java_valk.valk.animation.<anim>.playing`）
+#### 5-B: event/main.mcfunction（ディスパッチャ）  🔶 進行中 (1/85)
+- [x] `lance_idle` の `.playing` 判定行を追加
+- [ ] 残り 84 グループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  ⬜ 0/85
+#### 5-C: event/<group>/*（85 グループ）  🔶 5/85
+
+**lance_spear 系（2連突き・翼槍回転斬り）で確立したパターン**（以降のグループもこれに倣う）:
+- 攻撃判定: 旧の `on passengers ... data.locators.pos_wing_*_N` ループ → `animated_java_valk:valk/at_locator {name:"pos_wing_*_N",command:"function .../hit_*"}` を翼の可動域点数ぶん呼ぶ。`hit_*.mcfunction` 側で `apply_attack.m {Uid:1004,AttackName:"...",Player_*,Entity_*}` を実行（旧 `distance=..3.5` 球状判定 → Scale 3.0〜3.5 の箱型で近似。**要現地調整**）
+- 旧の `mhdp_core:player/damage/entity_to_*`（廃止APIかつ `Mns.Target.Dino` 誤参照あり）は完全撤去
+- `start_attack.m`/`end_attack` を旧来の「怯みアニメ分岐用 `Mns.Valk.State.Attack.Wing.*` タグ」と同じフレーム窓で追加（`on_battle/attack/wing_left|wing_right` を有効化）。**複数回ヒットする技（回転斬り系の突き→回転斬り等）は、攻撃判定が出ている区間ごとに start_attack.m / end_attack で挟む**（1回目と2回目の間に end_attack を入れ、判定が無い間は start_attack を有効にしない。2026-09-05 レビュー反映）。start_attack.m の参照 AttackName は各ヒットの技名に合わせる（突き=`Spear.*`、回転斬り=`SpearSpin.*`）
+- AttackData 参照名は Stage1 で分割した `Spear.Left/Right`・`SpearSpin.Left/Right`
+- 装飾パーティクル/リング演出は `m.` プレフィックスを外し非マクロ化、`at_locator` から素の `particle` 文を呼ぶ形に統一
+- 各 `hit_*.mcfunction` の `apply_attack.m` 呼び出し直前に、**同一引数**で `function api:bounding/cuboid_preview.m {...}`（デバッグ用当たり判定プレビュー）を追加する（2026-09-05 レビュー反映。既存8ファイル全て対応済み。以降の全 hit_* ファイルにも適用）
+- 接地は `check_landing`
+- **バグ修正**: 旧 `lance_spear_to_spin_r/main` の frame 33-38/35-37 の演出が `pos_wing_l_0`/`pos_wing_l_2`（左翼）を誤参照（右回転技なのに左翼座標）→ `pos_wing_r_0`/`pos_wing_r_2` に修正
+- **依存**: `core/util/models/ignite_start_left|right`, `ignite_end_left|right`（Stage 6 未着手。呼び出しは先行配線済み、Stage 6 で実体作成）
+- **軸合わせ**: 個別 `turn_start`/`turn_start_adjust` ファイルは廃止し `alignment_start.m`/`alignment` に置換（上記「前提・確定事項」参照）。4グループとも修正済み・不要ファイル削除済み。
 移植元: `mhdp_monster_valk_bak/.../core/tick/animation/event/<group>/`
 各グループ: `main`（frame 監視: 効果音/移動/攻撃発火/終端 end）、`attack`（apply_attack.m）、`end`（→ change/main）、その他 particle/sound/turn_start 等
 - 旧 frame 番号（`aj.<anim>.frame`）はそのまま流用
@@ -110,6 +129,10 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - 攻撃実行は `mhdp_monsters:core/util/tick/event/apply_attack.m` / `start_attack.m` 方式へ（旧 `mhdp_core:player/damage/entity_to_*` から書き直し）
 - 翼槍技の attack は発動翼に応じ `.Right`/`.Left` の技名を選択
 - ロケータ参照は `at_locator`/`as_locator`
+- **接地処理は dino 準拠で `function mhdp_monsters:core/util/tick/move/check_landing` の1行に置換**（旧valkの
+  `execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground` +
+  `execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~` の2行パターンは使わない）。
+  今後作成する全 event/<group>/main.mcfunction に適用する（lance_idle で適用済み）。
 
 **グループ別チェックリスト**（`[ ]`=未 `[x]`=完了 `[~]`=一部）:
 - [ ] comet_phase_1  [ ] comet_phase_2  [ ] comet_phase_3  [ ] comet_phase_4  [ ] comet_phase_5
@@ -130,11 +153,11 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] lance_death
 - [ ] lance_down_end_l  [ ] lance_down_end_r  [ ] lance_down_l  [ ] lance_down_r
 - [ ] lance_flytackle  [ ] lance_flytackle_end  [ ] lance_flytackle_repeat  [ ] lance_flytackle_start
-- [ ] lance_idle  [ ] lance_idle_short
+- [x] lance_idle  [ ] lance_idle_short
 - [ ] lance_move  [ ] lance_move_start  [ ] lance_moveback
 - [ ] lance_search
-- [ ] lance_spear_l_to_r  [ ] lance_spear_r_to_l
-- [ ] lance_spear_to_spin_l  [ ] lance_spear_to_spin_r
+- [x] lance_spear_l_to_r  [x] lance_spear_r_to_l
+- [x] lance_spear_to_spin_l  [x] lance_spear_to_spin_r
 - [ ] lance_tackle
 - [ ] lance_to_shoot
 - [ ] lance_turn_l  [ ] lance_turn_r
@@ -168,4 +191,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-B（animation/event/main.mcfunction ディスパッチャ）→ 5-C（event/<group>/* をバッチ処理）**
+**Stage 5-C 続き**（5/85: lance_idle, lance_spear_l_to_r, lance_spear_r_to_l, lance_spear_to_spin_l, lance_spear_to_spin_r）。次のグループはユーザー指示待ち。
+軸合わせは `alignment_start.m`/`alignment` 方式（上記参照）で以降統一。

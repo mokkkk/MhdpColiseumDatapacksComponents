@@ -12,6 +12,11 @@
   セッションをまたいで再開する場合はこのトラッカーを起点にし、「次に着手」から継続すること。
   git commit はユーザーが手動で行う。Claude は commit すべきタイミングを通知するのみで、勝手に commit しない。
 
+## AJ 生成フォルダは読み込まない
+
+`animated_java/` および `animated_java_<name>/`（各モンスターの AJ エクスポート成果物）は **Read / Grep しない**。数千ファイル・巨大でコンテキストを圧迫する。
+アニメの frame 番号等が必要なときは旧 `_bak` 側のロジック名前空間（`mhdp_monster_<name>_bak/data/mhdp_monster_<name>/`）の event ファイルを参照する。ボーン名・ロケータ名の確認が必要ならユーザーに質問する。
+
 ## .mcfunction 記述ルール
 
 ### コマンドトークン間の半角スペースは必ず 1 つ
@@ -47,3 +52,22 @@ function animated_java_<name>:<name>/at_locator {name:"pos_xxx",command:"functio
 - `mhdp_monster_dino` の `core/tick/animation/event/*/main.mcfunction` が実例。
 
 > 注意: `dino` / `ranposu` の既存コードには旧記法が残っている箇所がある（`effect_stun` など）。参考にしつつも、ロケータ参照は新記法へ直すこと。
+
+### 軸合わせ（ターゲット方向への回転）は `alignment_start.m` / `alignment` を使う
+
+旧記法（個別の `turn_start`/`turn_start_adjust.mcfunction` ファイル + `function mhdp_monsters:core/util/other/turn_to_target_rotate`）は使わず、`mhdp_monster_dino` 準拠の以下の形式で `main.mcfunction` に直接インラインで書く。
+
+```
+# 軸合わせ開始（frame単発）
+execute if score @s aj.<anim>.frame matches <startFrame> run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.<Upper>",Tick:<YY>,MaxRotation:<ZZZ>}
+
+# 軸合わせ実行（frame範囲、at @s 必須）
+execute if score @s aj.<anim>.frame matches <range> at @s run function mhdp_monsters:core/util/tick/event/alignment
+```
+
+- `<Upper>` はモンスター名（例: `Valk`）。
+- `<YY>`（Tick）は旧 `turn_start` 系ファイル内の `scoreboard players set #mhdp_temp_rotate_tick MhdpCore <値>` をそのまま流用する。弱め調整版（旧 `turn_start_adjust`）があればその値を別途 `alignment_start.m` 呼び出しとして残す。
+- `<ZZZ>`（MaxRotation）は基本的に `180` とする。
+- `alignment_start.m` の呼び出しには `at @s` を付けない。範囲呼び出しの `alignment` には `at @s` を付ける（dino の実例に厳密に合わせる）。
+- 実例: `mhdp_monster_dino` の `core/tick/animation/event/tail_attack_r/main.mcfunction`、`bite_to_tail/main.mcfunction`。
+- 以降のアニメーションイベント生成すべてに適用する。

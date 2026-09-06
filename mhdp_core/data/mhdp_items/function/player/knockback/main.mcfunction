@@ -8,7 +8,7 @@
     execute store result score $strength player_motion.api.launch run data get storage mhdp_core:temp PlayerData.KnockbackStrength
 
 # 移動
-    summon area_effect_cloud ~ ~ ~ {Tags:["Other.Temp.KnockbackVector"]}
+    summon area_effect_cloud ~ ~ ~ {Tags:["Other.Temp.KnockbackVector"],custom_particle:{type:"block",block_state:"minecraft:air"},Duration:5}
     data modify entity @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] Rotation set from storage mhdp_core:temp PlayerData.KnockbackVector
     execute at @s rotated as @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1] run function player_motion:api/launch_looking
     kill @n[type=area_effect_cloud,tag=Other.Temp.KnockbackVector,distance=..10,sort=nearest,limit=1]
