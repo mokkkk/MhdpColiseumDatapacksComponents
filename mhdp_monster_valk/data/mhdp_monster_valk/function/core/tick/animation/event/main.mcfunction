@@ -17,3 +17,11 @@
 # 翼槍回転斬り
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_spear_to_spin_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_l/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_spear_to_spin_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_r/main
+# 翼槍叩きつけ
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_vertical_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_vertical_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_r/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_vertical_l_to_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l_to_r/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_vertical_r_to_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_r_to_l/main
+# 振りむき翼槍叩きつけ
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_vertical_turn_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_turn_l/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_vertical_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_turn_r/main

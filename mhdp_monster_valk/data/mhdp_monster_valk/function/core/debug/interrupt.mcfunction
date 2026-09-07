@@ -12,7 +12,7 @@
 
 # 通常再生
     # タグ付与
-        tag @s add Anim.Spear.RtoSpin
+        tag @s add Anim.Vertical.Turn.R
         # function mhdp_monster_valk:core/tick/animation/change/play/tail_jump
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn

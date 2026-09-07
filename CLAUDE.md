@@ -71,3 +71,16 @@ execute if score @s aj.<anim>.frame matches <range> at @s run function mhdp_mons
 - `alignment_start.m` の呼び出しには `at @s` を付けない。範囲呼び出しの `alignment` には `at @s` を付ける（dino の実例に厳密に合わせる）。
 - 実例: `mhdp_monster_dino` の `core/tick/animation/event/tail_attack_r/main.mcfunction`、`bite_to_tail/main.mcfunction`。
 - 以降のアニメーションイベント生成すべてに適用する。
+
+### 地面のひび割れ演出は `api:object/summon.m {ObjectId:16}` を使う
+
+旧記法（`function mhdp_monsters:core/effect/crack_ground/start` や `facing entity @e[tag=Mk.Field.Back] feet` でマーカーを向く方式）は使わず、`mhdp_monster_dino` 準拠で:
+
+```
+execute positioned <offset> rotated ~ 0 run function api:object/summon.m {ObjectId:16}
+```
+
+- `ObjectId:16` = `assets` の `0016.ground_crack`。位置合わせ（接地スナップ）はオブジェクト側が行う。
+- `rotated ~ 0`（yaw 維持・pitch 0）で呼ぶ。`feet` や マーカー方向指定は不要。
+- 実例: `mhdp_monster_dino` の `core/tick/animation/event/jump_tail_l/attack_particle.mcfunction`。
+- 以降のアニメーションイベント生成すべてに適用する。
