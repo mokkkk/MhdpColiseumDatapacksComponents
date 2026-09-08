@@ -3,8 +3,10 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 進行中（11/85: lance_idle + lance_spear系4[approve済] + lance_vertical系6[レビュー1回反映済・再確認待ち]）**。
-> lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / RedFlash → `particle flash{color}` / 空 dir `197609` 削除。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 進行中（13/85: lance_idle + lance_spear系4[approve済] + lance_vertical系6[approve済] + lance_upper系2[レビュー1回反映済・再確認待ち・2026-09-08]）**。
+> lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
+> lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / RedFlash → `particle flash{color}` / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。
+> ※ユーザーが disk 上で全 vertical の `cuboid_preview.m` をコメントアウト、turn_l/turn_r の軸合わせを `Tick:5/MaxRotation:360`（frame2）+ `Tick:10/360`（frame33）へ調整済み。意図的編集として尊重。
 > 5-C レビュー反映済み: (1) 軸合わせは `alignment_start.m`/`alignment` に統一（個別 turn_start ファイル廃止）(2) hit_* は `apply_attack.m` 直前に同一引数の `api:bounding/cuboid_preview.m` を配置 (3) 複数回ヒット技は判定区間ごとに start_attack.m/end_attack で挟む（spin 系は突き@35-42／回転斬り@68-85 の2区間）。
 > ※ユーザーが disk 上で hit_* の cuboid_preview をコメントアウト / spin の hit を `apply_attack_with_entitypos.m`（EntityPosSelector:`@n[type=item_display,tag=Mns.Root.Valk]`）へ変更中。意図的な編集として尊重。
 > 次の作業は 5-C の残り 80 グループ。再開時は下記「Stage 進捗」→「次に着手」を確認。
@@ -107,11 +109,24 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - `ActCount.Idle` 加算は旧同様 `play/main` に残置（dino は on_battle/main。二重加算回避のため on_battle/main では加算しない）。威嚇閾値は旧 valk の 18。
 - `play/spear_to_spin` / `play/vertical_turn` は現状どの選択からも呼ばれない（旧同様。debug/interrupt 用に残置）。
 
-#### 5-B: event/main.mcfunction（ディスパッチャ）  🔶 進行中 (11/85)
-- [x] lance_idle / lance_spear系4 / lance_vertical系6 の `.playing` 判定行を追加
+#### 5-B: event/main.mcfunction（ディスパッチャ）  🔶 進行中 (13/85)
+- [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  🔶 11/85
+#### 5-C: event/<group>/*（85 グループ）  🔶 13/85（lance_upper系2 は未レビュー）
+
+**lance_upper 系（翼槍突き上げ）で追加した扱い**（2026-09-07）:
+- 前方一直線の当たり判定（2026-09-08 ユーザー再設計・l/r 反映済み）: ダメージは `attack` 内の `apply_attack.m {Upper}` **1個の縦長ボックス**（`Offset_Z:28.5`, `Scale_X/Y:3.4`, `Scale_Z:43.0`。`cuboid_preview` は `Scale_Z:45.0`）。演出は別途 `attack` から `positioned ^ ^ ^N`（N=0..50, step5, 11点）で `attack_effect.mcfunction` を呼ぶ（dust赤/explosion のみ。ダメージなし）。Bomb/RedFlash の `summon text_display` はコメントアウト + `# TODO(Stage6)`。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
+- **お手** `attack_hand`（`Vertical.Hand`、`^±1.5 ^1 ^8`、Scale 1.8）は start_attack を挟まない（相殺不可）。
+- 突き上げ本体（2026-09-08 レビュー反映）: **start_attack / end_attack を挟まない**（相殺不可）。`attack@56`(`positioned ^±1.2 ^1 ^12 rotated ~±3 ~`) のみ。`cuboid_preview.m` は全 attack 系（attack / attack_hand）でコメントアウト。※`Mns.Valk.State.Attack.Wing.L/R` タグ（53-59、"相殺アニメ分岐用"）は据え置き（ユーザーは start_attack/end_attack のみ指定）。完全 相殺不可なら要削除確認。
+- **精密軸合わせ**: 旧 `core/util/other/turn_to_target_accurate`（frame 37..44、`Temp.Rotate.Target` タグ後に呼ぶ）→ 新 `core/util/tick/event/turn_to_target_accurate`（`at @s` 付き。ranposu step_jump_left が実例）。
+- 溜め/軌跡パーティクル: `m.particle_charge`(large_smoke) / `m.particle`(cloud) → `at_locator {name:"pos_wing_*_3"}` + `particle_charge.mcfunction` / `particle.mcfunction` 新設。
+- `end.mcfunction` は `change/main` ではなく直接 `animated_java_valk:valk/animations/lance_idle_short/tween`（旧踏襲。spin 系と同様）。
+- **バグ修正**: 旧 `lance_upper_l` のモデル演出が `ignite_start_right`/`ignite_end_right`（右）を誤参照（左翼技なのに）→ `ignite_start_left`/`ignite_end_left` に修正（spin_r/turn_r と同種）。
+- **未使用で移植せず**: `turn_start_1`（Tick5、旧 main から参照なし・dead code）。`turn_start_0` は alignment_start.m インライン化。
+- 依存: `core/util/models/ignite_start_left|right`（Stage 6 未実装・先行配線）。
+
+**lance_spear 系（2連突き・翼槍回転斬り）で確立したパターン**（以降のグループもこれに倣う）: 
 
 **lance_spear 系（2連突き・翼槍回転斬り）で確立したパターン**（以降のグループもこれに倣う）:
 - 攻撃判定: 旧の `on passengers ... data.locators.pos_wing_*_N` ループ → `animated_java_valk:valk/at_locator {name:"pos_wing_*_N",command:"function .../hit_*"}` を翼の可動域点数ぶん呼ぶ。`hit_*.mcfunction` 側で `apply_attack.m {Uid:1004,AttackName:"...",Player_*,Entity_*}` を実行（旧 `distance=..3.5` 球状判定 → Scale 3.0〜3.5 の箱型で近似。**要現地調整**）
@@ -179,7 +194,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] lance_tackle
 - [ ] lance_to_shoot
 - [ ] lance_turn_l  [ ] lance_turn_r
-- [ ] lance_upper_l  [ ] lance_upper_r
+- [x] lance_upper_l  [x] lance_upper_r
 - [x] lance_vertical_l  [x] lance_vertical_l_to_r  [x] lance_vertical_r  [x] lance_vertical_r_to_l
 - [x] lance_vertical_turn_l  [x] lance_vertical_turn_r
 - [ ] lance_voice
@@ -209,5 +224,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（11/85: lance_idle + lance_spear系4 + lance_vertical系6）。次のグループはユーザー指示待ち。
-軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置。
+**Stage 5-C 続き**（11/85 approve 済み: lance_idle + lance_spear系4 + lance_vertical系6）。ここでコミット可。次のグループはユーザー指示待ち。
+軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。

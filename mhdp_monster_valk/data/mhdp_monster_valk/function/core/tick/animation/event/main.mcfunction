@@ -25,3 +25,6 @@
 # 振りむき翼槍叩きつけ
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_vertical_turn_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_turn_l/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_vertical_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_turn_r/main
+# 翼槍突き上げ
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_upper_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_upper_l/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_upper_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_upper_r/main
