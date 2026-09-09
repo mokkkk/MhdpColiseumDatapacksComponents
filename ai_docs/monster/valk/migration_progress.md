@@ -3,7 +3,8 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 進行中（13/85: lance_idle + lance_spear系4[approve済] + lance_vertical系6[approve済] + lance_upper系2[レビュー1回反映済・再確認待ち・2026-09-08]）**。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 進行中（13/85 approve済: lance_idle + lance_spear系4 + lance_vertical系6 + lance_upper系2[approve・2026-09-08]）**。ここでコミット可。
+> **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、assets オブジェクト作成完了後に `api:object/summon.m {ObjectId:...}` を記載する（ユーザー指示 2026-09-08）。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / RedFlash → `particle flash{color}` / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。
 > ※ユーザーが disk 上で全 vertical の `cuboid_preview.m` をコメントアウト、turn_l/turn_r の軸合わせを `Tick:5/MaxRotation:360`（frame2）+ `Tick:10/360`（frame33）へ調整済み。意図的編集として尊重。
@@ -210,15 +211,20 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] shoot_vertical_l  [ ] shoot_vertical_r
 - [ ] state_paralysis
 
-### Stage 6 — util / models / phase / debug / advancement / 弾  ⬜ 未着手
-- [ ] `core/util/fetch_player.mcfunction`（**新設**）
-- [ ] `core/util/apply_blink.mcfunction` / `end_blink.mcfunction`（AJ as_node 記法へ）
-- [ ] `core/util/show_bossbar.mcfunction`（`@a[tag=Ply.State.MnsTarget]` 方式に統一）
-- [ ] `core/util/show_toast.mcfunction` / `hide_toast.mcfunction`
-- [ ] `core/util/models/*`（anger_start/end, break_*, chest_glow_*, ignite_*, model_interrupt）
-- [ ] `core/util/phase/*`（head_heat, head_heat_end, tail_heat, tail_rust）
+### Stage 6 — util / models / phase / debug / advancement / 弾  🔶 util 完了（2026-09-09）
+- [x] `core/util/fetch_player.mcfunction`（**新設**。dino/ranposu 準拠。Mns.Candidate.Valk / Mns.Valk.Search / on_battle/check_target 使用）
+- [x] `core/util/apply_blink.mcfunction` / `end_blink.mcfunction`（`animated_java_valk:valk/as_node` + `item_model` component。head_upper × break/anger 4状態。**モデルIDは仮TODO**）
+- [x] `core/util/show_bossbar.mcfunction`（`bossbar set mhdp_monster:valk players @a[tag=Ply.State.MnsTarget]`）
+- [x] `core/util/show_toast.mcfunction` / `hide_toast.mcfunction`（`advancement grant/revoke mhdp_monster_valk:toast_break` + schedule 5t）
+- [x] `core/util/models/*`（17ファイル: `ignite_start[_left/_right]`, `ignite_end[_left/_right]`, `anger_start`, `anger_end`, `break_head`, `break_arm_left/right`, `break_wing_left/right`, `break_tail_cut`, `chest_glow_start/end`, `model_interrupt`）
+  - **旧の `on passengers ... item.id="minecraft:white_dye" + custom_model_data:<数値>` を dino 準拠の `execute [if ...] run function animated_java_valk:valk/as_node {name: '<bone>', command: 'data modify entity @s item.components."minecraft:item_model" set value "<ID>"'}` へ変換**。`white_dye` 行は削除。
+  - **モデルIDは全て仮のプレースホルダ**（`minecraft:aj_sub/valk/<bone>_<variant>` / 通常状態は `animated_java_valk:blueprint/valk/<bone>`）。各ファイル冒頭に `# TODO` あり。**AJ 再エクスポート後に実際の aj_sub / blueprint 名へ差し替え必須**。
+  - `anger_start`/`anger_end` から `tag @s add/remove Mns.State.IsAnger` は削除（`start_anger.m`/`end_anger.m` 側で処理。`end_anger.m` は `$function mhdp_monster_valk:core/util/models/anger_end` を呼ぶ）。
+  - `models/ignite_start` / `ignite_end`（両翼版）は `ignite_start_left`+`ignite_start_right` を呼ぶだけの簡略デリゲータ（`model_interrupt` が `ignite_end` を参照）。
+  - **省略**: `models/break_tail`（旧は dino 丸コピペ = `aj.dino_aj.bone.*` / `Mns.Dino.State.*` 参照、valk 未使用。valk 尻尾は切断のみ = `break_tail_cut`）。
+- [x] **`core/util/phase/*` は生成しない**（判断: 旧 valk の phase/ は全て dino の丸コピペ [`#> mhdp_monster_dino:...` ヘッダ / `Mns.Dino.State.HeadHeat` / `Mns.Dino.PhaseCount.*` / dino専用 models 参照]。新 valk コードから `core/util/phase` への参照は 0 件。valk は頭/尻尾の赤熱化・風化ギミックを持たない [ジェット点火 = ignite / 龍気形態 = shoot で別管理]。**valk に phase/ は不要**）。
 - [ ] `core/debug/interrupt.mcfunction` / `interrupt_anger.mcfunction`
-- [ ] `advancement/toast_break.json`（icon = `icons/valk`）
+- [ ] `advancement/toast_break.json`（icon = `icons/valk`。show_toast が参照）
 - [ ] 弾システム（assets 側 ObjectId 定義 + monster 側 summon 呼び出し）※ユーザーと要相談
 
 ---
