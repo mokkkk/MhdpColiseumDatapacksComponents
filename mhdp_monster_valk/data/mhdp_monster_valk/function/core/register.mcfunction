@@ -154,24 +154,21 @@
     }
 
 # 翼槍回転斬り (右翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"SpearSpin.Right",AttackPart:"wing_right",VectorType:"Radial",\
-        DamageValue:8.6f,ObjectDamageValue:20,GuardValue:5,ElementType:0,ElementMultiply:0,\
+        DamageValue:8.6f,ObjectDamageValue:30,GuardValue:5,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 # 翼槍回転斬り (左翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"SpearSpin.Left",AttackPart:"wing_left",VectorType:"Radial",\
-        DamageValue:8.6f,ObjectDamageValue:20,GuardValue:5,ElementType:0,ElementMultiply:0,\
+        DamageValue:8.6f,ObjectDamageValue:30,GuardValue:5,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 
 # 翼槍叩きつけ(手)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Vertical.Hand",AttackPart:"body",VectorType:"Normal",\
         DamageValue:3.0f,ObjectDamageValue:5,GuardValue:1,ElementType:0,ElementMultiply:0,\
@@ -180,27 +177,24 @@
     }
 
 # 翼槍叩きつけ (右翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Vertical.Right",AttackPart:"wing_right",VectorType:"Normal",\
-        DamageValue:10.0f,ObjectDamageValue:20,GuardValue:6,ElementType:0,ElementMultiply:0,\
+        DamageValue:10.0f,ObjectDamageValue:50,GuardValue:6,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 # 翼槍叩きつけ (左翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Vertical.Left",AttackPart:"wing_left",VectorType:"Normal",\
-        DamageValue:10.0f,ObjectDamageValue:20,GuardValue:6,ElementType:0,ElementMultiply:0,\
+        DamageValue:10.0f,ObjectDamageValue:50,GuardValue:6,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 
 # 翼槍振り上げ
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Upper",AttackPart:"body",VectorType:"Normal",\
-        DamageValue:11.0f,ObjectDamageValue:20,GuardValue:7,ElementType:5,ElementMultiply:0,\
+        DamageValue:11.0f,ObjectDamageValue:45,GuardValue:7,ElementType:5,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:true,LaunchAngle:35,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
