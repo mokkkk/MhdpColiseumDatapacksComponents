@@ -35,6 +35,10 @@
     execute if score @s aj.lance_vertical_turn_l.frame matches 124 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.lance_vertical_turn_l.frame matches 39..48 run function animated_java_valk:valk/at_locator {name:"pos_wing_l_3",command:"function mhdp_monster_valk:core/tick/animation/event/lance_vertical_turn_l/particle"}
 
+# 演出
+    execute if score @s aj.lance_vertical_turn_l.frame matches 34 run data modify storage api: Arg.Override set value {Scale:8}
+    execute if score @s aj.lance_vertical_turn_l.frame matches 34 positioned ^2 ^1 ^-6 run function api:object/summon.m {ObjectId:10047}
+
 # 攻撃 (翼槍振り下ろし・左翼爪・振り下ろし中〜着弾まで)
     execute if score @s aj.lance_vertical_turn_l.frame matches 42 run function mhdp_monsters:core/util/tick/event/start_attack.m with storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks[{Name:"Vertical.Left"}]
     execute if score @s aj.lance_vertical_turn_l.frame matches 42..49 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_turn_l/attack_swing

@@ -43,7 +43,8 @@
     execute if score @s aj.lance_vertical_l.frame matches 39..48 run function animated_java_valk:valk/at_locator {name:"pos_wing_l_3",command:"function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l/particle"}
 
 # 演出
-    execute if score @s aj.lance_vertical_l.frame matches 38 positioned ^-2 ^1 ^-6 run particle flash{color:[1.000,0.200,0.200,1.00]} ~ ~1 ~ 3 3 3 0 20 force @a[distance=..48]
+    execute if score @s aj.lance_vertical_l.frame matches 38 run data modify storage api: Arg.Override set value {Scale:8}
+    execute if score @s aj.lance_vertical_l.frame matches 38 positioned ^-2 ^1 ^-6 run function api:object/summon.m {ObjectId:10047}
 
 # 攻撃1 (お手・相殺不可のため start_attack は挟まない)
     execute if score @s aj.lance_vertical_l.frame matches 20 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_l/attack_hand

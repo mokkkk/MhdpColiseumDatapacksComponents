@@ -6,7 +6,7 @@
 > **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 13/85 approve済** + Stage 6 util 完了。**次: Stage 6-S 弾/VFX の `assets:object/` 移行**（ユーザー指示 2026-09-10。新アニメグループより先。計画は §Stage 6-S / spec §3.18）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
-> lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / RedFlash → `particle flash{color}` / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。
+> lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
 > ※ユーザーが disk 上で全 vertical の `cuboid_preview.m` をコメントアウト、turn_l/turn_r の軸合わせを `Tick:5/MaxRotation:360`（frame2）+ `Tick:10/360`（frame33）へ調整済み。意図的編集として尊重。
 > 5-C レビュー反映済み: (1) 軸合わせは `alignment_start.m`/`alignment` に統一（個別 turn_start ファイル廃止）(2) hit_* は `apply_attack.m` 直前に同一引数の `api:bounding/cuboid_preview.m` を配置 (3) 複数回ヒット技は判定区間ごとに start_attack.m/end_attack で挟む（spin 系は突き@35-42／回転斬り@68-85 の2区間）。
 > ※ユーザーが disk 上で hit_* の cuboid_preview をコメントアウト / spin の hit を `apply_attack_with_entitypos.m`（EntityPosSelector:`@n[type=item_display,tag=Mns.Root.Valk]`）へ変更中。意図的な編集として尊重。
@@ -151,7 +151,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - **地面のひび割れ演出**（2026-09-07 レビュー・全6グループ反映済み）: 旧 `crack_ground/start`（マーカー方向 `facing entity @e[tag=Mk.Field.Back] feet`）→ dino 準拠の `execute positioned ^±1 ^ ^ rotated ~ 0 run function api:object/summon.m {ObjectId:16}`（`0016.ground_crack`、接地はオブジェクト側）。加えて着弾演出に `particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 ...` を2行追加（ユーザー微調整反映）。CLAUDE.md にルール追記済み。以降の全アニメに適用。
 - AttackName は発動翼で選択: `Vertical.Left`/`Vertical.Right`（振り下ろし中・着弾・お手以外で共通。`VerticalS.*` は shoot 形態用なので未使用）。`Vertical.Hand`=body。
 - 翼の軌跡パーティクル: 旧 `on passengers ... m.particle ... data.locators.pos_wing_*_3` → `at_locator {name:"pos_wing_*_3",command:"function .../particle"}`。各グループに `particle.mcfunction`（dust赤+cloud）新設。
-- 龍閃 赤フラッシュ VFX（旧 `summon text_display ... Mns.Shot.Valk.Vfx.RedFlash`）→ **`particle flash{color:[1.000,0.200,0.200,1.00]} ~ ~1 ~ 3 3 3 0 20 force @a[distance=..48]`** に置換（レビュー反映）。l(f38,`^-2 ^1 ^-6`)/r(f38,`^2 ^1 ^-6`)/l_to_r(f11,`^2 ^1 ^-6`)/r_to_l(f11,`^-2 ^1 ^-6`)。turn_l/turn_r には旧に該当箇所なし。**※ flash 置換は vertical 系のみ。今後の他アニメは置換せずユーザー判断を待つこと。**
+- 龍閃 赤フラッシュ VFX（旧 `summon text_display ... Mns.Shot.Valk.Vfx.RedFlash`）→ 当初 **`particle flash{color}`** に置換していたが、**2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了を受けて `api:object/summon.m {ObjectId:10047}` へ再置換**（`Arg.Override set value {Scale:8}` → 旧スケール8を再現。`.Long` は使わない単発）。l(f38,`^-2 ^1 ^-6`)/r(f38,`^2 ^1 ^-6`)/l_to_r(f11,`^2 ^1 ^-6`)/r_to_l(f11,`^-2 ^1 ^-6`)。turn_l/turn_r には旧に該当箇所なし。
 - **バグ修正**: 旧 `lance_vertical_turn_r`（右振りむき）が左翼の値を誤参照（`pos_wing_l_3`、`positioned ^1.2`）→ 右翼へ修正（`pos_wing_r_3`、`positioned ^-1.2`）。spin_r と同種のコピペミス。tp 横移動 `^0.3` は旧のまま（gameplay 影響小のため据え置き）。
 - 接地は `check_landing`。`# 2連`（怒り時 `lance_vertical_*_to_r` tween）は AJ 名前空間置換のみ。
 - **削除**: 過去の bash 生成ミスで出来た空グループ `event/197609/` を削除。
@@ -272,7 +272,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 | `10044` | `valk_comet_star` | `vfx_comet_star/tick` | 星型 VFX | なし | **TODO** |
 | `10045` | `valk_beam` | `vfx_beam/tick` | 龍閃ビーム VFX（`lance_biim_*`） | なし（event `lance_biim_2/attack_*` で判定） | **TODO** |
 | `10046` | `valk_bomb` | `vfx_bomb/tick` | 爆発 VFX（`shoot_bomb_*` の damage は event 側） | なし | **TODO** |
-| `10047` | `valk_red_flash` | `vfx_red_flash/tick` | 赤フラッシュ VFX（現在 `lance_upper` で TODO 中 / `lance_vertical` はユーザー判断で `particle flash` 採用） | なし | `Override.IsLong`（bool → `10047.Long` タグ。true でループ・追従。旧 `Mns.Shot.Valk.Vfx.RedFlash.Long`）, `Override.Scale`（`lance_upper` は 7 → 12） |
+| `10047` | `valk_red_flash` | `vfx_red_flash/tick` | 赤フラッシュ VFX。**実装完了・`lance_upper`（Long+拡大）と `lance_vertical`（単発 Scale:8）両方で使用中** | なし | `Override.IsLong`（bool → `10047.Long` タグ。true でループ・追従。旧 `Mns.Shot.Valk.Vfx.RedFlash.Long`）, `Override.Scale`（`lance_upper` は 7 → 12、`lance_vertical` は 8） |
 | `10048` | `valk_thunder` | `vfx_thunder/tick` | 雷 VFX（`lance_biim`, `shoot_bomb`） | なし | **TODO** |
 
 > **⚠ `init/.mcfunction` は `valk_red_flash` 以外すべて `# TODO` とする**（ユーザー指示 2026-09-10）。向き固定 `tp @s ~ ~ ~ ~ ~` だけ置き、それ以外（速度・寿命・ターゲット保持・スケール・variant タグ付与・Override 引数の受け取り）は `# TODO: init 固有処理を実装` のコメントで保留。`valk_red_flash` のみ上記 Override 引数（`IsLong` / `Scale`）で実装する。
@@ -283,7 +283,14 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - 切断尻尾（旧 `shot/tail/*` + `reaction/macro/m.summon_tail`）→ **全モンスター共通 object として後日 mhdp_core 側で作成予定**（ユーザー指示 2026-09-10）。valk 側では `break/tail_cut` の TODO を「共通 tail_cut object 待ち」として残す。ObjectId 未定。
 - `0016.ground_crack`（移行済み・汎用）
 
-（`10047 valk_red_flash` を作れば `lance_upper` の RedFlash TODO を解消できる。`lance_vertical` の `particle flash` を object 版に戻すかはユーザー判断）
+（`10047 valk_red_flash` 実装完了・`lance_upper` の TODO 解消済み、`lance_vertical` も `particle flash` から object 版へ戻し済み。2026-09-13）
+
+**`lance_vertical_turn_l/r` へのユーザー追加修正（2026-09-13、承認と同時に反映）**:
+- **AttackData の左右を入れ替え**: `turn_l/main` の `start_attack.m` 参照が `Vertical.Left`→`Vertical.Right`、`turn_r/main` が `Vertical.Right`→`Vertical.Left` に変更（「フォルダ名と実際の動作が食い違っていたため」とのこと。AJ アニメーションの実際の左右をユーザーが確認して修正）。
+- **RedFlash 召喚を新規追加**: frame34 に `Arg.Override{Scale:8}` + `positioned ^±2 ^1 ^-6 run function api:object/summon.m {ObjectId:10047}`。旧コードに該当箇所なし（vertical 系の他4グループへの拡張として追加）。turn_l は `^2`（右寄り）、turn_r は `^-2`（左寄り）— **修正後の実際の左右に合わせた向き**になっている。
+- **追記（2026-09-13）**: `Vertical.Left→Right`（AttackData 側）の入れ替えはユーザーが「余計だった」として取り消し済み。現状 `turn_l`=`Vertical.Left`・`turn_r`=`Vertical.Right` に戻り、`ignite_start_left/right`・`Wing.L/R`・`pos_wing_l/r_3`・`positioned ^1.2/^-1.2` と整合。
+
+**確認済み（2026-09-13）**: `turn_l`/`turn_r` の RedFlash 位置（`^2`/`^-2`、ベース版 `lance_vertical_l/r` とは逆符号）は**意図的**。ユーザーが実際のアニメーションの動きに合わせて設定したもので、修正不要と確認済み。
 
 **各 object の作成物**（`assets:object/1004N.valk_xxx/`）:
 - `_index.d.mcfunction`（`#declare tag 1004N.<State>`）
