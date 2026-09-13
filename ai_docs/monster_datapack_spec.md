@@ -359,7 +359,8 @@ Spyglass（データパック言語サーバ）用のタグ宣言ファイル。
     scoreboard players reset @a Mns.<Upper>.Hate
 # モデル削除
     function animated_java_<name>:<name>/remove/this
-# （弾を出すモンスターは kill @e[tag=Mns.Shot.<Upper>]、当たり判定 slime も remove_hitbox）
+# （弾 / VFX は `assets:object/` エンティティ [`Asset.Object` タグ]。放置中の弾が残る恐れがあるなら
+#   モンスター固有タグ [例 `Mns.<Upper>.Object.*` や `Mns.Shot.<Upper>*`] を付けておき kill @e[tag=...] する。詳細は §3.18）
 ```
 
 ### 3.7 `function/core/death/death.mcfunction`
@@ -471,7 +472,7 @@ Spyglass（データパック言語サーバ）用のタグ宣言ファイル。
     execute if score @s Mns.Temp.AngerSpeed.Timer >= @s Mns.Anger.Speed run scoreboard players set @s Mns.Temp.AngerSpeed.Timer 0
 ```
 
-弾システムがある場合はここに `execute as @e[type=item_display,tag=Mns.Shot.<Upper>] at @s run function mhdp_monster_<name>:core/tick/shot/tick` を足す。
+> **弾 / VFX を出すモンスター**: モンスター側の `tick` に弾ループを足さない。弾・飛び道具・追従 VFX は共通の `assets:object/` システムで扱う（§3.18）。旧 valk のような `core/tick/shot/*` を monster datapack 内に持つ設計は**廃止**。
 
 `main.mcfunction`（定型 — そのまま流用可）:
 
@@ -621,6 +622,75 @@ function mhdp_monsters:core/util/tick/event/apply_attack.m {Uid:<uid>,AttackName
   }
 }
 ```
+
+### 3.18 弾 / 飛び道具 / 追従 VFX（`assets:object/` システム）
+
+弾・ブレス・彗星・ビーム・爆発 VFX・切断部位など「モンスター本体から分離して動くもの」は、**monster datapack の中に持たず**、共通の `assets` データパックの **object システム**で実装する。
+
+**アーキテクチャ**:
+
+```
+呼び出し側（monster の event/<anim>/attack など）:
+    execute <positioned/facing/rotated で発射位置・方向を作る> run function api:object/summon.m {ObjectId:<N>}
+
+共通エンジン:
+    api:object/summon.m          → assets:core/object/summon.m {ObjectId:N}
+                                 → assets:object/alias/N/summon → assets:object/<N>.<name>/summon/   ← summon コマンド実行
+    （直後）assets:core/object/init.m {ObjectId:N}
+                                 → assets:object/alias/N/init  → assets:object/<N>.<name>/init/      ← 初期化（角度確定・ObjectId スコア付与）
+    毎 tick（mhdp_core:tick の `execute as @e[tag=Asset.Object] at @s run function assets:core/object/tick`）:
+                                 → assets:object/alias/N/tick  → assets:object/<N>.<name>/tick/      ← 移動・当たり判定・演出・寿命
+```
+
+**object 1 個の構成**（`assets:object/<N>.<name>/`）:
+
+| ファイル | 役割 |
+|---|---|
+| `_index.d.mcfunction` | この object 用のタグ宣言（`#declare tag <N>.OnGround` など。命名は `<ObjectId>.` プレフィックス） |
+| `summon/.mcfunction` | `summon item_display ^ ^ ^ {teleport_duration:0,Tags:["Asset.Object","Asset.Object.Init"],transformation:{...scale:[0f,0f,0f]}}` を実行（発射位置は呼び出し側の実行座標。VFX が text_display ならそれを summon） |
+| `init/.mcfunction` | 召喚直後 1 回。`tp @s ~ ~ ~ ~ ~` で角度固定は共通。**それ以外（速度・寿命・ターゲット保持・スケール・variant タグ付与）は object ごとに固有**。判断がつかない箇所は `# TODO` を残す。`ObjectId` スコアは共通側で自動付与 |
+| `tick/.mcfunction` | 毎 tick のディスパッチ（移動前/接地後などで分岐して sub 関数へ）。`scoreboard players add @s ObjectTick 1` で経過管理、`execute if score @s ObjectTick matches <寿命>.. run kill @s` |
+| `tick/move`, `tick/hit`, `tick/attack`, `tick/wait` … | 移動・被弾検知・攻撃実行・接地後演出など |
+
+**当たり判定**は object の tick 内で行う。実行主体をモンスター root に戻して共通関数を呼ぶ:
+
+```
+# object の tick/attack 内
+execute at @s as @n[type=item_display,tag=Mns.Root.<Upper>] run function mhdp_monsters:core/util/tick/event/apply_attack_distance.m {Uid:<uid>,AttackName:"<Name>",\
+    Player_Selector:"@a[tag=Ply.State.EnableDamage,distance=..<r>]",Player_Offset_X:0.0,Player_Offset_Y:0.0,Player_Offset_Z:0.0,Player_Distance:<r>,\
+    Entity_Selector:"@e[type=slime,tag=Entity.EnableDamage,tag=!Mns.HitBox.<Upper>,distance=..<r>]",Entity_Offset_X:0.0,Entity_Offset_Y:0.0,Entity_Offset_Z:0.0,Entity_Distance:<r>}
+```
+
+- `AttackData` は `Uid` + `AttackName` で引く（object は特定モンスターの Uid に紐づく）。
+- 球状判定は `apply_attack_distance.m`、箱状判定は `apply_attack.m`。
+- object → 建築物ヒットは `@n[type=shulker,tag=Asset.Build.HitBox,...]` を見る。
+
+**ObjectId の割り当て**: モンスター固有 object は `<Uid の下 4 桁>x`（例: dino [Uid 1003] = `10031`, `10032` / valk [Uid 1004] = `1004x`）。汎用 object は `0001`〜。
+
+**呼び出し側からのパラメータ渡し（`Arg.Override`）**: object を状況に応じて変えたい場合、summon 前に `data modify storage api: Arg.Override.<Key> set value <V>` を積む。`api:object/summon.m` が summon → init の後に `Arg.Override` を自動クリアする。object の `init/.mcfunction` で受け取る:
+
+```
+# init 内
+execute store result score @s <Score> run data get storage api: Arg.Override.<Key>          # 数値を score へ
+execute if data storage api: Arg.Override{<Key>:<V>} run tag @s add <ObjectId>.<Variant>     # 条件でタグ付与
+```
+
+実例: `assets:object/0001.normal_arrow/init`（`PlyUid` / `ChargeCount` / `Speed` / `Bin` …）, `0005.targetting_arrow/init`（`TargetUid`）, `0006.jump_arrow/init`。パラメータ不要なら dino_breath のように init は `tp @s ~ ~ ~ ~ ~` だけでよい。
+
+**登録**: object フォルダを置き、`assets:object/alias/<N>/{init,summon,tick}.mcfunction` の 3 リダイレクトを書くだけ（マスタ一覧やロード時登録は不要）。
+
+**実例**: `assets:object/10032.dino_breath`（ブレス）, `10031.dino_tail_flame`（尻尾の炎）, `0016.ground_crack`（地面のひび割れ、monster から `{ObjectId:16}` で呼ぶだけ）。
+
+**`summon/debug.mcfunction`（デバッグ用手動召喚）**: 各 object の `summon/` に、`Arg.Override` を設定してから自身を `api:object/summon.m` で召喚する `debug.mcfunction` を用意する。実行者（プレイヤー）の位置・向きに召喚されるので、コマンドとして直接叩いて単体テストできる。
+
+```
+# 引数設定
+    data modify storage api: Arg.Override set value {<Key>:<テスト値>, ...}
+# 召喚
+    function api:object/summon.m {ObjectId:<N>}
+```
+
+Override 引数が未確定の object は `data modify storage api: Arg.Override set value {}`（空）でよい。
 
 ---
 

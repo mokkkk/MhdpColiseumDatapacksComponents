@@ -15,6 +15,9 @@
 # 当たり判定を消去
     execute as @e[type=slime,tag=Mns.HitBox.Valk] run function mhdp_monsters:core/util/other/remove_hitbox
 
+# 弾/VFXオブジェクト消去
+    execute as @e[tag=Asset.Object.Valk] at @s run function api:object/remove
+
 # ボスバー消去
     bossbar remove mhdp_monster:valk
 

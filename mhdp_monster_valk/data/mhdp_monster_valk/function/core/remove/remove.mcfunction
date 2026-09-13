@@ -4,10 +4,8 @@
 #
 # @within function mhdp_monsters:core/switch/macro/m.remove
 
-# 弾消去
-    #TODO: 直接 kill では問題が生じる可能性があるためユーザーが修正する（弾の後始末処理を経由させる想定）
-    # kill @e[tag=Mns.Shot.Valk]
-    # kill @e[tag=Mns.Shot.Valk.Tail]
+# 弾/VFXオブジェクト消去
+    execute as @e[tag=Asset.Object.Valk] at @s run function api:object/remove
 
 # 当たり判定を消去
     execute as @e[type=slime,tag=Mns.HitBox.Valk] run function mhdp_monsters:core/util/other/remove_hitbox

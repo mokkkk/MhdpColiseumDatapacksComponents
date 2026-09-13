@@ -19,6 +19,5 @@
     execute as @e[type=slime,tag=Mns.HitBox.Valk.ArmL] run scoreboard players set @s Mns.Hitbox.PartId 4
 
 # 演出リセット
-    #TODO: 弾VFX (Mns.Shot.Valk.Vfx.RedFlash.Long) の掃除は Stage 6 の弾システム再構築時に確認
-    kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
+    kill @e[type=text_display,tag=10047.Long]
     function mhdp_monster_valk:core/util/models/model_interrupt

@@ -49,7 +49,7 @@
 
 | 項目 | 新形式 | 旧 valk | 更新方針 |
 | --- | --- | --- | --- |
-| `core/tick/tick` | ✅ `core/tick/main` を呼ぶ + 怒り速度ループ | ⚠️ `core/tick/tick_main` を呼ぶ + 怒り速度ループ + **弾処理ループ**（`Mns.Shot.Valk` の item_display / text_display に `core/tick/shot/tick`） | `main` に改名。弾処理ループは valk 固有機能として残す（§8 参照） |
+| `core/tick/tick` | ✅ `core/tick/main` を呼ぶ + 怒り速度ループ | ⚠️ `core/tick/tick_main` を呼ぶ + 怒り速度ループ + **弾処理ループ**（`Mns.Shot.Valk` の item_display / text_display に `core/tick/shot/tick`） | `main` に改名。**弾処理ループは削除**（弾は共通 `assets:object/` システムへ移行。spec §3.18）。→ 実装済み: tick から弾ループ削除・TODO 化 |
 | tick 本体 | ✅ `core/tick/main`: AJ on_tick → `super/tick/pre_tick` → `super/tick/in_tick` → **Phase 別に自パックの `on_relax/on_caution/on_battle/tick`** → `animation/event/main` → `super/tick/post_tick` | ❌ `core/tick/tick_main`: `animated_java:valk_aj/root/on_tick` → **`mhdp_monsters:core/util/tick/tick`（旧モノリシック共通処理）** → `animation/event/main` → `effect_anger` | `core/tick/main` を新形式の骨格に置換。フェーズ管理を自パックへ移す |
 | 探索 / 発見 | ✅ 自パックの `on_relax/update_caution`（警戒度 `Mns.<Upper>.Caution`）→ `on_caution/update_search`（発見度 `Mns.<Upper>.Search`）→ `on_battle` の 3 段階、`Mns.General.Phase` 0/1/2 | ❌ `mhdp_monsters:core/util/tick/tick` 内で `Mns.General.SearchTimer` を距離別に加算するだけ。`Mns.State.IsBattle` の 2 値管理 | 3 段階フェーズ + `Caution`/`Search` スコアへ移行。`on_relax/on_caution/on_battle/{tick,start,update_*}` を新設 |
 | まばたき | ✅ `super/tick/in_tick` が担当 | ⚠️ `mhdp_monsters:core/util/tick/tick` が担当（同等） | `in_tick` 方式に自動移行 |
@@ -108,11 +108,12 @@ valk 固有の内部フェーズ（`Mns.Valk.PhaseCount` / `PhaseCount.Comet` / 
 | --- | --- | --- | --- |
 | 部位（DefenceData 行 / 部位破壊） | 頭 / 胴 / 尻尾 / 右脚 / 左脚（+ 頭赤熱化 / 尻尾赤熱化 / 尻尾錆び の肉質変化行）。破壊: 頭・尻尾（切断） | 頭 / 胴 のみ。破壊: 頭 | 頭 / 胴 / 尻尾 / 右腕 / 左腕 / 右脚 / 左脚 / 右翼 / 左翼 / 胸(吸引中)。破壊: 頭・尻尾・両翼 |
 | 固有状態 | 尻尾赤熱化 / 尻尾錆び / 喉赤熱化（`core/util/phase/*`、`core/util/models/*` で当たり判定 PartId とモデルを切替） | 大ダウン（`reaction/sp`: 頭 or 胴を規定回数怯ませると発動） | 彗龍/龍気の変形、龍気吸引（`lance_charge`）、彗星（`comet_phase_1..5`）、龍閃ビーム（`lance_biim_1/2`）、怒り終了カウント |
-| 弾システム | なし | なし | **あり**: `core/tick/shot/`（19 ファイル）。`Mns.Shot.Valk` エンティティを `core/tick/tick` のループで毎 tick 更新。beam / bomb / comet / comet_burst / comet_jet / comet_star / red_flash / thunder / tail(切断尻尾) の VFX・当たり判定 |
+| 弾システム | **共通 `assets:object/` システム**（monster 側は `api:object/summon.m {ObjectId:N}` を呼ぶだけ。spec §3.18） | ❌ monster datapack 内に `core/tick/shot/`（19 ファイル）。`Mns.Shot.Valk` エンティティを `core/tick/tick` のループで毎 tick 更新。beam / bomb / comet / comet_burst / comet_jet / comet_star / red_flash / thunder / tail(切断尻尾) の VFX・当たり判定 | **`assets:object/1004x.valk_*`（9個, 10040-10048）へ移行**。旧 `core/tick/shot/*` のロジックを各 object の `summon/init/tick` へ移植、`Mns.Shot.Valk.*` タグ運用は廃止。呼び出しは event 側で `api:object/summon.m`。**切断尻尾は valk 固有ではなく全モンスター共通 object として別途作成**（valk 対象外）。詳細計画は valk `migration_progress.md` Stage 6-S |
 | `_index.d` のアニメタグ | `Anim.*` を宣言 | `Anim.Idle`, `Anim.Turn.R/L`, `Anim.Bite` … を宣言 | 弾タグ `Mns.Shot.Valk(.Tail)`、攻撃位置マーカー `Mns.MovePos.Valk` / `Mns.ShotPos.Valk`、遷移タグ `Mns.Temp.Valk.MoveTo*` を宣言 |
 | 怒り演出 | `core/tick/effect_anger`（マクロ、コメントアウト気味） | 同左 | `core/tick/effect_anger` + `m.effect_anger_head` / `m.effect_anger_wing`（実使用） |
 
-**valk 固有で新形式移行時も残すもの**: 弾システム `core/tick/shot/*`、2 形態（`Mns.Valk.State.IsShoot`）、彗星/龍閃/龍気吸引の各アニメイベント、`core/damage/reaction/general` の末尾共通処理、`core/util/models/model_interrupt`。
+**valk 固有で新形式移行時も残すもの**: 2 形態（`Mns.Valk.State.IsShoot`）、彗星/龍閃/龍気吸引の各アニメイベント、`core/damage/reaction/general` の末尾共通処理、`core/util/models/model_interrupt`。
+（弾システムは monster 固有では**なく** `assets:object/` へ移す。「残す」対象から除外）
 これらは「共通化できない valk 独自ロジック」なのでそのまま維持し、**骨格（メタ情報・register・summon/init・tick の外枠・フェーズ管理・AJ 名前空間・タグ命名）だけを新形式に合わせる**。
 
 ---
@@ -144,4 +145,5 @@ valk 固有の内部フェーズ（`Mns.Valk.PhaseCount` / `PhaseCount.Comet` / 
 8. **attack 分岐**: `core/tick/on_battle/attack/<part>` を用意し、AttackData の `AttackPart` と対応させる。
 9. **reaction**: 各 `reaction/*` に `on_reaction_start` を追加。`reaction/general` は固有処理として維持。
 10. **util**: valk は `apply_blink` / `end_blink` / `show_bossbar` / `show_toast` / `hide_toast` / `models/*` / `phase/*` を既に持つ（AJ 名前空間の置換は必要）。**不足しているのは `core/util/fetch_player`** — 新形式の定型（同エリアプレイヤーに `Mns.Candidate.Valk` 付与 → ボスバー対象更新 → Phase 2 中は Search 固定 + `check_target`）で新設する。`show_bossbar` は `players @a[tag=Ply.State.MnsTarget]` 方式へ統一。
-11. **固有機能維持**: 弾システム、彗星・龍閃・龍気吸引、変形。骨格のみ差し替え、中身のロジックは温存。
+11. **固有機能維持**: 彗星・龍閃・龍気吸引、変形。骨格のみ差し替え、中身のロジックは温存。
+12. **弾システム移行**: 旧 `core/tick/shot/*` を `assets:object/1004x.valk_*` へ移植（spec §3.18）。呼び出し側 event は `api:object/summon.m {ObjectId:N}`。旧 `Mns.Shot.Valk.Vfx.*` の `summon text_display` 直書きも object 化。詳細は valk `migration_progress.md` Stage 6。

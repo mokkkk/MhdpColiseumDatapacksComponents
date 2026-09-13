@@ -3,8 +3,8 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 進行中（13/85 approve済: lance_idle + lance_spear系4 + lance_vertical系6 + lance_upper系2[approve・2026-09-08]）**。ここでコミット可。
-> **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、assets オブジェクト作成完了後に `api:object/summon.m {ObjectId:...}` を記載する（ユーザー指示 2026-09-08）。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 13/85 approve済** + Stage 6 util 完了。**次: Stage 6-S 弾/VFX の `assets:object/` 移行**（ユーザー指示 2026-09-10。新アニメグループより先。計画は §Stage 6-S / spec §3.18）。
+> **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / RedFlash → `particle flash{color}` / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。
 > ※ユーザーが disk 上で全 vertical の `cuboid_preview.m` をコメントアウト、turn_l/turn_r の軸合わせを `Tick:5/MaxRotation:360`（frame2）+ `Tick:10/360`（frame33）へ調整済み。意図的編集として尊重。
@@ -29,7 +29,7 @@
 - バッチ単位で作業し、各バッチ終了時にこのトラッカーを更新する。
 - `.mcfunction` のコマンドトークン間スペースは必ず1つ（CLAUDE.md 参照）。
 - AJ ロケータ参照は `at_locator`/`as_locator`（旧 `on passengers ... data.locators` は不可。CLAUDE.md 参照）。
-- 弾システムは `mhdp_core:assets` 側 + `api:object/summon.m {ObjectId:...}`（dino 方式）。**Stage 6 で保留対応**。旧 `core/tick/shot/*` は移植しない。
+- 弾システムは `mhdp_core:assets` 側 + `api:object/summon.m {ObjectId:...}`（dino 方式）。**Stage 6-S で `assets:object/1004x.valk_*` へ移植**（旧 `core/tick/shot/*` 19ファイルの中身を object の summon/init/tick へ移す。monster 側に弾ループは持たない）。計画は下記「Stage 6-S」。仕様 `spec §3.18`。
 - **軸合わせ処理は dino 準拠**（2026-09-05 レビューで既存4グループを修正済み。以降の全グループに適用）:
   - 旧 `turn_start`/`turn_start_adjust`（個別ファイル）→ 廃止。`function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Valk",Tick:YY,MaxRotation:ZZZ}` を main.mcfunction に直接インライン。YY は旧ファイル内の `#mhdp_temp_rotate_tick` 設定値をそのまま流用（例: turn_start=10, turn_start_adjust=7）。ZZZ は基本 180。
   - 旧 `function mhdp_monsters:core/util/other/turn_to_target_rotate`（frame範囲呼び出し）→ `execute ... at @s run function mhdp_monsters:core/util/tick/event/alignment`（`at @s` 必須、dino 実例準拠）。
@@ -211,7 +211,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] shoot_vertical_l  [ ] shoot_vertical_r
 - [ ] state_paralysis
 
-### Stage 6 — util / models / phase / debug / advancement / 弾  🔶 util 完了（2026-09-09）
+### Stage 6 — util / models / phase / debug / advancement / 弾  🔶 util+models 完了（2026-09-09）／弾は 6-S へ
 - [x] `core/util/fetch_player.mcfunction`（**新設**。dino/ranposu 準拠。Mns.Candidate.Valk / Mns.Valk.Search / on_battle/check_target 使用）
 - [x] `core/util/apply_blink.mcfunction` / `end_blink.mcfunction`（`animated_java_valk:valk/as_node` + `item_model` component。head_upper × break/anger 4状態。**モデルIDは仮TODO**）
 - [x] `core/util/show_bossbar.mcfunction`（`bossbar set mhdp_monster:valk players @a[tag=Ply.State.MnsTarget]`）
@@ -225,7 +225,86 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] **`core/util/phase/*` は生成しない**（判断: 旧 valk の phase/ は全て dino の丸コピペ [`#> mhdp_monster_dino:...` ヘッダ / `Mns.Dino.State.HeadHeat` / `Mns.Dino.PhaseCount.*` / dino専用 models 参照]。新 valk コードから `core/util/phase` への参照は 0 件。valk は頭/尻尾の赤熱化・風化ギミックを持たない [ジェット点火 = ignite / 龍気形態 = shoot で別管理]。**valk に phase/ は不要**）。
 - [ ] `core/debug/interrupt.mcfunction` / `interrupt_anger.mcfunction`
 - [ ] `advancement/toast_break.json`（icon = `icons/valk`。show_toast が参照）
-- [ ] 弾システム（assets 側 ObjectId 定義 + monster 側 summon 呼び出し）※ユーザーと要相談
+#### Stage 6-S: 弾 / VFX の `assets:object/` 移行  🔶 バッチ1 完了（2026-09-10）
+
+**バッチ1 実施済み**:
+- `assets:object/1004N.valk_*`（9個, 10040-10048）+ `assets:object/alias/1004N/{init,summon,tick}` 作成。
+- `10047.valk_red_flash`: 完全実装。`summon/`（text_display, font `vfx/valstrax/red_flash`, 既定 scale 7）/ `init/`（`tp ~ ~ ~ ~ ~` + `Override{IsLong:true}`→`10047.Long` タグ + `Override.Scale`→`init/apply_scale.m` で `transformation.scale` 上書き）/ `tick/`（frame 0-3 送り。`10047.Long` はループ、通常は 5tick で kill）。
+- `10040.valk_shot`: 完全実装。`summon/`（item_display, `item_model:"shot/valk/shot"` は **TODO 仮名**）/ `init/` は `# TODO`（狙い補正・Override 未実装）/ `tick/`（`move` ×2/tick + 30tick で強制着弾）/ `tick/move`（dust 演出・プレイヤー/HitBox/ブロック近接で `hit`・`tp ^ ^ ^1`）/ `tick/hit`（`10040.Hit` で二重防止・`as @n[type=item_display,tag=Mns.Root.Valk]` で `apply_attack_distance.m {Uid:1004,AttackName:"Shot"}` 球状判定・爆発 VFX `{ObjectId:10046}`・`kill @s`）。
+- 7つの VFX object（comet/burst/jet/star/beam/bomb/thunder）: `summon/`（text_display, 既定 scale 5 = **要調整 TODO**）/ `init/` は `# TODO`（`tp ~ ~ ~ ~ ~` のみ）/ `tick/` は旧 `vfx_*/tick` の frame 送りを移植。
+  - kill 型（comet[flash]/burst/bomb）: 旧同様 frame 0-N 送り + comet/burst は opacity フェード、`ObjectTick` 上限で kill。
+  - ループ型（jet/star/beam/thunder）: frame 0-1-2 ループ。**`# TODO`: 旧はアニメイベント側で kill していた。`<id>.Life matches 300..` の安全上限は仮値。呼び出し側 kill か適正値に。**
+- **配線済み**: `lance_upper_l/r` の RedFlash（frame35 ロング召喚+追従→frame51 kill+大サイズ召喚。`Arg.Override` で `IsLong`/`Scale` 渡し）、`lance_upper_l/r/attack_effect`（11点の Bomb+RedFlash を `{ObjectId:10046}` / `{ObjectId:10047, Scale:6}` へ）。
+- **掃除済み**: `_index.d` の `Mns.Shot.Valk` / `.Tail` タグ宣言を削除、`reaction/general` の `kill @e[...RedFlash.Long]` を `tag=10047.Long` に更新。valk 内 `TODO(Stage6)` は 0 に。
+- `core/remove/remove.mcfunction` の弾 kill（コメントアウト）はユーザー修正待ちのまま（本人が「弾の後始末処理を経由させる想定」と記載）。
+
+**バッチ2 以降（未着手）**:
+- 未読の旧 `vfx_comet` 系の「彗星本体の移動・ジェット追従」ロジック（`comet_phase_1..5` の main / `m.summon_vfx*` / `m.tp_vfx_*`）は comet_phase グループ移行時に確認。彗星ダメージは `comet_phase_4/attack` に。
+- `comet_burst` / `comet_jet` の damage が本当に不要か（旧 damage は dino コピペ・未呼び出しを確認済み）→ 実装時に最終確認。
+- 各 VFX object の scale 既定値（現状 5）と loop 型の寿命を実機で調整。
+- `shoot_*` / `lance_biim_*` / `shoot_bomb_*` グループ移行時に `api:object/summon.m` を直書き。
+
+**`summon/debug.mcfunction` 追加（2026-09-13）**: 9 object 全てに、`Arg.Override` を設定して `api:object/summon.m` で自身を手動召喚するデバッグ関数を追加（実行者の位置・向きに召喚。仕様は spec §3.18 に追記）。`10047.valk_red_flash` は `{IsLong:true,Scale:10}` の実値、他は Override 未確定のため `{}`。以降の全 object にもこのパターンを適用する。
+
+**remove 処理の整備（2026-09-13）**:
+- `api:object/remove.mcfunction` 新設（`assets:core/object/remove` を呼ぶだけ。`assets:core/object/remove` 自体は既存で `@s` の `ObjectId` を見て `alias/N/remove` へディスパッチ）。
+- 9 object 全てに `remove/.mcfunction`（中身は `kill @s`）+ `alias/1004N/remove.mcfunction` を追加（1000番台 build 系オブジェクトと同じ構成。init/summon/tick/remove の4本柱）。
+- 各 object の tick 内の自己終了 `kill @s` を `function assets:object/1004N.valk_xxx/remove/` 呼び出しに置換（将来、複数エンティティ構成の object になっても `remove/` 側で一括処分できるように分離済み。現状は単一エンティティなので中身は `kill @s` のまま）。
+- 各 object の `summon/.mcfunction` の `Tags` に **`Asset.Object.Valk`**（valk 全 object 共通タグ）を追加。
+- valk の `core/death/death.mcfunction` と `core/remove/remove.mcfunction` に `execute as @e[tag=Asset.Object.Valk] at @s run function api:object/remove` を追加（旧 `remove.mcfunction` のコメントアウトされた `kill @e[tag=Mns.Shot.Valk*]` TODO を置換）。
+- `lance_upper` の RedFlash ロング版を直接 `kill @e[type=text_display,tag=10047.Long]` する呼び出し側コードは**未変更**（個別ターゲットの即時消去なので対象外。将来的に `remove/` 経由に揃えるかは要検討）。
+
+**元の計画表（ObjectId 割り当て・Override 仕様）は下記に残置**。
+
+
+**方針**: 旧 `mhdp_monster_valk_bak/core/tick/shot/*`（19ファイル）を `mhdp_core` の `assets:object/1004x.valk_*` へ移植。monster 側は `api:object/summon.m {ObjectId:N}` を呼ぶだけ。`Mns.Shot.Valk.*` タグ運用・`core/tick/shot/*`・monster tick の弾ループは廃止（tick ループは既に削除済み）。仕様は `ai_docs/monster_datapack_spec.md §3.18`。
+
+**ObjectId 割り当て**（valk = Uid 1004 → `1004x`。dino は `10031`/`10032`）:
+
+**ダメージ方針（ユーザー指示 2026-09-10）**: **object は原則 VFX のみ**。ダメージ判定は本体アニメーションイベント側（`comet_phase_4/attack`, `lance_biim_2/attack_*`, `shoot_bomb_*/attack` など）で `apply_attack` する。object 内で自ダメージするのは `valk_shot`（独立して飛ぶ射撃弾で着弾点が読めないため）**のみ**。`comet_burst` / `comet_jet` は旧に damage コードが残るが**コピペミスの可能性大**（`vfx_comet/damage` は `Uid:1003` / `TailFlame.Flame` の dino コピペ）→ 精読で確定。
+
+| ObjectId | object 名 | 旧 `core/tick/shot/` | 用途 | 自ダメージ | init 処理（Override 引数） |
+|---|---|---|---|---|---|
+| `10040` | `valk_shot` | `shot/shot/*` | 龍気形態の射撃弾（`shoot_shot_forward/horizon`） | **あり**（`Shot`。object tick 内で `apply_attack_distance.m`） | **TODO** |
+| `10041` | `valk_comet` | `vfx_comet/*` | 彗星本体（`comet_phase_*`） | なし（event `comet_phase_4/attack` で判定） | **TODO** |
+| `10042` | `valk_comet_burst` | `vfx_comet_burst/*` | 彗星の炸裂 | **精読して確認**（コピペミスなら なし） | **TODO** |
+| `10043` | `valk_comet_jet` | `vfx_comet_jet/*` | 彗星のジェット | **精読して確認**（コピペミスなら なし） | **TODO** |
+| `10044` | `valk_comet_star` | `vfx_comet_star/tick` | 星型 VFX | なし | **TODO** |
+| `10045` | `valk_beam` | `vfx_beam/tick` | 龍閃ビーム VFX（`lance_biim_*`） | なし（event `lance_biim_2/attack_*` で判定） | **TODO** |
+| `10046` | `valk_bomb` | `vfx_bomb/tick` | 爆発 VFX（`shoot_bomb_*` の damage は event 側） | なし | **TODO** |
+| `10047` | `valk_red_flash` | `vfx_red_flash/tick` | 赤フラッシュ VFX（現在 `lance_upper` で TODO 中 / `lance_vertical` はユーザー判断で `particle flash` 採用） | なし | `Override.IsLong`（bool → `10047.Long` タグ。true でループ・追従。旧 `Mns.Shot.Valk.Vfx.RedFlash.Long`）, `Override.Scale`（`lance_upper` は 7 → 12） |
+| `10048` | `valk_thunder` | `vfx_thunder/tick` | 雷 VFX（`lance_biim`, `shoot_bomb`） | なし | **TODO** |
+
+> **⚠ `init/.mcfunction` は `valk_red_flash` 以外すべて `# TODO` とする**（ユーザー指示 2026-09-10）。向き固定 `tp @s ~ ~ ~ ~ ~` だけ置き、それ以外（速度・寿命・ターゲット保持・スケール・variant タグ付与・Override 引数の受け取り）は `# TODO: init 固有処理を実装` のコメントで保留。`valk_red_flash` のみ上記 Override 引数（`IsLong` / `Scale`）で実装する。
+>
+> **Override（`api: Arg.Override.Xxx`）の仕組み**（`valk_red_flash` で使用）: 呼び出し側で `data modify storage api: Arg.Override.<Key> set value <V>` を積んでから `function api:object/summon.m {ObjectId:N}` を呼ぶ。`summon.m` が summon → init を実行し、最後に `Arg.Override` を自動クリア。object の `init/.mcfunction` で `execute store result score @s <Score> run data get storage api: Arg.Override.<Key>` / `execute if data storage api: Arg.Override{<Key>:<V>} run tag @s add <Tag>` で受け取る（`0001.normal_arrow` / `0005.targetting_arrow` / `0006.jump_arrow` の init が実例）。
+
+**valk 固有 object にしないもの**:
+- 切断尻尾（旧 `shot/tail/*` + `reaction/macro/m.summon_tail`）→ **全モンスター共通 object として後日 mhdp_core 側で作成予定**（ユーザー指示 2026-09-10）。valk 側では `break/tail_cut` の TODO を「共通 tail_cut object 待ち」として残す。ObjectId 未定。
+- `0016.ground_crack`（移行済み・汎用）
+
+（`10047 valk_red_flash` を作れば `lance_upper` の RedFlash TODO を解消できる。`lance_vertical` の `particle flash` を object 版に戻すかはユーザー判断）
+
+**各 object の作成物**（`assets:object/1004N.valk_xxx/`）:
+- `_index.d.mcfunction`（`#declare tag 1004N.<State>`）
+- `summon/.mcfunction`（`summon item_display ...` または旧 VFX が text_display ならそれ）
+- `init/.mcfunction`（`tp @s ~ ~ ~ ~ ~` 他）
+- `tick/.mcfunction` + sub（`move`/`hit`/`attack`/`wait` 等。旧 `shot/*/tick` `shot/*/damage` `shot/*/main` を移植）
+- `assets:object/alias/1004N/{init,summon,tick}.mcfunction` の 3 リダイレクト
+
+**当たり判定の書き換え**（`valk_shot` のみ・`comet_burst`/`comet_jet` は精読後）: 旧 `mhdp_core:player/damage/entity_to_player/main` + 手動 `Temp.Hit`/`Temp.Victim` → `execute at @s as @n[type=item_display,tag=Mns.Root.Valk] run function mhdp_monsters:core/util/tick/event/apply_attack_distance.m {Uid:1004,AttackName:"Shot",...}`（球状）。他の object は VFX 移植のみ（パーティクル/`text` フレーム切替/tp/寿命）。旧 `summon text_display ... Mns.Shot.Valk.Vfx.Bomb`（`shot/shot/damage` 内の二次演出）は `{ObjectId:10046}` 呼び出しへ。
+
+**作業手順（案）**:
+1. 旧 `core/tick/shot/*` のうち移植対象を精読（`shot/tick`・`shot/shot/*` は確認済み。`vfx_comet*` / `vfx_beam` / `vfx_bomb` / `vfx_red_flash` / `vfx_thunder` が未確認。`tail/*` は共通 object 化のため valk では対象外）。
+2. `assets:object/` に **9 個**（10040-10048）の object フォルダ + alias を作成。自ダメージは `valk_shot`（10040）のみ（`apply_attack_distance.m`）、`comet_burst`/`comet_jet` は精読で判定。残りは VFX のみ（`text` フレーム切替/パーティクル/tp/寿命）。`init/` は 10047 以外すべて `# TODO`。
+3. 既存の pending 呼び出しを配線: `lance_upper_l/r` の RedFlash TODO → `{ObjectId:10047}`。`break/tail_cut` の尻尾切断 TODO は**共通 tail_cut object 待ちとして残す**（今回は解消しない）。
+4. 未移行アニメ（`comet_phase_*` / `shoot_*` / `lance_biim_*` / `shoot_bomb_*`）は各グループ移行時に `api:object/summon.m` を直接書く（TODO を残さない）。`shoot_bomb_*` の damage は event 側の `apply_attack` で処理（`valk_bomb` は VFX のみ）。
+5. `_index.d` から `Mns.Shot.Valk*` タグ宣言を削除（残っていれば）。
+6. AttackData の `Comet`/`Beam`/`Shot`/`Bomb.*` の値・`ObjectDamageValue` を実挙動に合わせて調整（ユーザー）。
+
+**注意**: `assets` は共通 `mhdp_core` データパック。valk object 追加＝ mhdp_core 変更（dino_breath の前例あり、想定内）。要 commit 分離の判断（mhdp_core 側と valk 側）。
+
+- [ ] 弾システム（上記 6-S 計画に沿って実施）
 
 ---
 

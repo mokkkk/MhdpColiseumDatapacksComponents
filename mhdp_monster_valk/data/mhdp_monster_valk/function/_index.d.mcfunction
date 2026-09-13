@@ -101,9 +101,7 @@
     #declare tag Anim.Turn.L 振り向き L
 
 # その他Entity
-    # 発射物
-        #declare tag Mns.Shot.Valk 天彗龍の弾全般
-        #declare tag Mns.Shot.Valk.Tail 切断後の尻尾
-    # 攻撃位置
+    # 発射物・VFX は assets:object/1004x.valk_* へ移行済み（Mns.Shot.Valk* タグは廃止。10047.Long 等の object 側タグを使用）
+    # 攻撃位置マーカー（アニメイベントが area_effect_cloud を ad-hoc 召喚する際に使用）
         #declare tag Mns.MovePos.Valk 移動位置
         #declare tag Mns.ShotPos.Valk 射撃攻撃位置

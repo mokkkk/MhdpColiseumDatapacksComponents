@@ -38,12 +38,13 @@
     execute if score @s aj.lance_upper_r.frame matches 35..49 run function animated_java_valk:valk/at_locator {name:"pos_wing_r_3",command:"function mhdp_monster_valk:core/tick/animation/event/lance_upper_r/particle_charge"}
     execute if score @s aj.lance_upper_r.frame matches 50..67 run function animated_java_valk:valk/at_locator {name:"pos_wing_r_3",command:"function mhdp_monster_valk:core/tick/animation/event/lance_upper_r/particle"}
 
-# 演出 (龍閃 赤フラッシュ・追従/拡大あり)
-    # TODO(Stage6): RedFlash VFX。shot/vfx システム実装後に復帰。flash 置換の可否はユーザー判断待ち
-    # execute if score @s aj.lance_upper_r.frame matches 35 positioned ^-4 ^ ^-3 run summon text_display ^-1 ^ ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.RedFlash","Mns.Shot.Valk.Vfx.RedFlash.Long"],default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[7f,7f,7f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,billboard:"center",alignment:"left"}
-    # execute if score @s aj.lance_upper_r.frame matches 35..51 run tp @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash,tag=Mns.Shot.Valk.Vfx.RedFlash.Long] ^-4 ^2 ^-5
-    # execute if score @s aj.lance_upper_r.frame matches 51 run kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
-    # execute if score @s aj.lance_upper_r.frame matches 51 positioned ^-4 ^2 ^-5 run summon text_display ^-1 ^ ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.RedFlash"],default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[12f,12f,12f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,billboard:"center",alignment:"left"}
+# 演出 (龍閃 赤フラッシュ・追従/拡大あり。assets:object 10047.valk_red_flash)
+    execute if score @s aj.lance_upper_r.frame matches 35 run data modify storage api: Arg.Override set value {IsLong:true,Scale:7}
+    execute if score @s aj.lance_upper_r.frame matches 35 positioned ^-4 ^ ^-3 run function api:object/summon.m {ObjectId:10047}
+    execute if score @s aj.lance_upper_r.frame matches 35..51 run tp @n[type=text_display,tag=10047.Long] ^-4 ^2 ^-5
+    execute if score @s aj.lance_upper_r.frame matches 51 run kill @e[type=text_display,tag=10047.Long]
+    execute if score @s aj.lance_upper_r.frame matches 51 run data modify storage api: Arg.Override set value {Scale:12}
+    execute if score @s aj.lance_upper_r.frame matches 51 positioned ^-4 ^2 ^-5 run function api:object/summon.m {ObjectId:10047}
 
 # 攻撃1 (お手・相殺不可のため start_attack は挟まない)
     execute if score @s aj.lance_upper_r.frame matches 20 run function mhdp_monster_valk:core/tick/animation/event/lance_upper_r/attack_hand
