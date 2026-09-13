@@ -200,7 +200,6 @@
     }
 
 # 噛みつき
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Bite",AttackPart:"head",VectorType:"Normal",\
         DamageValue:6.0f,ObjectDamageValue:10,GuardValue:3,ElementType:0,ElementMultiply:0,\
