@@ -8,5 +8,5 @@
 
 # モデル変更
     function animated_java_valk:valk/as_node {name: 'body_0', command: \
-        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/body_0_chest_glow"'\
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/body_0_glowing"'\
     }

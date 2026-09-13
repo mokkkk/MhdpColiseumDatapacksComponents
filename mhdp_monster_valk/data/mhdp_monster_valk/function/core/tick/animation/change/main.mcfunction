@@ -33,7 +33,7 @@
     execute if entity @s[tag=Mns.Temp.IsTurn] store result score #mhdp_temp_result MhdpCore run function mhdp_monster_valk:core/tick/animation/change/play/turn
 
 # アニメーション再生
-    execute if entity @s[tag=!Mns.Temp.IsTurn,tag=!Mns.Temp.IsTurn.Big] run function mhdp_monster_valk:core/tick/animation/change/play/main
+    execute if entity @s[tag=!Mns.Temp.IsTurn] run function mhdp_monster_valk:core/tick/animation/change/play/main
 
 # 終了
     tag @s remove Mns.Temp.IsTurn

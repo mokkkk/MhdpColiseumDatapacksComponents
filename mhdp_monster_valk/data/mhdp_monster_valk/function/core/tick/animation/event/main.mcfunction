@@ -38,3 +38,10 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_move.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_move/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_move_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_move_start/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_moveback.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_moveback/main
+# 軸合わせ (旋回)
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_turn_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_turn_l/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_turn_r/main
+# 警戒
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_search.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_search/main
+# 咆哮
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_voice.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_voice/main

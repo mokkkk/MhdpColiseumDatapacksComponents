@@ -7,11 +7,11 @@
 # 行動回数加算
     scoreboard players add @s Mns.General.ActCount.Idle 1
 
-# 咆哮
-    execute if entity @s[tag=Anim.Voice] run function animated_java_valk:valk/animations/lance_voice/tween {duration:1, to_frame: 1}
-
 # 警戒 (Phase 1)
     execute if entity @s[tag=Anim.Search] run function animated_java_valk:valk/animations/lance_search/tween {duration:1, to_frame: 1}
+
+# 咆哮
+    execute if entity @s[tag=Anim.Voice] run function animated_java_valk:valk/animations/lance_voice/tween {duration:1, to_frame: 1}
 
 ## 彗龍
     # 龍気吸引

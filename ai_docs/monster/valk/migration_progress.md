@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 19/85**（16/85 approve済 + lance_move系3 生成済み・未レビュー）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 23/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -114,12 +114,29 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  🔶 19/85（lance_move系3 は未レビュー）
+#### 5-C: event/<group>/*（85 グループ）  ✅ 23/85 approve済
+
+**lance_turn_l/r（軸合わせ旋回）で追加した扱い**（2026-09-13）:
+- `alignment_start.m`（`TargetTag:"Mns.Target.Valk"`, `Tick:14`, `MaxRotation:360`）+ `alignment` に統一。旧 `turn_start.mcfunction` は移植せず（`alignment_start.m` に置換）。
+- **バグ修正**: 旧 `lance_turn_r/main` の軸合わせ範囲呼び出し（`turn_to_target_rotate`）が `at @s` を欠いていた（`lance_turn_l` にはあった）。CLAUDE.md規則（範囲呼び出しの `alignment` には `at @s` 必須）に合わせ、turn_r 側にも `at @s` を付与。
+- 旧 `turn_start.mcfunction` 冒頭の `kill @n[type=area_effect_cloud,tag=Temp.Rotate.Target]`（古い `turn_to_target_calc` 系の残留物掃除）は `alignment_start.m` 方式に置換したことで不要のため引き継がず。
+
+**lance_search（警戒）で追加した扱い**（2026-09-13）: 攻撃・軸合わせなしの単純な待機ループ。接地のみ `check_landing` 化。
+
+**lance_voice（咆哮）で追加した扱い**（2026-09-13、レビュー後に方式変更）:
+- 頭部の閃光演出（旧 `m.particle_head`、`on passengers ... data.locators.pos_head` マクロ経由）→ `m.` プレフィックスを外し非マクロ化した `particle_head.mcfunction` を新設、`at_locator {name:"pos_head",...}` から呼ぶ形に統一。
+- 胸部発光演出は Stage6 で作成済みの `core/util/models/chest_glow_start`/`chest_glow_end` をそのまま呼ぶ。
+- 接地は `check_landing` に統一。
+- **ダメージ方式をユーザー指示で変更**: 当初は旧の怯み専用API `mhdp_core:player/damage/voice/main`（`mhdp_core:temp Damage` に `VoiceValue`/`VoiceTime`/`GuardValue` を積む方式）をそのまま踏襲していたが、**ユーザー指示により `mhdp_monster_dino:core/tick/animation/event/voice/attack` を参考にしたダメージなし攻撃（AttackData/`apply_attack_distance.m` 方式）に変更**。register.mcfunction には既にユーザーが `Voice` AttackData（`DamageValue:0.0f, GuardValue:4, VectorType:"Radial", Effect:{EffectId:1,Level:3,Tick:50}`）を追加済みで、それを利用。
+  - frame40 に `at_locator {name:"pos_head",command:"execute rotated as @s rotated ~ 0 run function .../attack"}` を配置（dino と同じ「ロケータ回転からpitchだけ0に戻す」パターン）。
+  - `attack.mcfunction` は `apply_attack_distance.m {Uid:1004,AttackName:"Voice",...}`（球状判定、Player/Entity とも Distance18.0。旧の `distance=..18` を踏襲、dino は15.0だが値はモンスター毎に異なってよいため据え置き）。対モンスター判定もdinoにならい新規追加（旧はプレイヤーのみ）。
+  - `mhdp_core:player/damage/voice/main` 自体は依然有効なAPIだが、**lance_voiceでは不使用**に変更。
+- 参考にした `mhdp_monster_reus`（未移行・旧形式のまま）の `land_voice`/`land_anger` は上記の理由で見送り、あくまで dino 準拠。
 
 **lance_move / lance_move_start / lance_moveback（移動系3グループ）で追加した扱い**（2026-09-13）:
 - **lance_move**（ループ移動）: 攻撃判定なし。移動目標マーカー `Mns.MovePos.Valk`（area_effect_cloud）への軸合わせは、lance_upper で確立した精密軸合わせ `mhdp_monsters:core/util/tick/event/turn_to_target_accurate`（`TargetTag` 相当のタグ付与 `tag @n[...] add Temp.Rotate.Target` を毎tick実行してから呼ぶ）をそのまま適用。マーカーに接近 or ロスト で `end` へ。
-  - **`end.mcfunction` の分岐は旧のまま維持**: `Mns.Temp.Valk.MoveToSpin`/`MoveToDashAttack` タグの有無で `spear_to_spin`/`lance_dashattack` へ直接遷移、どちらも無ければ末尾の `change/main` 呼び出しは**旧同様コメントアウトのまま**（未使用のdead codeではなく、現状 `lance_move` の唯一の入口が `lance_move_start`→常にどちらかのタグが付与された状態でしか呼ばれないため、到達不能な分岐として旧の意図を尊重）。
   - 旧 `turn_start.mcfunction` はヘッダが `lance_turn_l` 用のコピペミスで、かつ main から未参照（dead code）→ 移植せず。
+  - **レビュー反映（ユーザーがdisk上で修正）**: 終了判定を `run return run function .../end` に変更（ショートサーキット化）、ロスト判定に `distance=..64` の上限を追加（無制限探索を防止）。`end.mcfunction` は Claude が「常にどちらかのタグが付いた状態でしか呼ばれないので到達不能」と判断してコメントアウトのまま提案した末尾 `change/main` を、**ユーザーが明示的に「フォールバック」として有効化**（将来 `lance_move` が他の入口から呼ばれる可能性に備えた安全策とみられる。Claudeの「到達不能」判断は誤りではないが、フォールバックとして残す方が安全という判断）。`# 槍回転`/`# 突進攻撃`/`# フォールバック` の見出しコメントも追加。
 - **lance_move_start**（移動開始・単発）: 軸合わせは `alignment_start.m`（`TargetTag:"Mns.MovePos.Valk"`, `Tick:3`, `MaxRotation:360`）+ `alignment`。終了時に `animated_java_valk:valk/animations/lance_move/tween` で `lance_move` ループへ遷移。
 - **lance_moveback**（車庫入れ・後退）: 軸合わせは `alignment_start.m`（`TargetTag:"Mns.Target.Valk"`, `Tick:14`, `MaxRotation:360`）+ `alignment`。終了時 `Mns.Temp.Valk.MoveToChangePhase` があれば `change_phase` を挟んでから通常の `change/main`。
 - 3グループとも接地は `check_landing` に統一、`turn_start.mcfunction`（move_start/moveback）は `alignment_start.m` 置換のため移植せず。
@@ -215,16 +232,16 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] lance_flytackle  [ ] lance_flytackle_end  [ ] lance_flytackle_repeat  [ ] lance_flytackle_start
 - [x] lance_idle  [ ] lance_idle_short
 - [x] lance_move  [x] lance_move_start  [x] lance_moveback
-- [ ] lance_search
+- [x] lance_search
 - [x] lance_spear_l_to_r  [x] lance_spear_r_to_l
 - [x] lance_spear_to_spin_l  [x] lance_spear_to_spin_r
 - [x] lance_tackle
 - [ ] lance_to_shoot
-- [ ] lance_turn_l  [ ] lance_turn_r
+- [x] lance_turn_l  [x] lance_turn_r
 - [x] lance_upper_l  [x] lance_upper_r
 - [x] lance_vertical_l  [x] lance_vertical_l_to_r  [x] lance_vertical_r  [x] lance_vertical_r_to_l
 - [x] lance_vertical_turn_l  [x] lance_vertical_turn_r
-- [ ] lance_voice
+- [x] lance_voice
 - [ ] shoot_bomb_forward  [ ] shoot_bomb_side
 - [ ] shoot_idle
 - [ ] shoot_move  [ ] shoot_move_start  [ ] shoot_moveback
@@ -342,5 +359,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（19/85: 16/85 approve済み + lance_move系3 生成済み・レビュー待ち）。次のグループはユーザー指示待ち。
+**Stage 5-C 続き**（23/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。

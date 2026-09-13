@@ -138,6 +138,15 @@
         Attacks:[]\
     }
 
+# 咆哮
+    data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
+        Name:"Voice",AttackPart:"none",VectorType:"Radial",\
+        DamageValue:0.0f,ObjectDamageValue:0,GuardValue:4,ElementType:0,ElementMultiply:0,\
+        KnockbackStrength:0,IsLaunch:false,LaunchAngle:0,\
+        IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false,\
+        Effect:{IsApplyEffect:true,EffectId:1,Level:3,Tick:50}\
+    }
+
 # 翼槍突き (右翼爪)
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Spear.Right",AttackPart:"wing_right",VectorType:"Normal",\
