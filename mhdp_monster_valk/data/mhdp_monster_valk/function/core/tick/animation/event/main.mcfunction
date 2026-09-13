@@ -30,3 +30,7 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_upper_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_upper_r/main
 # 嚙みつき
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_bite.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_bite/main
+# 突進(体当たり)
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_dashattack.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_dashattack/main
+# 蛇行突進
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_tackle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_tackle/main

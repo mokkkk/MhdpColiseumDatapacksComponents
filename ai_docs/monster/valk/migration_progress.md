@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 14/85（lance_bite 生成済み・未レビュー）** + Stage 6 util 完了 + Stage 6-S バッチ1 完了。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 16/85**（14/85 approve済 + lance_dashattack/lance_tackle 生成済み・未レビュー）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -114,13 +114,24 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  🔶 14/85（lance_bite は未レビュー）
+#### 5-C: event/<group>/*（85 グループ）  🔶 16/85（lance_dashattack/lance_tackle は未レビュー）
 
 **lance_bite（嚙みつき）で追加した扱い**（2026-09-13）:
 - 旧は単一の固定オフセット判定（`positioned ^ ^1 ^4`、`distance=..3.8` の球状）を frame 23..30 の8フレーム連続で呼んでいた。新形式では dino の `bite` グループ（同型の固定オフセット単発攻撃）を参考に、`start_attack.m`（frame23）→ `attack.mcfunction` を frame23..30 の範囲で毎tick呼ぶ → `end_attack`（frame30）という構成に統一。`attack.mcfunction` 内は `positioned` を挟まず `apply_attack.m`（`cuboid_preview.m` も同様）の `Offset_Y:1.0,Offset_Z:4.0` に直接オフセットを埋め込む形（dino/bite/attack と同じ書式）。当たり判定サイズは旧の `distance=..3.8` をそのまま半径近似値としてScale 3.8に採用（lance_spear/vertical と同じ近似方針）。
-- 軸合わせは frame2/7 に `Tick:10,MaxRotation:180`（旧 `turn_start` の Tick10 を流用、MaxRotation は valk 標準の180を採用。旧コードに明示的な角度上限はなかったが、他グループとの統一を優先）。
 - AttackData参照名 `Bite`（左右分岐なし、既存registerのまま）。
 - 接地は `check_landing` に統一（旧の2行パターンは廃止）。
+- **レビュー反映（2026-09-13、ユーザーが disk 上で修正）**: 軸合わせの `MaxRotation` は Claude 提案の 180 ではなく **360** に修正（frame2/7）。移動 `21..27` の tp を `^0.6`→**`^0.9`** に強化。効果音 `sound` の2回目呼び出しを frame25→**frame42** に変更（旧は frame20/25 の2連呼びだったが、frame42 の重複する `playsound block.grass.step` 行と統合する意図と思われる）。意図的編集として尊重。
+
+**lance_dashattack（突進・体当たり）で追加した扱い**（2026-09-13）:
+- 旧の軸合わせ `turn_start` はコメントアウトされ未使用（dead code）→ **新形式でも軸合わせなし**（移動のみで直進する仕様）。`turn_start.mcfunction` は移植せず。
+- 攻撃は2段構成、AttackName は共通 `DashAttack`（body）: frame17 の単発大判定（`attack.mcfunction`、旧 `^ ^1 ^6` distance..3.8→Scale3.8、爆発演出付き）+ frame18..25 の突進中判定（`attack_dash.mcfunction`、旧 `^ ^1 ^4` distance..3.8→Scale3.8、演出なし）。`start_attack.m` を frame17（攻撃開始）に、`end_attack` を frame25（突進判定終了）に配置し、2つの当たり判定を同一の相殺ウィンドウ内に収めた。
+- lance_bite の `MaxRotation:360` 修正を踏まえ、以降の軸合わせ判定が必要な body 系グループでは 360 をデフォルト候補として提案する方針（今回は軸合わせ自体が無いため適用外）。
+
+**lance_tackle（蛇行突進）で追加した扱い**（2026-09-13）:
+- 軸合わせは frame2/7 に `alignment_start.m`（旧 `turn_start` の Tick10 を流用）。**MaxRotation は lance_bite のレビュー結果を踏まえ 360 を採用**（旧コードに明示的角度上限なし）。
+- 攻撃は左右への蛇行に対応して2回のヒット窓（frame25..29 / frame41..45）、AttackName は共通 `Tackle`（body）。**複数回ヒットする技の既存ルール通り、判定区間ごとに `start_attack.m`/`end_attack` で個別に挟む**（frame25開始→29終了、frame41開始→45終了の2セット）。
+- 当たり判定は旧 `distance=..3.4` をそのまま近似値としてScale3.4（`Offset_Y:1.0,Offset_Z:4.0`）に採用。
+- `turn_start.mcfunction` は `alignment_start.m` に置換のため移植せず。
 
 **lance_upper 系（翼槍突き上げ）で追加した扱い**（2026-09-07）:
 - 前方一直線の当たり判定（2026-09-08 ユーザー再設計・l/r 反映済み）: ダメージは `attack` 内の `apply_attack.m {Upper}` **1個の縦長ボックス**（`Offset_Z:28.5`, `Scale_X/Y:3.4`, `Scale_Z:43.0`。`cuboid_preview` は `Scale_Z:45.0`）。演出は別途 `attack` から `positioned ^ ^ ^N`（N=0..50, step5, 11点）で `attack_effect.mcfunction` を呼ぶ（dust赤/explosion のみ。ダメージなし）。Bomb/RedFlash の `summon text_display` はコメントアウト + `# TODO(Stage6)`。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
@@ -189,7 +200,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] lance_damage_flying
 - [ ] lance_damage_head  [ ] lance_damage_tail  [ ] lance_damage_tail_break
 - [ ] lance_damage_wing_l  [ ] lance_damage_wing_r
-- [ ] lance_dashattack
+- [x] lance_dashattack
 - [ ] lance_death
 - [ ] lance_down_end_l  [ ] lance_down_end_r  [ ] lance_down_l  [ ] lance_down_r
 - [ ] lance_flytackle  [ ] lance_flytackle_end  [ ] lance_flytackle_repeat  [ ] lance_flytackle_start
@@ -198,7 +209,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] lance_search
 - [x] lance_spear_l_to_r  [x] lance_spear_r_to_l
 - [x] lance_spear_to_spin_l  [x] lance_spear_to_spin_r
-- [ ] lance_tackle
+- [x] lance_tackle
 - [ ] lance_to_shoot
 - [ ] lance_turn_l  [ ] lance_turn_r
 - [x] lance_upper_l  [x] lance_upper_r
@@ -322,5 +333,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（14/85: lance_idle + lance_spear系4 + lance_vertical系6 + lance_upper系2 + lance_bite。lance_bite は生成済み・レビュー待ち）。次のグループはユーザー指示待ち。
+**Stage 5-C 続き**（16/85: 上記14/85 approve済み + lance_dashattack/lance_tackle 生成済み・レビュー待ち）。次のグループはユーザー指示待ち。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。

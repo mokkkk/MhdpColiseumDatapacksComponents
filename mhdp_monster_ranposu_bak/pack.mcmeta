@@ -1,6 +1,7 @@
 {
 	"pack": {
-		"pack_format": 101,
-		"description": "青鳥竜処理用のデータパック"
+		"description": "For Mhdp Coliseum Animated Java Datapack",
+		"min_format": 107,
+		"max_format": 107
 	}
 }
