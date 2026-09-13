@@ -34,3 +34,7 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_dashattack.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_dashattack/main
 # 蛇行突進
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_tackle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_tackle/main
+# 移動
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_move.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_move/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_move_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_move_start/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_moveback.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_moveback/main
