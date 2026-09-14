@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 23/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 27/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -114,7 +114,19 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  ✅ 23/85 approve済
+#### 5-C: event/<group>/*（85 グループ）  ✅ 27/85 approve済
+
+**lance_flytackle_start / lance_flytackle / lance_flytackle_repeat / lance_flytackle_end（滑空突進、4グループ）で追加した扱い**（2026-09-13）:
+- 一連の流れ: `lance_flytackle_start`（助走・発進、精密軸合わせ `turn_to_target_accurate` を frame範囲全体で毎tick実行）→ `lance_flytackle`（直進突撃、`main_sub` を1tickに最大2回実行して倍速移動、`Mns.Temp.Valk.EndFlyTackle` タグで早期終了時の二重実行を抑止）→ 到達/ロストで `lance_flytackle_repeat`（急停止→旋回→再発進、`Mns.Valk.JetCount` が残っていれば）または `lance_flytackle_end`（着地）。`Mns.Valk.JetCount`（Stage5-Aで既に `jet_tackle.mcfunction` から1or2に設定済み・登録済み objective）を1消費するごとにloop/end分岐。
+- **攻撃**: AttackName `JetTackle`（body、register済み）。`Offset_Y:1.0,Offset_Z:3.0`,Scale4.0（旧 `distance=..4` を近似採用）。**旧コードに `start_attack`/`end_attack` が一切無い**（相殺不可・連続当たり判定）ため、新形式でも start_attack/end_attack を挟まず `apply_attack.m` を連打する構成をそのまま踏襲（lance_vertical のお手と同じ理由）。`lance_flytackle`(main_sub内)/`lance_flytackle_repeat`(2区間)/`lance_flytackle_end` それぞれに同一内容の `attack.mcfunction` を配置（既存の重複配置パターンを踏襲）。
+- **RedFlash演出**: 旧の生 `summon text_display {Tags:["Mns.Shot.Valk.Vfx.RedFlash","...Long"]},scale:[12f,...]}` を `data modify storage api: Arg.Override set value {IsLong:true,IsFollow:true,Scale:12}` + `positioned ^-1 ^3 ^ run function api:object/summon.m {ObjectId:10047}` に置換（`lance_upper` の大サイズ12と同じ値）。追従は `tp @n[type=text_display,tag=10047.IsFollow] ^ ^3 ^`、即時消去は `kill @e[type=text_display,tag=10047.IsFollow]`。
+- **10047.valk_red_flash に `IsFollow` Override引数を追加（2026-09-14、ユーザー指示）**: `_index.d.mcfunction` に `#declare tag 10047.IsFollow` 追加、`init/.mcfunction` に `execute if data storage api: Arg.Override{IsFollow:true} run tag @s add 10047.IsFollow` を追加。旧コメント「ロング版（ループ・追従）」から「追従」の記述を分離し、`IsLong`（ループ生存）と `IsFollow`（追従識別タグ付与）を独立した意味に整理。**flytackle系のみ** `IsFollow:true` を渡すように変更し、追従・killのセレクタを `tag=10047.Long` → `tag=10047.IsFollow` に統一（`lance_upper`/`lance_vertical` は指示範囲外のため `10047.Long` のまま未変更）。
+- **移動先マーカーの軸合わせ**は `lance_move` と同じ `turn_to_target_accurate` パターン（`Mns.MovePos.Valk`/`Mns.Target.Valk` へのタグ付けを毎tick実行）。
+- **`move_start.mcfunction`（repeat/end）は dino と同型の現行API**: `mhdp_monsters:core/util/other/move_to_target_calc`/`move_to_target_move`（`turn_to_target_calc` と異なり非推奨化されていない。dino の `death_flying`/`breath_backstep` の `move_start.mcfunction` が同一パターンの実例）。ほぼ無改変で移植。
+- **de-macro化**: 6ロケータ（`pos_muzzle_r/l_0/1/2`）に向けた噴射パーティクルは `m.particle`/`m.particle_launch`/`m.particle_end` を `particle_muzzle`/`particle_launch_muzzle`/`particle_end_muzzle`（内容, `m.`プレフィックス除去）に、呼び出し元 `particle`/`particle_launch`/`particle_end`（ディスパッチャ、6個の `at_locator` 呼び出し）に再構成。
+- **移植しなかった dead code**: 各グループの `turn_start.mcfunction`（main内で不使用、`alignment_start.m` 系や `turn_to_target_accurate` 系に置換済み）。`lance_flytackle`（本体）フォルダ内の `particle.mcfunction`/`m.particle.mcfunction` は中身が `lance_flytackle_start` 用のヘッダ・内容をそのまま持つ誤配置コピペかつ未使用（main/main_subから参照0件）→ 移植せず。
+- **保留（意図的に据え置き）**: `lance_flytackle_start/main` 内の移動位置決定セクションに、`Mns.Valk.JetCount matches 2..` の同一 `tp ^ ^ ^3` 行が完全に重複している（旧コードのコピペ起因と思われる無害な冗長行）。挙動に影響しないため旧のまま維持。
+- 接地は `check_landing` に統一、モデル演出は Stage6 で確立済みの `ignite_start`/`ignite_end`（両翼簡略版）を使用。
 
 **lance_turn_l/r（軸合わせ旋回）で追加した扱い**（2026-09-13）:
 - `alignment_start.m`（`TargetTag:"Mns.Target.Valk"`, `Tick:14`, `MaxRotation:360`）+ `alignment` に統一。旧 `turn_start.mcfunction` は移植せず（`alignment_start.m` に置換）。
@@ -229,7 +241,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_dashattack
 - [ ] lance_death
 - [ ] lance_down_end_l  [ ] lance_down_end_r  [ ] lance_down_l  [ ] lance_down_r
-- [ ] lance_flytackle  [ ] lance_flytackle_end  [ ] lance_flytackle_repeat  [ ] lance_flytackle_start
+- [x] lance_flytackle  [x] lance_flytackle_end  [x] lance_flytackle_repeat  [x] lance_flytackle_start
 - [x] lance_idle  [ ] lance_idle_short
 - [x] lance_move  [x] lance_move_start  [x] lance_moveback
 - [x] lance_search
@@ -315,7 +327,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 | `10044` | `valk_comet_star` | `vfx_comet_star/tick` | 星型 VFX | なし | **TODO** |
 | `10045` | `valk_beam` | `vfx_beam/tick` | 龍閃ビーム VFX（`lance_biim_*`） | なし（event `lance_biim_2/attack_*` で判定） | **TODO** |
 | `10046` | `valk_bomb` | `vfx_bomb/tick` | 爆発 VFX（`shoot_bomb_*` の damage は event 側） | なし | **TODO** |
-| `10047` | `valk_red_flash` | `vfx_red_flash/tick` | 赤フラッシュ VFX。**実装完了・`lance_upper`（Long+拡大）と `lance_vertical`（単発 Scale:8）両方で使用中** | なし | `Override.IsLong`（bool → `10047.Long` タグ。true でループ・追従。旧 `Mns.Shot.Valk.Vfx.RedFlash.Long`）, `Override.Scale`（`lance_upper` は 7 → 12、`lance_vertical` は 8） |
+| `10047` | `valk_red_flash` | `vfx_red_flash/tick` | 赤フラッシュ VFX。**実装完了・`lance_upper`（Long+拡大）/`lance_vertical`（単発 Scale:8）/`lance_flytackle`系（Long+IsFollow+拡大）で使用中** | なし | `Override.IsLong`（bool → `10047.Long` タグ。true でループ生存。旧 `Mns.Shot.Valk.Vfx.RedFlash.Long`）, `Override.IsFollow`（bool → `10047.IsFollow` タグ。2026-09-14追加。呼び出し側がこのタグで対象を特定し tp で追従させる。IsLongとは独立した意味）, `Override.Scale`（`lance_upper` は 7 → 12、`lance_vertical` は 8、`lance_flytackle` 系は 12） |
 | `10048` | `valk_thunder` | `vfx_thunder/tick` | 雷 VFX（`lance_biim`, `shoot_bomb`） | なし | **TODO** |
 
 > **⚠ `init/.mcfunction` は `valk_red_flash` 以外すべて `# TODO` とする**（ユーザー指示 2026-09-10）。向き固定 `tp @s ~ ~ ~ ~ ~` だけ置き、それ以外（速度・寿命・ターゲット保持・スケール・variant タグ付与・Override 引数の受け取り）は `# TODO: init 固有処理を実装` のコメントで保留。`valk_red_flash` のみ上記 Override 引数（`IsLong` / `Scale`）で実装する。
@@ -359,5 +371,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（23/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
+**Stage 5-C 続き**（27/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。

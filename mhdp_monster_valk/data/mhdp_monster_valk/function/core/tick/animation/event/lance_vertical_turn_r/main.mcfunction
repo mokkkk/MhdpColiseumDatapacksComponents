@@ -5,9 +5,9 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.lance_vertical_turn_r.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Valk",Tick:5,MaxRotation:360}
+    execute if score @s aj.lance_vertical_turn_r.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Valk",Tick:6,MaxRotation:360}
     execute if score @s aj.lance_vertical_turn_r.frame matches 30..36 at @s run function mhdp_monsters:core/util/tick/event/alignment
-    execute if score @s aj.lance_vertical_turn_r.frame matches 33 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Valk",Tick:10,MaxRotation:360}
+    execute if score @s aj.lance_vertical_turn_r.frame matches 33 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Valk",Tick:7,MaxRotation:360}
     execute if score @s aj.lance_vertical_turn_r.frame matches 37..40 at @s run function mhdp_monsters:core/util/tick/event/alignment
 
 # 移動
