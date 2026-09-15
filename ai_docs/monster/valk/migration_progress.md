@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 27/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 44/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -114,7 +114,15 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  ✅ 27/85 approve済
+#### 5-C: event/<group>/*（85 グループ）  ✅ 44/85 approve済
+
+**lance_damage_*（怯み系17グループ）で追加した扱い**（2026-09-14）:
+- いずれも攻撃判定・軸合わせなしの単純な「frame監視で移動/効果音/接地→終了」構造。既存の他グループと同じく接地は `check_landing` に統一。全グループ共通で frame1 に `tag @s remove Mns.Valk.State.IsShoot`（被弾時は強制的に彗龍形態に戻す）を実施。
+- **部位別怯み**（`lance_damage_head`/`tail`/`tail_break`/`body_l`/`body_r`/`wing_l`/`wing_r`）: いずれも `end.mcfunction` は素直に `change/main` を呼ぶだけ。`tail_break`（尻尾切断時の専用怯み）も同様で、尻尾切断オブジェクトの召喚自体は別途 `reaction/break/tail_cut`（Stage6-S共通object待ちTODO）側の責務。
+- **ダウン**（`lance_damage_down_l`/`_r`）: `end.mcfunction` は `change/main` を呼ばず、`animated_java_valk:valk/animations/lance_down_l|r/tween` へ直接遷移（`lance_down_l/r` グループ自体は未移行だが、tween呼び出しはアニメ名参照のみなので配線可能）。
+- **飛行中怯み**（`lance_damage_flying`）: dino の `death_flying`/`breath_backstep` と同型の `move_start.mcfunction`（`move_to_target_calc`、Tick6、地面へスナップ）で落下点を計算。`end.mcfunction` は `Mns.General.DownCount`（共通engine score）が1以上なら `lance_down_l` へ、そうでなければ `lance_down_end_l` へ分岐（旧のまま、`return run` によるショートサーキット）。
+- **反撃硬直（カウンター）系7グループ**（`lance_damage_counter`/`_end`/`_end_mirror`/`_head_start`/`_mirror`/`_wing_l_start`/`_wing_r_start`）: 頭部/右翼始動は `lance_damage_counter_head_start`→`lance_damage_counter`→`lance_damage_counter_end`→`change/main`、**左翼始動のみ `_mirror` 系**（`lance_damage_counter_wing_l_start`→`lance_damage_counter_mirror`→`lance_damage_counter_end_mirror`→`change/main`）を通る非対称構造。旧コードの意図（AJモデルのミラーリング都合か）をそのまま踏襲、対称化などの変更はしていない。
+- 全グループ、旧 `end.mcfunction` のヘッダコメントが別グループ（`lance_damage_head`等）を指す誤記だった箇所は、自グループ名に修正。
 
 **lance_flytackle_start / lance_flytackle / lance_flytackle_repeat / lance_flytackle_end（滑空突進、4グループ）で追加した扱い**（2026-09-13）:
 - 一連の流れ: `lance_flytackle_start`（助走・発進、精密軸合わせ `turn_to_target_accurate` を frame範囲全体で毎tick実行）→ `lance_flytackle`（直進突撃、`main_sub` を1tickに最大2回実行して倍速移動、`Mns.Temp.Valk.EndFlyTackle` タグで早期終了時の二重実行を抑止）→ 到達/ロストで `lance_flytackle_repeat`（急停止→旋回→再発進、`Mns.Valk.JetCount` が残っていれば）または `lance_flytackle_end`（着地）。`Mns.Valk.JetCount`（Stage5-Aで既に `jet_tackle.mcfunction` から1or2に設定済み・登録済み objective）を1消費するごとにloop/end分岐。
@@ -230,14 +238,14 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] lance_biim_1  [ ] lance_biim_2
 - [x] lance_bite
 - [ ] lance_charge  [ ] lance_charge_damage  [ ] lance_charge_end  [ ] lance_charge_start
-- [ ] lance_damage_body_l  [ ] lance_damage_body_r
-- [ ] lance_damage_counter  [ ] lance_damage_counter_end  [ ] lance_damage_counter_end_mirror
-- [ ] lance_damage_counter_head_start  [ ] lance_damage_counter_mirror
-- [ ] lance_damage_counter_wing_l_start  [ ] lance_damage_counter_wing_r_start
-- [ ] lance_damage_down_l  [ ] lance_damage_down_r
-- [ ] lance_damage_flying
-- [ ] lance_damage_head  [ ] lance_damage_tail  [ ] lance_damage_tail_break
-- [ ] lance_damage_wing_l  [ ] lance_damage_wing_r
+- [x] lance_damage_body_l  [x] lance_damage_body_r
+- [x] lance_damage_counter  [x] lance_damage_counter_end  [x] lance_damage_counter_end_mirror
+- [x] lance_damage_counter_head_start  [x] lance_damage_counter_mirror
+- [x] lance_damage_counter_wing_l_start  [x] lance_damage_counter_wing_r_start
+- [x] lance_damage_down_l  [x] lance_damage_down_r
+- [x] lance_damage_flying
+- [x] lance_damage_head  [x] lance_damage_tail  [x] lance_damage_tail_break
+- [x] lance_damage_wing_l  [x] lance_damage_wing_r
 - [x] lance_dashattack
 - [ ] lance_death
 - [ ] lance_down_end_l  [ ] lance_down_end_r  [ ] lance_down_l  [ ] lance_down_r
@@ -371,5 +379,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（27/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
+**Stage 5-C 続き**（44/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。
