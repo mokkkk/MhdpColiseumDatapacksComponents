@@ -31,7 +31,7 @@
         # function mhdp_monster_valk:core/tick/animation/change/main
 
 # 強制再生
-    function animated_java_valk:valk/animations/lance_damage_counter_wing_r_start/tween {duration:1, to_frame: 1}
+    function animated_java_valk:valk/animations/lance_damage_flying/tween {duration:1, to_frame: 1}
 
 # 強制リアクション
     # function mhdp_monster_valk:core/damage/reaction/anger
