@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 48/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 52/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -114,7 +114,17 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  ✅ 48/85 approve済
+#### 5-C: event/<group>/*（85 グループ）  ✅ 52/85 approve済
+
+**lance_charge_start / lance_charge / lance_charge_damage / lance_charge_end（龍気吸引、4グループ）で追加した扱い**（2026-09-14）:
+- 流れ: `lance_charge_start`（助走）→ `lance_charge`（吸引ループ、`Mns.Valk.ChargeCount` を1ずつ加算し6まで自己ループ、7周目で `lance_charge_end` へ）→ 通常は `lance_charge_end`（解放・攻撃準備完了）だが、吸引中に胸(BodySp/PartId9)へ十分ダメージが入ると Stage4 で既に配線済みの `reaction/body_sp.mcfunction` から直接 `lance_charge_damage` へ割り込み遷移。
+- **肉質変化**: `lance_charge_start` frame27 で胴/両腕の `HitBox` の `PartId` を通常値(1/3/4)から吸引中専用の `9`（胸=bodySp）へ変更、`lance_charge_damage`/`lance_charge_end` の frame2 で元の値に復元。この仕組みは Stage4 で先に用意されていた `Mns.Valk.BodySp.Damage` 判定と対になっている。
+  - **レビュー反映（2026-09-20、ユーザー指示）**: インライン3行だった肉質変化処理を `core/util/phase/charge_start.mcfunction`（PartId→9）/ `core/util/phase/charge_end.mcfunction`（PartId→1/3/4）に切り出し。呼び出し元3箇所（`lance_charge_start`, `lance_charge_damage`, `lance_charge_end`）は該当frameで1行 `function .../core/util/phase/charge_start|charge_end` を呼ぶだけに簡略化。**Stage6で「valk に phase/ は不要」と判断していたが、この吸引専用の肉質変化ロジックに限り `core/util/phase/` を新設して例外的に使用**（valk固有の熱化/風化ギミックが無い点は変わらず、あくまでcharge系の共有ロジック切り出し用途）。
+  - **確認済み（2026-09-20）**: charge_start/charge_end の肉質変化を `as_locator` 経由（ロケータ名で直接HitBoxエンティティを`as`指定）に書き換えられないか検討。`mhdp_monster_dino` の `core/util/phase/head_heat_start.mcfunction` 等を確認したが、同種の処理は `scoreboard players set @e[type=slime,tag=...] ...`（タグ指定・`as_locator`不使用）のみで前例なし。ユーザーに確認した結果、**「dinoに同様の処理がないなら現状のまま(`as @e[...]` + タグ指定)で良い」との回答**→ 変更せず現状維持で確定。
+- **RedFlash/Bomb VFXをobjectへ置換**: `lance_charge_damage` frame6 の生 `summon text_display ...Mns.Shot.Valk.Vfx.Bomb...`（scale 5f）→ `positioned ^ ^3 ^-2 run function api:object/summon.m {ObjectId:10046}`（`10046.valk_bomb` の既定scaleが5fで完全一致、Override不要）。`lance_charge_end` frame10 の左右ミューズル(`pos_muzzle_r/l_1`)からの生 RedFlash summon（scale 7f, 単発）→ `Arg.Override{Scale:7}` + `api:object/summon.m {ObjectId:10047}`（`IsLong`/`IsFollow` 不要な単発フラッシュ）。
+- 6ロケータの吸引演出パーティクル（`m.particle`）は他グループと同じく `m.` プレフィックス除去+ディスパッチャ/内容分離。
+- `lance_charge_damage` の `particle.mcfunction`/`m.particle.mcfunction` は中身が `lance_charge` 用のコピペ誤配置かつ `main.mcfunction` から未参照（dead code）→ 移植せず。
+- 接地は `check_landing` に統一。
 
 **lance_down_l / lance_down_r / lance_down_end_l / lance_down_end_r（ダウン系4グループ）で追加した扱い**（2026-09-14）:
 - `lance_damage_down_*`/`lance_damage_flying` から `Mns.General.DownCount` 経由で遷移してくる先。`lance_down_l/r` は `Mns.State.IsStun` が立っている間、frame監視で毎tick `at_locator {name:"pos_head"}` 経由の `effect_stun.mcfunction`（`particle crit`）を実行（旧 `on passengers ... data.locators.pos_head` マクロから変換）。
@@ -243,7 +253,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] lance_anger
 - [ ] lance_biim_1  [ ] lance_biim_2
 - [x] lance_bite
-- [ ] lance_charge  [ ] lance_charge_damage  [ ] lance_charge_end  [ ] lance_charge_start
+- [x] lance_charge  [x] lance_charge_damage  [x] lance_charge_end  [x] lance_charge_start
 - [x] lance_damage_body_l  [x] lance_damage_body_r
 - [x] lance_damage_counter  [x] lance_damage_counter_end  [x] lance_damage_counter_end_mirror
 - [x] lance_damage_counter_head_start  [x] lance_damage_counter_mirror
@@ -291,7 +301,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
   - `anger_start`/`anger_end` から `tag @s add/remove Mns.State.IsAnger` は削除（`start_anger.m`/`end_anger.m` 側で処理。`end_anger.m` は `$function mhdp_monster_valk:core/util/models/anger_end` を呼ぶ）。
   - `models/ignite_start` / `ignite_end`（両翼版）は `ignite_start_left`+`ignite_start_right` を呼ぶだけの簡略デリゲータ（`model_interrupt` が `ignite_end` を参照）。
   - **省略**: `models/break_tail`（旧は dino 丸コピペ = `aj.dino_aj.bone.*` / `Mns.Dino.State.*` 参照、valk 未使用。valk 尻尾は切断のみ = `break_tail_cut`）。
-- [x] **`core/util/phase/*` は生成しない**（判断: 旧 valk の phase/ は全て dino の丸コピペ [`#> mhdp_monster_dino:...` ヘッダ / `Mns.Dino.State.HeadHeat` / `Mns.Dino.PhaseCount.*` / dino専用 models 参照]。新 valk コードから `core/util/phase` への参照は 0 件。valk は頭/尻尾の赤熱化・風化ギミックを持たない [ジェット点火 = ignite / 龍気形態 = shoot で別管理]。**valk に phase/ は不要**）。
+- [x] **`core/util/phase/*` は当初生成しない判断**（旧 valk の phase/ は全て dino の丸コピペ [`#> mhdp_monster_dino:...` ヘッダ / `Mns.Dino.State.HeadHeat` / `Mns.Dino.PhaseCount.*` / dino専用 models 参照]。valk は頭/尻尾の赤熱化・風化ギミックを持たない）。**2026-09-20 に例外追加**: `lance_charge_*`（龍気吸引）の肉質変化（HitBox PartId 切替）ロジックをユーザー指示で `core/util/phase/charge_start.mcfunction`/`charge_end.mcfunction` として新設（Stage 5-C lance_charge系参照）。
 - [ ] `core/debug/interrupt.mcfunction` / `interrupt_anger.mcfunction`
 - [ ] `advancement/toast_break.json`（icon = `icons/valk`。show_toast が参照）
 #### Stage 6-S: 弾 / VFX の `assets:object/` 移行  🔶 バッチ1 完了（2026-09-10）
@@ -385,5 +395,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（48/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
+**Stage 5-C 続き**（52/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。

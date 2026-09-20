@@ -6,7 +6,7 @@
 
 # 表示
     $return run dialog show @s {\
-        type:"minecraft:notice",title:{translate:"ui.hunter_note.weapon_guide.short_sword.normal",bold:1b},can_close_with_escape:1b,after_action:"wait_for_response",inputs:[],body:[\
+        type:"minecraft:notice",title:{translate:"ui.hunter_note.weapon_guide.short_sword.normal",bold:1b},can_close_with_escape:1b,after_action:"close",inputs:[],body:[\
             {type:"minecraft:plain_message",contents:[\
                 [{text:"◇ ",color:"#ffffff"},{translate:"weapon.short_sword.guide.normal_attack",bold:true}," : ",{keybind:"key.attack"},"\n"],\
                 [{text:"・",color:"#afafaf"},{translate:"weapon.short_sword.action.normal_1"}," > ",{translate:"weapon.short_sword.action.normal_2"}," > ",{translate:"weapon.short_sword.action.normal_3"}]\
@@ -43,7 +43,7 @@
 
 # 保持
     dialog show @s {\
-        type:"minecraft:notice",title:{translate:"ui.hunter_note.weapon_guide.short_sword.normal",bold:1b},can_close_with_escape:1b,after_action:"wait_for_response",inputs:[],body:[\
+        type:"minecraft:notice",title:{translate:"ui.hunter_note.weapon_guide.short_sword.normal",bold:1b},can_close_with_escape:1b,after_action:"close",inputs:[],body:[\
             {type:"minecraft:plain_message",contents:[\
                 [{text:"◇ ",color:"#ffffff"},{translate:"weapon.short_sword.guide.normal_attack",bold:true}," : ",{keybind:"key.attack"},"\n"],\
                 [{text:"・",color:"#afafaf"},{translate:"weapon.short_sword.action.normal_1"}," > ",{translate:"weapon.short_sword.action.normal_2"}," > ",{translate:"weapon.short_sword.action.normal_3"}]\

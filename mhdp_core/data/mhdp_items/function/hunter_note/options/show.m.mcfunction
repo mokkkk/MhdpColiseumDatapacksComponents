@@ -6,7 +6,7 @@
 
 # 表示
     $return run dialog show @s {\
-        type:"minecraft:confirmation",title:{translate:"ui.hunter_note.options",bold:1b},body:[],can_close_with_escape:1b,after_action:"wait_for_response",inputs:[\
+        type:"minecraft:confirmation",title:{translate:"ui.hunter_note.options",bold:1b},body:[],can_close_with_escape:1b,after_action:"close",inputs:[\
             {type:"minecraft:single_option",key:"OptMoveJump",label:{translate:"ui.hunter_note.options.move_jump",hover_event:{action:"show_text",value:{translate:"ui.hunter_note.options.move_jump.tooltip"}}},options:[\
                 {id:"1",display:{translate:"ui.hunter_note.single_action_on",color:"#7bff6c"},initial:$(MoveJumpOn)},\
                 {id:"2",display:{translate:"ui.hunter_note.single_action_off",color:"#ff6c70"},initial:$(MoveJumpOff)}\
@@ -22,7 +22,7 @@
 
 # 保持
     dialog show @s {\
-        type:"minecraft:confirmation",title:{translate:"ui.hunter_note.options",bold:1b},body:[],can_close_with_escape:1b,after_action:"wait_for_response",inputs:[\
+        type:"minecraft:confirmation",title:{translate:"ui.hunter_note.options",bold:1b},body:[],can_close_with_escape:1b,after_action:"close",inputs:[\
             {type:"minecraft:single_option",key:"OptMoveJump",label:{translate:"ui.hunter_note.options.move_jump"},options:[\
                 {id:"1",display:{translate:"ui.hunter_note.single_action_on",color:"#7bff6c",hover_event:{action:"show_text",value:{translate:"ui.hunter_note.options.move_jump.on.tooltip"}}},initial:0b},\
                 {id:"2",display:{translate:"ui.hunter_note.single_action_off",color:"#ff6c70",hover_event:{action:"show_text",value:{translate:"ui.hunter_note.options.move_jump.off.tooltip"}}},initial:0b}\

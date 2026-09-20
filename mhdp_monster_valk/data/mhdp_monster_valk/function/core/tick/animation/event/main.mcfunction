@@ -78,3 +78,8 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_damage_counter_mirror.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_mirror/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_damage_counter_end.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_end/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_damage_counter_end_mirror.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_end_mirror/main
+# 龍気吸引
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_charge_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_charge.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_charge_damage.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_damage/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_charge_end.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_end/main
