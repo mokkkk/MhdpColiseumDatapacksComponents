@@ -8,6 +8,7 @@
 
 # 待機
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_idle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_idle_short.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle_short/main
 
 ## 彗龍形態
 
@@ -83,6 +84,9 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_charge.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_charge_damage.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_damage/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_charge_end.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_end/main
+# 形態変化
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_to_shoot.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_to_shoot/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_to_lance.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_to_lance/main
 # 怒り
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_anger.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_anger/main
 # 討伐

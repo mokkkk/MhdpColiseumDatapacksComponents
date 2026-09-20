@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 55/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 58/85**（55/85 approve済 + lance_idle_short/lance_to_shoot/shoot_to_lance 生成済み・未レビュー）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -114,7 +114,14 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  ✅ 55/85 approve済
+#### 5-C: event/<group>/*（85 グループ）  ✅ 58/85 approve済
+
+**lance_idle_short / lance_to_shoot / shoot_to_lance（短縮待機・形態変化、3グループ）で追加した扱い**（2026-09-14）:
+- **lance_idle_short**: 攻撃・軸合わせなしの短縮待機。`lance_upper` の `end.mcfunction` から `change/main` を経由せず直接tweenされる先（既にStage5-Cのlance_upper移行時に配線済み）。
+- **lance_to_shoot（彗龍→龍気）/ shoot_to_lance（龍気→彗龍）**: `change/play/main.mcfunction` の `Anim.Change.LanceToShoot`/`Anim.Change.ShootToLance` から呼ばれる形態変化アニメ。frame2で `Mns.Valk.State.IsShoot` タグを付与/削除する。
+  - **レビュー反映（2026-09-14、ユーザー指示）**: 状態変化処理をインライン1行から `core/util/phase/to_shoot.mcfunction`（`tag @s add Mns.Valk.State.IsShoot`）/ `core/util/phase/to_lance.mcfunction`（`tag @s remove Mns.Valk.State.IsShoot`）に切り出し（当初 `lance_to_shoot`/`shoot_to_lance` の名前で作成したが、ユーザー指示で `to_shoot`/`to_lance` にリネーム）。呼び出し元は該当frameで1行 `function .../core/util/phase/to_shoot|to_lance` を呼ぶだけに簡略化（`charge_start`/`charge_end` と同じ切り出しパターン）。
+- 両形態変化グループに `m.particle_head.mcfunction`（`voice`用ヘッダの誤配置・`main.mcfunction`から未参照）が旧コードに残っていたが dead code のため移植せず。
+- 接地は3グループとも `check_landing` に統一。
 
 **lance_anger / lance_death / death_flying（怒り・討伐、3グループ）で追加した扱い**（2026-09-14）:
 - **lance_anger（怒り開始の咆哮）**: `lance_voice` と構造がほぼ同一（旧の怯み専用API `mhdp_core:player/damage/voice/main` 呼び出し）だったため、**`mhdp_monster_dino:core/tick/animation/event/anger/*` を確認し、dino でも `voice` と全く同じ `AttackName:"Voice"` を再利用する `apply_attack_distance.m` 方式だった**ことを確認 → lance_voice と同じ変換方針をそのまま適用（`attack.mcfunction` 新設、`particle_head.mcfunction` 新設して `m.`プレフィックス除去）。dino に前例があったため、ユーザーへの確認は不要と判断（lance_voice のときの確立済み方針の横展開）。
@@ -273,13 +280,13 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_death
 - [x] lance_down_end_l  [x] lance_down_end_r  [x] lance_down_l  [x] lance_down_r
 - [x] lance_flytackle  [x] lance_flytackle_end  [x] lance_flytackle_repeat  [x] lance_flytackle_start
-- [x] lance_idle  [ ] lance_idle_short
+- [x] lance_idle  [x] lance_idle_short
 - [x] lance_move  [x] lance_move_start  [x] lance_moveback
 - [x] lance_search
 - [x] lance_spear_l_to_r  [x] lance_spear_r_to_l
 - [x] lance_spear_to_spin_l  [x] lance_spear_to_spin_r
 - [x] lance_tackle
-- [ ] lance_to_shoot
+- [x] lance_to_shoot
 - [x] lance_turn_l  [x] lance_turn_r
 - [x] lance_upper_l  [x] lance_upper_r
 - [x] lance_vertical_l  [x] lance_vertical_l_to_r  [x] lance_vertical_r  [x] lance_vertical_r_to_l
@@ -292,7 +299,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] shoot_shot_forward  [ ] shoot_shot_horizon
 - [ ] shoot_step
 - [ ] shoot_sweep_anger_l  [ ] shoot_sweep_anger_r  [ ] shoot_sweep_l  [ ] shoot_sweep_r
-- [ ] shoot_to_lance
+- [x] shoot_to_lance
 - [ ] shoot_turn_l  [ ] shoot_turn_r
 - [ ] shoot_vertical_l  [ ] shoot_vertical_r
 - [ ] state_paralysis
@@ -402,5 +409,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（55/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
+**Stage 5-C 続き**（58/85: 55/85 approve済み + lance_idle_short/lance_to_shoot/shoot_to_lance 生成済み・レビュー待ち）。次のグループはユーザー指示待ち。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。
