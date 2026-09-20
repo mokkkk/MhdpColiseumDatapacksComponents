@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 61/85**（59/85 approve済 + lance_biim系2 生成済み・未レビュー）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047 に IsFollow/IsBeamVfx、10045/10048 に Scale、10048 に Tag Override 追加済み）。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 61/85 approve済み**（lance_biim系2 含む）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047 に IsFollow/IsBeamVfx、10045/10048 に Scale、10048 に Tag Override 追加済み）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -114,7 +114,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  🔶 61/85（lance_biim系2 は未レビュー）
+#### 5-C: event/<group>/*（85 グループ）  🔶 61/85（approve済み。次は残り24グループから着手）
 
 **lance_biim_1（龍閃・溜め）/ lance_biim_2（龍閃・発射）で追加した扱い**（2026-09-14、設計方針をユーザーと事前協議のうえ実装）:
 - **調査で判明**: Stage6-Sで用意した `10041〜10048` のうち `10045.valk_beam`/`10048.valk_thunder` は旧 `core/tick/shot/vfx_beam`/`vfx_thunder`（個別フォント想定）を元に作ったが、実際に `lance_biim_1/2` が使っていたのは**RedFlash(10047)と全く同じ汎用summonレシピ（font:"vfx/valstrax" 共通、`RedFlash.Long`タグ流用）**だった。加えて「Jet」（口元で徐々に拡大する溜め閃光、lance_biim_1専用）はObjectId表に存在しない新規VFXだった。
@@ -125,7 +125,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
     - **レビュー反映（2026-09-14、ユーザー指示）**: `tick/.mcfunction` を「通常版」と「IsBeamVfx版」で完全に分離。`tick/.mcfunction` は `ObjectTick` 加算後、`10047.IsBeamVfx` タグの有無で `tick/normal.mcfunction`（従来のframe送り+Long/非Long生存管理）か `tick/beam.mcfunction`（frame送り+スケール拡大。**Long/非Longの区別なく常に呼び出し側がkillするまで生存**、自動消滅ロジックなし）に完全分岐するシンプルな dispatcher に変更。これに伴い `IsBeamVfx` 使用時は `IsLong:true` を付与する必要がなくなった（`lance_biim_1` のJet召喚は `IsFollow:true` のみで正しい）。
   - **10045/10048 に `Scale` Override も追加**（`init/apply_scale.m.mcfunction`、10047と同一パターン）。旧値: Beam=8, Thunder=2。
   - **10048 に開始フレームのランダム化を追加**（`execute store result score @s MhdpCore run random value 0..2`、旧 `Mns.Shot.Timer` のランダム初期値を再現。複数体が同期点滅しないように）。
-- **攻撃**: `attack_beam`/`attack_beam_air`/`attack_beam_finish`（各 `*_loop` による再帰レイキャスト、壁 or 30step で停止）は、旧 `mhdp_core:player/damage/entity_to_player/main`・`entity_to_entity/main`（廃止API）を `api:damage_entity_to_player`・`api:damage_entity_to_entity`（`rotated as @s` を `as` 切替の前に置く、`apply_attack.m` 内部と同じ呼び出し順序）に置換。タグ収集→ループ→一括ダメージという旧来の構造自体は温存（`apply_attack.m` の汎用ラッパーは使わず、再帰的レイキャストという特殊構造のため個別実装）。`attack_beam_finish_loop` のみ旧から**再帰の各ステップで即時ダメージ適用**（連続ヒットする仕様、`attack_beam_loop`/`attack_beam_air_loop`は末尾で一括ダメージ）という違いがあり、そのまま踏襲。
+- **攻撃**（2026-09-20 最終形）: `attack_beam`/`attack_beam_air`/`attack_beam_finish`/`attack_bomb` は最終的に `apply_attack.m`（`execute facing entity @n[type=area_effect_cloud,tag=Mns.BeamPos.Valk] feet run` で照準方向に向けた単一の縦長ボックス、`Offset_Z:30.5`/`Scale_Z:30.0` 等）に統一。各 `*_loop`（再帰レイキャスト）は当たり判定を持たず、**パーティクル/オブジェクト演出専用**に用途変更（コメントも「演出用、壁に当たるまで再帰」に修正）。当たり判定処理は複雑だったため、この最終形は**ユーザーが disk 上で直接実装**（Claude 側の中間案＝Temp.Hit収集+sentinelタグによるapply_attack.m呼び分けは不採用、より単純な単一box方式に置換）。approve 済み。
 - **地割れ演出**（`effect_beam_loop`）: 確立済みパターン `api:object/summon.m {ObjectId:16}` に置換。
 - **爆発 VFX**（`attack_bomb`, `attack_beam_finish_loop`）: 既存の `{ObjectId:10046}`（Bomb）/`{ObjectId:10047, Scale:8}`（RedFlash単発）に置換。
 - **ロケータ記法の注意**: `beam_start`/`beam_end`（`pos_`で始まらない）は `as_locator` を使用（`pos_muzzle_*` 系は従来通り `at_locator`）。CLAUDE.mdの命名規則をそのまま適用。
@@ -431,5 +431,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（61/85: 59/85 approve済み + lance_biim系2 生成済み・レビュー待ち）。次のグループはユーザー指示待ち。
+**Stage 5-C 続き**（61/85 approve済み。lance_biim系2 含め全て承認済み）。次のグループはユーザー指示待ち。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。
