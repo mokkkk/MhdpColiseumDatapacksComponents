@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 52/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 55/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -114,7 +114,13 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  ✅ 52/85 approve済
+#### 5-C: event/<group>/*（85 グループ）  ✅ 55/85 approve済
+
+**lance_anger / lance_death / death_flying（怒り・討伐、3グループ）で追加した扱い**（2026-09-14）:
+- **lance_anger（怒り開始の咆哮）**: `lance_voice` と構造がほぼ同一（旧の怯み専用API `mhdp_core:player/damage/voice/main` 呼び出し）だったため、**`mhdp_monster_dino:core/tick/animation/event/anger/*` を確認し、dino でも `voice` と全く同じ `AttackName:"Voice"` を再利用する `apply_attack_distance.m` 方式だった**ことを確認 → lance_voice と同じ変換方針をそのまま適用（`attack.mcfunction` 新設、`particle_head.mcfunction` 新設して `m.`プレフィックス除去）。dino に前例があったため、ユーザーへの確認は不要と判断（lance_voice のときの確立済み方針の横展開）。
+- **lance_death（地上讨伐）/ death_flying（飛行中討伐）**: 攻撃・軸合わせなしの単純な最終アニメーション。接地は `check_landing` に統一。末尾の「終了」行は旧コードで**既にコメントアウトされ未使用**（討伐は終端状態のため次アニメーションへの遷移が無い。`Mns.General.BlinkTimer` を巨大値にしてまばたき停止、`Mns.State.IsCanCarving`+`Carving.Count` で剝ぎ取り可能化する処理のみ）→ 対応する `end.mcfunction`（中身が `lance_idle/end` の誤コピペで未参照）は移植せず。
+- **death_flying の呼び出し経路確認**: `core/death/death.mcfunction` の `Mns.State.IsFlying` 分岐は共通ユーティリティ `mhdp_monsters:core/util/damage/death_flying`（影の位置へワープするだけの汎用処理）を呼ぶのみで、per-monster の `event/death_flying/` イベントへの明示的な tween 呼び出しはどこにも無い。dino 側も同様の構造（`mhdp_monster_dino:core/death/death.mcfunction` も同じ共通utilを呼ぶのみ）と確認済みのため、`death_flying` AJ アニメーションは AJ 側の自動遷移で再生される前提として扱う（新規の配線は不要）。
+- **レビュー反映（2026-09-14、ユーザー指摘）**: `death_flying`/`lance_damage_flying`（旧称damage_flying相当）の「移動」処理を、旧来の `move_to_target_calc`/`move_to_target_move`（＋専用 `move_start.mcfunction`）方式から、**dino が実際に使っている最新API `mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {Tick:6,OffsetX:0.0,OffsetY:0.0,OffsetZ:0.0,IsAdjustLand:"true"}` + `vector_move`** に置換（`dino:death_flying/main` および `dino:damage_flying/main` で確認。マーカー summon 不要、`IsAdjustLand:"true"` が旧on_ground相当）。両グループの `move_start.mcfunction` は不要になったため削除。**同一の move_to_target_calc/move_to_target_move パターンを使う他グループ（`lance_flytackle_*`, `lance_move` 系）は今回の指摘範囲外**（それらは移動先マーカー `Mns.MovePos.Valk` を使う別ユースケースで、`vector_move_offset_start.m` のようなオフセット単発移動とは要件が異なるため、dino側にも該当する移行例が無い限り現状維持）。
 
 **lance_charge_start / lance_charge / lance_charge_damage / lance_charge_end（龍気吸引、4グループ）で追加した扱い**（2026-09-14）:
 - 流れ: `lance_charge_start`（助走）→ `lance_charge`（吸引ループ、`Mns.Valk.ChargeCount` を1ずつ加算し6まで自己ループ、7周目で `lance_charge_end` へ）→ 通常は `lance_charge_end`（解放・攻撃準備完了）だが、吸引中に胸(BodySp/PartId9)へ十分ダメージが入ると Stage4 で既に配線済みの `reaction/body_sp.mcfunction` から直接 `lance_charge_damage` へ割り込み遷移。
@@ -136,7 +142,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - いずれも攻撃判定・軸合わせなしの単純な「frame監視で移動/効果音/接地→終了」構造。既存の他グループと同じく接地は `check_landing` に統一。全グループ共通で frame1 に `tag @s remove Mns.Valk.State.IsShoot`（被弾時は強制的に彗龍形態に戻す）を実施。
 - **部位別怯み**（`lance_damage_head`/`tail`/`tail_break`/`body_l`/`body_r`/`wing_l`/`wing_r`）: いずれも `end.mcfunction` は素直に `change/main` を呼ぶだけ。`tail_break`（尻尾切断時の専用怯み）も同様で、尻尾切断オブジェクトの召喚自体は別途 `reaction/break/tail_cut`（Stage6-S共通object待ちTODO）側の責務。
 - **ダウン**（`lance_damage_down_l`/`_r`）: `end.mcfunction` は `change/main` を呼ばず、`animated_java_valk:valk/animations/lance_down_l|r/tween` へ直接遷移（`lance_down_l/r` グループ自体は未移行だが、tween呼び出しはアニメ名参照のみなので配線可能）。
-- **飛行中怯み**（`lance_damage_flying`）: dino の `death_flying`/`breath_backstep` と同型の `move_start.mcfunction`（`move_to_target_calc`、Tick6、地面へスナップ）で落下点を計算。`end.mcfunction` は `Mns.General.DownCount`（共通engine score）が1以上なら `lance_down_l` へ、そうでなければ `lance_down_end_l` へ分岐（旧のまま、`return run` によるショートサーキット）。
+- **飛行中怯み**（`lance_damage_flying`）: 当初 `move_start.mcfunction`（`move_to_target_calc`）で実装したが、**2026-09-14 のレビューで `mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {Tick:6,OffsetX:0.0,OffsetY:0.0,OffsetZ:0.0,IsAdjustLand:"true"}` + `vector_move` に置換**（dino の `damage_flying/main` が実際にこの方式を使用していると確認。`move_start.mcfunction` は削除）。`end.mcfunction` は `Mns.General.DownCount`（共通engine score）が1以上なら `lance_down_l` へ、そうでなければ `lance_down_end_l` へ分岐（旧のまま、`return run` によるショートサーキット）。
 - **反撃硬直（カウンター）系7グループ**（`lance_damage_counter`/`_end`/`_end_mirror`/`_head_start`/`_mirror`/`_wing_l_start`/`_wing_r_start`）: 頭部/右翼始動は `lance_damage_counter_head_start`→`lance_damage_counter`→`lance_damage_counter_end`→`change/main`、**左翼始動のみ `_mirror` 系**（`lance_damage_counter_wing_l_start`→`lance_damage_counter_mirror`→`lance_damage_counter_end_mirror`→`change/main`）を通る非対称構造。旧コードの意図（AJモデルのミラーリング都合か）をそのまま踏襲、対称化などの変更はしていない。
 - 全グループ、旧 `end.mcfunction` のヘッダコメントが別グループ（`lance_damage_head`等）を指す誤記だった箇所は、自グループ名に修正。
 
@@ -146,7 +152,8 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - **RedFlash演出**: 旧の生 `summon text_display {Tags:["Mns.Shot.Valk.Vfx.RedFlash","...Long"]},scale:[12f,...]}` を `data modify storage api: Arg.Override set value {IsLong:true,IsFollow:true,Scale:12}` + `positioned ^-1 ^3 ^ run function api:object/summon.m {ObjectId:10047}` に置換（`lance_upper` の大サイズ12と同じ値）。追従は `tp @n[type=text_display,tag=10047.IsFollow] ^ ^3 ^`、即時消去は `kill @e[type=text_display,tag=10047.IsFollow]`。
 - **10047.valk_red_flash に `IsFollow` Override引数を追加（2026-09-14、ユーザー指示）**: `_index.d.mcfunction` に `#declare tag 10047.IsFollow` 追加、`init/.mcfunction` に `execute if data storage api: Arg.Override{IsFollow:true} run tag @s add 10047.IsFollow` を追加。旧コメント「ロング版（ループ・追従）」から「追従」の記述を分離し、`IsLong`（ループ生存）と `IsFollow`（追従識別タグ付与）を独立した意味に整理。**flytackle系のみ** `IsFollow:true` を渡すように変更し、追従・killのセレクタを `tag=10047.Long` → `tag=10047.IsFollow` に統一（`lance_upper`/`lance_vertical` は指示範囲外のため `10047.Long` のまま未変更）。
 - **移動先マーカーの軸合わせ**は `lance_move` と同じ `turn_to_target_accurate` パターン（`Mns.MovePos.Valk`/`Mns.Target.Valk` へのタグ付けを毎tick実行）。
-- **`move_start.mcfunction`（repeat/end）は dino と同型の現行API**: `mhdp_monsters:core/util/other/move_to_target_calc`/`move_to_target_move`（`turn_to_target_calc` と異なり非推奨化されていない。dino の `death_flying`/`breath_backstep` の `move_start.mcfunction` が同一パターンの実例）。ほぼ無改変で移植。
+- **`move_start.mcfunction`（repeat/end）は `mhdp_monsters:core/util/other/move_to_target_calc`/`move_to_target_move` を使用**。ほぼ無改変で移植。**⚠ 訂正（2026-09-14）**: 当初「dino の `death_flying`/`breath_backstep` の `move_start.mcfunction` が同一パターンの現行実例」と記載したが誤り。実際には dino の両 `move_start.mcfunction` は main.mcfunction から未参照の死んだレガシーファイル（両方とも実際は `vector_move_offset_start.m`/`vector_move` を使用。下記 lance_damage_flying の訂正参照）。
+- **確認済み（2026-09-14、ユーザー説明）— 移動方式の使い分け方針**: `vector_move`（`vector_move_offset_start.m`+`vector_move`）は「決められたtickで目的地まで正確に移動」（定位置移動、死亡/飛行怯みの落下など）。`MovePos`方式（`move_to_target_calc`/`move_to_target_move`+`Mns.MovePos.Valk`マーカー）は「不定のtickで目的地までおおざっぱに移動」（突進系攻撃などプレイヤー位置に応じてアニメ長が変わる場合）。**flytackle系の現状実装（MovePos方式）は正しい、変更不要**。この使い分け方針は今後の新規グループ（他の突進/移動系アニメ）でも判断基準として適用する。
 - **de-macro化**: 6ロケータ（`pos_muzzle_r/l_0/1/2`）に向けた噴射パーティクルは `m.particle`/`m.particle_launch`/`m.particle_end` を `particle_muzzle`/`particle_launch_muzzle`/`particle_end_muzzle`（内容, `m.`プレフィックス除去）に、呼び出し元 `particle`/`particle_launch`/`particle_end`（ディスパッチャ、6個の `at_locator` 呼び出し）に再構成。
 - **移植しなかった dead code**: 各グループの `turn_start.mcfunction`（main内で不使用、`alignment_start.m` 系や `turn_to_target_accurate` 系に置換済み）。`lance_flytackle`（本体）フォルダ内の `particle.mcfunction`/`m.particle.mcfunction` は中身が `lance_flytackle_start` 用のヘッダ・内容をそのまま持つ誤配置コピペかつ未使用（main/main_subから参照0件）→ 移植せず。
 - **保留（意図的に据え置き）**: `lance_flytackle_start/main` 内の移動位置決定セクションに、`Mns.Valk.JetCount matches 2..` の同一 `tp ^ ^ ^3` 行が完全に重複している（旧コードのコピペ起因と思われる無害な冗長行）。挙動に影響しないため旧のまま維持。
@@ -249,8 +256,8 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 
 **グループ別チェックリスト**（`[ ]`=未 `[x]`=完了 `[~]`=一部）:
 - [ ] comet_phase_1  [ ] comet_phase_2  [ ] comet_phase_3  [ ] comet_phase_4  [ ] comet_phase_5
-- [ ] death_flying
-- [ ] lance_anger
+- [x] death_flying
+- [x] lance_anger
 - [ ] lance_biim_1  [ ] lance_biim_2
 - [x] lance_bite
 - [x] lance_charge  [x] lance_charge_damage  [x] lance_charge_end  [x] lance_charge_start
@@ -263,7 +270,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_damage_head  [x] lance_damage_tail  [x] lance_damage_tail_break
 - [x] lance_damage_wing_l  [x] lance_damage_wing_r
 - [x] lance_dashattack
-- [ ] lance_death
+- [x] lance_death
 - [x] lance_down_end_l  [x] lance_down_end_r  [x] lance_down_l  [x] lance_down_r
 - [x] lance_flytackle  [x] lance_flytackle_end  [x] lance_flytackle_repeat  [x] lance_flytackle_start
 - [x] lance_idle  [ ] lance_idle_short
@@ -395,5 +402,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（52/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
+**Stage 5-C 続き**（55/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。

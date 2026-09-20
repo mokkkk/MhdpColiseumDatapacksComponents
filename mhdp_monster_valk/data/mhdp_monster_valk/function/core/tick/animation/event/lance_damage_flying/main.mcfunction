@@ -5,8 +5,10 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 移動
-    execute if score @s aj.lance_damage_flying.frame matches 11 at @s run function mhdp_monster_valk:core/tick/animation/event/lance_damage_flying/move_start
-    execute if score @s aj.lance_damage_flying.frame matches 11..16 at @s run function mhdp_monsters:core/util/other/move_to_target_move
+    execute if score @s aj.lance_damage_flying.frame matches 11 at @s run function mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {\
+        Tick:6,OffsetX:0.0,OffsetY:0.0,OffsetZ:0.0,IsAdjustLand:"true"\
+    }
+    execute if score @s aj.lance_damage_flying.frame matches 11..16 at @s run function mhdp_monsters:core/util/tick/event/vector_move
 
 # 効果音
     execute if score @s aj.lance_damage_flying.frame matches 2..5 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.phantom.hurt master @s ^ ^1 ^1 0.4 1 0.4

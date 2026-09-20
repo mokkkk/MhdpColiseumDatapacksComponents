@@ -83,3 +83,8 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_charge.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_charge_damage.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_damage/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_charge_end.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_end/main
+# 怒り
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_anger.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_anger/main
+# 討伐
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_death.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_death/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.death_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/death_flying/main
