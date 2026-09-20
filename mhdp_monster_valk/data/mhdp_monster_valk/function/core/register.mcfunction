@@ -244,10 +244,9 @@
     }
 
 # 龍閃
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Beam",AttackPart:"none",VectorType:"Normal",\
-        DamageValue:16.5f,ObjectDamageValue:50,GuardValue:5,ElementType:5,ElementMultiply:100,\
+        DamageValue:16.5f,ObjectDamageValue:50,GuardValue:7,ElementType:5,ElementMultiply:100,\
         KnockbackStrength:3,IsLaunch:true,LaunchAngle:35,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }

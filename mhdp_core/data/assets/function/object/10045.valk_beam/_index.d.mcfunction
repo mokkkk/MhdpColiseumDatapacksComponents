@@ -4,3 +4,4 @@
 #> tag
 # @within function **
     #declare tag 10045.Life
+    #declare tag 10045.BeamVfx

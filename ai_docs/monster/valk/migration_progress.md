@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 59/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 61/85**（59/85 approve済 + lance_biim系2 生成済み・未レビュー）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047 に IsFollow/IsBeamVfx、10045/10048 に Scale、10048 に Tag Override 追加済み）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -114,7 +114,24 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  ✅ 59/85 approve済
+#### 5-C: event/<group>/*（85 グループ）  🔶 61/85（lance_biim系2 は未レビュー）
+
+**lance_biim_1（龍閃・溜め）/ lance_biim_2（龍閃・発射）で追加した扱い**（2026-09-14、設計方針をユーザーと事前協議のうえ実装）:
+- **調査で判明**: Stage6-Sで用意した `10041〜10048` のうち `10045.valk_beam`/`10048.valk_thunder` は旧 `core/tick/shot/vfx_beam`/`vfx_thunder`（個別フォント想定）を元に作ったが、実際に `lance_biim_1/2` が使っていたのは**RedFlash(10047)と全く同じ汎用summonレシピ（font:"vfx/valstrax" 共通、`RedFlash.Long`タグ流用）**だった。加えて「Jet」（口元で徐々に拡大する溜め閃光、lance_biim_1専用）はObjectId表に存在しない新規VFXだった。
+- **方針確定（ユーザー指示）**:
+  - **Thunder（10048、6体同時展開・翼ロケータ追従）**: `Override.Tag`（String）を新設。呼び出し側が `WingR0`〜`WingR2`/`WingL0`〜`WingL2` を渡すと `10048.<Tag>` タグが付与される（`init/apply_tag.m.mcfunction`）。ロケータごとに固有タグで個体識別するため、**旧のラウンドロビン式移動（`Temp.IsTp`で「未処理の1体」を毎回選ぶ）が不要**になり、各ロケータの追従処理は該当タグを直接指定するだけで確実に対応する（旧実装が実現したかった「6箇所同時展開・各々が対応する位置に追従」は本方式で完全に代替可能と判定）。
+  - **Beam（10045、ビーム本体・`beam_start`ロケータへのスイープ追従）**: 当初は `scores={ObjectId=10045}` セレクタで実装したが、**レビューで `10045.BeamVfx` 専用タグ方式に修正**（`summon/.mcfunction` の `Tags` に無条件で `10045.BeamVfx` を付与。Overrideではなく常時付与——Beamは単一用途のためRedFlashのような複数ロール切替が不要）。Beamは常に1個体のみのため、セレクタも `@e` ではなく `@n[type=text_display,tag=10045.BeamVfx]` を使用。
+  - **Jet（新規VFX、口元で拡大する溜め閃光）**: 新規objectを作らず **10047.valk_red_flash に `Override.IsBeamVfx`（bool）を追加**。true の場合、`tick/beam.mcfunction` を実行し、経過tick（`ObjectTick`）に応じて `transformation.scale` を自動拡大（2.0→8.0、20tickで頭打ち。旧 `#mhdp_temp_valk_flash_scale`{200→800, +30/tick}の再現）。呼び出し側は `IsFollow:true` も併用し `10047.IsFollow` タグで追従・kill。
+    - **レビュー反映（2026-09-14、ユーザー指示）**: `tick/.mcfunction` を「通常版」と「IsBeamVfx版」で完全に分離。`tick/.mcfunction` は `ObjectTick` 加算後、`10047.IsBeamVfx` タグの有無で `tick/normal.mcfunction`（従来のframe送り+Long/非Long生存管理）か `tick/beam.mcfunction`（frame送り+スケール拡大。**Long/非Longの区別なく常に呼び出し側がkillするまで生存**、自動消滅ロジックなし）に完全分岐するシンプルな dispatcher に変更。これに伴い `IsBeamVfx` 使用時は `IsLong:true` を付与する必要がなくなった（`lance_biim_1` のJet召喚は `IsFollow:true` のみで正しい）。
+  - **10045/10048 に `Scale` Override も追加**（`init/apply_scale.m.mcfunction`、10047と同一パターン）。旧値: Beam=8, Thunder=2。
+  - **10048 に開始フレームのランダム化を追加**（`execute store result score @s MhdpCore run random value 0..2`、旧 `Mns.Shot.Timer` のランダム初期値を再現。複数体が同期点滅しないように）。
+- **攻撃**: `attack_beam`/`attack_beam_air`/`attack_beam_finish`（各 `*_loop` による再帰レイキャスト、壁 or 30step で停止）は、旧 `mhdp_core:player/damage/entity_to_player/main`・`entity_to_entity/main`（廃止API）を `api:damage_entity_to_player`・`api:damage_entity_to_entity`（`rotated as @s` を `as` 切替の前に置く、`apply_attack.m` 内部と同じ呼び出し順序）に置換。タグ収集→ループ→一括ダメージという旧来の構造自体は温存（`apply_attack.m` の汎用ラッパーは使わず、再帰的レイキャストという特殊構造のため個別実装）。`attack_beam_finish_loop` のみ旧から**再帰の各ステップで即時ダメージ適用**（連続ヒットする仕様、`attack_beam_loop`/`attack_beam_air_loop`は末尾で一括ダメージ）という違いがあり、そのまま踏襲。
+- **地割れ演出**（`effect_beam_loop`）: 確立済みパターン `api:object/summon.m {ObjectId:16}` に置換。
+- **爆発 VFX**（`attack_bomb`, `attack_beam_finish_loop`）: 既存の `{ObjectId:10046}`（Bomb）/`{ObjectId:10047, Scale:8}`（RedFlash単発）に置換。
+- **ロケータ記法の注意**: `beam_start`/`beam_end`（`pos_`で始まらない）は `as_locator` を使用（`pos_muzzle_*` 系は従来通り `at_locator`）。CLAUDE.mdの命名規則をそのまま適用。
+- **バグとして移植しなかった箇所**: 旧 `lance_biim_1/main` に `execute if score @s aj.lance_biim_2.frame matches 27 as @e[...] run data modify... scale 3.5f` という行があったが、**自身が再生中でないはずの `lance_biim_2` のframeを参照する明らかなコピペミス**（`lance_biim_1.frame` の誤記と推測）で実質的に発火しない死んだコードと判断し、移植せず。
+- `m.tp_aec.mcfunction`/`m.tp_vfx_beam.mcfunction`/`flash.mcfunction`/`m.flash.mcfunction` は、上記のas_locator直書き・object内蔵スケール拡大への置換により不要となったため作成せず。
+- **レビュー反映（2026-09-14、ユーザー指示）**: object関連の処理（`Arg.Override`設定＋`api:object/summon.m`呼び出し＋対象のtp/kill）に `# Object: XXX (ObjectId)` コメントを付与しインデント（`main.mcfunction`×2、`thunder_start.mcfunction`、`attack_bomb.mcfunction`、`attack_beam_finish_loop.mcfunction`、`effect_beam_loop.mcfunction` に適用）。`lance_biim_2/main` はさらにobject単位（RedFlash/Beam/Thunder/非objectの照準マーカー）でグルーピングし直した。**ユーザーが disk 上で追加修正**: RedFlashのkillセレクタを `tag=10047.IsFollow` → `tag=10047.IsBeamVfx` に絞り込み（Jet専用の削除であることを明確化）。
 
 **state_paralysis（麻痺）で追加した扱い**（2026-09-14）:
 - 唯一 frame監視を使わないグループ。毎tick `Mns.Paralysis.Timer` を1減算し、0以下になったら `end`（`lance_idle_short` へ遷移）。`reaction/paralysis.mcfunction`（Stage4で移行済み）から `Mns.Paralysis.Timer` を `Timer.Max` にセットして呼ばれる。
@@ -270,7 +287,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] comet_phase_1  [ ] comet_phase_2  [ ] comet_phase_3  [ ] comet_phase_4  [ ] comet_phase_5
 - [x] death_flying
 - [x] lance_anger
-- [ ] lance_biim_1  [ ] lance_biim_2
+- [x] lance_biim_1  [x] lance_biim_2
 - [x] lance_bite
 - [x] lance_charge  [x] lance_charge_damage  [x] lance_charge_end  [x] lance_charge_start
 - [x] lance_damage_body_l  [x] lance_damage_body_r
@@ -368,10 +385,10 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 | `10042` | `valk_comet_burst` | `vfx_comet_burst/*` | 彗星の炸裂 | **精読して確認**（コピペミスなら なし） | **TODO** |
 | `10043` | `valk_comet_jet` | `vfx_comet_jet/*` | 彗星のジェット | **精読して確認**（コピペミスなら なし） | **TODO** |
 | `10044` | `valk_comet_star` | `vfx_comet_star/tick` | 星型 VFX | なし | **TODO** |
-| `10045` | `valk_beam` | `vfx_beam/tick` | 龍閃ビーム VFX（`lance_biim_*`） | なし（event `lance_biim_2/attack_*` で判定） | **TODO** |
+| `10045` | `valk_beam` | `vfx_beam/tick` | 龍閃ビーム VFX（`lance_biim_2`、`beam_start`ロケータへのスイープ追従で実装完了） | なし（event `lance_biim_2/attack_*` で判定） | `Override.Scale`（`lance_biim_2` は 8）。**summon時に無条件で `10045.BeamVfx` タグ付与**（単一用途のためOverride不要、呼び出し側は `@n[tag=10045.BeamVfx]` で一意特定） |
 | `10046` | `valk_bomb` | `vfx_bomb/tick` | 爆発 VFX（`shoot_bomb_*` の damage は event 側） | なし | **TODO** |
-| `10047` | `valk_red_flash` | `vfx_red_flash/tick` | 赤フラッシュ VFX。**実装完了・`lance_upper`（Long+拡大）/`lance_vertical`（単発 Scale:8）/`lance_flytackle`系（Long+IsFollow+拡大）で使用中** | なし | `Override.IsLong`（bool → `10047.Long` タグ。true でループ生存。旧 `Mns.Shot.Valk.Vfx.RedFlash.Long`）, `Override.IsFollow`（bool → `10047.IsFollow` タグ。2026-09-14追加。呼び出し側がこのタグで対象を特定し tp で追従させる。IsLongとは独立した意味）, `Override.Scale`（`lance_upper` は 7 → 12、`lance_vertical` は 8、`lance_flytackle` 系は 12） |
-| `10048` | `valk_thunder` | `vfx_thunder/tick` | 雷 VFX（`lance_biim`, `shoot_bomb`） | なし | **TODO** |
+| `10047` | `valk_red_flash` | `vfx_red_flash/tick` | 赤フラッシュ VFX。**実装完了・`lance_upper`（Long+拡大）/`lance_vertical`（単発 Scale:8）/`lance_flytackle`系（Long+IsFollow+拡大）/`lance_biim_1`（Jet役, IsBeamVfx+IsFollow）/`lance_biim_2`（単発 Scale:8×2 + Long省略）で使用中** | なし | `Override.IsLong`（bool → `10047.Long` タグ。true でループ生存。旧 `Mns.Shot.Valk.Vfx.RedFlash.Long`）, `Override.IsFollow`（bool → `10047.IsFollow` タグ。呼び出し側がこのタグで対象を特定し tp で追従させる）, `Override.IsBeamVfx`（bool → `10047.IsBeamVfx` タグ。2026-09-14追加。true で `tick/beam` を実行し経過tickに応じて自動でスケール拡大。`lance_biim_1`のJet役に使用）, `Override.Scale`（`lance_upper` は 7 → 12、`lance_vertical`/`lance_biim_2` は 8、`lance_flytackle` 系は 12） |
+| `10048` | `valk_thunder` | `vfx_thunder/tick` | 雷 VFX（`lance_biim_1/2`、6体同時展開・実装完了。`shoot_bomb` は未着手） | なし | `Override.Tag`（String → `10048.<Tag>` タグ付与、個体識別用。例: WingR0）, `Override.Scale`（`lance_biim_1` は 2）。開始フレームはinit時に自動ランダム化 |
 
 > **⚠ `init/.mcfunction` は `valk_red_flash` 以外すべて `# TODO` とする**（ユーザー指示 2026-09-10）。向き固定 `tp @s ~ ~ ~ ~ ~` だけ置き、それ以外（速度・寿命・ターゲット保持・スケール・variant タグ付与・Override 引数の受け取り）は `# TODO: init 固有処理を実装` のコメントで保留。`valk_red_flash` のみ上記 Override 引数（`IsLong` / `Scale`）で実装する。
 >
@@ -414,5 +431,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（59/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
+**Stage 5-C 続き**（61/85: 59/85 approve済み + lance_biim系2 生成済み・レビュー待ち）。次のグループはユーザー指示待ち。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。

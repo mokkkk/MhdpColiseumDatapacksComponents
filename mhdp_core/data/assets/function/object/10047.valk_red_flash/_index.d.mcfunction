@@ -5,3 +5,4 @@
 # @within function **
     #declare tag 10047.Long
     #declare tag 10047.IsFollow
+    #declare tag 10047.IsBeamVfx
