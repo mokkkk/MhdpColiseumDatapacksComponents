@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 58/85**（55/85 approve済 + lance_idle_short/lance_to_shoot/shoot_to_lance 生成済み・未レビュー）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 59/85 approve済** + Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047.valk_red_flash に IsFollow Override 追加済み）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -114,7 +114,12 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  ✅ 58/85 approve済
+#### 5-C: event/<group>/*（85 グループ）  ✅ 59/85 approve済
+
+**state_paralysis（麻痺）で追加した扱い**（2026-09-14）:
+- 唯一 frame監視を使わないグループ。毎tick `Mns.Paralysis.Timer` を1減算し、0以下になったら `end`（`lance_idle_short` へ遷移）。`reaction/paralysis.mcfunction`（Stage4で移行済み）から `Mns.Paralysis.Timer` を `Timer.Max` にセットして呼ばれる。
+- **バグ修正（2026-09-14、ユーザー指摘）**: `Mns.State.IsParalysis` タグが `state_paralysis/end` で解除されないのは旧仕様の不具合と判明 → `end.mcfunction` に `tag @s remove Mns.State.IsParalysis` を追加して修正（`lance_down_end_l/r`・`break/tail_cut` に加え、通常の麻痺解除時にも確実に解除されるように）。
+- 接地は `check_landing` に統一。
 
 **lance_idle_short / lance_to_shoot / shoot_to_lance（短縮待機・形態変化、3グループ）で追加した扱い**（2026-09-14）:
 - **lance_idle_short**: 攻撃・軸合わせなしの短縮待機。`lance_upper` の `end.mcfunction` から `change/main` を経由せず直接tweenされる先（既にStage5-Cのlance_upper移行時に配線済み）。
@@ -302,7 +307,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] shoot_to_lance
 - [ ] shoot_turn_l  [ ] shoot_turn_r
 - [ ] shoot_vertical_l  [ ] shoot_vertical_r
-- [ ] state_paralysis
+- [x] state_paralysis
 
 ### Stage 6 — util / models / phase / debug / advancement / 弾  🔶 util+models 完了（2026-09-09）／弾は 6-S へ
 - [x] `core/util/fetch_player.mcfunction`（**新設**。dino/ranposu 準拠。Mns.Candidate.Valk / Mns.Valk.Search / on_battle/check_target 使用）
@@ -409,5 +414,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（58/85: 55/85 approve済み + lance_idle_short/lance_to_shoot/shoot_to_lance 生成済み・レビュー待ち）。次のグループはユーザー指示待ち。
+**Stage 5-C 続き**（59/85 approve済み）。ここでコミット可。次のグループはユーザー指示待ち。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。
