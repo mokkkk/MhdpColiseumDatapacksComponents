@@ -97,3 +97,19 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.death_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/death_flying/main
 # 麻痺
     execute if entity @s[tag=animated_java_valk.valk.animation.state_paralysis.playing] run function mhdp_monster_valk:core/tick/animation/event/state_paralysis/main
+
+## 龍気形態
+
+# 待機
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_idle.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_idle/main
+# 移動
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_move.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_move/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_move_start.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_move_start/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_moveback.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_moveback/main
+# ステップ
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_step.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_step/main
+# 軸合わせ (旋回)
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_turn_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_turn_l/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_turn_r/main
+# 前方爆発
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sault_before.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sault_before/main

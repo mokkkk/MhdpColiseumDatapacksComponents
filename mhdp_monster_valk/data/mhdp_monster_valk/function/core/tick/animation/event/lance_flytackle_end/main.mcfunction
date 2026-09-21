@@ -9,8 +9,10 @@
     execute if score @s aj.lance_flytackle_end.frame matches 8..16 at @s run tp @s ^ ^ ^ ~21 ~
     execute if score @s aj.lance_flytackle_end.frame matches 20..24 at @s run tp @s ^ ^ ^-0.1 ~1 ~
     execute if score @s aj.lance_flytackle_end.frame matches 25..32 at @s run tp @s ^ ^ ^-0.05
-    execute if score @s aj.lance_flytackle_end.frame matches 8 at @s run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_end/move_start
-    execute if score @s aj.lance_flytackle_end.frame matches 8..19 at @s run function mhdp_monsters:core/util/other/move_to_target_move
+    execute if score @s aj.lance_flytackle_end.frame matches 8 at @s run function mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {\
+        Tick:12,OffsetX:0.0,OffsetY:0.0,OffsetZ:14.0,IsAdjustLand:"true"\
+    }
+    execute if score @s aj.lance_flytackle_end.frame matches 8..19 at @s run function mhdp_monsters:core/util/tick/event/vector_move
 
 # 演出
     execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3

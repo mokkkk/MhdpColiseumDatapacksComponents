@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 61/85 approve済み**（lance_biim系2 含む）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047 に IsFollow/IsBeamVfx、10045/10048 に Scale、10048 に Tag Override 追加済み）。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 69/85 approve済み**（shoot_idle/move/turn系8グループ含む。shoot_saultは複雑グループのため後回し）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047 に IsFollow/IsBeamVfx、10045/10048 に Scale、10048 に Tag Override 追加済み）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -27,6 +27,7 @@
 - `mhdp_core` 側は Uid 1004 配線済み → 変更不要。
 - **git commit はユーザーが手動**。Claude は commit すべきタイミングを通知するのみ、勝手に commit しない。
 - バッチ単位で作業し、各バッチ終了時にこのトラッカーを更新する。
+- **複雑グループの進め方（2026-09-20、ユーザー確認済み）**: オブジェクトを複数種扱う・特殊な当たり判定パターンを要する等の複雑なグループ（lance_biim が実例）は、単一パスで生成せず (1) 実装計画の出力 → (2) 各イベントの main/end/移動/演出(オブジェクト除く)作成・アニメーション動作確認 → (3) 演出(オブジェクト使用)の作成 → (4) 攻撃判定の作成、の4段階に分けて進める。単純なグループ（軸合わせ+単発攻撃程度）には適用しない（往復コスト増のため）。複雑と判明した時点で切り替える。
 - `.mcfunction` のコマンドトークン間スペースは必ず1つ（CLAUDE.md 参照）。
 - AJ ロケータ参照は `at_locator`/`as_locator`（旧 `on passengers ... data.locators` は不可。CLAUDE.md 参照）。
 - 弾システムは `mhdp_core:assets` 側 + `api:object/summon.m {ObjectId:...}`（dino 方式）。**Stage 6-S で `assets:object/1004x.valk_*` へ移植**（旧 `core/tick/shot/*` 19ファイルの中身を object の summon/init/tick へ移す。monster 側に弾ループは持たない）。計画は下記「Stage 6-S」。仕様 `spec §3.18`。
@@ -114,7 +115,21 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  🔶 61/85（approve済み。次は残り24グループから着手）
+#### 5-C: event/<group>/*（85 グループ）  🔶 69/85 approve済み（shoot_idle/move/turn系8グループ含む。shoot_saultは複雑グループのため後回し）
+
+**shoot_idle / shoot_move / shoot_move_start / shoot_moveback / shoot_step / shoot_turn_l / shoot_turn_r / shoot_sault_before（龍気形態・待機/移動/旋回系、2026-09-20）で追加した扱い**:
+- いずれも対応する lance_* グループ（lance_idle, lance_move, lance_move_start, lance_moveback, lance_turn_l/r）と完全に同型のため、確立済みパターンをそのまま適用。`shoot_move/turn_start.mcfunction`・`shoot_turn_l/turn_start.mcfunction`・`shoot_turn_r/turn_start.mcfunction` 等の旧 `turn_start` は `alignment_start.m` 置換のため移植せず。
+- **バグ修正**: `shoot_turn_l`/`shoot_turn_r` の軸合わせ範囲呼び出し（旧 `turn_to_target_rotate`）が `at @s` を欠いていた（lance_turn_r で見つかったのと同種のバグ）→ 両方に `at @s` を追加。
+- **shoot_move/end**: 旧コードは `return run function .../shoot_sault/tween` が無条件の行で、後続の `change/main` フォールバックは常に到達不能（lance_move のケースと異なり、こちらは元から無条件遷移）。[[prefer-active-fallback-over-dead-code-guess]] の方針を踏襲し、フォールバックとして `change/main` 呼び出しはそのまま残した。
+- **shoot_step（最も複雑）**: 旧は `move_to_target_calc`/`move_to_target_move`（非推奨の共通ユーティリティ、`type=marker,tag=Temp.Move.Target.Marker` を内部で決め打ち）+ 専用の `Temp.Rotate.Target.Marker`（`change/play/vertical_s.mcfunction`/`bomb_side.mcfunction` が事前に召喚）を使用。**ユーザー指示により全面的に書き直し**:
+  - 移動: `mhdp_monsters:core/util/tick/event/vector_move_start.m`（`TargetType`/`TargetTag` で外部エンティティを目的地に指定できる版。dino の `jump_tail_r/l`・`jump_tail_anger_r/l` が実例）に置換。`TargetType:"area_effect_cloud",TargetTag:"Mns.MovePos.Valk"` を指定。呼び出し元 `change/play/vertical_s.mcfunction`/`bomb_side.mcfunction` の移動先マーカーも `marker`+`Temp.Move.Target.Marker` から `area_effect_cloud`+`Mns.MovePos.Valk`（`Duration:200,DurationOnUse:0`、他グループの `Mns.MovePos.Valk` 召喚と同形式）へ変更（ユーザー指示）。マーカー不在時のフォールバック（旧は `^-8` 後退）は `unless entity` チェックで踏襲。
+  - 回転: `Temp.Rotate.Target.Marker` はそのまま維持（呼び出し元2ファイルは変更なし）。**重要な発見**: `alignment_start.m` は内部で自分専用のスクラッチマーカーに全く同じタグ名 `Temp.Rotate.Target.Marker` を使う（summon→facing計算→kill）ため、`TargetTag:"Temp.Rotate.Target.Marker"` をそのまま渡すと `@n[tag=$(TargetTag)]` が自分自身の内部マーカー（距離0で必ず最近傍）を拾ってしまい正しく機能しない。`shoot_step/turn_start.mcfunction` 内で一旦 `Mns.Valk.Step.RotateTarget` という専用タグに付け替えてから `alignment_start.m` を呼ぶことで回避（呼び出し元ファイルには触れていない）。
+- **レビュー漏れの修正（ユーザー指摘、2026-09-20）**: `lance_flytackle_repeat`/`lance_flytackle_end` の `move_start.mcfunction`（自己相対オフセット `^14`、`move_to_target_calc` 使用）も同じ非推奨APIだったため、`mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {Tick:12,OffsetX:0.0,OffsetY:0.0,OffsetZ:14.0,IsAdjustLand:"true"}` + `vector_move` に置換し、`move_start.mcfunction` は削除（death_flying/lance_damage_flyingで確立した「move_start.mcfunctionを削除しmainにインライン化」パターンを踏襲）。
+- **shoot_sault は対象外**: 独自の攻撃判定（`AttackName:"Bomb.Side"`、5点判定＋旧廃止API＋`Mns.Target.Dino`誤参照バグ）と生VFX summon10個（Bomb系5・RedFlash系5、要`api:object/summon.m`化）を持つ複雑グループと判明したため、[[complex-group-phased-workflow]] の対象として今回のバッチから除外し後日個別対応する。
+- `shoot_sault/turn_start.mcfunction`（ヘッダが `shoot_sweep_anger_l` 用のコピペミスかつ main から未参照）は dead code のため移植せず。
+- 接地は全グループ `check_landing` に統一。dispatcher（`event/main.mcfunction`）に新設の「## 龍気形態」セクションを追加し、上記8グループを配線（shoot_saultは未配線）。
+- **レビュー反映（2026-09-21、ユーザー指示）**: `Temp.Rotate.Target.Marker`（角度決定用マーカー）を `marker` → `area_effect_cloud`（`custom_particle:{type:"block",block_state:"minecraft:air"}` で非表示化）に変更。呼び出し元 `change/play/bomb_side.mcfunction`・`change/play/vertical_s.mcfunction`（summon側）と `shoot_step/turn_start.mcfunction`（参照側）の3ファイルを対応。approve済み。
+- 8グループ approve 済み（2026-09-21）。
 
 **lance_biim_1（龍閃・溜め）/ lance_biim_2（龍閃・発射）で追加した扱い**（2026-09-14、設計方針をユーザーと事前協議のうえ実装）:
 - **調査で判明**: Stage6-Sで用意した `10041〜10048` のうち `10045.valk_beam`/`10048.valk_thunder` は旧 `core/tick/shot/vfx_beam`/`vfx_thunder`（個別フォント想定）を元に作ったが、実際に `lance_biim_1/2` が使っていたのは**RedFlash(10047)と全く同じ汎用summonレシピ（font:"vfx/valstrax" 共通、`RedFlash.Long`タグ流用）**だった。加えて「Jet」（口元で徐々に拡大する溜め閃光、lance_biim_1専用）はObjectId表に存在しない新規VFXだった。
@@ -315,14 +330,14 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_vertical_turn_l  [x] lance_vertical_turn_r
 - [x] lance_voice
 - [ ] shoot_bomb_forward  [ ] shoot_bomb_side
-- [ ] shoot_idle
-- [ ] shoot_move  [ ] shoot_move_start  [ ] shoot_moveback
-- [ ] shoot_sault  [ ] shoot_sault_before
+- [x] shoot_idle
+- [x] shoot_move  [x] shoot_move_start  [x] shoot_moveback
+- [ ] shoot_sault（複雑グループのため後回し）  [x] shoot_sault_before
 - [ ] shoot_shot_forward  [ ] shoot_shot_horizon
-- [ ] shoot_step
+- [x] shoot_step
 - [ ] shoot_sweep_anger_l  [ ] shoot_sweep_anger_r  [ ] shoot_sweep_l  [ ] shoot_sweep_r
 - [x] shoot_to_lance
-- [ ] shoot_turn_l  [ ] shoot_turn_r
+- [x] shoot_turn_l  [x] shoot_turn_r
 - [ ] shoot_vertical_l  [ ] shoot_vertical_r
 - [x] state_paralysis
 
@@ -431,5 +446,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（61/85 approve済み。lance_biim系2 含め全て承認済み）。次のグループはユーザー指示待ち。
+**Stage 5-C 続き**（69/85 approve済み）。次のグループはユーザー指示待ち（shoot_saultは複雑グループとして別途4段階で対応予定）。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。
