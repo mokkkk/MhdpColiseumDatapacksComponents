@@ -4,3 +4,4 @@
 #> tag
 # @within function **
     #declare tag 10044.Life
+    #declare tag 10044.StarVfx

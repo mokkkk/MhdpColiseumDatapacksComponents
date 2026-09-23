@@ -3,7 +3,8 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 80/85 approve済み**（shoot_sault含む全複雑グループ完了）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047 に IsFollow/IsBeamVfx、10045/10048 に Scale、10048 に Tag Override 追加済み）。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 85/85 approve済み（全グループ完了！）** + Stage 6 util 完了 + Stage 6-S ほぼ完了（10041-10048 全object の `init/` 実装済み。10046 Bomb も comet_phase_4 対応で Override.Scale 追加）。
+> **次のマイルストーン**: Stage 5 全体（5-A/5-B/5-C）完了。残るは Stage 6 の未着手項目（`core/debug/interrupt.mcfunction`/`interrupt_anger.mcfunction`、`advancement/toast_break.json`）と弾システムの最終確認のみ。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -115,7 +116,23 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  🔶 80/85 approve済み（shoot_sault含む。全複雑グループ完了）
+#### 5-C: event/<group>/*（85 グループ）  ✅ 85/85 approve済み（全グループ完了）
+
+**comet_phase_1〜5（彗龍形態・彗星、2026-09-23〜）で追加した扱い**:
+- 複雑グループとして4段階運用（[[complex-group-phased-workflow]]）だが、今回は進行順序をユーザー指示で変更: **①全体の動き+非オブジェクト演出 → ②攻撃判定 → ③オブジェクト演出（object の `init/` 実装も同時に行う）**。現在①完了・レビュー待ち。
+- 共有VFXオブジェクト`10041(Comet)`/`10042(Burst)`/`10043(Jet)`/`10044(Star)`はStage6-Sで`summon/`・`tick/`のみ移植済み・`init/`は未実装（スタブ）と判明。②③のタイミングでOverride.Scale機構の追加、Jet/Starのkillタイミング設計を行う。
+- **バグ確認**: 旧`vfx_comet`/`vfx_comet_burst`/`vfx_comet_jet`の`damage.mcfunction`は3つとも中身が無関係なDinoのブレスダメージ（コピペミス）と確認。実際のダメージは`comet_phase_4/attack.mcfunction`（`Comet`AttackName）のみで、これらのobjectはVFX専用（Stage6-Sの想定通り）。
+- **風圧怯み（Phase1 f56）**: 実装方針が未定のため、ユーザー指示により`# TODO: 風圧実装後に適用`とコメントアウトのまま保留。
+- **comet_phase_2/change_text.mcfunction**: 旧コードは`on passengers if entity @s[tag=aj.valk_aj.bone.comet_star]`というAJボーンタグ直接参照だったが、新形式の確立済みパターン（`core/util/models/chest_glow_start`等）に倣い`animated_java_valk:valk/as_node {name:"comet_star",command:"..."}`に変換（ロケータ名`pos_comet_star`と同じ識別子のため、ボーン名は`comet_star`と判断）。
+- `comet_phase_3/move_start.mcfunction`（main未参照のdead code、既出パターン）は移植せず。
+- `comet_phase_4/end.mcfunction`のヘッダーコメントが`comet_phase_3`のコピペだった（既出パターン）ため修正。
+- 接地は全5グループ`check_landing`に統一。dispatcher（`event/main.mcfunction`）の「## 彗龍形態」に「彗星」セクションを追加し5グループを配線。
+- **Step③（オブジェクト演出）完了**: `10041(Comet)`/`10042(Burst)`/`10043(Jet)`/`10044(Star)`の`init/`を実装（`Override.Scale`対応。Comet/Burst/StarはX/Yのみ・Z=1固定の平面表示、Jetは立体のため均等スケール）。各`summon/.mcfunction`に識別タグ（`10041.CometVfx`等）と`view_range`/`see_through`（旧コード準拠）を追加。**`10046(Bomb)`の`init/`もOverride.Scale未実装だったため同様に追加**（comet_phase_4で初めてScale18という既定値5以外の使用例が出たため判明）。
+  - Phase1: RedFlash(10047,Scale12)を`^ ^6 ^4`に単発召喚(f59)。Comet+Burstを"shadow"ロケータへ`positioned ~ ~-15 ~ rotated 180 45`（絶対座標系での地面貼り付け、旧コードのtp再配置ロジックを再現）で召喚(f70)。
+  - Phase2: Starを"pos_comet_star"ロケータへ召喚(f2、初期スケール0)→直接NBT編集でスケール[64,64,1]に成長(f3、objectのOverride機構ではなく旧コード同様の直接編集)→追従+パーティクル(f2-60通常/f61-90"turn"版)。f60にComet+Burstを同ロケータへ再召喚。
+  - Phase3: Star kill(f3)。Jet(10043,Scale20)を"shadow"へ召喚(f2)+追従(f2-20)。
+  - Phase4: Jet追従継続(f2-15)、f2でスケール50に直接上書き+`start_interpolation`再設定、f8でkill。RedFlash×4+Bomb×4(いずれもScale18)を`^ ^2 ^`に連続召喚(f2/4/6/8)。
+  - **未検証事項**: `animated_java_valk:valk/as_locator`の呼び出し規約（`{name:"...",command:"..."}`）は`at_locator`と同形式と推測して実装したが、実際に動作する`as_locator`呼び出し例をコードベース内で確認できなかった（AJ生成フォルダは読み込み禁止のため）。"shadow"ロケータ自体も`pos_`接頭辞が無いため`as_locator`が正しいという判断は CLAUDE.md のルールに基づく推測（`beam_start`/`beam_end`のような例外の可能性は要実機確認）。
 
 **shoot_sault（龍気形態・前方爆発、バク転突進、2026-09-23）で追加した扱い**:
 - 複雑グループとして4段階運用（[[complex-group-phased-workflow]]）。ただし本グループはwindup用の別オブジェクト（雷等）を持たず、Bomb/RedFlashの爆発VFXが攻撃判定と同一フレーム・同一ファイルで発火する構造だったため、**Phase3（オブジェクト演出）とPhase4（攻撃判定）は`attack.mcfunction`1本に統合して実装**（bomb_forward/sideの`attack.mcfunction`と同じ「VFX+判定を同居させる」慣習を踏襲）。
@@ -325,7 +342,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
   今後作成する全 event/<group>/main.mcfunction に適用する（lance_idle で適用済み）。
 
 **グループ別チェックリスト**（`[ ]`=未 `[x]`=完了 `[~]`=一部）:
-- [ ] comet_phase_1  [ ] comet_phase_2  [ ] comet_phase_3  [ ] comet_phase_4  [ ] comet_phase_5
+- [x] comet_phase_1  [x] comet_phase_2  [x] comet_phase_3  [x] comet_phase_4  [x] comet_phase_5
 - [x] death_flying
 - [x] lance_anger
 - [x] lance_biim_1  [x] lance_biim_2
@@ -472,11 +489,11 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（80/85 approve済み）。次のグループはユーザー指示待ち（残りはcomet_phase系5グループのみ）。**4グループは複雑グループとして4段階運用で完走**（[[complex-group-phased-workflow]]）: Phase1計画確認済み→Phase2（main/end/移動/非オブジェクト演出）承認済み→Phase3（オブジェクト演出）承認済み→**Phase4（攻撃判定、bomb系のみ）生成済み・確認待ち**。shot系はPhase3で完成済み（10040自己ダメージのためPhase4不要）。
-- **Phase1計画からの修正点**: 当初bomb系は「雷(10048)+RedFlashLong(10047)の2種の溜め演出」と見込んだが、精読の結果、旧コードの`Mns.Shot.Valk.Vfx.RedFlash.Long`タグは雷エフェクトの実体（text_display）に同時付与されていた汎用クリーンアップ用タグに過ぎず、**独立したRedFlash演出は存在しなかった**と判明。新形式では雷(10048)のみ召喚し、旧来の`kill RedFlash.Long`相当のタイミングで`kill @e[tag=Asset.Object.Valk,scores={ObjectId=10048}]`を実行する形に変更（RedFlash単体の召喚は行わない）。
-- shoot_bomb系: 雷(10048、Scale:3、lance_biim_1と同じ6ロケータ+Tag個体識別パターン)の召喚・追従・終了時kill、および非オブジェクトの装飾パーティクル(cosmetic dust/crimson_spore)を実装。Bomb(10046)/RedFlash単発(10047)の爆発VFXと攻撃判定はPhase4で実装済み。
-  - **shoot_bomb_forward**: 前方3点（X:6/0/-6、Z:9）の着弾。3点それぞれ独立した`apply_attack.m`（Player/Entity同一Scale、旧の3点球状判定をそのまま踏襲）+ Bomb×3・RedFlash単発(Scale7)×3 + 中央の追加RedFlash(Scale8)。AttackName`Bomb.Forward`（register済み、laterality無しで正しい）。
-  - **shoot_bomb_side**: 左右対称2クラスタ。旧来の各側2点の球状判定（Z:-1/Z:3、半径5.5）を1本の直方体（Offset_Z:1.0,Scale_Z:7.5）に統合（lance_biim_2レビューで確立した標準apply_attack.m方針を踏襲）、加えて中央モンスター用の単独判定点（Z:4,Scale3.8）を追加。Bomb×2・RedFlash単発(Scale8)×2。AttackName`Bomb.Side`。
-- shoot_shot系: 3点(forward)/2点(horizon)の狙いマーカー(area_effect_cloud、フレーム経過で微妙にドリフト/左右往復)+射撃弾(10040、自己完結オブジェクトで着弾判定・爆発VFXまで内蔵)の召喚を実装。**Phase4（攻撃判定）は不要**（10040自身がAttackName"Shot"で自己ダメージするため）。旧コードの各発ごとの item_display の見た目差異（air/white_dyeの使い分け等）は10040オブジェクト側の固定レシピに統一されるため引き継がず。
-- shoot_saultは別途対応予定。残りはcomet_phase系5グループ。
-軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。
+**Stage 5-C 完了（85/85 approve済み）**。Stage 5（5-A/5-B/5-C）全体が完了。
+
+**残タスク（Stage 6）**:
+- `core/debug/interrupt.mcfunction` / `interrupt_anger.mcfunction`（未着手）
+- `advancement/toast_break.json`（icon = `icons/valk`。`show_toast` が参照。未着手）
+- 弾システムの最終確認（`assets:object/1004N` 全体の通し確認。個別のobjectは全てinit/summon/tick実装済み）
+
+軸合わせは `alignment_start.m`/`alignment` 方式で統一済み。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。複雑グループは[[complex-group-phased-workflow]]で対応（今後Stage6の残タスクが複雑な場合も同様に検討）。

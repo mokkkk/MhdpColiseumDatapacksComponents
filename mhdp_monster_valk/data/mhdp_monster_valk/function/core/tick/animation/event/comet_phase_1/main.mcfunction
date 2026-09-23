@@ -1,0 +1,59 @@
+#> mhdp_monster_valk:core/tick/animation/event/comet_phase_1/main
+#
+# アニメーションイベントハンドラ 彗星・離陸
+#
+# @within function mhdp_monster_valk:core/tick/animation/event/tick
+
+# カウンターリセット
+    execute if score @s aj.comet_phase_1.frame matches 2 run scoreboard players set @s Mns.Valk.PhaseCount.Comet 0
+
+# 効果音
+    execute if score @s aj.comet_phase_1.frame matches 2..15 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.3 1.7 0.3
+    execute if score @s aj.comet_phase_1.frame matches 2..15 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.3 1.8 0.3
+    execute if score @s aj.comet_phase_1.frame matches 2..25 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.3 2 0.3
+    execute if score @s aj.comet_phase_1.frame matches 2..25 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.3 1.8 0.3
+    execute if score @s aj.comet_phase_1.frame matches 2..35 run playsound entity.player.breath master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 2
+    execute if score @s aj.comet_phase_1.frame matches 52 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s aj.comet_phase_1.frame matches 56 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s aj.comet_phase_1.frame matches 56 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 10
+    execute if score @s aj.comet_phase_1.frame matches 70 positioned ^ ^16 ^16 run playsound entity.breeze.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.5
+    execute if score @s aj.comet_phase_1.frame matches 70 positioned ^ ^16 ^16 run playsound entity.breeze.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.5
+    execute if score @s aj.comet_phase_1.frame matches 70 positioned ^ ^16 ^16 run playsound entity.breeze.jump master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.5
+    execute if score @s aj.comet_phase_1.frame matches 70 positioned ^ ^16 ^16 run playsound entity.breeze.jump master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.6
+    execute if score @s aj.comet_phase_1.frame matches 70 positioned ^ ^16 ^16 run playsound entity.wither.death master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.8
+    execute if score @s aj.comet_phase_1.frame matches 70 positioned ^ ^16 ^16 run playsound entity.wither.death master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.65
+    execute if score @s aj.comet_phase_1.frame matches 59 positioned ^ ^16 ^16 run playsound entity.blaze.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.5
+    execute if score @s aj.comet_phase_1.frame matches 59 positioned ^ ^16 ^16 run playsound entity.blaze.shoot master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 0.6
+
+# 演出
+    execute if score @s aj.comet_phase_1.frame matches 2..57 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/particle
+    execute if score @s aj.comet_phase_1.frame matches 58..70 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/particle_launch
+
+    # Object: RedFlash (10047)
+        execute if score @s aj.comet_phase_1.frame matches 59 run data modify storage api: Arg.Override set value {Scale:12}
+        execute if score @s aj.comet_phase_1.frame matches 59 positioned ^ ^6 ^4 run function api:object/summon.m {ObjectId:10047}
+
+    # Object: Comet (10041) / Burst (10042)
+        execute if score @s aj.comet_phase_1.frame matches 70 run function animated_java_valk:valk/as_locator {name:"shadow",command:"function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/summon_vfx"}
+
+# 風圧怯み
+    # TODO: 風圧実装後に適用
+    # execute if score @s aj.comet_phase_1.frame matches 56 run data modify storage mhdp_core:temp Damage set value {WindValue:2,GuardValue:1}
+    # execute if score @s aj.comet_phase_1.frame matches 56 positioned ^ ^ ^ as @a[tag=Ply.State.EnableDamage,distance=..12] facing entity @s feet positioned as @s run function mhdp_core:player/damage/wind/main
+    # execute if score @s aj.comet_phase_1.frame matches 56 run data remove storage mhdp_core:temp Damage
+
+# モデル演出
+    execute if score @s aj.comet_phase_1.frame matches 2 run function mhdp_monster_valk:core/util/models/chest_glow_start
+    execute if score @s aj.comet_phase_1.frame matches 2 run function mhdp_monster_valk:core/util/models/ignite_start
+    execute if score @s aj.comet_phase_1.frame matches 70 run function mhdp_monster_valk:core/util/models/chest_glow_end
+
+# 状態設定
+    execute if score @s aj.comet_phase_1.frame matches 2 run tag @s add Mns.State.IsDisableAngerSpeed
+    execute if score @s aj.comet_phase_1.frame matches 2 run tag @s add Mns.State.IsDisableDeath
+    execute if score @s aj.comet_phase_1.frame matches 2 run tag @s add Mns.State.IsDisablePartDamage
+
+# 接地
+    function mhdp_monsters:core/util/tick/move/check_landing
+
+# 終了
+    execute if score @s aj.comet_phase_1.frame matches 99 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/end

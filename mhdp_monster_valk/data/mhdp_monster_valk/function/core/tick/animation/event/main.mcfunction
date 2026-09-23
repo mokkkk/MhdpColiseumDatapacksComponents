@@ -34,6 +34,12 @@
 # 龍閃
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_biim_1.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_biim_1/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_biim_2.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/main
+# 彗星
+    execute if entity @s[tag=animated_java_valk.valk.animation.comet_phase_1.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.comet_phase_2.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_2/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.comet_phase_3.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_3/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.comet_phase_4.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_4/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.comet_phase_5.playing] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_5/main
 # 突進(体当たり)
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_dashattack.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_dashattack/main
 # 蛇行突進
