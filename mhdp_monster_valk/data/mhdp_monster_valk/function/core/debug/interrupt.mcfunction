@@ -12,7 +12,7 @@
 
 # 通常攻撃用
     # タグ付与
-        tag @s add Anim.VerticalS.L
+        tag @s add Anim.Shoot.F
         # execute positioned as @p[tag=Mns.Target.Valk] run summon area_effect_cloud ~ ~ ~ {Tags:["Mns.MovePos.Valk"],Duration:600,Radius:0.0f}
         # function mhdp_monster_valk:core/tick/animation/change/play/bomb_side
     # 軸合わせ

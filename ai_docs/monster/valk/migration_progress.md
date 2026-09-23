@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 75/85 approve済み**（shoot_vertical/sweep系6グループ含む。shoot_saultは複雑グループのため後回し）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047 に IsFollow/IsBeamVfx、10045/10048 に Scale、10048 に Tag Override 追加済み）。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 79/85 approve済み**（shoot_bomb/shot系4グループ含む。shoot_saultは複雑グループのため後回し）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047 に IsFollow/IsBeamVfx、10045/10048 に Scale、10048 に Tag Override 追加済み）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -115,7 +115,7 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  🔶 75/85 approve済み（shoot_vertical/sweep系6グループ含む。shoot_saultは複雑グループのため後回し）
+#### 5-C: event/<group>/*（85 グループ）  🔶 79/85 approve済み（shoot_vertical/sweep系6グループ、shoot_bomb/shot系4グループ含む。shoot_saultは複雑グループのため後回し）
 
 **shoot_vertical_l/r・shoot_sweep_l/r・shoot_sweep_anger_l/r（龍気形態・翼叩きつけ/薙ぎ払い、2026-09-21）で追加した扱い**:
 - **shoot_vertical_l/r**: `lance_vertical_l/r` と同型（お手 `attack_hand` + 軸合わせ + 着弾AoE）。旧コードは3点の球状プレイヤー判定＋1点の球状モンスター判定という独自の広めの当たり判定だったため、`attack.mcfunction` は個別の点を維持せず1本の直方体に統合（`Offset_X:-1.2/1.2,Offset_Y:2.0,Offset_Z:2.3,Scale_X:5.7,Scale_Y:7.0,Scale_Z:6.8` 等、近似値。実機調整要）。地割れは`api:object/summon.m {ObjectId:16}`×7点（旧`crack_ground/start`）。RedFlashは`Arg.Override{Scale:6}`+`{ObjectId:10047}`（単発、旧の生text_display summonを置換）。
@@ -462,5 +462,11 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（75/85 approve済み）。次のグループはユーザー指示待ち（shoot_saultは複雑グループとして別途4段階で対応予定。残りはcomet_phase系5グループとshoot_bomb/shot系4グループ）。
+**Stage 5-C 続き**（79/85 approve済み）。次のグループはユーザー指示待ち（残りはcomet_phase系5グループとshoot_sault）。**4グループは複雑グループとして4段階運用で完走**（[[complex-group-phased-workflow]]）: Phase1計画確認済み→Phase2（main/end/移動/非オブジェクト演出）承認済み→Phase3（オブジェクト演出）承認済み→**Phase4（攻撃判定、bomb系のみ）生成済み・確認待ち**。shot系はPhase3で完成済み（10040自己ダメージのためPhase4不要）。
+- **Phase1計画からの修正点**: 当初bomb系は「雷(10048)+RedFlashLong(10047)の2種の溜め演出」と見込んだが、精読の結果、旧コードの`Mns.Shot.Valk.Vfx.RedFlash.Long`タグは雷エフェクトの実体（text_display）に同時付与されていた汎用クリーンアップ用タグに過ぎず、**独立したRedFlash演出は存在しなかった**と判明。新形式では雷(10048)のみ召喚し、旧来の`kill RedFlash.Long`相当のタイミングで`kill @e[tag=Asset.Object.Valk,scores={ObjectId=10048}]`を実行する形に変更（RedFlash単体の召喚は行わない）。
+- shoot_bomb系: 雷(10048、Scale:3、lance_biim_1と同じ6ロケータ+Tag個体識別パターン)の召喚・追従・終了時kill、および非オブジェクトの装飾パーティクル(cosmetic dust/crimson_spore)を実装。Bomb(10046)/RedFlash単発(10047)の爆発VFXと攻撃判定はPhase4で実装済み。
+  - **shoot_bomb_forward**: 前方3点（X:6/0/-6、Z:9）の着弾。3点それぞれ独立した`apply_attack.m`（Player/Entity同一Scale、旧の3点球状判定をそのまま踏襲）+ Bomb×3・RedFlash単発(Scale7)×3 + 中央の追加RedFlash(Scale8)。AttackName`Bomb.Forward`（register済み、laterality無しで正しい）。
+  - **shoot_bomb_side**: 左右対称2クラスタ。旧来の各側2点の球状判定（Z:-1/Z:3、半径5.5）を1本の直方体（Offset_Z:1.0,Scale_Z:7.5）に統合（lance_biim_2レビューで確立した標準apply_attack.m方針を踏襲）、加えて中央モンスター用の単独判定点（Z:4,Scale3.8）を追加。Bomb×2・RedFlash単発(Scale8)×2。AttackName`Bomb.Side`。
+- shoot_shot系: 3点(forward)/2点(horizon)の狙いマーカー(area_effect_cloud、フレーム経過で微妙にドリフト/左右往復)+射撃弾(10040、自己完結オブジェクトで着弾判定・爆発VFXまで内蔵)の召喚を実装。**Phase4（攻撃判定）は不要**（10040自身がAttackName"Shot"で自己ダメージするため）。旧コードの各発ごとの item_display の見た目差異（air/white_dyeの使い分け等）は10040オブジェクト側の固定レシピに統一されるため引き継がず。
+- shoot_saultは別途対応予定。残りはcomet_phase系5グループ。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。

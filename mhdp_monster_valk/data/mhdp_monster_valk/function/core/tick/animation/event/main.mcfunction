@@ -121,3 +121,9 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_r/main
     execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_anger_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_anger_l/main
     execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_anger_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_anger_r/main
+# 爆発
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_bomb_forward.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_bomb_side.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/main
+# 射撃
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_shot_forward.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_forward/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_shot_horizon.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_horizon/main
