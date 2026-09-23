@@ -3,7 +3,7 @@
 `mhdp_monster_valk_bak`（旧形式）→ `mhdp_monster_valk`（新形式）への移行進捗。
 セッションをまたぐ再開はこのファイルを起点にする。作業ブランチ: `feature/update_valstrax`。
 
-> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 69/85 approve済み**（shoot_idle/move/turn系8グループ含む。shoot_saultは複雑グループのため後回し）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047 に IsFollow/IsBeamVfx、10045/10048 に Scale、10048 に Tag Override 追加済み）。
+> **最終保存状態**: Stage 1〜4 完了 + Stage 5-A approve 済み + **Stage 5-C 75/85 approve済み**（shoot_vertical/sweep系6グループ含む。shoot_saultは複雑グループのため後回し）+ Stage 6 util 完了 + Stage 6-S バッチ1 完了（10047 に IsFollow/IsBeamVfx、10045/10048 に Scale、10048 に Tag Override 追加済み）。
 > **⚠ Stage 6 タスク**: event 内の `# TODO(Stage6):` VFX/弾演出は、対応 object 作成後に `api:object/summon.m {ObjectId:...}` を記載する。`grep -rn 'TODO(Stage6)' mhdp_monster_valk/` で一覧。
 > lance_upper レビュー反映（2026-09-08）: 突き上げダメージは `attack` 内の縦長1ボックス（`Offset_Z:28.5`,`Scale_X/Y:3.4`,`Scale_Z:43`）、演出は `attack_effect`（旧 attack_sub 改名・ダメージなし）を前方 0..50 の11点で呼ぶ。main の attack 呼び出しは `positioned ^±1.2 ^1 ^12 rotated ~±3 ~`。
 > lance_vertical レビュー反映（2026-09-07）: お手は start_attack なし / 振り下ろし中判定 `attack_swing`+`hit_swing` 新設 / 地面ひび割れ → `api:object/summon.m {ObjectId:16}` + `dust_pillar` / 着弾箱 `Scale 5/7/4 Offset_Y2` / 空 dir `197609` 削除。**RedFlash は一時 `particle flash{color}` を採用したが、2026-09-13 に `assets:object/10047.valk_red_flash` 実装完了に伴い `api:object/summon.m {ObjectId:10047}` へ差し戻し済み**（下記参照）。
@@ -115,7 +115,23 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [x] lance_idle / lance_spear系4 / lance_vertical系6 / lance_upper系2 の `.playing` 判定行を追加
 - [ ] 残りグループ分（グループ作成に合わせて追記）
 
-#### 5-C: event/<group>/*（85 グループ）  🔶 69/85 approve済み（shoot_idle/move/turn系8グループ含む。shoot_saultは複雑グループのため後回し）
+#### 5-C: event/<group>/*（85 グループ）  🔶 75/85 approve済み（shoot_vertical/sweep系6グループ含む。shoot_saultは複雑グループのため後回し）
+
+**shoot_vertical_l/r・shoot_sweep_l/r・shoot_sweep_anger_l/r（龍気形態・翼叩きつけ/薙ぎ払い、2026-09-21）で追加した扱い**:
+- **shoot_vertical_l/r**: `lance_vertical_l/r` と同型（お手 `attack_hand` + 軸合わせ + 着弾AoE）。旧コードは3点の球状プレイヤー判定＋1点の球状モンスター判定という独自の広めの当たり判定だったため、`attack.mcfunction` は個別の点を維持せず1本の直方体に統合（`Offset_X:-1.2/1.2,Offset_Y:2.0,Offset_Z:2.3,Scale_X:5.7,Scale_Y:7.0,Scale_Z:6.8` 等、近似値。実機調整要）。地割れは`api:object/summon.m {ObjectId:16}`×7点（旧`crack_ground/start`）。RedFlashは`Arg.Override{Scale:6}`+`{ObjectId:10047}`（単発、旧の生text_display summonを置換）。
+  - **レビュー確認（ユーザー承認）**: lance_vertical で新設した「振り下ろし中の当たり判定」（`attack_swing.mcfunction`+`hit_swing.mcfunction`、翼爪先端 `pos_wing_*_3` 基準・Scale3.0）は旧shoot_verticalコードには存在しなかった新設判定窓だが、**両形態の一貫性のためshoot_verticalにも同様に新設**（ユーザー確認済み）。frame窓は旧コードに前例が無いため独自に設定（`start_attack@45`→`attack_swing 45..50`→着弾`attack@51`→`particle_ring/end_attack@53`、muzzle演出のframe幅45..53に合わせた）。実機確認要。
+  - **バグ修正**: `AttackData` 参照名が旧コードでは左右とも `VerticalS`（laterality無し、register済みの`VerticalS.Left`/`VerticalS.Right`と不整合）だったため、`VerticalS.Left`/`VerticalS.Right`に修正（`Vertical.Left`/`Right`と同じ命名規則）。`shoot_vertical_r/attack.mcfunction`の`tag @e[tag=Temp.Hit] remove Temp.Hitz`という誤字タグ（旧コード、実質ノーオペで`Temp.Hit`が残留するバグ）も廃止APIごと置換で解消。
+- **shoot_sweep_l/r・shoot_sweep_anger_l/r**: `lance_spear`系の確立パターン（翼可動域の各ロケータで`at_locator`+`hit.mcfunction`が`apply_attack.m`実行）を適用。旧コードは各ロケータ位置で3点（基準/+Y2.5/+Y5）×2セット（X0とX∓2）の球状判定＋演出パーティクルを重ねる密な判定だったため、`hit.mcfunction`は1本の直方体（`Offset_X:∓1.0,Offset_Y:2.5,Offset_Z:0.0,Scale_X:4.5,Scale_Y:6.0,Scale_Z:3.5`）に統合（lance_biim_2レビューで確立した「標準apply_attack.m仕様への統一」方針を踏襲）。装飾パーティクル（cloud/dust）は元の3点をそのまま維持。
+  - sweep（通常）は翼ロケータ3点（`pos_wing_*_1~3`）、sweep_anger（怒り時）は4点（`pos_wing_*_1~4`）。frame49..57の毎フレーム呼び出しは旧のまま維持（意図的な連続多段ヒット、攻撃全体を通して1回のみヒットの biim ビームとは異なる設計）。
+  - sweep_angerのみ 溜め演出（`pos_muzzle_*_0~2`のパーティクル、frame28..47）とモデル演出（`ignite_start/end_*`）を追加保持。
+  - **バグ修正**: `AttackName`が旧コードで`Sweep`/`Sweep.Anger`（laterality無し）だったため`Sweep.Left`/`Sweep.Right`・`Sweep.Anger.Left`/`Sweep.Anger.Right`に修正。
+- 接地は全6グループ `check_landing` に統一。`turn_start.mcfunction`は`alignment_start.m`化のため移植せず。dispatcher（`event/main.mcfunction`）の「## 龍気形態」に「翼叩きつけ」「薙ぎ払い」セクションを追加し配線。
+- **レビュー反映（2026-09-21〜23、ユーザーがdisk上で調整・approve済み）**:
+  - `shoot_vertical_l/r/attack.mcfunction`: 着弾判定を近距離ボックス（`Offset_Z:0.2`）+遠距離ボックス（`Offset_Z:4.8`）の2本に分割、それぞれ独立して`apply_attack.m`実行（旧の1本統合案から変更）。
+  - `shoot_vertical_l/r/hit_swing.mcfunction`: 振り下ろし中判定の基準ロケータを`pos_wing_*_3`→`pos_wing_*_2`に変更、Scaleを4.0/4.0/3.0に調整（frame窓も45→47に変更）。
+  - `shoot_sweep_*系/hit.mcfunction`: `Offset_Z`を+1、`Scale_Z`を-0.5で統一調整。
+  - **バグ修正（ユーザー指摘）**: `shoot_sweep_l/r`・`shoot_sweep_anger_l/r`の`main.mcfunction`に`start_attack.m`（frame49）/`end_attack`（frame57）が抜けていたため追加（他の複数回ヒット技と同じ相殺判定有効化のルールを踏襲）。
+  - cuboid_previewは実機確認後、他グループと同様にコメントアウトされ確定。
 
 **shoot_idle / shoot_move / shoot_move_start / shoot_moveback / shoot_step / shoot_turn_l / shoot_turn_r / shoot_sault_before（龍気形態・待機/移動/旋回系、2026-09-20）で追加した扱い**:
 - いずれも対応する lance_* グループ（lance_idle, lance_move, lance_move_start, lance_moveback, lance_turn_l/r）と完全に同型のため、確立済みパターンをそのまま適用。`shoot_move/turn_start.mcfunction`・`shoot_turn_l/turn_start.mcfunction`・`shoot_turn_r/turn_start.mcfunction` 等の旧 `turn_start` は `alignment_start.m` 置換のため移植せず。
@@ -335,10 +351,10 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 - [ ] shoot_sault（複雑グループのため後回し）  [x] shoot_sault_before
 - [ ] shoot_shot_forward  [ ] shoot_shot_horizon
 - [x] shoot_step
-- [ ] shoot_sweep_anger_l  [ ] shoot_sweep_anger_r  [ ] shoot_sweep_l  [ ] shoot_sweep_r
+- [x] shoot_sweep_anger_l  [x] shoot_sweep_anger_r  [x] shoot_sweep_l  [x] shoot_sweep_r
 - [x] shoot_to_lance
 - [x] shoot_turn_l  [x] shoot_turn_r
-- [ ] shoot_vertical_l  [ ] shoot_vertical_r
+- [x] shoot_vertical_l  [x] shoot_vertical_r
 - [x] state_paralysis
 
 ### Stage 6 — util / models / phase / debug / advancement / 弾  🔶 util+models 完了（2026-09-09）／弾は 6-S へ
@@ -446,5 +462,5 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 ---
 
 ## 次に着手
-**Stage 5-C 続き**（69/85 approve済み）。次のグループはユーザー指示待ち（shoot_saultは複雑グループとして別途4段階で対応予定）。
+**Stage 5-C 続き**（75/85 approve済み）。次のグループはユーザー指示待ち（shoot_saultは複雑グループとして別途4段階で対応予定。残りはcomet_phase系5グループとshoot_bomb/shot系4グループ）。
 軸合わせは `alignment_start.m`/`alignment` 方式で以降統一。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。

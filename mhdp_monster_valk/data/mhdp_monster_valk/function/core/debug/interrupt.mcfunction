@@ -12,9 +12,9 @@
 
 # 通常攻撃用
     # タグ付与
-        # tag @s add Anim.MoveBack
+        tag @s add Anim.VerticalS.L
         # execute positioned as @p[tag=Mns.Target.Valk] run summon area_effect_cloud ~ ~ ~ {Tags:["Mns.MovePos.Valk"],Duration:600,Radius:0.0f}
-        function mhdp_monster_valk:core/tick/animation/change/play/bomb_side
+        # function mhdp_monster_valk:core/tick/animation/change/play/bomb_side
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn
         # scoreboard players set @s Mns.General.TurnCount 1
@@ -31,7 +31,7 @@
         # function mhdp_monster_valk:core/tick/animation/change/main
 
 # 強制再生
-    # function animated_java_valk:valk/animations/shoot_moveback/tween {duration:1, to_frame: 1}
+    # function animated_java_valk:valk/animations/shoot_sweep_anger_l/tween {duration:1, to_frame: 1}
 
 # 強制リアクション
     # function mhdp_monster_valk:core/damage/reaction/paralysis
