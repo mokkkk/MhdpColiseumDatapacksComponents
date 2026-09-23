@@ -113,6 +113,7 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.shoot_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_turn_r/main
 # 前方爆発
     execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sault_before.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sault_before/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sault.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sault/main
 # 翼叩きつけ
     execute if entity @s[tag=animated_java_valk.valk.animation.shoot_vertical_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_l/main
     execute if entity @s[tag=animated_java_valk.valk.animation.shoot_vertical_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_r/main

@@ -7,16 +7,10 @@
 # クールタイム設定
     scoreboard players set @s Mns.Valk.MoveSkill.CoolDown 3
 
-# 左右ランダム
-    execute if predicate {"condition":"minecraft:random_chance","chance":0.5} run tag @s add Mns.Temp.Right
-
 # 位置決定
-    execute positioned as @n[tag=Mns.Target.Valk] facing entity @s feet positioned ^ ^0.5 ^12 run summon area_effect_cloud ^ ^ ^ {Duration:200,DurationOnUse:0,Tags:["Mns.MovePos.Valk"]}
+    execute positioned as @n[tag=Mns.Target.Valk] facing entity @s feet positioned ^ ^0.5 ^12 run summon area_effect_cloud ^ ^ ^ {Duration:200,DurationOnUse:0,Tags:["Mns.MovePos.Valk"],custom_particle:{type:"block",block_state:"minecraft:air"}}
     execute as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] at @s unless block ~ ~ ~ #mhdp_core:no_collision run kill @s
     execute as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] at @s run function mhdp_monsters:core/util/other/on_ground
 
 # 再生アニメーション決定
     tag @s add Anim.Sault
-
-# 終了
-    tag @s remove Mns.Temp.Right

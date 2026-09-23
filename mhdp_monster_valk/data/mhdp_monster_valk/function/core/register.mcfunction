@@ -332,8 +332,8 @@
     #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Bomb.Forward",AttackPart:"none",VectorType:"Normal",\
-        DamageValue:8.5f,ObjectDamageValue:15,GuardValue:5,ElementType:5,ElementMultiply:100,\
-        KnockbackStrength:2,IsLaunch:true,LaunchAngle:35,\
+        DamageValue:8.5f,ObjectDamageValue:15,GuardValue:6,ElementType:5,ElementMultiply:100,\
+        KnockbackStrength:2,IsLaunch:true,LaunchAngle:60,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 

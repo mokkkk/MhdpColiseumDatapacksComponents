@@ -12,9 +12,9 @@
 
 # 通常攻撃用
     # タグ付与
-        tag @s add Anim.Shoot.F
+        # tag @s add Anim.Shoot.F
         # execute positioned as @p[tag=Mns.Target.Valk] run summon area_effect_cloud ~ ~ ~ {Tags:["Mns.MovePos.Valk"],Duration:600,Radius:0.0f}
-        # function mhdp_monster_valk:core/tick/animation/change/play/bomb_side
+        function mhdp_monster_valk:core/tick/animation/change/play/sault_move
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn
         # scoreboard players set @s Mns.General.TurnCount 1
