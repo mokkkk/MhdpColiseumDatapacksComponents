@@ -26,15 +26,12 @@
         execute if entity @s[tag=animated_java_valk.valk.animation.lance_vertical_turn_r.playing] if score @s aj.lance_vertical_turn_r.frame matches 42..49 if data storage api: Return{IsWall:true} run return run function mhdp_monster_valk:core/tick/on_battle/interact/reaction/cancel_attack_vertical.m {Side:"r"}
         execute if entity @s[tag=animated_java_valk.valk.animation.lance_vertical_r_to_l.playing] if score @s aj.lance_vertical_r_to_l.frame matches 14..21 if data storage api: Return{IsWall:true} run return run function mhdp_monster_valk:core/tick/on_battle/interact/reaction/cancel_attack_vertical.m {Side:"l"}
         execute if entity @s[tag=animated_java_valk.valk.animation.lance_vertical_l_to_r.playing] if score @s aj.lance_vertical_l_to_r.frame matches 14..21 if data storage api: Return{IsWall:true} run return run function mhdp_monster_valk:core/tick/on_battle/interact/reaction/cancel_attack_vertical.m {Side:"r"}
-    # 翼槍突き上げ (お手は対象外。怒り時専用の技のため、実質 *_anger が再生される)
-        execute if entity @s[tag=animated_java_valk.valk.animation.lance_upper_l.playing] if score @s aj.lance_upper_l.frame matches 56 run return run function mhdp_monster_valk:core/tick/on_battle/interact/reaction/cancel_attack_spear.m {Side:"l"}
-        execute if entity @s[tag=animated_java_valk.valk.animation.lance_upper_r.playing] if score @s aj.lance_upper_r.frame matches 56 run return run function mhdp_monster_valk:core/tick/on_battle/interact/reaction/cancel_attack_spear.m {Side:"r"}
     # 滑空突進
         execute unless entity @s[\
             tag=!animated_java_valk.valk.animation.lance_flytackle.playing,\
             tag=!animated_java_valk.valk.animation.lance_flytackle_repeat.playing,\
             tag=!animated_java_valk.valk.animation.lance_flytackle_end.playing\
-        ] run return run function mhdp_monster_valk:core/tick/on_battle/interact/reaction/cancel_attack_flytackle
+        ] if data storage api: Return{IsWall:true} run return run function mhdp_monster_valk:core/tick/on_battle/interact/reaction/cancel_attack_flytackle
     # 薙ぎ払い
         execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_l.playing] if score @s aj.shoot_sweep_l.frame matches 49..57 run return run function mhdp_monster_valk:core/tick/on_battle/interact/reaction/cancel_attack_sweep.m {Side:"l"}
         execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_r.playing] if score @s aj.shoot_sweep_r.frame matches 49..57 run return run function mhdp_monster_valk:core/tick/on_battle/interact/reaction/cancel_attack_sweep.m {Side:"r"}

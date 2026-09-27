@@ -123,7 +123,7 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_down_end_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_down_end_r/main
 # 飛行中怯み
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_damage_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_flying/main
-# 怯み・反撃硬直
+# 怯み・相殺
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_damage_counter_head_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_head_start/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_damage_counter_wing_l_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_wing_l_start/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_damage_counter_wing_r_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_wing_r_start/main

@@ -188,14 +188,14 @@
 # 翼槍叩きつけ (右翼爪)
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Vertical.Right",AttackPart:"wing_right",VectorType:"Normal",\
-        DamageValue:10.0f,ObjectDamageValue:50,GuardValue:6,ElementType:0,ElementMultiply:0,\
+        DamageValue:10.0f,ObjectDamageValue:99,GuardValue:6,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 # 翼槍叩きつけ (左翼爪)
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Vertical.Left",AttackPart:"wing_left",VectorType:"Normal",\
-        DamageValue:10.0f,ObjectDamageValue:50,GuardValue:6,ElementType:0,ElementMultiply:0,\
+        DamageValue:10.0f,ObjectDamageValue:99,GuardValue:6,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
@@ -203,7 +203,7 @@
 # 翼槍振り上げ
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Upper",AttackPart:"body",VectorType:"Normal",\
-        DamageValue:11.0f,ObjectDamageValue:45,GuardValue:7,ElementType:5,ElementMultiply:0,\
+        DamageValue:11.0f,ObjectDamageValue:50,GuardValue:7,ElementType:5,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:true,LaunchAngle:35,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
@@ -217,7 +217,6 @@
     }
 
 # 突進攻撃
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"DashAttack",AttackPart:"body",VectorType:"Normal",\
         DamageValue:5.8f,ObjectDamageValue:15,GuardValue:3,ElementType:0,ElementMultiply:0,\
@@ -226,7 +225,6 @@
     }
 
 # 蛇行突進
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Tackle",AttackPart:"body",VectorType:"Normal",\
         DamageValue:6.5f,ObjectDamageValue:20,GuardValue:4,ElementType:0,ElementMultiply:0,\
@@ -235,10 +233,9 @@
     }
 
 # 滑空突進
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"JetTackle",AttackPart:"body",VectorType:"Normal",\
-        DamageValue:9.2f,ObjectDamageValue:25,GuardValue:5,ElementType:5,ElementMultiply:10,\
+        DamageValue:9.2f,ObjectDamageValue:50,GuardValue:5,ElementType:5,ElementMultiply:10,\
         KnockbackStrength:2,IsLaunch:true,LaunchAngle:35,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
@@ -246,56 +243,50 @@
 # 龍閃
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Beam",AttackPart:"none",VectorType:"Normal",\
-        DamageValue:16.5f,ObjectDamageValue:50,GuardValue:7,ElementType:5,ElementMultiply:100,\
+        DamageValue:16.5f,ObjectDamageValue:30,GuardValue:7,ElementType:5,ElementMultiply:100,\
         KnockbackStrength:3,IsLaunch:true,LaunchAngle:35,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 
 # 彗星
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Comet",AttackPart:"none",VectorType:"Normal",\
-        DamageValue:21.0f,ObjectDamageValue:60,GuardValue:20,ElementType:5,ElementMultiply:10,\
+        DamageValue:21.0f,ObjectDamageValue:99,GuardValue:50,ElementType:5,ElementMultiply:10,\
         KnockbackStrength:3,IsLaunch:true,LaunchAngle:35,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 
 # 翼叩きつけ (右翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"VerticalS.Right",AttackPart:"wing_right",VectorType:"Normal",\
-        DamageValue:12.0f,ObjectDamageValue:20,GuardValue:6,ElementType:0,ElementMultiply:0,\
+        DamageValue:12.0f,ObjectDamageValue:99,GuardValue:6,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 # 翼叩きつけ (左翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"VerticalS.Left",AttackPart:"wing_left",VectorType:"Normal",\
-        DamageValue:12.0f,ObjectDamageValue:20,GuardValue:6,ElementType:0,ElementMultiply:0,\
+        DamageValue:12.0f,ObjectDamageValue:99,GuardValue:6,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 
 # 薙ぎ払い (右翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Sweep.Right",AttackPart:"wing_right",VectorType:"Normal",\
-        DamageValue:8.6f,ObjectDamageValue:15,GuardValue:4,ElementType:0,ElementMultiply:0,\
+        DamageValue:8.6f,ObjectDamageValue:10,GuardValue:4,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 # 薙ぎ払い (左翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Sweep.Left",AttackPart:"wing_left",VectorType:"Normal",\
-        DamageValue:8.6f,ObjectDamageValue:15,GuardValue:4,ElementType:0,ElementMultiply:0,\
+        DamageValue:8.6f,ObjectDamageValue:10,GuardValue:4,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 
 # 薙ぎ払い(怒り) (右翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Sweep.Anger.Right",AttackPart:"wing_right",VectorType:"Normal",\
         DamageValue:9.5f,ObjectDamageValue:15,GuardValue:5,ElementType:5,ElementMultiply:40,\
@@ -303,7 +294,6 @@
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 # 薙ぎ払い(怒り) (左翼爪)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Sweep.Anger.Left",AttackPart:"wing_left",VectorType:"Normal",\
         DamageValue:9.5f,ObjectDamageValue:15,GuardValue:5,ElementType:5,ElementMultiply:40,\
@@ -312,7 +302,6 @@
     }
 
 # 射撃
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Shot",AttackPart:"none",VectorType:"Normal",\
         DamageValue:6.5f,ObjectDamageValue:10,GuardValue:3,ElementType:5,ElementMultiply:100,\
@@ -321,18 +310,16 @@
     }
 
 # 爆発 (側面)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Bomb.Side",AttackPart:"none",VectorType:"Normal",\
-        DamageValue:8.5f,ObjectDamageValue:15,GuardValue:6,ElementType:5,ElementMultiply:100,\
+        DamageValue:8.5f,ObjectDamageValue:25,GuardValue:6,ElementType:5,ElementMultiply:100,\
         KnockbackStrength:2,IsLaunch:true,LaunchAngle:60,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 # 爆発 (前方)
-    #TODO: ObjectDamageの調整
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Bomb.Forward",AttackPart:"none",VectorType:"Normal",\
-        DamageValue:8.5f,ObjectDamageValue:15,GuardValue:6,ElementType:5,ElementMultiply:100,\
+        DamageValue:8.5f,ObjectDamageValue:25,GuardValue:6,ElementType:5,ElementMultiply:100,\
         KnockbackStrength:2,IsLaunch:true,LaunchAngle:60,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
