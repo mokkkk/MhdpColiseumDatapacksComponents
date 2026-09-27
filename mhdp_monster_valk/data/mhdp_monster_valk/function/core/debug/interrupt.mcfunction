@@ -14,7 +14,7 @@
     # タグ付与
         # tag @s add Anim.Comet
         # execute positioned as @p[tag=Mns.Target.Valk] run summon area_effect_cloud ~ ~ ~ {Tags:["Mns.MovePos.Valk"],Duration:600,Radius:0.0f}
-        function mhdp_monster_valk:core/tick/animation/change/play/jet_tackle
+        function mhdp_monster_valk:core/tick/animation/change/play/vertical_s
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn
         # scoreboard players set @s Mns.General.TurnCount 1

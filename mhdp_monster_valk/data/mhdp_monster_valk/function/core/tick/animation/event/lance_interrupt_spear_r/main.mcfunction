@@ -4,6 +4,10 @@
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
+# 移動
+    execute if score @s aj.lance_interrupt_spear_r.frame matches 1..6 at @s run tp @s ^ ^ ^-0.3
+    execute if score @s aj.lance_interrupt_spear_r.frame matches 7..13 at @s run tp @s ^ ^ ^-0.1
+
 # 効果音
     execute if score @s aj.lance_interrupt_spear_r.frame matches 2..5 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.phantom.hurt master @s ^ ^1 ^1 0.4 1 0.4
     execute if score @s aj.lance_interrupt_spear_r.frame matches 2..5 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.phantom.hurt master @s ^ ^1 ^1 0.4 1.2 0.4

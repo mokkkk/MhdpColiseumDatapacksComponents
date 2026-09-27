@@ -20,9 +20,11 @@
         playsound entity.ravager.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
         playsound entity.ravager.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
 
+# 対象オブジェクトに合わせて位置調整
+    execute at @s facing entity @n[tag=Asset.Build.Temp.AttackTarget] feet positioned as @n[tag=Asset.Build.Temp.AttackTarget] run tp @s ^ ^ ^-8 ~ 0
+
 # 建築物の消滅tick上書き
-    #TODO: 怯みアニメの長さに合わせて調整
-    data modify storage api: Return.OverrideRemoveTick set value 10
+    data modify storage api: Return.OverrideRemoveTick set value 34
 
 # 攻撃終了 (部位の相殺受付状態も含めて後始末)
     function mhdp_monsters:core/util/tick/event/end_attack
