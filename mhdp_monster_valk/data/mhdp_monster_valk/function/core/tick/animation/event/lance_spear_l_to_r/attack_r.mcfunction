@@ -4,12 +4,8 @@
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/main
 
-# 攻撃実行 (翼爪の可動域に沿って複数点判定)
+# 攻撃実行 (翼爪先端のロケータから前後に長い判定)
     function animated_java_valk:valk/at_locator {name:"pos_wing_r_1",command:"function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/hit_r"}
-    function animated_java_valk:valk/at_locator {name:"pos_wing_r_2",command:"function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/hit_r"}
-    function animated_java_valk:valk/at_locator {name:"pos_wing_r_3",command:"function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/hit_r"}
-    function animated_java_valk:valk/at_locator {name:"pos_wing_r_4",command:"function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/hit_r"}
-    function animated_java_valk:valk/at_locator {name:"pos_wing_r_5",command:"function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/hit_r"}
 
 # 演出
     playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
