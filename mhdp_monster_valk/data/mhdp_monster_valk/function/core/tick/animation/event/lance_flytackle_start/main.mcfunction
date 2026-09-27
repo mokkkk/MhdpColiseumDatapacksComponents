@@ -36,7 +36,7 @@
     execute if score @s aj.lance_flytackle_start.frame matches 45.. run tp @n[type=text_display,tag=10047.IsFollow] ^ ^3 ^
 
 # 移動位置決定
-    execute if score @s aj.lance_flytackle_start.frame matches 38 positioned as @n[tag=Mns.Target.Valk] rotated ~ 0 positioned ^ ^0.5 ^ run summon area_effect_cloud ^ ^ ^ {Duration:200,DurationOnUse:0,Tags:["Mns.MovePos.Valk"]}
+    execute if score @s aj.lance_flytackle_start.frame matches 38 positioned as @n[tag=Mns.Target.Valk] rotated ~ 0 positioned ^ ^0.5 ^ run summon area_effect_cloud ^ ^ ^ {Duration:200,DurationOnUse:0,Tags:["Mns.MovePos.Valk"],custom_particle:{type:"block",block_state:"minecraft:air"}}
     execute if score @s aj.lance_flytackle_start.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] at @s run function mhdp_monsters:core/util/other/on_ground
     execute if score @s aj.lance_flytackle_start.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] at @s run tp @s ~ ~0.5 ~
     execute if score @s aj.lance_flytackle_start.frame matches 38 as @n[type=area_effect_cloud,tag=Mns.MovePos.Valk] positioned as @s if block ^ ^ ^5 #mhdp_core:no_collision run tp @s ^ ^ ^5

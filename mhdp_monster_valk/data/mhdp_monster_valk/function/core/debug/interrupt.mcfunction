@@ -13,7 +13,7 @@
 # 通常攻撃用
     # タグ付与
         # tag @s add Anim.Comet
-        # execute positioned as @p[tag=Mns.Target.Valk] run summon area_effect_cloud ~ ~ ~ {Tags:["Mns.MovePos.Valk"],Duration:600,Radius:0.0f}
+        # execute positioned as @p[tag=Mns.Target.Valk] run summon area_effect_cloud ~ ~ ~ {Tags:["Mns.MovePos.Valk"],custom_particle:{type:"block",block_state:"minecraft:air"},Duration:600,Radius:0.0f}
         function mhdp_monster_valk:core/tick/animation/change/play/sault_move
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn
@@ -24,7 +24,7 @@
 # 移動用
     # タグ付与
         # tag @s add Anim.MoveStart.Lance
-        # execute positioned as @p[tag=Mns.Target.Valk] run summon area_effect_cloud ~ ~ ~ {Tags:["Mns.MovePos.Valk"],Duration:600,Radius:0.0f}
+        # execute positioned as @p[tag=Mns.Target.Valk] run summon area_effect_cloud ~ ~ ~ {Tags:["Mns.MovePos.Valk"],custom_particle:{type:"block",block_state:"minecraft:air"},Duration:600,Radius:0.0f}
     # 遷移先決定
         # tag @s add Mns.Temp.Valk.MoveToDashAttack
     # アニメーション変更
