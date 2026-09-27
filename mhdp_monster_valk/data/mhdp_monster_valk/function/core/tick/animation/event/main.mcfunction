@@ -104,7 +104,6 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.shoot_shot_forward.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_forward/main
     execute if entity @s[tag=animated_java_valk.valk.animation.shoot_shot_horizon.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_horizon/main
 
-
 ## 怯み
 
 # 怯み・部位別

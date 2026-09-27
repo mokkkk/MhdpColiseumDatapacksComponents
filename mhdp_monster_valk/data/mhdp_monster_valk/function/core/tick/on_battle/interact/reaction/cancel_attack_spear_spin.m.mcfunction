@@ -19,6 +19,7 @@
         playsound minecraft:entity.puffer_fish.death master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
         playsound entity.ravager.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
         playsound entity.ravager.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+        execute at @n[tag=Asset.Build.Temp.AttackTarget] run particle explosion ~ ~ ~ 0.5 0.5 0.5 0 10
 
 # 対象オブジェクトを向く
     execute facing entity @n[tag=Asset.Build.Temp.AttackTarget] feet run rotate @s ~ 0

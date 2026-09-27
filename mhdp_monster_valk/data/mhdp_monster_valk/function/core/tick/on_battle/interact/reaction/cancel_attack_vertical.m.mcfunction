@@ -1,6 +1,6 @@
 #> mhdp_monster_valk:core/tick/on_battle/interact/reaction/cancel_attack_vertical.m
 #
-# tick処理 戦闘中 建築物攻撃 攻撃キャンセル 翼槍叩きつけ・翼槍突き上げ
+# tick処理 戦闘中 建築物攻撃 攻撃キャンセル 翼槍叩きつけ
 #
 # @within function mhdp_monster_valk:core/tick/on_battle/interact/on_attack_object
 # @input arg Side 左右 ("r" / "l")
@@ -23,9 +23,11 @@
         playsound entity.ravager.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.6
         playsound entity.ravager.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
 
+# 対象オブジェクトに合わせて位置調整
+    execute at @s facing entity @n[tag=Asset.Build.Temp.AttackTarget] feet positioned as @n[tag=Asset.Build.Temp.AttackTarget] run tp @s ^ ^ ^-6 ~ 0
+
 # 建築物の消滅tick上書き
-    #TODO: 怯みアニメの長さに合わせて調整
-    data modify storage api: Return.OverrideRemoveTick set value 10
+    execute if entity @s[tag=!Mns.State.IsAnger] run data modify storage api: Return.OverrideRemoveTick set value 62
 
 # 攻撃終了 (部位の相殺受付状態も含めて後始末)
     function mhdp_monsters:core/util/tick/event/end_attack
