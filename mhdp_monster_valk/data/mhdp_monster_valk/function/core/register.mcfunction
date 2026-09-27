@@ -274,14 +274,14 @@
 # 薙ぎ払い (右翼爪)
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Sweep.Right",AttackPart:"wing_right",VectorType:"Normal",\
-        DamageValue:8.6f,ObjectDamageValue:10,GuardValue:4,ElementType:0,ElementMultiply:0,\
+        DamageValue:8.6f,ObjectDamageValue:15,GuardValue:4,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 # 薙ぎ払い (左翼爪)
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Sweep.Left",AttackPart:"wing_left",VectorType:"Normal",\
-        DamageValue:8.6f,ObjectDamageValue:10,GuardValue:4,ElementType:0,ElementMultiply:0,\
+        DamageValue:8.6f,ObjectDamageValue:15,GuardValue:4,ElementType:0,ElementMultiply:0,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
@@ -289,14 +289,14 @@
 # 薙ぎ払い(怒り) (右翼爪)
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Sweep.Anger.Right",AttackPart:"wing_right",VectorType:"Normal",\
-        DamageValue:9.5f,ObjectDamageValue:15,GuardValue:5,ElementType:5,ElementMultiply:40,\
+        DamageValue:9.5f,ObjectDamageValue:20,GuardValue:5,ElementType:5,ElementMultiply:40,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
 # 薙ぎ払い(怒り) (左翼爪)
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Sweep.Anger.Left",AttackPart:"wing_left",VectorType:"Normal",\
-        DamageValue:9.5f,ObjectDamageValue:15,GuardValue:5,ElementType:5,ElementMultiply:40,\
+        DamageValue:9.5f,ObjectDamageValue:20,GuardValue:5,ElementType:5,ElementMultiply:40,\
         KnockbackStrength:3,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
@@ -304,7 +304,7 @@
 # 射撃
     data modify storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks append value {\
         Name:"Shot",AttackPart:"none",VectorType:"Normal",\
-        DamageValue:6.5f,ObjectDamageValue:10,GuardValue:3,ElementType:5,ElementMultiply:100,\
+        DamageValue:6.5f,ObjectDamageValue:4,GuardValue:3,ElementType:5,ElementMultiply:100,\
         KnockbackStrength:1,IsLaunch:false,LaunchAngle:0,\
         IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
     }
