@@ -1,0 +1,11 @@
+#> mhdp_monster_valk:core/tick/animation/event/idle_relax/main
+#
+# アニメーションイベントハンドラ 待機 (未発見時)
+#
+# @within function mhdp_monster_valk:core/tick/animation/event/tick
+
+# 接地
+    function mhdp_monsters:core/util/tick/move/check_landing
+
+# 終了
+    execute if score @s aj.idle_relax.frame matches 59 run function mhdp_monster_valk:core/tick/animation/event/idle_relax/end

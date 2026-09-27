@@ -26,6 +26,6 @@ function animated_java:global/remove/entity_stack_by_uuid with storage animated_
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_tail_3
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_tail_4
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.shadow
-execute unless data storage animated_java:temp {entry:{data:{rig_hash: '6012ddad450205ce09d55ea87a29fe31a0987f371dc73760f69ebfbfaebc57ac'}}} run function animated_java:global/remove/outdated_rig
+execute unless data storage animated_java:temp {entry:{data:{rig_hash: '0544a5593a5080a1cabe1ea56461a3eddc39693aed35d8bd93794346ede95ef5'}}} run function animated_java:global/remove/outdated_rig
 function animated_java_valk:valk/remove/this/zzz/0 with storage animated_java:temp entry.data.uuids_by_name
 function animated_java:global/remove/entity_stack

@@ -10,8 +10,9 @@
 # 事前処理
     # アニメーションが停止しないよう、とりあえず待機アニメーションを再生
     # 後の処理でアニメーションを上書きする
-        execute if entity @s[tag=!Mns.Valk.State.IsShoot] run function animated_java_valk:valk/animations/lance_idle/tween {duration:1, to_frame: 0}
-        execute if entity @s[tag=Mns.Valk.State.IsShoot] run function animated_java_valk:valk/animations/shoot_idle/tween {duration:1, to_frame: 0}
+        execute if score @s Mns.General.Phase matches 0 run function animated_java_valk:valk/animations/idle_relax/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=!Mns.Valk.State.IsShoot] unless score @s Mns.General.Phase matches 0 run function animated_java_valk:valk/animations/lance_idle/tween {duration:1, to_frame: 0}
+        execute if entity @s[tag=Mns.Valk.State.IsShoot] unless score @s Mns.General.Phase matches 0 run function animated_java_valk:valk/animations/shoot_idle/tween {duration:1, to_frame: 0}
 
 # 共通処理
     # Animタグがすでについているか確認
@@ -23,9 +24,9 @@
         execute if entity @s[tag=Mns.State.IsAnger] if score @s Mns.Anger.Timer matches ..0 run function mhdp_monster_valk:core/damage/reaction/anger_end
 
 # 非発見時
-    # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 0 run function mhdp_monster_valk:core/tick/animation/change/on_relax/main
+    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 0 run function mhdp_monster_valk:core/tick/animation/change/on_relax/main
 # 警戒時
-    # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 1 run function mhdp_monster_valk:core/tick/animation/change/on_caution/main
+    execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 1 run function mhdp_monster_valk:core/tick/animation/change/on_caution/main
 # 戦闘時
     # execute if entity @s[tag=!Mns.Temp.IsAlreadyAnimation] if score @s Mns.General.Phase matches 2 run function mhdp_monster_valk:core/tick/animation/change/on_battle/main
 

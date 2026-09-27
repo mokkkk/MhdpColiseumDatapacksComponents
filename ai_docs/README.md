@@ -7,7 +7,10 @@
 | ファイル | 内容 |
 | --- | --- |
 | [`monster_datapack_spec.md`](./monster_datapack_spec.md) | **新形式 `mhdp_monster_xxx` データパックの作成手順書 / 共通ファイル仕様書**。更新後のデータパックにどのような共通ファイルが存在し、各処理が何をするのかを記述する。AI がこの手順書を参照して新形式のデータパックを組み立てる。 |
-| [`monster_datapack_comparison.md`](./monster_datapack_comparison.md) | **新形式 2 種（`mhdp_monster_dino` / `mhdp_monster_ranposu`）と旧形式 `mhdp_monster_valk` の仕様比較表**。どこを・どのように変えれば valk が新形式になるかの差分一覧。 |
+| [`monster/migration/monster_datapack_comparison.md`](./monster/migration/monster_datapack_comparison.md) | **新形式 2 種（`mhdp_monster_dino` / `mhdp_monster_ranposu`）と旧形式 `mhdp_monster_valk` の仕様比較表**。どこを・どのように変えれば valk が新形式になるかの差分一覧。 |
+| [`monster/migration/monster_migration_playbook.md`](./monster/migration/monster_migration_playbook.md) | **（ドラフト）旧形式→新形式 移行の実行手順書**。valk移行で確立したStage別進行フロー・複雑グループの運用・確立済みAPIカタログ・頻出バグパターンをまとめたもの。 |
+| [`monster/create_new/new_monster_creation_guide.md`](./monster/create_new/new_monster_creation_guide.md) | **（ドラフト）ゼロからの新規モンスター実装手順書**。旧コードが無い前提での進め方（仕様書駆動・反復調整）をまとめたもの。 |
+| [`monster/create_new/monster_spec_template.md`](./monster/create_new/monster_spec_template.md) | **（ドラフト）新規モンスター作成時にユーザーが用意する内容仕様書のテンプレート**。`new_monster_creation_guide.md` はこの仕様書を一次情報源として実装を進める。 |
 
 ## 参照した実データパック
 

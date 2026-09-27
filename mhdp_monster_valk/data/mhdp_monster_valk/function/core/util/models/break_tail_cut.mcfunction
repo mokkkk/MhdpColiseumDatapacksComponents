@@ -8,5 +8,5 @@
 
 # モデル変更
     function animated_java_valk:valk/as_node {name: 'tail_3', command: \
-        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/tail_3_cut"'\
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/empty"'\
     }

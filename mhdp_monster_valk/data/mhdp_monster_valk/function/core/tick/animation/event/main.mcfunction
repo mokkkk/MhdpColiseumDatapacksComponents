@@ -4,7 +4,21 @@
 #
 # @within function mhdp_monster_valk:core/tick/main
 
-## 非発見時・警戒時共通
+## 非発見時
+
+# 待機
+    execute if entity @s[tag=animated_java_valk.valk.animation.idle_relax.playing] run function mhdp_monster_valk:core/tick/animation/event/idle_relax/main
+# 移動
+    execute if entity @s[tag=animated_java_valk.valk.animation.walk_relax.playing] run function mhdp_monster_valk:core/tick/animation/event/walk_relax/main
+# 生態行動
+    execute if entity @s[tag=animated_java_valk.valk.animation.ecology_relax.playing] run function mhdp_monster_valk:core/tick/animation/event/ecology_relax/main
+
+## 警戒時
+
+# 警戒
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_search.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_search/main
+
+## 戦闘時
 
 # 待機
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_idle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_idle/main
@@ -51,8 +65,6 @@
 # 軸合わせ (旋回)
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_turn_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_turn_l/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_turn_r/main
-# 警戒
-    execute if entity @s[tag=animated_java_valk.valk.animation.lance_search.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_search/main
 # 咆哮
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_voice.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_voice/main
 # 滑空突進
@@ -60,6 +72,39 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_flytackle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_flytackle_repeat.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_repeat/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_flytackle_end.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_end/main
+
+
+## 龍気形態
+
+# 待機
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_idle.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_idle/main
+# 移動
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_move.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_move/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_move_start.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_move_start/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_moveback.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_moveback/main
+# ステップ
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_step.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_step/main
+# 軸合わせ (旋回)
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_turn_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_turn_l/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_turn_r/main
+# 前方爆発
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sault_before.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sault_before/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sault.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sault/main
+# 翼叩きつけ
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_vertical_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_l/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_vertical_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_r/main
+# 薙ぎ払い
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_l/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_r/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_anger_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_anger_l/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_anger_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_anger_r/main
+# 爆発
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_bomb_forward.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_bomb_side.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/main
+# 射撃
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_shot_forward.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_forward/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_shot_horizon.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_horizon/main
+
 
 ## 怯み
 
@@ -104,33 +149,24 @@
 # 麻痺
     execute if entity @s[tag=animated_java_valk.valk.animation.state_paralysis.playing] run function mhdp_monster_valk:core/tick/animation/event/state_paralysis/main
 
-## 龍気形態
-
-# 待機
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_idle.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_idle/main
-# 移動
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_move.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_move/main
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_move_start.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_move_start/main
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_moveback.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_moveback/main
-# ステップ
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_step.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_step/main
-# 軸合わせ (旋回)
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_turn_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_turn_l/main
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_turn_r/main
-# 前方爆発
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sault_before.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sault_before/main
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sault.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sault/main
-# 翼叩きつけ
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_vertical_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_l/main
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_vertical_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_r/main
+## 建築物怯み
+# 2連突き
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_interrupt_spear_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_interrupt_spear_r/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_interrupt_spear_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_interrupt_spear_l/main
+# 翼槍回転斬り
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_interrupt_spear_spin_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_interrupt_spear_spin_r/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_interrupt_spear_spin_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_interrupt_spear_spin_l/main
+# 翼槍叩きつけ
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_interrupt_vertical_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_interrupt_vertical_r/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_interrupt_vertical_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_interrupt_vertical_l/main
+# 翼槍叩きつけ (怒り)
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_interrupt_vertical_r_anger.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_interrupt_vertical_r_anger/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_interrupt_vertical_l_anger.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_interrupt_vertical_l_anger/main
+# 滑空突進
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_interrupt_flytackle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_interrupt_flytackle/main
 # 薙ぎ払い
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_l/main
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_r/main
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_anger_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_anger_l/main
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_sweep_anger_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_sweep_anger_r/main
-# 爆発
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_bomb_forward.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/main
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_bomb_side.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/main
-# 射撃
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_shot_forward.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_forward/main
-    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_shot_horizon.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_shot_horizon/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_interrupt_sweep_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_interrupt_sweep_r/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_interrupt_sweep_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_interrupt_sweep_l/main
+# 翼叩きつけ
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_interrupt_vertical_r.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_interrupt_vertical_r/main
+    execute if entity @s[tag=animated_java_valk.valk.animation.shoot_interrupt_vertical_l.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_interrupt_vertical_l/main

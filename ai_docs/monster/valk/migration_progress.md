@@ -17,7 +17,7 @@
 > **要確認**: 現状 `change/main` の軸合わせ行は `store result #mhdp_temp_result` が未消費・未リセット、正面時 `play/turn` が `return 99` で早期 return すると `Mns.Temp.IsTurn` が残り play/main も走らず 1tick 何もしない可能性。`play/turn` 側での内部処理化 or 判定復活が要検討（ユーザー編集中）。
 
 ## 参照
-- 手順書: `ai_docs/monster_datapack_spec.md` / 差分表: `ai_docs/monster_datapack_comparison.md`
+- 手順書: `ai_docs/monster_datapack_spec.md` / 差分表: `ai_docs/monster/migration/monster_datapack_comparison.md`
 - 新形式テンプレ: `mhdp_monster_ranposu`（`mhdp_monster_ranposu_bak` からの同一変換の実例）, `mhdp_monster_dino`
 - 共通エンジン: `mhdp_core/data/mhdp_monsters/`
 
@@ -492,8 +492,11 @@ DefenceData 10 行。HitBox タグ/PartId は AJ 生成 locator が付与。破�
 **Stage 5-C 完了（85/85 approve済み）**。Stage 5（5-A/5-B/5-C）全体が完了。
 
 **残タスク（Stage 6）**:
-- `core/debug/interrupt.mcfunction` / `interrupt_anger.mcfunction`（未着手）
-- `advancement/toast_break.json`（icon = `icons/valk`。`show_toast` が参照。未着手）
-- 弾システムの最終確認（`assets:object/1004N` 全体の通し確認。個別のobjectは全てinit/summon/tick実装済み）
+- `core/debug/interrupt.mcfunction` / `interrupt_anger.mcfunction` → **ユーザー指示により実装不要（対象外）**
+- `advancement/toast_break.json` → **完了・approve済み**（dino/ranposu と同一テンプレート、icon = `icons/valk`）
+- 弾システムの最終確認 → **完了（2026-09-23）**。`assets:object/1004N`（10040-10048）全9個の`_index.d`/`summon/`/`init/`/`tick/`/`remove/`+`alias/`を通し確認し、以下の残存TODOを解消:
+  - `10040.valk_shot/init/`: 「狙い補正未実装」のTODOが残っていたが、実際は呼び出し側（shoot_shot_forward/horizon）が`summon.m`実行前に`positioned`/`rotated`で狙いを作る設計で既に解決済みと確認 → TODOコメントを解決済みの説明に置換。
+  - `10043(Jet)`/`10044(Star)`/`10045(Beam)`/`10048(Thunder)`の`tick/`: 「呼び出し側からkillする設計にすべきか」というTODOが残っていたが、実際はlance_biim/shoot_bomb/comet_phaseの各呼び出し元で既に明示的kill実装済みと確認 → TODOコメントを「呼び出し側が明示的にkillするまで生存。300tickは安全策」という確定済み設計の説明に置換（300tick自体は変更なし、安全ネットとして維持）。
+  - 他は特に問題なし（alias、_index.d宣言タグ、summon/のタグ整合性いずれも一致）。
 
 軸合わせは `alignment_start.m`/`alignment` 方式で統一済み。hit/attack は `cuboid_preview.m` を `apply_attack.m` 直前に配置（コメントアウトはユーザーがレビュー時に実施）。地面ひび割れは `api:object/summon.m {ObjectId:16}`。複雑グループは[[complex-group-phased-workflow]]で対応（今後Stage6の残タスクが複雑な場合も同様に検討）。

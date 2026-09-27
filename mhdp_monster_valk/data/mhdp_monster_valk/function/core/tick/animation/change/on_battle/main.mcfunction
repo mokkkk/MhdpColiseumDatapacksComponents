@@ -18,22 +18,29 @@
     execute if entity @s[tag=Mns.Temp.Anim.IsFirstContact] run return run function mhdp_monster_valk:core/tick/animation/change/on_battle/first
 
 # フェーズカウント加算
-    execute if entity @n[tag=Mns.Target.Valk,distance=..14] run scoreboard players add @s Mns.General.ActCount.Move 2
-    execute if entity @n[tag=Mns.Target.Valk,distance=14.1..] run scoreboard players remove @s Mns.General.ActCount.Move 1
-    scoreboard players add @s Mns.Valk.PhaseCount.Comet 1
-    scoreboard players add @s Mns.Valk.PhaseCount.Move 1
-    scoreboard players add @s Mns.Valk.PhaseCount.Beam 1
-    scoreboard players add @s Mns.Valk.PhaseCount 1
-    # 彗龍形態時、敵が遠くにいるなら追加加算
-        execute if entity @s[tag=!Mns.Valk.State.IsShoot] if entity @n[tag=Mns.Target.Valk,distance=17..] run scoreboard players add @s Mns.Valk.PhaseCount 1
-    # 龍気形態時、敵が近くにいるなら追加加算
-        execute if entity @s[tag=Mns.Valk.State.IsShoot] if entity @n[tag=Mns.Target.Valk,distance=..12] run scoreboard players add @s Mns.Valk.PhaseCount 1
+    # 形態変化 (彗龍 ⇔ 龍気) … change_phase で参照
+        scoreboard players add @s Mns.Valk.PhaseCount 1
+        # 苦手な距離にいる場合、追加加算
+            # 彗龍形態時、敵が遠くにいる
+                execute if entity @s[tag=!Mns.Valk.State.IsShoot] if entity @n[tag=Mns.Target.Valk,distance=17..] run scoreboard players add @s Mns.Valk.PhaseCount 1
+            # 龍気形態時、敵が近くにいる
+                execute if entity @s[tag=Mns.Valk.State.IsShoot] if entity @n[tag=Mns.Target.Valk,distance=..12] run scoreboard players add @s Mns.Valk.PhaseCount 1
+    # 大技 (彗星)
+        scoreboard players add @s Mns.Valk.PhaseCount.Comet 1
+    # 準大技 (移動→翼槍回転斬り)
+        scoreboard players add @s Mns.Valk.PhaseCount.Move 1
+    # 準大技 (龍閃)
+        scoreboard players add @s Mns.Valk.PhaseCount.Beam 1
 
 # クールタイム
     execute if score @s Mns.Valk.MoveSkill.CoolDown matches 1.. run scoreboard players remove @s Mns.Valk.MoveSkill.CoolDown 1
 
-# 張り付き対策の位置リセット
-    execute if score @s Mns.General.ActCount.Move matches 8.. if entity @n[tag=Mns.Target.Valk,distance=..14] run return run function mhdp_monster_valk:core/tick/animation/change/on_battle/move
+# 張り付き対策
+    # 行動回数加算 (近距離: +2 / 遠距離: -1)
+        execute if entity @n[tag=Mns.Target.Valk,distance=..14] run scoreboard players add @s Mns.General.ActCount.Move 2
+        execute if entity @n[tag=Mns.Target.Valk,distance=14.1..,scores={Mns.General.ActCount.Move=1..}] run scoreboard players remove @s Mns.General.ActCount.Move 1
+    # 位置リセット
+        execute if score @s Mns.General.ActCount.Move matches 8.. if entity @n[tag=Mns.Target.Valk,distance=..14] run return run function mhdp_monster_valk:core/tick/animation/change/on_battle/move
 
 # フェーズ移行 (彗龍 ⇔ 龍気)
     function mhdp_monster_valk:core/tick/animation/change/on_battle/change_phase
@@ -43,8 +50,10 @@
     execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Comet matches 50.. run return run tag @s add Anim.Comet
 
 # 準大技
-    execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Move matches 13.. if predicate {"condition":"minecraft:random_chance","chance":0.4} run return run function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin_move
-    execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Beam matches 30.. if predicate {"condition":"minecraft:random_chance","chance":0.6} run return run function mhdp_monster_valk:core/tick/animation/change/play/beam
+    # 槍翼回転斬り
+        execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Move matches 13.. if predicate {"condition":"minecraft:random_chance","chance":0.4} run return run function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin_move
+    # 龍閃
+        execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Beam matches 30.. if predicate {"condition":"minecraft:random_chance","chance":0.6} run return run function mhdp_monster_valk:core/tick/animation/change/play/beam
 
 # 距離別の行動選択
     # 彗龍

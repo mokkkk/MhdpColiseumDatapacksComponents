@@ -14,6 +14,5 @@
     execute if score @s MhdpCore matches 3.. run data modify entity @s text set value {"text":"2","font":"vfx/valstrax/star"}
     execute if score @s MhdpCore matches 3.. run scoreboard players set @s MhdpCore 0
 
-# 終了
-    # TODO: 旧はアニメイベント側で kill @e[tag=...] していた。呼び出し側から kill するか、下記の寿命上限を適正値に調整すること
+# 終了（呼び出し側が明示的に kill するまで生存。300tickは呼び出し側のkill漏れに対する安全策）
     execute if score @s ObjectTick matches 300.. run function assets:object/10044.valk_comet_star/remove/

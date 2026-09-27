@@ -96,7 +96,8 @@
     #declare tag Anim.Sault 前転
     #declare tag Anim.Search 警戒 索敵
     #declare tag Anim.Ecology 生態行動
-    #declare tag Anim.RelaxWalk 未発見 歩き
+    #declare tag Anim.Idle.Relax 未発見 待機
+    #declare tag Anim.Walk 未発見 歩き
     #declare tag Anim.Turn.R 振り向き R
     #declare tag Anim.Turn.L 振り向き L
 

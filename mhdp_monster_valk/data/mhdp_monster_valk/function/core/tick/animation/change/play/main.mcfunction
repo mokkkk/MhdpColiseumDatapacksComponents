@@ -7,6 +7,14 @@
 # 行動回数加算
     scoreboard players add @s Mns.General.ActCount.Idle 1
 
+## 未発見時 (Phase 0)
+    # 待機
+        execute if entity @s[tag=Anim.Idle.Relax] run function animated_java_valk:valk/animations/idle_relax/tween {duration:1, to_frame: 1}
+    # 移動
+        execute if entity @s[tag=Anim.Walk] run function animated_java_valk:valk/animations/walk_relax/tween {duration:5, to_frame: 5}
+    # 生態行動
+        execute if entity @s[tag=Anim.Ecology] run function animated_java_valk:valk/animations/ecology_relax/tween {duration:1, to_frame: 1}
+
 # 警戒 (Phase 1)
     execute if entity @s[tag=Anim.Search] run function animated_java_valk:valk/animations/lance_search/tween {duration:1, to_frame: 1}
 

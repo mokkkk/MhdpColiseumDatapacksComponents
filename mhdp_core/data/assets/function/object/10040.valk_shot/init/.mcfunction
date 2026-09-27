@@ -2,7 +2,5 @@
 #
 # 龍気形態の射撃弾 初期化
 
-# 向き固定
+# 向き固定（狙い補正は呼び出し側が summon.m 実行前に positioned/rotated で作る。shoot_shot_forward/horizon で確認済み）
     tp @s ~ ~ ~ ~ ~
-
-# TODO: init 固有処理を実装（速度差・狙い補正・Override 引数の受け取りなど。旧は area_effect_cloud マーカーへ facing していた）

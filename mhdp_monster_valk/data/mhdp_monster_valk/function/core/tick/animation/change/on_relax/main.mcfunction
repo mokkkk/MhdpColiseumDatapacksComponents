@@ -4,5 +4,12 @@
 #
 # @within function mhdp_monster_valk:core/tick/animation/change/main
 
-#TODO: 未発見時の行動は新規設計。天彗龍は待機ループのみとし、固有の生態行動が必要なら追加する。
-#      現状は Anim を付与せず、待機アニメ (lance_idle) がそのままループする。
+# スコア加算
+    scoreboard players add @s Mns.General.EcologyCount 1
+
+# 生態行動と移動を交互に繰り返す
+    execute if score @s Mns.General.EcologyCount matches 1 run tag @s add Anim.Ecology
+    execute unless entity @s[tag=Anim.Ecology] run function mhdp_monster_valk:core/tick/animation/change/play/relax_walk
+
+# 終了
+    execute if score @s Mns.General.EcologyCount matches 2.. run scoreboard players set @s Mns.General.EcologyCount 0
