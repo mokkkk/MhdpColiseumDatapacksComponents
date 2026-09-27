@@ -4,5 +4,5 @@
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/lance_interrupt_spear_spin_r/main
 
-# 行動選択
-    function mhdp_monster_valk:core/tick/animation/change/main
+# 待機に移行
+    function animated_java_valk:valk/animations/lance_idle_short/tween {duration:1, to_frame: 1}

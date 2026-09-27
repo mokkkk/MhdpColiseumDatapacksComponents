@@ -73,7 +73,6 @@
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_flytackle_repeat.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_repeat/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_flytackle_end.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_end/main
 
-
 ## 龍気形態
 
 # 待機

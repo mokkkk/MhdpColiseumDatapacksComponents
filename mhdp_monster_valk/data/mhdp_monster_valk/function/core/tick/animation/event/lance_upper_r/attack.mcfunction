@@ -24,6 +24,9 @@
             Entity_Scale_X:3.4,Entity_Scale_Y:3.4,Entity_Scale_Z:43.0\
     }
 
+# 攻撃が建築物に当たった場合、演出無効化
+    execute if entity @s[tag=Mns.Temp.HitObject] run return 0
+
 # 演出
     execute positioned ^ ^ ^ run function mhdp_monster_valk:core/tick/animation/event/lance_upper_r/attack_effect
     execute positioned ^ ^ ^5 run function mhdp_monster_valk:core/tick/animation/event/lance_upper_r/attack_effect

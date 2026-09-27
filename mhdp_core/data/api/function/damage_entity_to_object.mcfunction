@@ -11,9 +11,8 @@
     function assets:core/object/build/damage
 
 # モンスター側の建築物攻撃処理実行
-    tag @s add Asset.Build.Temp.AttackTarget
     execute if data storage api: Return{IsSkipped:false} as @n[type=item_display,tag=Temp.ObjectAttacker,distance=..80] run function mhdp_monsters:core/switch/on_attack_object
-    tag @s remove Asset.Build.Temp.AttackTarget
+    tag @n[tag=Asset.Build.Temp.AttackTarget] remove Asset.Build.Temp.AttackTarget
 
 # モンスターの処理に応じてRemoveTick上書き
     execute if data storage api: Return.OverrideRemoveTick run function assets:core/object/build/override_remove_tick

@@ -24,6 +24,9 @@
             Entity_Scale_X:5.0,Entity_Scale_Y:7.0,Entity_Scale_Z:4.0\
     }
 
+# 攻撃が建築物に当たった場合、演出無効化
+    execute if entity @s[tag=Mns.Temp.HitObject] run return 0
+
 # 演出
     particle explosion ~ ~ ~ 1 0.1 1 0 10
     execute at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound entity.wither.break_block master @s ^ ^1 ^1 0.4 0.8 0.4

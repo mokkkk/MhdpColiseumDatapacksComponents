@@ -40,6 +40,9 @@
             Entity_Scale_X:6.2,Entity_Scale_Y:6.0,Entity_Scale_Z:3.2\
     }
 
+# 攻撃が建築物に当たった場合、演出無効化
+    execute if entity @s[tag=Mns.Temp.HitObject] run return 0
+
 # 演出
     particle explosion ~ ~ ~ 1 0.1 1 0 10
     execute positioned ^ ^ ^3 run particle explosion ~ ~ ~ 2 0.1 2 0 10

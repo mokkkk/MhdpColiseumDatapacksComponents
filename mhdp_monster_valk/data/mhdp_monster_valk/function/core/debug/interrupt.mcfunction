@@ -14,12 +14,12 @@
     # タグ付与
         # tag @s add Anim.Comet
         # execute positioned as @p[tag=Mns.Target.Valk] run summon area_effect_cloud ~ ~ ~ {Tags:["Mns.MovePos.Valk"],Duration:600,Radius:0.0f}
-        # function mhdp_monster_valk:core/tick/animation/change/play/sault_move
+        function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin_move
     # 軸合わせ
         # tag @s add Mns.Temp.IsTurn
         # scoreboard players set @s Mns.General.TurnCount 1
     # アニメーション変更
-        # function mhdp_monster_valk:core/tick/animation/change/main
+        function mhdp_monster_valk:core/tick/animation/change/main
 
 # 移動用
     # タグ付与
@@ -31,7 +31,7 @@
         # function mhdp_monster_valk:core/tick/animation/change/main
 
 # 強制再生
-    function animated_java_valk:valk/animations/ecology_relax/tween {duration:1, to_frame: 1}
+    # function animated_java_valk:valk/animations/lance_interrupt_spear_spin_r/tween {duration:1, to_frame: 1}
 
 # 強制リアクション
     # function mhdp_monster_valk:core/damage/reaction/paralysis

@@ -7,6 +7,8 @@
 # 共通処理
     # 怯み開始時
         function mhdp_monsters:core/util/damage/on_reaction_start
+    # モデル変更
+        function mhdp_monster_valk:core/util/models/model_interrupt
 
 # 麻痺・ダウン・スタン時はアニメーションを再生しない
     execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0

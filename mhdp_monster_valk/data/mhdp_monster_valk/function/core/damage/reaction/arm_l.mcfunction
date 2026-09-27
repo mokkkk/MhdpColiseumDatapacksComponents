@@ -7,6 +7,8 @@
 # 共通処理
     # 怯み開始時
         function mhdp_monsters:core/util/damage/on_reaction_start
+    # モデル変更
+        function mhdp_monster_valk:core/util/models/model_interrupt
     # 耐性値リセット
         scoreboard players operation @s Mns.Valk.ArmL.Damage = @s Mns.Valk.ArmL.Damage.Max
     # 怯み回数増加
