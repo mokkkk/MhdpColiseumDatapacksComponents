@@ -37,10 +37,6 @@
     execute if score @s aj.shoot_vertical_r.frame matches 107 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.shoot_vertical_r.frame matches 45..53 run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_r/particle
 
-# 演出
-    execute if score @s aj.shoot_vertical_r.frame matches 53 run data modify storage api: Arg.Override set value {Scale:6}
-    execute if score @s aj.shoot_vertical_r.frame matches 53 positioned ^-3 ^0 ^14 run function api:object/summon.m {ObjectId:10047}
-
 # 攻撃1 (お手・相殺不可のため start_attack は挟まない)
     execute if score @s aj.shoot_vertical_r.frame matches 29 run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_r/attack_hand
 
