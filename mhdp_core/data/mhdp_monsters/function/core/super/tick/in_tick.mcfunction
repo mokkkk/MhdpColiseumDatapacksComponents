@@ -27,6 +27,9 @@
         # execute if entity @s[tag=Mns.State.IsPoison,tag=!Mns.State.Death] run function mhdp_monsters:core/util/tick/condition_poison
     # 建築物サーチ中
         # サーチ距離を変えるため、各モンスターの on_battle で実行
+    # 建築物の怯み耐性時間
+        execute if score @s Mns.General.ObjectWall.ResistTimer matches 1.. run scoreboard players remove @s Mns.General.ObjectWall.ResistTimer 1
+        execute if score @s Mns.General.ObjectTower.ResistTimer matches 1.. run scoreboard players remove @s Mns.General.ObjectTower.ResistTimer 1
 
 # 討伐済み
     # 一定時間後に消滅

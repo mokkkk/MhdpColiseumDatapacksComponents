@@ -1,8 +1,8 @@
-#> mhdp_monster_valk:core/tick/animation/event/lance_damage_head/end
+#> mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_wing_l_start/end
 #
-# アニメーションイベントハンドラ 怯み・頭
+# アニメーションイベントハンドラ 怯み・反撃硬直開始 (左翼)
 #
-# @within function mhdp_monster_valk:core/tick/animation/event/lance_damage_head/main
+# @within function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter_wing_l_start/main
 
 # 怯みに移行
-    function animated_java:valk_aj/animations/lance_damage_counter_mirror/tween {duration:1, to_frame: 1}
+    function animated_java_valk:valk/animations/lance_damage_counter_mirror/tween {duration:1, to_frame: 1}

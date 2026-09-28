@@ -5,8 +5,8 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.shoot_bomb_forward.frame matches 2 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/turn_start
-    execute if score @s aj.shoot_bomb_forward.frame matches 2..10 run function mhdp_monsters:core/util/other/turn_to_target_rotate
+    execute if score @s aj.shoot_bomb_forward.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Valk",Tick:10,MaxRotation:180}
+    execute if score @s aj.shoot_bomb_forward.frame matches 2..10 at @s run function mhdp_monsters:core/util/tick/event/alignment
 
 # 移動
     execute if score @s aj.shoot_bomb_forward.frame matches 40..56 at @s run tp @s ^ ^ ^-1.1
@@ -22,16 +22,17 @@
     execute if score @s aj.shoot_bomb_forward.frame matches 15 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.allay.hurt master @s ^ ^1 ^1 0.4 1.2 0.4
     execute if score @s aj.shoot_bomb_forward.frame matches 55 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.shoot_bomb_forward.frame matches 55 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 30
-
-# 演出
-    execute if score @s aj.shoot_bomb_forward.frame matches 8 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/thunder
-    execute if score @s aj.shoot_bomb_forward.frame matches 2..38 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/particle
-    execute if score @s aj.shoot_bomb_forward.frame matches 19..38 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/particle_2
     execute if score @s aj.shoot_bomb_forward.frame matches 82 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
     execute if score @s aj.shoot_bomb_forward.frame matches 82 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
     execute if score @s aj.shoot_bomb_forward.frame matches 82 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2
     execute if score @s aj.shoot_bomb_forward.frame matches 82 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.2
-    execute if score @s aj.shoot_bomb_forward.frame matches 38 run kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
+
+# 演出
+    execute if score @s aj.shoot_bomb_forward.frame matches 8 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/thunder_start
+    execute if score @s aj.shoot_bomb_forward.frame matches 8..38 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/thunder_tick
+    execute if score @s aj.shoot_bomb_forward.frame matches 2..38 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/particle
+    execute if score @s aj.shoot_bomb_forward.frame matches 19..38 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/particle_2
+    execute if score @s aj.shoot_bomb_forward.frame matches 38 run kill @e[type=text_display,tag=Asset.Object.Valk,scores={ObjectId=10048}]
 
 # 攻撃
     execute if score @s aj.shoot_bomb_forward.frame matches 39 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/attack
@@ -44,8 +45,7 @@
     execute if score @s aj.shoot_bomb_forward.frame matches 75 run function mhdp_monster_valk:core/util/models/ignite_end
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
     execute if score @s aj.shoot_bomb_forward.frame matches 95 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_forward/end

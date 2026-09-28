@@ -8,4 +8,4 @@
     scoreboard players set @s Mns.Valk.ChargeCount 1
 
 # 龍気吸引に遷移
-    function animated_java:valk_aj/animations/lance_charge/tween {duration:1, to_frame: 1}
+    function animated_java_valk:valk/animations/lance_charge/tween {duration:1, to_frame: 1}

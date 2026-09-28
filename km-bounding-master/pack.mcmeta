@@ -1,6 +1,7 @@
 {
   "pack": {
     "description": "Minecraft JEコマンド用当たり判定ライブラリ",
-    "pack_format": 57
+		"min_format": 107,
+		"max_format": 107
   }
 }

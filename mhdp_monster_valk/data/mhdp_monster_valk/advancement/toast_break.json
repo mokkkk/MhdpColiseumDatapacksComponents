@@ -11,7 +11,7 @@
     "hidden": true,
     "icon": {
       "components": {
-        "minecraft:item_model": "icons/dino"
+        "minecraft:item_model": "icons/valk"
       },
       "id": "minecraft:stick"
     },

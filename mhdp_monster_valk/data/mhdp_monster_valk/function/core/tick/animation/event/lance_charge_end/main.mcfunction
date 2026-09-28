@@ -13,20 +13,19 @@
     execute if score @s aj.lance_charge_end.frame matches 10 run particle explosion ~ ~3 ~ 4 4 4 0 30
 
 # 演出
-    execute if score @s aj.lance_charge_end.frame matches 10 on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_end/m.effect with entity @s data.locators.pos_muzzle_r_1
-    execute if score @s aj.lance_charge_end.frame matches 10 on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_end/m.effect with entity @s data.locators.pos_muzzle_l_1
+    execute if score @s aj.lance_charge_end.frame matches 10 run data modify storage api: Arg.Override set value {Scale:7}
+    execute if score @s aj.lance_charge_end.frame matches 10 run function animated_java_valk:valk/at_locator {name:"pos_muzzle_r_1",command:"execute positioned ^ ^ ^-1 run function api:object/summon.m {ObjectId:10047}"}
+    execute if score @s aj.lance_charge_end.frame matches 10 run data modify storage api: Arg.Override set value {Scale:7}
+    execute if score @s aj.lance_charge_end.frame matches 10 run function animated_java_valk:valk/at_locator {name:"pos_muzzle_l_1",command:"execute positioned ^ ^ ^-1 run function api:object/summon.m {ObjectId:10047}"}
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # モデル演出
     execute if score @s aj.lance_charge_end.frame matches 2 run function mhdp_monster_valk:core/util/models/chest_glow_end
 
 # 肉質変化
-    execute if score @s aj.lance_charge_end.frame matches 2 as @e[type=slime,tag=Mns.HitBox.Valk.Body0] run scoreboard players set @s Mns.Hitbox.PartId 1
-    execute if score @s aj.lance_charge_end.frame matches 2 as @e[type=slime,tag=Mns.HitBox.Valk.ArmR] run scoreboard players set @s Mns.Hitbox.PartId 3
-    execute if score @s aj.lance_charge_end.frame matches 2 as @e[type=slime,tag=Mns.HitBox.Valk.ArmL] run scoreboard players set @s Mns.Hitbox.PartId 4
+    execute if score @s aj.lance_charge_end.frame matches 2 run function mhdp_monster_valk:core/util/phase/charge_end
 
 # 終了
     execute if score @s aj.lance_charge_end.frame matches 34 run function mhdp_monster_valk:core/tick/animation/event/lance_charge_end/end

@@ -1,8 +1,8 @@
 #> mhdp_monster_valk:core/tick/animation/event/lance_bite/sound
 #
-# アニメーションイベントハンドラ 2連突き
+# アニメーションイベントハンドラ 嚙みつき
 #
-# @within function mhdp_monster_valk:core/tick/animation/event/tick
+# @within function mhdp_monster_valk:core/tick/animation/event/lance_bite/main
 
 # 効果音
     playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 2

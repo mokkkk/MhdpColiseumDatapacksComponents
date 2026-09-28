@@ -1,15 +1,15 @@
-#> mhdp_monster_reus:core/tick/effect_anger
+#> mhdp_monster_valk:core/tick/effect_anger
 #
-# tick処理
+# tick処理 怒り中演出
 #
-# @within function mhdp_monster_valk:core/tick/tick_main
+# @within function mhdp_monster_valk:core/tick/main
 
 # 頭
-    execute if entity @s[tag=Mns.State.IsAnger] on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/m.effect_anger_head with entity @s data.locators.pos_head
+    function animated_java_valk:valk/at_locator {name:"pos_head",command:"function mhdp_monster_valk:core/tick/effect_anger_head"}
 # 翼
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/m.effect_anger_wing with entity @s data.locators.pos_muzzle_r_0
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/m.effect_anger_wing with entity @s data.locators.pos_muzzle_r_1
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/m.effect_anger_wing with entity @s data.locators.pos_muzzle_r_2
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/m.effect_anger_wing with entity @s data.locators.pos_muzzle_l_0
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/m.effect_anger_wing with entity @s data.locators.pos_muzzle_l_1
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/m.effect_anger_wing with entity @s data.locators.pos_muzzle_l_2
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_r_0",command:"function mhdp_monster_valk:core/tick/effect_anger_wing"}
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_r_1",command:"function mhdp_monster_valk:core/tick/effect_anger_wing"}
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_r_2",command:"function mhdp_monster_valk:core/tick/effect_anger_wing"}
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_l_0",command:"function mhdp_monster_valk:core/tick/effect_anger_wing"}
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_l_1",command:"function mhdp_monster_valk:core/tick/effect_anger_wing"}
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_l_2",command:"function mhdp_monster_valk:core/tick/effect_anger_wing"}

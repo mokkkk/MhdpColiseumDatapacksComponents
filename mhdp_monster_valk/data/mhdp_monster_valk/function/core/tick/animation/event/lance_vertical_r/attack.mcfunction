@@ -1,34 +1,39 @@
 #> mhdp_monster_valk:core/tick/animation/event/lance_vertical_r/attack
 #
-# アニメーションイベントハンドラ 翼槍叩きつけ
+# アニメーションイベントハンドラ 翼槍叩きつけ (振り下ろし当たり判定・main から positioned で実行)
 #
-# @within function mhdp_monster_valk:core/tick/animation/event/tick
+# @within function mhdp_monster_valk:core/tick/animation/event/lance_vertical_r/main
 
-# データ読み込み
-    data modify storage mhdp_core:temp Damage set from storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks[{Name:"Vertical"}]
-    execute if entity @s[tag=!Mns.State.IsAnger] run scoreboard players set #mhdp_temp_attack_multiply_anger MhdpCore 100
-    execute if entity @s[tag=Mns.State.IsAnger] run scoreboard players operation #mhdp_temp_attack_multiply_anger MhdpCore = @s Mns.Anger.AttackMutiply
+# デバッグ用
+    # function api:bounding/cuboid_preview.m {Uid:1004,AttackName:"Vertical.Right",\
+    #     Player_Selector:"@a[tag=Ply.State.EnableDamage,distance=..30]",\
+    #         Player_Offset_X:0.0,Player_Offset_Y:2.0,Player_Offset_Z:0.0,\
+    #         Player_Scale_X:4.0,Player_Scale_Y:7.0,Player_Scale_Z:4.0,\
+    #     Entity_Selector:"@e[type=slime,tag=Entity.EnableDamage,tag=!Mns.HitBox.Valk,distance=..30]",\
+    #         Entity_Offset_X:0.0,Entity_Offset_Y:2.0,Entity_Offset_Z:0.0,\
+    #         Entity_Scale_X:4.0,Entity_Scale_Y:7.0,Entity_Scale_Z:4.0\
+    # }
 
-# ヒット確認
-    # 対プレイヤー
-        execute as @a[tag=Ply.State.EnableDamage,distance=..4.0] run tag @s add Temp.Hit
-        execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
-        tag @a remove Temp.Hit
-    # 対モンスター
-        execute as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Valk,distance=..4.0] run tag @s add Temp.Hit
-        execute if entity @n[tag=Temp.Hit] as @n[tag=Temp.Hit] run tag @s add Temp.Victim
-        execute if entity @n[tag=Temp.Victim] as @n[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
+# 攻撃実行
+    function mhdp_monsters:core/util/tick/event/apply_attack.m {Uid:1004,AttackName:"Vertical.Right",\
+        Player_Selector:"@a[tag=Ply.State.EnableDamage,distance=..30]",\
+            Player_Offset_X:0.0,Player_Offset_Y:2.0,Player_Offset_Z:0.0,\
+            Player_Scale_X:5.0,Player_Scale_Y:7.0,Player_Scale_Z:4.0,\
+        Entity_Selector:"@e[type=slime,tag=Entity.EnableDamage,tag=!Mns.HitBox.Valk,distance=..30]",\
+            Entity_Offset_X:0.0,Entity_Offset_Y:2.0,Entity_Offset_Z:0.0,\
+            Entity_Scale_X:5.0,Entity_Scale_Y:7.0,Entity_Scale_Z:4.0\
+    }
+
+# 攻撃が建築物に当たった場合、演出無効化
+    execute if entity @s[tag=Mns.Temp.HitObject] run return 0
 
 # 演出
     particle explosion ~ ~ ~ 1 0.1 1 0 10
     execute at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound entity.wither.break_block master @s ^ ^1 ^1 0.4 0.8 0.4
     playsound item.mace.smash_ground master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     playsound item.mace.smash_ground master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
-    execute positioned ^0.5 ^-3 ^0.3 facing entity @e[type=marker,tag=Mk.Field.Back,sort=random,limit=1] feet rotated ~ 0 run function mhdp_monsters:core/effect/crack_ground/start
-    execute positioned ^-0.5 ^-3 ^0.3 facing entity @e[type=marker,tag=Mk.Field.Back,sort=random,limit=1] feet rotated ~ 0 run function mhdp_monsters:core/effect/crack_ground/start
+    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 0.2 0.1 0.2 0.2 25 normal
+    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 0.2 0.1 0.2 0.5 15 normal
+    execute positioned ^1 ^ ^ rotated ~ 0 run function api:object/summon.m {ObjectId:16}
+    execute positioned ^-1 ^ ^ rotated ~ 0 run function api:object/summon.m {ObjectId:16}
     execute positioned ^ ^1 ^ rotated ~ -90 run function mhdp_monster_valk:core/tick/animation/event/lance_vertical_r/particle_ring
-    
-# 終了
-    tag @e[tag=Temp.Hit] remove Temp.Hit
-    data remove storage mhdp_core:temp Damage
-    scoreboard players reset #mhdp_temp_attack_multiply_anger MhdpCore

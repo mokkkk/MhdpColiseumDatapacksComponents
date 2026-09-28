@@ -1,6 +1,6 @@
 #> mhdp_monster_valk:core/tick/animation/event/shoot_shot_forward/end
 #
-# アニメーションイベントハンドラ 射撃
+# アニメーションイベントハンドラ 射撃 (前方)
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/shoot_shot_forward/main
 

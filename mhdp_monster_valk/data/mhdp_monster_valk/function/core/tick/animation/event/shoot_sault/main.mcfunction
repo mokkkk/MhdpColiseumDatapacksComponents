@@ -7,8 +7,10 @@
 # 移動
     execute if score @s aj.shoot_sault.frame matches 2..8 at @s run tp @s ^ ^ ^1
     execute if score @s aj.shoot_sault.frame matches 9..19 at @s run tp @s ^ ^ ^0.7
-    execute if score @s aj.shoot_sault.frame matches 19 at @s run function mhdp_monster_valk:core/tick/animation/event/shoot_sault/move_start
-    execute if score @s aj.shoot_sault.frame matches 20..33 at @s run function mhdp_monsters:core/util/other/move_to_target_move
+    execute if score @s aj.shoot_sault.frame matches 19 at @s run function mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {\
+        Tick:14,OffsetX:0.0,OffsetY:0.0,OffsetZ:8.0,IsAdjustLand:"true"\
+    }
+    execute if score @s aj.shoot_sault.frame matches 20..33 at @s run function mhdp_monsters:core/util/tick/event/vector_move
     execute if score @s aj.shoot_sault.frame matches 20..25 at @s run tp @s ^ ^ ^ ~20 ~
     execute if score @s aj.shoot_sault.frame matches 26..33 at @s run tp @s ^ ^ ^ ~6 ~
     execute if score @s aj.shoot_sault.frame matches 34..42 at @s run tp @s ^ ^ ^-0.1 ~1 ~
@@ -19,7 +21,6 @@
     execute if score @s aj.shoot_sault.frame matches 2 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 2 0.4
     execute if score @s aj.shoot_sault.frame matches 2 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1.8 0.4
     execute if score @s aj.shoot_sault.frame matches 2..5 run playsound entity.player.breath master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 2
-
     execute if score @s aj.shoot_sault.frame matches 2 run playsound entity.player.breath master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 2
     execute if score @s aj.shoot_sault.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
     execute if score @s aj.shoot_sault.frame matches 2 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 30
@@ -43,8 +44,7 @@
     execute if score @s aj.shoot_sault.frame matches 53 run tag @s remove Mns.Valk.State.IsShoot
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 状態
     execute if score @s aj.shoot_sault.frame matches 2 run tag @s add Mns.State.IsFlying

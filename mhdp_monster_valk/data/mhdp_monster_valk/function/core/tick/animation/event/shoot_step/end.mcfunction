@@ -4,6 +4,9 @@
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/shoot_step/main
 
+# 移動対象消去
+    kill @e[type=area_effect_cloud,tag=Mns.MovePos.Valk]
+
 # 遷移
     execute if entity @s[tag=Mns.Temp.Valk.StepToBombSide] run tag @s add Anim.Bomb.Side
     execute if entity @s[tag=Mns.Temp.Valk.StepToVertical.R] run tag @s add Anim.VerticalS.R

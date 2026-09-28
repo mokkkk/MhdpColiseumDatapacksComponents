@@ -1,6 +1,6 @@
 #> mhdp_monster_valk:core/tick/animation/event/lance_down_r/main
 #
-# アニメーションイベントハンドラ 怯み・ダウン
+# アニメーションイベントハンドラ ダウン (右)
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
@@ -9,11 +9,10 @@
     execute if score @s aj.lance_down_r.frame matches 15 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # スタン中演出
-    execute if entity @s[tag=Mns.State.IsStun] on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_down_r/effect_stun with entity @s data.locators.pos_head
+    execute if entity @s[tag=Mns.State.IsStun] run function animated_java_valk:valk/at_locator {name:"pos_head",command:"function mhdp_monster_valk:core/tick/animation/event/lance_down_r/effect_stun"}
 
 # 終了
     execute if score @s aj.lance_down_r.frame matches 29 run function mhdp_monster_valk:core/tick/animation/event/lance_down_r/end

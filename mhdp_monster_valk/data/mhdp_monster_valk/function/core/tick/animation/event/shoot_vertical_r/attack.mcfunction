@@ -1,25 +1,47 @@
 #> mhdp_monster_valk:core/tick/animation/event/shoot_vertical_r/attack
 #
-# アニメーションイベントハンドラ 翼叩きつけ
+# アニメーションイベントハンドラ 翼叩きつけ (着弾当たり判定・main から positioned で実行)
 #
-# @within function mhdp_monster_valk:core/tick/animation/event/tick
+# @within function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_r/main
 
-# データ読み込み
-    data modify storage mhdp_core:temp Damage set from storage mhdp_core:monster_data AttackData[{Uid:1004}].Attacks[{Name:"VerticalS"}]
-    execute if entity @s[tag=!Mns.State.IsAnger] run scoreboard players set #mhdp_temp_attack_multiply_anger MhdpCore 100
-    execute if entity @s[tag=Mns.State.IsAnger] run scoreboard players operation #mhdp_temp_attack_multiply_anger MhdpCore = @s Mns.Anger.AttackMutiply
+# デバッグ用
+    # function api:bounding/cuboid_preview.m {Uid:1004,AttackName:"VerticalS.Right",\
+    #     Player_Selector:"@a[tag=Ply.State.EnableDamage,distance=..30]",\
+    #         Player_Offset_X:1.2,Player_Offset_Y:0.5,Player_Offset_Z:0.2,\
+    #         Player_Scale_X:4.7,Player_Scale_Y:6.0,Player_Scale_Z:2.6,\
+    #     Entity_Selector:"@e[type=slime,tag=Entity.EnableDamage,tag=!Mns.HitBox.Valk,distance=..30]",\
+    #         Entity_Offset_X:1.2,Entity_Offset_Y:0.5,Entity_Offset_Z:0.2,\
+    #         Entity_Scale_X:4.7,Entity_Scale_Y:6.0,Entity_Scale_Z:2.6,\
+    # }
+    # function api:bounding/cuboid_preview.m {Uid:1004,AttackName:"VerticalS.Right",\
+    #     Player_Selector:"@a[tag=Ply.State.EnableDamage,distance=..30]",\
+    #         Player_Offset_X:1.2,Player_Offset_Y:0.5,Player_Offset_Z:4.8,\
+    #         Player_Scale_X:6.2,Player_Scale_Y:6.0,Player_Scale_Z:3.2,\
+    #     Entity_Selector:"@e[type=slime,tag=Entity.EnableDamage,tag=!Mns.HitBox.Valk,distance=..30]",\
+    #         Entity_Offset_X:1.2,Entity_Offset_Y:0.5,Entity_Offset_Z:4.8,\
+    #         Entity_Scale_X:6.2,Entity_Scale_Y:6.0,Entity_Scale_Z:3.2\
+    # }
 
-# ヒット確認
-    # 対プレイヤー
-        execute positioned ^ ^ ^0 as @a[tag=Ply.State.EnableDamage,distance=..4.5] run tag @s add Temp.Hit
-        execute positioned ^ ^ ^3 as @a[tag=Ply.State.EnableDamage,distance=..4.5] run tag @s add Temp.Hit
-        execute positioned ^-2.3 ^ ^4.5 as @a[tag=Ply.State.EnableDamage,distance=..4.5] run tag @s add Temp.Hit
-        execute as @a[tag=Temp.Hit] run function mhdp_core:player/damage/entity_to_player/main
-        tag @a remove Temp.Hit
-    # 対モンスター
-        execute positioned ^ ^ ^2 as @e[type=slime,tag=Mns.HitBox,tag=!Mns.HitBox.DisableMnsDamage,tag=!Mns.HitBox.Valk,distance=..6.5] run tag @s add Temp.Hit
-        execute if entity @n[tag=Temp.Hit] as @n[tag=Temp.Hit] run tag @s add Temp.Victim
-        execute if entity @n[tag=Temp.Victim] as @n[tag=Temp.Victim] run function mhdp_core:player/damage/entity_to_entity/main
+# 攻撃実行
+    function mhdp_monsters:core/util/tick/event/apply_attack.m {Uid:1004,AttackName:"VerticalS.Right",\
+        Player_Selector:"@a[tag=Ply.State.EnableDamage,distance=..30]",\
+            Player_Offset_X:1.2,Player_Offset_Y:0.5,Player_Offset_Z:0.2,\
+            Player_Scale_X:4.7,Player_Scale_Y:6.0,Player_Scale_Z:2.6,\
+        Entity_Selector:"@e[type=slime,tag=Entity.EnableDamage,tag=!Mns.HitBox.Valk,distance=..30]",\
+            Entity_Offset_X:1.2,Entity_Offset_Y:0.5,Entity_Offset_Z:0.2,\
+            Entity_Scale_X:4.7,Entity_Scale_Y:6.0,Entity_Scale_Z:2.6,\
+    }
+    function mhdp_monsters:core/util/tick/event/apply_attack.m {Uid:1004,AttackName:"VerticalS.Right",\
+        Player_Selector:"@a[tag=Ply.State.EnableDamage,distance=..30]",\
+            Player_Offset_X:1.2,Player_Offset_Y:0.5,Player_Offset_Z:4.8,\
+            Player_Scale_X:6.2,Player_Scale_Y:6.0,Player_Scale_Z:3.2,\
+        Entity_Selector:"@e[type=slime,tag=Entity.EnableDamage,tag=!Mns.HitBox.Valk,distance=..30]",\
+            Entity_Offset_X:1.2,Entity_Offset_Y:0.5,Entity_Offset_Z:4.8,\
+            Entity_Scale_X:6.2,Entity_Scale_Y:6.0,Entity_Scale_Z:3.2\
+    }
+
+# 攻撃が建築物に当たった場合、演出無効化
+    execute if entity @s[tag=Mns.Temp.HitObject] run return 0
 
 # 演出
     particle explosion ~ ~ ~ 1 0.1 1 0 10
@@ -28,16 +50,12 @@
     execute at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound entity.wither.break_block master @s ^ ^1 ^1 0.4 0.8 0.4
     playsound item.mace.smash_ground master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     playsound item.mace.smash_ground master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
-    execute positioned ^ ^-3 ^0 facing entity @e[type=marker,tag=Mk.Field.Back,sort=random,limit=1] feet rotated ~ 0 run function mhdp_monsters:core/effect/crack_ground/start
-    execute positioned ^ ^-3 ^2 facing entity @e[type=marker,tag=Mk.Field.Back,sort=random,limit=1] feet rotated ~ 0 run function mhdp_monsters:core/effect/crack_ground/start
-    execute positioned ^ ^-3 ^4 facing entity @e[type=marker,tag=Mk.Field.Back,sort=random,limit=1] feet rotated ~ 0 run function mhdp_monsters:core/effect/crack_ground/start
-    execute positioned ^2 ^-3 ^2 facing entity @e[type=marker,tag=Mk.Field.Back,sort=random,limit=1] feet rotated ~ 0 run function mhdp_monsters:core/effect/crack_ground/start
-    execute positioned ^3 ^-3 ^4 facing entity @e[type=marker,tag=Mk.Field.Back,sort=random,limit=1] feet rotated ~ 0 run function mhdp_monsters:core/effect/crack_ground/start
-    execute positioned ^-2 ^-3 ^2 facing entity @e[type=marker,tag=Mk.Field.Back,sort=random,limit=1] feet rotated ~ 0 run function mhdp_monsters:core/effect/crack_ground/start
-    execute positioned ^-3 ^-3 ^4 facing entity @e[type=marker,tag=Mk.Field.Back,sort=random,limit=1] feet rotated ~ 0 run function mhdp_monsters:core/effect/crack_ground/start
-    execute positioned ^ ^1 ^ rotated ~ -90 run function mhdp_monster_valk:core/tick/animation/event/shoot_vertical_r/particle_ring
-    
-# 終了
-    tag @e[tag=Temp.Hit] remove Temp.Hitz
-    data remove storage mhdp_core:temp Damage
-    scoreboard players reset #mhdp_temp_attack_multiply_anger MhdpCore
+    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 0.2 0.1 0.2 0.2 25 normal
+    particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 0.2 0.1 0.2 0.5 15 normal
+    execute positioned ^ ^ ^0 rotated ~ 0 run function api:object/summon.m {ObjectId:16}
+    execute positioned ^ ^ ^2 rotated ~ 0 run function api:object/summon.m {ObjectId:16}
+    execute positioned ^ ^ ^4 rotated ~ 0 run function api:object/summon.m {ObjectId:16}
+    execute positioned ^2 ^ ^2 rotated ~ 0 run function api:object/summon.m {ObjectId:16}
+    execute positioned ^3 ^ ^4 rotated ~ 0 run function api:object/summon.m {ObjectId:16}
+    execute positioned ^-2 ^ ^2 rotated ~ 0 run function api:object/summon.m {ObjectId:16}
+    execute positioned ^-3 ^ ^4 rotated ~ 0 run function api:object/summon.m {ObjectId:16}

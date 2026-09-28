@@ -1,6 +1,6 @@
 #> mhdp_monster_valk:core/tick/animation/event/shoot_shot_horizon/end
 #
-# アニメーションイベントハンドラ 射撃
+# アニメーションイベントハンドラ 射撃 (水平)
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/shoot_shot_horizon/main
 

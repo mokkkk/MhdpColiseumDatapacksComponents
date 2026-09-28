@@ -9,8 +9,10 @@
     execute if score @s aj.lance_flytackle_end.frame matches 8..16 at @s run tp @s ^ ^ ^ ~21 ~
     execute if score @s aj.lance_flytackle_end.frame matches 20..24 at @s run tp @s ^ ^ ^-0.1 ~1 ~
     execute if score @s aj.lance_flytackle_end.frame matches 25..32 at @s run tp @s ^ ^ ^-0.05
-    execute if score @s aj.lance_flytackle_end.frame matches 8 at @s run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_end/move_start
-    execute if score @s aj.lance_flytackle_end.frame matches 8..19 at @s run function mhdp_monsters:core/util/other/move_to_target_move
+    execute if score @s aj.lance_flytackle_end.frame matches 8 at @s run function mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {\
+        Tick:12,OffsetX:0.0,OffsetY:0.0,OffsetZ:14.0,IsAdjustLand:"true"\
+    }
+    execute if score @s aj.lance_flytackle_end.frame matches 8..19 at @s run function mhdp_monsters:core/util/tick/event/vector_move
 
 # 演出
     execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
@@ -18,8 +20,8 @@
     # execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.369,0.369],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
     # execute if score @s aj.lance_flytackle_end.frame matches 2..8 run particle dust{color:[1.000,0.369,0.369],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
     execute if score @s aj.lance_flytackle_end.frame matches 2..31 run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_end/particle
-    execute if score @s aj.lance_flytackle_end.frame matches 2..6 run tp @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash,tag=Mns.Shot.Valk.Vfx.RedFlash.Long] ^ ^3 ^
-    execute if score @s aj.lance_flytackle_end.frame matches 7.. run kill @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
+    execute if score @s aj.lance_flytackle_end.frame matches 2..6 run tp @n[type=text_display,tag=10047.IsFollow] ^ ^3 ^
+    execute if score @s aj.lance_flytackle_end.frame matches 7.. run kill @e[type=text_display,tag=10047.IsFollow]
 
 # 効果音
     execute if score @s aj.lance_flytackle_end.frame matches 8 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
@@ -41,8 +43,7 @@
     execute if score @s aj.lance_flytackle_end.frame matches 35 run function mhdp_monster_valk:core/util/models/ignite_end
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 状態
     execute if score @s aj.lance_flytackle_end.frame matches 8 run tag @s remove Mns.State.IsFlying

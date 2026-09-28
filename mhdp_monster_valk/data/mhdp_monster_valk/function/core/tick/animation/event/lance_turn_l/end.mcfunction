@@ -1,6 +1,6 @@
 #> mhdp_monster_valk:core/tick/animation/event/lance_turn_l/end
 #
-# アニメーションイベントハンドラ 軸合わせ
+# アニメーションイベントハンドラ 軸合わせ (左)
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/lance_turn_l/main
 

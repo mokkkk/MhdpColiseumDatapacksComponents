@@ -14,6 +14,7 @@
 #declare tag Asset.Build.Root 建造物ルート
 #declare tag Asset.Build.Type.Wall 建造物種別：壁
 #declare tag Asset.Build.Type.Tower 建造物種別：塔
+#declare tag Asset.Build.Type.Block 建造物種別：足場
 #declare tag Asset.Build.Target 紐づけ対象
 #declare tag Asset.Build.HitBox 当たり判定
 #declare tag Asset.Build.HitBox.Init 当たり判定初期化用
@@ -24,5 +25,3 @@
 #declare tag Asset.Build.IsBroken 破壊された
 #declare tag Asset.Build.IsRemove 消滅アニメーション中
 #declare tag Asset.Build.Temp.MoveTarget 建造物・移動対象
-# - 建築種別
-#declare tag Asset.Build.Type.Wall 壁系建造物

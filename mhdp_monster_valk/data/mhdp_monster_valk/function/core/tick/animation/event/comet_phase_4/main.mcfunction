@@ -23,27 +23,36 @@
     execute if score @s aj.comet_phase_4.frame matches 2..15 run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^ ^3 2 2 2 0.15 10 force
     execute if score @s aj.comet_phase_4.frame matches 2..15 run particle explosion ^ ^2 ^6 2 2 2 0 10 force
     execute if score @s aj.comet_phase_4.frame matches 2..5 run particle gust_emitter_large ~ ~2 ~ 3 1 3 0 3 force
-    execute if score @s aj.comet_phase_4.frame matches 2..15 at @s on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/comet_phase_4/m.tp_vfx_jet with entity @s data.locators.shadow
-    execute if score @s aj.comet_phase_4.frame matches 2 run data modify entity @n[type=text_display,tag=Mns.Shot.Valk.Vfx.Jet] transformation.scale set value [50f,50f,50f]
-    execute if score @s aj.comet_phase_4.frame matches 2 run data modify entity @n[type=text_display,tag=Mns.Shot.Valk.Vfx.Jet] start_interpolation set value -1L
-    # execute if score @s aj.comet_phase_4.frame matches 6 run data modify entity @n[type=text_display,tag=Mns.Shot.Valk.Vfx.Jet] transformation.scale set value [6f,6f,6f]
-    # execute if score @s aj.comet_phase_4.frame matches 6 run data modify entity @n[type=text_display,tag=Mns.Shot.Valk.Vfx.Jet] start_interpolation set value -1L
-    execute if score @s aj.comet_phase_4.frame matches 8 run kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.Jet]
 
-    execute if score @s aj.comet_phase_4.frame matches 2 run summon text_display ^ ^2 ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.RedFlash"],default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[18f,18f,18f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
-    execute if score @s aj.comet_phase_4.frame matches 4 run summon text_display ^ ^2 ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.RedFlash"],default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[18f,18f,18f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
-    execute if score @s aj.comet_phase_4.frame matches 6 run summon text_display ^ ^2 ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.RedFlash"],default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[18f,18f,18f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
-    execute if score @s aj.comet_phase_4.frame matches 8 run summon text_display ^ ^2 ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.RedFlash"],default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[18f,18f,18f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
-    execute if score @s aj.comet_phase_4.frame matches 2 run summon text_display ^ ^2 ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.Bomb"],default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[18f,18f,18f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
-    execute if score @s aj.comet_phase_4.frame matches 4 run summon text_display ^ ^2 ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.Bomb"],default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[18f,18f,18f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
-    execute if score @s aj.comet_phase_4.frame matches 6 run summon text_display ^ ^2 ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.Bomb"],default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[18f,18f,18f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
-    execute if score @s aj.comet_phase_4.frame matches 8 run summon text_display ^ ^2 ^ {Tags:["Mns.Shot.Valk","Mns.Shot.Valk.Vfx.Bomb"],default_background:0b,brightness:{sky:15,block:15},text:{"text":"0","font":"vfx/valstrax"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[18f,18f,18f]},background:16777215,text_opacity:255,interpolation_duration:1,teleport_duration:2,text_opacity:255,billboard:"center",alignment:"left"}
+    # Object: Jet (10043、Phase3から継続追従)
+        execute if score @s aj.comet_phase_4.frame matches 2..15 run function animated_java_valk:valk/as_locator {name:"shadow",command:"function mhdp_monster_valk:core/tick/animation/event/comet_phase_4/tp_vfx_jet"}
+        execute if score @s aj.comet_phase_4.frame matches 2 run data modify entity @n[type=text_display,tag=10043.JetVfx] transformation.scale set value [50f,50f,50f]
+        execute if score @s aj.comet_phase_4.frame matches 2 run data modify entity @n[type=text_display,tag=10043.JetVfx] start_interpolation set value -1L
+        execute if score @s aj.comet_phase_4.frame matches 8 run kill @e[type=text_display,tag=10043.JetVfx]
+
+    # Object: RedFlash (10047) / Bomb (10046)
+        execute if score @s aj.comet_phase_4.frame matches 2 run data modify storage api: Arg.Override set value {Scale:18}
+        execute if score @s aj.comet_phase_4.frame matches 2 positioned ^ ^2 ^ run function api:object/summon.m {ObjectId:10047}
+        execute if score @s aj.comet_phase_4.frame matches 4 run data modify storage api: Arg.Override set value {Scale:18}
+        execute if score @s aj.comet_phase_4.frame matches 4 positioned ^ ^2 ^ run function api:object/summon.m {ObjectId:10047}
+        execute if score @s aj.comet_phase_4.frame matches 6 run data modify storage api: Arg.Override set value {Scale:18}
+        execute if score @s aj.comet_phase_4.frame matches 6 positioned ^ ^2 ^ run function api:object/summon.m {ObjectId:10047}
+        execute if score @s aj.comet_phase_4.frame matches 8 run data modify storage api: Arg.Override set value {Scale:18}
+        execute if score @s aj.comet_phase_4.frame matches 8 positioned ^ ^2 ^ run function api:object/summon.m {ObjectId:10047}
+        execute if score @s aj.comet_phase_4.frame matches 2 run data modify storage api: Arg.Override set value {Scale:18}
+        execute if score @s aj.comet_phase_4.frame matches 2 positioned ^ ^2 ^ run function api:object/summon.m {ObjectId:10046}
+        execute if score @s aj.comet_phase_4.frame matches 4 run data modify storage api: Arg.Override set value {Scale:18}
+        execute if score @s aj.comet_phase_4.frame matches 4 positioned ^ ^2 ^ run function api:object/summon.m {ObjectId:10046}
+        execute if score @s aj.comet_phase_4.frame matches 6 run data modify storage api: Arg.Override set value {Scale:18}
+        execute if score @s aj.comet_phase_4.frame matches 6 positioned ^ ^2 ^ run function api:object/summon.m {ObjectId:10046}
+        execute if score @s aj.comet_phase_4.frame matches 8 run data modify storage api: Arg.Override set value {Scale:18}
+        execute if score @s aj.comet_phase_4.frame matches 8 positioned ^ ^2 ^ run function api:object/summon.m {ObjectId:10046}
 
 # 無音
     execute if score @s aj.comet_phase_4.frame matches 2..5 run playsound item.trident.thunder master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.2
     execute if score @s aj.comet_phase_4.frame matches 2..5 run playsound item.trident.thunder master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1
-    execute if score @s aj.comet_phase_4.frame matches 5 run tag @a[tag=Ply.State.MnsTarget] add Ply.State.IsSilent
-    execute if score @s aj.comet_phase_4.frame matches 65 run tag @a[tag=Ply.State.MnsTarget] remove Ply.State.IsSilent
+    execute if score @s aj.comet_phase_4.frame matches 5 run tag @a[tag=Mns.Candidate.Valk] add Ply.State.IsSilent
+    execute if score @s aj.comet_phase_4.frame matches 65 run tag @a[tag=Mns.Candidate.Valk] remove Ply.State.IsSilent
 
 # 攻撃
     execute if score @s aj.comet_phase_4.frame matches 2 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_4/attack
@@ -52,8 +61,7 @@
     execute if score @s aj.comet_phase_4.frame matches 55 run function mhdp_monster_valk:core/util/models/ignite_end
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
     execute if score @s aj.comet_phase_4.frame matches 93 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_4/end

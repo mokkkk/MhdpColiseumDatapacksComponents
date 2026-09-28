@@ -1,6 +1,6 @@
 #> mhdp_monster_valk:core/tick/animation/event/lance_damage_body_r/end
 #
-# アニメーションイベントハンドラ 怯み・ダウン
+# アニメーションイベントハンドラ 怯み・胴・腕・脚 (右)
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/lance_damage_body_r/main
 

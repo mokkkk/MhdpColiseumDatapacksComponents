@@ -1,13 +1,13 @@
 #> mhdp_monster_valk:core/tick/animation/event/lance_charge_start/particle
 #
-# アニメーションイベントハンドラ 龍気吸引
+# アニメーションイベントハンドラ 龍気吸引・開始
 #
-# @within function mhdp_monster_valk:core/tick/animation/event/tick
+# @within function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/main
 
-# 軸合わせ
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/m.particle with entity @s data.locators.pos_muzzle_r_0
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/m.particle with entity @s data.locators.pos_muzzle_r_1
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/m.particle with entity @s data.locators.pos_muzzle_r_2
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/m.particle with entity @s data.locators.pos_muzzle_l_0
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/m.particle with entity @s data.locators.pos_muzzle_l_1
-    execute on passengers if entity @s[tag=aj.data] run function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/m.particle with entity @s data.locators.pos_muzzle_l_2
+# 演出
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_r_0",command:"function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/particle_muzzle"}
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_r_1",command:"function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/particle_muzzle"}
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_r_2",command:"function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/particle_muzzle"}
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_l_0",command:"function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/particle_muzzle"}
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_l_1",command:"function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/particle_muzzle"}
+    function animated_java_valk:valk/at_locator {name:"pos_muzzle_l_2",command:"function mhdp_monster_valk:core/tick/animation/event/lance_charge_start/particle_muzzle"}

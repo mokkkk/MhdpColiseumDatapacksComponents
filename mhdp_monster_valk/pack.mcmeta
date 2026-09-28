@@ -1,6 +1,7 @@
 {
-    "pack": {
-        "pack_format": 81,
-        "description": "火竜処理用のデータパック"
-    }
+	"pack": {
+		"description": "For Monster Valstrax",
+		"min_format": 107.1,
+		"max_format": 107.1
+	}
 }

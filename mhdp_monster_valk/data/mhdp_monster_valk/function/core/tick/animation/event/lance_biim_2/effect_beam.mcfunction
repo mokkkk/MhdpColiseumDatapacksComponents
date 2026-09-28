@@ -1,8 +1,8 @@
 #> mhdp_monster_valk:core/tick/animation/event/lance_biim_2/effect_beam
 #
-# アニメーションイベントハンドラ 龍閃
+# アニメーションイベントハンドラ 龍閃 地割れ演出
 #
-# @within function mhdp_monster_valk:core/tick/animation/event/tick
+# @within function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/main
 
 # 壁に当たるまで再帰
     scoreboard players set #mhdp_temp_valk_beam_count MhdpCore 30

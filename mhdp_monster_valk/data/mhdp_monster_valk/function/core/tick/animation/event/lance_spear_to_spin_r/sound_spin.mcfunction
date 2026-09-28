@@ -2,7 +2,7 @@
 #
 # アニメーションイベントハンドラ 翼槍回転斬り
 #
-# @within function mhdp_monster_valk:core/tick/animation/event/tick
+# @within function mhdp_monster_valk:core/tick/animation/event/lance_spear_to_spin_r/main
 
 # 演出
     playsound item.trident.throw master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9

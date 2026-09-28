@@ -1,6 +1,6 @@
 #> mhdp_monster_valk:core/tick/animation/event/lance_damage_body_l/end
 #
-# アニメーションイベントハンドラ 怯み・胴・腕・脚
+# アニメーションイベントハンドラ 怯み・胴・腕・脚 (左)
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/lance_damage_body_l/main
 

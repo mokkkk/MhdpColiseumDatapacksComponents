@@ -3,22 +3,46 @@
 # 翼点火時のモデル変更
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
+#
+# TODO: item_model の値は仮のプレースホルダ。AJ 再エクスポート後の実際の aj_sub / blueprint モデル名に差し替えること。
 
 # モデル変更
-    execute on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_0] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute if entity @s[tag=!Mns.Break.Wing.R,tag=!Mns.State.IsAnger] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_0] run data modify entity @s item.components."minecraft:custom_model_data" set value 122
-    execute if entity @s[tag=Mns.Break.Wing.R,tag=!Mns.State.IsAnger] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_0] run data modify entity @s item.components."minecraft:custom_model_data" set value 128
-    execute if entity @s[tag=Mns.State.IsAnger,tag=!Mns.Break.Wing.R] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_0] run data modify entity @s item.components."minecraft:custom_model_data" set value 134
-    execute if entity @s[tag=Mns.State.IsAnger,tag=Mns.Break.Wing.R] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_0] run data modify entity @s item.components."minecraft:custom_model_data" set value 140
+    execute if entity @s[tag=!Mns.Break.Wing.R,tag=!Mns.State.IsAnger] run function animated_java_valk:valk/as_node {name: 'finger_right_0', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_0_ignite"'\
+    }
+    execute if entity @s[tag=Mns.Break.Wing.R,tag=!Mns.State.IsAnger] run function animated_java_valk:valk/as_node {name: 'finger_right_0', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_0_break_ignite"'\
+    }
+    execute if entity @s[tag=Mns.State.IsAnger,tag=!Mns.Break.Wing.R] run function animated_java_valk:valk/as_node {name: 'finger_right_0', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_0_anger_ignite"'\
+    }
+    execute if entity @s[tag=Mns.State.IsAnger,tag=Mns.Break.Wing.R] run function animated_java_valk:valk/as_node {name: 'finger_right_0', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_0_anger_break_ignite"'\
+    }
 
-    execute on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_1] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute if entity @s[tag=!Mns.Break.Wing.R,tag=!Mns.State.IsAnger] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_1] run data modify entity @s item.components."minecraft:custom_model_data" set value 123
-    execute if entity @s[tag=Mns.Break.Wing.R,tag=!Mns.State.IsAnger] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_1] run data modify entity @s item.components."minecraft:custom_model_data" set value 129
-    execute if entity @s[tag=Mns.State.IsAnger,tag=!Mns.Break.Wing.R] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_1] run data modify entity @s item.components."minecraft:custom_model_data" set value 135
-    execute if entity @s[tag=Mns.State.IsAnger,tag=Mns.Break.Wing.R] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_1] run data modify entity @s item.components."minecraft:custom_model_data" set value 141
+    execute if entity @s[tag=!Mns.Break.Wing.R,tag=!Mns.State.IsAnger] run function animated_java_valk:valk/as_node {name: 'finger_right_1', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_1_ignite"'\
+    }
+    execute if entity @s[tag=Mns.Break.Wing.R,tag=!Mns.State.IsAnger] run function animated_java_valk:valk/as_node {name: 'finger_right_1', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_1_break_ignite"'\
+    }
+    execute if entity @s[tag=Mns.State.IsAnger,tag=!Mns.Break.Wing.R] run function animated_java_valk:valk/as_node {name: 'finger_right_1', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_1_anger_ignite"'\
+    }
+    execute if entity @s[tag=Mns.State.IsAnger,tag=Mns.Break.Wing.R] run function animated_java_valk:valk/as_node {name: 'finger_right_1', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_1_anger_break_ignite"'\
+    }
 
-    execute on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_2] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute if entity @s[tag=!Mns.Break.Wing.R,tag=!Mns.State.IsAnger] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_2] run data modify entity @s item.components."minecraft:custom_model_data" set value 124
-    execute if entity @s[tag=Mns.Break.Wing.R,tag=!Mns.State.IsAnger] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_2] run data modify entity @s item.components."minecraft:custom_model_data" set value 130
-    execute if entity @s[tag=Mns.State.IsAnger,tag=!Mns.Break.Wing.R] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_2] run data modify entity @s item.components."minecraft:custom_model_data" set value 136
-    execute if entity @s[tag=Mns.State.IsAnger,tag=Mns.Break.Wing.R] on passengers if entity @s[tag=aj.valk_aj.bone.finger_right_2] run data modify entity @s item.components."minecraft:custom_model_data" set value 142
+    execute if entity @s[tag=!Mns.Break.Wing.R,tag=!Mns.State.IsAnger] run function animated_java_valk:valk/as_node {name: 'finger_right_2', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_2_ignite"'\
+    }
+    execute if entity @s[tag=Mns.Break.Wing.R,tag=!Mns.State.IsAnger] run function animated_java_valk:valk/as_node {name: 'finger_right_2', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_2_break_ignite"'\
+    }
+    execute if entity @s[tag=Mns.State.IsAnger,tag=!Mns.Break.Wing.R] run function animated_java_valk:valk/as_node {name: 'finger_right_2', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_2_anger_ignite"'\
+    }
+    execute if entity @s[tag=Mns.State.IsAnger,tag=Mns.Break.Wing.R] run function animated_java_valk:valk/as_node {name: 'finger_right_2', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/valk/finger_right_2_anger_break_ignite"'\
+    }
+

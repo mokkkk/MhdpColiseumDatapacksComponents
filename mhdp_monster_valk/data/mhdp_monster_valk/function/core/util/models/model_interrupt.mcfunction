@@ -1,6 +1,6 @@
 #> mhdp_monster_valk:core/util/models/model_interrupt
 #
-# 割り込み処理時のモデル変更
+# 割り込み処理時のモデル変更 (一部モデル変更のリセット)
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
 

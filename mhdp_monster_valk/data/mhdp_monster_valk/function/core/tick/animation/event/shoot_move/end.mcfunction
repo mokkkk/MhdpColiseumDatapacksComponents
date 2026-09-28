@@ -8,6 +8,7 @@
     kill @e[type=area_effect_cloud,tag=Mns.MovePos.Valk]
 
 # 行動選択
-    return run function animated_java:valk_aj/animations/shoot_sault/tween {duration:1, to_frame: 1}
-    # execute if entity @s[tag=Mns.Temp.Valk.MoveToSpin] run return run function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin
+    return run function animated_java_valk:valk/animations/shoot_sault/tween {duration:1, to_frame: 1}
+
+# フォールバック
     function mhdp_monster_valk:core/tick/animation/change/main

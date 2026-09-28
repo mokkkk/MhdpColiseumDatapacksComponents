@@ -97,6 +97,9 @@
             scoreboard objectives add Mns.HallTrap.Timer dummy
             scoreboard objectives add Mns.HallTrap.Timer.Max dummy
     # その他
+        # 建築怯み耐性時間
+            scoreboard objectives add Mns.General.ObjectWall.ResistTimer dummy
+            scoreboard objectives add Mns.General.ObjectTower.ResistTimer dummy
         # 閃光玉耐性時間
             scoreboard objectives add Mns.General.FlashBomb.ResistTimer dummy
         # 剝ぎ取り可能回数

@@ -19,9 +19,10 @@
     execute if score @s aj.shoot_bomb_side.frame matches 55 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 30
 
 # 演出
-    execute if score @s aj.shoot_bomb_side.frame matches 8 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/thunder
+    execute if score @s aj.shoot_bomb_side.frame matches 8 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/thunder_start
+    execute if score @s aj.shoot_bomb_side.frame matches 8..44 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/thunder_tick
     execute if score @s aj.shoot_bomb_side.frame matches 3..44 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/particle
-    execute if score @s aj.shoot_bomb_side.frame matches 45 run kill @e[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash.Long]
+    execute if score @s aj.shoot_bomb_side.frame matches 45 run kill @e[type=text_display,tag=Asset.Object.Valk,scores={ObjectId=10048}]
 
 # 攻撃
     execute if score @s aj.shoot_bomb_side.frame matches 45 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/attack
@@ -31,8 +32,7 @@
     execute if score @s aj.shoot_bomb_side.frame matches 48 run function mhdp_monster_valk:core/util/models/ignite_end
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
     execute if score @s aj.shoot_bomb_side.frame matches 82 run function mhdp_monster_valk:core/tick/animation/event/shoot_bomb_side/end

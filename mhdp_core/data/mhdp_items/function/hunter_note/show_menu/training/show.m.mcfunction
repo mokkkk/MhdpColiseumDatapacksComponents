@@ -8,7 +8,7 @@
     # $return run dialog show @s {\
     #     type:"minecraft:multi_action",\
     #     title:{translate:"ui.hunter_note.menu.quest",bold:1b},external_title:{translate:"ui.hunter_note.menu.quest"},\
-    #     body:[],inputs:[],can_close_with_escape:1b,after_action:"wait_for_response",columns:1,\
+    #     body:[],inputs:[],can_close_with_escape:1b,after_action:"close",columns:1,\
     #     actions:[\
     #         {label:[{translate:"ui.hunter_note.menu.quest.retire"}," ($(RetiredPlayerCount) / $(PlayerCount))"],tooltip:{translate:"ui.hunter_note.menu.quest.retire.tooltip"},"action": {\
     #             "type": "minecraft:run_command","command": "trigger Ply.Ope.HunterNote.ShowMenu set 21"\
@@ -21,7 +21,7 @@
     dialog show @s {\
         type:"minecraft:multi_action",\
         title:{translate:"ui.hunter_note.menu.training",bold:1b},external_title:{translate:"ui.hunter_note.menu.training"},\
-        body:[],inputs:[],can_close_with_escape:1b,after_action:"wait_for_response",columns:1,\
+        body:[],inputs:[],can_close_with_escape:1b,after_action:"close",columns:1,\
         actions:[\
             {label:[{translate:"ui.hunter_note.menu.training.show_weapon_guide"}],tooltip:{translate:"ui.hunter_note.menu.training.show_weapon_guide.tooltip"},"action": {\
                 "type": "minecraft:run_command","command": "trigger Ply.Ope.HunterNote.ShowMenu set 11"\

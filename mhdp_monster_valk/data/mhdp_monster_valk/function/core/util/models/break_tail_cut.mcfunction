@@ -3,7 +3,10 @@
 # 尻尾切断時のモデル変更
 #
 # @within function mhdp_monsters:core/switch/macro/m.apply_blink
+#
+# TODO: item_model の値は仮のプレースホルダ。AJ 再エクスポート後の実際の aj_sub / blueprint モデル名に差し替えること。
 
 # モデル変更
-    # execute on passengers if entity @s[tag=aj.valk_aj.bone.tail_3] run data modify entity @s item.id set value "minecraft:white_dye"
-    execute on passengers if entity @s[tag=aj.valk_aj.bone.tail_3] run data modify entity @s item.components."minecraft:custom_model_data" set value 1
+    function animated_java_valk:valk/as_node {name: 'tail_3', command: \
+        'data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/empty"'\
+    }

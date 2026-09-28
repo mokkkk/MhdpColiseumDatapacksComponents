@@ -1,6 +1,6 @@
 #> mhdp_monster_valk:core/tick/animation/event/lance_down_end_l/end
 #
-# アニメーションイベントハンドラ 怯み・ダウン
+# アニメーションイベントハンドラ ダウン起き上がり (左)
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/lance_down_end_l/main
 

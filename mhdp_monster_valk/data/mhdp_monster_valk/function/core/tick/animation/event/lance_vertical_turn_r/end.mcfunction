@@ -1,8 +1,8 @@
 #> mhdp_monster_valk:core/tick/animation/event/lance_vertical_turn_r/end
 #
-# アニメーションイベントハンドラ 振りむき翼槍叩きつけ
+# アニメーションイベントハンドラ 翼槍叩きつけ
 #
-# @within function mhdp_monster_valk:core/tick/animation/event/lance_voice/main
+# @within function mhdp_monster_valk:core/tick/animation/event/lance_vertical_turn_r/main
 
 # 行動選択
     function mhdp_monster_valk:core/tick/animation/change/main

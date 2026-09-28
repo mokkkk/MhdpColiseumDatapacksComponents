@@ -2,6 +2,9 @@
 #
 # 紐づけ
 
+# 攻撃対象判定用
+    tag @s add Asset.Build.Temp.AttackTarget
+
 # インターバル中は処理を実行しない
     execute if score @s Build.Stats.DamageInterval matches 1.. run data modify storage api: Return.IsSkipped set value true
     execute if score @s Build.Stats.DamageInterval matches 1.. run return run tag @s remove Asset.Build.Target
@@ -29,6 +32,7 @@
 # タイプ取得
     execute if entity @s[tag=Asset.Build.Type.Wall] run data modify storage api: Return.IsWall set value true
     execute if entity @s[tag=Asset.Build.Type.Tower] run data modify storage api: Return.IsTower set value true
+    execute if entity @s[tag=Asset.Build.Type.Block] run data modify storage api: Return.IsSkipped set value true
 
 # 終了
     tag @s remove Asset.Build.Target

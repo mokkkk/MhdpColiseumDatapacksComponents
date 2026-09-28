@@ -1,12 +1,14 @@
 #> mhdp_monster_valk:core/tick/animation/event/death_flying/main
 #
-# アニメーションイベントハンドラ 討伐
+# アニメーションイベントハンドラ 飛行中討伐
 #
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 移動
-    execute if score @s aj.death_flying.frame matches 11 at @s run function mhdp_monster_valk:core/tick/animation/event/death_flying/move_start
-    execute if score @s aj.death_flying.frame matches 11..16 at @s run function mhdp_monsters:core/util/other/move_to_target_move
+    execute if score @s aj.death_flying.frame matches 11 at @s run function mhdp_monsters:core/util/tick/event/vector_move_offset_start.m {\
+        Tick:6,OffsetX:0.0,OffsetY:0.0,OffsetZ:0.0,IsAdjustLand:"true"\
+    }
+    execute if score @s aj.death_flying.frame matches 11..16 at @s run function mhdp_monsters:core/util/tick/event/vector_move
 
 # 効果音
     execute if score @s aj.death_flying.frame matches 16 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
@@ -21,8 +23,7 @@
     execute if score @s aj.death_flying.frame matches 132 run particle block{block_state:"minecraft:sand"} ^ ^ ^ 2 0.1 2 0 30
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # まばたき
     execute if score @s aj.death_flying.frame matches 120 run scoreboard players set @s Mns.General.BlinkTimer 10000000

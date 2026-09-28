@@ -2,7 +2,7 @@
 #
 # 部位破壊トーストを表示する
 #
-# @within function mhdp_monster_valk:core/damage/reaction/**
+# @within function mhdp_monster_valk:core/damage/**
 
 # 部位破壊トースト表示
     advancement grant @a[tag=Ply.State.PlayingQuest] only mhdp_monster_valk:toast_break

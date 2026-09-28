@@ -2,7 +2,7 @@
 #
 # アニメーションイベントハンドラ 滑空突進
 #
-# @within function mhdp_monster_valk:core/tick/animation/event/tick
+# @within function mhdp_monster_valk:core/tick/animation/event/lance_flytackle/main
 
 # 移動
     execute at @s run tp @s ^ ^ ^2
@@ -10,11 +10,8 @@
 # 演出
     particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
     particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^2 ^-1.5 0.5 0.5 0.5 0.15 3
-    # particle dust{color:[1.000,0.369,0.369],scale:4} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
-    # particle dust{color:[1.000,0.369,0.369],scale:4} ^ ^2 ^-1.5 0.5 0.5 0.5 0.15 3
-    # particle dust{color:[10000000000.0,1.0,1.0],scale:4} ^ ^2 ^-2 0.5 0.5 0.5 0.15 3
     particle flash{color:[1.000,1.000,1.000,1.00]} ^ ^2 ^-3 0.5 0.5 0.5 0.15 3
-    tp @n[type=text_display,tag=Mns.Shot.Valk.Vfx.RedFlash,tag=Mns.Shot.Valk.Vfx.RedFlash.Long] ^ ^3 ^
+    tp @n[type=text_display,tag=10047.IsFollow] ^ ^3 ^
 
 # 攻撃
     function mhdp_monster_valk:core/tick/animation/event/lance_flytackle/attack

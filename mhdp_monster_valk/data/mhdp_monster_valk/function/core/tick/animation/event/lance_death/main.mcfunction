@@ -20,8 +20,7 @@
     execute if score @s aj.lance_death.frame matches 120 run scoreboard players set @s Mns.General.BlinkTimer 10000000
 
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 剝ぎ取り可能
     execute if score @s aj.lance_death.frame matches 132 run tag @s add Mns.State.IsCanCarving

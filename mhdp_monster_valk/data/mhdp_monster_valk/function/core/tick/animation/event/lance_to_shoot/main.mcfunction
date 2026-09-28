@@ -10,13 +10,12 @@
     execute if score @s aj.lance_to_shoot.frame matches 8 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
     execute if score @s aj.lance_to_shoot.frame matches 8 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
     execute if score @s aj.lance_to_shoot.frame matches 8 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.7
-    
+
 # 接地
-    execute at @s if block ~ ~-0.1 ~ #mhdp_core:no_collision at @s run function mhdp_monsters:core/util/other/on_ground
-    execute at @s unless block ~ ~ ~ #mhdp_core:no_collision at @s run tp @s ~ ~0.1 ~ ~ ~
+    function mhdp_monsters:core/util/tick/move/check_landing
 
 # 状態変更
-    execute if score @s aj.lance_to_shoot.frame matches 2 run tag @s add Mns.Valk.State.IsShoot
+    execute if score @s aj.lance_to_shoot.frame matches 2 run function mhdp_monster_valk:core/util/phase/to_shoot
 
 # 終了
     execute if score @s aj.lance_to_shoot.frame matches 30 run function mhdp_monster_valk:core/tick/animation/event/lance_to_shoot/end
