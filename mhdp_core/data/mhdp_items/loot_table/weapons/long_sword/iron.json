@@ -3,7 +3,7 @@
         {
             "entries": [
                 {
-                    "functions": [
+                    "modifier": [
                         {
                             "components": {
                                 "enchantment_glint_override": false,
@@ -279,7 +279,7 @@
                                     "deals_knockback": false,
                                     "dismounts": false
                                 },
-                                "minecraft:swing_animation": {
+                                "minecraft:attack_animation": {
                                     "type": "none"
                                 },
                                 "minecraft:tooltip_display": {
@@ -293,8 +293,7 @@
                                     "speed_multiplier": 1
                                 }
                             },
-                            "conditions": [],
-                            "function": "minecraft:set_components"
+                            "type": "minecraft:set_components"
                         }
                     ],
                     "name": "ender_eye",

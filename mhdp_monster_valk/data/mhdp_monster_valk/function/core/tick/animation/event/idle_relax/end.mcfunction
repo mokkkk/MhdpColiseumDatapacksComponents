@@ -5,4 +5,4 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/idle_relax/main
 
 # 一定確率で遷移
-    execute if predicate {"condition":"minecraft:random_chance","chance":0.6} run function mhdp_monster_valk:core/tick/animation/change/main
+    execute if predicate {"type":"minecraft:random_chance","chance":0.6} run function mhdp_monster_valk:core/tick/animation/change/main

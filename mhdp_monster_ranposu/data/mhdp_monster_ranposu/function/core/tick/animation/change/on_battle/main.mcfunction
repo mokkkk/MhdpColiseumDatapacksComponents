@@ -8,7 +8,7 @@
     # ターゲット更新
         scoreboard players add @s Mns.General.ActCount.Target 1
         # 3回以上行動した後、一定確率でタゲ変更
-            execute if score @s Mns.General.ActCount.Target matches 3.. if predicate {"condition":"minecraft:random_chance","chance":0.40} run function mhdp_monster_ranposu:core/tick/on_battle/update_target
+            execute if score @s Mns.General.ActCount.Target matches 3.. if predicate {"type":"minecraft:random_chance","chance":0.40} run function mhdp_monster_ranposu:core/tick/on_battle/update_target
         # 5回以上行動した後、確実にタゲ変更
             execute if score @s Mns.General.ActCount.Target matches 5.. run function mhdp_monster_ranposu:core/tick/on_battle/update_target
     # 威嚇

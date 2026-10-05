@@ -13,7 +13,7 @@
     data remove storage mhdp_core:temp Temp
 
 # クエスト中のみ、アイテムの個数減少
-    execute if entity @s[tag=Ply.State.PlayingQuest] run item modify entity @s weapon.mainhand {function:set_count,count:-1,add:true}
+    execute if entity @s[tag=Ply.State.PlayingQuest] run item modify entity @s weapon.mainhand {type:set_count,count:-1,add:true}
 
 # 終了
     scoreboard players set @s Ply.Ope.EatingTimer -40

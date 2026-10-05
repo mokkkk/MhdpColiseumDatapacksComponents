@@ -5,7 +5,7 @@
 # @within function mhdp_core:player/tick
 
 # スニーク・開始
-    execute as @s if predicate {condition:entity_properties,entity:this,predicate:{flags:{is_sneaking:true}}} run tag @s add Ply.Ope.IsSneaking
+    execute as @s if predicate {type:entity_properties,entity:this,predicate:{flags:{is_sneaking:true}}} run tag @s add Ply.Ope.IsSneaking
     execute if entity @s[tag=Ply.Ope.IsSneaking] unless score @s Ply.Ope.SneakTimer matches 1.. run tag @s add Ply.Ope.StartSneak
     # 連続スニーク
         execute if entity @s[tag=Ply.Ope.StartSneak] if score @s Ply.Ope.SneakInterval matches ..3 run tag @s add Ply.Ope.StartDoubleSneak
@@ -49,29 +49,29 @@
     execute if entity @s[tag=Ply.Adv.Using.Paper] run scoreboard players add @s Ply.Ope.EatingTimer 1
 
 # ダッシュ
-    execute if predicate {condition:entity_properties,entity:this,predicate:{flags:{is_sprinting:true}}} run tag @s add Ply.Ope.IsSprinting
+    execute if predicate {type:entity_properties,entity:this,predicate:{flags:{is_sprinting:true}}} run tag @s add Ply.Ope.IsSprinting
 
 # キー入力
     # 前移動
-        execute if entity @s[tag=!Ply.Ope.IsKeyForward] if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{"minecraft:type_specific/player":{stats:[],input:{forward:true}}}} run tag @s add Ply.Ope.StartKeyForward
+        execute if entity @s[tag=!Ply.Ope.IsKeyForward] if predicate {type:"minecraft:entity_properties",entity:"this",predicate:{"minecraft:type_specific/player":{stats:[],input:{forward:true}}}} run tag @s add Ply.Ope.StartKeyForward
         execute if entity @s[tag=Ply.Ope.StartKeyForward,tag=!Ply.Ope.IsKeyForward] run tag @s add Ply.Ope.IsKeyForward
-        execute if entity @s[tag=Ply.Ope.IsKeyForward] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"forward":false}}}} run tag @s remove Ply.Ope.IsKeyForward
+        execute if entity @s[tag=Ply.Ope.IsKeyForward] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"forward":false}}}} run tag @s remove Ply.Ope.IsKeyForward
     # 左移動
-        execute if entity @s[tag=!Ply.Ope.IsKeyLeft] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"left":true}}}} run tag @s add Ply.Ope.StartKeyLeft
+        execute if entity @s[tag=!Ply.Ope.IsKeyLeft] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"left":true}}}} run tag @s add Ply.Ope.StartKeyLeft
         execute if entity @s[tag=Ply.Ope.StartKeyLeft,tag=!Ply.Ope.IsKeyLeft] run tag @s add Ply.Ope.IsKeyLeft
-        execute if entity @s[tag=Ply.Ope.IsKeyLeft] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"left":false}}}} run tag @s remove Ply.Ope.IsKeyLeft
+        execute if entity @s[tag=Ply.Ope.IsKeyLeft] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"left":false}}}} run tag @s remove Ply.Ope.IsKeyLeft
     # 後移動
-        execute if entity @s[tag=!Ply.Ope.IsKeyBack] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"backward":true}}}} run tag @s add Ply.Ope.StartKeyBack
+        execute if entity @s[tag=!Ply.Ope.IsKeyBack] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"backward":true}}}} run tag @s add Ply.Ope.StartKeyBack
         execute if entity @s[tag=Ply.Ope.StartKeyBack,tag=!Ply.Ope.IsKeyBack] run tag @s add Ply.Ope.IsKeyBack
-        execute if entity @s[tag=Ply.Ope.IsKeyBack] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"backward":false}}}} run tag @s remove Ply.Ope.IsKeyBack
+        execute if entity @s[tag=Ply.Ope.IsKeyBack] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"backward":false}}}} run tag @s remove Ply.Ope.IsKeyBack
     # 右移動
-        execute if entity @s[tag=!Ply.Ope.IsKeyRight] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"right":true}}}} run tag @s add Ply.Ope.StartKeyRight
+        execute if entity @s[tag=!Ply.Ope.IsKeyRight] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"right":true}}}} run tag @s add Ply.Ope.StartKeyRight
         execute if entity @s[tag=Ply.Ope.StartKeyRight,tag=!Ply.Ope.IsKeyRight] run tag @s add Ply.Ope.IsKeyRight
-        execute if entity @s[tag=Ply.Ope.IsKeyRight] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"right":false}}}} run tag @s remove Ply.Ope.IsKeyRight
+        execute if entity @s[tag=Ply.Ope.IsKeyRight] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"right":false}}}} run tag @s remove Ply.Ope.IsKeyRight
     # ジャンプ
-        execute if entity @s[tag=!Ply.Ope.IsKeyJump] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"jump":true}}}} run tag @s add Ply.Ope.StartKeyJump
+        execute if entity @s[tag=!Ply.Ope.IsKeyJump] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"jump":true}}}} run tag @s add Ply.Ope.StartKeyJump
         execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeyJump] run tag @s add Ply.Ope.IsKeyJump
-        execute if entity @s[tag=Ply.Ope.IsKeyJump] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"jump":false}}}} run tag @s remove Ply.Ope.IsKeyJump
+        execute if entity @s[tag=Ply.Ope.IsKeyJump] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"jump":false}}}} run tag @s remove Ply.Ope.IsKeyJump
         
         # 短押し・長押し
             execute if entity @s[tag=Ply.Ope.IsKeyJump] run scoreboard players add @s Ply.Ope.JumpKeyTimer 1
@@ -81,9 +81,9 @@
         # 連続ジャンプ
             execute if entity @s[tag=Ply.Ope.StartKeyJump] if score @s Ply.Ope.JumpInterval matches ..2 run tag @s add Ply.Ope.StartDoubleJump
     # スプリント
-        execute if entity @s[tag=!Ply.Ope.IsKeySprint] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"sprint":true}}}} run tag @s add Ply.Ope.StartKeySprint
+        execute if entity @s[tag=!Ply.Ope.IsKeySprint] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"sprint":true}}}} run tag @s add Ply.Ope.StartKeySprint
         execute if entity @s[tag=Ply.Ope.StartKeySprint,tag=!Ply.Ope.IsKeySprint] run tag @s add Ply.Ope.IsKeySprint
-        execute if entity @s[tag=Ply.Ope.IsKeySprint] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"sprint":false}}}} run tag @s remove Ply.Ope.IsKeySprint
+        execute if entity @s[tag=Ply.Ope.IsKeySprint] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:type_specific/player":{stats:[],"input":{"sprint":false}}}} run tag @s remove Ply.Ope.IsKeySprint
     # 建造物よじ登り
         execute if score @s Ply.Timer.ClimbBuild matches 1.. run scoreboard players remove @s Ply.Timer.ClimbBuild 1
         

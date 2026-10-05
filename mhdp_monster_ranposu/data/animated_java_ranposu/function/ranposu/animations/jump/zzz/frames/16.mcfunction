@@ -2,7 +2,7 @@
 $data merge entity $(tail_2) {transformation: [-1.8f,0f,0f,0f,0f,1.7213f,-0.5263f,2.0826f,0f,-0.5263f,-1.7213f,-2.4666f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
 $data merge entity $(tail_1) {transformation: [-1.8f,0f,0f,0f,0f,1.7994f,-0.0471f,2.1091f,0f,-0.0471f,-1.7994f,-1.4544f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
 $data merge entity $(tail_0) {transformation: [-1.8f,0f,0f,0f,0f,1.7623f,0.3666f,1.8582f,0f,0.3666f,-1.7623f,-0.3862f,0f,0f,0f,1f],start_interpolation: 0,interpolation_duration: 1}
-data modify storage animated_java:temp entry.data merge value {"locators":{"hitbox_tail_0":{"px":0,"py":1.570810045,"pz":-1.9961695656,"ry":0,"rx":-1.5},"hitbox_tail_1":{"px":0,"py":1.3862114885,"pz":-2.9523391871,"ry":0,"rx":-17}}}
+data modify storage animated_java:temp entry.data merge value {"locators":{"hitbox_tail_0":{"px":0,"py":1.5708,"pz":-1.9962,"ry":0,"rx":-1.5},"hitbox_tail_1":{"px":0,"py":1.3862,"pz":-2.9523,"ry":0,"rx":-17}}}
 # Data Manager: Prepare for Read / Write
 execute store result storage animated_java:temp args.id int 1 run scoreboard players get @s aj.id
 # Data Manager: Write

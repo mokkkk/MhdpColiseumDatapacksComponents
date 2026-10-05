@@ -6,3 +6,5 @@ execute at @s run function animated_java_ranposu:ranposu/zzz/set_default_pose/as
 execute at @s run function animated_java_ranposu:ranposu/zzz/set_default_pose/as_locator_hitbox_tail_0 with storage animated_java:temp entry.data.locators.hitbox_tail_0
 execute at @s run function animated_java_ranposu:ranposu/zzz/set_default_pose/as_locator_hitbox_tail_1 with storage animated_java:temp entry.data.locators.hitbox_tail_1
 execute at @s run function animated_java_ranposu:ranposu/zzz/set_default_pose/as_locator_shadow with storage animated_java:temp entry.data.locators.shadow
+# Data Manager: Write
+function animated_java:global/data_manager/write with storage animated_java:temp args

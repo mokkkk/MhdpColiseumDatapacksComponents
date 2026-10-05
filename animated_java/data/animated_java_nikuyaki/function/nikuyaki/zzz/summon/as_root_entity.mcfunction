@@ -12,44 +12,46 @@ function animated_java:global/data_manager/read with storage animated_java:temp 
 data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.root_uuid set from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.blueprint_id set value "animated_java_nikuyaki:nikuyaki"
-data modify storage animated_java:temp entry.data.rig_hash set value "0c417a376eecdd1482741563eeab9d92205f6d2ff24f12569e477147d48616e1"
+data modify storage animated_java:temp entry.data.rig_hash set value "0db68cfc7e6c5f4542ebfc87a78ab4909d4278c78ad2ca84c84b306941cf1e69"
 tp @s ~ ~ ~ ~ ~
-summon minecraft:area_effect_cloud ^0 ^0.265625 ^-1.4375 {Tags:["","aj.global.bone.chair1.child","aj.global.bone.chair1.child.locator","aj.global.bone.chair1.decendant","aj.global.bone.chair1.decendant.locator","aj.global.bone.chair1.tree","aj.global.bone.root.decendant","aj.global.bone.root.decendant.locator","aj.global.bone.root.tree","aj.global.entity","aj.global.locator","aj.global.node","aj.global.node.chair","aj.new","animated_java_nikuyaki.nikuyaki.bone.chair1.child","animated_java_nikuyaki.nikuyaki.bone.chair1.child.locator","animated_java_nikuyaki.nikuyaki.bone.chair1.decendant","animated_java_nikuyaki.nikuyaki.bone.chair1.decendant.locator","animated_java_nikuyaki.nikuyaki.bone.chair1.tree","animated_java_nikuyaki.nikuyaki.bone.root.decendant","animated_java_nikuyaki.nikuyaki.bone.root.decendant.locator","animated_java_nikuyaki.nikuyaki.bone.root.tree","animated_java_nikuyaki.nikuyaki.entity","animated_java_nikuyaki.nikuyaki.locator","animated_java_nikuyaki.nikuyaki.locator.chair","animated_java_nikuyaki.nikuyaki.node","animated_java_nikuyaki.nikuyaki.node.chair"]}
+summon minecraft:interaction ^0 ^0.4375 ^0 { Tags:["Itm.Root","Itm.Root.Nikuyaki","Itm.Root.Nikuyaki.Start","Other.Shot","aj.global.entity","aj.global.interaction","aj.global.node","aj.global.node.interaction","aj.global.root.child","aj.global.root.child.interaction","aj.new","animated_java_nikuyaki.nikuyaki.entity","animated_java_nikuyaki.nikuyaki.interaction","animated_java_nikuyaki.nikuyaki.interaction.interaction","animated_java_nikuyaki.nikuyaki.node","animated_java_nikuyaki.nikuyaki.node.interaction"], response: true, width: 0.6875f, height: 0.6875f, }
+execute as @n[ type=minecraft:interaction, tag=animated_java_nikuyaki.nikuyaki.interaction.interaction, tag=aj.new, distance=..1 ] run function animated_java_nikuyaki:nikuyaki/zzz/summon/as_interaction/interaction
+data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
+data modify storage animated_java:temp entry.data.uuids_by_name.interaction set from storage animated_java:gu out
+data modify storage animated_java:temp entry.data.interactions.interaction.uuid set from storage animated_java:gu out
+summon minecraft:area_effect_cloud ^0 ^0.625 ^-1.375 {Tags:["Itm.Root","Itm.Root.Nikuyaki","Itm.Root.Nikuyaki.Start","Other.Shot","aj.global.bone.chair1.child","aj.global.bone.chair1.child.locator","aj.global.bone.chair1.decendant","aj.global.bone.chair1.decendant.locator","aj.global.bone.chair1.tree","aj.global.entity","aj.global.locator","aj.global.node","aj.global.node.chair","aj.new","animated_java_nikuyaki.nikuyaki.bone.chair1.child","animated_java_nikuyaki.nikuyaki.bone.chair1.child.locator","animated_java_nikuyaki.nikuyaki.bone.chair1.decendant","animated_java_nikuyaki.nikuyaki.bone.chair1.decendant.locator","animated_java_nikuyaki.nikuyaki.bone.chair1.tree","animated_java_nikuyaki.nikuyaki.entity","animated_java_nikuyaki.nikuyaki.locator","animated_java_nikuyaki.nikuyaki.locator.chair","animated_java_nikuyaki.nikuyaki.node","animated_java_nikuyaki.nikuyaki.node.chair"]}
 execute as @n[ type=minecraft:area_effect_cloud, tag=animated_java_nikuyaki.nikuyaki.locator.chair, tag=aj.new, distance=..3 ] run function animated_java_nikuyaki:nikuyaki/zzz/summon/as_locator/chair
 data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.uuids_by_name.chair set from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.locators.chair.uuid set from storage animated_java:gu out
-summon minecraft:interaction ^0 ^0.40625 ^0 {Tags:["","aj.global.bone.root.child","aj.global.bone.root.child.locator","aj.global.bone.root.decendant","aj.global.bone.root.decendant.locator","aj.global.bone.root.tree","aj.global.entity","aj.global.locator","aj.global.node","aj.global.node.interaction","aj.new","animated_java_nikuyaki.nikuyaki.bone.root.child","animated_java_nikuyaki.nikuyaki.bone.root.child.locator","animated_java_nikuyaki.nikuyaki.bone.root.decendant","animated_java_nikuyaki.nikuyaki.bone.root.decendant.locator","animated_java_nikuyaki.nikuyaki.bone.root.tree","animated_java_nikuyaki.nikuyaki.entity","animated_java_nikuyaki.nikuyaki.locator","animated_java_nikuyaki.nikuyaki.locator.interaction","animated_java_nikuyaki.nikuyaki.node","animated_java_nikuyaki.nikuyaki.node.interaction"]}
-execute as @n[ type=minecraft:interaction, tag=animated_java_nikuyaki.nikuyaki.locator.interaction, tag=aj.new, distance=..2 ] run function animated_java_nikuyaki:nikuyaki/zzz/summon/as_locator/interaction
-data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
-data modify storage animated_java:temp entry.data.uuids_by_name.interaction set from storage animated_java:gu out
-data modify storage animated_java:temp entry.data.locators.interaction.uuid set from storage animated_java:gu out
-execute on passengers if entity @s[tag=animated_java_nikuyaki.nikuyaki.node.meat] run function animated_java_nikuyaki:nikuyaki/zzz/summon/as_node/meat
-data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
-data modify storage animated_java:temp entry.data.uuids_by_name.meat set from storage animated_java:gu out
-execute on passengers if entity @s[tag=animated_java_nikuyaki.nikuyaki.node.chair1] run function animated_java_nikuyaki:nikuyaki/zzz/summon/as_node/chair1
-data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
-data modify storage animated_java:temp entry.data.uuids_by_name.chair1 set from storage animated_java:gu out
 execute on passengers if entity @s[tag=animated_java_nikuyaki.nikuyaki.node.base] run function animated_java_nikuyaki:nikuyaki/zzz/summon/as_node/base
 data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.uuids_by_name.base set from storage animated_java:gu out
-function animated_java_nikuyaki:nikuyaki/zzz/summon/zzz/0 with storage animated_java:temp entry.data.locators.chair
-data modify storage animated_java:temp entry.data.uuids append from storage animated_java:temp uuids
-function animated_java_nikuyaki:nikuyaki/zzz/summon/zzz/1 with storage animated_java:temp entry.data.locators.interaction
-data modify storage animated_java:temp entry.data.uuids append from storage animated_java:temp uuids
-function animated_java_nikuyaki:nikuyaki/zzz/set_default_pose
+execute on passengers if entity @s[tag=animated_java_nikuyaki.nikuyaki.node.chair1] run function animated_java_nikuyaki:nikuyaki/zzz/summon/as_node/chair1
+data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
+data modify storage animated_java:temp entry.data.uuids_by_name.chair1 set from storage animated_java:gu out
+execute on passengers if entity @s[tag=animated_java_nikuyaki.nikuyaki.node.meat] run function animated_java_nikuyaki:nikuyaki/zzz/summon/as_node/meat
+data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
+data modify storage animated_java:temp entry.data.uuids_by_name.meat set from storage animated_java:gu out
 # Data Manager: Write
 function animated_java:global/data_manager/write with storage animated_java:temp args
+function animated_java_nikuyaki:nikuyaki/zzz/set_default_pose
 execute if data storage animated_java:temp args.variant run function animated_java_nikuyaki:nikuyaki/zzz/summon/zzz/variant_arg/no_variants_warning
 execute if score #success aj.i matches 0 run return fail
 execute if data storage animated_java:temp args.animation run function animated_java_nikuyaki:nikuyaki/zzz/summon/animation_arg/process with storage animated_java:temp args
 execute if score #success aj.i matches 0 run return fail
-function animated_java_nikuyaki:nikuyaki/root/on_tick/transform_floating_entities
 execute on passengers run rotate @s ~ ~
 data modify entity @s teleport_duration set value 1
 execute on passengers run data modify entity @s teleport_duration set value 1
+function animated_java_nikuyaki:nikuyaki/zzz/summon/zzz/0 with storage animated_java:temp entry.data.locators
+# Data Manager: Prepare for Read / Write
+execute store result storage animated_java:temp args.id int 1 run scoreboard players get @s aj.id
+# Data Manager: Read
+function animated_java:global/data_manager/read with storage animated_java:temp args
 function animated_java_nikuyaki:nikuyaki/zzz/summon/zzz/2 with storage animated_java:temp entry.data.locators.chair
-function animated_java_nikuyaki:nikuyaki/zzz/summon/zzz/3 with storage animated_java:temp entry.data.locators.interaction
-execute at @s run function animated_java_nikuyaki:nikuyaki/zzz/summon/on_summon/rig
+data modify storage animated_java:temp entry.data.uuids append from storage animated_java:temp uuids
+# Data Manager: Write
+function animated_java:global/data_manager/write with storage animated_java:temp args
+function animated_java_nikuyaki:nikuyaki/zzz/summon/zzz/3 with storage animated_java:temp entry.data.interactions
 tag @s remove aj.new
 execute on passengers run tag @s remove aj.new

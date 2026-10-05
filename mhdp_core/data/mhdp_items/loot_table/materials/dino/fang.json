@@ -3,7 +3,7 @@
         {
             "entries": [
                 {
-                    "functions": [
+                    "modifier": [
                         {
                             "components": {
                                 "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:4,ItemId:10201,ItemName:\"dino_fang\",UseTimer:0,IsMaterial:1b}",
@@ -47,8 +47,7 @@
                                 ],
                                 "minecraft:max_stack_size": 64
                             },
-                            "conditions": [],
-                            "function": "minecraft:set_components"
+                            "type": "minecraft:set_components"
                         },
                         {
                             "count": {
@@ -56,7 +55,7 @@
                                 "storage": "api:",
                                 "type": "minecraft:storage"
                             },
-                            "function": "minecraft:set_count"
+                            "type": "minecraft:set_count"
                         }
                     ],
                     "name": "paper",

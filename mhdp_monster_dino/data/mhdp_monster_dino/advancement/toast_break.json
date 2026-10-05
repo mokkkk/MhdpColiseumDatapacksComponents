@@ -6,6 +6,7 @@
   },
   "display": {
     "announce_to_chat": false,
+    "background": "minecraft:gui/advancements/backgrounds/stone",
     "description": "---",
     "frame": "task",
     "hidden": true,

@@ -51,9 +51,9 @@
 
 # 準大技
     # 槍翼回転斬り
-        execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Move matches 13.. if predicate {"condition":"minecraft:random_chance","chance":0.4} run return run function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin_move
+        execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Move matches 13.. if predicate {"type":"minecraft:random_chance","chance":0.4} run return run function mhdp_monster_valk:core/tick/animation/change/play/spear_to_spin_move
     # 龍閃
-        execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Beam matches 30.. if predicate {"condition":"minecraft:random_chance","chance":0.6} run return run function mhdp_monster_valk:core/tick/animation/change/play/beam
+        execute if entity @s[tag=!Mns.Valk.State.IsShoot] if score @s Mns.Valk.PhaseCount.Beam matches 30.. if predicate {"type":"minecraft:random_chance","chance":0.6} run return run function mhdp_monster_valk:core/tick/animation/change/play/beam
 
 # 距離別の行動選択
     # 彗龍

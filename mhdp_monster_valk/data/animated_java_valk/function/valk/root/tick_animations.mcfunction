@@ -105,4 +105,3 @@ execute if entity @s[tag=animated_java_valk.valk.animation.shoot_interrupt_sweep
 execute if entity @s[tag=animated_java_valk.valk.animation.shoot_interrupt_vertical_r.playing] run function animated_java_valk:valk/animations/shoot_interrupt_vertical_r/zzz/on_tick
 execute if entity @s[tag=animated_java_valk.valk.animation.shoot_interrupt_vertical_l.playing] run function animated_java_valk:valk/animations/shoot_interrupt_vertical_l/zzz/on_tick
 execute if entity @s[tag=animated_java_valk.valk.animation.lance_interrupt_flytackle.playing] run function animated_java_valk:valk/animations/lance_interrupt_flytackle/zzz/on_tick
-execute if entity @s[tag=animated_java_valk.valk.animation.lance_interrupt_flytackle2.playing] run function animated_java_valk:valk/animations/lance_interrupt_flytackle2/zzz/on_tick

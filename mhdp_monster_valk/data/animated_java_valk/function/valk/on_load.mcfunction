@@ -106,4 +106,3 @@ scoreboard objectives add aj.shoot_interrupt_sweep_l.frame dummy
 scoreboard objectives add aj.shoot_interrupt_vertical_r.frame dummy
 scoreboard objectives add aj.shoot_interrupt_vertical_l.frame dummy
 scoreboard objectives add aj.lance_interrupt_flytackle.frame dummy
-scoreboard objectives add aj.lance_interrupt_flytackle2.frame dummy

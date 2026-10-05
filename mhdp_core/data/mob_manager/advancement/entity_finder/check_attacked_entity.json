@@ -4,7 +4,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag0.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag0.0"]}
+                    }
                 }
             }
         },
@@ -12,7 +16,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag0.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag0.1"]}
+                    }
                 }
             }
         },
@@ -20,7 +28,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag1.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag1.0"]}
+                    }
                 }
             }
         },
@@ -28,7 +40,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag1.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag1.1"]}
+                    }
                 }
             }
         },
@@ -36,7 +52,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag2.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag2.0"]}
+                    }
                 }
             }
         },
@@ -44,7 +64,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag2.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag2.1"]}
+                    }
                 }
             }
         },
@@ -52,7 +76,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag3.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag3.0"]}
+                    }
                 }
             }
         },
@@ -60,7 +88,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag3.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag3.1"]}
+                    }
                 }
             }
         },
@@ -68,7 +100,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag4.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag4.0"]}
+                    }
                 }
             }
         },
@@ -76,7 +112,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag4.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag4.1"]}
+                    }
                 }
             }
         },
@@ -84,7 +124,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag5.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag5.0"]}
+                    }
                 }
             }
         },
@@ -92,7 +136,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag5.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag5.1"]}
+                    }
                 }
             }
         },
@@ -100,7 +148,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag6.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag6.0"]}
+                    }
                 }
             }
         },
@@ -108,7 +160,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag6.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag6.1"]}
+                    }
                 }
             }
         },
@@ -116,7 +172,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag7.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag7.0"]}
+                    }
                 }
             }
         },
@@ -124,7 +184,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag7.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag7.1"]}
+                    }
                 }
             }
         },
@@ -132,7 +196,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag8.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag8.0"]}
+                    }
                 }
             }
         },
@@ -140,7 +208,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag8.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag8.1"]}
+                    }
                 }
             }
         },
@@ -148,7 +220,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag9.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag9.0"]}
+                    }
                 }
             }
         },
@@ -156,7 +232,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag9.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag9.1"]}
+                    }
                 }
             }
         },
@@ -164,7 +244,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag10.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag10.0"]}
+                    }
                 }
             }
         },
@@ -172,7 +256,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag10.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag10.1"]}
+                    }
                 }
             }
         },
@@ -180,7 +268,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag11.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag11.0"]}
+                    }
                 }
             }
         },
@@ -188,7 +280,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag11.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag11.1"]}
+                    }
                 }
             }
         },
@@ -196,7 +292,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag12.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag12.0"]}
+                    }
                 }
             }
         },
@@ -204,7 +304,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag12.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag12.1"]}
+                    }
                 }
             }
         },
@@ -212,7 +316,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag13.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag13.0"]}
+                    }
                 }
             }
         },
@@ -220,7 +328,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag13.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag13.1"]}
+                    }
                 }
             }
         },
@@ -228,7 +340,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag14.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag14.0"]}
+                    }
                 }
             }
         },
@@ -236,7 +352,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag14.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag14.1"]}
+                    }
                 }
             }
         },
@@ -244,7 +364,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag15.0\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag15.0"]}
+                    }
                 }
             }
         },
@@ -252,7 +376,11 @@
             "trigger": "player_hurt_entity",
             "conditions": {
                 "entity": {
-                    "nbt": "{Tags:[\"FindFlag15.1\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_tags": {"all_of": ["FindFlag15.1"]}
+                    }
                 }
             }
         }

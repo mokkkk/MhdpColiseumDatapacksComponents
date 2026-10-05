@@ -2,18 +2,20 @@
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_hitbox_body_1 with storage animated_java:temp entry.data.locators.hitbox_body_1
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_hitbox_body_0 with storage animated_java:temp entry.data.locators.hitbox_body_0
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_hitbox_neck_1 with storage animated_java:temp entry.data.locators.hitbox_neck_1
-data modify storage animated_java:temp entry.data.locators.pos_head merge value { px: 0, py: 0.3955791802, pz: 0.9653506708, ry: 0, rx: 50 }
+data modify storage animated_java:temp entry.data.locators.pos_head merge value { px: 0, py: 0.3956, pz: 0.9654, ry: 0, rx: 50 }
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_hitbox_head_0 with storage animated_java:temp entry.data.locators.hitbox_head_0
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_hitbox_leg_left_1 with storage animated_java:temp entry.data.locators.hitbox_leg_left_1
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_hitbox_leg_left_2 with storage animated_java:temp entry.data.locators.hitbox_leg_left_2
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_hitbox_leg_right_1 with storage animated_java:temp entry.data.locators.hitbox_leg_right_1
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_hitbox_leg_right_2 with storage animated_java:temp entry.data.locators.hitbox_leg_right_2
-data modify storage animated_java:temp entry.data.locators.pos_tail_0 merge value { px: 0, py: 0.7571139727, pz: -0.6314118835, ry: 0, rx: 0 }
-data modify storage animated_java:temp entry.data.locators.pos_tail_1 merge value { px: 0, py: 0.71500885, pz: -0.9608735369, ry: 0, rx: -7.5 }
+data modify storage animated_java:temp entry.data.locators.pos_tail_0 merge value { px: 0, py: 0.7571, pz: -0.6314, ry: 0, rx: 0 }
+data modify storage animated_java:temp entry.data.locators.pos_tail_1 merge value { px: 0, py: 0.715, pz: -0.9609, ry: 0, rx: -7.5 }
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_hitbox_tail_1 with storage animated_java:temp entry.data.locators.hitbox_tail_1
-data modify storage animated_java:temp entry.data.locators.pos_tail_2 merge value { px: 0, py: 0.6501903422, pz: -1.3661372509, ry: 0, rx: -12.5 }
-data modify storage animated_java:temp entry.data.locators.pos_tail_3 merge value { px: 0, py: 0.6213887049, pz: -1.773734322, ry: 0, rx: -5 }
+data modify storage animated_java:temp entry.data.locators.pos_tail_2 merge value { px: 0, py: 0.6502, pz: -1.3661, ry: 0, rx: -12.5 }
+data modify storage animated_java:temp entry.data.locators.pos_tail_3 merge value { px: 0, py: 0.6214, pz: -1.7737, ry: 0, rx: -5 }
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_hitbox_tail_3 with storage animated_java:temp entry.data.locators.hitbox_tail_3
-data modify storage animated_java:temp entry.data.locators.pos_tail_4 merge value { px: 0, py: 0.7229181414, pz: -2.2626483224, ry: 0, rx: 5 }
+data modify storage animated_java:temp entry.data.locators.pos_tail_4 merge value { px: 0, py: 0.7229, pz: -2.2626, ry: 0, rx: 5 }
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_hitbox_tail_4 with storage animated_java:temp entry.data.locators.hitbox_tail_4
 execute at @s run function animated_java_dino:dino/zzz/set_default_pose/as_locator_shadow with storage animated_java:temp entry.data.locators.shadow
+# Data Manager: Write
+function animated_java:global/data_manager/write with storage animated_java:temp args

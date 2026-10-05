@@ -12,7 +12,7 @@
     data modify storage mhdp_core:temp Args.Name set from storage mhdp_core:temp PlayerData.Item.UsingWeapon.components.minecraft:item_name
 
 # アイテム書き換え
-    $item modify entity @s weapon.$(Slot) [{function: set_custom_model_data, strings:{values :["whetstone"], mode: replace_all}}]
+    $item modify entity @s weapon.$(Slot) [{type: set_custom_model_data, strings:{values :["whetstone"], mode: replace_all}}]
     
 # 終了
     data remove storage mhdp_core:temp Args

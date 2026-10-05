@@ -3,7 +3,7 @@
         {
             "entries": [
                 {
-                    "functions": [
+                    "modifier": [
                         {
                             "components": {
                                 "minecraft:custom_data": {
@@ -27,7 +27,7 @@
                                     "asset_id": "rocksteady"
                                 }
                             },
-                            "function": "minecraft:set_components"
+                            "type": "minecraft:set_components"
                         }
                     ],
                     "name": "minecraft:chainmail_chestplate",

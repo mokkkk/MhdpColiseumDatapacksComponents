@@ -1,8 +1,0 @@
-#> mhdp_monster_ranposu:core/tick/animation/event/death_flying/end
-#
-# アニメーションイベントハンドラ 討伐・空中
-#
-# @within function mhdp_monsters:core/switch/macro/m.damage
-
-# そのままアニメーション停止
-    # function animated_java_ranposu:ranposu/animations/down/tween {duration:1, to_frame: 1}

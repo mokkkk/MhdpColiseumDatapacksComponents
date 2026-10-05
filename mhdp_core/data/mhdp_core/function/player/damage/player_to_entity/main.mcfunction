@@ -102,7 +102,7 @@
             scoreboard players operation #mhdp_temp_damage_element_value MhdpCore /= #const_10000 Const
     # 状態異常
         # 成功判定
-            execute if predicate {"condition":"minecraft:random_chance","chance":0.66} run tag @s add Ply.Temp.IsDisableConditionDamage
+            execute if predicate {"type":"minecraft:random_chance","chance":0.66} run tag @s add Ply.Temp.IsDisableConditionDamage
             execute if entity @s[tag=Ply.Temp.IsDisableConditionDamage] run scoreboard players set #mhdp_temp_condition_value_poison MhdpCore 0
             execute if entity @s[tag=Ply.Temp.IsDisableConditionDamage] run scoreboard players set #mhdp_temp_condition_value_paralysis MhdpCore 0
             execute if entity @s[tag=Ply.Temp.IsDisableConditionDamage] run scoreboard players set #mhdp_temp_condition_value_bomb MhdpCore 0

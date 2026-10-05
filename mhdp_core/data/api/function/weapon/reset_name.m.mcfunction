@@ -12,7 +12,7 @@
     data modify storage mhdp_core:temp Args.Name set from storage mhdp_core:temp PlayerData.Item.UsingWeapon.components.minecraft:item_name
 
 # アイテム書き換え
-    $item modify entity @s weapon.$(Slot) {"function":"minecraft:set_name","entity":"this","name":{"text":" ","type":"text"},"target":"custom_name"}
+    $item modify entity @s weapon.$(Slot) {"type":"minecraft:set_name","entity":"this","name":{"text":" ","type":"text"},"target":"custom_name"}
 
 # 終了
     data remove storage mhdp_core:temp Args

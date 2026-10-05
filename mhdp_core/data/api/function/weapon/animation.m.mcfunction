@@ -10,7 +10,7 @@
     $execute unless items entity @s weapon.$(Slot) ender_eye[] run return run function api:weapon/error {Message:"ERROR: 対象のスロットが武器ではありません"}
 
 # アイテム書き換え
-    $item modify entity @s weapon.$(Slot) [{function: set_custom_model_data, strings:{values :["$(Cmd)"], mode: replace_all}}]
+    $item modify entity @s weapon.$(Slot) [{type: set_custom_model_data, strings:{values :["$(Cmd)"], mode: replace_all}}]
 
 # attribute設定
     attribute @s attack_speed modifier remove mhdp_core:weapon_attack_speed

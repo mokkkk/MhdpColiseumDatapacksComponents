@@ -3,7 +3,7 @@
         {
             "entries": [
                 {
-                    "functions": [
+                    "modifier": [
                         {
                             "components": {
                                 "minecraft:consumable": {
@@ -57,8 +57,7 @@
                                 ],
                                 "minecraft:max_stack_size": 5
                             },
-                            "conditions": [],
-                            "function": "minecraft:set_components"
+                            "type": "minecraft:set_components"
                         },
                         {
                             "count": {
@@ -66,7 +65,7 @@
                                 "storage": "api:",
                                 "type": "minecraft:storage"
                             },
-                            "function": "minecraft:set_count"
+                            "type": "minecraft:set_count"
                         }
                     ],
                     "name": "paper",

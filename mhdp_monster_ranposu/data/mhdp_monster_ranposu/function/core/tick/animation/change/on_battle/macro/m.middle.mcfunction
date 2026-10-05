@@ -7,9 +7,9 @@
 $loot spawn ~ ~10 ~ loot {\
     "pools":[\
             {"rolls":1,"entries":[\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Move),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:1,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Jump),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:2,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(StepJump),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:3,IsRandomTemp:1b}"}]}\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Move),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:1,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Jump),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:2,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(StepJump),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:3,IsRandomTemp:1b}"}]}\
             ]}\
         ]\
     }

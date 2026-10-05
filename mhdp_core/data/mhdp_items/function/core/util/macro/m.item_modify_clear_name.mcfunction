@@ -8,4 +8,4 @@
     $execute unless items entity @s weapon.$(Slot) ender_eye[] run return run data remove storage mhdp_core:temp Args
 
 # アイテム書き換え
-    $item modify entity @s weapon.$(Slot) [{"function":"minecraft:set_name","target":"custom_name","name":{"text":""}}]
+    $item modify entity @s weapon.$(Slot) [{"type":"minecraft:set_name","target":"custom_name","name":{"text":""}}]

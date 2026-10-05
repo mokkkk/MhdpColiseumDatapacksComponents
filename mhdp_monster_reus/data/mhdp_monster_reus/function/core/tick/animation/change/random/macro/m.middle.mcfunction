@@ -7,10 +7,10 @@
 $loot spawn ~ ~10 ~ loot {\
     "pools":[\
             {"rolls":1,"entries":[\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Dash),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:1,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(ChargeBite),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:2,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Breath),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:3,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Move),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:4,IsRandomTemp:1b}"}]}\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Dash),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:1,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(ChargeBite),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:2,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Breath),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:3,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Move),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:4,IsRandomTemp:1b}"}]}\
             ]}\
         ]\
     }

@@ -9,16 +9,16 @@
 $loot spawn ~ ~10 ~ loot {\
     "pools":[\
             {"rolls":1,"entries":[\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(BreathBack),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:1,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(MoveBreath),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:2,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Bite),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:3,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(MoveBack),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:4,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Tail),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:5,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(TailSide),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:6,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(TailBack),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:7,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(TailFlame),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:8,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Round),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:9,IsRandomTemp:1b}"}]},\
-                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Step),"functions":[{"function":"minecraft:set_custom_data","tag":"{Id:10,IsRandomTemp:1b}"}]}\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(BreathBack),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:1,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(MoveBreath),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:2,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Bite),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:3,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(MoveBack),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:4,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Tail),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:5,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(TailSide),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:6,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(TailBack),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:7,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(TailFlame),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:8,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Round),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:9,IsRandomTemp:1b}"}]},\
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$(Step),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:10,IsRandomTemp:1b}"}]}\
             ]}\
         ]\
     }

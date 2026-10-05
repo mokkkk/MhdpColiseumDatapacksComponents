@@ -105,4 +105,3 @@ tag @s remove animated_java_valk.valk.animation.shoot_interrupt_sweep_l.playing
 tag @s remove animated_java_valk.valk.animation.shoot_interrupt_vertical_r.playing
 tag @s remove animated_java_valk.valk.animation.shoot_interrupt_vertical_l.playing
 tag @s remove animated_java_valk.valk.animation.lance_interrupt_flytackle.playing
-tag @s remove animated_java_valk.valk.animation.lance_interrupt_flytackle2.playing

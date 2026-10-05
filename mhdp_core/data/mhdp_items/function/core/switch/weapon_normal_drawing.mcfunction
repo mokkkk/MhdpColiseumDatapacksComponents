@@ -25,4 +25,4 @@
     #     item replace entity @s weapon.offhand from block 0 0 0 container.0
     #     item replace block 0 0 0 container.0 with air
     # # 武器のデータ書き換え
-    #     item modify entity @s weapon.offhand [{"function": "minecraft:set_name","entity": "this","target": "custom_name","name": "SubWeapon"},{function:set_custom_data,tag:{IsDrawing:1b,IsSubWeapon:1b}}]
+    #     item modify entity @s weapon.offhand [{"type": "minecraft:set_name","entity": "this","target": "custom_name","name": "SubWeapon"},{type:set_custom_data,tag:{IsDrawing:1b,IsSubWeapon:1b}}]

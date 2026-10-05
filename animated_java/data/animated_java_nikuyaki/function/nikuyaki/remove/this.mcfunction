@@ -3,6 +3,4 @@
 execute store result storage animated_java:temp args.id int 1 run scoreboard players get @s aj.id
 # Data Manager: Read
 function animated_java:global/data_manager/read with storage animated_java:temp args
-function animated_java_nikuyaki:nikuyaki/remove/as_locator_chair with storage animated_java:temp entry.data.locators.chair
-function animated_java_nikuyaki:nikuyaki/remove/as_locator_interaction with storage animated_java:temp entry.data.locators.interaction
 function animated_java_nikuyaki:nikuyaki/remove/this/without_on_remove_function

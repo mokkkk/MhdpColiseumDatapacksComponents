@@ -5,4 +5,4 @@
 # @within function mhdp_items:/**
 
 # functionを取得し、実行する
-    $item modify entity @s weapon.mainhand {function: set_components,components: {food: {nutrition: 0,saturation: 0,can_always_eat: true,eat_seconds: $(EatSeconds)}}}
+    $item modify entity @s weapon.mainhand {type: set_components,components: {food: {nutrition: 0,saturation: 0,can_always_eat: true,eat_seconds: $(EatSeconds)}}}

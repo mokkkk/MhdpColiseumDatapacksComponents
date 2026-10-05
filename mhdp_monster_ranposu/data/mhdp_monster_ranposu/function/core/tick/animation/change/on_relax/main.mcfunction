@@ -5,7 +5,7 @@
 # @within function mhdp_monsters:core/switch/macro/m.damage
 
 # 低確率で生態行動
-    execute if predicate {"condition":"minecraft:random_chance","chance":0.2} run tag @s add Anim.Ecology
+    execute if predicate {"type":"minecraft:random_chance","chance":0.2} run tag @s add Anim.Ecology
 
 # 移動
     execute unless entity @s[tag=Anim.Ecology] run function mhdp_monster_ranposu:core/tick/animation/change/play/relax_walk

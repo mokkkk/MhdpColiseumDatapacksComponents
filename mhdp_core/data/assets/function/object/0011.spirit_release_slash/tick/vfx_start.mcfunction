@@ -12,7 +12,7 @@
     execute store result storage mhdp_core:temp Temp.VfxRandomZ double 0.01 run random value -200..200
 # 角度乱数
     execute store result storage mhdp_core:temp Temp.VfxRandomRotation double 0.01 run random value 60..230
-    execute if predicate {"condition":"minecraft:random_chance","chance":0.5} store result storage mhdp_core:temp Temp.VfxRandomRotation double -0.01 run random value 60..230
+    execute if predicate {"type":"minecraft:random_chance","chance":0.5} store result storage mhdp_core:temp Temp.VfxRandomRotation double -0.01 run random value 60..230
 # 長さ乱数
     execute store result storage mhdp_core:temp Temp.VfxRandomLength float 0.1 run random value 80..150
 # 実行

@@ -3,7 +3,7 @@
         {
             "entries": [
                 {
-                    "functions": [
+                    "modifier": [
                         {
                             "components": {
                                 "minecraft:custom_data": {
@@ -23,7 +23,7 @@
                                     "hide_tooltip": true
                                 }
                             },
-                            "function": "minecraft:set_components"
+                            "type": "minecraft:set_components"
                         }
                     ],
                     "name": "minecraft:carrot_on_a_stick",

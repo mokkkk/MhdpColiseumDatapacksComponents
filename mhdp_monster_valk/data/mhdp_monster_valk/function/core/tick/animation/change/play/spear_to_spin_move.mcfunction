@@ -8,7 +8,7 @@
     scoreboard players set @s Mns.Valk.PhaseCount.Move 0
 
 # 左右ランダム
-    execute if predicate {"condition":"minecraft:random_chance","chance":0.5} run tag @s add Mns.Temp.Right
+    execute if predicate {"type":"minecraft:random_chance","chance":0.5} run tag @s add Mns.Temp.Right
 
 # 位置決定
     execute if entity @s[tag=Mns.Temp.Right] positioned as @n[tag=Mns.Target.Valk] facing entity @s feet rotated ~110 0 positioned ^ ^0.5 ^15 run summon area_effect_cloud ^ ^ ^ {Duration:200,DurationOnUse:0,Tags:["Mns.MovePos.Valk"],custom_particle:{type:"block",block_state:"minecraft:air"}}

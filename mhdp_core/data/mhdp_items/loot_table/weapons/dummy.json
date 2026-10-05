@@ -3,7 +3,7 @@
         {
             "entries": [
                 {
-                    "functions": [
+                    "modifier": [
                         {
                             "components": {
                                 "minecraft:custom_data": "{IsDrawing:1b,IsMhdpWeapon:1b,IsSubWeapon:1b,IsUsing:1b}",
@@ -17,8 +17,7 @@
                                 },
                                 "minecraft:unbreakable": {}
                                 },
-                                "conditions": [],
-                                "function": "minecraft:set_components"
+                                "type": "minecraft:set_components"
                         }
                     ],
                     "name": "ender_eye",

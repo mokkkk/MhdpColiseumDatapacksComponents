@@ -105,5 +105,4 @@ scoreboard objectives remove aj.shoot_interrupt_sweep_l.frame
 scoreboard objectives remove aj.shoot_interrupt_vertical_r.frame
 scoreboard objectives remove aj.shoot_interrupt_vertical_l.frame
 scoreboard objectives remove aj.lance_interrupt_flytackle.frame
-scoreboard objectives remove aj.lance_interrupt_flytackle2.frame
 tellraw @a [[{color:gray,text:'\n '},{color:'#00aced',text:'ᴀɴɪᴍᴀᴛᴇᴅ ᴊᴀᴠᴀ'},{color:dark_gray,italic:true,text:'\n (animated_java_valk:valk)'},'\n → '],[{text:'Successfully uninstalled ',color:green},{text:'animated_java_valk:valk',color:yellow},{text:'!'},{text:'\n If you have exported multiple times, you may have to remove objectives from previous exports manually, as Animated Java only knows about the objectives from the most recent export.',color:gray,italic:true}],'\n']

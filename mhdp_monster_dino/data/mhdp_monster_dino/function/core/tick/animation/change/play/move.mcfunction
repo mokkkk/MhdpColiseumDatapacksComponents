@@ -6,7 +6,7 @@
 
 # 移動
     tag @s add Anim.Move
-    execute if predicate {"condition":"minecraft:random_chance","chance":0.5} run tag @s add Mns.Dino.Combo.ToBite
+    execute if predicate {"type":"minecraft:random_chance","chance":0.5} run tag @s add Mns.Dino.Combo.ToBite
     execute unless entity @s[tag=Mns.Dino.Combo.ToBite] run tag @s add Mns.Dino.Combo.ToTail
 
 # 移動回数設定

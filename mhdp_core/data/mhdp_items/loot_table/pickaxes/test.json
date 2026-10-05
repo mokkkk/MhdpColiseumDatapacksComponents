@@ -3,7 +3,7 @@
         {
             "entries": [
                 {
-                    "functions": [
+                    "modifier": [
                         {
                             "components": {
                                 "minecraft:custom_data": "{IsMhdpItem:1b,IsMhdpPickaxe:1b,PickaxeId:1,ItemName:\"Test\",Build1:1000,Build2:1001,Build3:1002}",
@@ -225,8 +225,7 @@
                                 ],
                                 "minecraft:max_stack_size": 1
                             },
-                            "conditions": [],
-                            "function": "minecraft:set_components"
+                            "type": "minecraft:set_components"
                         },
                         {
                             "count": {
@@ -234,7 +233,7 @@
                                 "storage": "api:",
                                 "type": "minecraft:storage"
                             },
-                            "function": "minecraft:set_count"
+                            "type": "minecraft:set_count"
                         }
                     ],
                     "name": "carrot_on_a_stick",

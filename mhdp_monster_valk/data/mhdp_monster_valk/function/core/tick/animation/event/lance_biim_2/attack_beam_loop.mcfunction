@@ -8,7 +8,7 @@
     execute unless loaded ~ ~ ~ run return 0
 
 # 演出
-    execute if predicate {"condition":"minecraft:random_chance","chance":0.5} run particle explosion ^ ^ ^ 1.8 0.3 1.8 0 1 force
+    execute if predicate {"type":"minecraft:random_chance","chance":0.5} run particle explosion ^ ^ ^ 1.8 0.3 1.8 0 1 force
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^-1 ^ 2 0.1 2 0.3 6 force
 
 # 再帰
