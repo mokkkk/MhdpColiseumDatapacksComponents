@@ -7,6 +7,9 @@
                         {
                             "components": {
                                 "enchantment_glint_override": false,
+                                "minecraft:attack_animation": {
+                                    "type": "none"
+                                },
                                 "minecraft:custom_data": "{IsMhdpWeapon:1b,Id:301,WeaponType:4,AttackDamage:100,Element:0,ElementDamage:0,Critical:0,Sharpness:[10,10,40,40,0,0,0],SharpnessMax:70,SharpnessMaxCraft:100,ModelOffset:0,SharpnessFont:uE003}",
                                 "minecraft:enchantments": {
                                     "mhdp_core:item/weapon_leftclick": 1
@@ -278,9 +281,6 @@
                                 "minecraft:piercing_weapon": {
                                     "deals_knockback": false,
                                     "dismounts": false
-                                },
-                                "minecraft:attack_animation": {
-                                    "type": "none"
                                 },
                                 "minecraft:tooltip_display": {
                                     "hidden_components": [

@@ -20,7 +20,6 @@
     scoreboard players set @s Itm.Nikuyaki.GeneralTimer 0
     tag @s add Itm.Sp.Nikuyaki.Using
 
-
 # 使用開始前の位置を保存
     function mhdp_core:player/data/load_data
     data modify storage mhdp_core:temp PlayerData.ItemUsedPos set from entity @s Pos

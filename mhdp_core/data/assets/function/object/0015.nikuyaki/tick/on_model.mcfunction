@@ -10,7 +10,7 @@
     # execute if entity @s[tag=Itm.Root.Nikuyaki.Remove] run function animated_java_nikuyaki:nikuyaki/remove/this
 
 # 椅子にプレイヤーが座っている場合、オブジェクトの残存時間を延ばす
-    function animated_java_nikuyaki:nikuyaki/as_locator {name: "chair", command: "execute on passengers if entity @s[type=player] run scoreboard players set @n[type=item_display,tag=This] ObjectTick 0"}
+    function animated_java_nikuyaki:nikuyaki/as_locator {name: "chair", command: "execute on passengers if entity @s[type=player] run scoreboard players set @n[type=item_display,tag=This,distance=..10] ObjectTick 0"}
 
 # アニメーション処理実行
     function animated_java:global/data_manager/on_tick

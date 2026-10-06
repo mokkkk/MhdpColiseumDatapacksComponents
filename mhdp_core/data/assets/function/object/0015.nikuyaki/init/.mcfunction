@@ -13,8 +13,11 @@
     execute on passengers run tag @s add 15.IsInit
 
 # 名前を修正
-    execute on passengers run function animated_java_nikuyaki:nikuyaki/as_locator {name: "interaction", command: "data modify entity @s CustomName set value \" \""}
+    execute on passengers run function animated_java_nikuyaki:nikuyaki/as_interaction {name: "interaction", command: "data modify entity @s CustomName set value \" \""}
     
 # プレイヤーと紐づけ
     execute on passengers store result score @s Ply.Uid run data get storage api: Arg.Override.PlyUid
-    execute on passengers run function animated_java_nikuyaki:nikuyaki/as_locator {name: "interaction", command: "execute store result score @s Ply.Uid run data get storage api: Arg.Override.PlyUid"}
+    execute on passengers run function animated_java_nikuyaki:nikuyaki/as_interaction {name: "interaction", command: "execute store result score @s Ply.Uid run data get storage api: Arg.Override.PlyUid"}
+
+# イス用タグ付与
+    execute on passengers run function animated_java_nikuyaki:nikuyaki/as_locator {name: "chair", command: "tag @s add Itm.Nikuyaki.Chair"}

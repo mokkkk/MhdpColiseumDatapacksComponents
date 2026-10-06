@@ -16,7 +16,7 @@
                                         "sound_id": ""
                                     }
                                 },
-                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:1,ItemName:\"potion\",UseTimer:40}",
+                                "minecraft:custom_data": "{IsMhdpItem:1b,ItemType:1,ItemId:10001,ItemName:\"potion\",UseTimer:40}",
                                 "minecraft:food": {
                                     "can_always_eat": true,
                                     "nutrition": 0,
