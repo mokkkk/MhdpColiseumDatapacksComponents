@@ -4,6 +4,9 @@
 #
 # @within function mhdp_monsters:/**
 
+# compute試作
+    # 2ベクトル
+
 # 対象との角度差を計算
     summon marker ~ ~ ~ {Tags:["Temp.Rotate.Target.Marker"]}
     $execute at @s facing entity @n[tag=$(TargetTag)] feet rotated ~ 0 run tp @n[type=marker,tag=Temp.Rotate.Target.Marker,limit=1] ~ ~ ~ ~ ~
