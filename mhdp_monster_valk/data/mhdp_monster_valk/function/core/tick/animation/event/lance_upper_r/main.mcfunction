@@ -29,6 +29,9 @@
     execute if score @s aj.lance_upper_r.frame matches 20 run playsound entity.player.attack.knockback master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     execute if score @s aj.lance_upper_r.frame matches 20 run particle block{block_state:"minecraft:sand"} ^ ^ ^5 2 0.1 2 0 30
     execute if score @s aj.lance_upper_r.frame matches 30..32 run playsound item.firecharge.use master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    execute if score @s aj.lance_upper_r.frame matches 35..55 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:block.trial_spawner.about_to_spawn_item hostile @a ^ ^1 ^1 0.6 2 0.6
+    execute if score @s aj.lance_upper_r.frame matches 35..55 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:block.trial_spawner.about_to_spawn_item hostile @a ^ ^1 ^1 0.6 1.8 0.6
+    execute if score @s aj.lance_upper_r.frame matches 35..55 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.illusioner.prepare_blindness hostile @a ^ ^1 ^1 0.6 2 0.6
     execute if score @s aj.lance_upper_r.frame matches 35..55 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.3 1.7 0.3
     execute if score @s aj.lance_upper_r.frame matches 35..55 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.3 1.8 0.3
     execute if score @s aj.lance_upper_r.frame matches 35..55 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.3 2 0.3

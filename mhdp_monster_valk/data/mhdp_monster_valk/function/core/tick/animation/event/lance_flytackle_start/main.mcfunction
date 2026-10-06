@@ -12,6 +12,9 @@
     execute if score @s aj.lance_flytackle_start.frame matches 1..12 if entity @n[tag=Mns.Target.Valk,distance=..18] at @s run tp @s ^ ^ ^-0.8
 
 # 効果音
+    execute if score @s aj.lance_flytackle_start.frame matches 14..25 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:block.trial_spawner.about_to_spawn_item hostile @a ^ ^1 ^1 0.6 2 0.6
+    execute if score @s aj.lance_flytackle_start.frame matches 14..25 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:block.trial_spawner.about_to_spawn_item hostile @a ^ ^1 ^1 0.6 1.8 0.6
+    execute if score @s aj.lance_flytackle_start.frame matches 14..25 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.illusioner.prepare_blindness hostile @a ^ ^1 ^1 0.6 2 0.6
     execute if score @s aj.lance_flytackle_start.frame matches 14..15 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 1.1 0.4
     execute if score @s aj.lance_flytackle_start.frame matches 14..15 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 0.9 0.4
     execute if score @s aj.lance_flytackle_start.frame matches 14..15 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.4 0.7 0.4

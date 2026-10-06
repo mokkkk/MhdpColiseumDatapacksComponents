@@ -51,6 +51,9 @@
 # 無音
     execute if score @s aj.comet_phase_4.frame matches 2..5 run playsound item.trident.thunder master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.2
     execute if score @s aj.comet_phase_4.frame matches 2..5 run playsound item.trident.thunder master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1
+    execute if score @s aj.comet_phase_4.frame matches 5..24 at @a[distance=..64] facing entity @s feet as @p run playsound minecraft:block.trial_spawner.about_to_spawn_item master @a ^ ^1 ^1 0.6 0.7 0.6
+    execute if score @s aj.comet_phase_4.frame matches 25..34 at @a[distance=..64] facing entity @s feet as @p run playsound minecraft:block.trial_spawner.about_to_spawn_item master @a ^ ^1 ^1 0.4 0.7 0.4
+    execute if score @s aj.comet_phase_4.frame matches 35..45 at @a[distance=..64] facing entity @s feet as @p run playsound minecraft:block.trial_spawner.about_to_spawn_item master @a ^ ^1 ^1 0.2 0.7 0.2
     execute if score @s aj.comet_phase_4.frame matches 5 run tag @a[tag=Mns.Candidate.Valk] add Ply.State.IsSilent
     execute if score @s aj.comet_phase_4.frame matches 65 run tag @a[tag=Mns.Candidate.Valk] remove Ply.State.IsSilent
 
