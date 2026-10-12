@@ -20,5 +20,5 @@
     particle explosion ^ ^ ^5.5 0.3 0.1 0.3 0 1
 
 # カメラ演出
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "weak"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "medium"
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:3}

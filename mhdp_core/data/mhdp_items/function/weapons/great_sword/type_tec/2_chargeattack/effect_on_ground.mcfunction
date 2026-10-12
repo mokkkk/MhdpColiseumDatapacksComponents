@@ -10,7 +10,3 @@
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^1.5 0.2 0.1 0.2 0.5 5 normal
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^2.5 0.2 0.1 0.2 0.5 5 normal
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.1 ^3.5 0.2 0.1 0.2 0.5 5 normal
-
-# カメラ演出
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "weak"
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:3}

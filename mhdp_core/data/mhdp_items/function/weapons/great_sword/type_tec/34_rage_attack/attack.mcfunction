@@ -20,8 +20,9 @@
     execute if entity @n[tag=Temp.Victim] run tp @s @s
 
 # ヒット演出
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "strong"
-    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:3}
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if entity @n[tag=Temp.Victim] run data modify storage api: Arg.Override.Type set value "strong"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if entity @n[tag=Temp.Victim] run function api:effect/apply.m {EffectId:3}
+    execute if entity @n[tag=Temp.Victim] run function api:effect/apply.m {EffectId:4}
 
 # 攻撃
     execute if score @s Wpn.Gs.ChargeCount matches ..1 run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.Rage.1
