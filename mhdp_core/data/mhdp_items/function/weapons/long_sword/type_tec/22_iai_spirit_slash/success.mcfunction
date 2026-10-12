@@ -7,3 +7,6 @@
 # タグ更新
     tag @s remove Wpn.Ls.Tec.IaiSpiritSlash
     tag @s add Wpn.Ls.Tec.IaiSpiritSlash.Success
+
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
