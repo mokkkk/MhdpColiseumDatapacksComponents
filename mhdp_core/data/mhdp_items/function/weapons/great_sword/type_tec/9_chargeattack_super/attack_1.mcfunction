@@ -19,7 +19,11 @@
     execute if entity @n[tag=Temp.Victim] run scoreboard players set @s Wpn.HitStopTimer 7
     execute if entity @n[tag=Temp.Victim] run tp @s @s
     tag @s remove Ply.Flag.Hit
-    
+
+# ヒット演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "medium"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:3}
+
 # 攻撃
     execute if score @s Wpn.Gs.ChargeCount matches ..1 run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.Super.1
     execute if score @s Wpn.Gs.ChargeCount matches 2 run data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.GreatSword.Tec.ChargeSlash.Super.2

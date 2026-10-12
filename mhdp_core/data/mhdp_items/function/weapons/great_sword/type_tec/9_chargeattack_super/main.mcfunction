@@ -57,10 +57,6 @@
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 1..3 run tp @s ~ ~ ~ ~ ~2
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 10..15 run tp @s ~ ~ ~ ~ ~-0.8
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 18..20 run tp @s ~ ~ ~ ~ ~2
-    execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 19 at @s run tp @s ~ ~ ~ ~-1 ~
-    execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 20 at @s run tp @s ~ ~ ~ ~2 ~
-    execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 21 at @s run tp @s ~ ~ ~ ~-1 ~
-    execute if entity @s[tag=Ply.Weapon.HisStop,tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 22 at @s run tp @s ~ ~ ~ ~1 ~
 
 # 先行入力
     execute if entity @s[tag=Ply.Ope.StartKeyJump,tag=!Ply.Ope.IsKeySprint] if score @s Wpn.GeneralTimer matches 20..59 run function mhdp_items:core/buffering/jump
