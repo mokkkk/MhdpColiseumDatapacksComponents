@@ -35,6 +35,9 @@
 # 攻撃
     execute if score @s aj.voice.frame matches 40 run function animated_java_dino:dino/at_locator {name:"pos_head",command:"execute rotated as @s rotated ~ 0 run function mhdp_monster_dino:core/tick/animation/event/voice/attack"}
 
+# 画面演出
+    execute if score @s aj.voice.frame matches 40 as @a[tag=Mns.Candidate.Dino,distance=..100] run function api:effect/apply.m {EffectId:2}
+
 # 接地
     function mhdp_monsters:core/util/tick/move/check_landing
 
