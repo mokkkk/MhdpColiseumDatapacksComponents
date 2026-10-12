@@ -1,4 +1,4 @@
-#> assets:effect/0003.attack_vfx_shake/apply/
+#> assets:effect/0003.weapon_vfx_shake/apply/
 #
 # エフェクト適用処理
 

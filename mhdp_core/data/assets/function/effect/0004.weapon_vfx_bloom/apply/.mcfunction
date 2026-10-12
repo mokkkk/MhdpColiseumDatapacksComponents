@@ -1,4 +1,4 @@
-#> assets:effect/0004.attack_vfx_bloom/apply/
+#> assets:effect/0004.weapon_vfx_bloom/apply/
 #
 # エフェクト適用処理
 

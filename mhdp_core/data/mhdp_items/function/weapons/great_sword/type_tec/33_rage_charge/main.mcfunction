@@ -38,6 +38,8 @@
     execute if score @s Wpn.Gs.ChargeTimer matches 450.. if score @s Wpn.Gs.ChargeCount matches ..2 rotated ~ -90 run function mhdp_items:weapons/great_sword/type_tec/33_rage_charge/up_charge_count
 
 # 溜め演出
+    # 画面演出
+        execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 21 run function api:effect/apply.m {EffectId:6}
     particle crimson_spore ~ ~1 ~ 0.7 1 0.7 0 1
     execute if score @s Wpn.Gs.ChargeTimer matches ..149 run particle dust{color:[1.000,1.000,0.820],scale:1.0} ~ ~1 ~ 0.7 1 0.7 1 1
     execute if score @s Wpn.Gs.ChargeTimer matches 150.. run particle dust{color:[1.000,0.812,0.490],scale:1.3} ~ ~1 ~ 0.8 1 0.8 1 1

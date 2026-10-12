@@ -1,4 +1,4 @@
-#> assets:effect/0003.attack_vfx_shake/tick/
+#> assets:effect/0006.weapon_vfx_rumble/tick/
 #
 # エフェクトtick処理
 

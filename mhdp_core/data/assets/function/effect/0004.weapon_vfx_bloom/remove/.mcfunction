@@ -1,4 +1,4 @@
-#> assets:effect/0004.attack_vfx_bloom/remove/
+#> assets:effect/0004.weapon_vfx_bloom/remove/
 #
 # エフェクト消去処理
 

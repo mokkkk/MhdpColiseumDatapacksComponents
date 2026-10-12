@@ -1,4 +1,4 @@
-#> assets:effect/0003.attack_vfx_shake/remove/
+#> assets:effect/0003.weapon_vfx_shake/remove/
 #
 # エフェクト消去処理
 
