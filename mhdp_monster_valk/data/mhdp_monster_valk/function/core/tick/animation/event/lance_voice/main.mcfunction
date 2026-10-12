@@ -26,6 +26,9 @@
 # 攻撃
     execute if score @s aj.lance_voice.frame matches 40 run function animated_java_valk:valk/at_locator {name:"pos_head",command:"execute rotated as @s rotated ~ 0 run function mhdp_monster_valk:core/tick/animation/event/lance_voice/attack"}
 
+# 画面演出
+    execute if score @s aj.lance_voice.frame matches 40 as @a[tag=Mns.Candidate.Valk,distance=..100] run function api:effect/apply.m {EffectId:2}
+
 # モデル演出
     execute if score @s aj.lance_voice.frame matches 38 run function mhdp_monster_valk:core/util/models/chest_glow_start
     execute if score @s aj.lance_voice.frame matches 80 run function mhdp_monster_valk:core/util/models/chest_glow_end

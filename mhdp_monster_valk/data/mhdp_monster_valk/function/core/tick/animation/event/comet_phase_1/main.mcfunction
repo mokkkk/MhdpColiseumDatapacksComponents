@@ -8,14 +8,13 @@
     execute if score @s aj.comet_phase_1.frame matches 2 run scoreboard players set @s Mns.Valk.PhaseCount.Comet 0
 
 # 効果音
-
     execute if score @s aj.comet_phase_1.frame matches 2..15 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.3 1.7 0.3
     execute if score @s aj.comet_phase_1.frame matches 2..15 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.allay.death master @s ^ ^1 ^1 0.3 1.8 0.3
     execute if score @s aj.comet_phase_1.frame matches 2..25 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.3 2 0.3
     execute if score @s aj.comet_phase_1.frame matches 2..25 at @a[tag=!Ply.State.IsSilent,distance=..48] facing entity @s feet as @p run playsound minecraft:entity.phantom.death master @s ^ ^1 ^1 0.3 1.8 0.3
-    execute if score @s aj.comet_phase_1.frame matches 2..35 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:block.trial_spawner.about_to_spawn_item hostile @a ^ ^1 ^1 0.6 2 0.6
-    execute if score @s aj.comet_phase_1.frame matches 2..35 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:block.trial_spawner.about_to_spawn_item hostile @a ^ ^1 ^1 0.6 1.8 0.6
-    execute if score @s aj.comet_phase_1.frame matches 2..35 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.illusioner.prepare_blindness hostile @a ^ ^1 ^1 0.6 2 0.6
+    execute if score @s aj.comet_phase_1.frame matches 2..15 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:block.trial_spawner.about_to_spawn_item hostile @a ^ ^1 ^1 0.6 2 0.6
+    execute if score @s aj.comet_phase_1.frame matches 2..15 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:block.trial_spawner.about_to_spawn_item hostile @a ^ ^1 ^1 0.6 1.8 0.6
+    execute if score @s aj.comet_phase_1.frame matches 2..15 at @a[tag=!Ply.State.IsSilent,distance=..32] facing entity @s feet as @p run playsound minecraft:entity.illusioner.prepare_blindness hostile @a ^ ^1 ^1 0.6 2 0.6
     execute if score @s aj.comet_phase_1.frame matches 2..35 run playsound entity.player.breath master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 2
     execute if score @s aj.comet_phase_1.frame matches 52 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     execute if score @s aj.comet_phase_1.frame matches 56 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
@@ -32,13 +31,14 @@
 # 演出
     execute if score @s aj.comet_phase_1.frame matches 2..57 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/particle
     execute if score @s aj.comet_phase_1.frame matches 58..70 run function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/particle_launch
-
     # Object: RedFlash (10047)
         execute if score @s aj.comet_phase_1.frame matches 59 run data modify storage api: Arg.Override set value {Scale:12}
         execute if score @s aj.comet_phase_1.frame matches 59 positioned ^ ^6 ^4 run function api:object/summon.m {ObjectId:10047}
-
     # Object: Comet (10041) / Burst (10042)
         execute if score @s aj.comet_phase_1.frame matches 70 run function animated_java_valk:valk/as_locator {name:"shadow",command:"function mhdp_monster_valk:core/tick/animation/event/comet_phase_1/summon_vfx"}
+    # 画面演出
+        execute if score @s aj.comet_phase_1.frame matches 70 run data modify storage api: Arg.Override.Type set value "first"
+        execute if score @s aj.comet_phase_1.frame matches 70 as @a[tag=Mns.Candidate.Valk,distance=..100] run function api:effect/apply.m {EffectId:5}
 
 # 風圧怯み
     # TODO: 風圧実装後に適用

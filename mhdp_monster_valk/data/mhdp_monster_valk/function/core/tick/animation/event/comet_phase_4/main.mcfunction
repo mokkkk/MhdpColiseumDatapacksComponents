@@ -23,13 +23,11 @@
     execute if score @s aj.comet_phase_4.frame matches 2..15 run particle dust{color:[1.000,0.000,0.152],scale:4} ^ ^ ^3 2 2 2 0.15 10 force
     execute if score @s aj.comet_phase_4.frame matches 2..15 run particle explosion ^ ^2 ^6 2 2 2 0 10 force
     execute if score @s aj.comet_phase_4.frame matches 2..5 run particle gust_emitter_large ~ ~2 ~ 3 1 3 0 3 force
-
     # Object: Jet (10043、Phase3から継続追従)
         execute if score @s aj.comet_phase_4.frame matches 2..15 run function animated_java_valk:valk/as_locator {name:"shadow",command:"function mhdp_monster_valk:core/tick/animation/event/comet_phase_4/tp_vfx_jet"}
         execute if score @s aj.comet_phase_4.frame matches 2 run data modify entity @n[type=text_display,tag=10043.JetVfx] transformation.scale set value [50f,50f,50f]
         execute if score @s aj.comet_phase_4.frame matches 2 run data modify entity @n[type=text_display,tag=10043.JetVfx] start_interpolation set value -1L
         execute if score @s aj.comet_phase_4.frame matches 8 run kill @e[type=text_display,tag=10043.JetVfx]
-
     # Object: RedFlash (10047) / Bomb (10046)
         execute if score @s aj.comet_phase_4.frame matches 2 run data modify storage api: Arg.Override set value {Scale:18}
         execute if score @s aj.comet_phase_4.frame matches 2 positioned ^ ^2 ^ run function api:object/summon.m {ObjectId:10047}
@@ -47,6 +45,9 @@
         execute if score @s aj.comet_phase_4.frame matches 6 positioned ^ ^2 ^ run function api:object/summon.m {ObjectId:10046}
         execute if score @s aj.comet_phase_4.frame matches 8 run data modify storage api: Arg.Override set value {Scale:18}
         execute if score @s aj.comet_phase_4.frame matches 8 positioned ^ ^2 ^ run function api:object/summon.m {ObjectId:10046}
+    # 画面演出
+        execute if score @s aj.comet_phase_4.frame matches 2 run data modify storage api: Arg.Override.Type set value "attack"
+        execute if score @s aj.comet_phase_4.frame matches 2 as @a[tag=Mns.Candidate.Valk,distance=..100] run function api:effect/apply.m {EffectId:5}
 
 # 無音
     execute if score @s aj.comet_phase_4.frame matches 2..5 run playsound item.trident.thunder master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.2

@@ -4,9 +4,6 @@
 #
 # @within function mhdp_monsters:/**
 
-# compute試作
-    # 2ベクトル
-
 # 対象との角度差を計算
     summon marker ~ ~ ~ {Tags:["Temp.Rotate.Target.Marker"]}
     $execute at @s facing entity @n[tag=$(TargetTag)] feet rotated ~ 0 run tp @n[type=marker,tag=Temp.Rotate.Target.Marker,limit=1] ~ ~ ~ ~ ~
@@ -19,8 +16,8 @@
     execute if score @s Mns.Temp.RotateVec matches ..-180001 run scoreboard players add @s Mns.Temp.RotateVec 360000
 
 # 最大角度
-    $execute if score @s Mns.Temp.RotateVec matches $(MaxRotation)000.. run scoreboard players set @s Mns.Temp.RotateVec $(MaxRotation)000
-    $execute if score @s Mns.Temp.RotateVec matches ..-$(MaxRotation)000 run scoreboard players set @s Mns.Temp.RotateVec -$(MaxRotation)000
+    # $execute if score @s Mns.Temp.RotateVec matches $(MaxRotation)000.. run scoreboard players set @s Mns.Temp.RotateVec $(MaxRotation)000
+    # $execute if score @s Mns.Temp.RotateVec matches ..-$(MaxRotation)000 run scoreboard players set @s Mns.Temp.RotateVec -$(MaxRotation)000
 
 # 回転時間で割る
     $scoreboard players set #mhdp_temp_rotate_tick MhdpCore $(Tick)

@@ -48,6 +48,10 @@
     execute if score @s aj.lance_upper_l.frame matches 51 run kill @e[type=text_display,tag=10047.Long]
     execute if score @s aj.lance_upper_l.frame matches 51 run data modify storage api: Arg.Override set value {Scale:12}
     execute if score @s aj.lance_upper_l.frame matches 51 positioned ^4 ^2 ^-5 run function api:object/summon.m {ObjectId:10047}
+    # 画面演出
+        execute if score @s aj.lance_upper_l.frame matches 35 run data modify storage api: Arg.Override.Type set value "first"
+        execute if score @s aj.lance_upper_l.frame matches 35 run data modify storage api: Arg.Override.Tick set value 20
+        execute if score @s aj.lance_upper_l.frame matches 35 as @a[tag=Mns.Candidate.Valk,distance=..100] run function api:effect/apply.m {EffectId:5}
 
 # 攻撃1 (お手・相殺不可のため start_attack は挟まない)
     execute if score @s aj.lance_upper_l.frame matches 20 run function mhdp_monster_valk:core/tick/animation/event/lance_upper_l/attack_hand

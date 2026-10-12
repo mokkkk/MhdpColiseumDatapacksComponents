@@ -65,6 +65,11 @@
         execute if score @s aj.lance_biim_2.frame matches 4 run summon area_effect_cloud ~ ~0.1 ~ {Duration:70,DurationOnUse:0,Tags:["Mns.BeamPos.Valk"],custom_particle:{type:"block",block_state:"minecraft:air"}}
         execute if score @s aj.lance_biim_2.frame matches 5..71 run function animated_java_valk:valk/at_locator {name:"beam_end",command:"tp @n[type=area_effect_cloud,tag=Mns.BeamPos.Valk] ~ ~ ~ ~ 0"}
 
+    # 画面演出
+        execute if score @s aj.lance_biim_2.frame matches 4 run data modify storage api: Arg.Override.Type set value "beam"
+        execute if score @s aj.lance_biim_2.frame matches 4 run data modify storage api: Arg.Override.Tick set value 100
+        execute if score @s aj.lance_biim_2.frame matches 4 as @a[tag=Mns.Candidate.Valk,distance=..100] run function api:effect/apply.m {EffectId:5}
+
 # 攻撃
     # ビーム
         execute if score @s aj.lance_biim_2.frame matches 5..36 run function animated_java_valk:valk/at_locator {name:"beam_start",command:"function mhdp_monster_valk:core/tick/animation/event/lance_biim_2/attack_beam"}

@@ -5,9 +5,8 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 軸合わせ
-    execute if score @s aj.lance_upper_r.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Valk",Tick:10,MaxRotation:180}
-    execute if score @s aj.lance_upper_r.frame matches 11 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Valk",Tick:10,MaxRotation:180}
-    execute if score @s aj.lance_upper_r.frame matches 2..15 at @s run function mhdp_monsters:core/util/tick/event/alignment
+    execute if score @s aj.lance_upper_r.frame matches 2 run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.Valk",Tick:10,MaxRotation:360}
+    execute if score @s aj.lance_upper_r.frame matches 2..11 at @s run function mhdp_monsters:core/util/tick/event/alignment
     execute if score @s aj.lance_upper_r.frame matches 37..44 at @s run tag @n[tag=Mns.Target.Valk] add Temp.Rotate.Target
     execute if score @s aj.lance_upper_r.frame matches 37..44 at @s run function mhdp_monsters:core/util/tick/event/turn_to_target_accurate
     execute if score @s aj.lance_upper_r.frame matches 45..50 at @s run tp @s ^ ^ ^ ~-0.6 ~
@@ -48,6 +47,10 @@
     execute if score @s aj.lance_upper_r.frame matches 51 run kill @e[type=text_display,tag=10047.Long]
     execute if score @s aj.lance_upper_r.frame matches 51 run data modify storage api: Arg.Override set value {Scale:12}
     execute if score @s aj.lance_upper_r.frame matches 51 positioned ^-4 ^2 ^-5 run function api:object/summon.m {ObjectId:10047}
+    # 画面演出
+        execute if score @s aj.lance_upper_r.frame matches 35 run data modify storage api: Arg.Override.Type set value "first"
+        execute if score @s aj.lance_upper_r.frame matches 35 run data modify storage api: Arg.Override.Tick set value 20
+        execute if score @s aj.lance_upper_r.frame matches 35 as @a[tag=Mns.Candidate.Valk,distance=..100] run function api:effect/apply.m {EffectId:5}
 
 # 攻撃1 (お手・相殺不可のため start_attack は挟まない)
     execute if score @s aj.lance_upper_r.frame matches 20 run function mhdp_monster_valk:core/tick/animation/event/lance_upper_r/attack_hand

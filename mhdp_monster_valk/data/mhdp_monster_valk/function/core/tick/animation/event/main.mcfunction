@@ -26,6 +26,10 @@
 
 ## 彗龍形態
 
+# 咆哮
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_voice.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_voice/main
+# 怒り
+    execute if entity @s[tag=animated_java_valk.valk.animation.lance_anger.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_anger/main
 # 2連突き
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_spear_l_to_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_l_to_r/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_spear_r_to_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_spear_r_to_l/main
@@ -65,8 +69,6 @@
 # 軸合わせ (旋回)
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_turn_l.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_turn_l/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_turn_r.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_turn_r/main
-# 咆哮
-    execute if entity @s[tag=animated_java_valk.valk.animation.lance_voice.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_voice/main
 # 滑空突進
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_flytackle_start.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle_start/main
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_flytackle.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_flytackle/main
@@ -139,8 +141,6 @@
 # 形態変化
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_to_shoot.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_to_shoot/main
     execute if entity @s[tag=animated_java_valk.valk.animation.shoot_to_lance.playing] run function mhdp_monster_valk:core/tick/animation/event/shoot_to_lance/main
-# 怒り
-    execute if entity @s[tag=animated_java_valk.valk.animation.lance_anger.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_anger/main
 # 討伐
     execute if entity @s[tag=animated_java_valk.valk.animation.lance_death.playing] run function mhdp_monster_valk:core/tick/animation/event/lance_death/main
     execute if entity @s[tag=animated_java_valk.valk.animation.death_flying.playing] run function mhdp_monster_valk:core/tick/animation/event/death_flying/main
