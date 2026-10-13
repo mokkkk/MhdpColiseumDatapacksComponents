@@ -49,7 +49,8 @@
         execute if entity @s[tag=Ply.Flag.CounterSuccess] run playsound minecraft:block.trial_spawner.spawn_mob master @a ~ ~ ~ 1 0.7
         execute if entity @s[tag=Ply.Flag.CounterSuccess] run playsound minecraft:block.trial_spawner.spawn_mob master @a ~ ~ ~ 1 0.6
     # 画面演出
-        execute if entity @s[tag=Ply.Flag.CounterSuccess] run function api:effect/apply.m {EffectId:4}
+        execute if entity @s[tag=Ply.Flag.CounterSuccess,tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "arts"
+        execute if entity @s[tag=Ply.Flag.CounterSuccess,tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
         execute if entity @s[tag=Ply.Flag.CounterSuccess,tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "medium"
         execute if entity @s[tag=Ply.Flag.CounterSuccess,tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:3}
 

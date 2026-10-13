@@ -22,5 +22,7 @@
     execute if data storage api: Arg.Override.Tick run data modify storage mhdp_core:temp PlayerData.ActiveEffectList[{EffectId:4}].Tick set from storage api: Arg.Override.Tick
 
 # post_effect操作
-    posteffect add @s impact:light_pulse/20t_arts
-    posteffect add @s impact:bloom/20t_arts
+    execute if data storage api: Arg.Override{Type:"arts"} run posteffect add @s impact:light_pulse/20t_arts
+    execute if data storage api: Arg.Override{Type:"arts"} run posteffect add @s impact:bloom/20t_arts
+    execute if data storage api: Arg.Override{Type:"just"} run posteffect add @s impact:light_pulse/20t_just
+    execute if data storage api: Arg.Override{Type:"just"} run posteffect add @s impact:bloom/20t_just

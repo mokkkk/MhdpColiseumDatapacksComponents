@@ -10,6 +10,9 @@
     playsound item.shield.block master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
     playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.3
     playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.3
+    # カメラ演出
+        execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "just"
+        execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
 
 # スタミナ消費・のけぞりを最小化
     scoreboard players set #mhdp_temp_guard_stamina MhdpCore 0

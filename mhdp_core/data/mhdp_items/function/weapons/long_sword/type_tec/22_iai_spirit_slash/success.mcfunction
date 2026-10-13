@@ -9,4 +9,5 @@
     tag @s add Wpn.Ls.Tec.IaiSpiritSlash.Success
 
 # カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "arts"
     execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}

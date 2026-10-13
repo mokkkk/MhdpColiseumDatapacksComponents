@@ -14,9 +14,11 @@
     execute if score @s Wpn.Gs.ChargeCount matches 3 run playsound entity.arrow.hit_player master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 1
     execute if score @s Wpn.Gs.ChargeCount matches 3 run playsound block.enchantment_table.use master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 1 2
     execute if score @s Wpn.Gs.ChargeCount matches ..1 positioned ~ ~1.4 ~ rotated as @s positioned ^ ^ ^0.1 run particle flash{color:[1.000,0.812,0.490,1.00]} ^ ^ ^0.5 0 0 0 0 1
-    execute if score @s Wpn.Gs.ChargeCount matches 2 positioned ~ ~1.4 ~ rotated as @s positioned ^ ^ ^0.1 run particle flash{color:[0.949,0.663,0.447,1.00]} ^ ^ ^0.5 0 0 0 0 1
-    execute if score @s Wpn.Gs.ChargeCount matches 3 positioned ~ ~1.4 ~ rotated as @s positioned ^ ^ ^0.1 run particle flash{color:[0.710,0.208,0.208,1.00]} ^ ^ ^0.5 0 0 0 0 1
+    execute if score @s Wpn.Gs.ChargeCount matches 2 positioned ~ ~1.4 ~ rotated as @s positioned ^ ^ ^0.1 run particle flash{color:[1.000,0.663,0.447,1.00]} ^ ^ ^0.5 0 0 0 0 1
+    execute if score @s Wpn.Gs.ChargeCount matches 3 positioned ~ ~1.4 ~ rotated as @s positioned ^ ^ ^0.1 run particle flash{color:[1.000,0.208,0.208,1.00]} ^ ^ ^0.5 0 0 0 0 1
     execute if score @s Wpn.Gs.ChargeCount matches 3 positioned ~ ~1.4 ~ rotated as @s positioned ^ ^ ^0.1 run particle flash{color:[1.00,1.00,1.00,1.00]} ^ ^ ^0.5 0 0 0 0 1
+    # 画面演出
+        execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:6}
 
 # [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAIwAcADAMwqUAsKAtAEYcCGtbzzWgCY21DgDN2Q0hwCslONRQA2AJz0A7GAIA7bgFsEyQGGKAAkrawMbhgMBnJOBQB7QjohJ6tAijju4GI5gAG7c2IRG4AAeSN5gULEAvokEtqRohA6IlLS5eXF2EDYeiHFw2NhoMHZGOXEYzkUQRnFodgCiFVU17QCOhGHYUADK1r7kiOJhNckAukA_3
 # 円 1

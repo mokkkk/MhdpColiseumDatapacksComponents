@@ -14,6 +14,10 @@
     playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.3
     playsound entity.experience_orb.pickup master @s[tag=!Ply.State.IsSilent] ~ ~ ~ 3 1.3
 
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "just"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
+
 # タグ付与
     tag @s add Wpn.Gs.Normal.CounterStance.Success
     tag @s remove Ply.Weapon.NoOpe

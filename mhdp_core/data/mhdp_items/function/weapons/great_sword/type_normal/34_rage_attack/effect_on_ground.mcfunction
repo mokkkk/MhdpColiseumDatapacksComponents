@@ -11,11 +11,15 @@
     particle explosion ^ ^0.5 ^2.5 0.6 0.6 0.6 0 3 normal
     particle explosion ^ ^0.5 ^4 0.6 0.6 0.6 0 3 normal
     particle explosion ^ ^0.5 ^5.5 0.6 0.6 0.6 0 3 normal
-    particle flash{color:[1.000,0.812,0.490,1.00]} ^ ^0.5 ^3.5 0.6 0.6 0.6 0 3 normal
-    particle flash{color:[1.000,0.812,0.490,1.00]} ^ ^0.5 ^5.5 0.6 0.6 0.6 0 3 normal
+    particle flash{color:[1.000,0.2,0.2,1.00]} ^ ^0.5 ^3.5 0.6 0.6 0.6 0 3 normal
+    particle flash{color:[1.000,0.2,0.2,1.00]} ^ ^0.5 ^5.5 0.6 0.6 0.6 0 3 normal
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.3 ^1.5 0.2 0.1 0.2 0.9 10 normal
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.3 ^2.5 0.2 0.1 0.2 0.9 10 normal
     particle dust_pillar{block_state:"minecraft:sand"} ^ ^0.3 ^3.5 0.2 0.1 0.2 0.9 10 normal
 
 # 移動
-    execute rotated ~0 -60 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:true, IsAdjust:false}
+    execute rotated ~0 -60 run function api:weapon_operation/use_player_motion.m {Strength:3000, IsForce:false, IsAdjust:false}
+
+# 画面演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "strong"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:3}
