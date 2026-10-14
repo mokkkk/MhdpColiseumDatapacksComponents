@@ -10,6 +10,12 @@
     data remove storage mhdp_core:temp PlayerData.Bow.TargetUidList[0]
     data modify storage api: Arg.Override.IsTec set value false
     execute rotated ~ ~ positioned ^ ^ ^ run function api:object/summon.m {ObjectId:6}
- 
+  
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "medium"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:3}
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "blur"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
+
 # 演出
     execute positioned ^ ^ ^1 run function mhdp_items:weapons/bow/type_normal/13_jump_shot/particle

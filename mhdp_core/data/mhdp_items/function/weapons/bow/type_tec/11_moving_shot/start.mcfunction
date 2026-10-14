@@ -22,3 +22,7 @@
     playsound minecraft:block.trial_spawner.ominous_activate master @s ~ ~ ~ 3 0.7
     execute anchored eyes positioned ~ ~ ~ run particle flash{color:[1.000,1.000,1.000,1.00]} ^ ^ ^1 0.5 0.5 0.5 0 3
     particle end_rod ~ ~1.6 ~ 0.5 0.5 0.5 0.1 10
+ 
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "blur"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}

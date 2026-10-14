@@ -10,3 +10,7 @@
     particle firework ~ ~1 ~ 0 0 0 0.3 8
     scoreboard players add @s Wpn.Bw.Gauge 100
     scoreboard players add @s Ply.Stats.Stamina 500
+ 
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "just"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
