@@ -15,6 +15,10 @@
     execute if score @s Wpn.AnimationTimer matches 1..4 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/animation_0
     execute if score @s Wpn.AnimationTimer matches 5 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/animation_1
 
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.AnimationTimer matches 5 run data modify storage api: Arg.Override.Type set value "blur"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.AnimationTimer matches 5 run function api:effect/apply.m {EffectId:4}
+
 # 攻撃
     execute if entity @s[tag=!Ply.Flag.Hit] if score @s Wpn.GeneralTimer matches 5..59 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/attack_1
     execute if score @s Wpn.GeneralTimer matches 61 run function mhdp_items:weapons/short_sword/type_tec/18_fall_high/attack_2

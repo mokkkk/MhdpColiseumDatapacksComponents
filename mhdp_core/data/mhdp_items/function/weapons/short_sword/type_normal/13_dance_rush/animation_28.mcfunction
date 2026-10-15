@@ -5,5 +5,5 @@
 # @within function mhdp_items:weapons/short_sword/type_tec/16_just_4/main
 
 # アニメーション
-    function api:weapon/animation.m {Slot:"mainhand", Cmd:"just_4_3"}
+    function api:weapon/animation.m {Slot:"mainhand", Cmd:"empty"}
     function api:weapon/animation.m {Slot:"offhand", Cmd:"normal_1_sub_1"}

@@ -29,5 +29,11 @@
     execute positioned ~ ~1.65 ~ positioned ^ ^0.5 ^1.7 run function mhdp_items:weapons/short_sword/type_tec/13_just_1/particle
     execute positioned ~ ~1.65 ~ positioned ^ ^0.5 ^2.2 run function mhdp_items:weapons/short_sword/type_tec/13_just_1/particle
 
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "strong"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:3}
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "arts"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
+
 # 終了
     tag @e[type=slime,tag=Temp.Hit] remove Temp.Hit

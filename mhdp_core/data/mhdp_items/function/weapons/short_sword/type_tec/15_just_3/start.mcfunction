@@ -10,4 +10,8 @@
 # タグ付与
     tag @s add Wpn.Ss.Tec.Just.3
 
+# カメラ演出
+    execute if entity @s[tag=Ply.Flag.Just.Success,tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "just"
+    execute if entity @s[tag=Ply.Flag.Just.Success,tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
+
 # say 武器操作：片手剣 ジャストラッシュ3
