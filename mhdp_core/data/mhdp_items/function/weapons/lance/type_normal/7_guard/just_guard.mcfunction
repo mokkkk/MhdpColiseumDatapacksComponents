@@ -17,6 +17,10 @@
     scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
     scoreboard players operation #mhdp_temp_damage_reduction MhdpCore /= #const_2 Const
 
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "just"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
+
 # 後ずさる
     execute at @s rotated ~180 0 run function api:weapon_operation/use_player_motion.m {Strength:10000, IsForce:false, IsAdjust:false}
 

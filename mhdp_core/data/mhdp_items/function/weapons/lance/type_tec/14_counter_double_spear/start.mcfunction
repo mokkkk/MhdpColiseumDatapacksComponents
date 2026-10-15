@@ -10,3 +10,7 @@
 # タグ付与
     tag @s add Wpn.Lc.Tec.CounterDoubleSpear
     tag @s remove Ply.Weapon.NoOpe
+
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "just"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}

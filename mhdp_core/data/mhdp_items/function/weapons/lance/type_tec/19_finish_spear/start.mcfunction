@@ -14,3 +14,7 @@
 
 # 突き段階設定
     scoreboard players set @s Wpn.Lc.SpearCount 0
+
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "blur"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}

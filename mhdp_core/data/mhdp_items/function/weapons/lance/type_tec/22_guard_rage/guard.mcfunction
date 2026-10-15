@@ -27,6 +27,10 @@
     scoreboard players set #mhdp_temp_knockback_strength MhdpCore 0
     scoreboard players set @s Wpn.GuardStopTimer 10
 
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "just"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
+
 # 自動カウンターに移行
     tag @s remove Ply.Weapon.Guard
     function mhdp_items:weapons/lance/type_tec/23_rage_counter/start

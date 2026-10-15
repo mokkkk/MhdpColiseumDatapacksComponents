@@ -35,6 +35,10 @@
     execute if score @s Wpn.GeneralTimer matches 8 run attribute @s gravity modifier remove mhdp_core:weapon_gravity
     execute if score @s Wpn.GeneralTimer matches 100 run attribute @s gravity modifier remove mhdp_core:weapon_gravity
 
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 5 run data modify storage api: Arg.Override.Type set value "blur"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] if score @s Wpn.GeneralTimer matches 5 run function api:effect/apply.m {EffectId:4}
+
 # 移動制限
     execute if score @s Wpn.GeneralTimer matches 1 run function api:weapon_operation/attribute_movestop
     execute if score @s Wpn.GeneralTimer matches 100 run function api:weapon_operation/attribute_moveslow
