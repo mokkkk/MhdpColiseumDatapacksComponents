@@ -20,6 +20,10 @@
 # 演出
     execute if score @s ObjectTick matches ..14 at @n[tag=Temp.Victim] facing entity @p[tag=11.TargetPlayer] eyes run function assets:object/0011.spirit_release_slash/tick/vfx_start
 
+# カメラ演出
+    execute as @p[tag=11.TargetPlayer] if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "strong"
+    execute as @p[tag=11.TargetPlayer] if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:3}
+
 # 攻撃実行
     execute as @a[tag=11.TargetPlayer] if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity
 

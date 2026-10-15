@@ -36,6 +36,10 @@
     # 召喚
         execute rotated ~ 0 positioned ~ ~2.65 ~ positioned ^ ^ ^5.5 facing entity @s eyes run function api:object/summon.m {ObjectId:7}
 
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "arts"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
+
 # ゲージ色を下げる
     scoreboard players set @s Wpn.Ls.SpiritLevelGauge 0
     function mhdp_items:weapons/long_sword/util/down_spirit_level

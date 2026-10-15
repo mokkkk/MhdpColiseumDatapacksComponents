@@ -25,6 +25,10 @@
     # 召喚
         execute if entity @n[tag=Temp.Victim] run function api:object/summon.m {ObjectId:13}
 
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "blur"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
+
 # 攻撃
     data modify storage api: Arg set from storage mhdp_core:game_data WeaponAttackData.LongSword.Normal.SakuraSlash.1
     execute if entity @n[tag=Temp.Victim] run function api:damage_player_to_entity

@@ -12,3 +12,7 @@
     tag @s remove Wpn.Ls.Tec.RedForesight
     tag @s add Wpn.Ls.Tec.RedForesight.Success
     scoreboard players add @s Wpn.Ls.SpiritLevelGauge 80
+
+# カメラ演出
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run data modify storage api: Arg.Override.Type set value "just"
+    execute if entity @s[tag=!Ply.Option.DisableCameraEffect] run function api:effect/apply.m {EffectId:4}
