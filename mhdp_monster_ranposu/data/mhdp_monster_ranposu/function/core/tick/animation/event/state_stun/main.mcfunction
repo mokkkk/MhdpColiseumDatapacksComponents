@@ -11,7 +11,7 @@
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # スタン中演出
-    execute if entity @s[tag=Mns.State.IsStun] on passengers if entity @s[tag=aj.data] run function mhdp_monster_ranposu:core/tick/animation/event/state_stun/effect_stun with entity @s data.locators.pos_head
+    execute if entity @s[tag=Mns.State.IsStun] run function animated_java_ranposu:ranposu/at_locator {name:"pos_head",command:"function mhdp_monster_ranposu:core/tick/animation/event/state_stun/effect_stun"}
     scoreboard players set @s Mns.General.BlinkTimer 3
     
 # 終了

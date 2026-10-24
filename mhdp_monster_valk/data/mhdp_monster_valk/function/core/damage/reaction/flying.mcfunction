@@ -8,7 +8,7 @@
 # @within function mhdp_monster_valk:core/damage/damage
 
 # 自身の影の位置に合わせる (モデル表示位置と実際の位置を合わせる)
-    execute positioned as @e[type=item_display,tag=aj.valk_aj.locator.shadow] run tp @s ~ ~1 ~ ~ 0
+    function animated_java_valk:valk/as_locator {name:"shadow",command:"tp @n[type=item_display,tag=Mns.Root.Valk] ~ ~1 ~ ~ 0"}
 
 # 墜落アニメーション再生
     function animated_java_valk:valk/animations/lance_damage_flying/tween {duration:1, to_frame: 1}

@@ -14,7 +14,7 @@
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # スタン中演出
-    execute if entity @s[tag=Mns.State.IsStun] on passengers if entity @s[tag=aj.data] run function mhdp_monster_dino:core/tick/animation/event/down_left/effect_stun with entity @s data.locators.pos_head
+    execute if entity @s[tag=Mns.State.IsStun] run function animated_java_dino:dino/at_locator {name:"pos_head",command:"function mhdp_monster_dino:core/tick/animation/event/down_left/effect_stun"}
 
 # 終了
     execute if score @s animated_java_dino.dino.down_left.frame matches 34 run function mhdp_monster_dino:core/tick/animation/event/down_left/end

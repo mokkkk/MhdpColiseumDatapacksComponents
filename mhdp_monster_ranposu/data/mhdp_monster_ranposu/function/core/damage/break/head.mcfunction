@@ -12,8 +12,8 @@
     playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
 
 # モデル変更
-    execute if entity @s[tag=!Mns.State.IsBlink] on passengers if entity @s[tag=aj.ranposu_aj.bone.head_upper] run data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/ranposu/head_upper_break"
-    execute if entity @s[tag=Mns.State.IsBlink] on passengers if entity @s[tag=aj.ranposu_aj.bone.head_upper] run data modify entity @s item.components."minecraft:item_model" set value "minecraft:aj_sub/ranposu/head_upper_break_blink"
+    execute if entity @s[tag=!Mns.State.IsBlink] run function animated_java_ranposu:ranposu/as_node {name:"head_upper",command:"data modify entity @s item.components.\"minecraft:item_model\" set value \"minecraft:aj_sub/ranposu/head_upper_break\""}
+    execute if entity @s[tag=Mns.State.IsBlink] run function animated_java_ranposu:ranposu/as_node {name:"head_upper",command:"data modify entity @s item.components.\"minecraft:item_model\" set value \"minecraft:aj_sub/ranposu/head_upper_break_blink\""}
 
 # トースト表示
     function mhdp_monster_ranposu:core/util/show_toast

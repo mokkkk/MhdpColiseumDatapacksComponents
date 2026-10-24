@@ -28,7 +28,7 @@
 
 # その他演出
     # 怒り中・頭部の演出
-        # execute if entity @s[tag=Mns.State.IsAnger] on passengers if entity @s[tag=aj.data] run function mhdp_monster_ranposu:core/tick/effect_anger with entity @s data.locators.pos_head
+        # execute if entity @s[tag=Mns.State.IsAnger] run function animated_java_ranposu:ranposu/at_locator {name:"pos_head",command:"function mhdp_monster_ranposu:core/tick/effect_anger"}
 
 # 共通tick終了時処理
     function mhdp_monsters:core/super/tick/post_tick
