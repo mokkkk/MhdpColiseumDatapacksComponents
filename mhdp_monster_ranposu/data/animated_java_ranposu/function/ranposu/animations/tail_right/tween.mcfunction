@@ -6,7 +6,7 @@ function animated_java:global/data_manager/read with storage animated_java:temp 
 function animated_java_ranposu:ranposu/animations/pause_all
 tag @s add animated_java_ranposu.ranposu.animation.tail_right.playing
 $scoreboard players set @s aj.tween_duration $(duration)
-$scoreboard players set @s aj.tail_right.frame $(to_frame)
+$scoreboard players set @s animated_java_ranposu.ranposu.tail_right.frame $(to_frame)
 scoreboard players operation #this aj.i = @s aj.tween_duration
 tag @s add aj.transforms_only
 execute at @s run function animated_java_ranposu:ranposu/animations/tail_right/zzz/apply_frame {frame: 0}

@@ -14,6 +14,7 @@
     data modify storage mhdp_core:temp TargetMonsterData set from storage mhdp_core:monster_data MonsterData[{Uid:1003}]
 
 # モデル召喚
+    function animated_java_dino:dino/on_load
     function animated_java_dino:dino/summon {args: {}}
 
 # アニメーション種別を待機に設定

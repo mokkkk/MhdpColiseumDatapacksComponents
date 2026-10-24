@@ -29,3 +29,6 @@
 # 一定時間ごとに行動
     scoreboard players add @s Mns.General.DummyTimer 1
     execute if score @s Mns.General.DummyTimer matches 100.. run function mhdp_monster_karakuri:core/tick/animation/change/main
+
+# # デバッグ用
+#     tellraw @a [{"text": "Mns.General.DummyTimer"},{"score":{"name":"@s","objective":"Mns.General.DummyTimer"}}]

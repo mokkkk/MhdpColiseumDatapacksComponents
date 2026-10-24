@@ -3,12 +3,12 @@
 execute store result storage animated_java:temp args.id int 1 run scoreboard players get @s aj.id
 # Data Manager: Read
 function animated_java:global/data_manager/read with storage animated_java:temp args
+function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.shadow
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_body_0
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_body_1
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_head_0
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_tail_0
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_tail_1
-function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.shadow
-execute unless data storage animated_java:temp {entry:{data:{rig_hash: '07186d72e30c35e1663b2713fef7806af30bccc8127b139ee6bb7630c0eaa66e'}}} run function animated_java:global/remove/outdated_rig
+execute unless data storage animated_java:temp {entry:{data:{rig_hash: 'e5eae1813d1c9bf826a46df7b3b76da5f56c81fe28d1d0a681fe2e72b229e71f'}}} run function animated_java:global/remove/outdated_rig
 function animated_java_ranposu:ranposu/remove/this/zzz/0 with storage animated_java:temp entry.data.uuids_by_name
 function animated_java:global/remove/entity_stack

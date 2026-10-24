@@ -5,7 +5,8 @@
 # @within function 
 
 # モデル召喚
-    function animated_java_dino:dino/summon
+    function animated_java_dino:dino/on_load
+    function animated_java_dino:dino/summon {args: {}}
 
 # アニメーション種別を召喚に設定
     tag @e[type=item_display,tag=Mns.Root.Dino] add Mns.Temp.IsSummonAnimation

@@ -4,5 +4,5 @@ execute store result storage animated_java:temp args.id int 1 run scoreboard pla
 # Data Manager: Read
 function animated_java:global/data_manager/read with storage animated_java:temp args
 data remove storage animated_java:temp args
-$execute store result storage animated_java:temp args.frame int 1 run scoreboard players set @s aj.lance_damage_down_l.frame $(frame)
+$execute store result storage animated_java:temp args.frame int 1 run scoreboard players set @s animated_java_valk.valk.lance_damage_down_l.frame $(frame)
 execute at @s run function animated_java_valk:valk/animations/lance_damage_down_l/zzz/set_frame with storage animated_java:temp args

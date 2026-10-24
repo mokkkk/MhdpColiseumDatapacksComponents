@@ -2,8 +2,9 @@
 scoreboard players remove @s aj.tween_duration 1
 execute if score @s aj.tween_duration matches 1.. run return 1
 execute if score @s aj.tween_duration matches 0 on passengers run data modify entity @s interpolation_duration set value 1
+execute if score @s aj.tween_duration matches ..0 if entity @s[tag=aj.pause_after_tween] run return run function animated_java_valk:valk/animations/shoot_interrupt_vertical_r/zzz/pause_after_tween
 data remove storage animated_java:temp args
-execute store result storage animated_java:temp args.frame int 1 run scoreboard players get @s aj.shoot_interrupt_vertical_r.frame
+execute store result storage animated_java:temp args.frame int 1 run scoreboard players get @s animated_java_valk.valk.shoot_interrupt_vertical_r.frame
 function animated_java_valk:valk/animations/shoot_interrupt_vertical_r/zzz/apply_frame with storage animated_java:temp args
-execute if score @s aj.shoot_interrupt_vertical_r.frame matches 123.. run return run function animated_java_valk:valk/animations/shoot_interrupt_vertical_r/pause
-scoreboard players add @s aj.shoot_interrupt_vertical_r.frame 1
+execute if score @s animated_java_valk.valk.shoot_interrupt_vertical_r.frame matches 123.. run return run function animated_java_valk:valk/animations/shoot_interrupt_vertical_r/pause
+scoreboard players add @s animated_java_valk.valk.shoot_interrupt_vertical_r.frame 1

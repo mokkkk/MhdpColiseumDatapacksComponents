@@ -3,8 +3,8 @@
 execute store result storage animated_java:temp args.id int 1 run scoreboard players get @s aj.id
 # Data Manager: Read
 function animated_java:global/data_manager/read with storage animated_java:temp args
-execute if score @s aj.step_l_to_jumptail_r.frame matches 38.. run scoreboard players set @s aj.step_l_to_jumptail_r.frame 1
+execute if score @s animated_java_dino.dino.step_l_to_jumptail_r.frame matches 38.. run scoreboard players set @s animated_java_dino.dino.step_l_to_jumptail_r.frame 1
 data remove storage animated_java:temp args
-execute store result storage animated_java:temp args.frame int 1 run scoreboard players get @s aj.step_l_to_jumptail_r.frame
+execute store result storage animated_java:temp args.frame int 1 run scoreboard players get @s animated_java_dino.dino.step_l_to_jumptail_r.frame
 execute at @s run function animated_java_dino:dino/animations/step_l_to_jumptail_r/zzz/apply_frame with storage animated_java:temp args
-scoreboard players add @s aj.step_l_to_jumptail_r.frame 1
+scoreboard players add @s animated_java_dino.dino.step_l_to_jumptail_r.frame 1

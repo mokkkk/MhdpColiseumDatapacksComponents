@@ -6,6 +6,6 @@ function animated_java:global/data_manager/read with storage animated_java:temp 
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.chair
 data modify storage animated_java:temp args.uuid set from storage animated_java:temp entry.data.uuids_by_name.interaction
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp args
-execute unless data storage animated_java:temp {entry:{data:{rig_hash: 'ee8277da799e1088f3be9a03d1ec359064dc7d54c51ae7e71a6026bdbdc2fe9f'}}} run function animated_java:global/remove/outdated_rig
+execute unless data storage animated_java:temp {entry:{data:{rig_hash: 'a2f2192f589c6497e2dbb453fd2d86ad1fa744214699eb693b6e5f0b708bb20c'}}} run function animated_java:global/remove/outdated_rig
 function animated_java_nikuyaki:nikuyaki/remove/this/zzz/0 with storage animated_java:temp entry.data.uuids_by_name
 function animated_java:global/remove/entity_stack

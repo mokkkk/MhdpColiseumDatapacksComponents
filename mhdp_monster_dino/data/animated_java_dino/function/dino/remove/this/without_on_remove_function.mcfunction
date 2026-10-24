@@ -3,6 +3,7 @@
 execute store result storage animated_java:temp args.id int 1 run scoreboard players get @s aj.id
 # Data Manager: Read
 function animated_java:global/data_manager/read with storage animated_java:temp args
+function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.shadow
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_body_1
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_body_0
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_neck_1
@@ -14,7 +15,6 @@ function animated_java:global/remove/entity_stack_by_uuid with storage animated_
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_tail_1
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_tail_3
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_tail_4
-function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.shadow
-execute unless data storage animated_java:temp {entry:{data:{rig_hash: '00cc6d746501ed22d713afe324ee783e7d066a99a9c9a5ce86708b3502a3ca85'}}} run function animated_java:global/remove/outdated_rig
+execute unless data storage animated_java:temp {entry:{data:{rig_hash: '0d958626e51299ec66e5a0f0074fd0dcabee502345f72586e1953b0e7bf0ec13'}}} run function animated_java:global/remove/outdated_rig
 function animated_java_dino:dino/remove/this/zzz/0 with storage animated_java:temp entry.data.uuids_by_name
 function animated_java:global/remove/entity_stack

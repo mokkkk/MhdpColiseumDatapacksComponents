@@ -82,3 +82,4 @@ tag @s remove animated_java_dino.dino.animation.roundforce_interrupt.playing
 tag @s remove animated_java_dino.dino.animation.idle_short.playing
 tag @s remove animated_java_dino.dino.animation.polish.playing
 tag @s remove animated_java_dino.dino.animation.death_bak.playing
+tag @s remove aj.pause_after_tween

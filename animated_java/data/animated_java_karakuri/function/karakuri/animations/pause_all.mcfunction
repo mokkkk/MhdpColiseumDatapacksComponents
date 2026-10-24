@@ -2,3 +2,4 @@
 tag @s remove animated_java_karakuri.karakuri.animation.idle.playing
 tag @s remove animated_java_karakuri.karakuri.animation.damage_counter.playing
 tag @s remove animated_java_karakuri.karakuri.animation.bite.playing
+tag @s remove aj.pause_after_tween

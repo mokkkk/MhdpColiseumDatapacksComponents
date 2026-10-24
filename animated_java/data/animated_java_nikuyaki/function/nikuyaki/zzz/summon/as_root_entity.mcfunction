@@ -12,7 +12,7 @@ function animated_java:global/data_manager/read with storage animated_java:temp 
 data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.root_uuid set from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.blueprint_id set value "animated_java_nikuyaki:nikuyaki"
-data modify storage animated_java:temp entry.data.rig_hash set value "ee8277da799e1088f3be9a03d1ec359064dc7d54c51ae7e71a6026bdbdc2fe9f"
+data modify storage animated_java:temp entry.data.rig_hash set value "a2f2192f589c6497e2dbb453fd2d86ad1fa744214699eb693b6e5f0b708bb20c"
 tp @s ~ ~ ~ ~ ~
 summon minecraft:interaction ^0 ^0.4375 ^0 { Tags:["Itm.Root","Itm.Root.Nikuyaki","Itm.Root.Nikuyaki.Start","Other.Shot","aj.global.entity","aj.global.interaction","aj.global.node","aj.global.node.interaction","aj.global.root.child","aj.global.root.child.interaction","aj.new","animated_java_nikuyaki.nikuyaki.entity","animated_java_nikuyaki.nikuyaki.interaction","animated_java_nikuyaki.nikuyaki.interaction.interaction","animated_java_nikuyaki.nikuyaki.node","animated_java_nikuyaki.nikuyaki.node.interaction"], response: true, width: 0.6875f, height: 0.6875f, }
 execute as @n[ type=minecraft:interaction, tag=animated_java_nikuyaki.nikuyaki.interaction.interaction, tag=aj.new, distance=..1 ] run function animated_java_nikuyaki:nikuyaki/zzz/summon/as_interaction/interaction

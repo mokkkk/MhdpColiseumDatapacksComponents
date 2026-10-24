@@ -3,6 +3,7 @@
 execute store result storage animated_java:temp args.id int 1 run scoreboard players get @s aj.id
 # Data Manager: Read
 function animated_java:global/data_manager/read with storage animated_java:temp args
+function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.shadow
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_body_1
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_body_0
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_neck_0
@@ -14,7 +15,6 @@ function animated_java:global/remove/entity_stack_by_uuid with storage animated_
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_tail_0
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_tail_1
 function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.hitbox_tail_2
-function animated_java:global/remove/entity_stack_by_uuid with storage animated_java:temp entry.data.locators.shadow
-execute unless data storage animated_java:temp {entry:{data:{rig_hash: '49fe52250a819a4e786d7c7889d4d043a8e1d59ada0a0eb5a7f6cbad2f1d408d'}}} run function animated_java:global/remove/outdated_rig
+execute unless data storage animated_java:temp {entry:{data:{rig_hash: 'dd27a6b6ea529ff8f6fca0b29701190820c7022b14e85a2652b84eb4a3f0bd6b'}}} run function animated_java:global/remove/outdated_rig
 function animated_java_karakuri:karakuri/remove/this/zzz/0 with storage animated_java:temp entry.data.uuids_by_name
 function animated_java:global/remove/entity_stack

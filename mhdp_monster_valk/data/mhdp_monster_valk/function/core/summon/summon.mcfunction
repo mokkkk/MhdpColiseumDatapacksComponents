@@ -14,6 +14,7 @@
     data modify storage mhdp_core:temp TargetMonsterData set from storage mhdp_core:monster_data MonsterData[{Uid:1004}]
 
 # モデル召喚
+    function animated_java_valk:valk/on_load
     function animated_java_valk:valk/summon {args: {}}
 
 # アニメーション種別を待機に設定

@@ -6,6 +6,7 @@
     tp @s ~ ~ ~ ~ ~
 
 # モデル召喚
+    function animated_java_nikuyaki:nikuyaki/on_load
     function animated_java_nikuyaki:nikuyaki/summon {args: {animation: "baking", start_animation: true}}
 
 # 自身にRideさせる

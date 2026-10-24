@@ -6,7 +6,7 @@ function animated_java:global/data_manager/read with storage animated_java:temp 
 function animated_java_valk:valk/animations/pause_all
 tag @s add animated_java_valk.valk.animation.death_flying.playing
 $scoreboard players set @s aj.tween_duration $(duration)
-$scoreboard players set @s aj.death_flying.frame $(to_frame)
+$scoreboard players set @s animated_java_valk.valk.death_flying.frame $(to_frame)
 scoreboard players operation #this aj.i = @s aj.tween_duration
 tag @s add aj.transforms_only
 execute at @s run function animated_java_valk:valk/animations/death_flying/zzz/apply_frame {frame: 0}

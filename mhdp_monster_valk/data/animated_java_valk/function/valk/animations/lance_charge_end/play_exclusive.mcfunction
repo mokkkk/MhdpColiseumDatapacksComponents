@@ -5,7 +5,7 @@ execute store result storage animated_java:temp args.id int 1 run scoreboard pla
 function animated_java:global/data_manager/read with storage animated_java:temp args
 function animated_java_valk:valk/animations/pause_all
 tag @s add animated_java_valk.valk.animation.lance_charge_end.playing
-scoreboard players set @s aj.lance_charge_end.frame 0
+scoreboard players set @s animated_java_valk.valk.lance_charge_end.frame 0
 tag @s add aj.transforms_only
 execute at @s run function animated_java_valk:valk/animations/lance_charge_end/zzz/set_frame {frame: 0}
 tag @s remove aj.transforms_only

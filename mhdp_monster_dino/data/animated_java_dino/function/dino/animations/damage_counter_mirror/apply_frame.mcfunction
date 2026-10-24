@@ -4,5 +4,5 @@ execute store result storage animated_java:temp args.id int 1 run scoreboard pla
 # Data Manager: Read
 function animated_java:global/data_manager/read with storage animated_java:temp args
 data remove storage animated_java:temp args
-$execute store result storage animated_java:temp args.frame int 1 run scoreboard players set @s aj.damage_counter_mirror.frame $(frame)
+$execute store result storage animated_java:temp args.frame int 1 run scoreboard players set @s animated_java_dino.dino.damage_counter_mirror.frame $(frame)
 execute at @s run function animated_java_dino:dino/animations/damage_counter_mirror/zzz/apply_frame with storage animated_java:temp args

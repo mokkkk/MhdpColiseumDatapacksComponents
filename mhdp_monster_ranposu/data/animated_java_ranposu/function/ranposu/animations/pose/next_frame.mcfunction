@@ -3,8 +3,8 @@
 execute store result storage animated_java:temp args.id int 1 run scoreboard players get @s aj.id
 # Data Manager: Read
 function animated_java:global/data_manager/read with storage animated_java:temp args
-execute if score @s aj.pose.frame matches 2.. run scoreboard players set @s aj.pose.frame 1
+execute if score @s animated_java_ranposu.ranposu.pose.frame matches 2.. run scoreboard players set @s animated_java_ranposu.ranposu.pose.frame 1
 data remove storage animated_java:temp args
-execute store result storage animated_java:temp args.frame int 1 run scoreboard players get @s aj.pose.frame
+execute store result storage animated_java:temp args.frame int 1 run scoreboard players get @s animated_java_ranposu.ranposu.pose.frame
 execute at @s run function animated_java_ranposu:ranposu/animations/pose/zzz/apply_frame with storage animated_java:temp args
-scoreboard players add @s aj.pose.frame 1
+scoreboard players add @s animated_java_ranposu.ranposu.pose.frame 1

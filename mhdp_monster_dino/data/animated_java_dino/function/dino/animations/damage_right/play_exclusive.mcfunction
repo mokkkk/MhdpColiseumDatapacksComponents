@@ -5,7 +5,7 @@ execute store result storage animated_java:temp args.id int 1 run scoreboard pla
 function animated_java:global/data_manager/read with storage animated_java:temp args
 function animated_java_dino:dino/animations/pause_all
 tag @s add animated_java_dino.dino.animation.damage_right.playing
-scoreboard players set @s aj.damage_right.frame 0
+scoreboard players set @s animated_java_dino.dino.damage_right.frame 0
 tag @s add aj.transforms_only
 execute at @s run function animated_java_dino:dino/animations/damage_right/zzz/set_frame {frame: 0}
 tag @s remove aj.transforms_only

@@ -3,8 +3,8 @@
 execute store result storage animated_java:temp args.id int 1 run scoreboard players get @s aj.id
 # Data Manager: Read
 function animated_java:global/data_manager/read with storage animated_java:temp args
-execute if score @s aj.baking.frame matches 48.. run scoreboard players set @s aj.baking.frame 1
+execute if score @s animated_java_nikuyaki.nikuyaki.baking.frame matches 48.. run scoreboard players set @s animated_java_nikuyaki.nikuyaki.baking.frame 1
 data remove storage animated_java:temp args
-execute store result storage animated_java:temp args.frame int 1 run scoreboard players get @s aj.baking.frame
+execute store result storage animated_java:temp args.frame int 1 run scoreboard players get @s animated_java_nikuyaki.nikuyaki.baking.frame
 execute at @s run function animated_java_nikuyaki:nikuyaki/animations/baking/zzz/apply_frame with storage animated_java:temp args
-scoreboard players add @s aj.baking.frame 1
+scoreboard players add @s animated_java_nikuyaki.nikuyaki.baking.frame 1

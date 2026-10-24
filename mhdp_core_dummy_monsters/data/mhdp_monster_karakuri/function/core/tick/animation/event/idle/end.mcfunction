@@ -6,3 +6,5 @@
 
 # 行動終了
     # function mhdp_monster_karakuri:core/tick/animation/change/main
+
+say end

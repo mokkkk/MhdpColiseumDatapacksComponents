@@ -5,7 +5,7 @@ execute store result storage animated_java:temp args.id int 1 run scoreboard pla
 function animated_java:global/data_manager/read with storage animated_java:temp args
 function animated_java_ranposu:ranposu/animations/pause_all
 tag @s add animated_java_ranposu.ranposu.animation.bite.playing
-scoreboard players set @s aj.bite.frame 0
+scoreboard players set @s animated_java_ranposu.ranposu.bite.frame 0
 tag @s add aj.transforms_only
 execute at @s run function animated_java_ranposu:ranposu/animations/bite/zzz/set_frame {frame: 0}
 tag @s remove aj.transforms_only

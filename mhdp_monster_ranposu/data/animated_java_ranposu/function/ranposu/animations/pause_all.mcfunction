@@ -39,3 +39,4 @@ tag @s remove animated_java_ranposu.ranposu.animation.death_flying.playing
 tag @s remove animated_java_ranposu.ranposu.animation.interrupt_object.playing
 tag @s remove animated_java_ranposu.ranposu.animation.interrupt_object_tackle.playing
 tag @s remove animated_java_ranposu.ranposu.animation.climb_object.playing
+tag @s remove aj.pause_after_tween
