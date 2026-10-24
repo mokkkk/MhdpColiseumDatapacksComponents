@@ -53,19 +53,37 @@ function animated_java_<name>:<name>/at_locator {name:"pos_xxx",command:"functio
 
 > 注意: `dino` / `ranposu` の既存コードには旧記法が残っている箇所がある（`effect_stun` など）。参考にしつつも、ロケータ参照は新記法へ直すこと。
 
+### アニメーションのフレームスコアは `animated_java_<name>.<name>.<anim>.frame` を使う
+
+アニメーションイベント（`core/tick/animation/event/*/main.mcfunction` 等）でフレームを参照する際、旧スコア名 `aj.<anim>.frame` は現行 AJ では存在しない。新スコア名を使うこと。
+
+```
+# NG
+execute if score @s aj.bite.frame matches 41 run ...
+
+# OK
+execute if score @s animated_java_karakuri.karakuri.bite.frame matches 41 run ...
+```
+
+- `<name>` はモデル名（小文字、例: `karakuri`）、`<anim>` はアニメーション名。
+- 旧名のままだとエラーにならず条件が常に偽になり、効果音・攻撃判定・end 処理が発火しないだけなので気付きにくい。
+- 実例: `mhdp_monster_karakuri` の `core/tick/animation/event/bite/main.mcfunction`。
+
+> 注意: `reus` は旧形式 AJ（`animated_java:reus_aj`）のため、旧スコア名 `aj.<anim>.frame` のまま（今後移行予定）。参考にする場合もスコア名は新形式へ直すこと。
+
 ### 軸合わせ（ターゲット方向への回転）は `alignment_start.m` / `alignment` を使う
 
 旧記法（個別の `turn_start`/`turn_start_adjust.mcfunction` ファイル + `function mhdp_monsters:core/util/other/turn_to_target_rotate`）は使わず、`mhdp_monster_dino` 準拠の以下の形式で `main.mcfunction` に直接インラインで書く。
 
 ```
 # 軸合わせ開始（frame単発）
-execute if score @s aj.<anim>.frame matches <startFrame> run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.<Upper>",Tick:<YY>,MaxRotation:<ZZZ>}
+execute if score @s animated_java_<name>.<name>.<anim>.frame matches <startFrame> run function mhdp_monsters:core/util/tick/event/alignment_start.m {TargetTag:"Mns.Target.<Upper>",Tick:<YY>,MaxRotation:<ZZZ>}
 
 # 軸合わせ実行（frame範囲、at @s 必須）
-execute if score @s aj.<anim>.frame matches <range> at @s run function mhdp_monsters:core/util/tick/event/alignment
+execute if score @s animated_java_<name>.<name>.<anim>.frame matches <range> at @s run function mhdp_monsters:core/util/tick/event/alignment
 ```
 
-- `<Upper>` はモンスター名（例: `Valk`）。
+- `<Upper>` はモンスター名（例: `Valk`）、`<name>` はモデル名の小文字（例: `valk`）。
 - `<YY>`（Tick）は旧 `turn_start` 系ファイル内の `scoreboard players set #mhdp_temp_rotate_tick MhdpCore <値>` をそのまま流用する。弱め調整版（旧 `turn_start_adjust`）があればその値を別途 `alignment_start.m` 呼び出しとして残す。
 - `<ZZZ>`（MaxRotation）は基本的に `180` とする。
 - `alignment_start.m` の呼び出しには `at @s` を付けない。範囲呼び出しの `alignment` には `at @s` を付ける（dino の実例に厳密に合わせる）。

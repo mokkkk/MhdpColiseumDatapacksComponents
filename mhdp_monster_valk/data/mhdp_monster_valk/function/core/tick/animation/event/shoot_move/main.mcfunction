@@ -12,8 +12,8 @@
     execute at @s run tp @s ^ ^ ^1
 
 # 効果音
-    execute if score @s aj.shoot_move.frame matches 11 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    execute if score @s aj.shoot_move.frame matches 14 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s animated_java_valk.valk.shoot_move.frame matches 11 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s animated_java_valk.valk.shoot_move.frame matches 14 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     particle block{block_state:"minecraft:sand"} ^ ^ ^ 1 0.1 1 0 2
 
 # 接地

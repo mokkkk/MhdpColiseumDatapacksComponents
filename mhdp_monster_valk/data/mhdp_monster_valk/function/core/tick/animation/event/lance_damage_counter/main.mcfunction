@@ -8,4 +8,4 @@
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
-    execute if score @s aj.lance_damage_counter.frame matches 59 run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter/end
+    execute if score @s animated_java_valk.valk.lance_damage_counter.frame matches 59 run function mhdp_monster_valk:core/tick/animation/event/lance_damage_counter/end

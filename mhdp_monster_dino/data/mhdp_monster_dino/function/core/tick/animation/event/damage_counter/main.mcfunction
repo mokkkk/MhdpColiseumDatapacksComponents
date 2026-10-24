@@ -8,4 +8,4 @@
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
-    execute if score @s aj.damage_counter.frame matches 59 run function mhdp_monster_dino:core/tick/animation/event/damage_counter/end
+    execute if score @s animated_java_dino.dino.damage_counter.frame matches 59 run function mhdp_monster_dino:core/tick/animation/event/damage_counter/end

@@ -5,17 +5,17 @@
 # @within function mhdp_monster_valk:core/tick/animation/event/tick
 
 # 効果音
-    execute if score @s aj.shoot_to_lance.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s aj.shoot_to_lance.frame matches 8 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
-    execute if score @s aj.shoot_to_lance.frame matches 8 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
-    execute if score @s aj.shoot_to_lance.frame matches 8 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
-    execute if score @s aj.shoot_to_lance.frame matches 8 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.7
+    execute if score @s animated_java_valk.valk.shoot_to_lance.frame matches 2 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s animated_java_valk.valk.shoot_to_lance.frame matches 8 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
+    execute if score @s animated_java_valk.valk.shoot_to_lance.frame matches 8 run playsound item.axe.scrape master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
+    execute if score @s animated_java_valk.valk.shoot_to_lance.frame matches 8 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.8
+    execute if score @s animated_java_valk.valk.shoot_to_lance.frame matches 8 run playsound item.trident.return master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1.7
 
 # 接地
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # 状態変更
-    execute if score @s aj.shoot_to_lance.frame matches 2 run function mhdp_monster_valk:core/util/phase/to_lance
+    execute if score @s animated_java_valk.valk.shoot_to_lance.frame matches 2 run function mhdp_monster_valk:core/util/phase/to_lance
 
 # 終了
-    execute if score @s aj.shoot_to_lance.frame matches 30 run function mhdp_monster_valk:core/tick/animation/event/shoot_to_lance/end
+    execute if score @s animated_java_valk.valk.shoot_to_lance.frame matches 30 run function mhdp_monster_valk:core/tick/animation/event/shoot_to_lance/end

@@ -5,7 +5,7 @@
 # @within function mhdp_monster_dino:core/tick/animation/event/tick
 
 # オブジェクト探知開始
-    execute if score @s aj.move.frame matches 2 run tag @s add Mns.State.IsSearchObject
+    execute if score @s animated_java_dino.dino.move.frame matches 2 run tag @s add Mns.State.IsSearchObject
 
 # 軸合わせ
     tag @n[tag=Mns.Target.Dino] add Temp.Rotate.Target
@@ -15,8 +15,8 @@
     execute at @s run tp @s ^ ^ ^0.6
 
 # 効果音
-    execute if score @s aj.move.frame matches 12 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
-    execute if score @s aj.move.frame matches 24 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s animated_java_dino.dino.move.frame matches 12 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    execute if score @s animated_java_dino.dino.move.frame matches 24 run playsound entity.hoglin.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
     particle block{block_state:"minecraft:sand"} ^ ^0.5 ^ 0.7 0.1 0.7 0 1
 
 # 接地

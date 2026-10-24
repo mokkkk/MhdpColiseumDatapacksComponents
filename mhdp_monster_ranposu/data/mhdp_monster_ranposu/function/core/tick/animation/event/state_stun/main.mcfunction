@@ -5,7 +5,7 @@
 # @within function mhdp_monster_ranposu:core/tick/animation/event/tick
 
 # 効果音
-    execute if score @s aj.state_stun.frame matches 4 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s animated_java_ranposu.ranposu.state_stun.frame matches 4 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 接地
     function mhdp_monsters:core/util/tick/move/check_landing
@@ -15,4 +15,4 @@
     scoreboard players set @s Mns.General.BlinkTimer 3
     
 # 終了
-    execute if score @s aj.state_stun.frame matches 34 run function mhdp_monster_ranposu:core/tick/animation/event/state_stun/end
+    execute if score @s animated_java_ranposu.ranposu.state_stun.frame matches 34 run function mhdp_monster_ranposu:core/tick/animation/event/state_stun/end

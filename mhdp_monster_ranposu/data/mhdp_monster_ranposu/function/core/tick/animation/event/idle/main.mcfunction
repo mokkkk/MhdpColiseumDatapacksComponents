@@ -8,4 +8,4 @@
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
-    execute if score @s aj.idle.frame matches 59 run function mhdp_monster_ranposu:core/tick/animation/event/idle/end
+    execute if score @s animated_java_ranposu.ranposu.idle.frame matches 59 run function mhdp_monster_ranposu:core/tick/animation/event/idle/end

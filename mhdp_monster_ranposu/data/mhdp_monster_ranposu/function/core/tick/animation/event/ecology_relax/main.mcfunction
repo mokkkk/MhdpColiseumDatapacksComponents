@@ -8,8 +8,8 @@
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # 効果音
-    execute if score @s aj.ecology_relax.frame matches 19 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
-    execute if score @s aj.ecology_relax.frame matches 56 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s animated_java_ranposu.ranposu.ecology_relax.frame matches 19 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
+    execute if score @s animated_java_ranposu.ranposu.ecology_relax.frame matches 56 run playsound block.grass.step master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 1
 
 # 終了
-    execute if score @s aj.ecology_relax.frame matches 72 run function mhdp_monster_ranposu:core/tick/animation/event/ecology_relax/end
+    execute if score @s animated_java_ranposu.ranposu.ecology_relax.frame matches 72 run function mhdp_monster_ranposu:core/tick/animation/event/ecology_relax/end

@@ -8,4 +8,4 @@
     function mhdp_monsters:core/util/tick/move/check_landing
 
 # 終了
-    execute if score @s aj.idle.frame matches 59 run function mhdp_monster_dino:core/tick/animation/event/idle/end
+    execute if score @s animated_java_dino.dino.idle.frame matches 59 run function mhdp_monster_dino:core/tick/animation/event/idle/end
