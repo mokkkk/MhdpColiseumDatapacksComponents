@@ -12,7 +12,7 @@ function animated_java:global/data_manager/read with storage animated_java:temp 
 data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.root_uuid set from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.blueprint_id set value "animated_java_reus:reus"
-data modify storage animated_java:temp entry.data.rig_hash set value "90a4a0df6bab069fced8b46c5d2a4beaaea6c6c50f4f1272213152c1e8189536"
+data modify storage animated_java:temp entry.data.rig_hash set value "a54f09403b98e184f66ae33f1443f6cffcdca0f46276b7d0f064910de408450f"
 tp @s ~ ~ ~ ~ ~
 execute on passengers if entity @s[tag=animated_java_reus.reus.node.body_1] run function animated_java_reus:reus/zzz/summon/as_node/body_1
 data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out

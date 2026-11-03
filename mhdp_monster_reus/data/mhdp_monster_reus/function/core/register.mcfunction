@@ -1,0 +1,112 @@
+#> mhdp_monster_reus:core/register
+#
+# モンスターデータの登録を行う
+#
+# @within function mhdp_monster_reus:load
+# @within function mhdp_monster_reus:core/summon/*
+# @within function mhdp_monster_reus:core/debug/interrupt
+
+## 火竜
+
+# scoreboard定義
+    # 頭部位耐久値
+        scoreboard objectives add Mns.Reus.Head.Damage dummy
+        scoreboard objectives add Mns.Reus.Head.Damage.Max dummy
+    # 胴部位耐久値
+        scoreboard objectives add Mns.Reus.Body.Damage dummy
+        scoreboard objectives add Mns.Reus.Body.Damage.Max dummy
+    # 尻尾部位耐久値
+        scoreboard objectives add Mns.Reus.Tail.Damage dummy
+        scoreboard objectives add Mns.Reus.Tail.Damage.Max dummy
+    # 右脚部位耐久値
+        scoreboard objectives add Mns.Reus.LegR.Damage dummy
+        scoreboard objectives add Mns.Reus.LegR.Damage.Max dummy
+    # 左脚部位耐久値
+        scoreboard objectives add Mns.Reus.LegL.Damage dummy
+        scoreboard objectives add Mns.Reus.LegL.Damage.Max dummy
+    # 怯み回数
+        # 頭
+            scoreboard objectives add Mns.Reus.Head.Damage.Count dummy
+        # 胴
+            scoreboard objectives add Mns.Reus.Body.Damage.Count dummy
+        # 尻尾
+            scoreboard objectives add Mns.Reus.Tail.Damage.Count dummy
+        # 右脚
+            scoreboard objectives add Mns.Reus.LegR.Damage.Count dummy
+        # 左脚
+            scoreboard objectives add Mns.Reus.LegL.Damage.Count dummy
+# 警戒値
+    scoreboard objectives add Mns.Reus.Caution dummy
+# 発見値
+    scoreboard objectives add Mns.Reus.Search dummy
+# ヘイト
+    scoreboard objectives add Mns.Reus.Hate dummy
+
+# メインデータ
+    execute if data storage mhdp_core:monster_data MonsterData[{Uid:1002}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:1002}]
+    data modify storage mhdp_core:monster_data MonsterData append value {\
+        Uid:1002,\
+        Icon:"uE012",\
+        Name:"reus",\
+        UpperName:"Reus",\
+        NameId:"monster.rathalos.name",\
+        ShowName:{"translate":"monster.rathalos.name"},\
+        LootTable:"mhdp_items:materials/reus/random_all",\
+        ShowHp:true,\
+        Hp:11000,\
+        StunDamage:200,\
+        TireDamage:300,\
+        AngerDamagePer:10,\
+        AngerTimer:60,\
+        AngerAttackMult:115,\
+        AngerSpeed:9,\
+        ParalysisDamage:500,\
+        ParalysisTimer:10,\
+        PoisonDamage:400,\
+        PoisonTimer:17,\
+        PoisonEffectDamage:60,\
+        BombDamage:400,\
+        BombEffectDamage:200,\
+        FlashBombEnable:true,\
+        SoundBombEnable:false,\
+        ParalyseTrapEnable:true,\
+        ParalyseTrapTimer:10,\
+        HallTrapEnable:true,\
+        HallTrapTimer:15,\
+        CounterDamage:75,\
+        HeadPartDamage:12,\
+        BodyPartDamage:15,\
+        TailPartDamage:15,\
+        LegRPartDamage:10,\
+        LegLPartDamage:10\
+    }
+
+# 肉質データ
+# 切断,打撃,弾,火,水,雷,氷,龍
+# 0:頭, 1:胴, 2:尻尾, 3:右脚, 4:左脚
+    execute if data storage mhdp_core:monster_data DefenceData[{Uid:1002}] run data remove storage mhdp_core:monster_data DefenceData[{Uid:1002}]
+    data modify storage mhdp_core:monster_data DefenceData append value {\
+        Uid:1002,\
+        Defences:[\
+            [70,75,62,0,15,25,10,30],\
+            [35,40,25,0,5,15,10,15],\
+            [50,40,35,0,5,20,10,25],\
+            [40,42,35,0,8,12,10,17],\
+            [40,42,35,0,8,12,10,17]\
+        ]\
+    }
+
+# 攻撃力データ
+    execute if data storage mhdp_core:monster_data AttackData[{Uid:1002}] run data remove storage mhdp_core:monster_data AttackData[{Uid:1002}]
+    data modify storage mhdp_core:monster_data AttackData append value {\
+        Uid:1002,\
+        Attacks:[]\
+    }
+
+# 技ごとに以下の形式で append する (技を追加したら追記)
+#   data modify storage mhdp_core:monster_data AttackData[{Uid:1002}].Attacks append value {\
+#       Name:"<技名>",AttackPart:"<head|body|tail|none>",VectorType:"<Normal|Radial>",\
+#       DamageValue:<0.0>f,ObjectDamageValue:<0>,GuardValue:<0>,ElementType:<0>,ElementMultiply:<0>,\
+#       KnockbackStrength:<0>,IsLaunch:<false>,LaunchAngle:<0>,\
+#       IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
+#   }

@@ -135,10 +135,10 @@ A: 含める。上記ファイルを作らないと正常に動作しないた�
 - 💾 commit 推奨: 「共通テンプレート追加」
 
 ### Step 2 — テンプレート展開（reus の骨格生成）
-- [ ] `mhdp_monster_reus/pack.mcmeta`、`data/mhdp_monster_reus/` を区分 A / B のテンプレートから生成
-- [ ] AJ エクスポート成果物 `data/animated_java_reus/` の配置確認（→ Q-04。**中身は Read / Grep しない**）
+- [x] `mhdp_monster_reus/pack.mcmeta`、`data/mhdp_monster_reus/` を区分 A / B のテンプレートから生成
+- [x] AJ エクスポート成果物 `data/animated_java_reus/` の配置確認（→ Q-04。**中身は Read / Grep しない**）
 - [ ] この時点ではアニメ未実装でも、召喚 → 待機ループ → 発見 → 戦闘フェーズ遷移 → remove が通る状態を目標にする
-- [ ] `grep -rnP '\S  +\S'`（コメント行除外）でトークン間の連続スペースを確認
+- [x] `grep -rnP '\S  +\S'`（コメント行除外）でトークン間の連続スペースを確認
 - 💾 commit 推奨: 「reus 骨格生成」
 
 ### Step 3 — reus 固有のデータ・被弾処理（spec の Stage 1〜4 相当）

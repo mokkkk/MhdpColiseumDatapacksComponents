@@ -1,0 +1,16 @@
+#> mhdp_monster_reus:core/tick/animation/change/play/relax_walk
+#
+# アニメーション変更処理 非発見時の歩き
+#
+# @within function mhdp_monster_reus:core/tick/animation/change/on_relax/main
+
+# 歩数決定
+    execute store result score @s Mns.General.WalkCount run random value 3..5
+
+# 回転角度決定
+    execute store result score @s Mns.Temp.RotateValue run random value -15..15
+    # エリア中心から遠い場合、Uターン
+        function mhdp_monsters:core/util/other/walk_turn_to_center.m with storage mhdp_core:temp MonsterTemp.CurrentArea
+
+# 再生アニメーション決定
+    tag @s add Anim.Walk

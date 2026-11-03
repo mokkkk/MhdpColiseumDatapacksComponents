@@ -75,24 +75,29 @@
 
 ### 5.1 共通ファイルが参照するアニメーション（Q-10）
 
-| 用途 | アニメ名 |
-|---|---|
-| 非戦闘待機 | `idle_relax` |
-| 戦闘待機 | `idle` |
-| 非戦闘歩き | `walk_relax` |
-| 生態行動 | `ecology_relax_short` / `ecology_relax_long`（dino と同じ） |
-| 警戒（探索） | `search` |
-| 発見時の咆哮 | `land_voice` |
-| 怒り移行 | `land_anger` |
-| 旋回 左 / 右 | `land_turn_l` / `land_turn_r` |
-| 怯み | dino と同じ（`damage_head`、`damage_left` / `damage_right` など） |
-| 相殺怯み | dino と同じ（`damage_counter_*_start`） |
-| ダウン | dino と同じ（`damage_down_left` / `damage_down_right`） |
-| 麻痺 | 未確認（dino には専用アニメ無し。ranposu = `state_paralysis_start`、valk = `state_paralysis`） |
-| 討伐 / 飛行中の討伐 | `death` / `death_flying` |
-| 乱入登場 | 無し（待機アニメで初期化。valk 方式） |
+2026-11-03 の仮 AJ 出力に合わせて更新。**命名は AJ 側を正とする**。「AJ」列が「未出力」のものは、呼び出し行を `# TODO(AJ未出力: <anim>)` でコメントアウトしてある。アニメを追加したら、その行のコメントを外す（名前が想定と違えば行も直す）。
 
-> AJ 未エクスポートのため、上記は**想定名**。エクスポート後に名前が違えば指摘してもらう。
+| 用途 | アニメ名 | AJ |
+|---|---|---|
+| 非戦闘待機 | `idle_relax` | あり |
+| 戦闘待機 | `land_idle` | あり |
+| 非戦闘歩き | `walk_relax` | あり |
+| 生態行動 | `ecology_relax` | あり |
+| 生態行動（長） | `ecology_relax_long`（想定） | 未出力 |
+| 警戒（探索） | `search`（想定） | 未出力 |
+| 発見時の咆哮 | `land_voice` | あり |
+| 怒り移行 | `land_anger`（想定） | 未出力 |
+| 旋回 左 / 右 | `land_turn_left` / `land_turn_right`（右は想定） | 左のみあり |
+| 部位の怯み | `damage_head` / `damage_body` / `damage_tail` / `damage_leg_r` / `damage_leg_l`（想定） | 未出力 |
+| 不意打ちの怯み（側面） | `damage_left` / `damage_right`（想定） | 未出力 |
+| 相殺怯み | `damage_counter_start`（想定） | 未出力 |
+| ダウン（スタン） | `damage_down_left` / `damage_down_right`（想定） | 未出力 |
+| 麻痺 | `state_paralysis`（想定） | 未出力 |
+| 討伐 | `death`（想定） | 未出力 |
+| 乱入登場 | 無し（待機アニメで初期化。valk 方式） | — |
+
+- 飛行（`flying_*` アニメ）はアニメーション関連としてユーザーが手動で実装する。骨組みには含めない。
+- ロケータは未設定。怒り演出（`pos_head`）の呼び出しは `# TODO(ロケータ未設定)` でコメントアウトしてある。
 
 ### 5.2 技・アニメーションイベント
 

@@ -1,0 +1,9 @@
+#> mhdp_monster_reus:core/util/models/anger_end
+#
+# 怒り終了時のモデル変更
+#
+# @within function mhdp_monsters:core/util/tick/end_anger.m
+
+# ※ 共通エンジンの end_anger.m がマクロで必ず呼ぶため、怒り時のモデル変更が無くてもファイルは必須。
+#   無いと end_anger.m 全体の実行が失敗し、怒りが解除されなくなる。
+# ※ 怒り時のモデル変更がある場合は、ここで通常モデルに戻す (as_node で item_model を差し替える)

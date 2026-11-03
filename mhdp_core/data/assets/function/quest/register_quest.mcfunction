@@ -45,7 +45,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:11,Name:"中級：火竜の狩猟",Level:2,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
-        Content:{HpMultiply:18,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:18,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1002,Timing:"Initial",TargetMonsterId:-1,AreaId:1,Visible:true}\
         ]}\
     }
@@ -63,7 +63,7 @@
     data modify storage mhdp_core:game_data QuestList append value {\
         ID:13,Name:"超上級：天彗龍の狩猟",Level:4,Pos:0,IsEmergency:false,HideMonsters:false,\
         State:{IsPlayed:false,IsCleared:false,IsHardCleared:false,Visible:false},\
-        Content:{HpMultiply:14,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:999,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
+        Content:{HpMultiply:14,AttackMultiply:50,FieldId:1,Time:"day",TimeLimit:15,DeathCount:3,RewardMoney:6,RewardId:-1,Monsters:[\
             {MonsterId:1004,Timing:"Initial",TargetMonsterId:-1,AreaId:1,Visible:true}\
         ]}\
     }

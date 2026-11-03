@@ -1,0 +1,26 @@
+#> mhdp_monster_reus:core/debug/interrupt
+#
+# デバッグ用 任意のアニメーションを強制発火する
+#
+# @private
+
+# 実行者変更
+    execute unless entity @s[type=item_display,tag=Mns.Root.Reus] as @n[type=item_display,tag=Mns.Root.Reus] at @s run return run function mhdp_monster_reus:core/debug/interrupt
+
+# 攻撃データ更新のため、register実行
+    function mhdp_monster_reus:core/register
+
+# 通常攻撃用
+    # タグ付与 (確認したい技の Anim タグに書き換える)
+        tag @s add Anim.Voice
+    # 軸合わせ
+        # tag @s add Mns.Temp.IsTurn
+        # scoreboard players set @s Mns.General.TurnCount 1
+    # アニメーション変更
+        return run function mhdp_monster_reus:core/tick/animation/change/main
+
+# 強制再生
+    # function animated_java_reus:reus/animations/<anim>/tween {duration:1, to_frame: 1}
+
+# 強制リアクション
+    # function mhdp_monster_reus:core/damage/reaction/paralysis

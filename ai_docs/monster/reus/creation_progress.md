@@ -7,7 +7,12 @@
 
 ## 次に着手
 
-**Step 2 — テンプレート展開**（`ai_docs/monster/template/README.md` の展開手順に従い `datapacks/mhdp_monster_reus/` を生成）
+**実機確認待ち（Step 2）** → 確認後は Step 3 / 4（技の追加などユーザーの逐次指示）
+
+実機で確認する項目:
+- `datapack enable "file/mhdp_monster_reus"` でエラーが出ない（AJ 由来以外）
+- 召喚 → `idle_relax` 再生 → remove が通る
+- ※ event が未実装のため、待機アニメの最終フレームで `change/main` が呼ばれず、モンスターは行動を始めない（想定どおり）
 
 ## 確定事項（2026-10-25）
 
@@ -26,13 +31,15 @@
 |---|---|---|---|
 | MonsterData ステータス一式 | dino と同じ | Q-06 | 仮値 |
 | 発見ロジック（DistNear / DistFar / Fov） | dino と同じ | Q-18 | 仮値 |
-| 行動選択の距離帯・確率 | dino と同じ | Q-17 | 仮値 |
+| 行動選択の距離帯・確率 | dino と同じ（近 ..12 / 中 ..25） | Q-17 | 仮値 |
+| 部位破壊に必要な怯み回数 | 1 回（Head / Body / Tail） | dino と同じ | 仮値 |
+| 怒り演出パーティクル | `small_flame`（`pos_head` から） | Q-12 | 仮値 |
 
 ## Step 進捗
 
 - [x] Step 0 — 準備（計画への回答、本トラッカー、`spec.md`）
 - [x] Step 1 — 共通テンプレート作成（58 ファイル + `ai_docs/monster/template/README.md`）
-- [ ] Step 2 — テンプレート展開（reus の骨組み生成）
+- [x] Step 2 — テンプレート展開（reus の骨組み生成。69 ファイル + `pack.mcmeta`）※実機未確認
 - [ ] Step 3 — reus 固有のデータ・被弾処理
 - [ ] Step 4 — 行動選択（event 本体はユーザー実装）
 - [ ] Step 5 — 仕上げ
@@ -44,6 +51,15 @@
   - `util/models/*` は不要との回答だったが、`anger_end` だけは共通エンジンの `end_anger.m` が必ず呼ぶため含めた（無いと怒りが解除されない）。
   - 存在しない関数を呼ぶ行（`event/main` の各行、`break/*` のモデル差し替え、`reaction/anger` の `anger_start`）はコメントアウトした状態で生成する方針。
   - 流用元のバグ（dino の paralysis が ranposu のアニメを呼ぶ、`IsAlreadyAnsimation` の誤字、`Mns.Dino.Target` タグ誤り）はテンプレート側で修正済み。dino 本体は未修正。
+
+- 2026-11-03: 仮 AJ（アニメ一部・ロケータ未設定）の出力を受けて Step 2 実施。
+  - アニメ名は AJ の実名に合わせる（`land_idle`、`land_turn_left` など）。`spec.md` §5.1 を更新。
+  - AJ に無いアニメ・ロケータの呼び出し行は `# TODO(AJ未出力: <anim>)` / `# TODO(ロケータ未設定)` でコメントアウト。`grep -rn "TODO(AJ未出力" mhdp_monster_reus` で一覧できる。
+  - AJ が `pack.mcmeta` を出力していなかったため、テンプレートから作成。
+  - 技が無いので、`change/on_battle/{move,near,middle,far}` は抽選処理をコメントアウトし、仮行動として `Anim.Idle`（`land_idle`）を付ける。`macro/m.*` は未作成。
+  - 右旋回（`land_turn_right`）が無いため、ターゲットが右にいると旋回アニメが再生されない。
+  - 部位破壊は 1 回の怯みで破壊（dino と同じ。仮値）。
+  - 展開スクリプト: 一回限りのもので、リポジトリには置いていない。
 
 ## 気付いた既存モンスターの不具合（未修正・参考）
 
