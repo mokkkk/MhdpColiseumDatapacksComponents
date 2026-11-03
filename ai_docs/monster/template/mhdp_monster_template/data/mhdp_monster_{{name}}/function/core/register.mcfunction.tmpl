@@ -1,0 +1,94 @@
+#> mhdp_monster_{{name}}:core/register
+#
+# モンスターデータの登録を行う
+#
+# @within function mhdp_monster_{{name}}:load
+# @within function mhdp_monster_{{name}}:core/summon/*
+# @within function mhdp_monster_{{name}}:core/debug/interrupt
+
+## {{display_name}}
+
+# scoreboard定義
+{{#parts}}
+    # {{part_ja}}部位耐久値
+        scoreboard objectives add Mns.{{Upper}}.{{Part}}.Damage dummy
+        scoreboard objectives add Mns.{{Upper}}.{{Part}}.Damage.Max dummy
+{{/parts}}
+    # 怯み回数
+{{#parts}}
+        # {{part_ja}}
+            scoreboard objectives add Mns.{{Upper}}.{{Part}}.Damage.Count dummy
+{{/parts}}
+# 警戒値
+    scoreboard objectives add Mns.{{Upper}}.Caution dummy
+# 発見値
+    scoreboard objectives add Mns.{{Upper}}.Search dummy
+# ヘイト
+    scoreboard objectives add Mns.{{Upper}}.Hate dummy
+
+# メインデータ
+    execute if data storage mhdp_core:monster_data MonsterData[{Uid:{{uid}}}] run data remove storage mhdp_core:monster_data MonsterData[{Uid:{{uid}}}]
+    data modify storage mhdp_core:monster_data MonsterData append value {\
+        Uid:{{uid}},\
+        Icon:"{{icon}}",\
+        Name:"{{name}}",\
+        UpperName:"{{Upper}}",\
+        NameId:"{{name_id}}",\
+        ShowName:{{show_name}},\
+        LootTable:"{{loot_table}}",\
+        ShowHp:{{ShowHp}},\
+        Hp:{{Hp}},\
+        StunDamage:{{StunDamage}},\
+        TireDamage:{{TireDamage}},\
+        AngerDamagePer:{{AngerDamagePer}},\
+        AngerTimer:{{AngerTimer}},\
+        AngerAttackMult:{{AngerAttackMult}},\
+        AngerSpeed:{{AngerSpeed}},\
+        ParalysisDamage:{{ParalysisDamage}},\
+        ParalysisTimer:{{ParalysisTimer}},\
+        PoisonDamage:{{PoisonDamage}},\
+        PoisonTimer:{{PoisonTimer}},\
+        PoisonEffectDamage:{{PoisonEffectDamage}},\
+        BombDamage:{{BombDamage}},\
+        BombEffectDamage:{{BombEffectDamage}},\
+        FlashBombEnable:{{FlashBombEnable}},\
+        SoundBombEnable:{{SoundBombEnable}},\
+        ParalyseTrapEnable:{{ParalyseTrapEnable}},\
+        ParalyseTrapTimer:{{ParalyseTrapTimer}},\
+        HallTrapEnable:{{HallTrapEnable}},\
+        HallTrapTimer:{{HallTrapTimer}},\
+        CounterDamage:{{CounterDamage}},\
+{{#parts}}
+        {{Part}}PartDamage:{{part_damage}},\
+{{/parts}}
+    }
+    # ↑ 最後の部位の行末は「,\」ではなく「\」にすること
+
+# 肉質データ
+# 切断,打撃,弾,火,水,雷,氷,龍
+# {{#parts}}{{part_id}}:{{part_ja}}, {{/parts}}
+    execute if data storage mhdp_core:monster_data DefenceData[{Uid:{{uid}}}] run data remove storage mhdp_core:monster_data DefenceData[{Uid:{{uid}}}]
+    data modify storage mhdp_core:monster_data DefenceData append value {\
+        Uid:{{uid}},\
+        Defences:[\
+{{#parts}}
+            {{defence}},\
+{{/parts}}
+        ]\
+    }
+    # ↑ 最後の部位の行末は「,\」ではなく「\」にすること
+
+# 攻撃力データ
+    execute if data storage mhdp_core:monster_data AttackData[{Uid:{{uid}}}] run data remove storage mhdp_core:monster_data AttackData[{Uid:{{uid}}}]
+    data modify storage mhdp_core:monster_data AttackData append value {\
+        Uid:{{uid}},\
+        Attacks:[]\
+    }
+
+# 技ごとに以下の形式で append する (技を追加したら追記)
+#   data modify storage mhdp_core:monster_data AttackData[{Uid:{{uid}}}].Attacks append value {\
+#       Name:"<技名>",AttackPart:"<head|body|tail|none>",VectorType:"<Normal|Radial>",\
+#       DamageValue:<0.0>f,ObjectDamageValue:<0>,GuardValue:<0>,ElementType:<0>,ElementMultiply:<0>,\
+#       KnockbackStrength:<0>,IsLaunch:<false>,LaunchAngle:<0>,\
+#       IsFixedDamage:false,IsDisableDefence:false,IsDisableDamageInterval:false,IsDisableGuts:false\
+#   }

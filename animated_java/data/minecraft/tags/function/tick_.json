@@ -1,4 +1,0 @@
-{
-	"replace": false,
-	"values": ["animated_java:global/data_manager/on_tick", "animated_java:global/on_tick"]
-}

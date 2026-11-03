@@ -1,0 +1,56 @@
+#> mhdp_monster_{{name}}:core/tick/animation/event/main
+#
+# アニメーションイベントハンドラ
+#
+# @within function mhdp_monster_{{name}}:core/tick/main
+
+# ※ 再生中アニメの .playing タグを見て、event/<anim>/main を呼ぶだけのディスパッチャ
+# ※ 存在しない関数を呼ぶ行があるとこのファイル自体が読み込まれず、core/tick/main も動かなくなる。
+#   event/<anim>/ を実装したアニメの行だけコメントを外すこと
+
+## 非発見時
+
+# 待機
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.idle_relax}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.idle_relax}}/main
+# 移動
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.walk_relax}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.walk_relax}}/main
+# 生態行動
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.ecology}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.ecology}}/main
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.ecology_long}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.ecology_long}}/main
+
+## 警戒時
+
+# 探索
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.search}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.search}}/main
+
+## 戦闘時
+
+# 待機
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.idle}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.idle}}/main
+# 咆哮
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.voice}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.voice}}/main
+# 怒り
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.anger}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.anger}}/main
+# 軸合わせ
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.turn_l}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.turn_l}}/main
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.turn_r}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.turn_r}}/main
+
+## 攻撃 (技を追加したら追記)
+
+## 怯み・状態異常
+
+# 怯み
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.damage_head}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.damage_head}}/main
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.damage_l}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.damage_l}}/main
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.damage_r}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.damage_r}}/main
+# 相殺
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.damage_counter}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.damage_counter}}/main
+# ダウン
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.damage_down_l}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.damage_down_l}}/main
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.damage_down_r}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.damage_down_r}}/main
+# 麻痺
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.paralysis}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.paralysis}}/main
+
+## 討伐
+
+    # execute if entity @s[tag=animated_java_{{name}}.{{name}}.animation.{{anim.death}}.playing] run function mhdp_monster_{{name}}:core/tick/animation/event/{{anim.death}}/main

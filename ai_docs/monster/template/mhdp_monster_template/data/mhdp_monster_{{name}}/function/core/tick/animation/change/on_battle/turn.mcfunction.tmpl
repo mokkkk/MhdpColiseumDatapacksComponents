@@ -1,0 +1,11 @@
+#> mhdp_monster_{{name}}:core/tick/animation/change/on_battle/turn
+#
+# アニメーション変更処理 軸合わせ要否の確認
+#
+# @within function mhdp_monster_{{name}}:core/tick/animation/change/on_battle/*
+
+# 軸合わせしてから出す技 (技を追加したら追記)
+#   execute if entity @s[tag=Anim.<技名>] run tag @s add Mns.Temp.IsTurn
+
+# 軸合わせ回数
+    execute if entity @s[tag=Mns.Temp.IsTurn] run scoreboard players set @s Mns.General.TurnCount 1

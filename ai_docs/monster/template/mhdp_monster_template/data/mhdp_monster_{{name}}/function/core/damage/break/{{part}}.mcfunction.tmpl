@@ -1,0 +1,23 @@
+#> mhdp_monster_{{name}}:core/damage/break/{{part}}
+#
+# 部位破壊 {{part_ja}}
+#
+# @within function mhdp_monster_{{name}}:core/damage/reaction/{{part}}
+
+# ※ 部位破壊する部位ごとに 1 ファイル展開する
+
+# 状態更新
+    tag @s add Mns.Break.{{Part}}
+{{#cut}}
+    tag @s add Mns.Break.{{Part}}.Cut
+{{/cut}}
+
+# 効果音
+    playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.7
+    playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.9
+
+# モデル変更 (util/models/break_{{part}} を作成してから有効化する)
+    # function mhdp_monster_{{name}}:core/util/models/break_{{part}}
+
+# トースト表示
+    function mhdp_monster_{{name}}:core/util/show_toast

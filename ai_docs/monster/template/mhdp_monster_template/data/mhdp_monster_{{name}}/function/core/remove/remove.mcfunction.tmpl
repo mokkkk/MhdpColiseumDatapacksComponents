@@ -1,0 +1,24 @@
+#> mhdp_monster_{{name}}:core/remove/remove
+#
+# 消去処理を行う
+#
+# @within function mhdp_monsters:core/switch/macro/m.remove
+
+# 弾/VFXオブジェクト消去
+    execute as @e[tag=Asset.Object.{{Upper}}] at @s run function api:object/remove
+
+# 当たり判定を消去
+    execute as @e[type=slime,tag=Mns.HitBox.{{Upper}}] run function mhdp_monsters:core/util/other/remove_hitbox
+
+# ボスバー消去
+    bossbar remove mhdp_monster:{{name}}
+
+# プレイヤーに付いた固有スコアをリセット
+    scoreboard players reset @a Mns.{{Upper}}.Caution
+    scoreboard players reset @a Mns.{{Upper}}.Search
+    scoreboard players reset @a Mns.{{Upper}}.Hate
+
+# モデル消去
+    function animated_java_{{name}}:{{name}}/remove/this
+
+# say モンスター処理：{{display_name}}消去処理

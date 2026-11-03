@@ -1,0 +1,23 @@
+#> mhdp_monster_{{name}}:core/tick/animation/change/on_battle/macro/m.{{range}}
+#
+# 行動ランダム選択 (loot の重み付き抽選)
+#
+# @within function mhdp_monsters:core/util/tick/animation/decide_animation.m
+
+# ※ 距離帯ごとに 1 ファイル展開する。entries は on_battle/{{range}} の Temp.AttackRandom のキーと 1 対 1
+# ※ マクロ行は $(...) を最低 1 つ含む必要があるため、技が 1 つも無い距離帯ではこのファイルを作らない
+
+# {{{weights}}}
+
+$loot spawn ~ ~10 ~ loot {\
+    "pools":[\
+            {"rolls":1,"entries":[\
+{{#attacks}}
+                {"type":"minecraft:item","name":"minecraft:paper","weight":$({{Attack}}),"modifier":[{"type":"minecraft:set_custom_data","tag":"{Id:{{attack_id}},IsRandomTemp:1b}"}]},\
+{{/attacks}}
+            ]}\
+        ]\
+    }
+# ↑ 最後の entry の行末は「},\」ではなく「}\」にすること
+
+return 1

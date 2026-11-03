@@ -1,0 +1,33 @@
+#> mhdp_monster_{{name}}:_index.d
+# @private
+
+#> tag
+# @within function mhdp_monster_{{name}}:/**
+
+## tag
+# item_display
+    #declare tag Mns.Root.{{Upper}} {{display_name}}Rootエンティティ
+# 当たり判定
+    #declare tag Mns.HitBox.{{Upper}} {{display_name}}当たり判定スライム
+{{#parts}}
+    #declare tag Mns.HitBox.{{Upper}}.{{Part}} {{part_ja}}
+{{/parts}}
+# 一時
+{{#parts}}
+    #declare tag Mns.Temp.Damage.{{Part}} {{part_ja}}怯み
+{{/parts}}
+# プレイヤー
+    #declare tag Mns.Candidate.{{Upper}} ターゲット候補になるプレイヤー
+    #declare tag Mns.Target.{{Upper}} 現在狙っているプレイヤー
+# 部位破壊
+{{#breakable_parts}}
+    #declare tag Mns.Break.{{Part}} {{part_ja}}部位破壊
+{{/breakable_parts}}
+# アニメーション (技を追加したら追記)
+    #declare tag Anim.Walk 歩き
+    #declare tag Anim.Ecology 生態行動
+    #declare tag Anim.Ecology.Long 生態行動 (長)
+    #declare tag Anim.Search 探索
+    #declare tag Anim.Idle 待機
+    #declare tag Anim.Voice 咆哮
+    #declare tag Anim.Anger 怒り開始

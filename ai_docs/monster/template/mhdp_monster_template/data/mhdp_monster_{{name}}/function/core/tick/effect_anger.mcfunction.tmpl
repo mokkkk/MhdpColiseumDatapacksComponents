@@ -1,0 +1,8 @@
+#> mhdp_monster_{{name}}:core/tick/effect_anger
+#
+# tick処理 怒り中演出
+#
+# @within function mhdp_monster_{{name}}:core/tick/main
+
+# 頭
+    function animated_java_{{name}}:{{name}}/at_locator {name:"{{locator.anger}}",command:"function mhdp_monster_{{name}}:core/tick/effect_anger_head"}

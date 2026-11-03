@@ -1,0 +1,40 @@
+#> mhdp_monster_{{name}}:core/damage/reaction/{{part}}
+#
+# 怯みリアクション {{part_ja}}
+#
+# @within function mhdp_monster_{{name}}:core/damage/damage
+
+# ※ 部位ごとに 1 ファイル展開する。{{anim.damage_part}} はその部位の怯みアニメ
+
+# 共通処理
+    # 怯み開始時
+        function mhdp_monsters:core/util/damage/on_reaction_start
+    # 耐性値リセット
+        scoreboard players operation @s Mns.{{Upper}}.{{Part}}.Damage = @s Mns.{{Upper}}.{{Part}}.Damage.Max
+    # 怯み回数増加
+        scoreboard players add @s Mns.{{Upper}}.{{Part}}.Damage.Count 1
+
+{{#breakable}}
+# 部位破壊処理 ({{break_count}}回怯ませると破壊)
+    execute if entity @s[tag=!Mns.Break.{{Part}}] if score @s Mns.{{Upper}}.{{Part}}.Damage.Count matches {{break_count}}.. run function mhdp_monster_{{name}}:core/damage/break/{{part}}
+
+{{/breakable}}
+# 麻痺・ダウン・スタン時はアニメーションを再生しない
+    execute unless entity @s[tag=!Mns.State.IsParalysis,tag=!Mns.State.IsDown,tag=!Mns.State.IsStun] run return 0
+
+# アニメーション再生
+    execute if entity @s[tag=!Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function animated_java_{{name}}:{{name}}/animations/{{anim.damage_part}}/tween {duration:1, to_frame: 0}
+    execute if entity @s[tag=Mns.State.IsFlying,tag=!Mns.Temp.IsDamaged] run function mhdp_monsters:core/util/damage/reaction_flying
+
+# 独自処理
+    # ダウン時間設定
+        scoreboard players set @s Mns.General.DownCount 2
+    # 攻撃者を向く
+        execute at @s facing entity @a[tag=Temp.Attacker] feet run tp @s ~ ~ ~ ~ 0
+    # 演出
+        playsound entity.item.break master @a[tag=!Ply.State.IsSilent] ~ ~ ~ 2 0.5
+    # アニメーションタグ消去
+        function mhdp_monsters:core/util/other/remove_animation_tag
+
+# 終了
+    tag @s add Mns.Temp.IsDamaged

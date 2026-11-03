@@ -1,0 +1,11 @@
+#> mhdp_monster_{{name}}:core/tick/on_battle/interact/on_attack_object
+#
+# tick処理 戦闘中 建築物を攻撃した
+#
+# @within function mhdp_monsters:core/switch/macro/m.on_attack_object
+
+# 攻撃キャンセル (技を追加したら追記)
+#   建築物に当たったときに攻撃を中断させたい技は、再生中タグで判定してキャンセル処理を呼ぶ
+#   execute unless entity @s[\
+#       tag=!animated_java_{{name}}.{{name}}.animation.<anim>.playing\
+#   ] run function mhdp_monster_{{name}}:core/tick/on_battle/interact/reaction/cancel_attack_<技名>
